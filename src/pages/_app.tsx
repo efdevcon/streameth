@@ -1,8 +1,11 @@
-import '../styles/globals.css'
+import 'assets/globals.css'
+import { Layout } from 'components/layout'
+import { SEO } from 'components/seo'
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }: AppProps) {
+  return <Layout>
+    <SEO />
+    <Component {...pageProps} />
+  </Layout>
 }
-
-export default MyApp

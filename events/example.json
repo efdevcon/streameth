@@ -1,8 +1,0 @@
-{
-    "version": 1,
-    "name": "Example event",
-    "description": "Event description",
-    "website": "https://www.event.com/",
-    "livestream": {},
-    "schedule": {}
-}

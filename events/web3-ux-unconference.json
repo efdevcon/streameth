@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "name": "Web3 UX Unconference",
+    "description": "Potential Working Groups: Sign-in with ethereum, Multichain Wallets, L2 onboarding/education, L1-L2 bridging UX, L2-Dapp Interaction UX, Staking + Validator UX & more.",
+    "start": "2022-04-18",
+    "end": "2022-04-18",
+    "website": "https://devconnect.org/schedule/",
+    "stream": {
+        "version": 1
+    },
+    "schedule": {
+        "version": 1
+    }
+}
