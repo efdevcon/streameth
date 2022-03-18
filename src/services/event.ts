@@ -4,7 +4,7 @@ import { resolve, join } from 'path'
 import { Event } from 'types'
 
 export function GetEventNames(): Array<string> {
-    const dir = resolve(process.cwd(), 'events')
+    const dir = resolve('./events')
     const dirs = fs.readdirSync(dir, { withFileTypes: true })
         .filter(i => i.isFile() && i.name.endsWith('.json'))
         .map(i => i.name.replace('.json', ''))
@@ -13,7 +13,7 @@ export function GetEventNames(): Array<string> {
 }
 
 export function GetEvents(): Array<Event> {
-    const dir = resolve(process.cwd(), 'events')
+    const dir = resolve('./events')
     const files = fs.readdirSync(dir, { withFileTypes: true })
         .filter(i => i.isFile() && i.name.endsWith('.json'))
 

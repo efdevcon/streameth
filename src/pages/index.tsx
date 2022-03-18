@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next'
 import { GetEvents } from 'services/event'
 import { Event } from 'types'
-import { DEFAULT_REVALIDATE_PERIOD, DESCRIPTION, TITLE } from 'utils/constants'
 import Link from 'next/link'
 
 interface Props {
@@ -29,6 +28,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       events
     },
-    revalidate: DEFAULT_REVALIDATE_PERIOD
   }
 }
