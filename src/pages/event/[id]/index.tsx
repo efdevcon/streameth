@@ -45,7 +45,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   return {
     props: {
       event,
-    },
-    revalidate: DEFAULT_REVALIDATE_PERIOD
+    }
   }
 }
