@@ -13,7 +13,7 @@ export default function Home(props: Props) {
       <ul>
         {props.events.map((event: Event) => {
           return <li key={event.id}>
-            <Link href={event.id}>{event.name}</Link>
+            <Link href={`event/${event.id}`}>{event.name}</Link>
           </li>
         })}
       </ul>
