@@ -12,9 +12,11 @@ export default function Home(props: Props) {
     <section>
       <ul>
         {props.events.map((event: Event) => {
-          return <li key={event.id}>
-            <Link href={`event/${event.id}`}>{event.name}</Link>
-          </li>
+          return (
+            <li key={event.id}>
+              <Link href={`event/${event.id}`}>{event.name}</Link>
+            </li>
+          )
         })}
       </ul>
     </section>
@@ -22,11 +24,11 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const events = GetEvents()
+  const events = await GetEvents()
 
   return {
     props: {
-      events
+      events,
     },
   }
 }
