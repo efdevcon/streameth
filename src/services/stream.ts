@@ -1,5 +1,6 @@
-import { get } from '../utils/requests'
+import { get } from 'utils/requests'
+import { Stream } from 'types'
 
-export const getStreams = async () => {
-  return await get(`${process.env.NEXT_PUBLIC_ORIGIN}/api/streams`)
+export const getStreams = async (streamId?: string): Promise<Array<Stream>> => {
+  return await get(`/api/streams?streamId=${streamId}`)
 }

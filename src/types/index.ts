@@ -13,14 +13,16 @@ export interface Event {
 export interface Stream {
   // Pablo
   id: string
-  order: number // denotes stream importance (e.g. primary vs backup stream)
+  order?: number // denotes stream importance (e.g. primary vs backup stream)
   name?: string
   isActive: boolean
   playbackUrl: string
 }
 
 export interface StreamProvider {
-  streams: () => Promise<Array<Stream>>
+  getStreams: () => Promise<Array<Stream>>
+  getStream: (streamId: string) => Promise<Stream | null>
+  mapStreamObj: (data: any) => Stream
 }
 
 export interface Schedule {

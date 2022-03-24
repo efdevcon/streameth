@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
-import { Event } from 'types'
+import { Event, Stream } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
+import { getStreams } from 'services/stream'
 
 interface Props {
   event: Event
@@ -14,6 +15,21 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EventPage(props: Props) {
+  const [stream, setStream] = useState<Stream | null>(null)
+  const [currentStreamId, setCurrentStreamId] = useState<string | null>(props.event.streams[0]?.id)
+
+  useEffect(() => {
+    const fetchStream = async (streamId: string) => {
+      const fetchedStreams = await getStreams(streamId)
+
+      setStream(fetchedStreams[0])
+    }
+
+    if (currentStreamId) {
+      fetchStream(currentStreamId)
+    }
+  }, [currentStreamId])
+
   return (
     <>
       <div>
