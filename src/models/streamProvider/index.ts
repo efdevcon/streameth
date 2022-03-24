@@ -1,3 +1,8 @@
-import { Livepeer } from './providers/livepeer'
+import * as StreamProviders from './providers'
+import { STREAM_PROVIDER } from 'utils/constants'
 
-export { Livepeer }
+export const initStreamProvider = () => {
+  const providerName: keyof typeof StreamProviders = STREAM_PROVIDER
+
+  return new StreamProviders[providerName]()
+}
