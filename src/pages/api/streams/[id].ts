@@ -5,22 +5,23 @@ import { Stream, Recording } from 'types'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
+    const { id } = req.query
+
     const providerName: keyof typeof StreamProviders = STREAM_PROVIDER
     const provider = new StreamProviders[providerName]()
 
-    const streams: Array<Stream> = await provider.getStreams()
-    const recordings: Array<Array<Recording>> = await Promise.all(
-      streams.map(stream => {
-        return provider.getRecordings(stream.id)
-      })
-    )
+    let stream: Stream | null = null
 
-    // merge recordings with their respective stream
-    streams.forEach((stream, index) => {
-      stream.recordings = recordings[index]
-    })
+    if (id && typeof id === 'string') {
+      stream = await provider.getStream(id)
 
-    return res.status(200).json(streams)
+      if (stream) {
+        const recordings: Array<Recording> = await provider.getRecordings(id)
+        stream.recordings = recordings
+      }
+    }
+
+    return res.status(200).json(stream)
   }
 
   res.status(404).json({})

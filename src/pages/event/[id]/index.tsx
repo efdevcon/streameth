@@ -4,7 +4,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { Event, Stream } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
-import { getStreams } from 'services/stream'
+import { getStream } from 'services/stream'
 
 interface Props {
   event: Event
@@ -20,9 +20,9 @@ export default function EventPage(props: Props) {
 
   useEffect(() => {
     const fetchStream = async (streamId: string) => {
-      const fetchedStreams = await getStreams(streamId)
+      const fetchedStream = await getStream(streamId)
 
-      setStream(fetchedStreams[0])
+      setStream(fetchedStream)
     }
 
     if (currentStreamId) {

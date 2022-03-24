@@ -1,32 +1,47 @@
-import { Stream, StreamProvider } from 'types'
+import { Stream, StreamProvider, Recording } from 'types'
 import { get } from 'utils/requests'
 
 const BASE_API = 'https://livepeer.com/api'
 
-interface LivepeerStreamObj {
+interface LivepeerStream {
   isActive: boolean
   id: string
   name?: string
   playbackId: string
-  // other fields
+}
+
+interface LivepeerSession {
+  id: string
+  recordingUrl: string
+  recordingStatus: string
 }
 
 export class Livepeer implements StreamProvider {
+  static readonly authHeader: HeadersInit = {
+    Authorization: `Bearer ${process.env.LIVEPEER_API_KEY}`,
+  }
+
   mapStreamObj(data: any): Stream {
     return {
       id: data.id,
       isActive: data.isActive,
       playbackUrl: `https://cdn.livepeer.com/hls/${data.playbackId}/index.m3u8`,
+      recordings: [], // initialize empty recordings array; will merge later
+    }
+  }
+
+  mapRecordingObj(data: any): Recording {
+    return {
+      id: data.id,
+      recordingUrl: data.recordingUrl,
     }
   }
 
   async getStreams(): Promise<Array<Stream>> {
     try {
-      const streams: Array<LivepeerStreamObj> = await get(`${BASE_API}/stream`, {
-        Authorization: `Bearer ${process.env.LIVEPEER_API_KEY}`,
-      })
+      const streams: Array<LivepeerStream> = await get(`${BASE_API}/stream`, Livepeer.authHeader)
 
-      return streams.map(stream => this.mapStreamObj(stream))
+      return streams.filter(stream => stream.playbackId).map(stream => this.mapStreamObj(stream))
     } catch (e) {
       console.error('Error fetching Livepeer streams', e)
 
@@ -36,13 +51,26 @@ export class Livepeer implements StreamProvider {
 
   async getStream(streamId: string): Promise<Stream | null> {
     try {
-      const stream: LivepeerStreamObj = await get(`${BASE_API}/stream/${streamId}`, {
-        Authorization: `Bearer ${process.env.LIVEPEER_API_KEY}`,
-      })
+      const stream: LivepeerStream = await get(`${BASE_API}/stream/${streamId}`, Livepeer.authHeader)
 
       return this.mapStreamObj(stream)
     } catch {
       return null
+    }
+  }
+
+  async getRecordings(streamId: string): Promise<Array<Recording>> {
+    try {
+      const sessions: Array<LivepeerSession> = await get(
+        `${BASE_API}/stream/${streamId}/sessions?record=1`,
+        Livepeer.authHeader
+      )
+
+      return sessions
+        .filter(session => session.recordingStatus === 'ready')
+        .map(session => this.mapRecordingObj(session))
+    } catch {
+      return []
     }
   }
 }

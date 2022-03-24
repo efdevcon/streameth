@@ -17,12 +17,21 @@ export interface Stream {
   name?: string
   isActive: boolean
   playbackUrl: string
+  recordings: Array<Recording>
+}
+
+// stream recording
+export interface Recording {
+  id: string
+  recordingUrl: string
 }
 
 export interface StreamProvider {
   getStreams: () => Promise<Array<Stream>>
   getStream: (streamId: string) => Promise<Stream | null>
+  getRecordings: (streamId: string) => Promise<Array<Recording>>
   mapStreamObj: (data: any) => Stream
+  mapRecordingObj: (data: any) => Recording
 }
 
 export interface Schedule {
