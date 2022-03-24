@@ -36,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps<Props, Params> = async context => {
-  const events = await GetEvents()
+  const events = GetEvents()
   const event = events.find(i => i.id === context.params?.id)
 
   if (!event) {

@@ -1,7 +1,6 @@
 import fs from 'fs'
 import { resolve, join } from 'path'
 import { Event, Stream } from 'types'
-import { getStreams } from './stream'
 
 const mergeStreamData = (event: Event, streams: Array<Stream>) => {
   const eventDup = { ...event }
@@ -31,9 +30,7 @@ export function GetEventNames(): Array<string> {
   return dirs
 }
 
-export async function GetEvents(): Promise<Array<Event>> {
-  const streams: Array<Stream> = await getStreams()
-
+export function GetEvents(): Array<Event> {
   const dir = resolve('./data/events')
   const files = fs.readdirSync(dir, { withFileTypes: true }).filter(i => i.isFile() && i.name.endsWith('.json'))
 
@@ -47,7 +44,6 @@ export async function GetEvents(): Promise<Array<Event>> {
 
       if (content) {
         let event = JSON.parse(content) as Event
-        event = mergeStreamData(event, streams)
 
         return {
           ...event,

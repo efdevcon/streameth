@@ -1,13 +1,27 @@
 import { GetStaticProps } from 'next'
 import { GetEvents } from 'services/event'
-import { Event } from 'types'
+import { Event, Stream } from 'types'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { getStreams } from '../services/stream'
 
 interface Props {
   events: Array<Event>
 }
 
 export default function Home(props: Props) {
+  const [streams, setStreams] = useState<Array<Stream>>([])
+
+  useEffect(() => {
+    const fetchStreams = async () => {
+      const fetchedStreams = await getStreams()
+
+      setStreams(fetchedStreams)
+    }
+
+    fetchStreams()
+  }, [])
+
   return (
     <section>
       <ul>
@@ -24,7 +38,7 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const events = await GetEvents()
+  const events = GetEvents()
 
   return {
     props: {
