@@ -5,6 +5,7 @@ import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { Event, Stream } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
 import { getStream } from 'services/stream'
+import moment from 'moment'
 
 interface Props {
   event: Event
@@ -35,6 +36,17 @@ export default function EventPage(props: Props) {
       <div>
         <h2>{props.event.name}</h2>
         <p>{props.event.description}</p>
+
+        <h3>Schedule</h3>
+        <ul>
+          {props.event.schedule.sessions.map(i => {
+            return <li key={i.id}>
+              <strong>{i.name}</strong>{' '}
+              {moment.utc(i.start).format('DD MMM')},{' '}
+              {moment.utc(i.start).format('HH:mm')}-{moment.utc(i.end).format('HH:mm')}
+            </li>
+          })}
+        </ul>
       </div>
     </>
   )
