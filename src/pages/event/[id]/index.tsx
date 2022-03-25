@@ -6,7 +6,7 @@ import { Event, Stream } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
 import { getStream } from 'services/stream'
 import moment from 'moment'
-
+import Player from 'components/Player'
 interface Props {
   event: Event
 }
@@ -22,7 +22,7 @@ export default function EventPage(props: Props) {
   useEffect(() => {
     const fetchStream = async (streamId: string) => {
       const fetchedStream = await getStream(streamId)
-
+      
       setStream(fetchedStream)
     }
 
@@ -36,7 +36,7 @@ export default function EventPage(props: Props) {
       <div>
         <h2>{props.event.name}</h2>
         <p>{props.event.description}</p>
-
+        <Player />
         <h3>Schedule</h3>
         <ul>
           {props.event.schedule.sessions.map(i => {
