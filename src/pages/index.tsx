@@ -6,11 +6,11 @@ import { useEffect, useState } from 'react'
 import { getStreams } from '../services/stream'
 
 interface Props {
-  events: Array<Event>
+  events: Event[]
 }
 
 export default function Home(props: Props) {
-  const [streams, setStreams] = useState<Array<Stream>>([])
+  const [streams, setStreams] = useState<Stream[]>([])
 
   useEffect(() => {
     const fetchStreams = async () => {

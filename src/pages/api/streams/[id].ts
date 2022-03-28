@@ -13,7 +13,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       stream = await provider.getStream(id)
 
       if (stream) {
-        const recordings: Array<Recording> = await provider.getRecordings(id)
+        const recordings: Recording[] = await provider.getRecordings(id)
         stream.recordings = recordings
       }
     }

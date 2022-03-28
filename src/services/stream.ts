@@ -1,7 +1,7 @@
 import { get } from 'utils/requests'
 import { Stream } from 'types'
 
-export const getStreams = async (): Promise<Array<Stream>> => {
+export const getStreams = async (): Promise<Stream[]> => {
   return await get('/api/streams')
 }
 

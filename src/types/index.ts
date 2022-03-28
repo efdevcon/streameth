@@ -7,7 +7,7 @@ export interface Event {
   website: string
   stream: Stream
   schedule: Schedule
-  rooms: Array<Room>
+  rooms: Room[]
 }
 
 export interface Stream {
@@ -16,7 +16,7 @@ export interface Stream {
   name?: string
   isActive: boolean
   playbackUrl: string
-  recordings: Array<Recording>
+  recordings: Recording[]
 }
 
 // stream recording
@@ -26,9 +26,9 @@ export interface Recording {
 }
 
 export interface StreamProvider {
-  getStreams: () => Promise<Array<Stream>>
+  getStreams: () => Promise<Stream[]>
   getStream: (streamId: string) => Promise<Stream | null>
-  getRecordings: (streamId: string) => Promise<Array<Recording>>
+  getRecordings: (streamId: string) => Promise<Recording[]>
   mapStreamObj: (data: any) => Stream
   mapRecordingObj: (data: any) => Recording
 }
@@ -59,5 +59,5 @@ export interface Speaker {
 
 export interface Room {
   id: string // e.g. Main
-  streams: Array<Stream>
+  streams: Stream[]
 }

@@ -6,8 +6,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
     const provider = initStreamProvider()
 
-    const streams: Array<Stream> = await provider.getStreams()
-    const recordings: Array<Array<Recording>> = await Promise.all(
+    const streams: Stream[] = await provider.getStreams()
+    const recordings: Recording[][] = await Promise.all(
       streams.map(stream => {
         return provider.getRecordings(stream.id)
       })

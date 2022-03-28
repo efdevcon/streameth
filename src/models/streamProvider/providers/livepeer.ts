@@ -37,9 +37,9 @@ export class Livepeer implements StreamProvider {
     }
   }
 
-  async getStreams(): Promise<Array<Stream>> {
+  async getStreams(): Promise<Stream[]> {
     try {
-      const streams: Array<LivepeerStream> = await get(`${BASE_API}/stream`, Livepeer.authHeader)
+      const streams: LivepeerStream[] = await get(`${BASE_API}/stream`, Livepeer.authHeader)
 
       return streams.filter(stream => stream.playbackId).map(stream => this.mapStreamObj(stream))
     } catch (e) {
@@ -59,9 +59,9 @@ export class Livepeer implements StreamProvider {
     }
   }
 
-  async getRecordings(streamId: string): Promise<Array<Recording>> {
+  async getRecordings(streamId: string): Promise<Recording[]> {
     try {
-      const sessions: Array<LivepeerSession> = await get(
+      const sessions: LivepeerSession[] = await get(
         `${BASE_API}/stream/${streamId}/sessions?record=1`,
         Livepeer.authHeader
       )
