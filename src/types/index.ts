@@ -7,13 +7,12 @@ export interface Event {
   website: string
   stream: Stream
   schedule: Schedule
-  streams: Array<Stream>
+  rooms: Array<Room>
 }
 
 export interface Stream {
   // Pablo
   id: string
-  order?: number // denotes stream importance (e.g. primary vs backup stream)
   name?: string
   isActive: boolean
   playbackUrl: string
@@ -56,4 +55,9 @@ export interface Speaker {
   name: string
   description: string
   sessions: Session[]
+}
+
+export interface Room {
+  id: string // e.g. Main
+  streams: Array<Stream>
 }

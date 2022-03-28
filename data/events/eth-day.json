@@ -47,10 +47,14 @@
             }
         ]
     },
-    "streams": [
+    "rooms": [
         {
-            "id": "a1f61376-672d-4935-bd27-fce849c7aeba",
-            "order": 0
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "a1f61376-672d-4935-bd27-fce849c7aeba"
+                }
+            ]
         }
     ]
 }
