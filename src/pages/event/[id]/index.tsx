@@ -17,12 +17,12 @@ interface Params extends ParsedUrlQuery {
 
 export default function EventPage(props: Props) {
   const [stream, setStream] = useState<Stream | null>(null)
-  const [currentStreamId, setCurrentStreamId] = useState<string | null>(props.event.streams[0]?.id)
+  const [currentStreamId, setCurrentStreamId] = useState<string | null>(props.event.rooms[0]?.streams[0].id)
 
   useEffect(() => {
     const fetchStream = async (streamId: string) => {
       const fetchedStream = await getStream(streamId)
-      
+
       setStream(fetchedStream)
     }
 
@@ -40,11 +40,12 @@ export default function EventPage(props: Props) {
         <h3>Schedule</h3>
         <ul>
           {props.event.schedule.sessions.map(i => {
-            return <li key={i.id}>
-              <strong>{i.name}</strong>{' '}
-              {moment.utc(i.start).format('DD MMM')},{' '}
-              {moment.utc(i.start).format('HH:mm')}-{moment.utc(i.end).format('HH:mm')}
-            </li>
+            return (
+              <li key={i.id}>
+                <strong>{i.name}</strong> {moment.utc(i.start).format('DD MMM')}, {moment.utc(i.start).format('HH:mm')}-
+                {moment.utc(i.end).format('HH:mm')}
+              </li>
+            )
           })}
         </ul>
       </div>
