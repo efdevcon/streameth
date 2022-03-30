@@ -1,0 +1,10 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: var(--text-color, #323233);
+
+  > path {
+    fill: inherit;
+  }
+}

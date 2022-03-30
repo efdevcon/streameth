@@ -1,0 +1,10 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/layout';
+
+.section {
+  @include layout.section;
+
+  .content {
+    @include layout.content;
+  }
+}

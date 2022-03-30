@@ -1,0 +1,112 @@
+@use 'src/assets/css/variables' as *;
+
+// Here are some common gap constellations with responsiveness built in
+@mixin lg($sidesOnly: false) {
+  @if ($sidesOnly == true) {
+    padding-left: $gap-16;
+    padding-right: $gap-16;
+
+    @media (max-width: $screen-md) {
+      padding-left: $gap-4;
+      padding-right: $gap-4;
+    }
+  } @else {
+    padding: $gap-16;
+
+    @media (max-width: $screen-md) {
+      padding: $gap-4;
+    }
+  }
+}
+
+@mixin sm($sidesOnly: false) {
+  @if ($sidesOnly == true) {
+    padding-left: $gap-8;
+    padding-right: $gap-8;
+
+    @media (max-width: $screen-md) {
+      padding-left: $gap-2;
+      padding-right: $gap-2;
+    }
+  } @else {
+    padding: $gap-8;
+
+    @media (max-width: $screen-md) {
+      padding: $gap-2;
+    }
+  }
+}
+
+/*
+  Responsive gap is a utility for auto-scaling margin/padding, example usage:
+
+  @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2, $top: $gap-16);
+
+  => 
+
+  padding: 16px;
+  padding-top: 64px;
+
+  @media (max-width: 768px) {
+    padding: 8px;
+    padding-top: 32px;
+  }
+
+  @media (max-width: 410px) {
+    padding: 8px;
+    padding-top: 16px;
+  }
+*/
+@mixin responsive-gap($attribute: margin, $gap: '', $min-gap: $gap-1, $top: '', $right: '', $bottom: '', $left: '') {
+  @if not($gap == '') {
+    #{$attribute}: $gap;
+  }
+  @if not($top == '') {
+    #{$attribute}-top: $top;
+  }
+  @if not($right == '') {
+    #{$attribute}-right: $right;
+  }
+  @if not($bottom == '') {
+    #{$attribute}-bottom: $bottom;
+  }
+  @if not($left == '') {
+    #{$attribute}-left: $left;
+  }
+
+  @media (max-width: $screen-md) {
+    @if not($gap == '') {
+      #{$attribute}: max($min-gap, $gap / 2);
+    }
+    @if not($top == '') {
+      #{$attribute}-top: max($min-gap, $top / 2);
+    }
+    @if not($right == '') {
+      #{$attribute}-right: max($min-gap, $right / 2);
+    }
+    @if not($bottom == '') {
+      #{$attribute}-bottom: max($min-gap, $bottom / 2);
+    }
+    @if not($left == '') {
+      #{$attribute}-left: max($min-gap, $left / 2);
+    }
+  }
+
+  @media (max-width: $screen-tiny) {
+    @if not($gap == '') {
+      #{$attribute}: max($min-gap, $gap / 4);
+    }
+    @if not($top == '') {
+      #{$attribute}-top: max($min-gap, $top / 4);
+    }
+    @if not($right == '') {
+      #{$attribute}-right: max($min-gap, $right / 4);
+    }
+    @if not($bottom == '') {
+      #{$attribute}-bottom: max($min-gap, $bottom / 4);
+    }
+    @if not($left == '') {
+      #{$attribute}-left: max($min-gap, $left / 4);
+    }
+  }
+}

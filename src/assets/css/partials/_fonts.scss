@@ -1,0 +1,84 @@
+@use 'src/assets/css/variables' as *;
+
+// Add more sizes as needed. Make sure to reference any newly added mixins from typegraphy.scss so we have one source of truth for text sizes.
+@mixin font-xxs {
+  font-size: $size-5;
+  line-height: 150%;
+}
+
+@mixin font-xs {
+  font-size: $size-6;
+  line-height: 150%;
+}
+
+@mixin font-sm {
+  font-size: $size-7;
+  line-height: 150%;
+}
+
+@mixin font-md {
+  font-size: $size-8;
+  line-height: 150%;
+}
+
+@mixin font-lg {
+  font-size: $size-9;
+  line-height: 125%;
+}
+
+@mixin font-xl {
+  font-size: $size-12;
+  line-height: 125%;
+}
+
+@mixin font-xxl {
+  font-size: $size-16;
+  line-height: 125%;
+}
+
+// Font-family
+@mixin font-primary {
+  font-family: $font-primary;
+}
+
+@mixin font-secondary {
+  font-family: $font-secondary;
+}
+
+@mixin font-tertiary {
+  font-family: $font-tertiary;
+}
+
+// Misc
+@mixin normal {
+  font-weight: 400;
+}
+@mixin semi-bold {
+  font-weight: 600;
+}
+@mixin bold {
+  font-weight: 700;
+}
+@mixin very-bold {
+  font-weight: 800;
+}
+
+@mixin section-header {
+  font-weight: 400;
+  margin-bottom: $gap-8;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: $gap-4;
+  }
+}
+
+@mixin subsection-header {
+  @include bold;
+  @include font-tertiary;
+  text-transform: uppercase;
+  margin-bottom: $gap-6;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: $gap-4;
+  }
+}

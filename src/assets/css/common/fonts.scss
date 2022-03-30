@@ -1,0 +1,140 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+// Defaults
+h1,
+.h1 {
+  @include fonts.font-tertiary;
+  font-size: $size-16 + $size-8;
+  line-height: 125%;
+}
+
+h2,
+.h2 {
+  @include fonts.font-tertiary;
+  font-size: $size-16;
+  line-height: 150%;
+}
+
+h3,
+.h3 {
+  @include fonts.font-tertiary;
+  @include fonts.font-xl;
+}
+
+h4,
+.h4 {
+  @include fonts.font-tertiary;
+  @include fonts.font-md;
+}
+
+.massive {
+  @include fonts.font-tertiary;
+  font-size: $size-16 + $size-16;
+  line-height: 125%;
+}
+
+p {
+  @include fonts.font-secondary;
+}
+
+// Could just shorten these to "xxl, xl" etc rather than "font-xxl font-xl"
+.font-xxl {
+  font-size: $size-16 + $size-8;
+}
+
+.font-xl {
+  @include fonts.font-xl;
+}
+
+.font-md {
+  @include fonts.font-md;
+}
+
+.font-sm {
+  @include fonts.font-sm;
+}
+
+.font-xs {
+  @include fonts.font-xs;
+}
+
+.font-primary {
+  @include fonts.font-primary;
+}
+
+.font-secondary {
+  @include fonts.font-secondary;
+}
+
+.font-tertiary {
+  @include fonts.font-tertiary;
+}
+
+.bold {
+  @include fonts.bold;
+}
+
+.semi-bold {
+  @include fonts.semi-bold;
+}
+
+.section-header {
+  @include fonts.section-header;
+}
+
+.subsection-header {
+  @include fonts.subsection-header;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.text-tertiary {
+  color: $color-tertiary;
+}
+
+.text-bold {
+  @include fonts.bold;
+}
+
+.text-italic {
+  font-style: italic !important;
+}
+
+.text-small {
+  @include fonts.font-sm;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,84 @@
+// https://twitter.com/max_strebel/status/1051435009373016065
+// Color goal: Have a list of specific colors, map them to primary/secondary/tertiary
+
+// Core colors
+$color-primary: #30354b;
+$color-primary-light: #30354b;
+$color-primary-dark: #30354b;
+$color-primary-opaque: #30354b;
+$color-secondary: #0daed0;
+$color-secondary-light: #30354b;
+$color-secondary-dark: #30354b;
+$color-secondary-opaque: #30354b;
+$color-tertiary: #fbcd11;
+$color-tertiary-light: #30354b;
+$color-tertiary-dark: #30354b;
+$color-tertiary-opaque: #1b1d24;
+
+// Other colors
+$color-success: #027357;
+$color-success-light: #eefff2;
+$color-error: #df320c;
+$color-error-light: #feefef;
+$color-warning: #c33e01;
+$color-warning-light: #fffacc;
+$color-info: #224490;
+$color-info-light: #eef2fa;
+$color-light: #323232;
+$color-light-light: #ffffff;
+
+// Fonts
+$font-primary: 'Roboto', serif; // 'Montserrat', sans-serif;
+$font-secondary: 'Roboto', serif;
+$font-tertiary: 'Space Mono', monospace;
+
+// Sizes relative to root font-size
+$size-1: 0.125rem; // 2px (assuming root font-size is 16px)
+$size-2: $size-1 * 2;
+$size-3: $size-1 * 3;
+$size-4: $size-1 * 4; // 0.5rem 8px
+$size-5: $size-1 * 5;
+$size-6: $size-1 * 6;
+$size-7: $size-1 * 7;
+$size-8: $size-1 * 8; // 1rem 16px
+$size-9: $size-1 * 9;
+$size-10: $size-1 * 10;
+$size-11: $size-1 * 11;
+$size-12: $size-1 * 12;
+$size-13: $size-1 * 13;
+$size-14: $size-1 * 14;
+$size-15: $size-1 * 15;
+$size-16: $size-1 * 16; // 2rem 32px;
+$size-20: $size-1 * 20; // 2rem 40px;
+$size-32: $size-1 * 32; // 4rem 64px;
+$size-40: $size-1 * 40; // 5rem 80px;
+$size-44: $size-1 * 44; // 5.5rem 88px;
+$size-48: $size-1 * 48; // 6rem 96px;
+$size-64: $size-1 * 64; // 8rem 128px;
+$size-72: $size-1 * 72; // 9rem 144px;
+$size-80: $size-1 * 80; // 10rem 160px;
+$size-88: $size-1 * 88; // 11rem 176px;
+
+
+$gap-1: 4px;
+$gap-2: $gap-1 * 2; // 8px
+$gap-3: $gap-1 * 3;
+$gap-4: $gap-1 * 4; // 16px
+$gap-5: $gap-1 * 5;
+$gap-6: $gap-1 * 6;
+$gap-7: $gap-1 * 7;
+$gap-8: $gap-1 * 8; // 32px
+$gap-10: $gap-1 * 10; // 40px
+$gap-12: $gap-1 * 12; // 48px
+$gap-16: $gap-1 * 16; // 64px
+
+// Content boundary (borders, background images, etc. can extend this, but the "inner" content of sections should be bounded by this value)
+$content-width: 1680px;
+
+// Screens
+$screen-tiny: 410px;
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+$screen-xxl: 1536px;

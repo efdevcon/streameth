@@ -1,0 +1,139 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
+@mixin padding($name, $padding, $padding-sm, $padding-md) {
+  &.#{$name} {
+    padding: $padding;
+
+    @media (max-width: $screen-sm) {
+      padding: $padding-sm;
+    }
+
+    @media (max-width: $screen-md) {
+      padding: $padding-md;
+    }
+  }
+}
+
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: $font-secondary;
+  @include fonts.font-md;
+  padding: $gap-2 $gap-3;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  background: none;
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+  }
+
+  &.sm {
+    @include fonts.font-sm;
+    padding: $gap-1 $gap-2;
+
+    @media (max-width: $screen-md) {
+      @include fonts.font-xs;
+    }
+  }
+
+  &.lg {
+    @include fonts.font-lg;
+    padding: $gap-4 $gap-5;
+
+    @media (max-width: $screen-md) {
+      @include fonts.font-md;
+    }
+  }
+
+  &.white {
+    background: white;
+    --text-color: black;
+    &:hover {
+      background: #f2f2f2;
+    }
+  }
+}
+
+// <button class="lg transparent">
+
+// button,
+// .button-primary {
+//   background-color: $color-primary;
+//   color: $color-secondary-dark;
+//   padding: $size-4 $size-3;
+
+//   &:hover {
+//     background-color: $color-primary-light;
+//   }
+
+//   &:active {
+//     background-color: $color-primary-dark;
+//   }
+
+//   &:disabled {
+//     background-color: $color-primary-opaque;
+//   }
+// }
+
+// .button-secondary {
+//   cursor: pointer;
+//   background-color: $color-secondary;
+//   color: $color-secondary-dark;
+//   padding: $size-4 $size-3;
+
+//   &:hover {
+//     background-color: $color-secondary-light;
+//   }
+
+//   &:active {
+//     background-color: $color-secondary-dark;
+//   }
+
+//   &:disabled {
+//     background-color: $color-secondary-opaque;
+//   }
+// }
+
+// .button-tertiary {
+//   cursor: pointer;
+//   background-color: $color-tertiary;
+//   color: $color-secondary-dark;
+//   padding: $size-4 $size-3;
+
+//   &:hover {
+//     background-color: $color-tertiary-light;
+//   }
+
+//   &:active {
+//     background-color: $color-tertiary-dark;
+//   }
+
+//   &:disabled {
+//     background-color: $color-tertiary-opaque;
+//   }
+// }
+
+// Size (sm, md, lg)
+// Color (any color reference, seethrough)
+// Responsiveness
+
+// &:focus,
+// &:active,
+// &:hover {
+//     outline: none;
+//     background: #fff;
+//     border: 2px solid $color-primary;
+//     color: $color-primary;
+// }
+
+// @media (min-width: $screen-md) and (max-width: $screen-xl) {
+//     padding: $gap-1 $gap-2;
+//     width: 100%;
+//     margin-top: $gap-2;
+// }

@@ -1,0 +1,3 @@
+:root {
+  --text-color: inherit; // Since icons don't respond to the color attribute (they use fill), they can use this variable to retrieve the color context
+}

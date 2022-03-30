@@ -1,0 +1,28 @@
+@use 'src/assets/css/variables' as *;
+@use './gaps';
+
+@mixin section {
+  display: flex;
+  justify-content: center;
+}
+
+$side-gap: $gap-16;
+$max-content-width: $content-width + ($side-gap * 2);
+
+@mixin content {
+  max-width: $max-content-width;
+  width: 100%;
+  @include gaps.lg(true);
+}
+
+@mixin grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: $gap-8;
+}
+
+@mixin grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: $gap-4;
+}
