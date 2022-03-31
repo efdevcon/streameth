@@ -1,9 +1,15 @@
 import 'assets/css/main.scss'
-import { Layout } from 'components/layout'
+import { LayoutPageType, DefaultLayout } from 'layouts'
 import { SEO } from 'components/seo'
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
+type AppLayoutProps = AppProps & {
+  Component: LayoutPageType
+}
+
+export default function App({ Component, pageProps }: AppLayoutProps) {
+  const Layout = Component.layout || (props => <DefaultLayout>{props.children}</DefaultLayout>)
+
   return (
     <Layout>
       <SEO />

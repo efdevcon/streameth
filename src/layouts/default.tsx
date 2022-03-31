@@ -5,7 +5,7 @@ type Props = {
   children: ReactNode
 }
 
-export function DefaultLayout(props: Props) {
+export default function DefaultLayout(props: Props) {
   return (
     <div>
       {/* Header */}
