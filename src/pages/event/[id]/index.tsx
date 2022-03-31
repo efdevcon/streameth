@@ -6,8 +6,10 @@ import { Event, Stream } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
 import { getStream } from 'services/stream'
 import Schedule from 'components/Schedule'
-
 import Player from 'components/Player'
+import PlayerHeader from 'components/Player/Header'
+import PlayerStatus from 'components/Player/Status'
+
 interface Props {
   event: Event
 }
@@ -39,9 +41,13 @@ export default function EventPage(props: Props) {
           <div className="content">
             <h2>{props.event.name}</h2>
             <p>{props.event.description}</p>
-            <div className="player-wrapper">
-              <Player />
-              <Schedule sessions={props.event.schedule.sessions} />
+            <div style={{ marginTop: '30px' }}>
+              <div className="player-wrapper">
+                <PlayerHeader />
+                <PlayerStatus />
+                <Player />
+                <Schedule sessions={props.event.schedule.sessions} />
+              </div>
             </div>
           </div>
         </div>

@@ -8,6 +8,58 @@
   @media (min-width: $screen-lg) {
     grid-template-columns: [player] 1fr [schedule] 320px;
     grid-column-gap: 20px;
-    max-height: 550px;
+  }
+}
+
+.player {
+  &__stream-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    grid-row: 3;
+
+    @media (min-width: $screen-lg) {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+
+  &__live {
+    display: flex;
+    align-items: center;
+
+    &__dot {
+      height: 12px;
+      width: 12px;
+      background-color: #ff0000;
+      border-radius: 6px;
+      margin-right: 5px;
+    }
+
+    &__description {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      text-transform: uppercase;
+      font-size: $size-20;
+      color: #686868;
+      font-weight: 300;
+      font-family: 'Space Grotesk', sans-serif;
+      line-height: 1;
+    }
+
+    img {
+      height: 30px;
+      width: auto;
+    }
   }
 }
