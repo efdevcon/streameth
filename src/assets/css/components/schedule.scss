@@ -1,0 +1,66 @@
+@use '../variables.scss' as *;
+@use '../partials/fonts';
+
+.schedule {
+  &__title {
+    text-transform: uppercase;
+    color: #0a0a0a;
+    background-color: #f3f3f3;
+    padding: 18px;
+    margin-bottom: 8px;
+
+    @include fonts.font-lg;
+    @include fonts.bold;
+  }
+
+  &__sessions {
+    height: 100%;
+    list-style: none;
+    overflow-y: auto;
+  }
+
+  &__session {
+    border: 1.5px solid #dddddd;
+    margin-bottom: 8px;
+    padding: 8px 11px;
+
+    &__name {
+      display: block;
+      color: $color-primary;
+      margin-bottom: 10px;
+
+      @include fonts.font-lg;
+      @include fonts.semi-bold;
+    }
+
+    &__date {
+      font-size: 14px;
+      color: $color-primary;
+      @include fonts.bold;
+    }
+
+    &__speakers {
+      font-size: 14px;
+      color: $color-secondary-dark;
+      line-height: 1.2;
+    }
+
+    &__info {
+      tr {
+        td {
+          vertical-align: middle;
+        }
+
+        td:first-child {
+          padding-right: 5px;
+        }
+      }
+
+      i {
+        display: block;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
