@@ -62,4 +62,18 @@
       width: auto;
     }
   }
+
+  &__date {
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444444;
+    text-align: right;
+
+    span {
+      font-size: $size-9;
+      color: #666666;
+      font-weight: 400;
+    }
+  }
 }
