@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 
@@ -8,19 +8,23 @@ export const VideoJS = (props: any) => {
   const playerRef = useRef<videojs.Player | null>(null)
   const { options, onReady } = props
 
-  React.useEffect(() => {
+  useEffect(() => {
     // make sure Video.js player is only initialized once
     if (!playerRef.current) {
       const videoElement = videoRef.current
       if (!videoElement) return
 
-      const player = (playerRef.current = videojs(videoElement, {...options, errorDisplay: false, autoplay: false}, () => {
-        onReady && onReady(player)
-      }))
-    } 
+      const player = (playerRef.current = videojs(
+        videoElement,
+        { ...options, errorDisplay: false, autoplay: false },
+        () => {
+          onReady && onReady(player)
+        }
+      ))
+    }
   }, [options, videoRef])
 
-  React.useEffect(() => {
+  useEffect(() => {
     const player = playerRef.current
 
     return () => {
@@ -32,7 +36,7 @@ export const VideoJS = (props: any) => {
   }, [playerRef])
 
   return (
-    <div data-vjs-player style={{borderRadius: "5px"}} >
+    <div data-vjs-player style={{ borderRadius: '5px' }}>
       <video ref={videoRef} className="video-js vjs-16-9 vjs-big-play-centered" />
     </div>
   )

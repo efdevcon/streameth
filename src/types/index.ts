@@ -27,8 +27,8 @@ export interface Recording {
 }
 
 export interface StreamProvider {
-  getStreams: () => Promise<Stream[]>
-  getStream: (streamId: string) => Promise<Stream | null>
+  getStreams: (ids: string[]) => Promise<Stream[]>
+  getStream: (streamId: string) => Promise<Stream>
   getRecordings: (streamId: string) => Promise<Recording[]>
   mapStreamObj: (data: any) => Stream
   mapRecordingObj: (data: any) => Recording

@@ -37,11 +37,23 @@ export class Livepeer implements StreamProvider {
     }
   }
 
-  async getStreams(): Promise<Stream[]> {
+  async getStreams(ids: string[] = []): Promise<Stream[]> {
     try {
-      const streams: LivepeerStream[] = await get(`${BASE_API}/stream`, Livepeer.authHeader)
+      const streams: LivepeerStream[] = await get(`${BASE_API}/stream`, {}, Livepeer.authHeader)
 
-      return streams.filter(stream => stream.playbackId).map(stream => this.mapStreamObj(stream))
+      return streams
+        .filter(stream => {
+          if (!stream.playbackId) {
+            return false
+          }
+
+          if (ids.length > 0) {
+            return ids.includes(stream.id)
+          }
+
+          return true
+        })
+        .map(stream => this.mapStreamObj(stream))
     } catch (e) {
       console.error('Error fetching Livepeer streams', e)
 
@@ -49,20 +61,21 @@ export class Livepeer implements StreamProvider {
     }
   }
 
-  async getStream(streamId: string): Promise<Stream | null> {
+  async getStream(streamId: string): Promise<Stream> {
     try {
-      const stream: LivepeerStream = await get(`${BASE_API}/stream/${streamId}`, Livepeer.authHeader)
+      const stream: LivepeerStream = await get(`${BASE_API}/stream/${streamId}`, {}, Livepeer.authHeader)
 
       return this.mapStreamObj(stream)
     } catch {
-      return null
+      return Promise.reject({ message: `Stream with ID ${streamId} not found`, statusCode: 404 })
     }
   }
 
   async getRecordings(streamId: string): Promise<Recording[]> {
     try {
       const sessions: LivepeerSession[] = await get(
-        `${BASE_API}/stream/${streamId}/sessions?record=1`,
+        `${BASE_API}/stream/${streamId}/sessions`,
+        { record: 1 },
         Livepeer.authHeader
       )
 
