@@ -1,30 +1,69 @@
-import React from "react";
+import React , {useState} from "react";
 import VideoJS from "./VideoJS"
+import { get } from "../../utils/requests";
+
+  // We could link player state to player header using setStatus
+  enum PlayerState {
+    Idle,
+    Playing,
+    Error
+  }
 
 
-const Player = () => {
+const Player = ({mainSrc, backUpSrc, poster, setStatus} : {
+  mainSrc: string,
+  backUpSrc: string,
+  poster: string,
+  setStatus: (status: string) => void
+}) => {
 
-  const sources = []
   const playerRef = React.useRef(null);
-
-  const videoJsOptions = { // lookup the options in the docs for more options
-    autoplay: true,
+  const [videoJsOptions, setVideoJsOptions] = useState({
+    poster: poster || "",
+    autoplay: false,
     controls: true,
     responsive: true,
     fluid: true,
     sources: [{
-      src: 'https://d2zihajmogu5jn.cloudfront.net/ipbop-advanced/bipbop_16x9_variant.m3u8',
+      src: mainSrc,
       type: 'application/x-mpegURL'
     }]
-  }
+  })
 
   // TODO: change type
   const handlePlayerReady = (player:any) => {
     playerRef.current = player;
 
-    // player.on('error', (e) => {
-    //   console.log('error', e);
-    // });
+
+    player.reloadSourceOnError({
+
+      // getSource allows you to override the source object used when an error occurs
+      getSource: function(reload) {
+        console.log('Reloading because of an error');
+    
+        // call reload() with a fresh source object
+        // you can do this step asynchronously if you want (but the error dialog will
+        // show up while you're waiting)
+        reload({
+          src: backUpSrc,
+          type: 'application/x-mpegURL'
+        });
+      },
+    
+      // errorInterval specifies the minimum amount of seconds that must pass before
+      // another reload will be attempted
+      errorInterval: 5
+    });
+
+    player.on('error', (e) => {
+      console.log('error', e);
+    });
+
+    player.on('ready', () => {
+      player.tech().on('usage', (e) => {
+        console.log(e.name);
+      });
+    });
 
     // you can handle player events here
     player.on('waiting', () => {

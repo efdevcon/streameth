@@ -5,6 +5,7 @@ export interface Event {
   start: string
   end: string
   website: string
+  poster: string
   stream: Stream
   schedule: Schedule
   rooms: Room[]

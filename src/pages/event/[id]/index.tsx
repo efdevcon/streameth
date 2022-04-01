@@ -21,18 +21,34 @@ interface Params extends ParsedUrlQuery {
 export default function EventPage(props: Props) {
   const [stream, setStream] = useState<Stream | null>(null)
   const [currentStreamId, setCurrentStreamId] = useState<string | null>(props.event.rooms[0]?.streams[0].id)
+  const [poster, setPoster] = useState(props.event.poster)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     const fetchStream = async (streamId: string) => {
-      const fetchedStream = await getStream(streamId)
-
-      setStream(fetchedStream)
-    }
+      getStream(streamId).then(stream => {
+        setStream(stream)
+        console.log(stream)
+      }).catch((e) => {
+        setError(true)
+      }).finally(() => {
+        setLoading(false)
+    })};
 
     if (currentStreamId) {
       fetchStream(currentStreamId)
     }
+
   }, [currentStreamId])
+
+  if(loading) {
+    return <div>Loading...</div>
+  }
+
+  if(error) {
+    return <div>Error</div>
+  }
 
   return (
     <>
@@ -45,7 +61,7 @@ export default function EventPage(props: Props) {
               <div className="player-wrapper">
                 <PlayerHeader />
                 <PlayerStatus />
-                <Player />
+                <Player mainSrc={stream.playbackUrl} backUpSrc="" poster={poster}/>
                 <Schedule sessions={props.event.schedule.sessions} />
               </div>
             </div>

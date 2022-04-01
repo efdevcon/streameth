@@ -5,6 +5,7 @@
     "start": "2022-04-18",
     "end": "2022-04-18",
     "website": "https://cryptocanal.org/eth-day/",
+    "poster": "https://devconnect.org/og-devconnect.png",
     "stream": {
         "version": 1
     },
@@ -52,7 +53,7 @@
             "id": "Main",
             "streams": [
                 {
-                    "id": "a1f61376-672d-4935-bd27-fce849c7aeba"
+                    "id": "5d10d48e-4b4e-4562-b543-12ed3044e80f"
                 }
             ]
         }

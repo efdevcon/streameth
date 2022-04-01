@@ -14,16 +14,10 @@ export const VideoJS = (props: any) => {
       const videoElement = videoRef.current
       if (!videoElement) return
 
-      const player = (playerRef.current = videojs(videoElement, options, () => {
-        console.log('player is ready')
+      const player = (playerRef.current = videojs(videoElement, {...options, errorDisplay: false, autoplay: false}, () => {
         onReady && onReady(player)
       }))
-    } else {
-      // you can update player here [update player through props]
-      // const player = playerRef.current;
-      // player.autoplay(options.autoplay);
-      // player.src(options.sources);
-    }
+    } 
   }, [options, videoRef])
 
   React.useEffect(() => {
@@ -38,7 +32,7 @@ export const VideoJS = (props: any) => {
   }, [playerRef])
 
   return (
-    <div data-vjs-player>
+    <div data-vjs-player style={{borderRadius: "5px"}} >
       <video ref={videoRef} className="video-js vjs-16-9 vjs-big-play-centered" />
     </div>
   )
