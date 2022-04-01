@@ -27,26 +27,29 @@ export default function EventPage(props: Props) {
 
   useEffect(() => {
     const fetchStream = async (streamId: string) => {
-      getStream(streamId).then(stream => {
-        setStream(stream)
+      try {
+        const stream = await getStream(streamId)
+
         console.log(stream)
-      }).catch((e) => {
+        setStream(stream)
+      } catch (e) {
+        console.error(e)
         setError(true)
-      }).finally(() => {
+      } finally {
         setLoading(false)
-    })};
+      }
+    }
 
     if (currentStreamId) {
       fetchStream(currentStreamId)
     }
-
   }, [currentStreamId])
 
-  if(loading) {
+  if (loading) {
     return <div>Loading...</div>
   }
 
-  if(error) {
+  if (error) {
     return <div>Error</div>
   }
 
@@ -61,7 +64,7 @@ export default function EventPage(props: Props) {
               <div className="player-wrapper">
                 <PlayerHeader />
                 <PlayerStatus />
-                <Player mainSrc={stream.playbackUrl} backUpSrc="" poster={poster}/>
+                <Player mainSrc={stream.playbackUrl} backUpSrc="" poster={poster} />
                 <Schedule sessions={props.event.schedule.sessions} />
               </div>
             </div>
