@@ -7,18 +7,20 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { id } = req.query
     const provider = initStreamProvider()
 
-    let stream: Stream | null = null
-
     if (id && typeof id === 'string') {
-      stream = await provider.getStream(id)
-
-      if (stream) {
+      try {
+        const stream: Stream = await provider.getStream(id)
         const recordings: Recording[] = await provider.getRecordings(id)
-        stream.recordings = recordings
-      }
-    }
 
-    return res.status(200).json(stream)
+        stream.recordings = recordings
+
+        return res.status(200).json(stream)
+      } catch (e: any) {
+        return res.status(e.statusCode).json(e)
+      }
+    } else {
+      return res.status(400).json({})
+    }
   }
 
   res.status(404).json({})

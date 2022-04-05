@@ -4,9 +4,20 @@ import { Stream, Recording } from 'types'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
+    const { ids } = req.query
     const provider = initStreamProvider()
 
-    const streams: Stream[] = await provider.getStreams()
+    let streamIds: string[] = []
+
+    if (ids) {
+      if (typeof ids === 'string') {
+        streamIds.push(ids)
+      } else {
+        streamIds = ids
+      }
+    }
+
+    const streams: Stream[] = await provider.getStreams(streamIds)
     const recordings: Recording[][] = await Promise.all(
       streams.map(stream => {
         return provider.getRecordings(stream.id)

@@ -2,9 +2,9 @@ import React, { useEffect, useState, ReactElement } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
-import { Event, Stream } from 'types'
+import { Event, Stream, Room } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
-import { getStream } from 'services/stream'
+import { getStreams } from 'services/stream'
 import { EmbedLayout } from 'layouts'
 import Schedule from 'components/Schedule'
 import Player from 'components/Player'
@@ -20,26 +20,33 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EmbedEventPage(props: Props) {
-  const [stream, setStream] = useState<Stream | null>(null)
-  const [currentStreamId, setCurrentStreamId] = useState<string | null>(props.event.rooms[0]?.streams[0].id)
+  const [currentRoom, setCurrentRoom] = useState<Room>(props.event.rooms[0])
+  const [streams, setStreams] = useState<Stream[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const fetchStream = async (streamId: string) => {
-      const fetchedStream = await getStream(streamId)
+    const getRoomStreams = async (room: Room) => {
+      try {
+        const streams = await getStreams(room.streams.map(stream => stream.id))
 
-      setStream(fetchedStream)
+        setStreams(streams)
+      } catch (e) {
+        console.error(e)
+      } finally {
+        setIsLoading(false)
+      }
     }
 
-    if (currentStreamId) {
-      fetchStream(currentStreamId)
+    if (currentRoom) {
+      getRoomStreams(currentRoom)
     }
-  }, [currentStreamId])
+  }, [currentRoom])
 
   return (
     <div className="player-wrapper">
       <PlayerHeader />
       <PlayerStatus />
-      <Player />
+      <Player streams={streams} poster={props.event.poster} isLoading={isLoading} />
       <Schedule sessions={props.event.schedule.sessions} />
     </div>
   )

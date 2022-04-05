@@ -1,3 +1,5 @@
+import { stringify } from 'query-string'
+
 interface RequestOptions {
   method: 'get' | 'post' | 'put'
   headers?: HeadersInit
@@ -23,8 +25,8 @@ const request = async (url: string, options: RequestOptions) => {
   return response.ok ? data : Promise.reject(data)
 }
 
-export const get = async (url: string, headers?: HeadersInit) => {
-  return await request(url, {
+export const get = async (url: string, params: object = {}, headers?: HeadersInit) => {
+  return await request(`${url}?${stringify(params)}`, {
     method: 'get',
     headers,
   })

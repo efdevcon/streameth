@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
-import { Event, Stream } from 'types'
+import { Event, Stream, Room } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
-import { getStream } from 'services/stream'
+import { getStreams } from 'services/stream'
 import Schedule from 'components/Schedule'
 import Player from 'components/Player'
 import PlayerHeader from 'components/Player/Header'
@@ -19,39 +19,27 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EventPage(props: Props) {
-  const [stream, setStream] = useState<Stream | null>(null)
-  const [currentStreamId, setCurrentStreamId] = useState<string | null>(props.event.rooms[0]?.streams[0].id)
-  const [poster, setPoster] = useState(props.event.poster)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
+  const [currentRoom, setCurrentRoom] = useState<Room>(props.event.rooms[0])
+  const [streams, setStreams] = useState<Stream[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const fetchStream = async (streamId: string) => {
+    const getRoomStreams = async (room: Room) => {
       try {
-        const stream = await getStream(streamId)
+        const streams = await getStreams(room.streams.map(stream => stream.id))
 
-        console.log(stream)
-        setStream(stream)
+        setStreams(streams)
       } catch (e) {
         console.error(e)
-        setError(true)
       } finally {
-        setLoading(false)
+        setIsLoading(false)
       }
     }
 
-    if (currentStreamId) {
-      fetchStream(currentStreamId)
+    if (currentRoom) {
+      getRoomStreams(currentRoom)
     }
-  }, [currentStreamId])
-
-  if (loading) {
-    return <div>Loading...</div>
-  }
-
-  if (error) {
-    return <div>Error</div>
-  }
+  }, [currentRoom])
 
   return (
     <>
@@ -64,7 +52,7 @@ export default function EventPage(props: Props) {
               <div className="player-wrapper">
                 <PlayerHeader />
                 <PlayerStatus />
-                <Player mainSrc={stream.playbackUrl} backUpSrc="" poster={poster} />
+                <Player streams={streams} poster={props.event.poster} isLoading={isLoading} />
                 <Schedule sessions={props.event.schedule.sessions} />
               </div>
             </div>
