@@ -9,7 +9,8 @@
         "version": 1
     },
     "schedule": {
-        "version": 1
+        "version": 1,
+        "sessions": []
     },
     "rooms": []
 }

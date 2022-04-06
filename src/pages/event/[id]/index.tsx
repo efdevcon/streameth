@@ -7,10 +7,12 @@ import Schedule from 'components/Schedule'
 import Player from 'components/Player'
 import PlayerHeader from 'components/Player/Header'
 import PlayerStatus from 'components/Player/Status'
+import EventSwitcher from 'components/EventSwitcher'
 import useStreams from 'components/Hooks/useStreams'
 
 interface Props {
   event: Event
+  events: Event[]
 }
 
 interface Params extends ParsedUrlQuery {
@@ -18,7 +20,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EventPage(props: Props) {
-  const { streams, streamsLoading } = useStreams(props.event)
+  const { streams, streamsLoading, eventNames, currentEvent, changeEvent } = useStreams(props.event, props.events)
 
   return (
     <>
@@ -29,10 +31,18 @@ export default function EventPage(props: Props) {
             <p>{props.event.description}</p>
             <div style={{ marginTop: '30px' }}>
               <div className="player-wrapper">
+                <div style={{ gridColumnStart: 1, gridColumnEnd: 3 }}>
+                  <EventSwitcher
+                    eventNames={eventNames()}
+                    activeEventName={currentEvent.name}
+                    onEventSwitch={changeEvent}
+                  />
+                </div>
+
                 <PlayerHeader />
                 <PlayerStatus />
-                <Player streams={streams} poster={props.event.poster} isLoading={streamsLoading} />
-                <Schedule sessions={props.event.schedule.sessions} />
+                <Player streams={streams} poster={currentEvent.poster} isLoading={streamsLoading} />
+                <Schedule sessions={currentEvent.schedule.sessions} />
               </div>
             </div>
           </div>
@@ -67,6 +77,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async context => {
   return {
     props: {
       event,
+      events,
     },
   }
 }
