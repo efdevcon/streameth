@@ -20,26 +20,28 @@ export default function ScheduleSession({ session }: ScheduleSessionProps) {
     <div className="schedule__session">
       <span className="schedule__session__name">{session.name}</span>
       <table className="schedule__session__info">
-        <tr>
-          <td>
-            <i>
-              <IconClock stroke="#B7B7B7" />
-            </i>
-          </td>
-          <td>
-            <span className="schedule__session__date">{formattedDate(session.start)}</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <i style={{ color: '#B7B7B7' }}>
-              <IconVoiceRecord />
-            </i>
-          </td>
-          <td>
-            <span className="schedule__session__speakers">{speakersList(session.speakers)}</span>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <i>
+                <IconClock stroke="#B7B7B7" />
+              </i>
+            </td>
+            <td>
+              <span className="schedule__session__date">{formattedDate(session.start)}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i style={{ color: '#B7B7B7' }}>
+                <IconVoiceRecord />
+              </i>
+            </td>
+            <td>
+              <span className="schedule__session__speakers">{speakersList(session.speakers)}</span>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   )
