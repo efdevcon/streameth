@@ -22,7 +22,7 @@ export default function Widget({ initialEvent, allEvents }: WidgetProps) {
         <EventSwitcher eventNames={eventNames()} activeEventName={currentEvent.name} onEventSwitch={changeEvent} />
       </div>
       <div className="widget__player-header">
-        <PlayerHeader eventName={currentEvent.name} />
+        <PlayerHeader title={currentEvent.name} />
       </div>
       <div className="widget__player-status">
         <PlayerStatus />
