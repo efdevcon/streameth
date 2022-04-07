@@ -4,6 +4,7 @@ import PlayerHeader from 'components/Player/Header'
 import PlayerStatus from 'components/Player/Status'
 import Player from 'components/Player'
 import Schedule from 'components/Schedule'
+import WidgetHeader from './Header'
 import useStreams from 'components/Hooks/useStreams'
 
 interface WidgetProps {
@@ -16,7 +17,7 @@ export default function Widget({ initialEvent, allEvents }: WidgetProps) {
 
   return (
     <div className="widget">
-      <div className="widget__header">hello world</div>
+      <WidgetHeader />
       <div className="widget__event-switcher">
         <EventSwitcher eventNames={eventNames()} activeEventName={currentEvent.name} onEventSwitch={changeEvent} />
       </div>

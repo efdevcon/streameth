@@ -82,3 +82,7 @@
     margin-bottom: $gap-4;
   }
 }
+
+@mixin letterSpacingPercent($percent, $fontSize) {
+  letter-spacing: #{($percent / 100) * $fontSize};
+}

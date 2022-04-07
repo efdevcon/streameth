@@ -1,4 +1,5 @@
 @use '../variables.scss' as *;
+@use '../partials/fonts' as *;
 
 .widget {
   display: grid;
@@ -26,6 +27,43 @@
 
   &__header {
     grid-area: widgetHeader;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $screen-tiny) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    h1 {
+      font-family: $font-primary;
+      color: #000000;
+      text-transform: uppercase;
+      font-size: $size-16;
+      font-family: 'Roboto Condensed', sans-serif;
+      margin: 10px 0;
+      @include letterSpacingPercent(5, $size-16);
+    }
+
+    &__attribution {
+      display: flex;
+      align-items: center;
+    }
+
+    &__powered {
+      flex-shrink: 0;
+      margin-right: 10px;
+      color: #b7b7b7;
+      font-size: $size-6;
+      text-transform: uppercase;
+      @include letterSpacingPercent(5, $size-6);
+    }
+
+    &__logo {
+      height: 30px;
+      width: auto;
+    }
   }
 
   &__event-switcher {
