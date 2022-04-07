@@ -1,16 +1,5 @@
 @use '../variables.scss' as *;
 
-.player-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 20px;
-
-  @media (min-width: $screen-lg) {
-    grid-template-columns: [player] 1fr [schedule] 320px;
-    grid-column-gap: 20px;
-  }
-}
-
 .player {
   &__stream-status {
     display: flex;
@@ -45,15 +34,13 @@
 
   &__header {
     display: flex;
-    justify-content: space-between;
+    height: 100%;
     align-items: flex-end;
 
-    p {
+    &__title {
       text-transform: uppercase;
-      font-size: $size-20;
-      color: #686868;
-      font-weight: 300;
-      font-family: 'Space Grotesk', sans-serif;
+      font-size: $size-12;
+      color: #000000;
       line-height: 1;
     }
 

@@ -1,0 +1,54 @@
+@use '../variables.scss' as *;
+
+.widget {
+  display: grid;
+  grid-template-areas:
+    'widgetHeader'
+    'eventSwitcher'
+    'playerHeader'
+    'player'
+    'playerStatus'
+    'eventDescription'
+    'schedule';
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+
+  @media (min-width: $screen-lg) {
+    grid-template-areas:
+      'widgetHeader widgetHeader'
+      'eventSwitcher eventSwitcher'
+      'playerHeader playerStatus'
+      'player schedule'
+      'eventDescription eventDescription';
+    grid-template-columns: 1fr 320px;
+    grid-column-gap: 20px;
+  }
+
+  &__header {
+    grid-area: widgetHeader;
+  }
+
+  &__event-switcher {
+    grid-area: eventSwitcher;
+  }
+
+  &__player-header {
+    grid-area: playerHeader;
+  }
+
+  &__player-status {
+    grid-area: playerStatus;
+  }
+
+  &__player {
+    grid-area: player;
+  }
+
+  &__schedule {
+    grid-area: schedule;
+  }
+
+  &__event-description {
+    grid-area: eventDescription;
+  }
+}
