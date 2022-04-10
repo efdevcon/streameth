@@ -19,7 +19,6 @@ const useStreams = (event: Event, events: Event[]) => {
     const getRoomStreams = async (room: Room) => {
       try {
         const streams = await getStreams(room.streams.map(stream => stream.id))
-
         setStreams(streams)
       } catch (e) {
         console.error(e)
