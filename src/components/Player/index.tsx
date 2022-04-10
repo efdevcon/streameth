@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react'
 import VideoJS from './VideoJS'
 import { Stream } from 'types'
 import { get } from '../../utils/requests'
-
 // We could link player state to player header using setStatus
 enum PlayerState {
   Idle,
@@ -33,6 +32,11 @@ const tempParseSource = (source: string) => {
 }
 
 
+const checkSrcIsActive = (src: string) => {
+  // make get request to check if src is active
+  return  false
+}
+
 const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
 
 
@@ -43,17 +47,19 @@ const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
     return <div>Error fetching stream</div>
   }
 
-  // replace cdn for spain
-  streams = streams.map(stream => {
-    const { newUrl, type } = tempParseSource(stream.playbackUrl)
-    return {
-      ...stream,
-      playbackUrl: newUrl,
-      type,
-    }
-  })
+  useEffect(() => {
+    // replace cdn for spain
+    streams = streams.map(stream => {
+      const { newUrl, type } = tempParseSource(stream.playbackUrl)
+      return {
+        ...stream,
+        playbackUrl: newUrl,
+        type,
+        isActive: checkSrcIsActive(stream.playbackUrl),
+      }
+    })
+  }, [])
 
-  const [isPolling, setPolling] = useState(false)
   const playerRef = useRef(null)
   const [currentStreamIndex, setCurrentStreamIndex] = useState<number>(0)
   const [videoJsOptions, setVideoJsOptions] = useState({
@@ -71,6 +77,8 @@ const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
   })
 
   const changeStreamIndex = () => {
+    // check for any active src and return that
+
     let newStreamIndex = currentStreamIndex + 1
 
     // Check array bounds; if out of bounds, set currentStreamIndex to 0
@@ -94,25 +102,28 @@ const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
       console.log("loadedmetadata", player.tech().vhs.playlists.master)
     })
 
-    player.reloadSourceOnError({
+      player.reloadSourceOnError({
 
-      // getSource allows you to override the source object used when an error occurs
-      getSource: function(reload) {
-        console.log('Reloading because of an error');
-        const newStreamIndex = changeStreamIndex()
-        // reload({
-        //   src: streams[newStreamIndex].playbackUrl,
-        //   type: 'application/x-mpegURL'
-        // }); 
-      }, 
-      errorInterval: 10 
-    });
+        // getSource allows you to override the source object used when an error occurs
+        getSource: function (reload) {
+          console.log('Reloading because of an error');
+          const checkForActiveSrc = streams.find(stream => stream.isActive)
+          if (checkForActiveSrc !== undefined) {
+          const index = changeStreamIndex()
+          const source = {
+            src: checkForActiveSrc.playbackUrl,
+            type: 'application/x-mpegURL',
+          }
+          reload(source)
+          }
+        }, 
+        errorInterval: 10 
+      });
+
 
     player.on('error', e => {
       console.log('error', e)
-      // reset src
-      //setPolling(true)
-      player.stop()
+
     })
  
     player.on('waiting', () => {

@@ -10,7 +10,7 @@ export const VideoJS = (props: any) => {
   const { options, onReady } = props
 
   useEffect(() => {
-
+    
     // make sure Video.js player is only initialized once
     if (!playerRef.current) {
       const videoElement = videoRef.current
