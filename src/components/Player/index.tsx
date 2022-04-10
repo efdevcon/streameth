@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import VideoJS from './VideoJS'
 import { Stream } from 'types'
 import { get } from '../../utils/requests'
@@ -17,13 +17,43 @@ interface PlayerProps {
   setStatus?: (status: string) => void
 }
 
+
+
+
+// Temporary fix for palyback in Spain
+const tempParseSource = (source: string) => {
+  const [, url, type] = source.match(/^(.*)\/(.*)$/) || []
+
+  const extractStreamHLSid = url.split('/')[4]
+  const newUrl = `https://livepeercdn.com/hls/${extractStreamHLSid}/index.m3u8`
+  return {
+    newUrl,
+    type,
+  }
+}
+
+
 const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
+
+
   if (isLoading) {
     return <div>Loading player...</div>
   }
   if (streams.length === 0) {
     return <div>Error fetching stream</div>
   }
+
+  // replace cdn for spain
+  streams = streams.map(stream => {
+    const { newUrl, type } = tempParseSource(stream.playbackUrl)
+    return {
+      ...stream,
+      playbackUrl: newUrl,
+      type,
+    }
+  })
+
+  const [isPolling, setPolling] = useState(false)
   const playerRef = useRef(null)
   const [currentStreamIndex, setCurrentStreamIndex] = useState<number>(0)
   const [videoJsOptions, setVideoJsOptions] = useState({
@@ -53,49 +83,48 @@ const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
     return newStreamIndex
   }
 
+
+
   // TODO: change type
   const handlePlayerReady = (player: any) => {
     playerRef.current = player
 
-    player.reloadSourceOnError({
-      // getSource allows you to override the source object used when an error occurs
-      getSource: function (reload) {
-        console.log('Reloading because of an error')
 
-        const index = changeStreamIndex()
-
-        // call reload() with a fresh source object
-        // you can do this step asynchronously if you want (but the error dialog will
-        // show up while you're waiting)
-        reload({
-          src: streams[index].playbackUrl,
-          type: 'application/x-mpegURL',
-        })
-      },
-
-      // errorInterval specifies the minimum amount of seconds that must pass before
-      // another reload will be attempted
-      errorInterval: 5,
+    player.tech().on('loadedmetadata', () => {
+      console.log("loadedmetadata", player.tech().vhs.playlists.master)
     })
+
+    player.reloadSourceOnError({
+
+      // getSource allows you to override the source object used when an error occurs
+      getSource: function(reload) {
+        console.log('Reloading because of an error');
+        const newStreamIndex = changeStreamIndex()
+        // reload({
+        //   src: streams[newStreamIndex].playbackUrl,
+        //   type: 'application/x-mpegURL'
+        // }); 
+      }, 
+      errorInterval: 10 
+    });
 
     player.on('error', e => {
       console.log('error', e)
+      // reset src
+      //setPolling(true)
+      player.stop()
     })
-
-    player.on('ready', () => {
-      player.tech().on('usage', e => {
-        console.log(e.name)
-      })
-    })
-
-    // you can handle player events here
+ 
     player.on('waiting', () => {
       console.log('player is waiting')
+      console.log("media", player.tech().vhs.playlists.media())
+      const currentPlaylist = player.tech().vhs.playlists.media()
+      console.log(currentPlaylist)
+      if(currentPlaylist.custom?.livepeerError) {
+        player.error({code: '4'})
+      }
     })
 
-    player.on('dispose', () => {
-      console.log('player will dispose')
-    })
   }
 
   return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />

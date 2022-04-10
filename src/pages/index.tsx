@@ -4,7 +4,6 @@ import { Event, Stream } from 'types'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { getStreams } from '../services/stream'
-
 interface Props {
   events: Event[]
 }

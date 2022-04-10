@@ -14,7 +14,6 @@ interface WidgetProps {
 
 export default function Widget({ initialEvent, allEvents }: WidgetProps) {
   const { streams, streamsLoading, eventNames, currentEvent, changeEvent } = useStreams(initialEvent, allEvents)
-
   return (
     <div className="widget">
       <WidgetHeader />

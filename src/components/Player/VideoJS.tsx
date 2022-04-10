@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 
+
 // TODO: Need to change types
 export const VideoJS = (props: any) => {
   const videoRef = useRef(null)
@@ -9,6 +10,7 @@ export const VideoJS = (props: any) => {
   const { options, onReady } = props
 
   useEffect(() => {
+
     // make sure Video.js player is only initialized once
     if (!playerRef.current) {
       const videoElement = videoRef.current
@@ -16,13 +18,22 @@ export const VideoJS = (props: any) => {
 
       const player = (playerRef.current = videojs(
         videoElement,
-        { ...options, errorDisplay: false, autoplay: false },
+        { ...options, errorDisplay: false, autoplay: false, html5: {
+          vhs: {
+            customTagParsers: [{
+              expression: /#EXT-X-ERROR/,
+              customType: 'livepeerError',
+            }]
+        } }},
+        
         () => {
           onReady && onReady(player)
         }
-      ))
+      ));
     }
+
   }, [options, videoRef])
+
 
   useEffect(() => {
     const player = playerRef.current
