@@ -1,5 +1,5 @@
 import { Event } from 'types'
-import EventSwitcher from 'components/EventSwitcher'
+import EventSwitcher from 'components/Event/Switcher'
 import EventInfoBox from 'components/Event/InfoBox'
 import PlayerHeader from 'components/Player/Header'
 import PlayerStatus from 'components/Player/Status'
