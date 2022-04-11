@@ -20,8 +20,6 @@ export default function EventPage(props: Props) {
       <div>
         <div className="section">
           <div className="content">
-            <h2>{props.event.name}</h2>
-            <p>{props.event.description}</p>
             <div style={{ marginTop: '30px' }}>
               <Widget allEvents={props.events} initialEvent={props.event} />
             </div>
