@@ -16,9 +16,6 @@ interface PlayerProps {
   setStatus?: (status: string) => void
 }
 
-
-
-
 // Temporary fix for palyback in Spain
 const tempParseSource = (source: string) => {
   const [, url, type] = source.match(/^(.*)\/(.*)$/) || []
@@ -31,15 +28,12 @@ const tempParseSource = (source: string) => {
   }
 }
 
-
 const checkSrcIsActive = (src: string) => {
   // make get request to check if src is active
-  return  false
+  return false
 }
 
 const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
-
-
   if (isLoading) {
     return <div>Loading player...</div>
   }
@@ -91,51 +85,44 @@ const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
     return newStreamIndex
   }
 
-
-
   // TODO: change type
   const handlePlayerReady = (player: any) => {
     playerRef.current = player
 
-
     player.tech().on('loadedmetadata', () => {
-      console.log("loadedmetadata", player.tech().vhs.playlists.master)
+      console.log('loadedmetadata', player.tech().vhs.playlists.master)
     })
 
-      player.reloadSourceOnError({
-
-        // getSource allows you to override the source object used when an error occurs
-        getSource: function (reload) {
-          console.log('Reloading because of an error');
-          const checkForActiveSrc = streams.find(stream => stream.isActive)
-          if (checkForActiveSrc !== undefined) {
+    player.reloadSourceOnError({
+      // getSource allows you to override the source object used when an error occurs
+      getSource: function (reload: any) {
+        console.log('Reloading because of an error')
+        const checkForActiveSrc = streams.find(stream => stream.isActive)
+        if (checkForActiveSrc !== undefined) {
           const index = changeStreamIndex()
           const source = {
             src: checkForActiveSrc.playbackUrl,
             type: 'application/x-mpegURL',
           }
           reload(source)
-          }
-        }, 
-        errorInterval: 10 
-      });
-
-
-    player.on('error', e => {
-      console.log('error', e)
-
+        }
+      },
+      errorInterval: 10,
     })
- 
+
+    player.on('error', (e: any) => {
+      console.log('error', e)
+    })
+
     player.on('waiting', () => {
       console.log('player is waiting')
-      console.log("media", player.tech().vhs.playlists.media())
+      console.log('media', player.tech().vhs.playlists.media())
       const currentPlaylist = player.tech().vhs.playlists.media()
       console.log(currentPlaylist)
-      if(currentPlaylist.custom?.livepeerError) {
-        player.error({code: '4'})
+      if (currentPlaylist.custom?.livepeerError) {
+        player.error({ code: '4' })
       }
     })
-
   }
 
   return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
