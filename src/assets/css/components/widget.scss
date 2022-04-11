@@ -12,7 +12,7 @@
     'eventInfoBox'
     'schedule';
   grid-template-columns: 1fr;
-  grid-row-gap: 20px;
+  grid-row-gap: 10px;
 
   @media (min-width: $screen-lg) {
     grid-template-areas:
