@@ -1,0 +1,57 @@
+@use '../variables.scss' as *;
+@use '../partials/fonts' as *;
+
+.event {
+  &__date {
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444444;
+
+    &__time {
+      font-size: $size-9;
+      color: #666666;
+      font-weight: 400;
+    }
+  }
+  &__info-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    background-color: #f9f8ff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 20px;
+
+    @media (min-width: $screen-sm) {
+      grid-template-columns: 1fr 4fr;
+    }
+
+    &__details {
+      h2 {
+        text-transform: uppercase;
+        font-family: $font-primary;
+        font-size: $size-12;
+        color: #000000;
+        font-weight: 400;
+        margin-bottom: 5px;
+        @include letterSpacingPercent(5, $size-12);
+
+        &:before {
+          content: '';
+          display: block;
+          width: 23px;
+          height: 4px;
+          background-color: #8f78fb;
+        }
+      }
+
+      p {
+        font-size: $size-8;
+        color: #333333;
+        max-width: 600px;
+        @include letterSpacingPercent(5, $size-8);
+      }
+    }
+  }
+}

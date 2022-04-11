@@ -1,5 +1,6 @@
 import { Event } from 'types'
 import EventSwitcher from 'components/EventSwitcher'
+import EventInfoBox from 'components/Event/InfoBox'
 import PlayerHeader from 'components/Player/Header'
 import PlayerStatus from 'components/Player/Status'
 import Player from 'components/Player'
@@ -33,7 +34,9 @@ export default function Widget({ initialEvent, allEvents }: WidgetProps) {
         <Schedule sessions={currentEvent.schedule.sessions} />
       </div>
 
-      <div className="widget__event-description">description</div>
+      <div className="widget__event-info-box">
+        <EventInfoBox event={currentEvent} />
+      </div>
     </div>
   )
 }

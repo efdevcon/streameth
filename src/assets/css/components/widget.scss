@@ -9,7 +9,7 @@
     'playerHeader'
     'player'
     'playerStatus'
-    'eventDescription'
+    'eventInfoBox'
     'schedule';
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
@@ -20,7 +20,7 @@
       'eventSwitcher eventSwitcher'
       'playerHeader playerStatus'
       'player schedule'
-      'eventDescription eventDescription';
+      'eventInfoBox eventInfoBox';
     grid-template-columns: 1fr 320px;
     grid-column-gap: 20px;
   }
@@ -86,7 +86,7 @@
     grid-area: schedule;
   }
 
-  &__event-description {
-    grid-area: eventDescription;
+  &__event-info-box {
+    grid-area: eventInfoBox;
   }
 }
