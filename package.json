@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/video.js": "^7.3.32",
+    "@use-it/interval": "^1.0.0",
     "moment": "^2.29.1",
     "next": "12.1.0",
     "query-string": "^7.1.1",

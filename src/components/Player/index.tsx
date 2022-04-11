@@ -10,10 +10,11 @@ enum PlayerState {
 }
 
 interface PlayerProps {
-  streams: Stream[]
+  src: string | null
   poster: string
   isLoading: boolean
   setStatus?: (status: string) => void
+  onStreamError: () => void
 }
 
 // Temporary fix for palyback in Spain
@@ -33,25 +34,25 @@ const checkSrcIsActive = (src: string) => {
   return false
 }
 
-const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
+const Player = ({ src, poster, setStatus, isLoading, onStreamError }: PlayerProps) => {
   if (isLoading) {
     return <div>Loading player...</div>
   }
-  if (streams.length === 0) {
-    return <div>Error fetching stream</div>
-  }
+  // if (streams.length === 0) {
+  //   return <div>Error fetching stream</div>
+  // }
 
   useEffect(() => {
     // replace cdn for spain
-    streams = streams.map(stream => {
-      const { newUrl, type } = tempParseSource(stream.playbackUrl)
-      return {
-        ...stream,
-        playbackUrl: newUrl,
-        type,
-        isActive: checkSrcIsActive(stream.playbackUrl),
-      }
-    })
+    // streams = streams.map(stream => {
+    //   const { newUrl, type } = tempParseSource(stream.playbackUrl)
+    //   return {
+    //     ...stream,
+    //     playbackUrl: newUrl,
+    //     type,
+    //     isActive: checkSrcIsActive(stream.playbackUrl),
+    //   }
+    // })
   }, [])
 
   const playerRef = useRef(null)
@@ -64,26 +65,11 @@ const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
     fluid: true,
     sources: [
       {
-        src: streams[currentStreamIndex].playbackUrl,
+        src: src,
         type: 'application/x-mpegURL',
       },
     ],
   })
-
-  const changeStreamIndex = () => {
-    // check for any active src and return that
-
-    let newStreamIndex = currentStreamIndex + 1
-
-    // Check array bounds; if out of bounds, set currentStreamIndex to 0
-    if (!streams[newStreamIndex]) {
-      newStreamIndex = 0
-    }
-
-    setCurrentStreamIndex(newStreamIndex)
-
-    return newStreamIndex
-  }
 
   // TODO: change type
   const handlePlayerReady = (player: any) => {
@@ -97,15 +83,23 @@ const Player = ({ streams, poster, setStatus, isLoading }: PlayerProps) => {
       // getSource allows you to override the source object used when an error occurs
       getSource: function (reload: any) {
         console.log('Reloading because of an error')
-        const checkForActiveSrc = streams.find(stream => stream.isActive)
-        if (checkForActiveSrc !== undefined) {
-          const index = changeStreamIndex()
-          const source = {
-            src: checkForActiveSrc.playbackUrl,
-            type: 'application/x-mpegURL',
-          }
-          reload(source)
-        }
+        onStreamError() // this should automatically trigger player reload
+
+        // const source = {
+        //   src: newSrc,
+        //   type: 'application/x-mpegURL',
+        // }
+        // reload(source)
+
+        // const checkForActiveSrc = streams.find(stream => stream.isActive)
+        // if (checkForActiveSrc !== undefined) {
+        //   const index = changeStreamIndex()
+        //   const source = {
+        //     src: checkForActiveSrc.playbackUrl,
+        //     type: 'application/x-mpegURL',
+        //   }
+        //   reload(source)
+        // }
       },
       errorInterval: 10,
     })

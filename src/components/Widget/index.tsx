@@ -14,7 +14,10 @@ interface WidgetProps {
 }
 
 export default function Widget({ initialEvent, allEvents }: WidgetProps) {
-  const { streams, streamsLoading, eventNames, currentEvent, changeEvent } = useStreams(initialEvent, allEvents)
+  const { currentStream, streamsLoading, eventNames, currentEvent, changeEvent, mediaUrl, changeStream } = useStreams(
+    initialEvent,
+    allEvents
+  )
   return (
     <div className="widget">
       <WidgetHeader />
@@ -25,10 +28,10 @@ export default function Widget({ initialEvent, allEvents }: WidgetProps) {
         <PlayerHeader title={currentEvent.name} />
       </div>
       <div className="widget__player-status">
-        <PlayerStatus />
+        <PlayerStatus isActive={currentStream?.isActive} />
       </div>
       <div className="widget__player">
-        <Player streams={streams} poster={currentEvent.poster} isLoading={streamsLoading} />
+        <Player src={mediaUrl()} poster={currentEvent.poster} isLoading={streamsLoading} onStreamError={changeStream} />
       </div>
       <div className="widget__schedule">
         <Schedule sessions={currentEvent.schedule.sessions} />
