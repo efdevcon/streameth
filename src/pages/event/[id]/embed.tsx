@@ -4,14 +4,11 @@ import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { Event } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
 import { EmbedLayout } from 'layouts'
-import Schedule from 'components/Schedule'
-import Player from 'components/Player'
-import PlayerHeader from 'components/Player/Header'
-import PlayerStatus from 'components/Player/Status'
-import useStreams from 'components/Hooks/useStreams'
+import Widget from 'components/Widget'
 
 interface Props {
   event: Event
+  events: Event[]
 }
 
 interface Params extends ParsedUrlQuery {
@@ -19,16 +16,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EmbedEventPage(props: Props) {
-  const { streams, streamsLoading } = useStreams(props.event)
-
-  return (
-    <div className="player-wrapper">
-      <PlayerHeader />
-      <PlayerStatus />
-      <Player streams={streams} poster={props.event.poster} isLoading={streamsLoading} />
-      <Schedule sessions={props.event.schedule.sessions} />
-    </div>
-  )
+  return <Widget allEvents={props.events} initialEvent={props.event} />
 }
 
 EmbedEventPage.layout = EmbedLayout
@@ -58,6 +46,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async context => {
   return {
     props: {
       event,
+      events,
     },
   }
 }
