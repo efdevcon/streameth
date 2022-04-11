@@ -6,7 +6,9 @@ export default function WidgetHeader() {
       <h1 className="bold">{TITLE}</h1>
       <div className="widget__header__attribution">
         <div className="widget__header__powered text-bold">Streaming on:</div>
-        <img className="widget__header__logo" src="/livepeer_logo_dark.png" />
+        <a href="https://livepeer.org" rel="noopener" target="_blank">
+          <img className="widget__header__logo" src="/livepeer_logo_dark.png" />
+        </a>
       </div>
     </div>
   )
