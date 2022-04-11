@@ -59,9 +59,11 @@ $borderWidth: 2px;
 
   &__switcher {
     display: block;
-    border-bottom: $borderWidth solid rgba(0, 0, 0, 0.2);
+    // padding-bottom: 30px;
+    // border-bottom: $borderWidth solid rgba(0, 0, 0, 0.2);
 
     @media (min-width: $screen-sm) {
+      height: 40px;
       display: flex;
     }
 
@@ -71,18 +73,26 @@ $borderWidth: 2px;
       font-weight: bold;
       font-size: 14px;
       letter-spacing: 0.7px;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       flex-shrink: 0;
+      // padding-bottom: 30px;
 
       @media (min-width: $screen-sm) {
+        border-bottom: $borderWidth solid rgba(0, 0, 0, 0.2);
         padding-right: 100px;
-        margin-bottom: 0;
+        margin-bottom: 12px;
+      }
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 9px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 6px;
       }
     }
 
-    &__events {
-      display: flex;
-      list-style: none;
+    &__scroll {
       width: 100%;
       overflow-x: auto;
       overflow-y: hidden;
@@ -92,6 +102,14 @@ $borderWidth: 2px;
       // &::-webkit-scrollbar {
       //   display: none; /* for Chrome, Safari, and Opera */
       // }
+    }
+
+    &__events {
+      display: flex;
+      list-style: none;
+      width: 100%;
+      // padding-bottom: 30px;
+      border-bottom: $borderWidth solid rgba(0, 0, 0, 0.2);
 
       &__event {
         position: relative;
