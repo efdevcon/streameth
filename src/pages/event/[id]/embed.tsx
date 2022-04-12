@@ -16,7 +16,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EmbedEventPage(props: Props) {
-  return <Widget allEvents={props.events} initialEvent={props.event} />
+  return <Widget allEvents={props.events} event={props.event} />
 }
 
 EmbedEventPage.layout = EmbedLayout

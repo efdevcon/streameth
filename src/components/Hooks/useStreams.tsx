@@ -5,9 +5,8 @@ import { getStreams } from 'services/stream'
 
 const POLLING_INTERVAL_MS = 1000 * 60
 
-const useStreams = (event: Event, events: Event[]) => {
-  const [currentEvent, setCurrentEvent] = useState<Event>(event)
-  const [currentRoom, setCurrentRoom] = useState<Room>(event.rooms[0])
+const useStreams = (event: Event) => {
+  const [currentRoom, setCurrentRoom] = useState<Room>()
   const [streams, setStreams] = useState<Stream[]>([])
   const [currentStream, setCurrentStream] = useState<Stream>(streams[0])
   const [streamsLoading, setStreamsLoading] = useState(true)
@@ -15,10 +14,10 @@ const useStreams = (event: Event, events: Event[]) => {
   const [isPolling, setIsPolling] = useState<boolean>(false)
 
   useEffect(() => {
-    const rooms = currentEvent?.rooms || []
+    const rooms = event?.rooms || []
 
     setCurrentRoom(rooms[0])
-  }, [currentEvent])
+  }, [event])
 
   // Poll for new streams
   useInterval(async () => {
@@ -54,18 +53,6 @@ const useStreams = (event: Event, events: Event[]) => {
     }
   }, [streams])
 
-  const eventNames = () => {
-    return events.map(event => event.name)
-  }
-
-  const changeEvent = (eventName: string) => {
-    const event = events.find(event => event.name === eventName)
-
-    if (event) {
-      setCurrentEvent(event)
-    }
-  }
-
   const changeStream = () => {
     let newStreamIndex = currentStreamIndex + 1
 
@@ -96,9 +83,6 @@ const useStreams = (event: Event, events: Event[]) => {
     streamsLoading,
     streams,
     currentStream,
-    eventNames,
-    changeEvent,
-    currentEvent,
     changeStream,
     mediaUrl,
   }

@@ -9,36 +9,34 @@ import WidgetHeader from './Header'
 import useStreams from 'components/Hooks/useStreams'
 
 interface WidgetProps {
-  initialEvent: Event
+  event: Event
   allEvents: Event[]
 }
 
-export default function Widget({ initialEvent, allEvents }: WidgetProps) {
-  const { currentStream, streamsLoading, eventNames, currentEvent, changeEvent, mediaUrl, changeStream } = useStreams(
-    initialEvent,
-    allEvents
-  )
+export default function Widget({ event, allEvents }: WidgetProps) {
+  const { currentStream, streamsLoading, mediaUrl, changeStream } = useStreams(event)
   return (
     <div className="widget">
-      <WidgetHeader />
-      <div className="widget__event-switcher">
-        <EventSwitcher eventNames={eventNames()} activeEventName={currentEvent.name} onEventSwitch={changeEvent} />
+      <div className="widget__area__header">
+        <WidgetHeader />
       </div>
-      <div className="widget__player-header">
-        <PlayerHeader title={currentEvent.name} />
+      <div className="widget__area__event-switcher">
+        <EventSwitcher events={allEvents} />
       </div>
-      <div className="widget__player-status">
+      <div className="widget__area__player-header">
+        <PlayerHeader title={event.name} />
+      </div>
+      <div className="widget__area__player-status">
         <PlayerStatus isActive={currentStream?.isActive} />
       </div>
-      <div className="widget__player">
-        <Player src={mediaUrl()} poster={currentEvent.poster} isLoading={streamsLoading} onStreamError={changeStream} />
+      <div className="widget__area__player">
+        <Player src={mediaUrl()} poster={event.poster} isLoading={streamsLoading} onStreamError={changeStream} />
       </div>
-      <div className="widget__schedule">
-        <Schedule sessions={currentEvent.schedule.sessions} />
+      <div className="widget__area__schedule">
+        <Schedule sessions={event.schedule.sessions} />
       </div>
-
-      <div className="widget__event-info-box">
-        <EventInfoBox event={currentEvent} />
+      <div className="widget__area__event-info-box">
+        <EventInfoBox event={event} />
       </div>
     </div>
   )
