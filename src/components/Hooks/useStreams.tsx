@@ -27,7 +27,6 @@ const useStreams = (event: Event, events: Event[]) => {
 
       try {
         const streams = await getStreams(currentRoom.streams.map(stream => stream.id))
-
         setCurrentStreamIndex(0)
         setStreams(streams)
       } catch (e) {
@@ -44,7 +43,6 @@ const useStreams = (event: Event, events: Event[]) => {
   useEffect(() => {
     const activeStreams = streams.filter(stream => stream.isActive)
     const recordedStreams = streams.filter(stream => stream.recordings.length > 0)
-
     if (activeStreams.length > 0) {
       setIsPolling(false)
       setCurrentStream(activeStreams[0])
