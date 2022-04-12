@@ -18,6 +18,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     const streams: Stream[] = await provider.getStreams(streamIds)
+    console.log('Streams', streams)
     const recordings: Recording[][] = await Promise.all(
       streams.map(stream => {
         return provider.getRecordings(stream.id)
@@ -28,6 +29,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     streams.forEach((stream, index) => {
       stream.recordings = recordings[index]
     })
+
+    console.log('Streams with recordings', streams)
 
     return res.status(200).json(streams)
   }
