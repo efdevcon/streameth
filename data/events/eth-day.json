@@ -10,7 +10,6 @@
         "version": 1
     },
     "schedule": {
-        "version": 1,
         "sessions": [
             {
                 "id": "1",
