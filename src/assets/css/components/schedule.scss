@@ -14,9 +14,21 @@
   }
 
   &__sessions {
-    height: 100%;
     list-style: none;
     overflow-y: auto;
+    max-height: 400px;
+
+    @media (min-width: $screen-lg) {
+      max-height: 280px;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-height: 420px;
+    }
+
+    @media (min-width: $screen-xxl) {
+      max-height: 640px;
+    }
   }
 
   &__session {
