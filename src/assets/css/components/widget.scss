@@ -26,7 +26,6 @@
   }
 
   &__header {
-    grid-area: widgetHeader;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,27 +65,32 @@
     }
   }
 
-  &__event-switcher {
-    grid-area: eventSwitcher;
-  }
+  &__area {
+    &__header {
+      grid-area: widgetHeader;
+    }
+    &__event-switcher {
+      grid-area: eventSwitcher;
+    }
 
-  &__player-header {
-    grid-area: playerHeader;
-  }
+    &__player-header {
+      grid-area: playerHeader;
+    }
 
-  &__player-status {
-    grid-area: playerStatus;
-  }
+    &__player-status {
+      grid-area: playerStatus;
+    }
 
-  &__player {
-    grid-area: player;
-  }
+    &__player {
+      grid-area: player;
+    }
 
-  &__schedule {
-    grid-area: schedule;
-  }
+    &__schedule {
+      grid-area: schedule;
+    }
 
-  &__event-info-box {
-    grid-area: eventInfoBox;
+    &__event-info-box {
+      grid-area: eventInfoBox;
+    }
   }
 }
