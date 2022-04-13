@@ -19,15 +19,55 @@
     max-height: 400px;
 
     @media (min-width: $screen-lg) {
-      max-height: 280px;
+      max-height: 260px;
+    }
+
+    @media (min-width: 1100px) {
+      max-height: 300px;
+    }
+
+    @media (min-width: 1175px) {
+      max-height: 350px;
     }
 
     @media (min-width: $screen-xl) {
       max-height: 420px;
     }
 
+    @media (min-width: 1400px) {
+      max-height: 480px;
+    }
+
+    @media (min-width: 1450px) {
+      max-height: 500px;
+    }
+
+    @media (min-width: 1500px) {
+      max-height: 520px;
+    }
+
     @media (min-width: $screen-xxl) {
+      max-height: 540px;
+    }
+
+    @media (min-width: 1600px) {
+      max-height: 560px;
+    }
+
+    @media (min-width: 1650px) {
+      max-height: 580px;
+    }
+
+    @media (min-width: 1700px) {
+      max-height: 620px;
+    }
+
+    @media (min-width: 1750px) {
       max-height: 640px;
+    }
+
+    @media (min-width: 1800px) {
+      max-height: 680px;
     }
   }
 
