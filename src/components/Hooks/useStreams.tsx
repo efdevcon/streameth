@@ -6,7 +6,7 @@ import { getStreams } from 'services/stream'
 const POLLING_INTERVAL_MS = 1000 * 60
 
 const useStreams = (event: Event) => {
-  const [currentRoom, setCurrentRoom] = useState<Room>()
+  const [currentRoom, setCurrentRoom] = useState<Room>(event.rooms[0])
   const [streams, setStreams] = useState<Stream[]>([])
   const [currentStream, setCurrentStream] = useState<Stream>(streams[0])
   const [streamsLoading, setStreamsLoading] = useState(true)
@@ -19,20 +19,16 @@ const useStreams = (event: Event) => {
     setCurrentRoom(rooms[0])
   }, [event])
 
+  useEffect(() => {
+    if (currentRoom) {
+      fetchStreams()
+    }
+  }, [currentRoom])
+
   // Poll for new streams
   useInterval(async () => {
     if (isPolling && currentRoom) {
-      setStreamsLoading(true)
-
-      try {
-        const streams = await getStreams(currentRoom.streams.map(stream => stream.id))
-        setCurrentStreamIndex(0)
-        setStreams(streams)
-      } catch (e) {
-        console.error(e)
-      } finally {
-        setStreamsLoading(false)
-      }
+      await fetchStreams()
     }
   }, POLLING_INTERVAL_MS)
 
@@ -52,6 +48,20 @@ const useStreams = (event: Event) => {
       setIsPolling(true)
     }
   }, [streams])
+
+  const fetchStreams = async () => {
+    setStreamsLoading(true)
+
+    try {
+      const streams = await getStreams(currentRoom.streams.map(stream => stream.id))
+      setCurrentStreamIndex(0)
+      setStreams(streams)
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setStreamsLoading(false)
+    }
+  }
 
   const changeStream = () => {
     let newStreamIndex = currentStreamIndex + 1
