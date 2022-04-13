@@ -5,6 +5,7 @@ import { Stream, Recording } from 'types'
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
     const { ids } = req.query
+    console.log('ids', ids)
     const provider = initStreamProvider()
 
     let streamIds: string[] = []
