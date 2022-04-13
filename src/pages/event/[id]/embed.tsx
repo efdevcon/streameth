@@ -1,10 +1,10 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { Event } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
 import { EmbedLayout } from 'layouts'
 import Widget from 'components/Widget'
+import { SEO } from 'components/seo'
 
 interface Props {
   event: Event
@@ -16,7 +16,10 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EmbedEventPage(props: Props) {
-  return <Widget allEvents={props.events} event={props.event} />
+  return <>
+    <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
+    <Widget allEvents={props.events} event={props.event} />
+  </>
 }
 
 EmbedEventPage.layout = EmbedLayout

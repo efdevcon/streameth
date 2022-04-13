@@ -4,6 +4,7 @@ import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { Event } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
 import Widget from 'components/Widget'
+import { SEO } from 'components/seo'
 
 interface Props {
   event: Event
@@ -17,6 +18,7 @@ interface Params extends ParsedUrlQuery {
 export default function EventPage(props: Props) {
   return (
     <>
+      <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
       <div>
         <div className="section">
           <div className="content">
