@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "name": "Game Day Remix",
+    "description": "Ask Remix Anything and play the Remix virtual obstacle course through contract development.",
+    "start": "2022-04-22",
+    "end": "2022-04-22",
+    "website": "https://ticketh.xyz/Remix/gameday/",
+    "stream": {
+        "version": 1
+    },
+    "schedule": {
+        "sessions": []
+    },
+    "rooms": [
+        {
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "1f159591-cec9-4dbc-8d7f-65c03989f562"
+                },
+                {
+                    "id": "4eede421-d9f6-4d4c-8e71-da74f305b508"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "version": 1,
+    "name": "Applied ZK Workshop",
+    "description": "Facilitate knowledge transfer between applied ZK developers at different levels of the stack, demonstrate the importance of application-specific ZK technology, and increase the legibility of ZK crypto to the crypto space broadly.",
+    "start": "2022-04-23",
+    "end": "2022-04-24",
+    "website": "https://zkworkshop.info/",
+    "stream": {
+        "version": 1
+    },
+    "schedule": {
+        "sessions": []
+    },
+    "rooms": [
+        {
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "30e1431d-2f59-4033-962d-692ead0bf4de"
+                },
+                {
+                    "id": "7ac4d1b8-9774-4e33-8abb-2182f59f5397"
+                },
+                {
+                    "id": "0e8a16d1-f27a-4a78-bf3f-8d91c4831e50"
+                },
+                {
+                    "id": "1ec18d82-686f-4bb0-a2e4-acbaca6cc338"
+                }
+            ]
+        }
+    ]
+}

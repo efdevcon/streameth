@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "name": "light client summit",
+    "description": "A day for builders to explore the state of light clients in the Ethereum ecosystem.",
+    "start": "2022-04-20",
+    "end": "2022-04-20",
+    "website": "https://lightclients.xyz/light-client-summit-0",
+    "stream": {
+        "version": 1
+    },
+    "schedule": {
+        "sessions": []
+    },
+    "rooms": [
+        {
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "578c2874-96cc-4e8d-a8e9-dd210339dae5"
+                },
+                {
+                    "id": "69048824-561e-4eda-9c26-5f48c524f397"
+                }
+            ]
+        }
+    ]
+}

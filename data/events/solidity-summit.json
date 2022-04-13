@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "name": "Solidity Summit",
+    "description": "Solidity ecosystem day for people involved and interested in the Solidity language and the ecosystem around it. It features talks & discussions on Solidity, Yul, language design and tooling.",
+    "start": "2022-04-20",
+    "end": "2022-04-20",
+    "website": "https://summit.soliditylang.org/",
+    "stream": {
+        "version": 1
+    },
+    "schedule": {
+        "sessions": []
+    },
+    "rooms": [
+        {
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "3a9f94d8-71f8-47a1-91b9-c18667e61d50"
+                },
+                {
+                    "id": "63e61159-51e4-485c-a44e-edaaebf9e225"
+                }
+            ]
+        }
+    ]
+}

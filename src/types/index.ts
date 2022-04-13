@@ -12,7 +12,6 @@ export interface Event {
 }
 
 export interface Stream {
-  // Pablo
   id: string
   name?: string
   isActive: boolean
@@ -20,7 +19,6 @@ export interface Stream {
   recordings: Recording[]
 }
 
-// stream recording
 export interface Recording {
   id: string
   recordingUrl: string

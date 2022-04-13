@@ -1,11 +1,10 @@
 {
     "version": 1,
     "name": "ETH DAY",
-    "description": "ETH Day will showcase the best of Devconnect, high level talks about the latest technical developments in the Ethereum ecosystem. ",
+    "description": "Amsterdam will be hosting Devconnect for a week, gathering the brightest developers and Ethereum builders. This event is for all the curious minds, technically inclined and generally interested people wanting to learn from the best contributors of the Ethereum ecosystem.",
     "start": "2022-04-18",
     "end": "2022-04-18",
     "website": "https://cryptocanal.org/eth-day/",
-    "poster": "https://devconnect.org/og-devconnect.png",
     "stream": {
         "version": 1
     },
@@ -137,10 +136,10 @@
             "id": "Main",
             "streams": [
                 {
-                    "id": "49771878-4c33-4d82-8f38-abc3543f1752"
+                    "id": "6eb521bc-e651-47f0-a4e5-cbd73cfe5fb8"
                 },
                 {
-                    "id": "16617b69-ece3-49c2-8ac7-4f0c322ffdef"
+                    "id": "204a693b-e63c-4a29-9437-b1df64ca9c27"
                 }
             ]
         }

@@ -12,7 +12,7 @@ const formattedDate = (date: string) => {
 }
 
 const speakersList = (speakers: Speaker[]) => {
-  return speakers.map(speaker => speaker.name).join(', ')
+  return speakers?.map(speaker => speaker.name).join(', ')
 }
 
 export default function ScheduleSession({ session }: ScheduleSessionProps) {
@@ -31,16 +31,17 @@ export default function ScheduleSession({ session }: ScheduleSessionProps) {
               <span className="schedule__session__date">{formattedDate(session.start)}</span>
             </td>
           </tr>
-          <tr>
-            <td>
-              <i style={{ color: '#B7B7B7' }}>
-                <IconVoiceRecord />
-              </i>
-            </td>
-            <td>
-              <span className="schedule__session__speakers">{speakersList(session.speakers)}</span>
-            </td>
-          </tr>
+          {session.speakers &&
+            <tr>
+              <td>
+                <i style={{ color: '#B7B7B7' }}>
+                  <IconVoiceRecord />
+                </i>
+              </td>
+              <td>
+                <span className="schedule__session__speakers">{speakersList(session.speakers)}</span>
+              </td>
+            </tr>}
         </tbody>
       </table>
     </div>

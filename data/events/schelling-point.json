@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "name": "Schelling Point",
+    "description": "We believe that Ethereum is a schelling point for the hopeful & we have come together to build a better world. By co-creating this schelling point, we will reconnect with why we're actually here.",
+    "start": "2022-04-21",
+    "end": "2022-04-21",
+    "website": "https://schellingpoint.gitcoin.co/",
+    "stream": {
+        "version": 1
+    },
+    "schedule": {
+        "sessions": []
+    },
+    "rooms": [
+        {
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "c3bf1460-7680-4de7-b660-c729a89ad0a0"
+                },
+                {
+                    "id": "058e01ca-6538-4650-8397-b1bdee1b737a"
+                }
+            ]
+        }
+    ]
+}

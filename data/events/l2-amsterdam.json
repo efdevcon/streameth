@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "name": "Layer Two Amsterdam",
+    "description": "A two-day technical conference dedicated to Ethereum L2 Scaling. Meet industry leaders: builders and developers, learn during talks and panels and dig deeper by attending workshops.",
+    "start": "2022-04-19",
+    "end": "2022-04-20",
+    "website": "https://amsterdam.l2beat.com/",
+    "stream": {
+        "version": 1
+    },
+    "schedule": {
+        "sessions": []
+    },
+    "rooms": [
+        {
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "519793de-cfdd-42c9-80b4-8eb033d222fb"
+                },
+                {
+                    "id": "a690bcca-cdf0-4685-84e4-fa6a61b33ef8"
+                }
+            ]
+        }
+    ]
+}

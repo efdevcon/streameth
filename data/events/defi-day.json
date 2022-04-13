@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "name": "DEFI DAY",
+    "description": "DeFi Day is dedicated to everything DeFi, hosted in Amsterdam, on the 25th of April. We are excited to further the Defi ecosystem by bringing DeFi developers, working on applications and infrastructure layer together.  ",
+    "start": "2022-04-25",
+    "end": "2022-04-25",
+    "website": "https://cryptocanal.org/defi-day/",
+    "stream": {
+        "version": 1
+    },
+    "schedule": {
+        "sessions": []
+    },
+    "rooms": [
+        {
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "69a782ac-a3a5-4aae-8d8d-48b9e95ba625"
+                },
+                {
+                    "id": "a4f63939-ad2e-43c6-b39f-7cf8a0c9c4e6"
+                }
+            ]
+        }
+    ]
+}

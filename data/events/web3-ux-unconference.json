@@ -4,7 +4,7 @@
     "description": "Potential Working Groups: Sign-in with ethereum, Multichain Wallets, L2 onboarding/education, L1-L2 bridging UX, L2-Dapp Interaction UX, Staking + Validator UX & more.",
     "start": "2022-04-18",
     "end": "2022-04-18",
-    "website": "https://devconnect.org/schedule/",
+    "website": "https://ux.web3.design/",
     "stream": {
         "version": 1
     },
@@ -12,5 +12,17 @@
         "version": 1,
         "sessions": []
     },
-    "rooms": []
+    "rooms": [
+        {
+            "id": "Main",
+            "streams": [
+                {
+                    "id": "4665ab60-ff21-4005-a219-967e3cc4694a"
+                },
+                {
+                    "id": "1ba81a57-99cf-447b-98ff-72687ef04ac8"
+                }
+            ]
+        }
+    ]
 }
