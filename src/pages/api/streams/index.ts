@@ -6,6 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
     const { ids } = req.query
     console.log('ids', ids)
+    console.log('ids length', ids.length)
     const provider = initStreamProvider()
 
     let streamIds: string[] = []
