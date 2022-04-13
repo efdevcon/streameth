@@ -92,5 +92,9 @@
     &__event-info-box {
       grid-area: eventInfoBox;
     }
+    &--span-full {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 }

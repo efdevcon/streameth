@@ -6,6 +6,9 @@ interface ScheduleProps {
 }
 
 export default function Schedule({ sessions }: ScheduleProps) {
+  if (sessions.length === 0) {
+    return null
+  }
   return (
     <div>
       <p className="schedule__title">Schedule</p>
