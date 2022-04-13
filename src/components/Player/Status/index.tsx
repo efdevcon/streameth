@@ -1,8 +1,11 @@
+import moment from 'moment'
+
 interface PlayerStatusProps {
   isActive: boolean
+  startDate: string
 }
 
-export default function PlayerStatus({ isActive }: PlayerStatusProps) {
+export default function PlayerStatus({ isActive, startDate }: PlayerStatusProps) {
   return (
     <div className="player__stream-status">
       <div className="player__live">
@@ -13,11 +16,7 @@ export default function PlayerStatus({ isActive }: PlayerStatusProps) {
           </>
         )}
       </div>
-      <div className="player__date">
-        APR 18 -
-        <br />
-        <span>16:35 CET</span>
-      </div>
+      <div className="player__date">{moment.utc(startDate).format('MMM DD')}</div>
     </div>
   )
 }

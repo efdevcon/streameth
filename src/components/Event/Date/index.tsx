@@ -2,17 +2,17 @@ import moment from 'moment'
 
 interface EventDateProps {
   startDate: string
-  endDate: string
-  startTime: string
+  endDate?: string
+  startTime?: string
   endTime?: string
 }
 
-const formattedDate = (startDate: string, endDate: string) => {
+const formattedDate = (startDate: string, endDate?: string) => {
   const dateFormat = 'MMM D'
 
   let str = moment(startDate).format(dateFormat)
 
-  if (endDate !== startDate) {
+  if (endDate && endDate !== startDate) {
     str += ` - ${moment(endDate).format(dateFormat)}`
   }
 
@@ -40,8 +40,12 @@ export default function EventDate({ startDate, endDate, startTime, endTime }: Ev
   return (
     <div className="event__date">
       {formattedDate(startDate, endDate)}
-      <br />
-      <span className="event__date__time">{formattedTime(startTime, endTime)}</span>
+      {startTime && (
+        <>
+          <br />
+          <span className="event__date__time">{formattedTime(startTime, endTime)}</span>
+        </>
+      )}
     </div>
   )
 }
