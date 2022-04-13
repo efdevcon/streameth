@@ -38,6 +38,7 @@ export class Livepeer implements StreamProvider {
   }
 
   async getStreams(ids: string[] = []): Promise<Stream[]> {
+    console.log(typeof ids, ids)
     try {
       const streams: LivepeerStream[] = await get(`${BASE_API}/stream`, {}, Livepeer.authHeader)
 
