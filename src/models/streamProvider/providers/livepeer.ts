@@ -41,6 +41,8 @@ export class Livepeer implements StreamProvider {
     try {
       const streams: LivepeerStream[] = await get(`${BASE_API}/stream`, {}, Livepeer.authHeader)
 
+      console.log('length', streams.length)
+
       return streams
         .filter(stream => {
           if (!stream.playbackId) {
