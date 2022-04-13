@@ -26,7 +26,7 @@ const request = async (url: string, options: RequestOptions) => {
 }
 
 export const get = async (url: string, params: object = {}, headers?: HeadersInit) => {
-  return await request(`${url}?${stringify(params)}`, {
+  return await request(`${url}?${stringify(params, { arrayFormat: 'comma' })}`, {
     method: 'get',
     headers,
   })

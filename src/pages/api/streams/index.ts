@@ -5,18 +5,12 @@ import { Stream, Recording } from 'types'
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
     const { ids } = req.query
-    console.log('ids', ids)
-    console.log('ids length', ids.length)
     const provider = initStreamProvider()
 
     let streamIds: string[] = []
 
-    if (ids) {
-      if (typeof ids === 'string') {
-        streamIds.push(ids)
-      } else {
-        streamIds = ids
-      }
+    if (ids && typeof ids === 'string') {
+      streamIds = ids.split(',')
     }
 
     const streams: Stream[] = await provider.getStreams(streamIds)
