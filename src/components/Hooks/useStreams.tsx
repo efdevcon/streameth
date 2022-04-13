@@ -41,9 +41,9 @@ const useStreams = (event: Event) => {
     if (activeStreams.length > 0) {
       setIsPolling(false)
       setCurrentStream(activeStreams[0])
-    } else if (recordedStreams.length > 0) {
-      setIsPolling(false)
-      setCurrentStream(recordedStreams[0])
+      // } else if (recordedStreams.length > 0) {
+      // setIsPolling(false)
+      // setCurrentStream(recordedStreams[0])
     } else {
       setIsPolling(true)
     }
@@ -81,9 +81,9 @@ const useStreams = (event: Event) => {
         return currentStream.playbackUrl
       }
 
-      if (currentStream.recordings) {
-        return currentStream.recordings[0].recordingUrl
-      }
+      // if (currentStream.recordings) {
+      //   return currentStream.recordings[0].recordingUrl
+      // }
     }
 
     return null
