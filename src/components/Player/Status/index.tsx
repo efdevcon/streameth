@@ -1,3 +1,4 @@
+import { LivePulse } from 'components/LivePulse'
 import moment from 'moment'
 
 interface PlayerStatusProps {
@@ -11,7 +12,7 @@ export default function PlayerStatus({ isActive, startDate }: PlayerStatusProps)
       <div className="player__live">
         {isActive && (
           <>
-            <div className="player__live__dot"></div>
+            <LivePulse style={{ marginRight: '5px'}} />
             <div className="player__live__description">Streaming live</div>
           </>
         )}

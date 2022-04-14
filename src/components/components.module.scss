@@ -1,0 +1,28 @@
+@use 'src/assets/css/variables'as *;
+
+.live {
+  .nc-loop-ripple-16-icon-f {
+    --animation-duration: 1.5s
+  }
+
+  .nc-loop-ripple-16-icon-f * {
+    transform-origin: 50% 50%;
+    animation: nc-loop-ripple-anim var(--animation-duration) infinite cubic-bezier(.215, .61, .355, 1)
+  }
+
+  .nc-loop-ripple-16-icon-f :nth-child(2) {
+    animation-delay: calc(var(--animation-duration)/-2)
+  }
+
+  @keyframes nc-loop-ripple-anim {
+    0% {
+      opacity: 1;
+      transform: scale(.2)
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1)
+    }
+  }
+}
