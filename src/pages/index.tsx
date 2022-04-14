@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import css from './index.module.scss'
 import moment from 'moment'
+import { LivePulse } from 'components/LivePulse'
 
 interface Props {
   events: Event[]
@@ -26,6 +27,7 @@ export default function Home(props: Props) {
 
       <section>
         {props.events.filter(event => event.start === date || event.end === date).map((event: Event) => {
+          const eventIsStreaming = false // can we get this at this point?
           let className = css.event
           if (dateHasPassed) className += ` ${css.passed}`
 
@@ -36,7 +38,10 @@ export default function Home(props: Props) {
                   <Image src={event.poster ?? '/default-poster.png'} alt={event.name} objectFit='cover' layout='fill' />
                 </div>
                 <div className={css.info}>
-                  <h4>{event.name}</h4>
+                  <div className={css.title}>
+                    <h4>{event.name}</h4>
+                    {eventIsStreaming && <LivePulse style={{ marginLeft: '8px'}} />}
+                  </div>                  
                   <p className={css.description}>{event.description}</p>
                   <span className={css.domain}>{GetDomainName(event.website)}</span>
                 </div>

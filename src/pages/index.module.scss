@@ -1,7 +1,7 @@
 @use 'src/assets/css/variables'as *;
 
 .container {
-  h3 { 
+  h3 {
     margin: 16px 0;
   }
 
@@ -41,13 +41,18 @@
     .info {
       padding: 16px;
 
-      h4 {
-        font-weight: bold;
-        font-size: 1.25rem;
+      .title {
+        display: flex;
+        align-items: center;
         margin-bottom: 1rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+
+        h4 {
+          font-weight: bold;
+          font-size: 1.25rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
 
       .description {
