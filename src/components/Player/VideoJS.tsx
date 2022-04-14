@@ -26,14 +26,16 @@ export const VideoJS = (props: any) => {
               expression: /#EXT-X-ERROR/,
               customType: 'livepeerError',
             }]
-          }},     
-          mux: {
-            debug: false,
-            data: {
-              env_key: "8mi42im5d9uueq19dni35fgeq", // required
-              // Metadata
-              player_name: props.currentRoomId, // ex: 'My Main Player'
-              player_init_time: initTime // ex: 1451606400000
+          }},   
+          plugins: {  
+            mux: {
+              debug: false,
+              data: {
+                env_key: "8mi42im5d9uueq19dni35fgeq", // required
+                // Metadata
+                player_name: props.currentRoomId, // ex: 'My Main Player'
+                player_init_time: initTime // ex: 1451606400000
+              }
             }
           }
         },
