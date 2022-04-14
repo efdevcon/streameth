@@ -6,6 +6,7 @@ import PlayerStatus from 'components/Player/Status'
 import Player from 'components/Player'
 import Schedule from 'components/Schedule'
 import WidgetHeader from './Header'
+import RoomSwitcher from 'components/Room/Switcher'
 import useStreams from 'components/Hooks/useStreams'
 
 interface WidgetProps {
@@ -14,14 +15,15 @@ interface WidgetProps {
 }
 
 export default function Widget({ event, allEvents }: WidgetProps) {
-  const { currentStream, streamsLoading, mediaUrl, changeStream } = useStreams(event)
+  const { currentStream, streamsLoading, mediaUrl, changeStream, currentRoom, changeRoom } = useStreams(event)
   return (
     <div className="widget">
       <div className="widget__area__header">
         <WidgetHeader />
       </div>
-      <div className="widget__area__event-switcher">
+      <div className="widget__area__nav">
         <EventSwitcher events={allEvents} />
+        <RoomSwitcher rooms={event.rooms} activeRoom={currentRoom} onRoomClick={changeRoom} />
       </div>
       <div className="widget__area__player-header">
         <PlayerHeader title={event.name} />

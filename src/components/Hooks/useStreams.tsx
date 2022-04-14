@@ -75,6 +75,14 @@ const useStreams = (event: Event) => {
     setCurrentStream(streams[newStreamIndex])
   }
 
+  const changeRoom = (roomId: string) => {
+    const room = event.rooms.find(room => room.id === roomId)
+
+    if (room) {
+      setCurrentRoom(room)
+    }
+  }
+
   const mediaUrl = () => {
     if (currentStream) {
       if (currentStream.isActive) {
@@ -94,6 +102,8 @@ const useStreams = (event: Event) => {
     streams,
     currentStream,
     changeStream,
+    currentRoom,
+    changeRoom,
     mediaUrl,
   }
 }

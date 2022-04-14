@@ -5,7 +5,7 @@
   display: grid;
   grid-template-areas:
     'widgetHeader'
-    'eventSwitcher'
+    'nav'
     'playerHeader'
     'player'
     'playerStatus'
@@ -17,7 +17,7 @@
   @media (min-width: $screen-lg) {
     grid-template-areas:
       'widgetHeader widgetHeader'
-      'eventSwitcher eventSwitcher'
+      'nav nav'
       'playerHeader playerStatus'
       'player schedule'
       'eventInfoBox eventInfoBox';
@@ -69,8 +69,8 @@
     &__header {
       grid-area: widgetHeader;
     }
-    &__event-switcher {
-      grid-area: eventSwitcher;
+    &__nav {
+      grid-area: nav;
     }
 
     &__player-header {

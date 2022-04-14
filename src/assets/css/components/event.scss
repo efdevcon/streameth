@@ -79,7 +79,7 @@ $borderWidth: 2px;
 
       @media (min-width: $screen-sm) {
         border-bottom: $borderWidth solid rgba(0, 0, 0, 0.2);
-        padding-right: 100px;
+        width: 300px;
         margin-bottom: 12px;
       }
 
