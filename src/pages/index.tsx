@@ -35,7 +35,7 @@ export default function Home(props: Props) {
             <Link key={`event_${event.id}`} href={`event/${event.id}`}>
               <article className={className}>
                 <div className={css.poster}>
-                  <Image src={event.poster ?? '/default-poster.png'} alt={event.name} objectFit='cover' layout='fill' />
+                  <Image src={event.poster ?? '/posters/default.png'} alt={event.name} objectFit='cover' layout='fill' />
                 </div>
                 <div className={css.info}>
                   <div className={css.title}>
