@@ -3,7 +3,7 @@ import useInterval from '@use-it/interval'
 import { Room, Stream, Event } from 'types'
 import { getStreams } from 'services/stream'
 
-const POLLING_INTERVAL_MS = 1000 * 60
+const POLLING_INTERVAL_MS = 1000 * 10
 
 const useStreams = (event: Event) => {
   const [currentRoom, setCurrentRoom] = useState<Room>(event.rooms[0])
@@ -19,14 +19,15 @@ const useStreams = (event: Event) => {
     setCurrentRoom(rooms[0])
   }, [event])
 
-  useEffect(() => {
-    if (currentRoom) {
-      fetchStreams()
-    }
-  }, [currentRoom])
+  // useEffect(() => {
+  //   if (currentRoom) {
+  //     fetchStreams()
+  //   }
+  // }, [currentRoom])
 
   // Poll for new streams
   useInterval(async () => {
+    console.log("is polling", isPolling)
     if (isPolling && currentRoom) {
       await fetchStreams()
     }
@@ -46,8 +47,16 @@ const useStreams = (event: Event) => {
       // setCurrentStream(recordedStreams[0])
     } else {
       setIsPolling(true)
+      console.log("polling is set")
     }
   }, [streams])
+
+
+  useEffect(() => {
+    fetchStreams()
+  }, [currentStream])
+
+
 
   const fetchStreams = async () => {
     setStreamsLoading(true)
