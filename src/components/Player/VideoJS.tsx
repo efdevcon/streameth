@@ -33,7 +33,7 @@ export const VideoJS = (props: any) => {
               data: {
                 env_key: "8mi42im5d9uueq19dni35fgeq", // required
                 // Metadata
-                player_name: props.currentRoomId, // ex: 'My Main Player'
+                player_name: props.eventName, // ex: 'My Main Player'
                 player_init_time: initTime // ex: 1451606400000
               }
             }

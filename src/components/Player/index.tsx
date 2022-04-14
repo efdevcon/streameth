@@ -6,13 +6,13 @@ interface PlayerProps {
   src: string | null
   poster: string
   isLoading: boolean
-  currentRoomId: Room['id']
+  eventName: Event['name']
   setStatus?: (status: string) => void
   onStreamError: () => void
 }
 
 
-const Player = ({ src, poster, onStreamError, currentRoomId }: PlayerProps) => {
+const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
   if (!src) return <img width={"100%"} src={poster ?? '/default-poster.png'} alt="poster" />
 
   
@@ -59,7 +59,7 @@ const Player = ({ src, poster, onStreamError, currentRoomId }: PlayerProps) => {
     })
   }
 
-  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} curentRoomId={currentRoomId}/>
+  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} eventName={eventName}/>
 }
 
 export default Player
