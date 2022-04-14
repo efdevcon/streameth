@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import css from './layout.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
+import img from 'assets/images/logo.png'
 
 type Props = {
   children: ReactNode
@@ -14,7 +15,7 @@ export default function DefaultLayout(props: Props) {
         <header>
           <div className={css.logo}>
             <Link href='/' as={''}>
-              <h1 className={css.title}><strong>Stream</strong>eth</h1>
+              <Image src={img.src} alt='StreamETH' height={22} width={190} />
             </Link>
           </div>
           <div className={css.icons}>

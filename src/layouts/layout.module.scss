@@ -21,23 +21,14 @@
 
     .logo {
       cursor: pointer;
+      display: flex;
+      position: relative;
     }
 
     .icons {
       display: flex;
       align-items: center;
       gap: 16px;
-    }
-
-    .title {
-      color: #000000;
-      text-transform: uppercase;
-      font-weight: normal;
-      font-size: 1.5rem;
-
-      b {
-        font-weight: bold;
-      }
     }
 
     .icon {
