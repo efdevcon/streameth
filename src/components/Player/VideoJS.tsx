@@ -20,7 +20,7 @@ export const VideoJS = (props: any) => {
       const initTime = Date.now();
       const player = (playerRef.current = videojs(
         videoElement,
-        { ...options, errorDisplay: false, autoplay: false, html5: {
+        { ...options, errorDisplay: false, html5: {
           vhs: {
             customTagParsers: [{
               expression: /#EXT-X-ERROR/,

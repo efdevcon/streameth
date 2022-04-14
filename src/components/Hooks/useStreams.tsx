@@ -8,7 +8,7 @@ const POLLING_INTERVAL_MS = 1000 * 10
 const useStreams = (event: Event) => {
   const [currentRoom, setCurrentRoom] = useState<Room>(event.rooms[0])
   const [streams, setStreams] = useState<Stream[]>([])
-  const [currentStream, setCurrentStream] = useState<Stream>(streams[0])
+  const [currentStream, setCurrentStream] = useState<Stream | null>(streams[0])
   const [streamsLoading, setStreamsLoading] = useState(true)
   const [currentStreamIndex, setCurrentStreamIndex] = useState<number>(0)
   const [isPolling, setIsPolling] = useState<boolean>(false)
@@ -37,15 +37,16 @@ const useStreams = (event: Event) => {
   // If any streams currently active, disable polling
   // If any recordings present (live stream is over), disable polling
   useEffect(() => {
-    const activeStreams = streams.filter(stream => stream.isActive)
+    const activeStreamIndex = streams.findIndex(stream => stream.isActive)
     const recordedStreams = streams.filter(stream => stream.recordings.length > 0)
-    if (activeStreams.length > 0) {
+    if (activeStreamIndex > -1) {
       setIsPolling(false)
-      setCurrentStream(activeStreams[0])
+      setCurrentStream(streams[activeStreamIndex])
       // } else if (recordedStreams.length > 0) {
       // setIsPolling(false)
       // setCurrentStream(recordedStreams[0])
     } else {
+      setCurrentStream(null)
       setIsPolling(true)
       console.log("polling is set")
     }
@@ -56,7 +57,6 @@ const useStreams = (event: Event) => {
 
     try {
       const streams = await getStreams(currentRoom.streams.map(stream => stream.id))
-      setCurrentStreamIndex(0)
       setStreams(streams)
     } catch (e) {
       console.error(e)
@@ -72,11 +72,14 @@ const useStreams = (event: Event) => {
     if (!streams[newStreamIndex]) {
       newStreamIndex = 0
     }
-
     setCurrentStreamIndex(newStreamIndex)
     setCurrentStream(streams[newStreamIndex])
-    fetchStreams()
   }
+
+  useEffect(() => {
+    console.log(currentStreamIndex)
+    fetchStreams()
+  }, [currentStreamIndex])
 
   const changeRoom = (roomId: string) => {
     const room = event.rooms.find(room => room.id === roomId)

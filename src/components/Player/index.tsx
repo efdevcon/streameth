@@ -19,7 +19,7 @@ const Player = ({ src, poster, onStreamError, currentRoomId }: PlayerProps) => {
   const playerRef = useRef(null)
   const [videoJsOptions] = useState({
     poster: poster || '',
-    autoplay: false,
+    autoplay: true,
     controls: true,
     responsive: true,
     fluid: true,
@@ -52,9 +52,7 @@ const Player = ({ src, poster, onStreamError, currentRoomId }: PlayerProps) => {
 
     player.on('waiting', () => {
       console.log('player is waiting')
-      console.log('media', player.tech().vhs.playlists.media())
       const currentPlaylist = player.tech().vhs.playlists.media()
-      console.log(currentPlaylist)
       if (currentPlaylist.custom?.livepeerError) {
         player.error({ code: '4' })
       }
