@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import useInterval from '@use-it/interval'
+import moment from 'moment'
 import { Room, Stream, Event } from 'types'
 import { getStreams } from 'services/stream'
 
@@ -11,44 +12,68 @@ const useStreams = (event: Event) => {
   const [currentStream, setCurrentStream] = useState<Stream | null>(streams[0])
   const [streamsLoading, setStreamsLoading] = useState(true)
   const [currentStreamIndex, setCurrentStreamIndex] = useState<number>(0)
+  const [currentRecordingIndex, setCurrentRecordingIndex] = useState<number>(0)
   const [isPolling, setIsPolling] = useState<boolean>(false)
 
+  // Determines if event is finished by checking if:
+  // (1) 2 hours have passed since last session end time or
+  // (2) Recordings present for events with no sessions
+  const isEventOver = () => {
+    return true
+    const sessions = event.schedule.sessions
+
+    if (sessions.length > 0) {
+      const lastSession = sessions[sessions.length - 1]
+      const today = moment().utc()
+      const lastSessionEnd = moment.utc(lastSession.end)
+
+      if (today.diff(lastSessionEnd, 'hours') > 2) {
+        return true
+      }
+    } else if (event.recordings.length > 0) {
+      return true
+    }
+
+    return false
+  }
+
+  // set default room on event change
   useEffect(() => {
     const rooms = event?.rooms || []
 
     setCurrentRoom(rooms[0])
   }, [event])
 
+  // fetch streams on room change
   useEffect(() => {
-    if (currentRoom) {
+    if (currentRoom && !isEventOver()) {
       fetchStreams()
     }
   }, [currentRoom])
 
   // Poll for new streams
   useInterval(async () => {
-    console.log("is polling", isPolling)
+    console.log('is polling', isPolling)
     if (isPolling && currentRoom) {
       await fetchStreams()
     }
   }, POLLING_INTERVAL_MS)
 
   // Determine if polling is necessary
+  // If livestream is over, disable polling
   // If any streams currently active, disable polling
-  // If any recordings present (live stream is over), disable polling
   useEffect(() => {
     const activeStreamIndex = streams.findIndex(stream => stream.isActive)
-    const recordedStreams = streams.filter(stream => stream.recordings.length > 0)
-    if (activeStreamIndex > -1) {
+
+    if (isEventOver()) {
+      setIsPolling(false)
+    } else if (activeStreamIndex > -1) {
       setIsPolling(false)
       setCurrentStream(streams[activeStreamIndex])
-      // } else if (recordedStreams.length > 0) {
-      // setIsPolling(false)
-      // setCurrentStream(recordedStreams[0])
     } else {
       setCurrentStream(null)
       setIsPolling(true)
-      console.log("polling is set")
+      console.log('polling is set')
     }
   }, [streams])
 
@@ -76,6 +101,10 @@ const useStreams = (event: Event) => {
     setCurrentStream(streams[newStreamIndex])
   }
 
+  const changeRecording = (index: number) => {
+    setCurrentRecordingIndex(index)
+  }
+
   useEffect(() => {
     console.log(currentStreamIndex)
     fetchStreams()
@@ -90,14 +119,12 @@ const useStreams = (event: Event) => {
   }
 
   const mediaUrl = () => {
-    if (currentStream) {
-      if (currentStream.isActive) {
-        return currentStream.playbackUrl
-      }
+    if (isEventOver() && event.recordings.length > 0) {
+      return event.recordings[currentRecordingIndex].recordingUrl
+    }
 
-      // if (currentStream.recordings) {
-      //   return currentStream.recordings[0].recordingUrl
-      // }
+    if (currentStream && currentStream.isActive) {
+      return currentStream.playbackUrl
     }
 
     return null
@@ -110,7 +137,10 @@ const useStreams = (event: Event) => {
     changeStream,
     currentRoom,
     changeRoom,
+    changeRecording,
     mediaUrl,
+    isEventOver,
+    currentRecordingIndex,
   }
 }
 

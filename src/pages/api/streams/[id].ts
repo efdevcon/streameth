@@ -10,9 +10,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (id && typeof id === 'string') {
       try {
         const stream: Stream = await provider.getStream(id)
-        const recordings: Recording[] = await provider.getRecordings(id)
+        // const recordings: Recording[] = await provider.getRecordings(id)
 
-        stream.recordings = recordings
+        // stream.recordings = recordings
 
         return res.status(200).json(stream)
       } catch (e: any) {

@@ -8,6 +8,7 @@
     'nav'
     'playerHeader'
     'player'
+    'recordings'
     'playerStatus'
     'eventInfoBox'
     'schedule';
@@ -20,6 +21,7 @@
       'nav nav'
       'playerHeader playerStatus'
       'player schedule'
+      'recordings recordings'
       'eventInfoBox eventInfoBox';
     grid-template-columns: 1fr 320px;
     grid-column-gap: 20px;
@@ -92,6 +94,11 @@
     &__event-info-box {
       grid-area: eventInfoBox;
     }
+
+    &__recordings {
+      grid-area: recordings;
+    }
+
     &--span-full {
       grid-column-start: 1;
       grid-column-end: 3;

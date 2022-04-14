@@ -1,0 +1,36 @@
+.recording {
+  &__snack-list {
+  }
+
+  &__snacks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-rows: 120px;
+  }
+
+  &__snack {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__play {
+      font-size: 3rem;
+    }
+
+    &.active {
+      border: 2px solid red;
+    }
+
+    &__title {
+      position: absolute;
+      padding: 10px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
