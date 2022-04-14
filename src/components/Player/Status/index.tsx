@@ -2,17 +2,17 @@ import { LivePulse } from 'components/LivePulse'
 import moment from 'moment'
 
 interface PlayerStatusProps {
-  isActive: boolean
+  isActive?: boolean
   startDate: string
 }
 
-export default function PlayerStatus({ isActive, startDate }: PlayerStatusProps) {
+export default function PlayerStatus({ isActive = false, startDate }: PlayerStatusProps) {
   return (
     <div className="player__stream-status">
       <div className="player__live">
         {isActive && (
           <>
-            <LivePulse style={{ marginRight: '5px'}} />
+            <LivePulse style={{ marginRight: '5px' }} />
             <div className="player__live__description">Streaming live</div>
           </>
         )}

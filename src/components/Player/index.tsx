@@ -15,9 +15,8 @@ interface PlayerProps {
 const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
   if (!src) return <img width={"100%"} src={poster ?? '/default-poster.png'} alt="poster" />
 
-  
   const playerRef = useRef(null)
-  const [videoJsOptions] = useState({
+  const videoJsOptions = {
     poster: poster || '',
     autoplay: true,
     controls: true,
@@ -29,21 +28,18 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
         type: 'application/x-mpegURL',
       },
     ],
-  })
+  }
 
   const handlePlayerReady = (player: any) => {
     playerRef.current = player
 
-    player.tech().on('loadedmetadata', () => {
-      console.log('loadedmetadata', player.tech().vhs.playlists.master)
-    })
     player.reloadSourceOnError({
       // getSource allows you to override the source object used when an error occurs
       getSource: function (reload: any) {
         console.log('Reloading because of an error')
         onStreamError() // this should automatically trigger player reload
       },
-      errorInterval: 10,
+      errorInterval: 1,
     })
 
     player.on('error', (e: any) => {

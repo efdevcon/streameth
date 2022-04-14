@@ -27,7 +27,6 @@ const useStreams = (event: Event) => {
 
   // Poll for new streams
   useInterval(async () => {
-    console.log("is polling", isPolling)
     if (isPolling && currentRoom) {
       await fetchStreams()
     }
@@ -48,7 +47,6 @@ const useStreams = (event: Event) => {
     } else {
       setCurrentStream(null)
       setIsPolling(true)
-      console.log("polling is set")
     }
   }, [streams])
 
@@ -66,20 +64,9 @@ const useStreams = (event: Event) => {
   }
 
   const changeStream = () => {
-    let newStreamIndex = currentStreamIndex + 1
-
-    // Check array bounds; if out of bounds, set currentStreamIndex to 0
-    if (!streams[newStreamIndex]) {
-      newStreamIndex = 0
-    }
-    setCurrentStreamIndex(newStreamIndex)
-    setCurrentStream(streams[newStreamIndex])
+    fetchStreams()
   }
 
-  useEffect(() => {
-    console.log(currentStreamIndex)
-    fetchStreams()
-  }, [currentStreamIndex])
 
   const changeRoom = (roomId: string) => {
     const room = event.rooms.find(room => room.id === roomId)

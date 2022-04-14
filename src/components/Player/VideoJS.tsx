@@ -34,6 +34,8 @@ export const VideoJS = (props: any) => {
                 env_key: "8mi42im5d9uueq19dni35fgeq", // required
                 // Metadata
                 player_name: props.eventName, // ex: 'My Main Player'
+                video_id: props.eventName, // ex: 'abcd123'
+                video_title: props.eventName, // ex: 'My Great Video'
                 player_init_time: initTime // ex: 1451606400000
               }
             }
@@ -44,10 +46,15 @@ export const VideoJS = (props: any) => {
         }
       ));
     }
-
-
   }, [options, videoRef])
 
+  useEffect(() => {
+    console.log('src', options.sources[0].src )
+    const player = playerRef.current
+    if (player && options.sources[0].src) {
+      player.src(options.sources[0].src)
+    }
+  }, [options])
 
   useEffect(() => {
     const player = playerRef.current

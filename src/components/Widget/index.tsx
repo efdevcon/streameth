@@ -29,7 +29,7 @@ export default function Widget({ event, allEvents }: WidgetProps) {
         <PlayerHeader title={event.name} />
       </div>
       <div className="widget__area__player-status">
-        <PlayerStatus isActive={currentStream?.isActive || false} startDate={event.start} />
+        <PlayerStatus isActive={currentStream?.isActive} startDate={event.start} />
       </div>
       {/* Span player across both columns if schedule is empty, There might be a better way to do this. */}
       <div className={`widget__area__player ${event.schedule.sessions.length === 0 ? 'widget__area--span-full' : ''}`}>
