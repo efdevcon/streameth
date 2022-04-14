@@ -19,7 +19,6 @@ const useStreams = (event: Event) => {
   // (1) 2 hours have passed since last session end time or
   // (2) Recordings present for events with no sessions
   const isEventOver = () => {
-    return true
     const sessions = event.schedule.sessions
 
     if (sessions.length > 0) {
