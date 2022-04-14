@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import moment from 'moment'
 import { Event } from 'types'
 
 interface EventSwitcherProps {
@@ -8,17 +9,19 @@ interface EventSwitcherProps {
 
 export default function EventSwitcher({ events }: EventSwitcherProps) {
   const router = useRouter()
-  const { pathname, asPath } = router
-  const isEmbedPath = pathname === '/event/[id]/embed'
+  const {
+    pathname,
+    query: { id },
+  } = router
 
   const href = (eventId: string) => {
-    let path = `/event/${eventId}`
+    return pathname.replace('[id]', eventId)
+  }
 
-    if (isEmbedPath) {
-      path += '/embed'
-    }
+  const activeEvents = () => {
+    const today = moment().format('YYYY-MM-DD')
 
-    return path
+    return events.filter(event => (today >= event.start && today <= event.end) || id === event.id)
   }
 
   return (
@@ -26,12 +29,9 @@ export default function EventSwitcher({ events }: EventSwitcherProps) {
       <div className="event__switcher__title">Select event stream</div>
       <div className="event__switcher__scroll">
         <ul className="event__switcher__events">
-          {events.map(event => {
+          {activeEvents().map(event => {
             return (
-              <li
-                key={event.id}
-                className={`event__switcher__events__event ${asPath.includes(event.id) ? 'active' : ''}`}
-              >
+              <li key={event.id} className={`event__switcher__events__event ${id === event.id ? 'active' : ''}`}>
                 <Link href={href(event.id)}>{event.name}</Link>
               </li>
             )
