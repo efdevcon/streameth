@@ -13,15 +13,21 @@
   }
 
   header {
-    > * { 
-      cursor: pointer;
-    }
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     padding: 16px 0;
+
+    .logo {
+      cursor: pointer;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
 
     .title {
       color: #000000;

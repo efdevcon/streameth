@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import css from './layout.module.scss'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type Props = {
   children: ReactNode
@@ -11,14 +12,23 @@ export default function DefaultLayout(props: Props) {
     <div className={css.container}>
       <div className={css.inner}>
         <header>
-          <Link href='/' as={''}>
-            <h1 className={css.title}>Stream<strong>eth</strong></h1>
-          </Link>
-          <Link href='https://github.com/efdevcon/tv/' passHref>
-            <a target="_blank" rel="noopener noreferrer">
-              <i className={`${css.icon} bi bi-github`} />
-            </a>
-          </Link>
+          <div className={css.logo}>
+            <Link href='/' as={''}>
+              <h1 className={css.title}><strong>Stream</strong>eth</h1>
+            </Link>
+          </div>
+          <div className={css.icons}>
+            <Link href='https://livepeer.org/' passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <Image src="/livepeer_logo_dark.png" alt='Livepeer' height={24} width={70} />
+              </a>
+            </Link>
+            <Link href='https://github.com/efdevcon/tv/' passHref>
+              <a target="_blank" rel="noopener noreferrer">
+                <i className={`${css.icon} bi bi-github`} />
+              </a>
+            </Link>
+          </div>
         </header>
 
         <main>{props.children}</main>
