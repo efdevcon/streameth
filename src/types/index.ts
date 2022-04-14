@@ -9,6 +9,7 @@ export interface Event {
   stream: Stream
   schedule: Schedule
   rooms: Room[]
+  recordings: Recording[]
 }
 
 export interface Stream {
@@ -16,11 +17,11 @@ export interface Stream {
   name?: string
   isActive: boolean
   playbackUrl: string
-  recordings: Recording[]
+  // recordings: Recording[]
 }
 
 export interface Recording {
-  id: string
+  name?: string
   recordingUrl: string
 }
 

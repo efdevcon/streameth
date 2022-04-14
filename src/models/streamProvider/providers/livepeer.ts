@@ -26,13 +26,11 @@ export class Livepeer implements StreamProvider {
       id: data.id,
       isActive: data.isActive,
       playbackUrl: `https://cdn.livepeer.com/hls/${data.playbackId}/index.m3u8`,
-      recordings: [], // initialize empty recordings array; will merge later
     }
   }
 
   mapRecordingObj(data: any): Recording {
     return {
-      id: data.id,
       recordingUrl: data.recordingUrl,
     }
   }

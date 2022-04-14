@@ -7,6 +7,7 @@ import Player from 'components/Player'
 import Schedule from 'components/Schedule'
 import WidgetHeader from './Header'
 import RoomSwitcher from 'components/Room/Switcher'
+import RecordingSnackList from 'components/Recording/SnackList'
 import useStreams from 'components/Hooks/useStreams'
 
 interface WidgetProps {
@@ -15,7 +16,17 @@ interface WidgetProps {
 }
 
 export default function Widget({ event, allEvents }: WidgetProps) {
-  const { currentStream, streamsLoading, mediaUrl, changeStream, currentRoom, changeRoom } = useStreams(event)
+  const {
+    currentStream,
+    streamsLoading,
+    mediaUrl,
+    changeStream,
+    currentRoom,
+    changeRoom,
+    isEventOver,
+    changeRecording,
+    currentRecordingIndex,
+  } = useStreams(event)
   return (
     <div className="widget">
       <div className="widget__area__header">
@@ -37,6 +48,14 @@ export default function Widget({ event, allEvents }: WidgetProps) {
       </div>
       <div className="widget__area__schedule">
         <Schedule sessions={event.schedule.sessions} />
+      </div>
+      <div className="widget__area__recordings">
+        <RecordingSnackList
+          showRecordings={isEventOver()}
+          recordings={event.recordings}
+          onRecordingClick={changeRecording}
+          currentRecordingIndex={currentRecordingIndex}
+        />
       </div>
       <div className="widget__area__event-info-box">
         <EventInfoBox event={event} />

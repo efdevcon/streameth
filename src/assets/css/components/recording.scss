@@ -1,0 +1,61 @@
+@use '../variables.scss' as *;
+
+.recording {
+  &__snack-list {
+    &__title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__snacks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (min-width: $screen-lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__snack {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 0;
+      padding-bottom: calc(100% / (2));
+    }
+
+    &__play {
+      font-size: 3rem;
+    }
+
+    &.active {
+      border: 5px solid #f88379;
+    }
+
+    &__title {
+      position: absolute;
+      padding: 10px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

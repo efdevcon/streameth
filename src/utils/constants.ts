@@ -1,4 +1,4 @@
-export const TITLE = 'StreamEth'
+export const TITLE = 'StreamETH'
 export const DESCRIPTION = 'An open-source live-streaming and playback solution for events.'
 export const SITE_URL = 'https://streameth.tv/'
 

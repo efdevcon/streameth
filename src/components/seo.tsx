@@ -13,7 +13,7 @@ export function SEO(props: Props) {
     const router = useRouter()
     const title = props.title ? `${props.title} · ${TITLE}` : TITLE
     const description = props.description || DESCRIPTION
-    const image = props.imageUrl || `${SITE_URL}default-poster.png`
+    const image = props.imageUrl || `${SITE_URL}social.png`
     const url = router.route === '/' ? SITE_URL : SITE_URL.replace(/\/$/, '') + router.asPath.split('?')[0]
 
     return (
