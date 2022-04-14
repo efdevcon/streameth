@@ -2,12 +2,14 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import moment from 'moment'
 import { Event } from 'types'
+import { getStaticProps } from 'pages'
 
 interface EventSwitcherProps {
+  current?: Event
   events: Event[]
 }
 
-export default function EventSwitcher({ events }: EventSwitcherProps) {
+export default function EventSwitcher({ current, events }: EventSwitcherProps) {
   const router = useRouter()
   const {
     pathname,
@@ -19,9 +21,16 @@ export default function EventSwitcher({ events }: EventSwitcherProps) {
   }
 
   const activeEvents = () => {
-    const today = moment().format('YYYY-MM-DD')
+    if (!current) {
+      const today = moment()
+      const active = events.filter(i => id === i.id ||
+        (moment(i.start).isSame(today, 'day') || moment(i.end).isSame(today, 'day')))
+      return active
+    }
 
-    return events.filter(event => (today >= event.start && today <= event.end) || id === event.id)
+    const active = events.filter(i => id === i.id ||
+      (moment(i.start).isSame(moment(current.start), 'day') || moment(i.end).isSame(current.end, 'day')))
+    return active
   }
 
   return (
@@ -31,7 +40,7 @@ export default function EventSwitcher({ events }: EventSwitcherProps) {
         <ul className="event__switcher__events">
           {activeEvents().map(event => {
             return (
-              <li key={event.id} className={`event__switcher__events__event ${id === event.id ? 'active' : ''}`}>
+              <li key={`active_events_${event.id}`} className={`event__switcher__events__event ${id === event.id ? 'active' : ''}`}>
                 <Link href={href(event.id)}>{event.name}</Link>
               </li>
             )

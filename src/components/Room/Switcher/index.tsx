@@ -19,7 +19,7 @@ export default function RoomSwitcher({ rooms, activeRoom, onRoomClick }: RoomSwi
             return (
               <li
                 onClick={() => onRoomClick(room.id)}
-                key={room.id}
+                key={`room_switcher_${room.id}`}
                 className={`room__switcher__room ${room.id === activeRoom.id ? 'active' : ''}`}
               >
                 {room.id}

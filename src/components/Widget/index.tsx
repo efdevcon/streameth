@@ -22,7 +22,7 @@ export default function Widget({ event, allEvents }: WidgetProps) {
         <WidgetHeader />
       </div>
       <div className="widget__area__nav">
-        <EventSwitcher events={allEvents} />
+        <EventSwitcher current={event} events={allEvents} />
         <RoomSwitcher rooms={event.rooms} activeRoom={currentRoom} onRoomClick={changeRoom} />
       </div>
       <div className="widget__area__player-header">

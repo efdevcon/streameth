@@ -15,7 +15,7 @@ export default function Schedule({ sessions }: ScheduleProps) {
       <ul className="schedule__sessions">
         {sessions.map(session => {
           return (
-            <li key={session.id}>
+            <li key={`schedule_sessions_${session.id}`}>
               <ScheduleSession session={session} />
             </li>
           )

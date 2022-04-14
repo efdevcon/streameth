@@ -21,7 +21,7 @@ export default function Home(props: Props) {
     const dateHasPassed = moment(date).isBefore(moment())
     const eventDate = new Date(date).getDate()
 
-    return <div className={css.container}>
+    return <div key={date} className={css.container}>
       <h3>{moment(date).format('MMM DD')} {eventDate >= 18 && <small>day {eventDate - 17}</small>}</h3>
 
       <section>
@@ -30,7 +30,7 @@ export default function Home(props: Props) {
           if (dateHasPassed) className += ` ${css.passed}`
 
           return (
-            <Link key={event.id} href={`event/${event.id}`}>
+            <Link key={`event_${event.id}`} href={`event/${event.id}`}>
               <article className={className}>
                 <div className={css.poster}>
                   <Image src={event.poster ?? '/default-poster.png'} alt={event.name} objectFit='cover' layout='fill' />
