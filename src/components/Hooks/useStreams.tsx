@@ -19,11 +19,11 @@ const useStreams = (event: Event) => {
     setCurrentRoom(rooms[0])
   }, [event])
 
-  // useEffect(() => {
-  //   if (currentRoom) {
-  //     fetchStreams()
-  //   }
-  // }, [currentRoom])
+  useEffect(() => {
+    if (currentRoom) {
+      fetchStreams()
+    }
+  }, [currentRoom])
 
   // Poll for new streams
   useInterval(async () => {
@@ -51,13 +51,6 @@ const useStreams = (event: Event) => {
     }
   }, [streams])
 
-
-  useEffect(() => {
-    fetchStreams()
-  }, [currentStream])
-
-
-
   const fetchStreams = async () => {
     setStreamsLoading(true)
 
@@ -82,6 +75,7 @@ const useStreams = (event: Event) => {
 
     setCurrentStreamIndex(newStreamIndex)
     setCurrentStream(streams[newStreamIndex])
+    fetchStreams()
   }
 
   const changeRoom = (roomId: string) => {

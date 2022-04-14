@@ -2849,6 +2849,11 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
+mux-embed@4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/mux-embed/-/mux-embed-4.8.0.tgz#ddc45a2e4835b32ea076f0ad28e13204aa221479"
+  integrity sha512-8uFfGlY14Hpi6mTRTry6KmEV/SNUt3rSeCIayopPa9hv0V1IhPqMl0tMiwMt+Z7BW3pFfsbeqvyQqLqSGh+PBg==
+
 mux.js@6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/mux.js/-/mux.js-6.0.1.tgz#65ce0f7a961d56c006829d024d772902d28c7755"
@@ -3625,6 +3630,13 @@ videojs-hls-quality-selector@^1.1.4:
     karma-safaritechpreview-launcher "0.0.6"
     video.js "^7.5.5"
     videojs-contrib-quality-levels "^2.0.9"
+
+videojs-mux@^4.6.4:
+  version "4.6.4"
+  resolved "https://registry.yarnpkg.com/videojs-mux/-/videojs-mux-4.6.4.tgz#2009df2ce0c862e873481e09b283f3a7e8fdb5f0"
+  integrity sha512-VzMc4PP5H409ZFKzP3YyB7a58jaUBnoCEuu1iIUPw7BN2UoAB3CbF14VNBnIeIVjWpH4z1BnYSnceTLUfSEPpw==
+  dependencies:
+    mux-embed "4.8.0"
 
 videojs-vtt.js@^0.15.3:
   version "0.15.3"

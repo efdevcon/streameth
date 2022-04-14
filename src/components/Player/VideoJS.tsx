@@ -3,7 +3,7 @@ import videojs from 'video.js'
 import qualitySelector from 'videojs-hls-quality-selector';
 import contribQualityLevels from 'videojs-contrib-quality-levels'
 import 'video.js/dist/video-js.css'
-
+import "videojs-mux";
 
 // TODO: Need to change types
 export const VideoJS = (props: any) => {
@@ -17,6 +17,7 @@ export const VideoJS = (props: any) => {
       if (!videoElement) return
       videojs.registerPlugin('hlsQualitySelector', qualitySelector);
       videojs.registerPlugin('qualityLevels', contribQualityLevels)
+      const initTime = Date.now();
       const player = (playerRef.current = videojs(
         videoElement,
         { ...options, errorDisplay: false, autoplay: false, html5: {
@@ -25,8 +26,17 @@ export const VideoJS = (props: any) => {
               expression: /#EXT-X-ERROR/,
               customType: 'livepeerError',
             }]
-        } }},
-        
+          }},     
+          mux: {
+            debug: false,
+            data: {
+              env_key: "8mi42im5d9uueq19dni35fgeq", // required
+              // Metadata
+              player_name: props.currentRoomId, // ex: 'My Main Player'
+              player_init_time: initTime // ex: 1451606400000
+            }
+          }
+        },
         () => {
           onReady && onReady(player)
         }

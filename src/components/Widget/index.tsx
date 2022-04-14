@@ -33,7 +33,7 @@ export default function Widget({ event, allEvents }: WidgetProps) {
       </div>
       {/* Span player across both columns if schedule is empty, There might be a better way to do this. */}
       <div className={`widget__area__player ${event.schedule.sessions.length === 0 ? 'widget__area--span-full' : ''}`}>
-        <Player src={mediaUrl()} poster={event.poster} isLoading={streamsLoading} onStreamError={changeStream} />
+        <Player src={mediaUrl()} currentRoomId={currentRoom.id} poster={event.poster} isLoading={streamsLoading} onStreamError={changeStream} />
       </div>
       <div className="widget__area__schedule">
         <Schedule sessions={event.schedule.sessions} />
