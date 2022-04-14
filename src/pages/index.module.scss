@@ -13,9 +13,15 @@
     margin-bottom: 16px;
   }
 
+  // .passed {
+  //   @extend .event;
+  //   opacity: 0.8;
+  //   filter: grayscale(80%);
+  // }
+
   .event {
     cursor: pointer;
-    width: 400px;
+    width: 360px;
     -webkit-box-shadow: 4px 8px 8px -8px darkgray;
     -moz-box-shadow: 4px 8px 8px -8px darkgray;
     box-shadow: 4px 8px 8px -8px darkgray;

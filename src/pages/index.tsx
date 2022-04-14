@@ -18,15 +18,20 @@ export default function Home(props: Props) {
   const dates = [...new Set(props.events.map(i => i.start).concat(props.events.map(i => i.end)))].sort()
 
   return dates.map(date => {
+    const dateHasPassed = moment(date).isBefore(moment())
     const eventDate = new Date(date).getDate()
+
     return <div className={css.container}>
       <h3>{moment(date).format('MMM DD')} {eventDate >= 18 && <small>day {eventDate - 17}</small>}</h3>
 
       <section>
         {props.events.filter(event => event.start === date || event.end === date).map((event: Event) => {
+          let className = css.event
+          if (dateHasPassed) className += ` ${css.passed}`
+
           return (
             <Link key={event.id} href={`event/${event.id}`}>
-              <article className={css.event}>
+              <article className={className}>
                 <div className={css.poster}>
                   <Image src={event.poster ?? '/default-poster.png'} alt={event.name} objectFit='cover' layout='fill' />
                 </div>
