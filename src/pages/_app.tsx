@@ -1,4 +1,5 @@
 import 'assets/css/main.scss'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import { LayoutPageType, DefaultLayout } from 'layouts'
 import { SEO } from 'components/seo'
 import type { AppProps } from 'next/app'

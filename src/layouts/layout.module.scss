@@ -1,0 +1,40 @@
+@use 'src/assets/css/variables'as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  header {
+    > * { 
+      cursor: pointer;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 16px 0;
+
+    .title {
+      color: #000000;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 1.5rem;
+
+      b {
+        font-weight: bold;
+      }
+    }
+
+    .icon {
+      font-size: 1.25rem;
+    }
+  }
+}

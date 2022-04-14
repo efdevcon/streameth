@@ -10,9 +10,9 @@ $side-gap: $gap-16;
 $max-content-width: $content-width + ($side-gap * 2);
 
 @mixin content {
-  max-width: $max-content-width;
-  width: 100%;
-  @include gaps.lg(true);
+  // max-width: $max-content-width;
+  // width: 100%;
+  // @include gaps.lg(true);
 }
 
 @mixin grid-12 {

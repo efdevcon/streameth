@@ -1,6 +1,6 @@
-export const TITLE = 'AMS Blockchain Week'
-export const DESCRIPTION = 'This is the Amsterdam Blockchain Week, a moment of inclusive conversations, educational gatherings, welcoming celebrations.'
-export const SITE_URL = 'https://live.amsterdamblockchainweek.org/'
+export const TITLE = 'StreamEth'
+export const DESCRIPTION = 'An open-source live-streaming and playback solution for events.'
+export const SITE_URL = 'https://streameth.tv/'
 
 export const DEFAULT_REVALIDATE_PERIOD = 3600
 
