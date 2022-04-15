@@ -13,7 +13,7 @@ interface PlayerProps {
 
 
 const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
-  if (!src) return <img width={"100%"} src={poster ?? '/default-poster.png'} alt="poster" />
+  if (!src) return <img width={"100%"} src={poster ?? '/posters/default.png'} alt="poster" />
 
   const playerRef = useRef(null)
   const videoJsOptions = {
