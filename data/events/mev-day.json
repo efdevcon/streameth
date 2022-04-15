@@ -13,7 +13,7 @@
     },
     "rooms": [
         {
-            "id": "Main",
+            "id": "Galerij",
             "streams": [
                 {
                     "id": "c837b883-5e40-4cb6-add5-d76c1c0b968e"
@@ -22,7 +22,18 @@
                     "id": "b9a53fd0-1332-4c37-99e1-856ce905c8f1"
                 }
             ]
-        }
+        },
+        {
+          "id": "Club",
+          "streams": [
+              {
+                  "id": "69ba7fa3-7b12-4494-a995-b0b58f61c475"
+              },
+              {
+                  "id": "ecfc2476-5b19-4b8d-9adc-e2444386f272"
+              }
+          ]
+      }
     ],
     "recordings": []
 }

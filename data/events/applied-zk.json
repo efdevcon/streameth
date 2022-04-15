@@ -22,17 +22,6 @@
                     "id": "7ac4d1b8-9774-4e33-8abb-2182f59f5397"
                 }
             ]
-        },
-        {
-            "id": "Second",
-            "streams": [
-                {
-                    "id": "0e8a16d1-f27a-4a78-bf3f-8d91c4831e50"
-                },
-                {
-                    "id": "1ec18d82-686f-4bb0-a2e4-acbaca6cc338"
-                }
-            ]
         }
     ],
     "recordings": []

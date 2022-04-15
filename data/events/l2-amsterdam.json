@@ -13,7 +13,7 @@
     },
     "rooms": [
         {
-            "id": "Main",
+            "id": "Grote zaal",
             "streams": [
                 {
                     "id": "519793de-cfdd-42c9-80b4-8eb033d222fb"
@@ -22,7 +22,18 @@
                     "id": "a690bcca-cdf0-4685-84e4-fa6a61b33ef8"
                 }
             ]
-        }
+        },
+        {
+          "id": "Ijzaal",
+          "streams": [
+              {
+                  "id": "c17b1b86-b75b-46a1-9146-687cf476532e"
+              },
+              {
+                  "id": "8c30eb25-da27-4767-9304-8675d3e2a663"
+              }
+          ]
+      }
     ],
     "recordings": []
 }
