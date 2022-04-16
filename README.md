@@ -114,10 +114,10 @@ Below is an example event JSON file with 4 streams created in the Livepeer dashb
       "id": "Main",
       "streams": [
         {
-          "id": "abc123"
+          "id": "s3h6iabv-t4xp-t2i4-zu8bmdtsqg50"
         },
         {
-          "id": "def456"
+          "id": "unr6b8mk-tzpm-18cm-8hmd56ef9r4a"
         }
       ]
     },
@@ -125,10 +125,10 @@ Below is an example event JSON file with 4 streams created in the Livepeer dashb
       "id": "Second",
       "streams": [
         {
-          "id": "ghi789"
+          "id": "06f5ewvi-18yl-vjmc-ds2sojzc7gku"
         },
         {
-          "id": "jkl012"
+          "id": "o5tqsfd0-bod9-8tj0-fe9myey5rfha"
         }
       ]
     }
@@ -137,7 +137,7 @@ Below is an example event JSON file with 4 streams created in the Livepeer dashb
 }
 ```
 
-The first stream in each array would generally be the primary stream, while the second in each array represents a backup stream.
+The first stream in each array would generally be the primary stream, while every subsequent stream in the array acts as the backup/failover stream.
 
 ### 3. (Optional) Get Mux Data API key
 
