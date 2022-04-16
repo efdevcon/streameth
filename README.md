@@ -91,7 +91,7 @@ To get your own livestreams working, follow these steps:
 
 ### 2. Create streams
 
-1. You can create streams directly from the Livepeer dashboard. After creation, you will get a livepeer stream ID. Copy it.
+1. You can create streams directly from the Livepeer dashboard. After each stream creation, you will get a livepeer stream ID. Copy it.
 2. Add the stream ID to the `streams` field within the `rooms` field of the event JSON
 
 Every room can have multiple streams. Generally there will be a primary stream, followed by any backup/failover streams. Separate rooms would have separate streams.
