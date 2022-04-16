@@ -1,0 +1,302 @@
+[
+  {
+    "id": "1",
+    "name": "Unconference Introduction",
+    "start": "2022-04-18T10:00:00.000Z",
+    "end": "2022-04-18T10:19:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "aqeel-mohammad",
+        "name": "Aqeel Mohammad"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "What is a wallet?",
+    "start": "2022-04-18T10:20:00.000Z",
+    "end": "2022-04-18T10:29:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "ryan-betts",
+        "name": "Ryan Betts"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Human-Computer Interaction / User Experience Academic Research",
+    "start": "2022-04-18T10:30:00.000Z",
+    "end": "2022-04-18T10:39:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "richard-parayno",
+        "name": "Richard Parayno"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Translations and Accessibility",
+    "start": "2022-04-18T10:40:00.000Z",
+    "end": "2022-04-18T10:49:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "luka-kropec",
+        "name": "Luka Kropec"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Gamification",
+    "start": "2022-04-18T10:50:00.000Z",
+    "end": "2022-04-18T10:59:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "rachel-black",
+        "name": "Rachel Black"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "DAO Ops",
+    "start": "2022-04-18T11:00:00.000Z",
+    "end": "2022-04-18T11:09:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "oaksprout-the-tan",
+        "name": "Oaksprout the Tan"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Staking UX",
+    "start": "2022-04-18T11:10:00.000Z",
+    "end": "2022-04-18T11:19:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "colfax-shelby",
+        "name": "Colfax Shelby"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "I’ve got no Shill!",
+    "start": "2022-04-18T11:20:00.000Z",
+    "end": "2022-04-18T11:29:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "open-mic",
+        "name": "Open Mic"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "The Future of Web3 UX - A paradigm shift for a better collaboration",
+    "start": "2022-04-18T11:30:00.000Z",
+    "end": "2022-04-18T11:39:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "sasha-tanase",
+        "name": "Sasha Tanase"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Human Friendly Contract Interactions",
+    "start": "2022-04-18T11:40:00.000Z",
+    "end": "2022-04-18T11:49:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "kaan-uzdogan",
+        "name": "Kaan Uzdogan"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Distributed Key Generation",
+    "start": "2022-04-18T11:50:00.000Z",
+    "end": "2022-04-18T11:59:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "collin-myers-and-oisin-kyne",
+        "name": "Collin Myers & Oisin Kyne"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Attestations",
+    "start": "2022-04-18T12:00:00.000Z",
+    "end": "2022-04-18T12:09:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "sunil-tom-jose",
+        "name": "Sunil Tom Jose"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Sign-in with Ethereum",
+    "start": "2022-04-18T12:10:00.000Z",
+    "end": "2022-04-18T12:19:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "gregory-rocco",
+        "name": "Gregory Rocco"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "I’ve got no Shill!",
+    "start": "2022-04-18T12:20:00.000Z",
+    "end": "2022-04-18T12:29:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "open-mic",
+        "name": "Open Mic"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "I’ve got no Shill! ",
+    "start": "2022-04-18T12:30:00.000Z",
+    "end": "2022-04-18T12:39:00.000Z",
+    "track": "UX",
+    "type": "Lightning Talk",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "open-mic",
+        "name": "Open Mic"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Lunch & Learn Fishbowl - Web3 on-boarding",
+    "start": "2022-04-18T01:00:00.000Z",
+    "end": "2022-04-18T01:14:00.000Z",
+    "track": "UX",
+    "type": "Fishbowl",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "attendee-participation",
+        "name": "Attendee Participation"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Lunch & Learn Fishbowl - User Research",
+    "start": "2022-04-18T01:15:00.000Z",
+    "end": "2022-04-18T01:29:00.000Z",
+    "track": "UX",
+    "type": "Fishbowl",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "attendee-participation",
+        "name": "Attendee Participation"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Lunch & Learn Fishbowl - Decentralize or Bust",
+    "start": "2022-04-18T01:30:00.000Z",
+    "end": "2022-04-18T01:44:00.000Z",
+    "track": "UX",
+    "type": "Fishbowl",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "attendee-participation",
+        "name": "Attendee Participation"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Lunch & Learn Fishbowl - Post Merge Ethereum",
+    "start": "2022-04-18T01:45:00.000Z",
+    "end": "2022-04-18T01:59:00.000Z",
+    "track": "UX",
+    "type": "Fishbowl",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "attendee-participation",
+        "name": "Attendee Participation"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Working Group Formation - Open Mic",
+    "start": "2022-04-18T02:00:00.000Z",
+    "end": "2022-04-18T02:30:00.000Z",
+    "track": "UX",
+    "type": "Working Groups",
+    "room": "Main",
+    "speakers": [
+      {
+        "id": "attendee-participation",
+        "name": "Attendee Participation"
+      }
+    ]
+  }
+]
