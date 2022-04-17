@@ -3,18 +3,16 @@ import RecordingSnack from '../Snack'
 
 interface RecordingSnackListProps {
   recordings: Recording[]
-  showRecordings: boolean
-  currentRecordingIndex: number
+  currentRecordingIndex: number | null
   onRecordingClick: (recordingIndex: number) => void
 }
 
 export default function RecordingSnackList({
   recordings,
-  showRecordings,
   onRecordingClick,
   currentRecordingIndex,
 }: RecordingSnackListProps) {
-  if (!showRecordings) {
+  if (recordings.length === 0) {
     return null
   }
   return (

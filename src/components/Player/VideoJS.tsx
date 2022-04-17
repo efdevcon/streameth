@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react'
 import videojs from 'video.js'
-import qualitySelector from 'videojs-hls-quality-selector';
+import qualitySelector from 'videojs-hls-quality-selector'
 import contribQualityLevels from 'videojs-contrib-quality-levels'
 import 'video.js/dist/video-js.css'
-import "videojs-mux";
+import 'videojs-mux'
 
 // TODO: Need to change types
 export const VideoJS = (props: any) => {
@@ -15,50 +15,64 @@ export const VideoJS = (props: any) => {
     if (!playerRef.current) {
       const videoElement = videoRef.current
       if (!videoElement) return
-      videojs.registerPlugin('hlsQualitySelector', qualitySelector);
+      videojs.registerPlugin('hlsQualitySelector', qualitySelector)
       videojs.registerPlugin('qualityLevels', contribQualityLevels)
-      const initTime = Date.now();
+      const initTime = Date.now()
       const player = (playerRef.current = videojs(
         videoElement,
-        { ...options, errorDisplay: false, html5: {
-          vhs: {
-            customTagParsers: [{
-              expression: /#EXT-X-ERROR/,
-              customType: 'livepeerError',
-            }]
-          }},   
-          plugins: {  
+        {
+          ...options,
+          errorDisplay: false,
+          html5: {
+            vhs: {
+              customTagParsers: [
+                {
+                  expression: /#EXT-X-ERROR/,
+                  customType: 'livepeerError',
+                },
+              ],
+            },
+          },
+          plugins: {
             mux: {
               debug: false,
               data: {
-                env_key: "8mi42im5d9uueq19dni35fgeq", // required
+                env_key: '8mi42im5d9uueq19dni35fgeq', // required
                 // Metadata
                 player_name: props.eventName, // ex: 'My Main Player'
                 video_id: props.eventName, // ex: 'abcd123'
                 video_title: props.eventName, // ex: 'My Great Video'
-                player_init_time: initTime // ex: 1451606400000
-              }
-            }
-          }
+                player_init_time: initTime, // ex: 1451606400000
+              },
+            },
+          },
         },
         () => {
           onReady && onReady(player)
         }
-      ));
+      ))
+    } else {
+      const player = playerRef.current
+
+      // prevent player from reloading the same src, causing interrupted playback
+      if (player.src() !== options.sources[0].src) {
+        player.src(options.sources)
+      }
     }
   }, [options, videoRef])
 
-  useEffect(() => {
-    console.log('src', options.sources[0].src )
-    const player = playerRef.current
-    if (player && options.sources[0].src) {
-      player.src(options.sources[0].src)
-    }
-  }, [options])
+  // useEffect(() => {
+  //   console.log('src', options.sources[0].src)
+  //   const player = playerRef.current
+  //   console.log(player.src())
+  //   if (player && options.sources[0].src) {
+  //     player.src(options.sources[0].src)
+  //   }
+  // }, [options])
 
   useEffect(() => {
     const player = playerRef.current
-    if (player) player.hlsQualitySelector({ displayCurrentQuality: true });
+    if (player) player.hlsQualitySelector({ displayCurrentQuality: true })
     return () => {
       if (player) {
         player.dispose()
@@ -68,8 +82,8 @@ export const VideoJS = (props: any) => {
   }, [playerRef])
 
   return (
-    <div data-vjs-player style={{ borderRadius: '5px' }} >
-      <video  ref={videoRef} className="video-js vjs-16-9 vjs-big-play-centered" />
+    <div data-vjs-player style={{ borderRadius: '5px' }}>
+      <video ref={videoRef} className="video-js vjs-16-9 vjs-big-play-centered" />
     </div>
   )
 }

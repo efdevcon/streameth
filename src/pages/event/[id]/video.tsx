@@ -17,12 +17,14 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EmbedEventPage(props: Props) {
-  const { streamsLoading, mediaUrl, changeStream } = useStreams(props.event)
-  
-  return <>
-    <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
-    <Player eventName={props.event.name} src={mediaUrl()} poster={props.event.poster} isLoading={streamsLoading} onStreamError={changeStream} />
-  </>
+  const { mediaUrl, changeStream } = useStreams(props.event)
+
+  return (
+    <>
+      <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
+      <Player eventName={props.event.name} src={mediaUrl()} poster={props.event.poster} onStreamError={changeStream} />
+    </>
+  )
 }
 
 EmbedEventPage.layout = EmbedLayout

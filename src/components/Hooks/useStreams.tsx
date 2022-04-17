@@ -12,7 +12,7 @@ const useStreams = (event: Event) => {
   const [currentStream, setCurrentStream] = useState<Stream | null>(streams[0])
   const [streamsLoading, setStreamsLoading] = useState(true)
   const [currentStreamIndex, setCurrentStreamIndex] = useState<number>(0)
-  const [currentRecordingIndex, setCurrentRecordingIndex] = useState<number>(0)
+  const [currentRecordingIndex, setCurrentRecordingIndex] = useState<number | null>(null)
   const [isPolling, setIsPolling] = useState<boolean>(false)
 
   // Determines if event is finished by checking if:
@@ -69,7 +69,7 @@ const useStreams = (event: Event) => {
       setIsPolling(false)
       setCurrentStream(streams[activeStreamIndex])
     } else {
-      setCurrentStream(null)
+      // setCurrentStream(null)
       setIsPolling(true)
     }
   }, [streams])
@@ -88,13 +88,20 @@ const useStreams = (event: Event) => {
   }
 
   const changeStream = () => {
-    fetchStreams()
+    let newStreamIndex = currentStreamIndex + 1
+
+    // Check array bounds; if out of bounds, set currentStreamIndex to 0
+    if (!streams[newStreamIndex]) {
+      newStreamIndex = 0
+    }
+
+    setCurrentStreamIndex(newStreamIndex)
+    setCurrentStream(streams[newStreamIndex])
   }
 
-  const changeRecording = (index: number) => {
+  const changeRecording = (index: number | null) => {
     setCurrentRecordingIndex(index)
   }
-
 
   const changeRoom = (roomId: string) => {
     const room = event.rooms.find(room => room.id === roomId)
@@ -105,12 +112,12 @@ const useStreams = (event: Event) => {
   }
 
   const mediaUrl = () => {
-    if (isEventOver() && event.recordings.length > 0) {
-      return event.recordings[currentRecordingIndex].recordingUrl
-    }
-
     if (currentStream && currentStream.isActive) {
       return currentStream.playbackUrl
+    }
+
+    if (event.recordings.length > 0 && currentRecordingIndex) {
+      return event.recordings[currentRecordingIndex].recordingUrl
     }
 
     return null
@@ -125,7 +132,6 @@ const useStreams = (event: Event) => {
     changeRoom,
     changeRecording,
     mediaUrl,
-    isEventOver,
     currentRecordingIndex,
   }
 }
