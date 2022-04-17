@@ -112,12 +112,12 @@ const useStreams = (event: Event) => {
   }
 
   const mediaUrl = () => {
-    if (currentStream && currentStream.isActive) {
-      return currentStream.playbackUrl
-    }
-
     if (event.recordings.length > 0 && currentRecordingIndex) {
       return event.recordings[currentRecordingIndex].recordingUrl
+    }
+
+    if (currentStream && currentStream.isActive) {
+      return currentStream.playbackUrl
     }
 
     return null
