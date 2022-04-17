@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
   const Layout = Component.layout || (props => <DefaultLayout>{props.children}</DefaultLayout>)
 
   return (
-    <PlausibleProvider domain={'streameth.tv'} trackOutboundLinks>
+    <PlausibleProvider domain='streameth.tv' trackOutboundLinks>
       <Layout>
         <SEO />
         <Component {...pageProps} />
