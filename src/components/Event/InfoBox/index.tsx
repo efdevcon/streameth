@@ -1,5 +1,7 @@
 import { Event, Session } from 'types'
 import EventDate from 'components/Event/Date'
+import { GetDomainName } from 'utils/format'
+import Link from 'next/link'
 
 interface EventInfoBoxProps {
   event: Event
@@ -39,6 +41,18 @@ export default function EventInfoBox({ event }: EventInfoBoxProps) {
       <div className="event__info-box__details">
         <h2>{event.name}</h2>
         <p>{event.description}</p>
+        <p style={{
+          fontSize: '12px',
+          marginTop: '16px',
+          textTransform: 'uppercase',
+          color: 'darkgray'
+        }}>
+          <Link href={event.website} passHref>
+            <a href={event.website} target="_blank" rel="noopener noreferrer">
+              {GetDomainName(event.website)}
+            </a>
+          </Link>
+        </p>
       </div>
     </div>
   )
