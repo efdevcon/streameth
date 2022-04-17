@@ -86,7 +86,7 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const events = GetEvents()
+  const events = GetEvents().filter(i => i.id !== 'test')
 
   return {
     props: {
