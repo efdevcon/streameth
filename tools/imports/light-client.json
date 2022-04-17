@@ -1,0 +1,86 @@
+[
+  {
+    "id": "0",
+    "name": "Overview of ethereum light clients",
+    "start": "2022-04-20T10:00:00.000Z",
+    "end": "2022-04-20T10:20:00.000Z",
+    "speakers": [
+      {
+        "id": "alex-stokes",
+        "name": "Alex Stokes"
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "name": "Integrating Geth into the proof-of-stake light client ecosystem",
+    "start": "2022-04-20T10:25:00.000Z",
+    "end": "2022-04-20T10:45:00.000Z",
+    "speakers": [
+      {
+        "id": "zsolt-felfoldi",
+        "name": "Zsolt Felföldi"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Networking in light clients",
+    "start": "2022-04-20T10:50:00.000Z",
+    "end": "2022-04-20T11:10:00.000Z",
+    "speakers": [
+      {
+        "id": "etan-kissling",
+        "name": "Etan Kissling"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Portal Network",
+    "start": "2022-04-20T11:25:00.000Z",
+    "end": "2022-04-20T11:45:00.000Z",
+    "speakers": [
+      {
+        "id": "piper-merriam",
+        "name": "Piper Merriam"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Mycelium light client demo",
+    "start": "2022-04-20T11:50:00.000Z",
+    "end": "2022-04-20T12:10:00.000Z",
+    "speakers": [
+      {
+        "id": "mihir-and-brayton-goodall-from-mycelium",
+        "name": "Mihir and Brayton Goodall from Mycelium"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Lodestar light client demo",
+    "start": "2022-04-20T12:15:00.000Z",
+    "end": "2022-04-20T12:35:00.000Z",
+    "speakers": [
+      {
+        "id": "cayman-and-dapplion-from-chainsafe",
+        "name": "Cayman and Dapplion from Chainsafe"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Statelessness and lighter clients",
+    "start": "2022-04-20T13:35:00.000Z",
+    "end": "2022-04-20T13:55:00.000Z",
+    "speakers": [
+      {
+        "id": "guillaume-ballet",
+        "name": "Guillaume Ballet"
+      }
+    ]
+  }
+]

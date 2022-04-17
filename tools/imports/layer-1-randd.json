@@ -14,7 +14,7 @@
       },
       {
         "id": "tim-beiko",
-        "name": " Tim Beiko"
+        "name": "Tim Beiko"
       }
     ]
   },
@@ -48,7 +48,7 @@
   },
   {
     "id": "4",
-    "name": "Danksharding  ",
+    "name": "Danksharding",
     "start": "2022-04-18T09:45:00.000Z",
     "end": "2022-04-18T10:00:00.000Z",
     "abstract": "Long term sharding proposal",
@@ -76,7 +76,7 @@
   },
   {
     "id": "6",
-    "name": "SELFDESTRUCT Removal ",
+    "name": "SELFDESTRUCT Removal",
     "start": "2022-04-18T10:15:00.000Z",
     "end": "2022-04-18T10:30:00.000Z",
     "abstract": "Removing or neutering the SELFDESTRUCT opcode",
@@ -90,7 +90,7 @@
   },
   {
     "id": "7",
-    "name": "L2 Resource Pricing ",
+    "name": "L2 Resource Pricing",
     "start": "2022-04-18T10:30:00.000Z",
     "end": "2022-04-18T10:45:00.000Z",
     "abstract": "Strategies to achieve coherent pricing across L2s",
@@ -104,7 +104,7 @@
   },
   {
     "id": "8",
-    "name": "Future of Ethereum Accounts ",
+    "name": "Future of Ethereum Accounts",
     "start": "2022-04-18T10:45:00.000Z",
     "end": "2022-04-18T11:00:00.000Z",
     "abstract": "The roadmap to move Ethereum Accounts away from EOAs",
@@ -127,7 +127,7 @@
   },
   {
     "id": "10",
-    "name": "Daily Kickoff ",
+    "name": "Daily Kickoff",
     "start": "2022-04-19T09:00:00.000Z",
     "end": "2022-04-19T09:15:00.000Z",
     "abstract": "Kickoff talk for Day 2",
@@ -139,13 +139,13 @@
       },
       {
         "id": "tim-beiko",
-        "name": " Tim Beiko"
+        "name": "Tim Beiko"
       }
     ]
   },
   {
     "id": "11",
-    "name": "Stateless Ethereum  ",
+    "name": "Stateless Ethereum",
     "start": "2022-04-19T09:15:00.000Z",
     "end": "2022-04-19T09:30:00.000Z",
     "abstract": "Removing the requirements that all Ethereum nodes store the full state",
@@ -159,7 +159,7 @@
   },
   {
     "id": "12",
-    "name": "Database Architecture Improvements ",
+    "name": "Database Architecture Improvements",
     "start": "2022-04-19T09:30:00.000Z",
     "end": "2022-04-19T09:45:00.000Z",
     "abstract": "Changes to database layouts to increase performance and support stateless Ethereum",
@@ -173,7 +173,7 @@
   },
   {
     "id": "13",
-    "name": "History Expiry  ",
+    "name": "History Expiry",
     "start": "2022-04-19T09:45:00.000Z",
     "end": "2022-04-19T10:00:00.000Z",
     "abstract": "Periodically removing historical data from the Ethereum p2p network",
@@ -187,7 +187,7 @@
   },
   {
     "id": "14",
-    "name": "Portal Network ",
+    "name": "Portal Network",
     "start": "2022-04-19T10:00:00.000Z",
     "end": "2022-04-19T10:15:00.000Z",
     "abstract": "A new way to share Ethereum data across nodes",
@@ -201,7 +201,7 @@
   },
   {
     "id": "15",
-    "name": "Proposer Builder Separation ",
+    "name": "Proposer Builder Separation",
     "start": "2022-04-19T10:15:00.000Z",
     "end": "2022-04-19T10:30:00.000Z",
     "abstract": "A framework to democratize MEV within Ethereum",
@@ -215,7 +215,7 @@
   },
   {
     "id": "16",
-    "name": "Single Slot Finality ",
+    "name": "Single Slot Finality",
     "start": "2022-04-19T10:30:00.000Z",
     "end": "2022-04-19T10:45:00.000Z",
     "abstract": "Going from binary finality to incremental, cryptoeconomicaly accummulating finality",

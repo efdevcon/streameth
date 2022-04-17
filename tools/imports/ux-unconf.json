@@ -76,7 +76,7 @@
   },
   {
     "id": "6",
-    "name": "DAO Ops",
+    "name": "The Back-Breaking Work of a Yield Farmer: How Can we Unify a Thousand Fragmented Vaults",
     "start": "2022-04-18T11:00:00.000Z",
     "end": "2022-04-18T11:09:00.000Z",
     "track": "UX",
@@ -106,7 +106,7 @@
   },
   {
     "id": "8",
-    "name": "I’ve got no Shill!",
+    "name": "Tales from the front lines: a Researcher's Perspective",
     "start": "2022-04-18T11:20:00.000Z",
     "end": "2022-04-18T11:29:00.000Z",
     "track": "UX",
@@ -114,8 +114,8 @@
     "room": "Main",
     "speakers": [
       {
-        "id": "open-mic",
-        "name": "Open Mic"
+        "id": "georgia-rakusen",
+        "name": "Georgia Rakusen"
       }
     ]
   },
@@ -211,7 +211,7 @@
   },
   {
     "id": "15",
-    "name": "I’ve got no Shill! ",
+    "name": "I’ve got no Shill!",
     "start": "2022-04-18T12:30:00.000Z",
     "end": "2022-04-18T12:39:00.000Z",
     "track": "UX",
