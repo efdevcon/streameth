@@ -37,7 +37,7 @@ export const VideoJS = (props: any) => {
             mux: {
               debug: false,
               data: {
-                env_key: '8mi42im5d9uueq19dni35fgeq', // required
+                env_key: "tgm8k06hncftrhfi397jte0q1", // required
                 // Metadata
                 player_name: props.eventName, // ex: 'My Main Player'
                 video_id: props.eventName, // ex: 'abcd123'
