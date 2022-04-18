@@ -11,7 +11,6 @@ interface PlayerProps {
 }
 
 const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
-   console.log(src)
   if (!src) return <img width={'100%'} src={poster ?? '/posters/default.png'} alt="poster" />
 
   const playerRef = useRef(null)

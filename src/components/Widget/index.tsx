@@ -46,9 +46,11 @@ export default function Widget({ event, allEvents }: WidgetProps) {
       </div>
       <div className="widget__area__recordings">
         <RecordingSnackList
+          isActive={currentStream?.isActive}
           recordings={event.recordings}
           onRecordingClick={changeRecording}
           currentRecordingIndex={currentRecordingIndex}
+          onLiveClick={() => changeRecording(null)}
         />
       </div>
       <div className="widget__area__event-info-box">

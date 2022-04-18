@@ -61,15 +61,6 @@ export const VideoJS = (props: any) => {
     }
   }, [options, videoRef])
 
-  // useEffect(() => {
-  //   console.log('src', options.sources[0].src)
-  //   const player = playerRef.current
-  //   console.log(player.src())
-  //   if (player && options.sources[0].src) {
-  //     player.src(options.sources[0].src)
-  //   }
-  // }, [options])
-
   useEffect(() => {
     const player = playerRef.current
     if (player) player.hlsQualitySelector({ displayCurrentQuality: true })

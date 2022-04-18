@@ -1,16 +1,21 @@
+import { LivePulse } from 'components/LivePulse'
 import { Recording } from 'types'
 import RecordingSnack from '../Snack'
 
 interface RecordingSnackListProps {
+  isActive?: boolean
   recordings: Recording[]
   currentRecordingIndex: number | null
   onRecordingClick: (recordingIndex: number) => void
+  onLiveClick: () => void
 }
 
 export default function RecordingSnackList({
+  isActive,
   recordings,
   onRecordingClick,
   currentRecordingIndex,
+  onLiveClick
 }: RecordingSnackListProps) {
   if (recordings.length === 0) {
     return null
@@ -30,6 +35,7 @@ export default function RecordingSnackList({
             />
           )
         })}
+        {isActive && <a href='#' onClick={() => onLiveClick()}>Watch live &raquo;</a>}
       </div>
     </div>
   )

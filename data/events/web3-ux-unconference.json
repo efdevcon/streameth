@@ -327,5 +327,10 @@
             ]
         }
     ],
-    "recordings": []
+    "recordings": [
+        {
+            "name": "Morning",
+            "recordingUrl": "https://livepeercdn.com/recordings/4665cb3f-cc69-4b49-8a0d-dbdc6218a6fe/index.m3u8"
+        }
+    ]
 }

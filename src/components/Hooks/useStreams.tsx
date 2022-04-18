@@ -19,8 +19,8 @@ const useStreams = (event: Event) => {
   // (1) 2 hours have passed since last session end time or
   // (2) Recordings present for events with no sessions
   const isEventOver = () => {
-   const sessions = event.schedule.sessions
-   console.log(event.end)
+    const sessions = event.schedule.sessions
+
     if (sessions.length > 0) {
       const lastSession = event.end
       const today = moment().utc()
@@ -28,7 +28,7 @@ const useStreams = (event: Event) => {
       if (today.diff(lastSessionEnd, 'day') > 0) {
         return true
       }
-    } 
+    }
     return false
   }
 
@@ -107,22 +107,17 @@ const useStreams = (event: Event) => {
     }
   }
 
-
   useEffect(() => {
-
-   if (currentRecordingIndex !== null) {
-     console.log('Recording Index', currentRecordingIndex)
-
+    if (currentRecordingIndex !== null) {
       setMediaUrl(event.recordings[currentRecordingIndex].recordingUrl)
-   }
-   else if (currentStream && currentStream.isActive) {
+    }
+    else if (currentStream && currentStream.isActive) {
       setMediaUrl(currentStream.playbackUrl)
     }
     else {
-       setMediaUrl(null)
+      setMediaUrl(null)
     }
   }, [currentRecordingIndex, currentStream])
-
 
   return {
     streamsLoading,

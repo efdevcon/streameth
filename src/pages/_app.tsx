@@ -3,7 +3,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import { LayoutPageType, DefaultLayout } from 'layouts'
 import { SEO } from 'components/seo'
 import type { AppProps } from 'next/app'
-import PlausibleProvider from 'next-plausible'
+import init from '@socialgouv/matomo-next'
+import { useEffect } from 'react'
 
 type AppLayoutProps = AppProps & {
   Component: LayoutPageType
@@ -12,12 +13,17 @@ type AppLayoutProps = AppProps & {
 export default function App({ Component, pageProps }: AppLayoutProps) {
   const Layout = Component.layout || (props => <DefaultLayout>{props.children}</DefaultLayout>)
 
+  useEffect(() => {
+    init({
+      url: 'https://matomo.ethereum.org/',
+      siteId: '34'
+    })
+  }, [])
+
   return (
-    <PlausibleProvider domain='streameth.tv' trackOutboundLinks>
-      <Layout>
-        <SEO />
-        <Component {...pageProps} />
-      </Layout>
-    </PlausibleProvider>
+    <Layout>
+      <SEO />
+      <Component {...pageProps} />
+    </Layout>
   )
 }
