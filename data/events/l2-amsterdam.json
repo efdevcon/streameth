@@ -241,14 +241,5 @@
             ]
         }
     ],
-    "recordings": [        
-       {
-         "name": "Morning",
-         "recordingUrl": "https://livepeercdn.com/recordings/204a411c-e529-4ef3-9ae1-43f927b1cf53/index.m3u8"
-      },
-      {
-         "name": "test",
-         "recordingUrl": "https://livepeercdn.com/recordings/204a155a-36ca-4860-8344-9446d819f917/index.m3u8"
-      }
-   ]
+    "recordings": []
 }
