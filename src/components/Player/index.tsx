@@ -48,7 +48,7 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
     player.on('waiting', () => {
       console.log('player is waiting')
       const currentPlaylist = player.tech().vhs.playlists.media()
-      if (currentPlaylist.custom?.livepeerError) {
+      if (currentPlaylist?.custom?.livepeerError) {
         player.error({ code: '4' })
       }
     })

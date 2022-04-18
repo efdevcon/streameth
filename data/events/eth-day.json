@@ -3,7 +3,7 @@
   "name": "ETH DAY",
   "description": "Amsterdam will be hosting Devconnect for a week, gathering the brightest developers and Ethereum builders. This event is for all the curious minds, technically inclined and generally interested people wanting to learn from the best contributors of the Ethereum ecosystem.",
   "start": "2022-04-18",
-  "end": "2022-04-18",
+  "end": "2022-04-17",
   "website": "https://cryptocanal.org/eth-day/",
   "poster": "/posters/eth-day.png",
   "stream": {
@@ -279,5 +279,8 @@
       ]
     }
   ],
-  "recordings": []
+  "recordings": [{
+     "name": "Morning",
+     "recordingUrl": "https://livepeercdn.com/recordings/204a155a-36ca-4860-8344-9446d819f917/index.m3u8"
+  }]
 }
