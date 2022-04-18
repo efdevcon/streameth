@@ -20,7 +20,8 @@ const useStreams = (event: Event) => {
   // (2) Recordings present for events with no sessions
   const isEventOver = () => {
     const sessions = event.schedule.sessions
-
+    console.log('SESSIONS', sessions)
+    return false
     if (sessions.length > 0) {
       const lastSession = sessions[sessions.length - 1]
       const today = moment().utc()
