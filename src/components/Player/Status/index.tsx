@@ -4,12 +4,13 @@ import moment from 'moment'
 interface PlayerStatusProps {
   isActive?: boolean
   startDate: string
+  onLiveClick: () => void
 }
 
-export default function PlayerStatus({ isActive = false, startDate }: PlayerStatusProps) {
+export default function PlayerStatus({ isActive = false, startDate, onLiveClick }: PlayerStatusProps) {
   return (
     <div className="player__stream-status">
-      <div className="player__live">
+      <div className="player__live" onClick={() => onLiveClick()}>
         {isActive && (
           <>
             <LivePulse style={{ marginRight: '5px' }} />

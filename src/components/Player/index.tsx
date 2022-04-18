@@ -5,15 +5,13 @@ import { Room, Stream, Event } from 'types'
 interface PlayerProps {
   src: string | null
   poster: string
-  isLoading: boolean
   eventName: Event['name']
   setStatus?: (status: string) => void
   onStreamError: () => void
 }
 
-
 const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
-  if (!src) return <img width={"100%"} src={poster ?? '/posters/default.png'} alt="poster" />
+  if (!src) return <img width={'100%'} src={poster ?? '/posters/default.png'} alt="poster" />
 
   const playerRef = useRef(null)
   const videoJsOptions = {
@@ -55,7 +53,7 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
     })
   }
 
-  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} eventName={eventName}/>
+  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} eventName={eventName} />
 }
 
 export default Player

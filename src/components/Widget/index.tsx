@@ -16,17 +16,9 @@ interface WidgetProps {
 }
 
 export default function Widget({ event, allEvents }: WidgetProps) {
-  const {
-    currentStream,
-    streamsLoading,
-    mediaUrl,
-    changeStream,
-    currentRoom,
-    changeRoom,
-    isEventOver,
-    changeRecording,
-    currentRecordingIndex,
-  } = useStreams(event)
+  const { currentStream, mediaUrl, changeStream, currentRoom, changeRoom, changeRecording, currentRecordingIndex } =
+    useStreams(event)
+
   return (
     <div className="widget">
       <div className="widget__area__header">
@@ -40,18 +32,21 @@ export default function Widget({ event, allEvents }: WidgetProps) {
         <PlayerHeader title={event.name} />
       </div>
       <div className="widget__area__player-status">
-        <PlayerStatus isActive={currentStream?.isActive} startDate={event.start} />
+        <PlayerStatus
+          isActive={currentStream?.isActive}
+          startDate={event.start}
+          onLiveClick={() => changeRecording(null)}
+        />
       </div>
       {/* Span player across both columns if schedule is empty, There might be a better way to do this. */}
       <div className={`widget__area__player ${event.schedule.sessions.length === 0 ? 'widget__area--span-full' : ''}`}>
-        <Player src={mediaUrl()} eventName={event.name} poster={event.poster} isLoading={streamsLoading} onStreamError={changeStream} />
+        <Player src={mediaUrl()} eventName={event.name} poster={event.poster} onStreamError={changeStream} />
       </div>
       <div className="widget__area__schedule">
         <Schedule sessions={event.schedule.sessions} />
       </div>
       <div className="widget__area__recordings">
         <RecordingSnackList
-          showRecordings={isEventOver()}
           recordings={event.recordings}
           onRecordingClick={changeRecording}
           currentRecordingIndex={currentRecordingIndex}

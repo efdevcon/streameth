@@ -8,17 +8,10 @@ import moment from 'moment'
 import { LivePulse } from 'components/LivePulse'
 import { getStreams } from 'services/stream'
 import { useEffect, useState } from 'react'
+import { GetDomainName } from 'utils/format'
 
 interface Props {
   events: Event[]
-}
-
-export function GetDomainName(url: string): string {
-  return url
-    .replace('http://', '')
-    .replace('https://', '')
-    .replace('www.', '')
-    .split(/[\/?#]/)[0]
 }
 
 const eventStreamIds = (event: Event) => {
@@ -93,7 +86,7 @@ export default function Home(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const events = GetEvents()
+  const events = GetEvents().filter(i => i.id !== 'test')
 
   return {
     props: {
