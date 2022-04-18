@@ -329,8 +329,12 @@
     ],
     "recordings": [
         {
-            "name": "Morning",
+            "name": "Lightning Talks",
             "recordingUrl": "https://livepeercdn.com/recordings/4665cb3f-cc69-4b49-8a0d-dbdc6218a6fe/index.m3u8"
+        },
+        {
+            "name": "Working group Wrapup",
+            "recordingUrl": "https://livepeercdn.com/recordings/466545db-9688-42fb-8b87-30a3889285ae/index.m3u8"
         }
     ]
 }
