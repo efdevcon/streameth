@@ -22,7 +22,7 @@ export default function EmbedEventPage(props: Props) {
   return (
     <>
       <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
-      <Player eventName={props.event.name} src={mediaUrl()} poster={props.event.poster} onStreamError={changeStream} />
+      <Player eventName={props.event.name} src={mediaUrl} poster={props.event.poster} onStreamError={changeStream} />
     </>
   )
 }

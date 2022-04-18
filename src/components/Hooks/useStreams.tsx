@@ -14,22 +14,22 @@ const useStreams = (event: Event) => {
   const [currentStreamIndex, setCurrentStreamIndex] = useState<number>(0)
   const [currentRecordingIndex, setCurrentRecordingIndex] = useState<number | null>(null)
   const [isPolling, setIsPolling] = useState<boolean>(false)
-
+  const [mediaUrl, setMediaUrl] = useState<string | null>(null)
   // Determines if event is finished by checking if:
   // (1) 2 hours have passed since last session end time or
   // (2) Recordings present for events with no sessions
   const isEventOver = () => {
-    const sessions = event.schedule.sessions
-
-    if (sessions.length > 0) {
-      const lastSession = sessions[sessions.length - 1]
-      const today = moment().utc()
-      const lastSessionEnd = moment.utc(lastSession.end)
-
-      if (today.diff(lastSessionEnd, 'hours') > 2) {
-        return true
-      }
-    } else if (event.recordings.length > 0) {
+   // const sessions = event.schedule.sessions
+   //  if (sessions.length > 0) {
+   //    const lastSession = sessions[sessions.length - 1]
+   //    const today = moment().utc()
+   //    const lastSessionEnd = moment.utc(lastSession.end)
+   //    console.log(lastSessionEnd,today.diff(lastSessionEnd, 'hours') > 2)
+   //    if (today.diff(lastSessionEnd, 'hours') > 2) {
+   //      return true
+   //    }
+   //  } else 
+   if (event.recordings.length > 0) {
       return true
     }
 
@@ -100,6 +100,7 @@ const useStreams = (event: Event) => {
   }
 
   const changeRecording = (index: number | null) => {
+     console.log(index)
     setCurrentRecordingIndex(index)
   }
 
@@ -111,17 +112,20 @@ const useStreams = (event: Event) => {
     }
   }
 
-  const mediaUrl = () => {
-    if (currentRecordingIndex) {
-      return event.recordings[currentRecordingIndex].recordingUrl
-    }
 
-    if (currentStream && currentStream.isActive) {
-      return currentStream.playbackUrl
+  useEffect(() => {
+     console.log(currentRecordingIndex)
+   if (currentRecordingIndex) {
+      setMediaUrl(event.recordings[currentRecordingIndex].recordingUrl)
+   }
+   else if (currentStream && currentStream.isActive) {
+      setMediaUrl(currentStream.playbackUrl)
     }
+    else {
+       setMediaUrl(null)
+    }
+  }, [currentRecordingIndex, currentStream])
 
-    return null
-  }
 
   return {
     streamsLoading,

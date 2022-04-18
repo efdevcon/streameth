@@ -16,6 +16,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EventPage(props: Props) {
+   
   return (
     <>
       <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
