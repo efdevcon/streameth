@@ -228,18 +228,12 @@
                     "id": "a690bcca-cdf0-4685-84e4-fa6a61b33ef8"
                 }
             ]
-        },
-        {
-            "id": "Ijzaal",
-            "streams": [
-                {
-                    "id": "c17b1b86-b75b-46a1-9146-687cf476532e"
-                },
-                {
-                    "id": "8c30eb25-da27-4767-9304-8675d3e2a663"
-                }
-            ]
         }
     ],
-    "recordings": []
+    "recordings": [
+       {
+          "name": "morning",
+          "recordingUrl": "https://livepeercdn.com/recordings/5197ed62-b954-46b6-ac6b-b640505eac40/index.m3u8"
+       }
+    ]
 }
