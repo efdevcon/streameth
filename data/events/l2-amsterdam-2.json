@@ -434,5 +434,14 @@
             ]
         }
     ],
-    "recordings": []
+    "recordings": [
+        {
+            "name": "Grote Zaal",
+            "recordingUrl": "https://livepeercdn.com/recordings/5197349d-8213-4bf6-a14e-fcc85b71368b/index.m3u8"
+        },
+        {
+            "name": "Ijzaal",
+            "recordingUrl": "https://livepeercdn.com/recordings/c17b03f1-0000-4852-a3a9-7f77d5e994c9/index.m3u8"
+        }
+    ]
 }
