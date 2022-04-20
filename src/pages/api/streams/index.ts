@@ -13,19 +13,24 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       streamIds = ids.split(',')
     }
 
-    const streams: Stream[] = await provider.getStreams(streamIds)
-    // const recordings: Recording[][] = await Promise.all(
-    //   streams.map(stream => {
-    //     return provider.getRecordings(stream.id)
-    //   })
-    // )
+    try {
+      const streams: Stream[] = await provider.getStreams(streamIds)
+      // const recordings: Recording[][] = await Promise.all(
+      //   streams.map(stream => {
+      //     return provider.getRecordings(stream.id)
+      //   })
+      // )
 
-    // // merge recordings with their respective stream
-    // streams.forEach((stream, index) => {
-    //   stream.recordings = recordings[index]
-    // })
+      // // merge recordings with their respective stream
+      // streams.forEach((stream, index) => {
+      //   stream.recordings = recordings[index]
+      // })
 
-    return res.status(200).json(streams)
+      return res.status(200).json(streams)    
+    } catch (e: any) {
+      console.log('Unable to fetch streams')
+      return res.status(e.statusCode).json(e)
+    }
   }
 
   res.status(404).json({})

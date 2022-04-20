@@ -6,6 +6,8 @@ import { EmbedLayout } from 'layouts'
 import { SEO } from 'components/seo'
 import Player from 'components/Player'
 import useStreams from 'components/Hooks/useStreams'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 interface Props {
   event: Event
@@ -17,7 +19,16 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EmbedEventPage(props: Props) {
-  const { mediaUrl, changeStream } = useStreams(props.event)
+  const { mediaUrl, changeRoom, changeStream } = useStreams(props.event)
+  const router = useRouter()
+  const { room } = router.query
+
+  useEffect(() => {
+    if (room) {
+      console.log('Changing room to', room)
+      changeRoom(room as string)
+    }
+  }, [room])
 
   return (
     <>
