@@ -24,5 +24,14 @@
             ]
         }
     ],
-    "recordings": []
+    "recordings": [
+        {
+            "name": "Morning",
+            "recordingUrl": "https://livepeercdn.com/recordings/36cd0a19-e3bc-487b-9205-50c8856242d7/index.m3u8"
+        },
+        {
+            "name": "Afternoon",
+            "recordingUrl": "https://livepeercdn.com/recordings/36cd1f17-86e2-4e1d-ae96-689d2bbc2bee/index.m3u8"
+        }
+    ]
 }
