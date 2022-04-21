@@ -1,6 +1,7 @@
 import moment from 'moment'
 import { Session, Speaker } from 'types'
 import IconClock from 'assets/icons/icon_clock.svg'
+import IconRoom from 'assets/icons/icon_room.svg'
 import IconVoiceRecord from 'assets/icons/voice_record.svg'
 
 interface ScheduleSessionProps {
@@ -42,6 +43,16 @@ export default function ScheduleSession({ session }: ScheduleSessionProps) {
                 <span className="schedule__session__speakers">{speakersList(session.speakers)}</span>
               </td>
             </tr>}
+          {session.room && <tr>
+            <td>
+              <i>
+                <IconRoom stroke="#B7B7B7" />
+              </i>
+            </td>
+            <td>
+              <span className="schedule__session__speakers">{session.room}</span>
+            </td>
+          </tr>}
         </tbody>
       </table>
     </div>

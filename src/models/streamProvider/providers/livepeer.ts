@@ -70,6 +70,10 @@ export class Livepeer implements StreamProvider {
   }
 
   async getRecordings(streamId: string): Promise<Recording[]> {
+    // recording.createdAt => start time / unix timestamp 
+    // recording.lastSeen => end time / unix timestamp
+    // duration = lastSeen - createdAt 
+    
     try {
       const sessions: LivepeerSession[] = await get(
         `${BASE_API}/stream/${streamId}/sessions`,
