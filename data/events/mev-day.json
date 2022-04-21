@@ -13,7 +13,7 @@
     },
     "rooms": [
         {
-            "id": "Galerij",
+            "id": "Light Mode Stage",
             "streams": [
                 {
                     "id": "c837b883-5e40-4cb6-add5-d76c1c0b968e"
@@ -24,7 +24,7 @@
             ]
         },
         {
-          "id": "Club",
+          "id": "Dark Mode Stage",
           "streams": [
               {
                   "id": "69ba7fa3-7b12-4494-a995-b0b58f61c475"
