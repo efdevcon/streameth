@@ -24,5 +24,10 @@
             ]
         }
     ],
-    "recordings": []
+    "recordings": [
+        {
+            "name": "Main",
+            "recordingUrl": "https://livepeercdn.com/recordings/1f15655a-2048-4931-8b22-f00cd582203d/index.m3u8"
+        }
+    ]
 }
