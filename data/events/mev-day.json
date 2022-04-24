@@ -35,5 +35,10 @@
           ]
       }
     ],
-    "recordings": []
+    "recordings": [
+      {
+         "name": "Light Mode Stage",
+         "recordingUrl": "https://livepeercdn.com/recordings/b9a51132-134e-4246-b8e3-f9ae5620e21f/index.m3u8"
+     }
+    ]
 }
