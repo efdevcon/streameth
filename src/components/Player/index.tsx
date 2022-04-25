@@ -15,6 +15,7 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
 
   const playerRef = useRef(null)
   const videoJsOptions = {
+   techOrder:['html5','youtube'],
     poster: poster || '',
     autoplay: true,
     controls: true,
@@ -22,8 +23,8 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
     fluid: true,
     sources: [
       {
-        src: src.replace('cdn.livepeer.com', 'livepeercdn.com'),
-        type: 'application/x-mpegURL',
+        src: src,
+        type: src.includes('youtube') ?'video/youtube' : 'application/x-mpegURL',
       },
     ],
   }

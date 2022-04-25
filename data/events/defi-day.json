@@ -25,5 +25,10 @@
             ]
         }
     ],
-    "recordings": []
+    "recordings": [
+       {
+          "name": "DeFi Day",
+          "recordingUrl": "https://livepeercdn.com/recordings/69a78395-d49a-439b-b8af-bb524a877aeb/index.m3u8"
+       }
+    ]
 }
