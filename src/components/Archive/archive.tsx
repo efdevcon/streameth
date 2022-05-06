@@ -18,9 +18,9 @@ export function Archive(props: Props) {
     if (props.className) className += ` ${props.className}`
 
     let filter: any = {}
-    const rooms = [...new Set(props.videos.filter(i => !!i.session?.room).map(i => i.session.room))]
-    const tracks = [...new Set(props.videos.filter(i => !!i.session?.track).map(i => i.session.track))]
-    const days = [...new Set(props.videos.filter(i => !!i.session?.start).map(i => moment(i.session.start).startOf('day').format('MMM DD')))]
+    const rooms = [...new Set(props.videos.filter(i => !!i.session?.room).map(i => i.session?.room))] as string[]
+    const tracks = [...new Set(props.videos.filter(i => !!i.session?.track).map(i => i.session?.track))] as string[]
+    const days = [...new Set(props.videos.filter(i => !!i.session?.start).map(i => moment(i.session?.start).startOf('day').format('MMM DD')))] as string[]
     const tags = [...new Set(props.videos.map(i => i.session?.tags))].flat()
 
     const showFilterWithOptions = 0
@@ -37,9 +37,9 @@ export function Archive(props: Props) {
         }
 
         const filteredVideos = props.videos.filter(i => {
-            if (filter.rooms && filter.rooms.includes(i.session.room)) return true
-            if (filter.tracks && filter.tracks.includes(i.session.track)) return true
-            if (filter.days && filter.days.includes(moment(i.session.start).startOf('day').format('MMM DD'))) return true
+            if (filter.rooms && filter.rooms.includes(i.session?.room)) return true
+            if (filter.tracks && filter.tracks.includes(i.session?.track)) return true
+            if (filter.days && filter.days.includes(moment(i.session?.start).startOf('day').format('MMM DD'))) return true
 
             return false
         })
