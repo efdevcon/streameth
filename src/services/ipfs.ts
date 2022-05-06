@@ -32,6 +32,12 @@ export async function GetVideos(hash: string): Promise<Video[]> {
             const buffer = await toBuffer(node.cat(metadataFile.path))
             const metadata = new TextDecoder("utf-8").decode(buffer)
             if (metadata) video.session = JSON.parse(metadata)
+
+            // ADDING DIFFERENT DATA FOR TESTING PURPOSES - CAN DELETE LATER
+            if (hash === 'QmTmeSDcFz1rhMvS9zHfpnFc1WL7boTtMVJ4iHcUT7n1jo') {
+                if (video.session && slug === '02') video.session.track = 'Security'
+                if (video.session && slug === '03') video.session.room = 'Room'
+            }
         }
 
         return video

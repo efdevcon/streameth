@@ -1,0 +1,74 @@
+@use 'src/assets/css/variables'as *;
+
+.container {
+    .toggle {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 32px;
+        background-color: #000000;
+        color: #D6D6D6;
+        padding: 8px 16px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .panel {
+        .filter {
+            border-bottom: 1px solid #C4C4C4;
+            padding: 16px;
+
+            svg {
+                path {
+                    fill: #323232;
+                }
+            }
+
+            .header {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #FCFCFC;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                .icon {
+                    margin-right: 12px;
+                }
+            }
+
+            .tags {
+                display: flex;
+                margin-top: 16px;
+                gap: 8px;
+            }
+
+            .tag {
+                cursor: pointer;
+                border: 1px solid #6D4FFA;
+                font-size: $size-6;
+                text-transform: uppercase;
+                padding: 0px 4px;
+
+                &:hover {
+                    background: #f9f8ff;
+                    color: #6D4FFA;
+                }
+            }
+
+            .active {
+                @extend .tag;
+                background: #6D4FFA;
+                color: #FCFCFC;
+
+                &:hover {
+                    border: 1px solid #8f78fb;
+                    background: #8f78fb;
+                    color: #FCFCFC;
+                }
+            }
+        }
+    }
+}
