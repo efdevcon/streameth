@@ -1,7 +1,11 @@
-import { create } from 'ipfs-core'
+import { create, IPFS } from 'ipfs-core'
 import all from 'it-all'
 import toBuffer from 'it-to-buffer'
 import { Video } from 'types'
+
+declare global {
+    var IPFS: IPFS;
+}
 
 async function init() {
     if (!global.IPFS) {
