@@ -1,14 +1,16 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
-import { Event } from 'types'
+import { Event, Video } from 'types'
 import { GetEventNames, GetEvents } from 'services/event'
 import Widget from 'components/Widget'
 import { SEO } from 'components/seo'
+import { Archive } from 'components/Archive/archive'
+import { GetVideos } from 'services/ipfs'
 
 interface Props {
   event: Event
   events: Event[]
+  videos: Video[]
 }
 
 interface Params extends ParsedUrlQuery {
@@ -16,7 +18,8 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EventPage(props: Props) {
-   
+  const showArchive = !!props.event.archive
+
   return (
     <>
       <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
@@ -24,7 +27,8 @@ export default function EventPage(props: Props) {
         <div className="section">
           <div className="content">
             <div style={{ marginTop: '30px' }}>
-              <Widget allEvents={props.events} event={props.event} />
+              {showArchive && <Archive event={props.event} videos={props.videos} />}
+              {!showArchive && <Widget allEvents={props.events} event={props.event} />}
             </div>
           </div>
         </div>
@@ -55,10 +59,16 @@ export const getStaticProps: GetStaticProps<Props, Params> = async context => {
     }
   }
 
+  let videos: Video[] = []
+  if (event.archive && event.archive.type === 'ipfs') {
+    videos = await GetVideos(event.archive.config.directory)
+  }
+
   return {
     props: {
       event,
       events,
+      videos
     },
   }
 }

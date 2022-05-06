@@ -10,6 +10,7 @@ export interface Event {
   schedule: Schedule
   rooms: Room[]
   recordings: Recording[]
+  archive: Archive
 }
 
 export interface Stream {
@@ -23,6 +24,15 @@ export interface Stream {
 export interface Recording {
   name?: string
   recordingUrl: string
+}
+
+export interface Archive { 
+  type: "ipfs",
+  config: IpfsArchive
+}
+
+export interface IpfsArchive {
+  directory: string
 }
 
 export interface StreamProvider {
@@ -60,4 +70,11 @@ export interface Speaker {
 export interface Room {
   id: string // e.g. Main
   streams: Stream[]
+}
+
+export interface Video {
+  id: string // hash
+  slug: string // filename
+  url: string
+  session?: Session
 }
