@@ -55,6 +55,7 @@
     "name": "Ecne",
     "start": "2022-04-24T11:30:00.000Z",
     "end": "2022-04-24T11:55:00.000Z",
+    "description": "Ecne is the first-ever soundness verifier for R1CS, a critical building block of zk-SNARKs.",
     "speakers": [
       {
         "id": "franklyn-wang",

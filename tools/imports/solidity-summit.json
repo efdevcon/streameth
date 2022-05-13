@@ -97,22 +97,6 @@
   },
   {
     "id": "7",
-    "name": "Foundry - A blazing fast, portable and modular toolkit for Ethereum application development written in Rust.",
-    "start": "2022-04-20T12:10:00.000Z",
-    "end": "2022-04-20T12:30:00.000Z",
-    "abstract": "Foundry is a portable, fast and modular toolkit for Ethereum application development. https://github.com/gakonst/foundry",
-    "type": "Talk",
-    "room": "Main",
-    "speakers": [
-      {
-        "id": "georgios-konstantopoulos",
-        "name": "Georgios Konstantopoulos",
-        "role": "Paradigm"
-      }
-    ]
-  },
-  {
-    "id": "8",
     "name": "Foundry 101, a hands-on introduction",
     "start": "2022-04-20T12:30:00.000Z",
     "end": "2022-04-20T13:50:00.000Z",
@@ -128,7 +112,7 @@
     ]
   },
   {
-    "id": "9",
+    "id": "8",
     "name": "dΞth Crypto",
     "start": "2022-04-20T13:50:00.000Z",
     "end": "2022-04-20T14:05:00.000Z",
@@ -144,7 +128,7 @@
     ]
   },
   {
-    "id": "10",
+    "id": "9",
     "name": "Remix Hybrid Tools",
     "start": "2022-04-20T14:05:00.000Z",
     "end": "2022-04-20T14:20:00.000Z",
@@ -160,7 +144,7 @@
     ]
   },
   {
-    "id": "11",
+    "id": "10",
     "name": "Presenting @truffle/decoder",
     "start": "2022-04-20T14:20:00.000Z",
     "end": "2022-04-20T14:45:00.000Z",
@@ -176,7 +160,7 @@
     ]
   },
   {
-    "id": "12",
+    "id": "11",
     "name": "Human-Friendly Contract Interactions with Sourcify Verification",
     "start": "2022-04-20T14:45:00.000Z",
     "end": "2022-04-20T15:00:00.000Z",
@@ -192,7 +176,7 @@
     ]
   },
   {
-    "id": "13",
+    "id": "12",
     "name": "Hybrid Attack Synthesis for DeFi",
     "start": "2022-04-20T15:00:00.000Z",
     "end": "2022-04-20T15:15:00.000Z",
@@ -208,7 +192,7 @@
     ]
   },
   {
-    "id": "14",
+    "id": "13",
     "name": "PRBMath: A Smart Contract Library for Fixed-Point Math",
     "start": "2022-04-20T15:15:00.000Z",
     "end": "2022-04-20T15:30:00.000Z",
@@ -224,7 +208,7 @@
     ]
   },
   {
-    "id": "15",
+    "id": "14",
     "name": "IntelliJ Solidity Debugger",
     "start": "2022-04-20T15:30:00.000Z",
     "end": "2022-04-20T16:00:00.000Z",
@@ -240,7 +224,7 @@
     ]
   },
   {
-    "id": "16",
+    "id": "15",
     "name": "What would Solidity look like if it was built today?",
     "start": "2022-04-20T16:00:00.000Z",
     "end": "2022-04-20T16:15:00.000Z",
@@ -256,7 +240,7 @@
     ]
   },
   {
-    "id": "17",
+    "id": "16",
     "name": "Bootstrapping a Compiler with Yul",
     "start": "2022-04-20T16:15:00.000Z",
     "end": "2022-04-20T16:40:00.000Z",
@@ -272,7 +256,7 @@
     ]
   },
   {
-    "id": "18",
+    "id": "17",
     "name": "The Solidity Optimizooooor",
     "start": "2022-04-20T16:40:00.000Z",
     "end": "2022-04-20T17:05:00.000Z",
@@ -288,7 +272,7 @@
     ]
   },
   {
-    "id": "19",
+    "id": "18",
     "name": "Generating EVM bytecode from Yul in the new via-IR pipeline",
     "start": "2022-04-20T17:05:00.000Z",
     "end": "2022-04-20T17:30:00.000Z",
@@ -304,7 +288,7 @@
     ]
   },
   {
-    "id": "20",
+    "id": "19",
     "name": "Underhanded Solidity Contest Winner Presentations",
     "start": "2022-04-20T17:30:00.000Z",
     "end": "2022-04-20T18:00:00.000Z",

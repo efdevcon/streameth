@@ -24,10 +24,11 @@ async function Import() {
     })
     const sheetNames = sheetsResponse.data.sheets.map((i: any) => i.properties.title)
         .splice(1, sheetsResponse.data.sheets.length)
-    console.log('PROCESSING SHEETS', sheetNames)
+    console.log('ALL SHEETS', sheetNames)
 
     for (let i = 0; i < sheetNames.length; i++) {
         const sheet = sheetNames[i]
+        console.log('PROCESSING SHEET', sheet)
         const response = await sheets.spreadsheets.values.get({
             spreadsheetId: sheetId,
             range: `${sheet}!A1:1000`,

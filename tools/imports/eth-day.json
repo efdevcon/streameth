@@ -4,21 +4,15 @@
     "name": "Launch of ETH day",
     "start": "2022-04-18T10:00:00.000Z",
     "end": "2022-04-18T10:10:00.000Z",
-    "track": "Day 1",
-    "type": "Lightning Talk",
-    "room": "Mainstage",
+    "track": "Main",
+    "type": "Talk",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "eleonore-blanc",
         "name": "Eléonore Blanc",
         "role": "Crypto Educator & Founder @CryptoCanal",
         "description": "The cryptocurrency industry is made of visionaries and ruthless money makers, the perfect mix for a monetary revolution, and Eléonore is all in. Thrilled to be part of an ongoing social and financial experiment, she's passionate about p2p cash, voluntarism and economic freedom.\nShe founded CryptoCanal in 2019, offering education, events and consultancy services (marketing and business development). She's worked with industry leaders such as BTC.com, Luno, OKEx, Bitcoin.com, Cyber Capital and Bitvavo. She  hosts the bi-monthly CryptoCanal meetup in Amsterdam and teaches an online Crypto 101 for all and an in-depth class for more advanced cryptocurrency investors. She’s the host of the Humans of Crypto Podcast."
-      },
-      {
-        "id": "skylar-weaver",
-        "name": "Skylar Weaver",
-        "role": "Leading @EFDevcon & @EFDevconnect  with the @Ethereum Foundation",
-        "description": "ETH is money - Leading @EFDevcon & @EFDevconnect  with the @Ethereum Foundation; Motorcyclist @AdvForAlopecia"
       }
     ]
   },
@@ -27,9 +21,9 @@
     "name": "Welcome to Devconnect!",
     "start": "2022-04-18T10:10:00.000Z",
     "end": "2022-04-18T10:20:00.000Z",
-    "track": "Day 1",
+    "track": "Main",
     "type": "Keynote",
-    "room": "Mainstage",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "aya-miyaguchi",
@@ -44,9 +38,9 @@
     "name": "Time for an Update on the Ethereum Roadmap",
     "start": "2022-04-18T10:30:00.000Z",
     "end": "2022-04-18T11:00:00.000Z",
-    "track": "Day 1",
+    "track": "Main",
     "type": "Keynote",
-    "room": "Mainstage",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "tim-beiko",
@@ -61,9 +55,9 @@
     "name": "Why community funded core developent is a Public Good",
     "start": "2022-04-18T11:00:00.000Z",
     "end": "2022-04-18T11:30:00.000Z",
-    "track": "Day 1",
-    "type": "Lightning Talk",
-    "room": "Mainstage",
+    "track": "Main",
+    "type": "Talk",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "trent-van-epps",
@@ -78,9 +72,9 @@
     "name": "First principles for DAO design",
     "start": "2022-04-18T12:00:00.000Z",
     "end": "2022-04-18T12:20:00.000Z",
-    "track": "Day 1",
-    "type": "Lightning Talk",
-    "room": "Mainstage",
+    "track": "Main",
+    "type": "Talk",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "andrej-berlin",
@@ -95,9 +89,9 @@
     "name": "Learn from the serial DAOists",
     "start": "2022-04-18T12:20:00.000Z",
     "end": "2022-04-18T13:00:00.000Z",
-    "track": "Day 1",
+    "track": "Main",
     "type": "Panel",
-    "room": "Mainstage",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "rolf-hoefer",
@@ -130,9 +124,9 @@
     "name": "Digging Into DeFi",
     "start": "2022-04-18T14:00:00.000Z",
     "end": "2022-04-18T14:20:00.000Z",
-    "track": "Day 1",
-    "type": "Lightning Talk",
-    "room": "Mainstage",
+    "track": "Main",
+    "type": "Talk",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "jeremy-musighi",
@@ -147,9 +141,9 @@
     "name": "DeFi surfing the highs and lows",
     "start": "2022-04-18T14:20:00.000Z",
     "end": "2022-04-18T15:00:00.000Z",
-    "track": "Day 1",
+    "track": "Main",
     "type": "Panel",
-    "room": "Mainstage",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "julien-bouteloup",
@@ -173,12 +167,28 @@
   },
   {
     "id": "9",
+    "name": "Layer 2, scaling update",
+    "start": "2022-04-18T15:00:00.000Z",
+    "end": "2022-04-18T15:25:00.000Z",
+    "track": "Main",
+    "type": "Talk",
+    "room": "Transformatorhuis",
+    "speakers": [
+      {
+        "id": "skylar-weaver",
+        "name": "Skylar Weaver",
+        "role": "Devcon, EF"
+      }
+    ]
+  },
+  {
+    "id": "10",
     "name": "Tools & Infrastructure",
     "start": "2022-04-18T15:30:00.000Z",
     "end": "2022-04-18T16:00:00.000Z",
-    "track": "Day 1",
+    "track": "Main",
     "type": "Panel",
-    "room": "Mainstage",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "simon-emanuel-schmid",
@@ -207,13 +217,13 @@
     ]
   },
   {
-    "id": "10",
+    "id": "11",
     "name": "Debate: NFTs",
     "start": "2022-04-18T16:00:00.000Z",
     "end": "2022-04-18T16:30:00.000Z",
-    "track": "Day 1",
+    "track": "Main",
     "type": "Debate",
-    "room": "Mainstage",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "justin-bons",
@@ -236,13 +246,13 @@
     ]
   },
   {
-    "id": "11",
+    "id": "12",
     "name": "Working in Web3",
     "start": "2022-04-18T16:30:00.000Z",
     "end": "2022-04-18T17:00:00.000Z",
-    "track": "Day 1",
+    "track": "Main",
     "type": "Panel",
-    "room": "Mainstage",
+    "room": "Transformatorhuis",
     "speakers": [
       {
         "id": "maria-magenes",
@@ -253,7 +263,142 @@
       {
         "id": "lenka-hudakova",
         "name": "Lenka Hudáková",
-        "role": "Project Lead (SES), Co-Founder (CW), Co-host (meetup)"
+        "role": "Project Lead (SES), Co-Founder (CW), Co-host (meetup)",
+        "description": ""
+      },
+      {
+        "id": "ryan-coordinator",
+        "name": "Ryan Coordinator",
+        "role": "Operations Lead Developer DAO",
+        "description": "Ryan is a DAO coordinator working to build a better world full of vibrant Public Goods."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "What is next for NFTs?",
+    "start": "2022-04-18T11:30:00.000Z",
+    "end": "2022-04-18T12:00:00.000Z",
+    "track": "Second",
+    "type": "Workshop",
+    "room": "Westerunie",
+    "speakers": [
+      {
+        "id": "mark-studholme",
+        "name": "Mark Studholme",
+        "role": "Metamundo"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "What's new in Etherscan?",
+    "start": "2022-04-18T12:00:00.000Z",
+    "end": "2022-04-18T12:30:00.000Z",
+    "track": "Second",
+    "type": "Workshop",
+    "room": "Westerunie",
+    "speakers": [
+      {
+        "id": "harith-kamarul",
+        "name": "Harith Kamarul",
+        "role": "Etherscan"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "An Introduction to Web3 data with Dune",
+    "start": "2022-04-18T12:30:00.000Z",
+    "end": "2022-04-18T13:00:00.000Z",
+    "track": "Second",
+    "type": "Workshop",
+    "room": "Westerunie",
+    "speakers": [
+      {
+        "id": "boxer",
+        "name": "Boxer",
+        "role": "Dune Analytics"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Gamefi is coming to a Ethereum L2 and it’s going to be ludicrous",
+    "start": "2022-04-18T13:00:00.000Z",
+    "end": "2022-04-18T13:30:00.000Z",
+    "track": "Second",
+    "type": "Workshop",
+    "room": "Westerunie",
+    "speakers": [
+      {
+        "id": "austin-griffith",
+        "name": "Austin Griffith",
+        "role": "Ethereum Foundation"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "How to create your dream job in crypto/Web3",
+    "start": "2022-04-18T14:00:00.000Z",
+    "end": "2022-04-18T14:30:00.000Z",
+    "track": "Second",
+    "type": "Workshop",
+    "room": "Westerunie",
+    "speakers": [
+      {
+        "id": "lenka-hudakova",
+        "name": "Lenka Hudáková",
+        "role": "SES MakerDAO"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Borrowing and Utilising DAI in Defi",
+    "start": "2022-04-18T14:30:00.000Z",
+    "end": "2022-04-18T15:00:00.000Z",
+    "track": "Second",
+    "type": "Workshop",
+    "room": "Westerunie",
+    "speakers": [
+      {
+        "id": "chris-bradbury",
+        "name": "Chris Bradbury",
+        "role": "CEO Oasis"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Querying and Indexing Smart Contract Data with The Graph",
+    "start": "2022-04-18T15:00:00.000Z",
+    "end": "2022-04-18T15:30:00.000Z",
+    "track": "Second",
+    "type": "Workshop",
+    "room": "Westerunie",
+    "speakers": [
+      {
+        "id": "simon-emanuel-schmid",
+        "name": "Simon Emanuel Schmid",
+        "role": "The Graph"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Oracle Networks and the Oracle Problem",
+    "start": "2022-04-18T15:30:00.000Z",
+    "end": "2022-04-18T16:00:00.000Z",
+    "track": "Second",
+    "type": "Workshop",
+    "room": "Westerunie",
+    "speakers": [
+      {
+        "id": "andrej-rakic",
+        "name": "Andrej Rakic",
+        "role": "Chainlink"
       }
     ]
   }
