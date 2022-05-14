@@ -15,7 +15,7 @@ interface Props {
 }
 
 const eventStreamIds = (event: Event) => {
-  return event.rooms.map(room => room.streams.map(stream => stream.id)).flat()
+  return event.rooms?.length > 0 ? event.rooms.map(room => room.streams.map(stream => stream.id)).flat() : []
 }
 
 export default function Home(props: Props) {

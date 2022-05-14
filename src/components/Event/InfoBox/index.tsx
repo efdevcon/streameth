@@ -8,8 +8,7 @@ interface EventInfoBoxProps {
 }
 
 const firstSessionStartTime = (sessions: Session[]) => {
-  const firstSession = sessions[0]
-
+  const firstSession = sessions && sessions.length > 0 ? sessions[0] : undefined
   if (firstSession) {
     return firstSession.start
   }
@@ -18,8 +17,7 @@ const firstSessionStartTime = (sessions: Session[]) => {
 }
 
 const lastSessionEndTime = (sessions: Session[]) => {
-  const lastSession = sessions[sessions.length - 1]
-
+  const lastSession = sessions && sessions.length > 0 ? sessions[sessions.length - 1] : undefined
   if (lastSession) {
     return lastSession.end
   }
