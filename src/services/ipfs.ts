@@ -5,7 +5,7 @@ import { Video } from 'types'
 
 export async function GetVideos(hash: string): Promise<Video[]> {
     const node = httpClient({
-        url: "https://ipfs2.ethdevops.io/api/v0/",
+        url: "https://ipfs.infura-ipfs.io/api/v0/",
     })
 
     const files: any[] = await all(node.ls(hash))
@@ -15,7 +15,7 @@ export async function GetVideos(hash: string): Promise<Video[]> {
         let video: Video = {
             id: i.cid.toString(),
             slug: slug,
-            url: `https://ipfs.io/ipfs/${i.cid.toString()}`,
+            url: `https://ipfs.infura-ipfs.io/ipfs/${i.cid.toString()}`,
         }
 
         if (metadataFile) {
