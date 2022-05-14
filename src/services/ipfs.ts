@@ -1,22 +1,10 @@
-import { create, IPFS } from 'ipfs-core'
 import all from 'it-all'
 import toBuffer from 'it-to-buffer'
 import { Video } from 'types'
-
-declare global {
-    var IPFS: IPFS;
-}
-
-async function init() {
-    if (!global.IPFS) {
-        global.IPFS = await create()
-    }
-
-    return global.IPFS
-}
+import { getIPFSClient } from 'utils/ipfs'
 
 export async function GetVideos(hash: string): Promise<Video[]> {
-    const node = await init()
+    const node = await getIPFSClient()
 
     const files: any[] = await all(node.ls(hash))
     const videos = Promise.all(files.filter((i: any) => i.name.endsWith('.mp4')).map(async (i: any) => {
