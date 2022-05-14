@@ -1,10 +1,12 @@
+import { create as httpClient } from 'ipfs-http-client'
 import all from 'it-all'
 import toBuffer from 'it-to-buffer'
 import { Video } from 'types'
-import { getIPFSClient } from 'utils/ipfs'
 
 export async function GetVideos(hash: string): Promise<Video[]> {
-    const node = await getIPFSClient()
+    const node = httpClient({
+        url: "https://ipfs2.ethdevops.io/api/v0/",
+    })
 
     const files: any[] = await all(node.ls(hash))
     const videos = Promise.all(files.filter((i: any) => i.name.endsWith('.mp4')).map(async (i: any) => {
