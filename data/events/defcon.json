@@ -15,6 +15,9 @@
         "directory": "QmXreYVp3Q986iEtcDhDhbrcStZGL7sU91x1YxSnJzNxgW"
       }    
     },
-    "schedule": {},
+    "schedule": {
+      "sessions": []
+    },
+    "rooms": [],
     "recordings": []
 }
