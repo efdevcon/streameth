@@ -3,7 +3,7 @@ import all from 'it-all'
 import toBuffer from 'it-to-buffer'
 import { Video } from 'types'
 
-const ipfsBaseUri = 'https://ipfs.io'
+const ipfsBaseUri = 'https://ipfs2.ethdevops.io'
 
 export async function GetVideos(hash: string): Promise<Video[]> {
     const node = httpClient({
