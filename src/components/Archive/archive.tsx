@@ -1,6 +1,7 @@
 import { Event, Video } from 'types'
 import EventInfoBox from 'components/Event/InfoBox'
 import css from './archive.module.scss'
+import Image from 'next/image'
 import { Tags } from './tags'
 import { Filter } from './filter'
 import { useState } from 'react'
@@ -13,6 +14,7 @@ interface Props {
 }
 
 export function Archive(props: Props) {
+    const [active, setActive] = useState('')
     const [filtered, setFiltered] = useState(props.videos)
     let className = `${css.container}`
     if (props.className) className += ` ${props.className}`
@@ -23,7 +25,7 @@ export function Archive(props: Props) {
     const days = [...new Set(props.videos.filter(i => !!i.session?.start).map(i => moment(i.session?.start).startOf('day').format('MMM DD')))] as string[]
     const tags = [...new Set(props.videos.map(i => i.session?.tags))].flat()
 
-    const showFilterWithOptions = 0
+    const showFilterWithOptions = 1
     if (rooms.length > showFilterWithOptions) filter.rooms = rooms
     if (tracks.length > showFilterWithOptions) filter.tracks = tracks
     if (days.length > showFilterWithOptions) filter.days = days
@@ -66,11 +68,23 @@ export function Archive(props: Props) {
                         if (i.session?.start && days.length > 1) tags.push(moment(i.session.start).format('MMM DD'))
                         if (i.session?.tags) tags.push(...i.session.tags)
 
-                        return <article key={`${index}_${i.id}`} className={css.card} id={i.slug}>
+                        const id = `${index}_${i.id}`
+                        return <article key={id} className={css.card} id={i.slug} onClick={() => setActive(id)}>
                             <Tags className={css.tags} tags={tags} />
-                            <video controls autoPlay={false} className={css.video}>
+                            {active === id && <video controls autoPlay={true} className={css.video}>
                                 <source src={i.url} />
-                            </video>
+                            </video>}
+                            {active !== id && <div className={css.thumbnail}>
+                                <Image
+                                    src={props.event.poster ?? '/posters/default.png'}
+                                    alt={props.event.name}
+                                    objectFit="cover"
+                                    layout="fill"
+                                />
+                                <div className={css.play}>
+                                    <i className="bi bi-play" />
+                                </div>
+                            </div>}
                             <div>
                                 <a href={`#${i.slug}`}>
                                     <h4>{i.session?.name ?? i.slug}</h4>

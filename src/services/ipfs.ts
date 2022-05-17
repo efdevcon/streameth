@@ -3,9 +3,11 @@ import all from 'it-all'
 import toBuffer from 'it-to-buffer'
 import { Video } from 'types'
 
+const ipfsBaseUri = 'https://ipfs.io'
+
 export async function GetVideos(hash: string): Promise<Video[]> {
     const node = httpClient({
-        url: "https://ipfs2.ethdevops.io/api/v0/",
+        url: `${ipfsBaseUri}/api/v0/`,
     })
 
     const files: any[] = await all(node.ls(hash))
@@ -15,7 +17,7 @@ export async function GetVideos(hash: string): Promise<Video[]> {
         let video: Video = {
             id: i.cid.toString(),
             slug: slug,
-            url: `https://ipfs2.ethdevops.io/ipfs/${i.cid.toString()}`,
+            url: `${ipfsBaseUri}/ipfs/${i.cid.toString()}`,
         }
 
         if (metadataFile) {
