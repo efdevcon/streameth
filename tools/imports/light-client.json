@@ -54,8 +54,8 @@
     "end": "2022-04-20T12:10:00.000Z",
     "speakers": [
       {
-        "id": "mihir-and-brayton-goodall-from-mycelium",
-        "name": "Mihir and Brayton Goodall from Mycelium"
+        "id": "mihir-faujdar",
+        "name": "Mihir Faujdar"
       }
     ]
   },
@@ -66,8 +66,12 @@
     "end": "2022-04-20T12:35:00.000Z",
     "speakers": [
       {
-        "id": "cayman-and-dapplion-from-chainsafe",
-        "name": "Cayman and Dapplion from Chainsafe"
+        "id": "cayman",
+        "name": "Cayman"
+      },
+      {
+        "id": "dapplion",
+        "name": "Dapplion"
       }
     ]
   },

@@ -1,23 +1,6 @@
 [
   {
     "id": "1",
-    "name": "Launch of ETH day",
-    "start": "2022-04-18T10:00:00.000Z",
-    "end": "2022-04-18T10:10:00.000Z",
-    "track": "Main",
-    "type": "Talk",
-    "room": "Transformatorhuis",
-    "speakers": [
-      {
-        "id": "eleonore-blanc",
-        "name": "Eléonore Blanc",
-        "role": "Crypto Educator & Founder @CryptoCanal",
-        "description": "The cryptocurrency industry is made of visionaries and ruthless money makers, the perfect mix for a monetary revolution, and Eléonore is all in. Thrilled to be part of an ongoing social and financial experiment, she's passionate about p2p cash, voluntarism and economic freedom.\nShe founded CryptoCanal in 2019, offering education, events and consultancy services (marketing and business development). She's worked with industry leaders such as BTC.com, Luno, OKEx, Bitcoin.com, Cyber Capital and Bitvavo. She  hosts the bi-monthly CryptoCanal meetup in Amsterdam and teaches an online Crypto 101 for all and an in-depth class for more advanced cryptocurrency investors. She’s the host of the Humans of Crypto Podcast."
-      }
-    ]
-  },
-  {
-    "id": "2",
     "name": "Welcome to Devconnect!",
     "start": "2022-04-18T10:10:00.000Z",
     "end": "2022-04-18T10:20:00.000Z",
@@ -34,7 +17,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "2",
     "name": "Time for an Update on the Ethereum Roadmap",
     "start": "2022-04-18T10:30:00.000Z",
     "end": "2022-04-18T11:00:00.000Z",
@@ -51,7 +34,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "3",
     "name": "Why community funded core developent is a Public Good",
     "start": "2022-04-18T11:00:00.000Z",
     "end": "2022-04-18T11:30:00.000Z",
@@ -68,7 +51,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "4",
     "name": "First principles for DAO design",
     "start": "2022-04-18T12:00:00.000Z",
     "end": "2022-04-18T12:20:00.000Z",
@@ -85,7 +68,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": "5",
     "name": "Learn from the serial DAOists",
     "start": "2022-04-18T12:20:00.000Z",
     "end": "2022-04-18T13:00:00.000Z",
@@ -120,7 +103,7 @@
     ]
   },
   {
-    "id": "7",
+    "id": "6",
     "name": "Digging Into DeFi",
     "start": "2022-04-18T14:00:00.000Z",
     "end": "2022-04-18T14:20:00.000Z",
@@ -137,7 +120,7 @@
     ]
   },
   {
-    "id": "8",
+    "id": "7",
     "name": "DeFi surfing the highs and lows",
     "start": "2022-04-18T14:20:00.000Z",
     "end": "2022-04-18T15:00:00.000Z",
@@ -166,7 +149,7 @@
     ]
   },
   {
-    "id": "9",
+    "id": "8",
     "name": "Layer 2, scaling update",
     "start": "2022-04-18T15:00:00.000Z",
     "end": "2022-04-18T15:25:00.000Z",
@@ -182,7 +165,7 @@
     ]
   },
   {
-    "id": "10",
+    "id": "9",
     "name": "Tools & Infrastructure",
     "start": "2022-04-18T15:30:00.000Z",
     "end": "2022-04-18T16:00:00.000Z",
@@ -217,7 +200,7 @@
     ]
   },
   {
-    "id": "11",
+    "id": "10",
     "name": "Debate: NFTs",
     "start": "2022-04-18T16:00:00.000Z",
     "end": "2022-04-18T16:30:00.000Z",
@@ -246,7 +229,7 @@
     ]
   },
   {
-    "id": "12",
+    "id": "11",
     "name": "Working in Web3",
     "start": "2022-04-18T16:30:00.000Z",
     "end": "2022-04-18T17:00:00.000Z",
@@ -264,7 +247,7 @@
         "id": "lenka-hudakova",
         "name": "Lenka Hudáková",
         "role": "Project Lead (SES), Co-Founder (CW), Co-host (meetup)",
-        "description": ""
+        "description": "Project Lead (SES), Co-Founder (CW), Co-host (meetup)"
       },
       {
         "id": "ryan-coordinator",
@@ -275,7 +258,7 @@
     ]
   },
   {
-    "id": "13",
+    "id": "12",
     "name": "What is next for NFTs?",
     "start": "2022-04-18T11:30:00.000Z",
     "end": "2022-04-18T12:00:00.000Z",
@@ -291,7 +274,7 @@
     ]
   },
   {
-    "id": "14",
+    "id": "13",
     "name": "What's new in Etherscan?",
     "start": "2022-04-18T12:00:00.000Z",
     "end": "2022-04-18T12:30:00.000Z",
@@ -307,7 +290,7 @@
     ]
   },
   {
-    "id": "15",
+    "id": "14",
     "name": "An Introduction to Web3 data with Dune",
     "start": "2022-04-18T12:30:00.000Z",
     "end": "2022-04-18T13:00:00.000Z",
@@ -323,7 +306,7 @@
     ]
   },
   {
-    "id": "16",
+    "id": "15",
     "name": "Gamefi is coming to a Ethereum L2 and it’s going to be ludicrous",
     "start": "2022-04-18T13:00:00.000Z",
     "end": "2022-04-18T13:30:00.000Z",
@@ -339,7 +322,7 @@
     ]
   },
   {
-    "id": "17",
+    "id": "16",
     "name": "How to create your dream job in crypto/Web3",
     "start": "2022-04-18T14:00:00.000Z",
     "end": "2022-04-18T14:30:00.000Z",
@@ -355,7 +338,7 @@
     ]
   },
   {
-    "id": "18",
+    "id": "17",
     "name": "Borrowing and Utilising DAI in Defi",
     "start": "2022-04-18T14:30:00.000Z",
     "end": "2022-04-18T15:00:00.000Z",
@@ -371,7 +354,7 @@
     ]
   },
   {
-    "id": "19",
+    "id": "18",
     "name": "Querying and Indexing Smart Contract Data with The Graph",
     "start": "2022-04-18T15:00:00.000Z",
     "end": "2022-04-18T15:30:00.000Z",
@@ -387,7 +370,7 @@
     ]
   },
   {
-    "id": "20",
+    "id": "19",
     "name": "Oracle Networks and the Oracle Problem",
     "start": "2022-04-18T15:30:00.000Z",
     "end": "2022-04-18T16:00:00.000Z",
