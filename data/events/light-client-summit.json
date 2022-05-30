@@ -8,6 +8,13 @@
     "stream": {
         "version": 1
     },
+    "archive": {
+        "version": 1,
+        "type": "ipfs",
+        "config": {
+            "directory": "QmRLC58r1MgA21xLdBiPenvRqXXHnsCNQSZz5uU8PzyLB3"
+        }
+    },
     "schedule": {
         "sessions": []
     },

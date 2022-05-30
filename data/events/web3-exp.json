@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "name": "Web3 EXP",
+    "description": "Are you new to Web3? Get to know the tools that you’ll need in this two-day developer bootcamp to feel comfortable deploying and interacting with smart contracts.",
+    "start": "2022-04-20",
+    "end": "2022-04-21",
+    "website": "https://amsterdam.chainshot.com/",
+    "stream": {
+        "version": 1
+    },
+    "archive": {
+        "version": 1,
+        "type": "ipfs",
+        "config": {
+            "directory": "QmasZ36Q7E5x6AzB142wGgAhGoph1Dmh2E4xrrXKgtFvA4"
+        }
+    },
+    "schedule": {
+        "sessions": []
+    },
+    "rooms": [],
+    "recordings": []
+}
