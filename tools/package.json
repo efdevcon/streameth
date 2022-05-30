@@ -1,7 +1,8 @@
 {
   "scripts": {
     "metadata:generate": "ts-node metadata/generate",
-    "sheets:import": "ts-node sheets/import"
+    "sheets:import": "ts-node sheets/import",
+    "rename": "ls | xargs -i mv {} 'L2AMS_20-4_Ijzaal_{}'"
   },
   "dependencies": {
     "dotenv": "^16.0.0",

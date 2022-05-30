@@ -9,11 +9,16 @@ dotenv.config()
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '14rVPRq8epW77wh2ZPrn9zKUaLF4JJ8GlAlPXZ20Reug'
 const importDir = 'imports'
+const generateIndividualFiles = true
 
 Import()
 
 async function Import() {
     console.log('Importing event data from Google Sheets..')
+
+    if (!fs.existsSync(importDir)) {
+        fs.mkdirSync(importDir)
+    }
 
     const sheets = google.sheets({
         version: 'v4',
@@ -37,7 +42,7 @@ async function Import() {
         const data = response.data.values.splice(2, response.data.values.length)
         if (data.length === 0) continue
 
-        const sessions = data.map((i: any) => {
+        const sessions = data.map((i: any, index: number) => {
             let session: any = {
                 "id": (i[0] || defaultSlugify(i[1])).trim(),
                 "name": i[1].trim(),
@@ -98,12 +103,18 @@ async function Import() {
                 })
             }
 
+            if (generateIndividualFiles) {
+                const eventDir = `${importDir}/${defaultSlugify(sheet)}`
+                if (!fs.existsSync(eventDir)) {
+                    fs.mkdirSync(eventDir)
+                }
+
+                fs.writeFileSync(`${eventDir}/${index + 1}.json`, JSON.stringify(session, null, 2))
+            }
+
             return session
         })
 
-        if (!fs.existsSync('imports')) {
-            fs.mkdirSync(importDir)
-        }
         fs.writeFileSync(`${importDir}/${defaultSlugify(sheet)}.json`, JSON.stringify(sessions, null, 2))
     }
 }
