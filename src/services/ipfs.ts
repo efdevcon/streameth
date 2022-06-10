@@ -2,6 +2,7 @@ import { create as httpClient } from 'ipfs-http-client'
 import all from 'it-all'
 import toBuffer from 'it-to-buffer'
 import { Video } from 'types'
+import { tryUntilSucceed } from 'utils/retry'
 
 const ipfsBaseUri = 'https://ipfs.io'
 
@@ -10,7 +11,11 @@ export async function GetVideos(hash: string): Promise<Video[]> {
         url: `${ipfsBaseUri}/api/v0/`,
     })
 
-    const files: any[] = await all(node.ls(hash))
+    console.log('Fetching files for', hash)
+    const files: any[] | undefined = await tryUntilSucceed<any[]>(() => all(node.ls(hash)))
+    if (!files) return []
+    console.log('Files to process...', files.length)
+
     const videos = Promise.all(files.filter((i: any) => i.name.endsWith('.mp4')).map(async (i: any) => {
         const slug = i.name.replace('.mp4', '')
         const metadataFile = files.find((i: any) => i.name.endsWith(`${slug}.json`))
