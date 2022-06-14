@@ -12,7 +12,7 @@ export async function GetVideos(hash: string): Promise<Video[]> {
     })
 
     console.log('Fetching files for', hash)
-    const files: any[] | undefined = await tryUntilSucceed<any[]>(() => all(node.ls(hash)))
+    const files: any[] | undefined = await tryUntilSucceed<any[]>(() => all(node.ls(hash)), 10)
     if (!files) return []
     console.log('Files to process...', files.length)
 
