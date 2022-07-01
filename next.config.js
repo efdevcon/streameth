@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  staticPageGenerationTimeout: 180,
+  staticPageGenerationTimeout: 300,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
