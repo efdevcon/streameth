@@ -54,7 +54,7 @@ export default function EventInfoBox({ event }: EventInfoBoxProps) {
           </p>
         </div>
       </div>
-      {event.archive.type === 'ipfs' && (
+      {event.archive?.type === 'ipfs' && (
         <div className="event__ipfs-box">
           <strong><i className="bi bi-box" /></strong>
           <span>This (experimental) video archive is stored on <Link href={`https://ipfs.io/ipfs/${event.archive.config.directory}`}>IPFS</Link>.</span>
