@@ -57,6 +57,30 @@ $borderWidth: 2px;
     }
   }
 
+  &__custom-box {
+    @extend .event__info-box;
+    background: #f8d7da;
+    display: flex;
+    margin: 20px 0;
+    padding: 10px 20px;
+    grid-column-gap: 20px;
+
+    a { 
+      font-weight: bolder;
+    }
+
+  }
+
+  &__youtube-box {
+    @extend .event__custom-box;
+    background: #f8d7da;
+  }
+
+  &__ipfs-box {
+    @extend .event__custom-box;
+    background: #cff4fc;
+  }
+
   &__switcher {
     display: block;
     // padding-bottom: 30px;

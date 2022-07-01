@@ -10,11 +10,14 @@
         "version": 1
     },
     "archive": {
-      "version": 1,
-      "type": "ipfs",
-      "config": {
-        "directory": "QmfW2iarQdjq56KuG8udUcNEXevumc9HXpE7XqTRojgV1g"
-      }    
+        "version": 1,
+        "type": "ipfs",
+        "config": {
+            "directory": "QmfW2iarQdjq56KuG8udUcNEXevumc9HXpE7XqTRojgV1g"
+        }
+    },
+    "youtube": {
+        "url": "https://youtube.com/playlist?list=PLJijNYoOwnsv7u-_Qe3dSbac6iWRBR4IK"
     },
     "schedule": {
         "version": 1,

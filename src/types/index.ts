@@ -11,6 +11,7 @@ export interface Event {
   rooms: Room[]
   recordings: Recording[]
   archive: Archive
+  youtube?: YouTube
 }
 
 export interface Stream {
@@ -26,9 +27,13 @@ export interface Recording {
   recordingUrl: string
 }
 
-export interface Archive { 
+export interface Archive {
   type: "ipfs",
   config: IpfsArchive
+}
+
+export interface YouTube {
+  url: string
 }
 
 export interface IpfsArchive {

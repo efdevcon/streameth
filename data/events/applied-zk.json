@@ -9,11 +9,14 @@
         "version": 1
     },
     "archive": {
-      "version": 1,
-      "type": "ipfs",
-      "config": {
-        "directory": "QmWTYNTa5RAhri8UDRTQcKPdVH6bCYDgT3uCsMmP5gfsxE"
-      }    
+        "version": 1,
+        "type": "ipfs",
+        "config": {
+            "directory": "QmWTYNTa5RAhri8UDRTQcKPdVH6bCYDgT3uCsMmP5gfsxE"
+        }
+    },
+    "youtube": {
+        "url": "https://youtube.com/playlist?list=PLJijNYoOwnssZzIIxfochRxo5QRW5Uvfg"
     },
     "schedule": {
         "sessions": [
@@ -279,13 +282,13 @@
         }
     ],
     "recordings": [
-      {
-         "name": "Day #1",
-         "recordingUrl": "https://livepeercdn.com/recordings/30e19241-d847-4c6f-89bb-c646d5487b08/index.m3u8"
-     },
-     {
-      "name": "Day #2",
-      "recordingUrl": "https://livepeercdn.com/recordings/30e118d8-c15d-41e1-bec5-522d96568cee/index.m3u8"
-  }
+        {
+            "name": "Day #1",
+            "recordingUrl": "https://livepeercdn.com/recordings/30e19241-d847-4c6f-89bb-c646d5487b08/index.m3u8"
+        },
+        {
+            "name": "Day #2",
+            "recordingUrl": "https://livepeercdn.com/recordings/30e118d8-c15d-41e1-bec5-522d96568cee/index.m3u8"
+        }
     ]
 }

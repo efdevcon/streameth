@@ -11,6 +11,9 @@
     "schedule": {
         "sessions": []
     },
+    "youtube": {
+        "url": "https://youtube.com/playlist?list=PLvTrX8LNPbPlLNcFPuWiac3W19cUSaKFF"
+    },
     "rooms": [
         {
             "id": "Main",
