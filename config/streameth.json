@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "name": "Devcon Bogotá",
+  "description": "Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.",
+  "start": "2022-10-11",
+  "end": "2022-10-14",
+  "website": "https://devcon.org/",
+  "poster": "/images/default.png",
+  "stream": {
+    "version": 2,
+    "type": "livepeer",
+    "stages": [
+      {
+        "id": "main",
+        "name": "Mainstage",
+        "stream": [
+          {
+            "id": "63aa2e96-13fb-4134-ace1-9ae7ad836713"
+          },
+          {
+            "id": "b779927e-7d77-4a26-b731-85ec6ba9632c"
+          }
+        ]
+      },
+      {
+        "id": "magenta",
+        "name": "Magenta Room",
+        "stream": [
+          {
+            "id": "cc3dea7a-dd53-401e-9e8a-6144989c3951"
+          },
+          {
+            "id": "78972961-ecc9-4c49-94d5-0f36148fd6c5"
+          }
+        ]
+      }
+    ],
+    "config": {}
+  },
+  "schedule": {
+    "version": 2,
+    "type": "pretalx",
+    "config": {}
+  },
+  "archive": {
+    "version": 2,
+    "type": "livepeer",
+    "config": {}
+  }
+}

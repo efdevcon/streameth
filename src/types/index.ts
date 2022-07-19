@@ -1,50 +1,17 @@
+import { Stream, Schedule, Archive } from "./config"
+
 export interface Event {
   id: string
+  version: number
   name: string
   description: string
   start: string
   end: string
   website: string
-  poster: string
+  imageUrl: string
   stream: Stream
   schedule: Schedule
-  rooms: Room[]
-  recordings: Recording[]
   archive: Archive
-}
-
-export interface Stream {
-  id: string
-  name?: string
-  isActive: boolean
-  playbackUrl: string
-  // recordings: Recording[]
-}
-
-export interface Recording {
-  name?: string
-  recordingUrl: string
-}
-
-export interface Archive { 
-  type: "ipfs",
-  config: IpfsArchive
-}
-
-export interface IpfsArchive {
-  directory: string
-}
-
-export interface StreamProvider {
-  getStreams: (ids: string[]) => Promise<Stream[]>
-  getStream: (streamId: string) => Promise<Stream>
-  getRecordings: (streamId: string) => Promise<Recording[]>
-  mapStreamObj: (data: any) => Stream
-  mapRecordingObj: (data: any) => Recording
-}
-
-export interface Schedule {
-  sessions: Session[]
 }
 
 export interface Session {
@@ -55,7 +22,7 @@ export interface Session {
   track: string
   start: string
   end: string
-  room: string
+  stage: string
   speakers: Speaker[]
   tags: string[]
 }
@@ -67,9 +34,10 @@ export interface Speaker {
   sessions: Session[]
 }
 
-export interface Room {
-  id: string // e.g. Main
-  streams: Stream[]
+export interface Stage {
+  id: string
+  name: string
+  stream: string | string[]
 }
 
 export interface Video {

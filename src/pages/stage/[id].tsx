@@ -1,0 +1,44 @@
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetEvent } from 'services/event'
+import { Event } from 'types'
+import Page from 'layouts/event-page'
+import { TestEventComponent } from 'components/EventComponent'
+import { ParsedUrlQuery } from 'querystring'
+
+interface Props {
+  event?: Event
+  stageId?: string
+}
+
+interface Params extends ParsedUrlQuery {
+  id: string
+}
+
+export default function Stage(props: Props) {
+  return <Page event={props.event} stageId={props.stageId}>
+    <TestEventComponent />
+  </Page>
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const event = GetEvent()
+
+  return {
+    paths: event ? event?.stream.stages.map(i => ({ params: { id: i.id } })) : [],
+    fallback: true
+  }
+}
+
+export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
+  const stageId = context.params?.id
+  if (!stageId) return { props: null, notFound: true }
+
+  const event = GetEvent()
+
+  return {
+    props: event ? {
+      event,
+      stageId
+    } : {}
+  }
+}

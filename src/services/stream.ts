@@ -1,5 +1,5 @@
 import { get } from 'utils/requests'
-import { Stream } from 'types'
+import { Stream } from 'types/config'
 
 export const getStreams = async (ids?: string[]): Promise<Stream[]> => {
   return await get('/api/streams', { ids })

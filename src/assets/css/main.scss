@@ -1,15 +1,40 @@
-@use 'reset.scss';
-@use 'base.scss';
-@use 'vendor.scss';
-@use 'common/fonts';
-@use 'common/markdown';
-@use 'common/buttons';
-@use 'common/icons';
-@use 'common/layout';
-@use 'context.scss';
-@use 'components/widget';
-@use 'components/player';
-@use 'components/schedule';
-@use 'components/event';
-@use 'components/room';
-@use 'components/recording';
+@use 'src/assets/css/variables' as *;
+
+html {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0 auto;
+    font-family: $font-primary;
+    color: $color-primary;
+}
+
+body {
+    position: relative;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    min-height: 0;
+    min-width: 0;
+}
+
+.video-js {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+:root {
+    --text-color: inherit; // Since icons don't respond to the color attribute (they use fill), they can use this variable to retrieve the color context
+}

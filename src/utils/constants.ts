@@ -1,7 +1,6 @@
 export const TITLE = 'StreamETH'
-export const DESCRIPTION = 'An open-source live-streaming and playback solution for events.'
+export const DESCRIPTION = 'An open-source event & live-streaming solution.'
 export const SITE_URL = 'https://streameth.tv/'
 
 export const DEFAULT_REVALIDATE_PERIOD = 3600
 
-export const STREAM_PROVIDER = 'Livepeer'
