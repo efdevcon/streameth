@@ -39,12 +39,13 @@ export default function EventInfoBox({ event }: EventInfoBoxProps) {
       <div className="event__info-box__details">
         <h2>{event.name}</h2>
         <p>{event.description}</p>
-        <p style={{
-          fontSize: '12px',
-          marginTop: '16px',
-          textTransform: 'uppercase',
-          color: 'darkgray'
-        }}>
+        <p
+          style={{
+            fontSize: '12px',
+            marginTop: '16px',
+            textTransform: 'uppercase',
+            color: 'darkgray',
+          }}>
           <Link href={event.website} passHref>
             <a href={event.website} target="_blank" rel="noopener noreferrer">
               {GetDomainName(event.website)}

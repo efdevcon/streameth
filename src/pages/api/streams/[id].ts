@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { Stream, Recording } from 'types'
 import { initStreamProvider } from 'models/streamProvider'
+import { Stream } from 'types/config'
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { id } = req.query
     const provider = initStreamProvider()

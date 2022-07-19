@@ -40,7 +40,7 @@ export class Livepeer implements StreamProvider {
       const streams: LivepeerStream[] = await get(`${BASE_API}/stream`, {}, Livepeer.authHeader)
 
       return streams
-        .filter(stream => {
+        .filter((stream) => {
           if (!stream.playbackId) {
             return false
           }
@@ -51,7 +51,7 @@ export class Livepeer implements StreamProvider {
 
           return true
         })
-        .map(stream => this.mapStreamObj(stream))
+        .map((stream) => this.mapStreamObj(stream))
     } catch (e) {
       console.error('Error fetching Livepeer streams', e)
 
@@ -70,20 +70,14 @@ export class Livepeer implements StreamProvider {
   }
 
   async getRecordings(streamId: string): Promise<Recording[]> {
-    // recording.createdAt => start time / unix timestamp 
+    // recording.createdAt => start time / unix timestamp
     // recording.lastSeen => end time / unix timestamp
-    // duration = lastSeen - createdAt 
-    
-    try {
-      const sessions: LivepeerSession[] = await get(
-        `${BASE_API}/stream/${streamId}/sessions`,
-        { record: 1 },
-        Livepeer.authHeader
-      )
+    // duration = lastSeen - createdAt
 
-      return sessions
-        .filter(session => session.recordingStatus === 'ready')
-        .map(session => this.mapRecordingObj(session))
+    try {
+      const sessions: LivepeerSession[] = await get(`${BASE_API}/stream/${streamId}/sessions`, { record: 1 }, Livepeer.authHeader)
+
+      return sessions.filter((session) => session.recordingStatus === 'ready').map((session) => this.mapRecordingObj(session))
     } catch {
       return []
     }

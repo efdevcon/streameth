@@ -1,16 +1,16 @@
-@use 'src/assets/css/variables'as *;
+@use 'src/assets/css/variables' as *;
 
 .container {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: $size-6;
-    text-transform: uppercase;
-    gap: 4px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: $size-6;
+  text-transform: uppercase;
+  gap: 4px;
 
-    li {
-        background: #6D4FFA;
-        color: #FCFCFC;
-        padding: 0px 4px;
-    }
+  li {
+    background: #6d4ffa;
+    color: #fcfcfc;
+    padding: 0px 4px;
+  }
 }

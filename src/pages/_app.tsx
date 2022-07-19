@@ -11,12 +11,12 @@ type AppLayoutProps = AppProps & {
 }
 
 export default function App({ Component, pageProps }: AppLayoutProps) {
-  const Layout = Component.layout || (props => <DefaultLayout>{props.children}</DefaultLayout>)
+  const Layout = Component.layout || ((props) => <DefaultLayout>{props.children}</DefaultLayout>)
 
   useEffect(() => {
     init({
       url: 'https://matomo.ethereum.org/',
-      siteId: '34'
+      siteId: '34',
     })
   }, [])
 

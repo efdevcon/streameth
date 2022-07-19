@@ -1,9 +1,9 @@
 {
   "extends": "next/core-web-vitals",
-  "import/no-anonymous-default-export": [
-    "error",
-    {
-      "allowArrowFunction": true
-    }
-  ]
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": 2 // Means error
+  }
 }

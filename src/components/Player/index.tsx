@@ -15,7 +15,7 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
 
   const playerRef = useRef(null)
   const videoJsOptions = {
-   techOrder:['html5','youtube'],
+    techOrder: ['html5', 'youtube'],
     poster: poster || '',
     autoplay: true,
     controls: true,
@@ -24,7 +24,7 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
     sources: [
       {
         src: src,
-        type: src.includes('youtube') ?'video/youtube' : 'application/x-mpegURL',
+        type: src.includes('youtube') ? 'video/youtube' : 'application/x-mpegURL',
       },
     ],
   }

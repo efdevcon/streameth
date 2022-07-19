@@ -1,4 +1,4 @@
-import { Stream, Schedule, Archive } from "./config"
+import { Stream, Schedule, Archive } from './config'
 
 export interface Event {
   id: string

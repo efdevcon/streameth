@@ -15,17 +15,19 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function Stage(props: Props) {
-  return <Page event={props.event} stageId={props.stageId}>
-    <TestEventComponent />
-  </Page>
+  return (
+    <Page event={props.event} stageId={props.stageId}>
+      <TestEventComponent />
+    </Page>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const event = GetEvent()
 
   return {
-    paths: event ? event?.stream.stages.map(i => ({ params: { id: i.id } })) : [],
-    fallback: true
+    paths: event ? event?.stream.stages.map((i) => ({ params: { id: i.id } })) : [],
+    fallback: true,
   }
 }
 
@@ -36,9 +38,11 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   const event = GetEvent()
 
   return {
-    props: event ? {
-      event,
-      stageId
-    } : {}
+    props: event
+      ? {
+          event,
+          stageId,
+        }
+      : {},
   }
 }

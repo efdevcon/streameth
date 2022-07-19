@@ -1,8 +1,9 @@
-
 export function GetDomainName(url: string): string {
-    return url ? url
+  return url
+    ? url
         .replace('http://', '')
         .replace('https://', '')
         .replace('www.', '')
-        .split(/[\/?#]/)[0] : ''
+        .split(/[\/?#]/)[0]
+    : ''
 }

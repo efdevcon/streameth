@@ -10,13 +10,7 @@ interface RecordingSnackListProps {
   onLiveClick: () => void
 }
 
-export default function RecordingSnackList({
-  isActive,
-  recordings,
-  onRecordingClick,
-  currentRecordingIndex,
-  onLiveClick
-}: RecordingSnackListProps) {
+export default function RecordingSnackList({ isActive, recordings, onRecordingClick, currentRecordingIndex, onLiveClick }: RecordingSnackListProps) {
   if (recordings.length === 0) {
     return null
   }
@@ -35,7 +29,11 @@ export default function RecordingSnackList({
             />
           )
         })}
-        {isActive && <a href='#' onClick={() => onLiveClick()}>Watch live &raquo;</a>}
+        {isActive && (
+          <a href="#" onClick={() => onLiveClick()}>
+            Watch live &raquo;
+          </a>
+        )}
       </div>
     </div>
   )

@@ -16,7 +16,7 @@ export default function Schedule({ sessions }: ScheduleProps) {
       <ul className="schedule__sessions">
         {sessions
           .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime())
-          .map(session => {
+          .map((session) => {
             return (
               <li key={`schedule_sessions_${session.id}`}>
                 <ScheduleSession session={session} />

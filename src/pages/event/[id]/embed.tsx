@@ -16,10 +16,12 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function EmbedEventPage(props: Props) {
-  return <>
-    <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
-    <Widget allEvents={props.events} event={props.event} />
-  </>
+  return (
+    <>
+      <SEO title={props.event.name} description={props.event.description} imageUrl={props.event.poster} />
+      <Widget allEvents={props.events} event={props.event} />
+    </>
+  )
 }
 
 EmbedEventPage.layout = EmbedLayout
@@ -28,16 +30,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const events = GetEventNames()
 
   return {
-    paths: events.map(i => {
+    paths: events.map((i) => {
       return { params: { id: i } }
     }),
     fallback: false,
   }
 }
 
-export const getStaticProps: GetStaticProps<Props, Params> = async context => {
+export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
   const events = GetEvents()
-  const event = events.find(i => i.id === context.params?.id)
+  const event = events.find((i) => i.id === context.params?.id)
 
   if (!event) {
     return {

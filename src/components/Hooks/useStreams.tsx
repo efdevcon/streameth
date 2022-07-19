@@ -57,7 +57,7 @@ const useStreams = (event: Event) => {
   // If livestream is over, disable polling
   // If any streams currently active, disable polling
   useEffect(() => {
-    const activeStreamIndex = streams.findIndex(stream => stream.isActive)
+    const activeStreamIndex = streams.findIndex((stream) => stream.isActive)
 
     if (isEventOver()) {
       setIsPolling(false)
@@ -74,7 +74,7 @@ const useStreams = (event: Event) => {
     setStreamsLoading(true)
 
     try {
-      const streams = await getStreams(currentRoom.streams.map(stream => stream.id))
+      const streams = await getStreams(currentRoom.streams.map((stream) => stream.id))
       setStreams(streams)
     } catch (e) {
       console.error(e)
@@ -100,7 +100,7 @@ const useStreams = (event: Event) => {
   }
 
   const changeRoom = (roomId: string) => {
-    const room = event.rooms.find(room => room.id === roomId)
+    const room = event.rooms.find((room) => room.id === roomId)
 
     if (room) {
       setCurrentRoom(room)
@@ -110,11 +110,9 @@ const useStreams = (event: Event) => {
   useEffect(() => {
     if (currentRecordingIndex !== null) {
       setMediaUrl(event.recordings[currentRecordingIndex].recordingUrl)
-    }
-    else if (currentStream && currentStream.isActive) {
+    } else if (currentStream && currentStream.isActive) {
       setMediaUrl(currentStream.playbackUrl)
-    }
-    else {
+    } else {
       setMediaUrl(null)
     }
   }, [currentRecordingIndex, currentStream])

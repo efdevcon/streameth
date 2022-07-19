@@ -9,17 +9,21 @@ interface Props {
 }
 
 export default function Home(props: Props) {
-  return <Page event={props.event}>
-    <TestEventComponent />
-  </Page>
+  return (
+    <Page event={props.event}>
+      <TestEventComponent />
+    </Page>
+  )
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const event = GetEvent()
 
   return {
-    props: event ? {
-      event
-    } : {}
+    props: event
+      ? {
+          event,
+        }
+      : {},
   }
 }
