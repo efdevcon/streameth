@@ -1,4 +1,4 @@
-import 'assets/css/main.scss'
+import 'assets/globals.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { LayoutPageType, DefaultLayout } from 'layouts'
 import { SEO } from 'components/seo'

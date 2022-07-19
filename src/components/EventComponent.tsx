@@ -14,7 +14,7 @@ export function TestEventComponent() {
       <br />
 
       <section>
-        <h2>{event.name}</h2>
+        <h2 className="text-3xl font-bold underline">{event.name}</h2>
         <p>
           {moment(event.start).format('MMM DD')} - {moment(event.end).format('MMM DD')}
         </p>

@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { DESCRIPTION, TITLE } from 'utils/constants'
 
 export default class AppDocument extends Document {
   render() {

@@ -22,8 +22,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: event
       ? {
-          event,
-        }
+        event,
+      }
       : {},
   }
 }
