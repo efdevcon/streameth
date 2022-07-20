@@ -40,7 +40,10 @@
   "schedule": {
     "version": 2,
     "type": "pretalx",
-    "config": {}
+    "config": {
+      "path": "./config/schedule.json",
+      "apiBaseUri": "https://pretalx.com/api/events/democon"
+    }
   },
   "archive": {
     "version": 2,

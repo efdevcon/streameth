@@ -23,7 +23,7 @@ export default function Stage(props: Props) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const event = GetEvent()
+  const event = await GetEvent()
 
   return {
     paths: event ? event?.stream.stages.map((i) => ({ params: { id: i.id } })) : [],
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   const stageId = context.params?.id
   if (!stageId) return { props: null, notFound: true }
 
-  const event = GetEvent()
+  const event = await GetEvent()
 
   return {
     props: event
