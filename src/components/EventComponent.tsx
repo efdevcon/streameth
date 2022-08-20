@@ -1,8 +1,8 @@
 import { useEvent } from 'hooks/useEvent'
 import { useStage } from 'hooks/useStage'
 import moment from 'moment'
-import Link from 'next/link'
 import Container from 'components/Container'
+import EventHeader from './Event/Header'
 import styles from './EventComponent.module.scss'
 
 export function TestEventComponent() {
@@ -26,7 +26,7 @@ export function TestEventComponent() {
       <Container>
         <div className={styles.widget}>
           <div className={styles.header}>
-            <h2 className="text-3xl font-bold underline">{event.name}</h2>
+            <EventHeader eventName={event.name} showLive={true} />
           </div>
           <div className={styles.player}>Player</div>
           <div className={styles.sidebar}>
