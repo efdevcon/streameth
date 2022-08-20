@@ -5,17 +5,18 @@ import Image from 'next/image'
 import css from './Navbar.module.scss'
 import img from 'assets/images/logo.png'
 import Container from 'components/Container'
+import { useRouter } from 'next/router'
 
-const rooms = [
-  { name: 'Main', href: '#', current: true },
-  { name: 'Side', href: '#', current: false },
-]
+const rooms = [{ name: 'Events', href: '/events' }]
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+  const router = useRouter()
+  const path = router.asPath
+
   return (
     <Disclosure as="nav" className={css.navbar}>
       {({ open }) => (
@@ -46,8 +47,8 @@ export default function Navbar() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className={classNames(item.current ? css.active : '', css.navbar__nav__item)}
-                        aria-current={item.current ? 'page' : undefined}>
+                        className={classNames(item.href === path ? css.active : '', css.navbar__nav__item)}
+                        aria-current={item.href === path ? 'page' : undefined}>
                         {item.name}
                       </a>
                     ))}
@@ -64,8 +65,8 @@ export default function Navbar() {
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className={classNames(item.current ? css.active : '', css.navbar__menu__item)}
-                  aria-current={item.current ? 'page' : undefined}>
+                  className={classNames(item.href === path ? css.active : '', css.navbar__menu__item)}
+                  aria-current={item.href === path ? 'page' : undefined}>
                   {item.name}
                 </Disclosure.Button>
               ))}
