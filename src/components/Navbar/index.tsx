@@ -58,14 +58,14 @@ export default function Navbar() {
             </div>
           </Container>
 
-          <Disclosure.Panel className={css.navbar__menu}>
-            <div className={css.navbar__menu__items}>
+          <Disclosure.Panel className={css.navbar__mobileMenu}>
+            <div className={css.navbar__mobileMenu__items}>
               {rooms.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className={classNames(item.href === path ? css.active : '', css.navbar__menu__item)}
+                  className={classNames(item.href === path ? css.active : '', css.navbar__mobileMenu__item)}
                   aria-current={item.href === path ? 'page' : undefined}>
                   {item.name}
                 </Disclosure.Button>

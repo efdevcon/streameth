@@ -37,18 +37,18 @@
     @apply flex-shrink-0 flex items-center;
   }
 
-  &__menu {
-    @apply sm:hidden;
+  &__mobileMenu {
+    @apply md:hidden;
 
     &__items {
       @apply px-2 pt-2 pb-3 space-y-1;
     }
 
     &__item {
-      @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white;
+      @apply block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-200;
 
       &.active {
-        @apply bg-gray-900 text-white;
+        @apply bg-gray-200 text-gray-800;
       }
     }
   }
