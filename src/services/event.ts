@@ -10,8 +10,8 @@ export async function GetEvent(): Promise<Event | undefined> {
     let event = JSON.parse(config)
 
     // get core modules
-    // - streams 
-    
+    // - streams
+
     // - schedule
     const sessions = await GetSchedule(event.schedule.type, event.schedule.config)
     event.schedule.sessions = sessions

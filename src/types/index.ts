@@ -1,6 +1,6 @@
 import { Stream, Schedule, Archive } from './config'
 
-// TODO: Might be good to keep track of event state at a higher level 
+// TODO: Might be good to keep track of event state at a higher level
 // TODO: Same for stage state. E.g. which rooms/stages have ended and should go to archive functions
 // e.g.
 export type EventState = 'upcoming' | 'live' | 'started' | 'ended'
@@ -25,8 +25,8 @@ export interface Session {
   abstract: string
   description: string
   track: string
-  start: number
-  end: number
+  start: string
+  end: string
   stage: string
   speakers: Speaker[]
 }

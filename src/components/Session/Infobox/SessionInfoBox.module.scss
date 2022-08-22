@@ -1,0 +1,19 @@
+.box {
+    @apply bg-gray-200 px-3;
+
+    &__header {
+        @apply border-b-2 border-gray-400 py-2 flex justify-between;
+    }
+
+    &__body {
+        @apply py-2 flex justify-between;
+    }
+
+    &__date {
+        @apply text-gray-500;
+    }
+
+    &__description {
+        @apply max-w-lg;
+    }
+}

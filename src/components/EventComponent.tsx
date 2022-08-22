@@ -1,13 +1,18 @@
 import { useEvent } from 'hooks/useEvent'
 import { useStage } from 'hooks/useStage'
 import moment from 'moment'
+import type { Session } from 'types'
 import Container from 'components/Container'
 import EventHeader from './Event/Header'
+import SessionInfoBox from './Session/Infobox'
 import styles from './EventComponent.module.scss'
 
 export function TestEventComponent() {
   const event = useEvent()
   const stage = useStage()
+
+  // TODO: get active session
+  const session = event.schedule.sessions[0]
 
   return (
     <div>
@@ -26,14 +31,14 @@ export function TestEventComponent() {
       <Container>
         <div className={styles.widget}>
           <div className={styles.header}>
-            <EventHeader eventName={event.name} showLive={true} />
+            <EventHeader title={session.name} showLive={true} />
           </div>
           <div className={styles.player}>Player</div>
           <div className={styles.sidebar}>
             <h3 className="text-2xl font-bold">Schedule</h3>
             <ul>
               {event.schedule.sessions
-                .sort((a, b) => a.start - b.start)
+                .sort((a: any, b: any) => a.start - b.start)
                 .map((i) => {
                   return (
                     <li key={i.id}>
@@ -44,9 +49,7 @@ export function TestEventComponent() {
             </ul>
           </div>
           <div className={styles.eventInfo}>
-            <p>
-              {moment(event.start).format('MMM DD')} - {moment(event.end).format('MMM DD')}
-            </p>
+            <SessionInfoBox session={session} />
           </div>
         </div>
       </Container>
