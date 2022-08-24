@@ -8,7 +8,7 @@ import Schedule from 'components/Schedule'
 import WidgetHeader from './Header'
 import RoomSwitcher from 'components/Room/Switcher'
 import RecordingSnackList from 'components/Recording/SnackList'
-import useStreams from 'components/Hooks/useStreams'
+import useStreams from 'hooks/useStreams'
 
 interface WidgetProps {
   event: Event

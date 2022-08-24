@@ -1,46 +1,16 @@
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 import VideoJS from './VideoJS'
-import { Room, Stream, Event } from 'types'
+import { PlayerProps } from './types'
 
-interface PlayerProps {
-  src: string | null
-  poster: string
-  eventName: Event['name']
-  setStatus?: (status: string) => void
-  onStreamError: () => void
-}
-
-const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
-  if (!src) return <img width={'100%'} src={poster ?? '/posters/default.png'} alt="poster" />
-
-  const playerRef = useRef(null)
-  const videoJsOptions = {
-    techOrder: ['html5', 'youtube'],
-    poster: poster || '',
-    autoplay: true,
-    controls: true,
-    responsive: true,
-    fluid: true,
-    sources: [
-      {
-        src: src,
-        type: src.includes('youtube') ? 'video/youtube' : 'application/x-mpegURL',
-      },
-    ],
-  }
+const Player = ({ ...props }: PlayerProps) => {
+  if (!props.source) return null
+  if (props.poster === undefined) props.poster = ''
+  if (props.playlist === undefined) props.playlist = null
+  // override src url for spain
+  const source = props.source
+  source.src = source.src.replace('cdn.livepeer.com', 'livepeercdn.com')
 
   const handlePlayerReady = (player: any) => {
-    playerRef.current = player
-
-    player.reloadSourceOnError({
-      // getSource allows you to override the source object used when an error occurs
-      getSource: function (reload: any) {
-        console.log('Reloading because of an error')
-        onStreamError() // this should automatically trigger player reload
-      },
-      errorInterval: 1,
-    })
-
     player.on('error', (e: any) => {
       console.log('error', e)
     })
@@ -54,7 +24,8 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
     })
   }
 
-  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} eventName={eventName} />
+  console.log(props.source)
+  return <VideoJS source={props.source} poster={props.poster} onReady={handlePlayerReady} playlist={props.playlist} />
 }
 
 export default Player
