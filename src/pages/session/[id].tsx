@@ -31,7 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const event = await GetEvent()
 
   return {
-    paths: event ? event?.stream.stages.map((i) => ({ params: { id: i.id } })) : [],
+    paths: event ? event.schedule.sessions.map((i) => ({ params: { id: i.id } })) : [],
     fallback: true,
   }
 }
