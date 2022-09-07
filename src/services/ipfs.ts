@@ -36,7 +36,7 @@ export async function GetVideos(hash: string): Promise<Video[]> {
           // ADDING DIFFERENT DATA FOR TESTING PURPOSES - CAN DELETE LATER
           if (hash === 'QmTmeSDcFz1rhMvS9zHfpnFc1WL7boTtMVJ4iHcUT7n1jo') {
             if (video.session && slug === '02') video.session.track = 'Security'
-            if (video.session && slug === '03') video.session.room = 'Room'
+            if (video.session && slug === '03') video.session.stage = 'Room'
           }
         }
 

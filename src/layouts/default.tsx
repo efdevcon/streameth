@@ -7,8 +7,8 @@ type Props = {
 
 export default function DefaultLayout(props: Props) {
   return (
-    <div className={'css.container'}>
-      <div className={'css.inner'}>
+    <div>
+      <div>
         <Navbar />
         <main>{props.children}</main>
       </div>

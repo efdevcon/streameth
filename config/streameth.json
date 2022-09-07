@@ -11,8 +11,8 @@
     "type": "livepeer",
     "stages": [
       {
-        "id": "main",
-        "name": "Mainstage",
+        "id": "khaki",
+        "name": "Khaki Room",
         "stream": [
           {
             "id": "63aa2e96-13fb-4134-ace1-9ae7ad836713"

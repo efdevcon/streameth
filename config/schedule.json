@@ -6,7 +6,7 @@
         "end": "2022-04-18T10:10:00.000Z",
         "track": "Day 1",
         "type": "Lightning Talk",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "eleonore-blanc",
@@ -22,7 +22,7 @@
         "end": "2022-04-18T10:20:00.000Z",
         "track": "Day 1",
         "type": "Keynote",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "aya-miyaguchi",
@@ -38,7 +38,7 @@
         "end": "2022-04-18T11:00:00.000Z",
         "track": "Day 1",
         "type": "Keynote",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "tim-beiko",
@@ -54,7 +54,7 @@
         "end": "2022-04-18T11:30:00.000Z",
         "track": "Day 1",
         "type": "Lightning Talk",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "trent-van-epps",
@@ -70,7 +70,7 @@
         "end": "2022-04-18T12:20:00.000Z",
         "track": "Day 1",
         "type": "Lightning Talk",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "andrej-berlin",
@@ -86,7 +86,7 @@
         "end": "2022-04-18T13:00:00.000Z",
         "track": "Day 1",
         "type": "Panel",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "rolf-hoefer",
@@ -117,7 +117,7 @@
         "end": "2022-04-18T14:20:00.000Z",
         "track": "Day 1",
         "type": "Lightning Talk",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "jeremy-musighi",
@@ -133,7 +133,7 @@
         "end": "2022-04-18T15:00:00.000Z",
         "track": "Day 1",
         "type": "Panel",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "julien-bouteloup",
@@ -159,7 +159,7 @@
         "end": "2022-04-18T16:00:00.000Z",
         "track": "Day 1",
         "type": "Panel",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "simon-emanuel-schmid",
@@ -190,7 +190,7 @@
         "end": "2022-04-18T16:30:00.000Z",
         "track": "Day 1",
         "type": "Debate",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "justin-bons",
@@ -216,7 +216,7 @@
         "end": "2022-04-18T17:00:00.000Z",
         "track": "Day 1",
         "type": "Panel",
-        "room": "Mainstage",
+        "stage": "Mainstage",
         "speakers": [
             {
                 "id": "maria-magenes",

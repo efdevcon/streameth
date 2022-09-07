@@ -7,7 +7,7 @@ import img from 'assets/images/logo.png'
 import Container from 'components/Container'
 import { useRouter } from 'next/router'
 
-const rooms = [{ name: 'Events', href: '/events' }]
+const pages = [{ name: 'Archive', href: '/archive' }]
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -43,7 +43,7 @@ export default function Navbar() {
                 </div>
                 <div className={css.navbar__nav__items}>
                   <div className="flex space-x-4">
-                    {rooms.map((item) => (
+                    {pages.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
@@ -60,7 +60,7 @@ export default function Navbar() {
 
           <Disclosure.Panel className={css.navbar__mobileMenu}>
             <div className={css.navbar__mobileMenu__items}>
-              {rooms.map((item) => (
+              {pages.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"

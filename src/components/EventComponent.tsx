@@ -1,33 +1,31 @@
 import { useEvent } from 'hooks/useEvent'
 import { useStage } from 'hooks/useStage'
 import moment from 'moment'
-import type { Session } from 'types'
 import Container from 'components/Container'
 import EventHeader from './Event/Header'
 import SessionInfoBox from './Session/Infobox'
 import styles from './EventComponent.module.scss'
+import { StageSelector } from './StageSelector'
+import Link from 'next/link'
 
 export function EventComponent() {
   const event = useEvent()
-  const stage = useStage()
+  const currentStage = useStage()
+  const eventDays = [...new Set(event.schedule.sessions
+    .map(i => moment(i.start).startOf('day').valueOf()))]
+    .sort()
+  const upcomingSessions = event.schedule.sessions
+    .filter(i => i.stage === currentStage.name)
+    // filter on event days
+    // .filter(i => moment(i.start).startOf('day').valueOf()
+    //   === eventDays.find(i => i === moment().startOf('day').valueOf()) ?? eventDays[0])
+    .sort((a: any, b: any) => a.start - b.start)
 
   // TODO: get active session
-  const session = event.schedule.sessions[0]
+  const session = upcomingSessions[0]
 
   return (
     <div>
-      {/* <section>
-        <h3 className="text-2xl font-bold">Stages</h3>
-        <ul>
-          {event.stream.stages.map((i) => {
-            return (
-              <li key={i.id} className="underline">
-                <Link href={`/stage/${i.id}`}>{i.id}</Link>
-              </li>
-            )
-          })}
-        </ul>
-      </section> */}
       <Container>
         <div className={styles.widget}>
           <div className={styles.header}>
@@ -35,17 +33,19 @@ export function EventComponent() {
           </div>
           <div className={styles.player}>Player</div>
           <div className={styles.sidebar}>
+            <StageSelector />
             <h3 className="text-2xl font-bold">Schedule</h3>
             <ul>
-              {event.schedule.sessions
-                .sort((a: any, b: any) => a.start - b.start)
-                .map((i) => {
-                  return (
-                    <li key={i.id}>
-                      {moment(i.start).format('DD MMM - HH:mm')} {i.name}
-                    </li>
-                  )
-                })}
+              {upcomingSessions.map((i) => {
+                return (
+                  <li key={i.id} className='mb-3'>
+                    <h4>{i.name}</h4>
+                    <p>
+                      {moment(i.start).format('DD MMM / HH:mm')}-{moment(i.end).format('HH:mm')}
+                      <span className='float-right'><Link href={`/session/${i.id}`}>details &raquo;</Link></span></p>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           <div className={styles.eventInfo}>
