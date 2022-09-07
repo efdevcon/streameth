@@ -7,7 +7,7 @@ import EventHeader from './Event/Header'
 import SessionInfoBox from './Session/Infobox'
 import styles from './EventComponent.module.scss'
 
-export function TestEventComponent() {
+export function EventComponent() {
   const event = useEvent()
   const stage = useStage()
 

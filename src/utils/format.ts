@@ -1,3 +1,5 @@
+import slugify from 'slugify'
+
 export function GetDomainName(url: string): string {
   return url
     ? url
@@ -6,4 +8,8 @@ export function GetDomainName(url: string): string {
         .replace('www.', '')
         .split(/[\/?#]/)[0]
     : ''
+}
+
+export function GetSlug(text: string): string {
+    return slugify(text, { lower: true, strict: true, trim: true })
 }

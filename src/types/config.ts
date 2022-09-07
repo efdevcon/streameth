@@ -12,7 +12,7 @@ export interface Stream {
   config: Config
 }
 
-export type ScheduleTypes = 'fs' | 'pretalx'
+export type ScheduleTypes = 'fs' | 'pretalx' | 'gsheet'
 export interface Schedule {
   version: number
   type: ScheduleTypes

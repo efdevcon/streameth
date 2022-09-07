@@ -25,8 +25,8 @@ export interface Session {
   abstract: string
   description: string
   track: string
-  start: string
-  end: string
+  start: number
+  end: number
   stage: string
   speakers: Speaker[]
 }
@@ -35,6 +35,7 @@ export interface Speaker {
   id: string
   name: string
   description: string
+  avatarUrl?: string
   sessions: Session[]
 }
 

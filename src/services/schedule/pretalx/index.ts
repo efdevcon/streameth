@@ -22,7 +22,7 @@ export async function GetSchedule(config: Config): Promise<Session[]> {
                     id: x.code,
                     name: x.name,
                     description: x.biography,
-                    avatar: x.avatar
+                    avatarUrl: x.avatar
                 }
             }),
         }
