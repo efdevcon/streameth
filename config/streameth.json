@@ -49,5 +49,14 @@
     "version": 2,
     "type": "livepeer",
     "config": {}
-  }
+  },
+  "plugins": [
+    {
+      "name": "matomo",
+      "config": {
+        "url": "https://matomo.ethereum.org",
+        "siteId": 34
+      }
+    }
+  ]
 }
