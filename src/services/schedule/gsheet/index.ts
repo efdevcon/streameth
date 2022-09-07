@@ -28,7 +28,7 @@ export async function GetSchedule(config: Config): Promise<Session[]> {
 
     const sessions = data.map((i: any, index: number) => {
         let session: any = {
-            "id": index + 1,
+            "id": GetSlug(i[0].trim()),
             "name": i[0].trim(),
             "start": new Date(i[6].trim()).getTime(),
             "end": new Date(i[7].trim()).getTime(),

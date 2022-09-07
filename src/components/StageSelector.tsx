@@ -8,6 +8,8 @@ export function StageSelector() {
   const event = useEvent()
   const stage = useStage()
 
+  if (event.stream.stages.length <= 1) return <></>
+
   return (
     <Listbox value={stage} onChange={(stage) => router.push(`/stage/${stage.id}`)}>
       <Listbox.Button>{stage.name}</Listbox.Button>
