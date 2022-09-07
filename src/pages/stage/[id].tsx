@@ -28,7 +28,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: event ? event?.stream.stages.map((i) => ({ params: { id: i.id } })) : [],
-    fallback: 'blocking',
+    fallback: true,
   }
 }
 
@@ -39,12 +39,10 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   const event = await GetEvent()
 
   return {
-    props: event
-      ? {
-          event,
-          stageId,
-        }
-      : {},
+    props: {
+      event,
+      stageId,
+    },
     revalidate: DEFAULT_REVALIDATE_PERIOD,
   }
 }
