@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
         siteId: plugin.config['siteId'] as string,
       })
     }
-  }, [])
+  }, [pageProps.event])
 
   return (
     <Layout>

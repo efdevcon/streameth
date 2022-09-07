@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import VideoJS from './VideoJS'
-import { Room, Stream, Event } from 'types'
+import { Event } from 'types'
 
 interface PlayerProps {
   src: string | null
@@ -11,9 +11,9 @@ interface PlayerProps {
 }
 
 const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
+  const playerRef = useRef(null)
   if (!src) return <img width={'100%'} src={poster ?? '/posters/default.png'} alt="poster" />
 
-  const playerRef = useRef(null)
   const videoJsOptions = {
     techOrder: ['html5', 'youtube'],
     poster: poster || '',

@@ -3,6 +3,7 @@ import { GetEvent } from 'services/event'
 import { Event, Session } from 'types'
 import Page from 'layouts/event-page'
 import { ParsedUrlQuery } from 'querystring'
+import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
 interface Props {
   event: Event
@@ -19,7 +20,7 @@ export default function Stage(props: Props) {
     <Page event={props.event}>
       <h2>{props.session.name}</h2>
       <p>{props.session.description}</p>
-      <p>- {props.session.speakers.map(i => i.name).join(', ')}</p>
+      <p>- {props.session.speakers.map((i) => i.name).join(', ')}</p>
     </Page>
   )
 }
@@ -29,7 +30,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: event ? event?.stream.stages.map((i) => ({ params: { id: i.id } })) : [],
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
@@ -38,7 +39,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   if (!sessionId) return { props: null, notFound: true }
 
   const event = await GetEvent()
-  const session = event?.schedule.sessions.find(i => i.id === sessionId)
+  const session = event?.schedule.sessions.find((i) => i.id === sessionId)
   if (!event || !session) return { props: null, notFound: true }
 
   return {
@@ -46,6 +47,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
       event,
       session,
       sessionId,
-    }
+    },
+    revalidate: DEFAULT_REVALIDATE_PERIOD,
   }
 }

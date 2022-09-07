@@ -8,11 +8,7 @@ interface Props {
 }
 
 export default function Home(props: Props) {
-  return (
-    <Page event={props.event}>
-      Archive Page
-    </Page>
-  )
+  return <Page event={props.event}>Archive Page</Page>
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -21,8 +17,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: event
       ? {
-        event,
-      }
+          event,
+        }
       : {},
   }
 }

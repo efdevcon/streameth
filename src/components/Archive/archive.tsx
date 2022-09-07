@@ -1,5 +1,4 @@
 import { Event, Video } from 'types'
-import EventInfoBox from 'components/Event/InfoBox'
 import css from './archive.module.scss'
 import Image from 'next/image'
 import { Tags } from './tags'
@@ -20,21 +19,21 @@ export function Archive(props: Props) {
   if (props.className) className += ` ${props.className}`
 
   let filter: any = {}
-  const rooms = [...new Set(props.videos.filter((i) => !!i.session?.room).map((i) => i.session?.room))] as string[]
+  const stages = [...new Set(props.videos.filter((i) => !!i.session?.stage).map((i) => i.session?.stage))] as string[]
   const tracks = [...new Set(props.videos.filter((i) => !!i.session?.track).map((i) => i.session?.track))] as string[]
   const days = [
     ...new Set(props.videos.filter((i) => !!i.session?.start).map((i) => moment(i.session?.start).startOf('day').format('MMM DD'))),
   ] as string[]
-  const tags = [...new Set(props.videos.map((i) => i.session?.tags))].flat()
+  // const tags = [...new Set(props.videos.map((i) => i.session?.tags))].flat()
 
   const showFilterWithOptions = 1
-  if (rooms.length > showFilterWithOptions) filter.rooms = rooms
+  if (stages.length > showFilterWithOptions) filter.stages = stages
   if (tracks.length > showFilterWithOptions) filter.tracks = tracks
   if (days.length > showFilterWithOptions) filter.days = days
 
   async function onFilter(filter: any) {
     if (
-      (!filter.rooms || filter.rooms?.length === 0) &&
+      (!filter.stages || filter.stages?.length === 0) &&
       (!filter.tracks || filter.tracks?.length === 0) &&
       (!filter.days || filter.days.length === 0)
     ) {
@@ -43,7 +42,7 @@ export function Archive(props: Props) {
     }
 
     const filteredVideos = props.videos.filter((i) => {
-      if (filter.rooms && filter.rooms.includes(i.session?.room)) return true
+      if (filter.stages && filter.stages.includes(i.session?.stage)) return true
       if (filter.tracks && filter.tracks.includes(i.session?.track)) return true
       if (filter.days && filter.days.includes(moment(i.session?.start).startOf('day').format('MMM DD'))) return true
 
@@ -55,20 +54,18 @@ export function Archive(props: Props) {
 
   return (
     <div className={className}>
-      <EventInfoBox event={props.event} />
-
       {filtered.length === 0 && <div>No videos found</div>}
 
-      {(filter.rooms || filter.tracks || filter.days) && <Filter className={css.filter} filters={filter} onFilter={onFilter} />}
+      {(filter.stages || filter.tracks || filter.days) && <Filter className={css.filter} filters={filter} onFilter={onFilter} />}
 
       {filtered.length > 0 && (
         <section className={css.gallery}>
           {filtered.map((i, index) => {
             const tags = []
-            if (i.session?.room) tags.push(i.session.room)
+            if (i.session?.stage) tags.push(i.session.stage)
             if (i.session?.track) tags.push(i.session.track)
             if (i.session?.start && days.length > 1) tags.push(moment(i.session.start).format('MMM DD'))
-            if (i.session?.tags) tags.push(...i.session.tags)
+            // if (i.session?.tags) tags.push(...i.session.tags)
 
             const id = `${index}_${i.id}`
             return (
@@ -81,7 +78,7 @@ export function Archive(props: Props) {
                 )}
                 {active !== id && (
                   <div className={css.thumbnail}>
-                    <Image src={props.event.poster ?? '/posters/default.png'} alt={props.event.name} objectFit="cover" layout="fill" />
+                    {/* <Image src={props.event.poster ?? '/posters/default.png'} alt={props.event.name} objectFit="cover" layout="fill" /> */}
                     <div className={css.play}>
                       <i className="bi bi-play" />
                     </div>
