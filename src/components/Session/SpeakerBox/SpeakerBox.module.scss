@@ -1,0 +1,24 @@
+
+
+.box {
+  @apply flex flex-row  items-center rounded bg-[#F9F9F9] p-4 box-border;
+  box-shadow: 1px 1px 1px #F1F1F1 inset;
+
+  &__image {
+    @apply w-12 h-12 rounded-full object-cover overflow-clip mr-5;
+  }
+
+  &__title {
+    @apply text-[#4F4F4F] font-bold text-lg;
+    padding: 0.5rem 1rem;
+  }
+
+  &__name {
+    @apply font-normal text-xl; 
+  }
+}
+
+// hover
+.box:hover {
+  box-shadow: 1px 1px 1px #F1F1F1;
+}

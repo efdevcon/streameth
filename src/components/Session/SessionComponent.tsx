@@ -1,8 +1,9 @@
 import React from 'react'
 import { SessionContainer } from 'components/Container'
+import SpeakerBox from './SpeakerBox'
+import { Session } from 'types'
 import Image from 'next/image'
 import sessionHeader from 'assets/images/session-header.png'
-import { Session } from 'types'
 import styles from './SessionComponent.module.scss'
 
 interface Props {
@@ -13,12 +14,12 @@ export default function SessionComponent(props: Props) {
   console.log(props.session)
   return (
     <>
-      <div id="header iamge" className="w-full">
-        <Image src={sessionHeader} alt="sessionHeader" />
+      <div className={styles.header__image}>
+        <Image src={sessionHeader} alt="sessionHeader" layout='responsive' />
       </div>
       <SessionContainer>
-        <div className="flex flex-row">
-          <div className="flex flex-col w-full">
+        <div className={styles.grid}>
+          <div className={styles.grid__column__full}>
             <div className={styles.header}>
               <h2 className={styles.header__title}>{props.session.name}</h2>
             </div>
@@ -26,11 +27,13 @@ export default function SessionComponent(props: Props) {
               <p>{props.session.abstract}</p>
             </div>
           </div>
-          <div className="flex flex-col w-1/3">
+          <div className={styles.grid__column__third}>
+            <div className={styles.header}>
+              <h2 className={styles.header__speakerTitle}>Speakers:</h2>
+            </div>
+
             {props.session.speakers.map((speaker) => (
-              <>
-                <p>{speaker.name}</p>
-              </>
+              <SpeakerBox key={speaker.id} speaker={speaker} />
             ))}
           </div>
         </div>
