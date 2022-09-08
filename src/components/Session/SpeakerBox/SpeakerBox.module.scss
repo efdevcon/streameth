@@ -1,7 +1,7 @@
 
 
 .box {
-  @apply flex flex-row  items-center rounded bg-[#F9F9F9] p-4 box-border;
+  @apply flex flex-row  items-center rounded bg-[#F9F9F9] p-4 box-border cursor-pointer;
   box-shadow: 1px 1px 1px #F1F1F1 inset;
 
   &__image {
@@ -21,4 +21,33 @@
 // hover
 .box:hover {
   box-shadow: 1px 1px 1px #F1F1F1;
+}
+
+.modal {
+
+  @apply fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[rgba(0,0,0,0.5)] z-50;  
+
+  &__content {
+    @apply bg-white rounded-lg p-4 w-11/12 md:w-1/2 lg:w-1/4 relative;
+  }
+
+  &__close {
+    @apply absolute top-0 right-0 p-4 text-[#BEBEBE] cursor-pointer;
+  }
+
+  &__header {
+    @apply flex flex-col items-center justify-between mb-4;
+  }
+
+  &__header__text {
+    @apply text-[#4F4F4F] font-bold text-xl;
+  }
+
+  &__header_image {
+    @apply w-12 h-12 rounded-full object-cover overflow-clip;
+  }
+
+  &__body {
+    @apply flex flex-col items-center justify-between mb-4;
+  }
 }

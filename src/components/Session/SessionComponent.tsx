@@ -5,7 +5,7 @@ import { Session } from 'types'
 import Image from 'next/image'
 import sessionHeader from 'assets/images/session-header.png'
 import styles from './SessionComponent.module.scss'
-
+import SessionDetails from './SessionDetails'
 interface Props {
   session: Session
 }
@@ -26,6 +26,7 @@ export default function SessionComponent(props: Props) {
             <div className={styles.textBox}>
               <p>{props.session.abstract}</p>
             </div>
+          <SessionDetails start={props.session.start} location={"Berlin"} />
           </div>
           <div className={styles.grid__column__third}>
             <div className={styles.header}>
