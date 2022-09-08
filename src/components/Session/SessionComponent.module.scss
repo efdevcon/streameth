@@ -1,25 +1,21 @@
 .header {
-  @apply flex items-center justify-between lg:h-16 lg:mb-5;
+  @apply flex items-center justify-between lg:h-16 my-5 lg:mb-5;
 
   &__image {
     @apply max-h-[220px] w-full overflow-clip;
   }
 
   &__title {
-    font-size: 2.8rem;
-    font-weight: 400;
-    margin: 0;
+    @apply  font-bold text-xl lg:text-4xl;
   }
 
   &__speakerTitle {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin: 0;
+    @apply font-bold text-lg lg:text-2xl;
   }
 }
 
 .grid {
-  @apply flex lg:flex-row;
+  @apply flex flex-col lg:flex-row;
 
   &__column__full {
     @apply flex flex-col w-full px-5;

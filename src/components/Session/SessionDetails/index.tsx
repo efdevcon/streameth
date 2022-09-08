@@ -8,7 +8,7 @@ interface Props {
 }
 export default function SessionDetails(props: Props) {
   return (
-    <div className="flex flex-col lg:mt-5">
+    <div className="flex flex-col mt-5 italic">
       <div className="flex flex-row">
         {/* <Image src={Clock} width={20} height={20} /> */}
         {moment(props.start).format('MMM DD / HH:mm')}
