@@ -38,11 +38,14 @@ export interface Speaker {
   avatarUrl?: string
   sessions: Session[]
 }
+export interface streamItem {
+  id: string
+}
 
 export interface Stage {
   id: string
   name: string
-  stream: string | string[]
+  stream: streamItem[]
 }
 
 export interface Video {

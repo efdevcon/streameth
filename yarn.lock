@@ -6623,6 +6623,14 @@ videojs-mux@^4.6.4:
   dependencies:
     mux-embed "4.9.0"
 
+videojs-playlist@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/videojs-playlist/-/videojs-playlist-5.0.0.tgz#96d62b599ccb92cfd130666bf20c90d8f6ad65dc"
+  integrity sha512-TM9bytwKqkE05wdWPEKDpkwMGhS/VgMCIsEuNxmX1J1JO9zaTIl4Wm3egf5j1dhIw19oWrqGUV/nK0YNIelCpA==
+  dependencies:
+    global "^4.3.2"
+    video.js "^6 || ^7"
+
 videojs-vtt.js@^0.15.3:
   version "0.15.3"
   resolved "https://registry.yarnpkg.com/videojs-vtt.js/-/videojs-vtt.js-0.15.3.tgz#84260393b79487fcf195d9372f812d7fab83a993"

@@ -1,16 +1,17 @@
 import { useRef, useEffect } from 'react'
 import videojs from 'video.js'
+// import videojsPlaylist from 'videojs-playlist'
 import qualitySelector from 'videojs-hls-quality-selector'
 import contribQualityLevels from 'videojs-contrib-quality-levels'
 import 'video.js/dist/video-js.css'
 import 'videojs-mux'
 import 'videojs-youtube'
+import { VideoJSProps } from './types'
 
-// TODO: Need to change types
-export const VideoJS = (props: any) => {
+export const VideoJS = ({ ...props }: VideoJSProps) => {
+  const { onReady, poster, source } = props
   const videoRef = useRef(null)
   const playerRef = useRef<videojs.Player | null>(null)
-  const { options, onReady } = props
   useEffect(() => {
     // make sure Video.js player is only initialized once
     if (!playerRef.current) {
@@ -22,8 +23,13 @@ export const VideoJS = (props: any) => {
       const player = (playerRef.current = videojs(
         videoElement,
         {
-          ...options,
-          errorDisplay: false,
+          techOrder: ['html5', 'youtube'],
+          poster: poster || '',
+          autoplay: false,
+          controls: true,
+          responsive: true,
+          fluid: true,
+          sources: [source],
           html5: {
             vhs: {
               customTagParsers: [
@@ -38,11 +44,11 @@ export const VideoJS = (props: any) => {
             mux: {
               debug: false,
               data: {
-                env_key: 'tgm8k06hncftrhfi397jte0q1', // required
+                env_key: '', // required
                 // Metadata
-                player_name: props.eventName, // ex: 'My Main Player'
-                video_id: props.eventName, // ex: 'abcd123'
-                video_title: props.eventName, // ex: 'My Great Video'
+                player_name: '', // ex: 'My Main Player'
+                video_id: '', // ex: 'abcd123'
+                video_title: '', // ex: 'My Great Video'
                 player_init_time: initTime, // ex: 1451606400000
               },
             },
@@ -56,11 +62,11 @@ export const VideoJS = (props: any) => {
       const player = playerRef.current
 
       // prevent player from reloading the same src, causing interrupted playback
-      if (player.src() !== options.sources[0].src) {
-        player.src(options.sources)
+      if (player.src() !== props.source.src) {
+        player.src([props.source])
       }
     }
-  }, [options, videoRef])
+  }, [videoRef])
 
   useEffect(() => {
     const player = playerRef.current

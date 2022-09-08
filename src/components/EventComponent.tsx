@@ -1,5 +1,6 @@
 import { useEvent } from 'hooks/useEvent'
 import { useStage } from 'hooks/useStage'
+import useLivestream from 'hooks/useLivestream'
 import moment from 'moment'
 import Container from 'components/Container'
 import EventHeader from './Event/Header'
@@ -7,7 +8,7 @@ import SessionInfoBox from './Session/Infobox'
 import styles from './EventComponent.module.scss'
 import { StageSelector } from './StageSelector'
 import Link from 'next/link'
-
+import Player from './Player'
 export function EventComponent() {
   const event = useEvent()
   const currentStage = useStage()
@@ -18,7 +19,7 @@ export function EventComponent() {
     // .filter(i => moment(i.start).startOf('day').valueOf()
     //   === eventDays.find(i => i === moment().startOf('day').valueOf()) ?? eventDays[0])
     .sort((a: any, b: any) => a.start - b.start)
-
+  const { activeSource, onStreamError } = useLivestream(stage?.stream)
   // TODO: get active session
   const session = upcomingSessions[0]
 
@@ -29,7 +30,7 @@ export function EventComponent() {
           <div className={styles.header}>
             <EventHeader title={session.name} showLive={true} />
           </div>
-          <div className={styles.player}>Player</div>
+          <Player source={activeSource} onStreamError={onStreamError} />
           <div className={styles.sidebar}>
             <StageSelector />
             <h3 className="text-2xl font-bold">Schedule</h3>
