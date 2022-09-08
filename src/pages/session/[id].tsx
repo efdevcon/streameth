@@ -5,6 +5,7 @@ import Page from 'layouts/event-page'
 import { ParsedUrlQuery } from 'querystring'
 import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
+import SessionComponent from 'components/Session/SessionComponent'
 interface Props {
   event?: Event
   session?: Session
@@ -17,12 +18,9 @@ interface Params extends ParsedUrlQuery {
 
 export default function Stage(props: Props) {
   if (!props.session) return <></>
-
   return (
     <Page event={props.event}>
-      <h2>{props.session.name}</h2>
-      <p>{props.session.description}</p>
-      <p>- {props.session.speakers.map((i) => i.name).join(', ')}</p>
+      <SessionComponent session={props.session} />
     </Page>
   )
 }

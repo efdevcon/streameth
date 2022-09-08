@@ -57,7 +57,6 @@ export default function Navbar() {
               </div>
             </div>
           </Container>
-
           <Disclosure.Panel className={css.navbar__mobileMenu}>
             <div className={css.navbar__mobileMenu__items}>
               {pages.map((item) => (

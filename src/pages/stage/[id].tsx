@@ -5,7 +5,7 @@ import Page from 'layouts/event-page'
 import { EventComponent } from 'components/EventComponent'
 import { ParsedUrlQuery } from 'querystring'
 import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
-
+import Container from 'components/Container'
 interface Props {
   event?: Event
   stageId?: string

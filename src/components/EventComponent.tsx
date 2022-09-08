@@ -9,7 +9,10 @@ import styles from './EventComponent.module.scss'
 import { StageSelector } from './StageSelector'
 import Link from 'next/link'
 import Player from './Player'
+
+
 export function EventComponent() {
+
   const event = useEvent()
   const currentStage = useStage()
   const eventDays = [...new Set(event.schedule.sessions.map((i) => moment(i.start).startOf('day').valueOf()))].sort()
@@ -19,10 +22,10 @@ export function EventComponent() {
     // .filter(i => moment(i.start).startOf('day').valueOf()
     //   === eventDays.find(i => i === moment().startOf('day').valueOf()) ?? eventDays[0])
     .sort((a: any, b: any) => a.start - b.start)
-  const { activeSource, onStreamError } = useLivestream(stage?.stream)
+  const { activeSource, onStreamError } = useLivestream(currentStage?.stream)
   // TODO: get active session
   const session = upcomingSessions[0]
-
+  console.log(session)
   return (
     <div>
       <Container>
