@@ -1,0 +1,12 @@
+.filterNavigation {
+
+  @apply fixed lg:w-1/5 h-full bg-[#FBFBFB] px-6 py-14 border-r-slate-200 border-r-2;
+
+  &__header {
+    @apply text-lg lg:text-4xl;
+  }
+
+  &__item{
+    @apply flex flex-col justify-between my-5 lg:my-10;
+  }
+}
