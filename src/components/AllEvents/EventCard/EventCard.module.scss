@@ -1,0 +1,23 @@
+
+.box {
+
+  @apply  p-5 my-5 border-[#757575] border-2 box-border w-full lg:max-w-md rounded-lg;
+  
+
+  &__title {
+    @apply  font-medium text-3xl items-center;
+  }
+
+  &__details {
+    @apply  flex flex-col space-y-2 my-5 lg:my-4;
+  }
+
+  &__speakers {
+    @apply  flex flex-row;
+  }
+
+}
+
+.box:hover {
+  @apply  shadow-xl;
+}

@@ -4,6 +4,7 @@ import { Session, Stage } from 'types'
 import momemt from 'moment'
 import styles from './AllEventsComponent.module.scss'
 import FilterNavigation from './FilterNavigation'
+import EventCard from './EventCard'
 
 interface Props {
   sessions: Session[]
@@ -44,15 +45,18 @@ export default function SessionComponent(props: Props) {
 
   return (
     <div className={styles.layout}>
-      <FilterNavigation stages={props.stages} days={props.days} onStageSelect={handleSelectedStage} onDaySelect={handleSelectedDay} />
-      <Container>
-        {displayedSessions.map((session) => (
-          <div key={session.id}>
-            <h2>{session.name}</h2>
-            <p>{session.speakers[0].name}</p>
+      <div className={styles.layout__filter}>
+        <FilterNavigation stages={props.stages} days={props.days} onStageSelect={handleSelectedStage} onDaySelect={handleSelectedDay} />
+      </div>
+      <div className={styles.layout__content}>
+        <Container>
+          <div className={styles.layout__content__grid}>
+            {displayedSessions.map((session) => (
+              <EventCard key={session.id} session={session} />
+            ))}
           </div>
-        ))}
-      </Container>
+        </Container>
+      </div>
     </div>
   )
 }

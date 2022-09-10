@@ -4,10 +4,6 @@
   @apply flex flex-row  items-center rounded bg-[#F9F9F9] p-4 box-border cursor-pointer;
   box-shadow: 1px 1px 1px #F1F1F1 inset;
 
-  &__image {
-    @apply w-12 h-12 rounded-full object-cover overflow-clip mr-5;
-  }
-
   &__title {
     @apply text-[#4F4F4F] font-bold text-lg;
     padding: 0.5rem 1rem;
@@ -43,11 +39,7 @@
     @apply text-[#4F4F4F] font-bold text-xl;
   }
 
-  &__header_image {
-    @apply w-12 h-12 rounded-full object-cover overflow-clip;
-  }
-
-  &__body {
+   &__body {
     @apply flex flex-col items-center justify-between mb-4;
   }
 }

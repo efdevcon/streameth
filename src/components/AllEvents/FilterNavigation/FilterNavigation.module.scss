@@ -1,6 +1,16 @@
 .filterNavigation {
 
-  @apply fixed lg:w-1/5 h-full bg-[#FBFBFB] px-6 py-14 border-r-slate-200 border-r-2;
+  @apply w-4/6 lg:w-1/6 h-full fixed z-50 bg-[#FBFBFB] px-6 py-14 border-r-slate-200 border-r-2;
+
+  &__slide_button {
+    @apply flex h-16 bg-slate-200 rounded-r-lg px-2 cursor-pointer absolute items-center lg:hidden;
+    top: 15%;
+
+  }
+
+  &__back_button {
+    @apply absolute p-5 right-0 top-0 lg:hidden text-2xl font-bold cursor-pointer;
+  }
 
   &__header {
     @apply text-lg lg:text-4xl;
@@ -16,11 +26,13 @@
 
   &__item__list {
     @apply flex flex-col p-2;
-  }
 
-  &__item__list__item {
-    @apply  my-2 text-sm lg:text-lg lg:font-light;
-  }
+    &__item {
+      @apply  my-2 text-sm lg:text-lg lg:font-light;
+    }
 
+  }  
 
 }
+
+

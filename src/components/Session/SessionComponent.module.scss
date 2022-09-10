@@ -25,3 +25,8 @@
     @apply flex flex-col w-full lg:w-1/3 px-5;
   }
 }
+
+.details {
+  @apply flex flex-col space-y-2 my-5 lg:my-10;
+
+}
