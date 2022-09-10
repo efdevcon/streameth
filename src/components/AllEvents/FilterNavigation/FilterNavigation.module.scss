@@ -9,4 +9,18 @@
   &__item{
     @apply flex flex-col justify-between my-5 lg:my-10;
   }
+
+  &__item__title {
+    @apply text-base lg:text-xl font-normal;
+  }
+
+  &__item__list {
+    @apply flex flex-col p-2;
+  }
+
+  &__item__list__item {
+    @apply  my-2 text-sm lg:text-lg lg:font-light;
+  }
+
+
 }

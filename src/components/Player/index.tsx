@@ -1,10 +1,11 @@
-import { useRef } from 'react'
+import Image from 'next/image'
 import VideoJS from './VideoJS'
 import { PlayerProps } from './types'
+import defaultPoster from 'assets/images/default.png'
 
 const Player = ({ ...props }: PlayerProps) => {
-  if (!props.source) return null
-  if (props.poster === undefined) props.poster = ''
+  if (!props.source) return <Image src={defaultPoster} />
+  if (props.poster === undefined) props.poster = '/images/default.png'
   if (props.playlist === undefined) props.playlist = null
   // override src url for spain
   const source = props.source

@@ -1,33 +1,50 @@
 import React, { useEffect } from 'react'
 import Container from 'components/Container'
 import { Session, Stage } from 'types'
+import momemt from 'moment'
 import styles from './AllEventsComponent.module.scss'
 import FilterNavigation from './FilterNavigation'
-import momemt from 'moment'
+
 interface Props {
   sessions: Session[]
   stages: Stage['name'][]
-  days: number[]
+  days: string[]
 }
 
 export default function SessionComponent(props: Props) {
   const [displayedSessions, setDisplayedSessions] = React.useState(props.sessions)
-  const [selectedStage, setSelectedStage] = React.useState<string | null>('Main')
-  const [selectedDay, setSelectedDay] = React.useState<string | null>('16')
+  const [selectedStage, setSelectedStage] = React.useState<string[]>([])
+  const [selectedDay, setSelectedDay] = React.useState<string[]>([])
+
+  const handleSelectedStage = (stage: string) => {
+    if (selectedStage?.includes(stage)) {
+      setSelectedStage(selectedStage.filter((i) => i !== stage))
+    } else {
+      setSelectedStage([...selectedStage, stage])
+    }
+  }
+
+  const handleSelectedDay = (day: string) => {
+    if (selectedDay?.includes(day)) {
+      setSelectedDay(selectedDay.filter((i) => i !== day))
+    } else {
+      setSelectedDay([...selectedDay, day])
+    }
+  }
 
   useEffect(() => {
-    //filter sessions by stage and day
+    // filter sessions by stage and day
     setDisplayedSessions([
       ...props.sessions.filter((session) => {
-        const day = momemt(session.start).format('DD')
-        return (!selectedStage || session.stage === selectedStage) && (!selectedDay || day === selectedDay)
+        const day = momemt(session.start).format('MMM DD')
+        return (selectedStage.length === 0 || selectedStage.includes(session.stage)) && (selectedDay.length === 0 || selectedDay.includes(day))
       }),
     ])
   }, [selectedStage, selectedDay])
 
   return (
     <div className={styles.layout}>
-      <FilterNavigation stages={props.stages} days={props.days} onStageSelect={setSelectedStage} onDaySelect={setSelectedDay} />
+      <FilterNavigation stages={props.stages} days={props.days} onStageSelect={handleSelectedStage} onDaySelect={handleSelectedDay} />
       <Container>
         {displayedSessions.map((session) => (
           <div key={session.id}>

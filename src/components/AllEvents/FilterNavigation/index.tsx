@@ -3,7 +3,7 @@ import { Stage } from 'types'
 import styles from './FilterNavigation.module.scss'
 interface Props {
   stages: Stage['name'][]
-  days: number[]
+  days: string[]
   onStageSelect: (stage: string) => void
   onDaySelect: (day: string) => void
 }
@@ -14,7 +14,8 @@ function FilterNavigationItem({ title, items, onItemSelect }: { title: string; i
       <div className={styles.filterNavigation__item__title}>{title}</div>
       <div className={styles.filterNavigation__item__list}>
         {items?.map((item, index) => (
-          <div key={index} className={styles.filterNavigation__item__list__item} onClick={() => onItemSelect(item.toString())}>
+          <div key={index} className={styles.filterNavigation__item__list__item}>
+            <input type="checkbox" onChange={() => onItemSelect(item.toString())} className="mr-2"/>
             {item}
           </div>
         ))}
