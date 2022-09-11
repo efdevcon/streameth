@@ -14,6 +14,7 @@
       'player sidebar'
       'eventInfo sidebar';
     grid-template-columns: 1fr 320px;
+    grid-template-rows: auto auto 1fr;
     grid-column-gap: 20px;
   }
 
@@ -23,12 +24,11 @@
 
   .player {
     grid-area: player;
-    @apply bg-green-500;
+    @apply bg-green-500 aspect-video;
   }
 
   .sidebar {
     grid-area: sidebar;
-    @apply bg-yellow-500;
   }
 
   .eventInfo {

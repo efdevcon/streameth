@@ -1,0 +1,19 @@
+.container {
+  @apply border border-gray-700 p-3 rounded-md;
+}
+
+.body {
+  @apply text-gray-400 text-sm space-y-1;
+}
+
+.title {
+  @apply text-lg font-medium leading-tight mb-2;
+}
+
+.iconText {
+  @apply flex items-center;
+
+  svg {
+    @apply h-5 w-5 mr-1;
+  }
+}

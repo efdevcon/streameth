@@ -1,13 +1,22 @@
 import { Speaker } from 'types'
+import css from './SpeakerIcon.module.scss'
 
 interface Props {
   speaker: Speaker
 }
 
-export default function SpeakerIcon({ speaker }: Props) {
-  const image = () => {
-    ;<div className="h-5 w-5 "></div>
-  }
+const initials = (name: string) => {
+  return name
+    .split(' ')
+    .map((n) => n[0])
+    .join('')
+    .slice(0, 2)
+}
 
-  return <div></div>
+export default function SpeakerIcon({ speaker }: Props) {
+  return (
+    <div className={css.icon} style={{ backgroundImage: `url('${speaker.avatarUrl}')` }}>
+      {!speaker.avatarUrl && <span>{initials(speaker.name)}</span>}
+    </div>
+  )
 }
