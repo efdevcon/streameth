@@ -9,13 +9,17 @@ import styles from './EventComponent.module.scss'
 import { StageSelector } from './StageSelector'
 import Link from 'next/link'
 import Player from './Player'
+import SessionSnack from './Session/Snack'
+import { useRelativeTime } from 'hooks/useRelativeTime'
 
+const currentDate = moment()
 
 export function EventComponent() {
-
   const event = useEvent()
   const currentStage = useStage()
-  const eventDays = [...new Set(event.schedule.sessions.map((i) => moment(i.start).startOf('day').valueOf()))].sort()
+  const { timeState, currentSession, eventDayNum } = useRelativeTime(event)
+  console.log(timeState, currentSession, eventDayNum)
+  // const eventDays = [...new Set(event.schedule.sessions.map((i) => moment(i.start).startOf('day').valueOf()))].sort()
   const upcomingSessions = event.schedule.sessions
     .filter((i) => i.stage === currentStage.name)
     // filter on event days
@@ -33,21 +37,17 @@ export function EventComponent() {
           <div className={styles.header}>
             <EventHeader title={session.name} showLive={true} />
           </div>
-          <Player source={activeSource} onStreamError={onStreamError} />
+          <div className={styles.player}>
+            <Player source={activeSource} onStreamError={onStreamError} />
+          </div>
           <div className={styles.sidebar}>
             <StageSelector />
             <h3 className="text-2xl font-bold">Schedule</h3>
             <ul>
               {upcomingSessions.map((i) => {
                 return (
-                  <li key={i.id} className="mb-3">
-                    <h4>{i.name}</h4>
-                    <p>
-                      {moment(i.start).format('DD MMM / HH:mm')}-{moment(i.end).format('HH:mm')}
-                      <span className="float-right">
-                        <Link href={`/session/${i.id}`}>details &raquo;</Link>
-                      </span>
-                    </p>
+                  <li key={i.id} className="mb-3 text-lg">
+                    <SessionSnack session={i} />
                   </li>
                 )
               })}
