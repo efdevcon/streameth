@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Session, Event } from 'types'
 import { startOfDay, currentTimeInUTC } from 'utils/dateTime'
 import useInterval from '@use-it/interval'
@@ -14,24 +14,8 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
   const [timeState, setTimeState] = useState<'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'>('BEFORE_EVENT')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
   const [eventDayNum, setEventDayNum] = useState<number | null>(null)
-  // const [sessions, setSessions] = useState<Session[]>(event?.schedule?.sessions || [])
-
   const [filters, setFilters] = useState<Filter[]>(initFilters)
   const eventDays = [...new Set(allSessions.map((i) => startOfDay(i.start)))].sort()
-
-  // const addOrUpdateFilter = useCallback(
-  //   (filter: Filter) => {
-  //     const f = filters.find((f) => f.type === filter.type)
-
-  //     if (f && f.value !== filter.value) {
-  //       f.value = filter.value
-  //       setFilters((prevState) => [...prevState.filter((f) => f.type !== filter.type), f])
-  //     } else {
-  //       setFilters((prevState) => [...prevState, filter])
-  //     }
-  //   },
-  //   [filters]
-  // )
 
   // determine event day number if during event
   useEffect(() => {
@@ -47,11 +31,6 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
     }
   }, [currentTimeUTC, eventDays])
 
-  // useEffect(() => {
-  //   // addOrUpdateFilter({ type: 'day', value: eventDays[eventDayNum || 0] })
-  //   if (!filters.filter((f) => f.type === 'day'))
-  // }, [addOrUpdateFilter, eventDayNum, eventDays])
-
   const sessions = useMemo(() => {
     let filteredSessions = [...allSessions]
 
@@ -64,14 +43,27 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
         const filter = filters[i]
         const { type, value } = filter
 
-        if (type === 'stage' && value === session.stage) {
-          return session
+        if (type === 'stage' && value !== session.stage) {
+          return false
         }
 
-        if (type === 'day' && eventDays[value] === startOfDay(session.start)) {
-          return session
+        // eventDayNum is only set during the event; otherwise it is null
+        // When null, use value of 0 to check the first day in eventDays
+        // Otherwise, subtract 1 from eventDayNum to get corresponding index in eventDays
+        if (type === 'day') {
+          let v = 0
+
+          if (value) {
+            v = value - 1
+          }
+
+          if (eventDays[v] !== startOfDay(session.start)) {
+            return false
+          }
         }
       }
+
+      return true
     })
   }, [allSessions, filters, eventDays])
 

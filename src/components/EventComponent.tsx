@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useEvent } from 'hooks/useEvent'
 import { useStage } from 'hooks/useStage'
 import useLivestream from 'hooks/useLivestream'
@@ -17,10 +18,13 @@ export function EventComponent() {
   const currentStage = useStage()
   const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions(event)
 
-  // setFilters([
-  //   { type: 'stage', value: currentStage.name },
-  //   { type: 'day', value: eventDayNum },
-  // ])
+  useEffect(() => {
+    setFilters([
+      { type: 'stage', value: currentStage.name },
+      { type: 'day', value: eventDayNum },
+    ])
+  }, [currentStage, eventDayNum, setFilters])
+
   // const { sessions } = useSessions(event, [{ type: 'stage', value: currentStage.name }])
   console.log(timeState, currentSession, eventDayNum)
   // const eventDays = [...new Set(event.schedule.sessions.map((i) => moment(i.start).startOf('day').valueOf()))].sort()
