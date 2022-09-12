@@ -25,4 +25,5 @@ export interface Archive {
   version: number
   type: ArchiveTypes
   config: Config
+  sessions: Session[]
 }

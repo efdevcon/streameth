@@ -34,8 +34,10 @@
   },
   "archive": {
     "version": 2,
-    "type": "livepeer",
-    "config": {}
+    "type": "gsheet",
+    "config": {
+      "sheetId": "14BI4ogkBn1ISuu3TetXSKRszYNsdzQwppgH-uOghdfU"
+    }
   },
   "plugins": []
 }

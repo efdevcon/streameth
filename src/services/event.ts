@@ -1,5 +1,6 @@
 import fs from 'fs'
 import { Event } from 'types'
+import { GetArchive } from './archive'
 import { GetSchedule } from './schedule'
 
 const configPath = './config/streameth.json'
@@ -12,10 +13,11 @@ export async function GetEvent(): Promise<Event | undefined> {
     // get core modules
     // - streams
 
-    // - schedule
     const sessions = await GetSchedule(event.schedule.type, event.schedule.config)
     event.schedule.sessions = sessions
-    // - archive
+
+    const archive = await GetArchive(event.archive.type, event.archive.config)
+    event.archive.sessions = archive
 
     return event
   }
