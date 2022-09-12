@@ -29,14 +29,14 @@
     "version": 2,
     "type": "gsheet",
     "config": {
-      "sheetId": "14BI4ogkBn1ISuu3TetXSKRszYNsdzQwppgH-uOghdfU"
+      "sheetId": "1-wb94vYSc4or656CVrFIGaK_629S_vtadeNLPbfrMsA"
     }
   },
   "archive": {
     "version": 2,
     "type": "gsheet",
     "config": {
-      "sheetId": "14BI4ogkBn1ISuu3TetXSKRszYNsdzQwppgH-uOghdfU"
+      "sheetId": "1-wb94vYSc4or656CVrFIGaK_629S_vtadeNLPbfrMsA"
     }
   },
   "plugins": []
