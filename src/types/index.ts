@@ -50,8 +50,10 @@ export interface Stage {
   stream: streamItem[]
 }
 
+export type VideoTypes = 'youtube' | 'ipfs'
 export interface Video {
-  id: string // hash
-  slug: string // filename
+  id: string
+  slug: string
+  type: VideoTypes
   url: string
 }

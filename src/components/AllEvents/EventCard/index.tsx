@@ -20,8 +20,8 @@ export default function EventCard(props: Props) {
         {speakers.map((speaker) => (
           <UserAvatar key={speaker.id} avatarUrl={speaker.avatarUrl} />
         ))}
-        <a className={Style.box__speaker__learn_more} href={video?.url}>
-          Watch &raquo;
+        <a className={Style.box__speaker__learn_more} href={`/session/${id}`}>
+          Learn more
         </a>
       </div>
     </div>

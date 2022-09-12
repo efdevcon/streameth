@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 
 const pages = [
   { name: 'Schedule', href: '/schedule' },
-  { name: 'Archive', href: '/archive' }
+  // { name: 'Archive', href: '/archive' }
 ]
 
 function classNames(...classes: string[]) {
