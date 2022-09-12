@@ -10,32 +10,36 @@ import { StageSelector } from './StageSelector'
 import Link from 'next/link'
 import Player from './Player'
 import SessionSnack from './Session/Snack'
-import { useRelativeTime } from 'hooks/useRelativeTime'
-
-const currentDate = moment()
+import { useSessions } from 'hooks/useSessions'
 
 export function EventComponent() {
   const event = useEvent()
   const currentStage = useStage()
-  const { timeState, currentSession, eventDayNum } = useRelativeTime(event)
+  const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions(event)
+
+  // setFilters([
+  //   { type: 'stage', value: currentStage.name },
+  //   { type: 'day', value: eventDayNum },
+  // ])
+  // const { sessions } = useSessions(event, [{ type: 'stage', value: currentStage.name }])
   console.log(timeState, currentSession, eventDayNum)
   // const eventDays = [...new Set(event.schedule.sessions.map((i) => moment(i.start).startOf('day').valueOf()))].sort()
-  const upcomingSessions = event.schedule.sessions
-    .filter((i) => i.stage === currentStage.name)
-    // filter on event days
-    // .filter(i => moment(i.start).startOf('day').valueOf()
-    //   === eventDays.find(i => i === moment().startOf('day').valueOf()) ?? eventDays[0])
-    .sort((a: any, b: any) => a.start - b.start)
+  // const upcomingSessions = event.schedule.sessions
+  //   .filter((i) => i.stage === currentStage.name)
+  //   // filter on event days
+  //   // .filter(i => moment(i.start).startOf('day').valueOf()
+  //   //   === eventDays.find(i => i === moment().startOf('day').valueOf()) ?? eventDays[0])
+  //   .sort((a: any, b: any) => a.start - b.start)
   const { activeSource, onStreamError } = useLivestream(currentStage?.stream)
   // TODO: get active session
-  const session = upcomingSessions[0]
-  console.log(session)
+  // const session = upcomingSessions[0]
+  // console.log(session)
   return (
     <div>
       <Container>
         <div className={styles.widget}>
           <div className={styles.header}>
-            <EventHeader title={session.name} showLive={true} />
+            <EventHeader title={currentSession.name} showLive={!!activeSource} />
           </div>
           <div className={styles.player}>
             <Player source={activeSource} onStreamError={onStreamError} />
@@ -44,7 +48,7 @@ export function EventComponent() {
             <StageSelector />
             <h3 className="text-2xl font-bold">Schedule</h3>
             <ul>
-              {upcomingSessions.map((i) => {
+              {sessions.map((i) => {
                 return (
                   <li key={i.id} className="mb-3 text-lg">
                     <SessionSnack session={i} />
@@ -54,7 +58,7 @@ export function EventComponent() {
             </ul>
           </div>
           <div className={styles.eventInfo}>
-            <SessionInfoBox session={session} />
+            <SessionInfoBox session={currentSession} />
           </div>
         </div>
       </Container>
