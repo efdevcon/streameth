@@ -8,13 +8,13 @@ import { getStreams } from 'services/stream'
 
 // TODO: Stream type in config is to genereic? It should match livepeers response
 const useLiveStream = (stream: Stage['stream']) => {
-  const [streams, setStreams] = useState<Stream[]>([])
+  const [streams, setStreams] = useState<any[]>([]) // TODO: Fix any-type
   const [activeSource, setActiveSource] = useState<Source | null>(null)
 
   const fetchStreams = async () => {
     try {
       const livepeerSources = await getStreams(stream.map((stream) => stream.id))
-      setStreams(livepeerSources.filter((source) => source.isActive))
+      setStreams(livepeerSources.filter((source: any) => source.isActive)) // TODO: Fix any-type
     } catch (e) {
       console.error(e)
     } finally {
