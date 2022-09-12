@@ -91,6 +91,7 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
         } else {
           setTimeState('BEFORE_NEXT_DAY')
         }
+        break
       } else if (i === sessions.length - 1) {
         setTimeState('AFTER_EVENT')
         setCurrentSession(sessions[0])
