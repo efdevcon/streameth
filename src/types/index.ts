@@ -22,13 +22,15 @@ export interface Event {
 export interface Session {
   id: string
   name: string
-  abstract: string
-  description: string
-  track: string
+  abstract?: string
+  description?: string
+  track?: string
+  type?: string
+  stage?: string
   start: number
   end: number
-  stage: string
   speakers: Speaker[]
+  video?: Video
 }
 
 export interface Speaker {
@@ -52,5 +54,4 @@ export interface Video {
   id: string // hash
   slug: string // filename
   url: string
-  session?: Session
 }

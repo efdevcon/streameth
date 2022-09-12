@@ -7,7 +7,10 @@ import img from 'assets/images/logo.png'
 import Container from 'components/Container'
 import { useRouter } from 'next/router'
 
-const pages = [{ name: 'Archive', href: '/archive' }]
+const pages = [
+  { name: 'Schedule', href: '/schedule' },
+  { name: 'Archive', href: '/archive' }
+]
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
