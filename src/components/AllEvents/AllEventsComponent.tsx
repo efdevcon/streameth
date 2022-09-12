@@ -38,7 +38,7 @@ export default function SessionComponent(props: Props) {
     setDisplayedSessions([
       ...props.sessions.filter((session) => {
         const day = momemt(session.start).format('MMM DD')
-        return (selectedStage.length === 0 || selectedStage.includes(session.stage)) && (selectedDay.length === 0 || selectedDay.includes(day))
+        return (selectedStage.length === 0 || selectedStage.includes(session.stage ?? '')) && (selectedDay.length === 0 || selectedDay.includes(day))
       }),
     ])
   }, [selectedStage, selectedDay])
