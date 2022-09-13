@@ -21,6 +21,11 @@ export default function SessionComponent(props: Props) {
       <SessionContainer>
         <div className={styles.grid}>
           <div className={styles.grid__column__full}>
+            {props.session.video?.type === 'youtube' && props.session.video?.id &&
+              <div className={styles.iframe}>
+                <iframe className={styles.responsive_iframe} src={`https://www.youtube-nocookie.com/embed/${props.session.video?.id}`} />
+              </div>
+            }
             <div className={styles.header}>
               <h2 className={styles.header__title}>{props.session.name}</h2>
             </div>
