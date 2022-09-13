@@ -26,7 +26,7 @@ export function EventComponent() {
   }, [currentStage, eventDayNum, setFilters])
 
   // const { sessions } = useSessions(event, [{ type: 'stage', value: currentStage.name }])
-  console.log(timeState, currentSession, eventDayNum)
+  // console.log(timeState, currentSession, eventDayNum)
   // const eventDays = [...new Set(event.schedule.sessions.map((i) => moment(i.start).startOf('day').valueOf()))].sort()
   // const upcomingSessions = event.schedule.sessions
   //   .filter((i) => i.stage === currentStage.name)
@@ -34,7 +34,7 @@ export function EventComponent() {
   //   // .filter(i => moment(i.start).startOf('day').valueOf()
   //   //   === eventDays.find(i => i === moment().startOf('day').valueOf()) ?? eventDays[0])
   //   .sort((a: any, b: any) => a.start - b.start)
-  const { activeSource, onStreamError } = useLivestream(currentStage?.stream)
+  const { activeSource, onStreamError } = useLivestream(currentStage?.stream.map((i) => i.id) ?? [])
   // TODO: get active session
   // const session = upcomingSessions[0]
   // console.log(session)
@@ -46,6 +46,7 @@ export function EventComponent() {
             <EventHeader title={currentSession.name} showLive={!!activeSource} />
           </div>
           <div className={styles.player}>
+            <div onClick={onStreamError}> failover </div>
             <Player source={activeSource} onStreamError={onStreamError} />
           </div>
           <div className={styles.sidebar}>

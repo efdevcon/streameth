@@ -6,6 +6,7 @@ export interface Config {
 
 export type StreamTypes = 'livepeer'
 export interface Stream {
+  id: string
   version: number
   type: StreamTypes
   stages: Stage[]

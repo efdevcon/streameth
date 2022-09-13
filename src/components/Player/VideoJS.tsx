@@ -25,7 +25,8 @@ export const VideoJS = ({ ...props }: VideoJSProps) => {
         {
           techOrder: ['html5', 'youtube'],
           poster: poster || '',
-          autoplay: false,
+          autoplay: true,
+          errorDisplay: false,
           controls: true,
           responsive: true,
           fluid: true,
@@ -60,13 +61,12 @@ export const VideoJS = ({ ...props }: VideoJSProps) => {
       ))
     } else {
       const player = playerRef.current
-
       // prevent player from reloading the same src, causing interrupted playback
       if (player.src() !== props.source.src) {
         player.src([props.source])
       }
     }
-  }, [videoRef])
+  }, [videoRef, source, poster])
 
   useEffect(() => {
     const player = playerRef.current

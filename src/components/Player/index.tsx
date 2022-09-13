@@ -14,6 +14,7 @@ const Player = ({ ...props }: PlayerProps) => {
   const handlePlayerReady = (player: any) => {
     player.on('error', (e: any) => {
       console.log('error', e)
+      props.onStreamError()
     })
 
     player.on('waiting', () => {
@@ -25,7 +26,6 @@ const Player = ({ ...props }: PlayerProps) => {
     })
   }
 
-  console.log(props.source)
   return <VideoJS source={props.source} poster={props.poster} onReady={handlePlayerReady} playlist={props.playlist} />
 }
 

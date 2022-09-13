@@ -1,44 +1,60 @@
 import { useState, useEffect } from 'react'
-import useInterval from '@use-it/interval'
-import moment from 'moment'
-import { Stage } from 'types'
-import { Stream } from 'types/config'
+import { Stage, streamItem } from 'types'
 import { Source } from 'components/Player/types'
 import { getStreams } from 'services/stream'
 
-// TODO: Stream type in config is to genereic? It should match livepeers response
-const useLiveStream = (stream: Stage['stream']) => {
-  const [streams, setStreams] = useState<Stream[]>([])
-  const [activeSource, setActiveSource] = useState<Source | null>(null)
+const useLiveStream = (streamIds: string[]) => {
+  const [streams, setStreams] = useState<streamItem[]>([])
+  const [activeStream, setActiveStream] = useState<streamItem | null>(null)
 
   const fetchStreams = async () => {
-    try {
-      const livepeerSources = await getStreams(stream.map((stream) => stream.id))
-      setStreams(livepeerSources.filter((source) => source.isActive))
-    } catch (e) {
-      console.error(e)
-    } finally {
-    }
+    getStreams(streamIds)
+      .then((res) => {
+        const activeSources = res.filter((i) => i.isActive)
+        setStreams(activeSources)
+      })
+      .catch((err) => {
+        console.error(err)
+      })
   }
 
   useEffect(() => {
-    if (streams.length > 0) {
-      setActiveSource({ src: streams[0].playbackUrl, type: 'application/x-mpegURL' })
-    }
-  }, [streams])
-
-  useEffect(() => {
-    if (stream) {
-      fetchStreams()
+    if (streamIds.length > 0) {
+      setInterval(() => {
+        console.log("fetching streams")
+        fetchStreams()
+      }
+      , 10000)
     }
   }, [])
 
+  useEffect(() => {
+    if (streams.length > 0 && activeStream === null) {
+      console.log("setting active stream", streams[0])
+      setActiveStream(streams[0])
+    }
+  }, [streams, activeStream])
+
+
+
+
   const onStreamError = () => {
-    console.log('error')
+    console.log("onStreamError")
+    if (activeStream == null) return
+    const activeStreams = streams.filter((i) => i.id !== activeStream.id)
+    console.log("active streams", activeStreams, streams)
+
+    setStreams([...activeStreams])
+    if (activeStreams.length > 0) {
+      setActiveStream(activeStreams[0])
+    } else {
+      setActiveStream(null)
+    }
+    //fetchStreams()
   }
 
   return {
-    activeSource,
+    activeSource: activeStream ? { src: activeStream.playbackUrl, type: 'application/x-mpegURL' } as Source : null,
     onStreamError,
   }
 }
