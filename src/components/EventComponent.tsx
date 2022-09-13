@@ -46,7 +46,6 @@ export function EventComponent() {
             <EventHeader title={currentSession.name} showLive={!!activeSource} />
           </div>
           <div className={styles.player}>
-            <div onClick={onStreamError}> failover </div>
             <Player source={activeSource} onStreamError={onStreamError} />
           </div>
           <div className={styles.sidebar}>

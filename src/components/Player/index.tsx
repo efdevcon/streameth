@@ -4,7 +4,7 @@ import { PlayerProps } from './types'
 import defaultPoster from 'assets/images/default.png'
 
 const Player = ({ ...props }: PlayerProps) => {
-  if (!props.source) return <Image src={defaultPoster} />
+  if (!props.source) return <Image alt="text" layout='responsive' src={defaultPoster} />
   if (props.poster === undefined) props.poster = '/images/default.png'
   if (props.playlist === undefined) props.playlist = null
   // override src url for spain

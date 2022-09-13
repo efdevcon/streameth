@@ -2,7 +2,8 @@ import React from 'react'
 import { Speaker } from 'types'
 import styles from './SpeakerBox.module.scss'
 import Image from 'next/image'
-import { UserAvatar } from 'components/Session/SessionDetails'
+import SpeakerIcon from 'components/Speaker/Icon'
+
 interface Props {
   speaker: Speaker
 }
@@ -15,7 +16,7 @@ export function SpeakerModal({ speaker, onClose }: { speaker: Speaker; onClose: 
           X
         </div>
         <div className={styles.modal__header}>
-          <UserAvatar avatarUrl={speaker.avatarUrl} />
+          <SpeakerIcon speaker={speaker} />
           <h2 className={styles.modal__header__text}>{speaker.name}</h2>
         </div>
         <div className={styles.modal__body}>
@@ -35,7 +36,7 @@ export default function SpeakerBox(props: Props) {
     <>
       {isOpen && <SpeakerModal speaker={speaker} onClose={() => setIsOpen(false)} />}
       <div className={styles.box} onClick={() => setIsOpen(true)}>
-        <UserAvatar avatarUrl={speaker.avatarUrl} />
+        <SpeakerIcon speaker={speaker} />
         <div className={styles.box__text}>
           <h3 className={styles.box__name}>{name}</h3>
         </div>

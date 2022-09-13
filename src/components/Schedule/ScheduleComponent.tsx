@@ -2,10 +2,9 @@ import React, { useEffect } from 'react'
 import Container from 'components/Container'
 import { Session, Stage } from 'types'
 import momemt from 'moment'
-import styles from './AllEventsComponent.module.scss'
+import styles from './ScheduleComponent.module.scss'
 import FilterNavigation from './FilterNavigation'
-import EventCard from './EventCard'
-
+import SessionSnack from 'components/Session/Snack'
 interface Props {
   sessions: Session[]
   stages: Stage['name'][]
@@ -52,7 +51,9 @@ export default function SessionComponent(props: Props) {
         <Container>
           <div className={styles.layout__content__grid}>
             {displayedSessions.map((session) => (
-              <EventCard key={session.id} session={session} />
+              <div key={session.id} className={styles.layout__content__grid__item}>
+                <SessionSnack session={session} />
+              </div>
             ))}
           </div>
         </Container>

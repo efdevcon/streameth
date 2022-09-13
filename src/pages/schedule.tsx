@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import { GetEvent } from 'services/event'
 import { Event, Session, Stage } from 'types'
 import Page from 'layouts/event-page'
-import AllEventsComponent from 'components/AllEvents/AllEventsComponent'
+import ScheduleComponent from 'components/Schedule/ScheduleComponent'
 import moment from 'moment'
 
 interface Props {
@@ -16,7 +16,7 @@ export default function Schedule(props: Props) {
 
   return (
     <Page event={props.event}>
-      <AllEventsComponent sessions={props.sessions} stages={props.stages} days={props.days} />
+      <ScheduleComponent sessions={props.sessions} stages={props.stages} days={props.days} />
     </Page>
   )
 }
