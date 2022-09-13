@@ -16,16 +16,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const streams: streamItem[] = await provider.getStreams(streamIds)
       console.log(streams)
-      const recordings: Recording[][] = await Promise.all(
-        streams.map((stream) => {
-          return provider.getRecordings(stream.id)
-        })
-      )
+      // const recordings: Recording[][] = await Promise.all(
+      //   streams.map((stream) => {
+      //     return provider.getRecordings(stream.id)
+      //   })
+      // )
 
       // merge recordings with their respective stream
-      streams.forEach((stream, index) => {
-        stream.recordings = recordings[index]
-      })
+      // streams.forEach((stream, index) => {
+      //   stream.recordings = recordings[index]
+      // })
 
       return res.status(200).json(streams)
     } catch (e: any) {

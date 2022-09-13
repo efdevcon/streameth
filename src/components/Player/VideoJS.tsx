@@ -8,6 +8,10 @@ import 'videojs-mux'
 import 'videojs-youtube'
 import { VideoJSProps } from './types'
 
+interface VideoJSCustomOptions extends videojs.PlayerOptions {
+  errorDisplay?: boolean
+}
+
 export const VideoJS = ({ ...props }: VideoJSProps) => {
   const { onReady, poster, source } = props
   const videoRef = useRef(null)
@@ -54,7 +58,7 @@ export const VideoJS = ({ ...props }: VideoJSProps) => {
               },
             },
           },
-        },
+        } as VideoJSCustomOptions,
         () => {
           onReady && onReady(player)
         }

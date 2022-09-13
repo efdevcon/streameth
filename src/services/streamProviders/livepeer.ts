@@ -3,6 +3,9 @@ import { get } from 'utils/requests'
 
 const BASE_API = 'https://livepeer.com/api'
 
+// temp
+type Recording = any
+
 interface LivepeerStream {
   isActive: boolean
   id: string
