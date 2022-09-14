@@ -3,7 +3,7 @@ import css from './SpeakerIcon.module.scss'
 
 interface Props {
   speaker: Speaker
-  size: 'sm' | 'md'
+  size?: 'sm' | 'md'
   onSpeakerClick?: (speaker: Speaker) => void
 }
 

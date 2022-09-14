@@ -4,7 +4,7 @@ import css from './SpeakerIconList.module.scss'
 
 interface Props {
   speakers: Speaker[]
-  onSpeakerClick: (speaker: Speaker) => void
+  onSpeakerClick?: (speaker: Speaker) => void
 }
 
 export default function SpeakerIconList({ speakers, onSpeakerClick }: Props) {
