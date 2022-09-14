@@ -36,7 +36,7 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
 
     return filteredSessions.filter((session) => {
       if (filters.length === 0) {
-        return session
+        return true
       }
 
       for (let i = 0; i < filters.length; i++) {
