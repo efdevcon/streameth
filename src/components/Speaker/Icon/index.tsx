@@ -3,6 +3,8 @@ import css from './SpeakerIcon.module.scss'
 
 interface Props {
   speaker: Speaker
+  size: 'sm' | 'md'
+  onSpeakerClick?: (speaker: Speaker) => void
 }
 
 const initials = (name: string) => {
@@ -13,9 +15,12 @@ const initials = (name: string) => {
     .slice(0, 2)
 }
 
-export default function SpeakerIcon({ speaker }: Props) {
+export default function SpeakerIcon({ speaker, onSpeakerClick, size = 'sm' }: Props) {
   return (
-    <div className={css.icon} style={{ backgroundImage: `url('${speaker.avatarUrl}')` }}>
+    <div
+      onClick={() => onSpeakerClick?.(speaker)}
+      className={`${css.icon} ${css[size]} ${onSpeakerClick ? css.pointer : ''}`}
+      style={{ backgroundImage: `url('${speaker.avatarUrl}')` }}>
       {!speaker.avatarUrl && <span>{initials(speaker.name)}</span>}
     </div>
   )

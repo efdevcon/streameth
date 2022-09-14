@@ -1,5 +1,5 @@
 import moment from 'moment'
-import { Session } from 'types'
+import { Session, Speaker } from 'types'
 import { ShareIcon } from '@heroicons/react/outline'
 import css from './SessionInfoBox.module.scss'
 import SpeakerIconList from 'components/Speaker/IconList'
@@ -7,9 +7,10 @@ import SpeakerIconList from 'components/Speaker/IconList'
 interface Props {
   session: Session
   onShareClick: () => void
+  onSpeakerClick: (speaker: Speaker) => void
 }
 
-export default function SessionInfoBox({ session, onShareClick }: Props) {
+export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }: Props) {
   return (
     <div className={css.box}>
       <div className={css.box__header}>
@@ -18,7 +19,7 @@ export default function SessionInfoBox({ session, onShareClick }: Props) {
         </div>
         <div className="flex align-items">
           <div className="mr-1 leading-none">Speakers:</div>
-          <SpeakerIconList speakers={session.speakers} />
+          <SpeakerIconList speakers={session.speakers} onSpeakerClick={onSpeakerClick} />
         </div>
       </div>
       <div className={css.box__body}>

@@ -1,7 +1,19 @@
 .icon {
-  @apply flex items-center justify-center h-6 w-6 rounded-full border border-gray-700 bg-cover bg-no-repeat bg-center p-1;
+  @apply flex items-center justify-center rounded-full border border-gray-700 bg-cover bg-no-repeat bg-center p-1;
 
   span {
     @apply text-sm leading-none text-gray-700;
   }
+}
+
+.sm {
+  @apply h-6 w-6;
+}
+
+.md {
+  @apply h-12 w-12;
+}
+
+.pointer {
+  @apply cursor-pointer;
 }

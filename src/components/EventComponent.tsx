@@ -15,8 +15,7 @@ import { useSessions } from 'hooks/useSessions'
 import Modal from './Modal'
 import { ShareBox } from './Share/Box'
 import { Speaker } from 'types'
-
-const openModal = () => {}
+import SpeakerModalBox from './Speaker/ModalBox'
 
 export function EventComponent() {
   const event = useEvent()
@@ -33,20 +32,9 @@ export function EventComponent() {
     ])
   }, [currentStage, eventDayNum, setFilters])
 
-  // const { sessions } = useSessions(event, [{ type: 'stage', value: currentStage.name }])
-  // console.log(timeState, currentSession, eventDayNum)
-  // const eventDays = [...new Set(event.schedule.sessions.map((i) => moment(i.start).startOf('day').valueOf()))].sort()
-  // const upcomingSessions = event.schedule.sessions
-  //   .filter((i) => i.stage === currentStage.name)
-  //   // filter on event days
-  //   // .filter(i => moment(i.start).startOf('day').valueOf()
-  //   //   === eventDays.find(i => i === moment().startOf('day').valueOf()) ?? eventDays[0])
-  //   .sort((a: any, b: any) => a.start - b.start)
   const { activeSource, onStreamError } = useLivestream(currentStage?.stream.map((i) => i.id) ?? [])
-  // TODO: get active session
-  // const session = upcomingSessions[0]
-  // console.log(session)
 
+  // Modal probably needs to be global context
   const openModal = (type: 'share' | 'speaker', speaker?: Speaker) => {
     setModalContentType(type)
     setSpeaker(speaker)
@@ -57,6 +45,7 @@ export function EventComponent() {
     if (modalContentType === 'share') {
       return <ShareBox title={currentSession.name} />
     } else if (modalContentType === 'speaker') {
+      return <SpeakerModalBox speaker={speaker} />
     }
 
     return null
@@ -89,7 +78,11 @@ export function EventComponent() {
             </ul>
           </div>
           <div className={styles.eventInfo}>
-            <SessionInfoBox session={currentSession} onShareClick={() => openModal('share')} />
+            <SessionInfoBox
+              session={currentSession}
+              onShareClick={() => openModal('share')}
+              onSpeakerClick={(speaker) => openModal('speaker', speaker)}
+            />
           </div>
         </div>
       </Container>
