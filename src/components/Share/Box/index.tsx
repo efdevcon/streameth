@@ -8,7 +8,7 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from 'react-share'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
+//import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styles from './ShareBox.module.scss'
 import { useState } from 'react'
 
@@ -43,9 +43,9 @@ export function ShareBox({ title }: Props) {
       </div>
       <div className={styles.box__copy}>
         <div className={styles.box__copy__box}>{url}</div>
-        <CopyToClipboard text={url} onCopy={() => setButtonText('Copied')}>
+        {/* <CopyToClipboard text={url} onCopy={() => setButtonText('Copied')}>
           <button className={styles.box__copy__button}>{buttonText}</button>
-        </CopyToClipboard>
+        </CopyToClipboard> */}
       </div>
     </div>
   )
