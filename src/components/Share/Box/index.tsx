@@ -21,9 +21,9 @@ export function ShareBox({ title }: Props) {
   const url = window.location.href
 
   return (
-    <div className="space-y-4">
-      <div className="text-lg">Share via...</div>
-      <div className="flex space-x-4 justify-center">
+    <div className={styles.box}>
+      <div className={styles.box__title}>Share via...</div>
+      <div className={styles.box__shareIcons}>
         <FacebookShareButton url={url} title={title}>
           <FacebookIcon />
           Facebook
@@ -41,10 +41,10 @@ export function ShareBox({ title }: Props) {
           Twitter
         </TwitterShareButton>
       </div>
-      <div className="flex justify-between">
-        <div className="bg-gray-100 px-2 py-1 grow border border-gray-200">{url}</div>
+      <div className={styles.box__copy}>
+        <div className={styles.box__copy__box}>{url}</div>
         <CopyToClipboard text={url} onCopy={() => setButtonText('Copied')}>
-          <button className="px-3 py-1 ml-3 bg-gray-300">{buttonText}</button>
+          <button className={styles.box__copy__button}>{buttonText}</button>
         </CopyToClipboard>
       </div>
     </div>
