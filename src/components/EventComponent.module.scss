@@ -29,7 +29,7 @@
 
   .sidebar {
     grid-area: sidebar;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 130px);
     @apply overflow-x-scroll relative pr-4 space-y-2;
   }
 
