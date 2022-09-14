@@ -27,6 +27,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   // get all different days in the sessions
   const days = event?.schedule.sessions.reduce((acc, session) => {
     const day = moment(session.start).format('MMM DD')
+    console.log(day)
     if (!acc.includes(day)) {
       acc.push(day)
     }

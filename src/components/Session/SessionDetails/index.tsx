@@ -3,13 +3,8 @@ import moment from 'moment'
 import { Session, Speaker } from 'types'
 import defaultAvatar from 'assets/images/default-avatar.png'
 import Image from 'next/image'
-import Clock from 'assets/images/clock.svg'
 import Calendar from 'assets/images/calendar.svg'
 import Camera from 'assets/images/camera.svg'
-interface Props {
-  start: number
-  location: string
-}
 
 export function DateDetail({ start, end }: { start: Session['start']; end: Session['end'] }) {
   return (

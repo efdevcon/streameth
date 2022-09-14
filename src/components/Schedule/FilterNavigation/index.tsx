@@ -32,7 +32,9 @@ export default function FilterNavigation(props: Props) {
     <>
       {isOpen ? (
         <div className={styles.filterNavigation}>
-          <div onClick={()=> setIsOpen(false)} className={styles.filterNavigation__back_button}>x</div>
+          <div onClick={() => setIsOpen(false)} className={styles.filterNavigation__back_button}>
+            x
+          </div>
           <div className={styles.filterNavigation__header}>Schedule</div>
           <div>
             <FilterNavigationItem title="Stages" items={props.stages} onItemSelect={props.onStageSelect} />

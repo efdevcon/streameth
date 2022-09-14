@@ -22,7 +22,6 @@ const useLiveStream = (streamIds: string[]) => {
     if (streamIds.length > 0) {
       fetchStreams()
       setInterval(() => {
-        console.log("fetching streams")
         fetchStreams()
       }
       , 10000)
@@ -31,7 +30,6 @@ const useLiveStream = (streamIds: string[]) => {
 
   useEffect(() => {
     if (streams.length > 0 && activeStream === null) {
-      console.log("setting active stream", streams[0])
       setActiveStream(streams[0])
     }
   }, [streams, activeStream])
@@ -43,7 +41,6 @@ const useLiveStream = (streamIds: string[]) => {
     console.log("onStreamError")
     if (activeStream == null) return
     const activeStreams = streams.filter((i) => i.id !== activeStream.id)
-    console.log("active streams", activeStreams, streams)
 
     setStreams([...activeStreams])
     if (activeStreams.length > 0) {
