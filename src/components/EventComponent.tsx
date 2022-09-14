@@ -2,13 +2,11 @@ import { useEffect, useState } from 'react'
 import { useEvent } from 'hooks/useEvent'
 import { useStage } from 'hooks/useStage'
 import useLivestream from 'hooks/useLivestream'
-import moment from 'moment'
 import Container from 'components/Container'
 import EventHeader from './Event/Header'
 import SessionInfoBox from './Session/Infobox'
 import styles from './EventComponent.module.scss'
-import { StageSelector } from './StageSelector'
-import Link from 'next/link'
+import StageSelector from 'components/Stage/Selector'
 import Player from './Player'
 import SessionSnack from './Session/Snack'
 import { useSessions } from 'hooks/useSessions'
@@ -65,8 +63,8 @@ export function EventComponent() {
             <Player source={activeSource} onStreamError={onStreamError} />
           </div>
           <div className={styles.sidebar}>
-            <StageSelector />
             <h3 className="text-2xl font-bold">Schedule</h3>
+            <StageSelector />
             <ul>
               {sessions.map((i) => {
                 return (

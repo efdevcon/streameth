@@ -24,11 +24,13 @@
 
   .player {
     grid-area: player;
-    @apply bg-green-500 aspect-video;
+    @apply aspect-video;
   }
 
   .sidebar {
     grid-area: sidebar;
+    height: calc(100vh - 120px);
+    @apply overflow-x-scroll relative pr-4 space-y-2;
   }
 
   .eventInfo {

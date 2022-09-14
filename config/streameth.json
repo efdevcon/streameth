@@ -11,8 +11,8 @@
     "type": "livepeer",
     "stages": [
       {
-        "id": "CreatorsLab",
-        "name": "Creators Lab",
+        "id": "Lexis",
+        "name": "Lexis",
         "stream": [
           {
             "id": "6781f539-49c1-4bec-98cf-8963102d83d3"
@@ -23,8 +23,8 @@
         ]
       },
       {
-        "id": "Lexis",
-        "name": "Lexis",
+        "id": "CreatorsLab",
+        "name": "Creators Lab",
         "stream": [
           {
             "id": "6781f539-49c1-4bec-98cf-8963102d83d3"
