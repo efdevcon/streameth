@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useEvent } from 'hooks/useEvent'
 import { useStage } from 'hooks/useStage'
 import useLivestream from 'hooks/useLivestream'
@@ -12,11 +12,19 @@ import Link from 'next/link'
 import Player from './Player'
 import SessionSnack from './Session/Snack'
 import { useSessions } from 'hooks/useSessions'
+import Modal from './Modal'
+import { ShareBox } from './Share/Box'
+import { Speaker } from 'types'
+
+const openModal = () => {}
 
 export function EventComponent() {
   const event = useEvent()
   const currentStage = useStage()
   const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions(event)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalContentType, setModalContentType] = useState<string | null>(null)
+  const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
 
   useEffect(() => {
     setFilters([
@@ -38,8 +46,27 @@ export function EventComponent() {
   // TODO: get active session
   // const session = upcomingSessions[0]
   // console.log(session)
+
+  const openModal = (type: 'share' | 'speaker', speaker?: Speaker) => {
+    setModalContentType(type)
+    setSpeaker(speaker)
+    setModalOpen(true)
+  }
+
+  const modalContent = () => {
+    if (modalContentType === 'share') {
+      return <ShareBox title={currentSession.name} />
+    } else if (modalContentType === 'speaker') {
+    }
+
+    return null
+  }
+
   return (
     <div>
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        {modalContent()}
+      </Modal>
       <Container>
         <div className={styles.widget}>
           <div className={styles.header}>
@@ -62,7 +89,7 @@ export function EventComponent() {
             </ul>
           </div>
           <div className={styles.eventInfo}>
-            <SessionInfoBox session={currentSession} />
+            <SessionInfoBox session={currentSession} onShareClick={() => openModal('share')} />
           </div>
         </div>
       </Container>
