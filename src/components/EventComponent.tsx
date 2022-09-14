@@ -8,12 +8,12 @@ import SessionInfoBox from './Session/Infobox'
 import styles from './EventComponent.module.scss'
 import StageSelector from 'components/Stage/Selector'
 import Player from './Player'
-import SessionSnack from './Session/Snack'
 import { useSessions } from 'hooks/useSessions'
 import Modal from './Modal'
 import { ShareBox } from './Share/Box'
 import { Speaker } from 'types'
 import SpeakerModalBox from './Speaker/ModalBox'
+import SessionList from './Session/List'
 
 export function EventComponent() {
   const event = useEvent()
@@ -65,15 +65,7 @@ export function EventComponent() {
           <div className={styles.sidebar}>
             <h3 className="text-2xl font-bold">Schedule</h3>
             <StageSelector />
-            <ul>
-              {sessions.map((i) => {
-                return (
-                  <li key={i.id} className="mb-3 text-lg">
-                    <SessionSnack session={i} />
-                  </li>
-                )
-              })}
-            </ul>
+            <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} />
           </div>
           <div className={styles.eventInfo}>
             <SessionInfoBox

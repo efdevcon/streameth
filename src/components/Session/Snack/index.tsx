@@ -5,9 +5,11 @@ import { CalendarIcon, VideoCameraIcon } from '@heroicons/react/outline'
 import SpeakerIconList from 'components/Speaker/IconList'
 import Link from 'next/link'
 
+export type SessionStatus = 'active' | 'past' | 'normal'
+
 interface Props {
   session: Session
-  status?: 'active' | 'past' | 'normal'
+  status?: SessionStatus
   learnMore?: boolean
 }
 
@@ -15,9 +17,9 @@ const formatDateTime = (start: number, end: number) => {
   return `${moment(start).format('MMMM D / H:mm')}-${moment(end).format('H:mm')}`
 }
 
-export default function SessionSnack({ session, status, learnMore }: Props) {
+export default function SessionSnack({ session, learnMore, status = 'normal' }: Props) {
   return (
-    <div className={css.container}>
+    <div className={`${css.container} ${css[status]}`}>
       <div className={css.title}>{session.name}</div>
       <div className={css.body}>
         <div className={css.iconText}>

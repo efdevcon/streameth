@@ -1,5 +1,15 @@
 .container {
-  @apply border  border-gray-500 p-3 rounded-md;
+  @apply border border-gray-500 p-3 rounded-md;
+
+  &.past {
+    @apply opacity-50;
+  }
+
+  &.active {
+    @apply border-2;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+  }
 }
 
 .body {
@@ -21,8 +31,6 @@
 .learnMore {
   @apply text-gray-500 text-sm font-medium text-end cursor-pointer;
 }
-
-
 
 .container:hover {
   @apply shadow-lg;

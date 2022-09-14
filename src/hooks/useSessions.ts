@@ -8,10 +8,12 @@ interface Filter {
   value: any
 }
 
+export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'
+
 export function useSessions(event: Event, initFilters: Filter[] = []) {
   const allSessions = event.schedule.sessions
   const [currentTimeUTC, setCurrentTimeUTC] = useState(currentTimeInUTC())
-  const [timeState, setTimeState] = useState<'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'>('BEFORE_EVENT')
+  const [timeState, setTimeState] = useState<TimeState>('BEFORE_EVENT')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
   const [eventDayNum, setEventDayNum] = useState<number | null>(null)
   const [filters, setFilters] = useState<Filter[]>(initFilters)

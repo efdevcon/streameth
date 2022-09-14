@@ -23,8 +23,7 @@ const useLiveStream = (streamIds: string[]) => {
       fetchStreams()
       setInterval(() => {
         fetchStreams()
-      }
-      , 10000)
+      }, 10000)
     }
   }, [])
 
@@ -34,11 +33,8 @@ const useLiveStream = (streamIds: string[]) => {
     }
   }, [streams, activeStream])
 
-
-
-
   const onStreamError = () => {
-    console.log("onStreamError")
+    console.log('onStreamError')
     if (activeStream == null) return
     const activeStreams = streams.filter((i) => i.id !== activeStream.id)
 
@@ -52,7 +48,7 @@ const useLiveStream = (streamIds: string[]) => {
   }
 
   return {
-    activeSource: activeStream ? { src: activeStream.playbackUrl, type: 'application/x-mpegURL' } as Source : null,
+    activeSource: activeStream ? ({ src: activeStream.playbackUrl, type: 'application/x-mpegURL' } as Source) : null,
     onStreamError,
   }
 }
