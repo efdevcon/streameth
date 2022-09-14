@@ -17,14 +17,14 @@ export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }
         <div className={css.box__date}>
           {moment(session.start).format('MMM DD / HH:mm')} - {moment(session.end).format('HH:mm')}
         </div>
-        <div className="flex align-items">
-          <div className="mr-1 leading-none">Speakers:</div>
-          <SpeakerIconList speakers={session.speakers} onSpeakerClick={onSpeakerClick} />
-        </div>
+        <ShareIcon className={css.box__shareIcon} onClick={onShareClick} />
       </div>
       <div className={css.box__body}>
         <p className={css.box__description}>{session.description || session.abstract}</p>
-        <ShareIcon className={css.box__shareIcon} onClick={onShareClick} />
+      </div>
+      <div className={css.speakers}>
+        <div className={css.speakers__title}>Speakers:</div>
+        <SpeakerIconList speakers={session.speakers} onSpeakerClick={onSpeakerClick} />
       </div>
     </div>
   )
