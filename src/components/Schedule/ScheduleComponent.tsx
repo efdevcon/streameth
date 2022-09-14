@@ -52,7 +52,7 @@ export default function SessionComponent(props: Props) {
           <div className={styles.layout__content__grid}>
             {displayedSessions.map((session) => (
               <div key={session.id} className={styles.layout__content__grid__item}>
-                <SessionSnack session={session} />
+                <SessionSnack session={session} learnMore/>
               </div>
             ))}
           </div>

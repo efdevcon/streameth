@@ -49,11 +49,9 @@ export const VideoJS = ({ ...props }: VideoJSProps) => {
             mux: {
               debug: false,
               data: {
-                env_key: '', // required
+                env_key: '1lgdh87bv14j6bhv83buspkj3', // required
                 // Metadata
-                player_name: '', // ex: 'My Main Player'
-                video_id: '', // ex: 'abcd123'
-                video_title: '', // ex: 'My Great Video'
+                player_name: source.src, 
                 player_init_time: initTime, // ex: 1451606400000
               },
             },

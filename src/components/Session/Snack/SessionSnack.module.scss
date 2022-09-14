@@ -1,5 +1,5 @@
 .container {
-  @apply border  border-2 border-gray-500 p-3 rounded-md;
+  @apply border  border-gray-500 p-3 rounded-md;
 }
 
 .body {
@@ -17,6 +17,12 @@
     @apply h-5 w-5 mr-1;
   }
 }
+
+.learnMore {
+  @apply text-gray-500 text-sm font-medium text-end cursor-pointer;
+}
+
+
 
 .container:hover {
   @apply shadow-lg;

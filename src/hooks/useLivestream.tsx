@@ -20,6 +20,7 @@ const useLiveStream = (streamIds: string[]) => {
 
   useEffect(() => {
     if (streamIds.length > 0) {
+      fetchStreams()
       setInterval(() => {
         console.log("fetching streams")
         fetchStreams()
