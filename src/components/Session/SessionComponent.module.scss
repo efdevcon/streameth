@@ -1,5 +1,5 @@
 .header {
-  @apply flex items-center justify-between lg:h-16 my-5 lg:mb-5;
+  @apply flex items-center justify-between lg:h-16 my-5 lg:mb-2;
 
   &__image {
     @apply max-h-[220px] w-full overflow-clip;

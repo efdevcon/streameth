@@ -1,7 +1,7 @@
 
 
 .box {
-  @apply flex flex-row  items-center rounded bg-[#F9F9F9] p-4 box-border cursor-pointer;
+  @apply flex flex-row  items-center rounded bg-[#F9F9F9] p-4 box-border cursor-pointer mb-2;
   box-shadow: 1px 1px 1px #F1F1F1 inset;
 
   &__title {
@@ -10,7 +10,7 @@
   }
 
   &__name {
-    @apply font-normal text-xl; 
+    @apply font-normal text-lg ml-4; 
   }
 }
 

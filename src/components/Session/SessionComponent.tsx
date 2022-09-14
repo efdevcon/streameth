@@ -47,8 +47,6 @@ export default function SessionComponent(props: Props) {
             ))}
           </div>
         </div>
-        <div className="flex flex-row"></div>
-        <div className="flex flex-row"></div>
       </SessionContainer>
     </>
   )

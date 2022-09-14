@@ -15,7 +15,7 @@ export function DateDetail({ start, end }: { start: Session['start']; end: Sessi
   return (
     <div className="flex items-center">
       <Calendar />
-      <div className="ml-2 text-[#AAAAAA] text-base">
+      <div className="ml-2 text-gray-500 text-base">
         {moment(start).format('MMM DD / HH:mm')} - {moment(end).format('HH:mm')}
       </div>
     </div>
@@ -34,7 +34,7 @@ export function StageDetail({stage}: {stage: Session["stage"]}) {
   return (
     <div className="flex items-center">
       <Camera />
-      <div className="ml-2 text-[#AAAAAA] text-base">
+      <div className="ml-2 text-gray-500 text-base">
         {stage}</div>
     </div>
   )

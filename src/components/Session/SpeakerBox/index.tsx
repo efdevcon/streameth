@@ -1,30 +1,11 @@
 import React from 'react'
 import { Speaker } from 'types'
 import styles from './SpeakerBox.module.scss'
-import Image from 'next/image'
 import SpeakerIcon from 'components/Speaker/Icon'
-
+import SpeakerModalBox from 'components/Speaker/ModalBox'
+import Modal from 'components/Modal'
 interface Props {
   speaker: Speaker
-}
-
-export function SpeakerModal({ speaker, onClose }: { speaker: Speaker; onClose: () => void }) {
-  return (
-    <div className={styles.modal}>
-      <div className={styles.modal__content}>
-        <div className={styles.modal__close} onClick={onClose}>
-          X
-        </div>
-        <div className={styles.modal__header}>
-          <SpeakerIcon speaker={speaker} />
-          <h2 className={styles.modal__header__text}>{speaker.name}</h2>
-        </div>
-        <div className={styles.modal__body}>
-          <p>{speaker.description}</p>
-        </div>
-      </div>
-    </div>
-  )
 }
 
 export default function SpeakerBox(props: Props) {
@@ -34,7 +15,11 @@ export default function SpeakerBox(props: Props) {
 
   return (
     <>
-      {isOpen && <SpeakerModal speaker={speaker} onClose={() => setIsOpen(false)} />}
+      {isOpen && (
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+          <SpeakerModalBox speaker={speaker} />
+        </Modal>
+      )}
       <div className={styles.box} onClick={() => setIsOpen(true)}>
         <SpeakerIcon speaker={speaker} />
         <div className={styles.box__text}>
