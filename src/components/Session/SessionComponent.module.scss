@@ -1,16 +1,16 @@
 .header {
-  @apply flex items-center justify-between lg:h-16 my-5 lg:mb-2;
+  @apply flex items-center justify-between  my-5 lg:mb-2;
 
   &__image {
     @apply max-h-[220px] w-full overflow-clip;
   }
 
   &__title {
-    @apply  font-bold text-xl lg:text-4xl;
+    @apply  font-bold text-xl lg:text-3xl;
   }
 
   &__speakerTitle {
-    @apply font-bold text-lg lg:text-2xl;
+    @apply font-bold text-lg lg:text-3xl;
   }
 }
 
