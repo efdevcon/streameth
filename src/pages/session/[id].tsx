@@ -6,6 +6,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
 import SessionComponent from 'components/Session/SessionComponent'
+import { SEO } from 'components/seo'
 interface Props {
   event?: Event
   session?: Session
@@ -18,8 +19,10 @@ interface Params extends ParsedUrlQuery {
 
 export default function Stage(props: Props) {
   if (!props.session) return <></>
+
   return (
     <Page event={props.event}>
+      <SEO title={props.session.name} />
       <SessionComponent session={props.session} />
     </Page>
   )
@@ -30,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: event ? event.schedule.sessions.map((i) => ({ params: { id: i.id } })) : [],
-    fallback: true,
+    fallback: false,
   }
 }
 
@@ -46,7 +49,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
       event,
       session,
       sessionId,
-    },
-    revalidate: DEFAULT_REVALIDATE_PERIOD,
+    }
   }
 }

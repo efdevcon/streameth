@@ -12,7 +12,6 @@ interface Props {
 }
 
 export default function SessionComponent(props: Props) {
-  console.log(props.session)
   return (
     <>
       <div className={styles.header__image}>

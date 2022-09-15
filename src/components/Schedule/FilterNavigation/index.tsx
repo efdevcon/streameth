@@ -41,7 +41,7 @@ function FilterNavigationItem({
 }
 
 export default function FilterNavigation(props: Props) {
-  const [isOpen, setIsOpen] = React.useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <>

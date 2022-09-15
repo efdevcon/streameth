@@ -9,9 +9,12 @@ interface Props {
 
 export default function SpeakerIconList({ speakers, onSpeakerClick }: Props) {
   return (
-    <div className={css.list}>
+    <div className={`${css.list} items-center gap-1`}>
       {speakers.map((speaker) => (
-        <SpeakerIcon key={speaker.id} speaker={speaker} onSpeakerClick={onSpeakerClick} />
+        <>
+          <SpeakerIcon key={speaker.id} speaker={speaker} onSpeakerClick={onSpeakerClick} />
+          <p>{speaker.name}</p>
+        </>
       ))}
     </div>
   )

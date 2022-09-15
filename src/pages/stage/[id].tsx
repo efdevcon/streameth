@@ -5,7 +5,8 @@ import Page from 'layouts/event-page'
 import { EventComponent } from 'components/EventComponent'
 import { ParsedUrlQuery } from 'querystring'
 import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
-import Container from 'components/Container'
+import { SEO } from 'components/seo'
+
 interface Props {
   event?: Event
   stageId?: string
@@ -16,8 +17,11 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function Stage(props: Props) {
+  const stage = props.event?.stream.stages.find(i => i.id === props.stageId)
+
   return (
     <Page event={props.event} stageId={props.stageId}>
+      {stage && <SEO title={stage.name} />}
       <EventComponent />
     </Page>
   )
