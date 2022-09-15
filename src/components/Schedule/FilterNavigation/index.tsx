@@ -46,7 +46,7 @@ export default function FilterNavigation(props: Props) {
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
       function handleResize() {
-        setIsOpen( window.innerWidth > 768);
+        setIsOpen( window.innerWidth > 1024);
       }
       window.addEventListener("resize", handleResize);
       handleResize();
