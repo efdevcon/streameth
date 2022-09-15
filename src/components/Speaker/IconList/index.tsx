@@ -12,8 +12,8 @@ export default function SpeakerIconList({ speakers, onSpeakerClick }: Props) {
   return (
     <div className={`${css.list} flex-col gap-2`}>
       {speakers.map((speaker) => (
-        <div className='flex flex-row gap-2'>
-          <EthBerlinSpeakerIcon key={speaker.id} speaker={speaker} onSpeakerClick={onSpeakerClick}  />
+        <div key={speaker.id} className='flex flex-row gap-2'>
+          <EthBerlinSpeakerIcon speaker={speaker} onSpeakerClick={onSpeakerClick}  />
           {/* <SpeakerIcon key={speaker.id} speaker={speaker} onSpeakerClick={onSpeakerClick} /> */}
           <p>{speaker.name}</p>
         </div>
