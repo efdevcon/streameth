@@ -3,7 +3,6 @@ import { GetEvent } from 'services/event'
 import { Event, Session } from 'types'
 import Page from 'layouts/event-page'
 import { ParsedUrlQuery } from 'querystring'
-import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
 import SessionComponent from 'components/Session/SessionComponent'
 import { SEO } from 'components/seo'

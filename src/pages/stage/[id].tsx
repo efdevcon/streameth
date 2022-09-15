@@ -4,7 +4,6 @@ import { Event } from 'types'
 import Page from 'layouts/event-page'
 import { EventComponent } from 'components/EventComponent'
 import { ParsedUrlQuery } from 'querystring'
-import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { SEO } from 'components/seo'
 
 interface Props {
@@ -32,7 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: event ? event?.stream.stages.map((i) => ({ params: { id: i.id } })) : [],
-    fallback: true,
+    fallback: false,
   }
 }
 
@@ -47,6 +46,5 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
       event,
       stageId,
     },
-    revalidate: DEFAULT_REVALIDATE_PERIOD,
   }
 }
