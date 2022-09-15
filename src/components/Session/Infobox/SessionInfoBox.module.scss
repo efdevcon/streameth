@@ -1,5 +1,5 @@
 .box {
-  @apply bg-gray-200 px-3 py-2 space-y-2;
+  @apply bg-gray-200 px-3 py-2 space-y-2 rounded;
 
   &__header {
     @apply border-b-2 border-gray-400 pb-1 flex justify-between items-center;

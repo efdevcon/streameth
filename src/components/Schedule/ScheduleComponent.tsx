@@ -24,7 +24,6 @@ export default function SessionComponent(props: Props) {
   }
 
   useEffect(() => {
-    console.log(selectedItems)
     // filter sessions by stage and day
     setDisplayedSessions([
       ...props.sessions.filter((session) => {

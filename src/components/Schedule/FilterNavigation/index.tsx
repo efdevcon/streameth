@@ -43,6 +43,17 @@ function FilterNavigationItem({
 export default function FilterNavigation(props: Props) {
   const [isOpen, setIsOpen] = React.useState(true)
 
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      function handleResize() {
+        setIsOpen( window.innerWidth > 768);
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []); 
+
   return (
     <>
       {isOpen ? (

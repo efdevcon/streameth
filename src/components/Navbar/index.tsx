@@ -40,7 +40,7 @@ export default function Navbar() {
                 <div className={css.navbar__logo}>
                   <Link href="/">
                     <a>
-                      <Image src={img} alt="StreamETH" />
+                      <Image src={img} alt="StreamETH" layout='fill' />
                     </a>
                   </Link>
                 </div>
