@@ -22,21 +22,25 @@ export default function SessionSnack({ session, learnMore, status = 'normal' }: 
     <div className={`${css.container} ${css[status]}`}>
       <div className={css.title}>{session.name}</div>
       <div className={css.body}>
-        <div className={css.iconText}>
-          <CalendarIcon />
-          <span>{formatDateTime(session.start, session.end)}</span>
+        <div>
+          <div className={css.iconText}>
+            <CalendarIcon />
+            <span>{formatDateTime(session.start, session.end)}</span>
+          </div>
+          <div className={css.iconText}>
+            <VideoCameraIcon />
+            <span>{session.stage}</span>
+          </div>
         </div>
-        <div className={css.iconText}>
-          <VideoCameraIcon />
-          <span>{session.stage}</span>
+        <div className="flex justify-between">
+          <SpeakerIconList speakers={session.speakers} />
+          {learnMore && (
+            <Link href={'/session/' + session.id}>
+              <div className={css.learnMore}> Learn more {'>>'}</div>
+            </Link>
+          )}
         </div>
-        <SpeakerIconList speakers={session.speakers} />
       </div>
-      {learnMore && (
-        <Link href={'/session/' + session.id}>
-          <div className={css.learnMore}> Learn more {'>>'}</div>
-        </Link>
-      )}
     </div>
   )
 }

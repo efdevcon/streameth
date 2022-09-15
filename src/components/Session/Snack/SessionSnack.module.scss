@@ -1,5 +1,5 @@
 .container {
-  @apply border border-gray-500 p-3 rounded-md;
+  @apply flex flex-col border border-gray-500 p-3 rounded-md;
 
   &.past {
     @apply opacity-50;
@@ -13,7 +13,7 @@
 }
 
 .body {
-  @apply text-gray-400 text-sm space-y-2;
+  @apply flex-grow flex flex-col text-gray-400 text-sm space-y-2 justify-between;
 }
 
 .title {
