@@ -6,7 +6,7 @@
     @apply lg:w-5/6 h-full overflow-y-scroll ml-auto;
 
     &__grid {
-      @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+      @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4;
 
       &__item {
         // @apply w-full lg:w-1/2 xl:w-1/4 p-4;

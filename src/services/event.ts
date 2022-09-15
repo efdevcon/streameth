@@ -23,8 +23,8 @@ export async function GetEvent(): Promise<Event | undefined> {
     const sessions = await GetSchedule(event.schedule.type, event.schedule.config)
     event.schedule.sessions = sessions
 
-    const archive = await GetArchive(event.archive.type, event.archive.config)
-    event.archive.sessions = archive
+     // const archive = await GetArchive(event.archive.type, event.archive.config)
+    // event.archive.sessions = archive
 
     cacheData.put('event', event)
     return event

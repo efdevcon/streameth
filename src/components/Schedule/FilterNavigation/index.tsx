@@ -5,18 +5,33 @@ import Calendar from 'assets/images/calendar.svg'
 interface Props {
   stages: Stage['name'][]
   days: string[]
-  onStageSelect: (stage: string) => void
-  onDaySelect: (day: string) => void
+  onSelect: (stage: string) => void
+  selectedItems: string[]
 }
 
-function FilterNavigationItem({ title, items, onItemSelect }: { title: string; items: string[] | number[]; onItemSelect: (item: string) => void }) {
+function FilterNavigationItem({
+  title,
+  items,
+  onItemSelect,
+  selectedItems,
+}: {
+  title: string
+  items: string[] | number[]
+  onItemSelect: (item: string) => void
+  selectedItems: string[]
+}) {
   return (
     <div className={styles.filterNavigation__item}>
       <div className={styles.filterNavigation__item__title}>{title}</div>
       <div className={styles.filterNavigation__item__list}>
         {items?.map((item, index) => (
           <div key={index} className={styles.filterNavigation__item__list__item}>
-            <input type="checkbox" onChange={() => onItemSelect(item.toString())} className="mr-2" />
+            <input
+              type="checkbox"
+              onChange={() => onItemSelect(item.toString())}
+              className="mr-2"
+              checked={selectedItems.includes(item.toString())}
+            />
             {item}
           </div>
         ))}
@@ -37,8 +52,8 @@ export default function FilterNavigation(props: Props) {
           </div>
           <div className={styles.filterNavigation__header}>Schedule</div>
           <div>
-            <FilterNavigationItem title="Stages" items={props.stages} onItemSelect={props.onStageSelect} />
-            <FilterNavigationItem title="Days" items={props.days} onItemSelect={props.onDaySelect} />
+            <FilterNavigationItem title="Stages" items={props.stages} onItemSelect={props.onSelect} selectedItems={props.selectedItems} />
+            <FilterNavigationItem title="Days" items={props.days} onItemSelect={props.onSelect} selectedItems={props.selectedItems} />
           </div>
         </div>
       ) : (

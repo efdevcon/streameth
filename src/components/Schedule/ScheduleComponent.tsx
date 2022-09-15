@@ -13,39 +13,42 @@ interface Props {
 
 export default function SessionComponent(props: Props) {
   const [displayedSessions, setDisplayedSessions] = React.useState(props.sessions)
-  const [selectedStage, setSelectedStage] = React.useState<string[]>([])
-  const [selectedDay, setSelectedDay] = React.useState<string[]>([])
+  const [selectedItems, setSelectedItems] = React.useState<string[]>([])
 
-  const handleSelectedStage = (stage: string) => {
-    if (selectedStage?.includes(stage)) {
-      setSelectedStage(selectedStage.filter((i) => i !== stage))
+  const handleSelectedItems = (item: string) => {
+    if (selectedItems.includes(item)) {
+      setSelectedItems(selectedItems.filter((i) => i !== item))
     } else {
-      setSelectedStage([...selectedStage, stage])
-    }
-  }
-
-  const handleSelectedDay = (day: string) => {
-    if (selectedDay?.includes(day)) {
-      setSelectedDay(selectedDay.filter((i) => i !== day))
-    } else {
-      setSelectedDay([...selectedDay, day])
+      setSelectedItems([...selectedItems, item])
     }
   }
 
   useEffect(() => {
+    console.log(selectedItems)
     // filter sessions by stage and day
     setDisplayedSessions([
       ...props.sessions.filter((session) => {
         const day = momemt(session.start).format('MMM DD')
-        return (selectedStage.length === 0 || selectedStage.includes(session.stage ?? '')) && (selectedDay.length === 0 || selectedDay.includes(day))
+        const noStageSelected = selectedItems.filter((item) => props.stages.includes(item)).length === 0
+        const noDaySelected = selectedItems.filter((item) => props.days.includes(item)).length === 0
+        if (noStageSelected && noDaySelected) {
+          return true
+        }
+        if (noStageSelected) {
+          return selectedItems.includes(day)
+        }
+        if (noDaySelected) {
+          return selectedItems.includes(session.stage ?? '')
+        }
+        return selectedItems.includes(session.stage ?? '') && selectedItems.includes(day)
       }),
     ])
-  }, [selectedStage, selectedDay])
+  }, [selectedItems])
 
   return (
     <div className={styles.layout}>
       <div className={styles.layout__filter}>
-        <FilterNavigation stages={props.stages} days={props.days} onStageSelect={handleSelectedStage} onDaySelect={handleSelectedDay} />
+        <FilterNavigation stages={props.stages} days={props.days} onSelect={handleSelectedItems} selectedItems={selectedItems} />
       </div>
       <div className={styles.layout__content}>
         <Container>
