@@ -1,17 +1,17 @@
 import React from 'react'
-import moment from 'moment'
 import { Session, Speaker } from 'types'
 import defaultAvatar from 'assets/images/default-avatar.png'
 import Image from 'next/image'
 import Calendar from 'assets/images/calendar.svg'
 import Camera from 'assets/images/camera.svg'
+import { localizedMoment } from 'utils/dateTime'
 
 export function DateDetail({ start, end }: { start: Session['start']; end: Session['end'] }) {
   return (
     <div className="flex items-center">
       <Calendar />
       <div className="ml-2 text-gray-500 text-base">
-        {moment(start).format('MMM DD / HH:mm')} - {moment(end).format('HH:mm')}
+        {localizedMoment(start).format('MMM DD / HH:mm')} - {localizedMoment(end).format('HH:mm')}
       </div>
     </div>
   )
@@ -25,7 +25,7 @@ export function UserAvatar({ avatarUrl }: { avatarUrl: Speaker['avatarUrl'] }) {
   )
 }
 
-export function StageDetail({stage}: {stage: Session["stage"]}) {
+export function StageDetail({ stage }: { stage: Session["stage"] }) {
   return (
     <div className="flex items-center">
       <Camera />

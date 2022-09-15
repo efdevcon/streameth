@@ -12,7 +12,7 @@ interface Props {
 export default function Modal({ isOpen, children, onClose }: Props) {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog as="div" className={styles.modal__container} onClose={onClose}>
+      <Dialog as="div" className={`${styles.modal__container} flex justify-center items-center`} onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

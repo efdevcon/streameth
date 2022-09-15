@@ -1,8 +1,8 @@
-import moment from 'moment'
 import { Session, Speaker } from 'types'
 import { ShareIcon } from '@heroicons/react/outline'
 import css from './SessionInfoBox.module.scss'
 import SpeakerIconList from 'components/Speaker/IconList'
+import { localizedMoment } from 'utils/dateTime'
 
 interface Props {
   session: Session
@@ -15,7 +15,7 @@ export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }
     <div className={css.box}>
       <div className={css.box__header}>
         <div className={css.box__date}>
-          {moment(session.start).format('MMM DD / HH:mm')} - {moment(session.end).format('HH:mm')}
+          {localizedMoment(session.start).format('MMM DD / HH:mm')} - {localizedMoment(session.end).format('HH:mm')}
         </div>
         <ShareIcon className={css.box__shareIcon} onClick={onShareClick} />
       </div>
