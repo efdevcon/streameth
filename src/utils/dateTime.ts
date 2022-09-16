@@ -11,7 +11,7 @@ export const startOfDay = (d: moment.Moment | number): number => {
 }
 
 export const currentTimeInUTC = () => {
-  return moment().tz(EVENT_TIMEZONE).subtract(2, 'hours') // TODO: Fix properly based on user
+  return moment().tz(EVENT_TIMEZONE).add(2, 'hours') // TODO: Fix properly based on user
 }
 
 export const localizedMoment = (value: number): Moment => {
