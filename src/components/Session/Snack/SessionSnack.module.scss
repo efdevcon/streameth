@@ -32,6 +32,10 @@
   @apply text-gray-500 text-sm font-medium text-end cursor-pointer;
 }
 
+.link {
+  @apply cursor-pointer;
+}
+
 .container:hover {
   @apply shadow-lg;
 }

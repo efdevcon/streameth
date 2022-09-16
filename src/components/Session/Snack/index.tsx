@@ -18,29 +18,29 @@ const formatDateTime = (start: number, end: number) => {
 }
 
 export default function SessionSnack({ session, learnMore, status = 'normal' }: Props) {
-  return (
-    <div className={`${css.container} ${css[status]}`}>
-      <div className={css.title}>{session.name}</div>
-      <div className={css.body}>
-        <div>
-          <div className={css.iconText}>
-            <CalendarIcon />
-            <span>{formatDateTime(session.start, session.end)}</span>
-          </div>
-          <div className={css.iconText}>
-            <VideoCameraIcon />
-            <span>{session.stage}</span>
-          </div>
+  const component = <div className={`${css.container} ${css[status]} ${learnMore ? css['link'] : ''}`}>
+    <div className={css.title}>{session.name}</div>
+    <div className={css.body}>
+      <div>
+        <div className={css.iconText}>
+          <CalendarIcon />
+          <span>{formatDateTime(session.start, session.end)}</span>
         </div>
-        <div className="flex justify-between items-center">
-          <SpeakerIconList speakers={session.speakers} />
-          {learnMore && (
-            <Link href={'/session/' + session.id}>
-              <div className={css.learnMore}> Learn more {'>>'}</div>
-            </Link>
-          )}
+        <div className={css.iconText}>
+          <VideoCameraIcon />
+          <span>{session.stage}</span>
         </div>
       </div>
+      <div className="flex">
+        <SpeakerIconList speakers={session.speakers} />
+      </div>
     </div>
-  )
+  </div>
+
+  if (learnMore)
+    return <Link href={'/session/' + session.id}>
+      {component}
+    </Link>
+
+  return component
 }

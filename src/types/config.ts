@@ -21,7 +21,7 @@ export interface Schedule {
   sessions: Session[]
 }
 
-export type ArchiveTypes = 'ipfs' | 'livepeer' | 'youtube'
+export type ArchiveTypes = 'gsheet'
 export interface Archive {
   version: number
   type: ArchiveTypes

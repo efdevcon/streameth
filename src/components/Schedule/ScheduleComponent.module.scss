@@ -1,6 +1,7 @@
 .layout {
   @apply flex flex-row;
   height: 90vh;
+  padding-bottom: 20px;
 
   &__content {
     @apply lg:w-5/6 h-full overflow-y-scroll ml-auto;

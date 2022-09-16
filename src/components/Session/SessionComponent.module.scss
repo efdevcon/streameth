@@ -6,11 +6,11 @@
   }
 
   &__title {
-    @apply font-bold text-xl lg:text-4xl dark:text-white mb-3;
+    @apply font-bold text-xl lg:text-3xl dark:text-white mb-3;
   }
 
   &__speakerTitle {
-    @apply font-bold text-lg lg:text-2xl dark:text-gray-300;
+    @apply font-bold text-lg lg:text-3xl dark:text-gray-300;
   }
 }
 
