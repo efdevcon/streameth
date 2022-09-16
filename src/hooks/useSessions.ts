@@ -109,7 +109,7 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
   useInterval(() => {
     calcTimeState()
   },
-    ['BEFORE_NEXT_DAY', 'AFTER_EVENT'].includes(timeState) ? null : 60000
+    ['BEFORE_NEXT_DAY', 'AFTER_EVENT'].includes(timeState) ? null : 60
   )
 
   return {
