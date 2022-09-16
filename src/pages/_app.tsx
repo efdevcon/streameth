@@ -5,6 +5,7 @@ import { SEO } from 'components/seo'
 import type { AppProps } from 'next/app'
 import init from '@socialgouv/matomo-next'
 import { useEffect } from 'react'
+import Script from 'next/script'
 
 type AppLayoutProps = AppProps & {
   Component: LayoutPageType
@@ -24,9 +25,12 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
   }, [pageProps.event])
 
   return (
-    <Layout>
-      <SEO />
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Script src="/theme.js" />
+      <Layout>
+        <SEO />
+        <Component {...pageProps} />
+      </Layout>
+    </>
   )
 }

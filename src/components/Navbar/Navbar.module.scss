@@ -21,14 +21,14 @@
     @apply flex-1 flex items-center sm:items-stretch justify-between;
 
     &__items {
-      @apply hidden md:block;
+      @apply hidden md:flex md:items-center;
     }
 
     &__item {
-      @apply px-6 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-200;
+      @apply px-6 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-200 border border-transparent dark:text-gray-100 dark:hover:bg-black dark:hover:border dark:hover:border-white;
 
       &.active {
-        @apply bg-gray-200 text-gray-800;
+        @apply bg-gray-200 text-gray-800 dark:text-gray-100 dark:bg-black dark:border-white;
       }
     }
   }
@@ -45,10 +45,10 @@
     }
 
     &__item {
-      @apply block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-200;
+      @apply block px-3 border border-transparent py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-200 dark:text-white dark:hover:border-white dark:hover:bg-black;
 
       &.active {
-        @apply bg-gray-200 text-gray-800;
+        @apply bg-gray-200 text-gray-800 dark:bg-black dark:border dark:border-white dark:text-white;
       }
     }
   }

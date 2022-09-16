@@ -63,7 +63,7 @@ export function EventComponent() {
             <Player source={activeSource} onStreamError={onStreamError} />
           </div>
           <div className={styles.sidebar}>
-            <h3 className="text-2xl font-bold">Schedule</h3>
+            <h3 className="text-2xl font-bold dark:text-white">Schedule</h3>
             <StageSelector />
             <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} />
           </div>

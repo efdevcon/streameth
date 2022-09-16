@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import css from './Navbar.module.scss'
 import img from 'assets/images/logo.png'
+import DarkModeToggle from 'components/DarkMode/Toggle'
 import Container from 'components/Container'
 import { useRouter } from 'next/router'
 
@@ -40,7 +41,7 @@ export default function Navbar() {
                 <div className={css.navbar__logo}>
                   <Link href="/">
                     <a>
-                      <Image src={img} alt="StreamETH" layout='fill' />
+                      <Image src={img} alt="StreamETH" layout="fill" />
                     </a>
                   </Link>
                 </div>
@@ -56,6 +57,7 @@ export default function Navbar() {
                       </a>
                     ))}
                   </div>
+                  <DarkModeToggle />
                 </div>
               </div>
             </div>
@@ -72,6 +74,9 @@ export default function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <div className="px-3">
+                <DarkModeToggle />
+              </div>
             </div>
           </Disclosure.Panel>
         </>

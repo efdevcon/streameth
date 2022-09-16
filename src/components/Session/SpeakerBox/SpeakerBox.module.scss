@@ -1,8 +1,6 @@
-
-
 .box {
-  @apply flex flex-row  items-center rounded bg-[#F9F9F9] p-4 box-border cursor-pointer mb-2;
-  box-shadow: 1px 1px 1px #F1F1F1 inset;
+  @apply flex flex-row  items-center rounded bg-[#F9F9F9] p-4 box-border cursor-pointer mb-3 dark:bg-black dark:shadow-white dark:shadow;
+  // box-shadow: 1px 1px 1px #f1f1f1 inset;
 
   &__title {
     @apply text-[#4F4F4F] font-bold text-lg;
@@ -10,18 +8,17 @@
   }
 
   &__name {
-    @apply font-normal text-lg ml-4; 
+    @apply font-normal text-lg ml-4 dark:text-gray-200;
   }
 }
 
 // hover
 .box:hover {
-  box-shadow: 1px 1px 1px #F1F1F1;
+  box-shadow: 1px 1px 1px #f1f1f1;
 }
 
 .modal {
-
-  @apply fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[rgba(0,0,0,0.5)] z-50;  
+  @apply fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[rgba(0,0,0,0.5)] z-50;
 
   &__content {
     @apply bg-white rounded-lg p-4 w-11/12 md:w-1/2 lg:w-1/4 relative;
@@ -39,7 +36,7 @@
     @apply text-[#4F4F4F] font-bold text-xl;
   }
 
-   &__body {
+  &__body {
     @apply flex flex-col items-center justify-between mb-4;
   }
 }

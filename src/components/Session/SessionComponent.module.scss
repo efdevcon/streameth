@@ -1,16 +1,16 @@
 .header {
-  @apply flex items-center justify-between lg:h-16 my-5 lg:mb-2;
+  @apply flex items-center justify-between my-5 lg:mb-2;
 
   &__image {
     @apply max-h-[220px] w-full overflow-clip;
   }
 
   &__title {
-    @apply  font-bold text-xl lg:text-4xl;
+    @apply font-bold text-xl lg:text-4xl dark:text-white mb-3;
   }
 
   &__speakerTitle {
-    @apply font-bold text-lg lg:text-2xl;
+    @apply font-bold text-lg lg:text-2xl dark:text-gray-300;
   }
 }
 
@@ -46,4 +46,8 @@
 
 .details {
   @apply flex flex-col space-y-2 my-5 lg:my-10;
+}
+
+.textBox {
+  @apply dark:text-gray-300;
 }

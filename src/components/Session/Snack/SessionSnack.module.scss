@@ -17,7 +17,7 @@
 }
 
 .title {
-  @apply text-lg font-medium leading-tight mb-2;
+  @apply text-lg font-medium leading-tight mb-2 dark:text-gray-200;
 }
 
 .iconText {

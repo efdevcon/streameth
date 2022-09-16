@@ -2,6 +2,6 @@
   @apply flex items-center;
 
   &__title {
-    @apply text-3xl mr-3 mt-2;
+    @apply text-3xl mr-3 mt-2 dark:text-white;
   }
 }
