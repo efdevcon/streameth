@@ -18,6 +18,10 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
   const [filters, setFilters] = useState<Filter[]>(initFilters)
   const eventDays = [...new Set(allSessions.map((i) => startOfDay(i.start)))].sort()
 
+  useEffect(() => {
+    calcTimeState()
+  }, [])
+
   // determine event day number if during event
   useEffect(() => {
     if (eventDays.length > 1) {
