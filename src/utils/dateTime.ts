@@ -11,7 +11,7 @@ export const startOfDay = (d: moment.Moment | number): number => {
 }
 
 export const currentTimeInUTC = () => {
-  return moment().utc()
+  return moment()
 }
 
 export const localizedMoment = (value: number): Moment => {

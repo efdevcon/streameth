@@ -12,8 +12,7 @@ export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFT
 
 export function useSessions(event: Event, initFilters: Filter[] = []) {
   const allSessions = event.schedule.sessions
-  const [currentTimeUTC, setCurrentTimeUTC] = useState(currentTimeInUTC())
-  const [timeState, setTimeState] = useState<TimeState>('BEFORE_EVENT')
+  const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
   const [eventDayNum, setEventDayNum] = useState<number | null>(null)
   const [filters, setFilters] = useState<Filter[]>(initFilters)
@@ -25,13 +24,13 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
       for (let i = 0; i < eventDays.length; i++) {
         const day = eventDays[i]
 
-        if (day === startOfDay(currentTimeUTC)) {
+        if (day === startOfDay(currentTimeInUTC())) {
           setEventDayNum(i + 1)
           break
         }
       }
     }
-  }, [currentTimeUTC, eventDays])
+  }, [eventDays])
 
   const sessions = useMemo(() => {
     let filteredSessions = [...allSessions]
@@ -82,13 +81,13 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
       const startTime = session.start
       const endTime = session.end
 
-      if (currentTimeUTC.isBefore(startTime) && i === 0) {
+      if (currentTimeInUTC().isBefore(startTime) && i === 0) {
         setCurrentSession(session)
         break
-      } else if (currentTimeUTC.isBefore(endTime)) {
+      } else if (currentTimeInUTC().isBefore(endTime)) {
         setCurrentSession(session)
 
-        if (startOfDay(currentTimeUTC) === startOfDay(endTime)) {
+        if (startOfDay(currentTimeInUTC()) === startOfDay(endTime)) {
           setTimeState('DURING_DAY')
         } else {
           setTimeState('BEFORE_NEXT_DAY')
@@ -103,11 +102,9 @@ export function useSessions(event: Event, initFilters: Filter[] = []) {
 
   // update time every minute and determine timeState
   // stop when timeState === BEFORE_NEXT_DAY or AFTER_EVENT
-  useInterval(
-    () => {
-      setCurrentTimeUTC(currentTimeInUTC())
-      calcTimeState()
-    },
+  useInterval(() => {
+    calcTimeState()
+  },
     ['BEFORE_NEXT_DAY', 'AFTER_EVENT'].includes(timeState) ? null : 60000
   )
 
