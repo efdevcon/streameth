@@ -18,7 +18,7 @@ export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }
   const stage = useStage()
   const sessions = useSessions(event)
   const current = sessions.sessions.find(i => i.stage === stage.id && localizedMoment(i.start).isAfter(currentTimeInUTC()))
-  const currentSession = current ?? session
+  const currentSession = session
 
   return (
     <div className={css.box}>
