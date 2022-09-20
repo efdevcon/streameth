@@ -2,16 +2,25 @@ import React from 'react'
 import { SessionContainer } from 'components/Container'
 import SpeakerBox from './SpeakerBox'
 import { Session } from 'types'
+import { Source } from 'components/Player/types'
 import Image from 'next/image'
 import sessionHeader from 'assets/images/session-header.png'
 import styles from './SessionComponent.module.scss'
 import { DateDetail, StageDetail } from 'components/Session/SessionDetails'
-
+import Player from 'components/Player'
 interface Props {
   session: Session
 }
 
 export default function SessionComponent(props: Props) {
+  console.log(props.session)
+
+  const source:Source = {
+    src: props.session.video ? props.session.video.url : '',
+    type: 'application/x-mpegURL',
+  }
+
+
   return (
     <>
       <div className={styles.header__image}>
@@ -20,10 +29,8 @@ export default function SessionComponent(props: Props) {
       <SessionContainer>
         <div className={styles.grid}>
           <div className={styles.grid__column__full}>
-            {props.session.video?.type === 'youtube' && props.session.video?.id &&
-              <div className={styles.iframe}>
-                <iframe className={styles.responsive_iframe} src={`https://www.youtube-nocookie.com/embed/${props.session.video?.id}`} />
-              </div>
+            {props.session.video?.type === 'youtube' && props.session.video?.url &&
+                <Player source={source} onStreamError={() => {}}/>
             }
             <div className={styles.header}>
               <h2 className={styles.header__title}>{props.session.name}</h2>
