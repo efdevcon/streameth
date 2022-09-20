@@ -15,11 +15,10 @@ interface Props {
 export default function SessionComponent(props: Props) {
   console.log(props.session)
 
-  const source:Source = {
+  const source: Source = {
     src: props.session.video ? props.session.video.url : '',
     type: 'application/x-mpegURL',
   }
-
 
   return (
     <>
@@ -29,9 +28,9 @@ export default function SessionComponent(props: Props) {
       <SessionContainer>
         <div className={styles.grid}>
           <div className={styles.grid__column__full}>
-            {props.session.video?.type === 'youtube' && props.session.video?.url &&
-                <Player source={source} onStreamError={() => {}}/>
-            }
+            {props.session.video?.type === 'youtube' && props.session.video?.url && (
+                <Player source={source} onStreamError={() => {}} />
+            )}
             <div className={styles.header}>
               <h2 className={styles.header__title}>{props.session.name}</h2>
             </div>
