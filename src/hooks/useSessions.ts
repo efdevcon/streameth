@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Session, Event } from 'types'
+import { Session, Event, Stage } from 'types'
 import { startOfDay, currentTimeInUTC } from 'utils/dateTime'
 import useInterval from '@use-it/interval'
 
@@ -10,8 +10,8 @@ interface Filter {
 
 export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'
 
-export function useSessions(event: Event, initFilters: Filter[] = []) {
-  const allSessions = event.schedule.sessions
+export function useSessions(event: Event, currentStage: Stage, initFilters: Filter[] = []) {
+  const allSessions = event.schedule.sessions.filter((s) => s.stage === currentStage?.name)
   const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
   const [eventDayNum, setEventDayNum] = useState<number | null>(null)
