@@ -39,11 +39,9 @@ export default function Navbar() {
               </div>
               <div className={css.navbar__nav}>
                 <div className={css.navbar__logo}>
-                  <Link href="/">
-                    <a>
-                      <Image src={img} alt="StreamETH" layout="fill" />
-                    </a>
-                  </Link>
+                  <a href='/'>
+                    <img src={img.src} alt="Logo" />
+                  </a>
                 </div>
                 <div className={css.navbar__nav__items}>
                   <div className="flex space-x-4">

@@ -12,7 +12,9 @@ export interface Event {
   description: string
   start: string
   end: string
+  timezone: string
   website: string
+  streamUrl: string
   imageUrl: string
   stream: Stream
   schedule: Schedule

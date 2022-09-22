@@ -2,7 +2,6 @@ import React from 'react'
 import { Speaker } from 'types'
 import styles from './SpeakerBox.module.scss'
 import SpeakerIcon from 'components/Speaker/Icon'
-import EthBerlinSpeakerIcon from 'components/Speaker/Icon/EthBerlin'
 import SpeakerModalBox from 'components/Speaker/ModalBox'
 import Modal from 'components/Modal'
 
@@ -23,8 +22,7 @@ export default function SpeakerBox(props: Props) {
         </Modal>
       )}
       <div className={styles.box} onClick={() => setIsOpen(true)}>
-        {/* <SpeakerIcon speaker={speaker} /> */}
-        <EthBerlinSpeakerIcon speaker={speaker} />
+        <SpeakerIcon speaker={speaker} />
         <div className={styles.box__text}>
           <h3 className={styles.box__name}>{name}</h3>
         </div>

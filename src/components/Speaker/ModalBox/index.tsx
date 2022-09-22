@@ -1,6 +1,5 @@
 import { Speaker } from 'types'
 import SpeakerIcon from '../Icon'
-import EthBerlinSpeakerIcon from '../Icon/EthBerlin'
 import styles from './SpeakerModalBox.module.scss'
 
 interface Props {
@@ -14,8 +13,7 @@ export default function SpeakerModalBox({ speaker }: Props) {
 
   return (
     <div className={styles.box}>
-      {/* <SpeakerIcon speaker={speaker} size="md" /> */}
-      <EthBerlinSpeakerIcon speaker={speaker}  size="md" />
+      <SpeakerIcon speaker={speaker} size="md" />
       <div className={styles.name}>{speaker.name}</div>
       <div className={styles.description}>{speaker.description}</div>
     </div>

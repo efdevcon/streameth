@@ -34,7 +34,16 @@
   }
 
   &__logo {
-    @apply flex-shrink-0 flex items-center h-[20px]  w-[160px] md:h-[30px] md:w-[240px] my-auto relative;
+    position: relative;
+    height: 40px;
+    width: auto;
+
+    img { 
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: left center;
+    }
   }
 
   &__mobileMenu {
