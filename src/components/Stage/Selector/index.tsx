@@ -12,6 +12,9 @@ export default function StageSelect() {
 
   return (
     <div>
+      <label htmlFor="stage" className={styles.label}>
+        Select Stage
+      </label>
       <select
         id="stage"
         name="stage"
