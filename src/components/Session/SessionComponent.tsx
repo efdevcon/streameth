@@ -13,8 +13,6 @@ interface Props {
 }
 
 export default function SessionComponent(props: Props) {
-  console.log(props.session)
-
   const source: Source = {
     src: props.session.video ? props.session.video.url : '',
     type: 'application/x-mpegURL',

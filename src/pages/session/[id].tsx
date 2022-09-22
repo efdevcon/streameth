@@ -41,7 +41,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   if (!sessionId) return { props: null, notFound: true }
 
   const event = await GetEvent()
-  const session = event?.archive.sessions.find((i) => i.id === sessionId)
+  const session = event?.schedule.sessions.find((i) => i.id === sessionId)
 
   return {
     props: {
