@@ -43,8 +43,6 @@
     "version": 2,
     "type": "pretalx",
     "config": {
-      "path": "./config/schedule.json",
-      "sheetId": "14BI4ogkBn1ISuu3TetXSKRszYNsdzQwppgH-uOghdfU",
       "apiBaseUri": "https://pretalx.com/api/events/democon"
     }
   },
