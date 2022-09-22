@@ -15,7 +15,11 @@ import { Speaker } from 'types'
 import SpeakerModalBox from './Speaker/ModalBox'
 import SessionList from './Session/List'
 
-export function EventComponent() {
+interface Props { 
+  embedded?: boolean
+}
+
+export function EventComponent(props: Props) {
   const event = useEvent()
   const currentStage = useStage()
   const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions(event)
@@ -47,6 +51,14 @@ export function EventComponent() {
     }
 
     return null
+  }
+
+  if (props.embedded) {
+    return (
+      <div className={styles.player}>
+        <Player source={activeSource} onStreamError={onStreamError} />
+      </div>
+    )
   }
 
   return (
