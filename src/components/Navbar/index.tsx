@@ -39,9 +39,11 @@ export default function Navbar() {
               </div>
               <div className={css.navbar__nav}>
                 <div className={css.navbar__logo}>
-                  <a href='/'>
-                    <img src={img.src} alt="Logo" />
-                  </a>
+                  <Link href='/'>
+                    <a>
+                      <img src={img.src} alt="Logo" />
+                    </a>
+                  </Link>
                 </div>
                 <div className={css.navbar__nav__items}>
                   <div className="flex space-x-4">
