@@ -10,11 +10,12 @@ interface Props {
   sessions: Session[]
   currentSession?: Session
   timeState: TimeState
+  isLive: boolean
 }
 
 const scroll = Scroll.scroller
 
-export default function SessionList({ timeState, sessions, currentSession }: Props) {
+export default function SessionList({ timeState, sessions, currentSession, isLive }: Props) {
   useEffect(() => {
     if (currentSession) {
       scroll.scrollTo(currentSession.id, {
@@ -44,7 +45,7 @@ export default function SessionList({ timeState, sessions, currentSession }: Pro
         return (
           <Element key={i.id} name={i.id}>
             <li id={i.id} className="mb-3 text-lg">
-              <SessionSnack session={i} status={sessionStatus} />
+              <SessionSnack session={i} status={sessionStatus} isLive={isLive} />
             </li>
           </Element>
         )

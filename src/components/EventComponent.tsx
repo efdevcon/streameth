@@ -65,7 +65,7 @@ export function EventComponent() {
           <div className={styles.sidebar}>
             <h3 className="text-2xl font-bold dark:text-white">Schedule</h3>
             <StageSelector />
-            <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} />
+            <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={!!activeSource} />
           </div>
           <div className={styles.eventInfo}>
             <SessionInfoBox

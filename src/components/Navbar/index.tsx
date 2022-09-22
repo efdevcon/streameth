@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import Image from 'next/image'
 import css from './Navbar.module.scss'
@@ -31,9 +31,9 @@ export default function Navbar() {
                 <Disclosure.Button className={css.navbar__hamburger__button}>
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className={css.navbar__hamburger__button__icon} aria-hidden="true" />
+                    <XMarkIcon className={css.navbar__hamburger__button__icon} aria-hidden="true" />
                   ) : (
-                    <MenuIcon className={css.navbar__hamburger__button__icon} aria-hidden="true" />
+                    <Bars3Icon className={css.navbar__hamburger__button__icon} aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>

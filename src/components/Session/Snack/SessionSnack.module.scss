@@ -12,12 +12,20 @@
   }
 }
 
-.body {
-  @apply flex-grow flex flex-col text-gray-400 text-sm space-y-2 justify-between;
+.header {
+  @apply flex justify-between items-start;
+
+  &__title {
+    @apply text-lg font-medium leading-tight mb-2 dark:text-gray-200;
+  }
+
+  &__icon {
+    @apply ml-2;
+  }
 }
 
-.title {
-  @apply text-lg font-medium leading-tight mb-2 dark:text-gray-200;
+.body {
+  @apply flex-grow flex flex-col text-gray-400 text-sm space-y-2 justify-between;
 }
 
 .iconText {

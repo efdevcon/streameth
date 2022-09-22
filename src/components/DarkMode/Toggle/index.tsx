@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Switch } from '@headlessui/react'
-import { SunIcon, MoonIcon } from '@heroicons/react/outline'
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import styles from './DarkModeToggle.module.scss'
 
 export default function DarkModeToggle() {
