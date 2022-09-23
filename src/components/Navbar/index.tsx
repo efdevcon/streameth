@@ -1,12 +1,11 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import Image from 'next/image'
 import css from './Navbar.module.scss'
-import img from 'assets/images/logo.png'
 import DarkModeToggle from 'components/DarkMode/Toggle'
 import Container from 'components/Container'
 import { useRouter } from 'next/router'
+import { DEFAULT_LOGO_IMAGE } from 'utils/constants'
 
 const pages = [
   { name: 'Schedule', href: '/schedule' },
@@ -41,7 +40,7 @@ export default function Navbar() {
                 <div className={css.navbar__logo}>
                   <Link href='/'>
                     <a>
-                      <img src={img.src} alt="Logo" />
+                      <img src={DEFAULT_LOGO_IMAGE} alt="Logo" />
                     </a>
                   </Link>
                 </div>

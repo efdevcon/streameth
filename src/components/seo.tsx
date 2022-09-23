@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import eventConfig from '../../config/streameth.json'
+import { DEFAULT_SOCIAL_IMAGE } from 'utils/constants'
 
 interface Props {
   title?: string
@@ -11,9 +12,10 @@ interface Props {
 
 export function SEO(props: Props) {
   const router = useRouter()
+  const origin = (typeof window !== 'undefined' && window.location.origin) ? window.location.origin : eventConfig.streamUrl
   const title = props.title ? `${props.title} · ${eventConfig.name}` : eventConfig.name
   const description = props.description || eventConfig.description
-  const image = props.imageUrl || `${eventConfig.streamUrl}images/default.png`
+  const image = props.imageUrl || `${origin}${DEFAULT_SOCIAL_IMAGE}`
   const url = router.route === '/' ? eventConfig.streamUrl : eventConfig.streamUrl.replace(/\/$/, '') + router.asPath.split('?')[0]
 
   return (

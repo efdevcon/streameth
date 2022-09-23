@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import VideoJS from './VideoJS'
 import { PlayerProps } from './types'
-import defaultPoster from 'assets/images/default.png'
+import { DEFAULT_POSTER_IMAGE } from 'utils/constants'
 
 const Player = ({ ...props }: PlayerProps) => {
-  if (!props.source) return <Image alt="text" layout='responsive' src={defaultPoster} />
-  if (props.poster === undefined) props.poster = '/images/default.png'
+  if (!props.source) return <img src={DEFAULT_POSTER_IMAGE} alt="text" />
+  if (props.poster === undefined) props.poster = DEFAULT_POSTER_IMAGE
   if (props.playlist === undefined) props.playlist = null
   // override src url for spain
   const source = props.source

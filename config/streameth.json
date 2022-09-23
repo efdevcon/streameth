@@ -7,7 +7,6 @@
   "timezone": "America/Bogota",
   "streamUrl": "https://live.devcon.org/",
   "website": "https://devcon.org/",
-  "poster": "/images/default.png",
   "stream": {
     "version": 2,
     "type": "livepeer",
