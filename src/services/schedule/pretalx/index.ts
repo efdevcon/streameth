@@ -1,6 +1,7 @@
-import { Session, Stage } from "types";
-import { Config } from "types/config";
-import { GetSlug } from "utils/format";
+import { Session, Stage } from "types"
+import { Config } from "types/config"
+import { GetSlug } from "utils/format"
+import fetch from 'cross-fetch'
 
 export async function GetSchedule(config: Config): Promise<Session[]> {
     if (!config['apiBaseUri']) throw new Error('No valid apiBaseUri set for Pretalx module')
@@ -10,7 +11,7 @@ export async function GetSchedule(config: Config): Promise<Session[]> {
     if (stages?.length > 0) {
         console.log('The following stages are available to configure..')
         console.log('=====')
-        stages.forEach(i => console.log(`{ "id": "${i.id}", "name": "${i.name}${i.description ? '- ' + i.description : ''}", "stream": [] }`))
+        stages.forEach(i => console.log(`{ "id": "${i.id}", "name": "${i.name}", "stream": [] }`))
         console.log('=====')
         console.log()
     }
@@ -36,6 +37,7 @@ export async function GetSchedule(config: Config): Promise<Session[]> {
         if (i.description) session.description = i.description
         if (i.track?.en) session.track = i.track?.en
         if (i.slot?.room?.en) session.stage = i.slot?.room?.en
+        if (i.submission_type?.en) session.type = i.submission_type?.en
 
         return session
     })

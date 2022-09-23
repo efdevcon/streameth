@@ -8,13 +8,16 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": "./src",
     "incremental": true
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
   },
   "include": ["next-env.d.ts", "src"],
   "exclude": ["node_modules"]

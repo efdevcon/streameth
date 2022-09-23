@@ -37,7 +37,7 @@
       },
       {
         "id": "talk-1",
-        "name": "Talk 1 - Tropical Sunset",
+        "name": "Talk 1",
         "stream": [
           {
             "id": "x"
@@ -49,7 +49,7 @@
       },
       {
         "id": "talk-2",
-        "name": "Talk 2 - Cold Forest",
+        "name": "Talk 2",
         "stream": [
           {
             "id": "x"
@@ -61,7 +61,7 @@
       },
       {
         "id": "talk-3",
-        "name": "Talk 3 - Flowers",
+        "name": "Talk 3",
         "stream": [
           {
             "id": "x"
@@ -73,7 +73,7 @@
       },
       {
         "id": "talk-4",
-        "name": "Talk 4 - River",
+        "name": "Talk 4",
         "stream": [
           {
             "id": "x"
@@ -85,7 +85,7 @@
       },
       {
         "id": "workshop-1",
-        "name": "Workshop 1 - SLS/Community Room",
+        "name": "Workshop 1",
         "stream": [
           {
             "id": "x"
@@ -136,8 +136,9 @@
   },
   "schedule": {
     "version": 2,
-    "type": "pretalx",
+    "type": "fs",
     "config": {
+      "path": "./config/schedule.json",
       "apiBaseUri": "https://speak.devcon.org/api/events/devcon-vi-2022/"
     }
   },
