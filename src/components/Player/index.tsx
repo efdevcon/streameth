@@ -1,9 +1,10 @@
 import VideoJS from './VideoJS'
 import { PlayerProps } from './types'
 import { DEFAULT_POSTER_IMAGE } from 'utils/constants'
+import PlayerPosterImage from './PosterImage'
 
 const Player = ({ ...props }: PlayerProps) => {
-  if (!props.source) return <img src={DEFAULT_POSTER_IMAGE} alt="text" />
+  if (!props.source) return <PlayerPosterImage src={DEFAULT_POSTER_IMAGE} />
   if (props.poster === undefined) props.poster = DEFAULT_POSTER_IMAGE
   if (props.playlist === undefined) props.playlist = null
   // override src url for spain
