@@ -14,9 +14,8 @@ interface Props {
 }
 
 export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }: Props) {
-  const event = useEvent()
   const stage = useStage()
-  const sessions = useSessions(event)
+  const sessions = useSessions()
   const current = sessions.sessions.find((i) => i.stage === stage.id && localizedMoment(i.start).isAfter(currentTimeInUTC()))
   const currentSession = session
 

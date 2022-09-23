@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Session, Event } from 'types'
 import { startOfDay, currentTimeInUTC } from 'utils/dateTime'
 import useInterval from '@use-it/interval'
+import { useEvent } from './useEvent'
 
 interface Filter {
   type: 'stage' | 'day'
@@ -10,7 +11,8 @@ interface Filter {
 
 export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'
 
-export function useSessions(event: Event, initFilters: Filter[] = []) {
+export function useSessions(initFilters: Filter[] = []) {
+  const event = useEvent()
   const allSessions = event.schedule.sessions
   const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])

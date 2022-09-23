@@ -20,9 +20,8 @@ interface Props {
 }
 
 export function EventComponent(props: Props) {
-  const event = useEvent()
   const currentStage = useStage()
-  const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions(event)
+  const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions()
   const [modalOpen, setModalOpen] = useState(false)
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
