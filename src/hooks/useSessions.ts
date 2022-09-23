@@ -74,6 +74,7 @@ export function useSessions(initFilters: Filter[] = []) {
         const currentTime = currentTimeInUTC()
 
         if (currentTime.isBefore(startTime) && i === 0) {
+          setTimeState('BEFORE_EVENT')
           setCurrentSession(session)
           break
         } else if (currentTime.isBefore(endTime)) {
