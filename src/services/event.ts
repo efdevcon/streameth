@@ -20,11 +20,15 @@ export async function GetEvent(): Promise<Event | undefined> {
     // get core modules
     // - streams
 
-    const sessions = await GetSchedule(event.schedule.type, event.schedule.config)
-    event.schedule.sessions = sessions
+    if (event.schedule?.type) {
+      const sessions = await GetSchedule(event.schedule.type, event.schedule.config)
+      event.schedule.sessions = sessions
+    }
 
-    const archive = await GetArchive(event.archive.type, event.archive.config)
-    event.archive.sessions = archive
+    if (event.archive?.type) {
+      const archive = await GetArchive(event.archive.type, event.archive.config)
+      event.archive.sessions = archive
+    }
 
     cacheData.put('event', event)
     return event

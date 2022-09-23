@@ -56,6 +56,9 @@ export interface streamId {
 export interface Stage {
   id: string
   name: string
+  description?: string
+  info?: string
+  capacity?: number
   stream: streamId[]
 }
 
