@@ -8,7 +8,7 @@
   grid-template-columns: 1fr;
   grid-row-gap: 10px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     grid-template-areas:
       'header header'
       'player sidebar'
