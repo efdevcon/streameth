@@ -13,7 +13,9 @@ export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFT
 
 export function useSessions(initFilters: Filter[] = []) {
   const event = useEvent()
-  const allSessions = event.schedule.sessions
+  const allSessions = useMemo(() => {
+    return event.schedule.sessions.sort((a: any, b: any) => a.start - b.start)
+  }, [event])
   const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
   const [eventDayNum, setEventDayNum] = useState<number | null>(null)
@@ -53,7 +55,7 @@ export function useSessions(initFilters: Filter[] = []) {
       }
 
       return true
-    }).sort((a: any, b: any) => a.start - b.start)
+    })
   }, [allSessions, filters, eventDays])
 
   // Determines when the user visits the website in relation to the event

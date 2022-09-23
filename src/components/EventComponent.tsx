@@ -15,7 +15,7 @@ import { Speaker } from 'types'
 import SpeakerModalBox from './Speaker/ModalBox'
 import SessionList from './Session/List'
 
-interface Props { 
+interface Props {
   embedded?: boolean
 }
 
