@@ -24,7 +24,7 @@
 
   .player {
     grid-area: player;
-    @apply aspect-video;
+    @apply aspect-video relative;
   }
 
   .sidebar {

@@ -1,12 +1,9 @@
-import { DEFAULT_POSTER_IMAGE } from 'utils/constants'
-import styles from './PlayerPosterImage.module.scss'
+import Image from 'next/image'
 
 interface Props {
   src: string
 }
 
 export default function PlayerPosterImage({ src }: Props) {
-  // TODO: Use next/image instead?
-  return <img src={DEFAULT_POSTER_IMAGE} alt="text" />
-  // return <div className={styles.image} style={{ backgroundImage: `url(${src})` }}></div>
+  return <Image src={src} alt="text" layout="fill" objectFit="cover" />
 }
