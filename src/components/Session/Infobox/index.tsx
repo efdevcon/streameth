@@ -19,7 +19,7 @@ export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }
   const currentSession = session
 
   return (
-    <div className={css.box}>
+    <div id="infoBox" className={css.box}>
       <div className={css.box__header}>
         <div className={css.box__date}>
           {localizedMoment(currentSession.start).format('MMM DD / HH:mm')} - {localizedMoment(currentSession.end).format('HH:mm')}

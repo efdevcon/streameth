@@ -6,17 +6,22 @@ import Container from 'components/Container'
 import EventHeader from './Event/Header'
 import SessionInfoBox from './Session/Infobox'
 import styles from './EventComponent.module.scss'
-import StageSelector from 'components/Stage/Selector'
 import Player from './Player'
 import { useSessions } from 'hooks/useSessions'
 import Modal from './Modal'
 import { ShareBox } from './Share/Box'
 import { Speaker } from 'types'
 import SpeakerModalBox from './Speaker/ModalBox'
-import SessionList from './Session/List'
+import Sidebar from './Sidebar'
 
 interface Props {
   embedded?: boolean
+}
+
+const getElementHeight = (id: string) => {
+  const div = document.getElementById(id)
+
+  return div?.clientHeight
 }
 
 export function EventComponent(props: Props) {
@@ -25,6 +30,7 @@ export function EventComponent(props: Props) {
   const [modalOpen, setModalOpen] = useState(false)
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
+  const [sidebarHeight, setSidebarHeight] = useState<string>('auto')
 
   useEffect(() => {
     setFilters([
@@ -32,6 +38,16 @@ export function EventComponent(props: Props) {
       { type: 'day', value: eventDayNum },
     ])
   }, [currentStage, eventDayNum, setFilters])
+
+  useEffect(() => {
+    const playerDivHeight = getElementHeight('playerContainer')
+    const infoBoxHeight = getElementHeight('infoBox')
+    const sidebar = document.getElementById('sidebar')
+
+    if (sidebar && playerDivHeight && infoBoxHeight) {
+      setSidebarHeight(playerDivHeight + infoBoxHeight + 10 + 'px')
+    }
+  }, [])
 
   const { activeSource, onStreamError } = useLivestream(currentStage?.stream.map((i) => i.id) ?? [])
 
@@ -70,13 +86,11 @@ export function EventComponent(props: Props) {
           <div className={styles.header}>
             <EventHeader title={currentSession.name} showLive={!!activeSource} />
           </div>
-          <div className={styles.player}>
+          <div id="playerContainer" className={styles.player}>
             <Player source={activeSource} onStreamError={onStreamError} />
           </div>
           <div className={styles.sidebar}>
-            <h3 className="text-2xl font-bold dark:text-white">Schedule</h3>
-            <StageSelector />
-            <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={!!activeSource} />
+            <Sidebar timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={!!activeSource} height={sidebarHeight} />
           </div>
           <div className={styles.eventInfo}>
             <SessionInfoBox

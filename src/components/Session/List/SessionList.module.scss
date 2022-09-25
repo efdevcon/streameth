@@ -1,4 +1,4 @@
 .list {
-  height: calc(100vh - 220px);
-  @apply overflow-y-scroll relative pr-2 space-y-2;
+  @apply overflow-y-scroll relative pr-2 space-y-2 h-full;
+  padding-bottom: 100px;
 }
