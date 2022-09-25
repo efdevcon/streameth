@@ -32,6 +32,10 @@ export function EventComponent(props: Props) {
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
   const [sidebarHeight, setSidebarHeight] = useState<string>('auto')
 
+  const playerDivHeight = getElementHeight('playerContainer')
+  const infoBoxHeight = getElementHeight('infoBox')
+  const sidebar = document.getElementById('sidebar')
+
   useEffect(() => {
     setFilters([
       { type: 'stage', value: currentStage.name },
@@ -40,14 +44,10 @@ export function EventComponent(props: Props) {
   }, [currentStage, eventDayNum, setFilters])
 
   useEffect(() => {
-    const playerDivHeight = getElementHeight('playerContainer')
-    const infoBoxHeight = getElementHeight('infoBox')
-    const sidebar = document.getElementById('sidebar')
-
     if (sidebar && playerDivHeight && infoBoxHeight) {
       setSidebarHeight(playerDivHeight + infoBoxHeight + 10 + 'px')
     }
-  }, [])
+  }, [playerDivHeight, infoBoxHeight, sidebar])
 
   const { activeSource, onStreamError } = useLivestream(currentStage?.stream.map((i) => i.id) ?? [])
 
