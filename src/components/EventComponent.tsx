@@ -18,7 +18,7 @@ interface Props {
   embedded?: boolean
 }
 
-const getElementHeight = (id: string) => {
+const getElementHeight = (document: Document, id: string) => {
   const div = document.getElementById(id)
 
   return div?.clientHeight
@@ -32,10 +32,6 @@ export function EventComponent(props: Props) {
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
   const [sidebarHeight, setSidebarHeight] = useState<string>('auto')
 
-  const playerDivHeight = getElementHeight('playerContainer')
-  const infoBoxHeight = getElementHeight('infoBox')
-  const sidebar = document.getElementById('sidebar')
-
   useEffect(() => {
     setFilters([
       { type: 'stage', value: currentStage.name },
@@ -44,10 +40,11 @@ export function EventComponent(props: Props) {
   }, [currentStage, eventDayNum, setFilters])
 
   useEffect(() => {
-    if (sidebar && playerDivHeight && infoBoxHeight) {
-      setSidebarHeight(playerDivHeight + infoBoxHeight + 10 + 'px')
-    }
-  }, [playerDivHeight, infoBoxHeight, sidebar])
+    const playerDivHeight = getElementHeight(document, 'playerContainer') || 0
+    const infoBoxHeight = getElementHeight(document, 'infoBox') || 0
+
+    setSidebarHeight(playerDivHeight + infoBoxHeight + 10 + 'px')
+  }, [])
 
   const { activeSource, onStreamError } = useLivestream(currentStage?.stream.map((i) => i.id) ?? [])
 
