@@ -9,7 +9,7 @@ interface Props {
   sessions: Session[]
   currentSession: Session
   isLive: boolean
-  height: number | 'auto'
+  height: string
 }
 
 export default function Sidebar({ timeState, sessions, currentSession, isLive, height }: Props) {
