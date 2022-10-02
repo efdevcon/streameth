@@ -34,8 +34,8 @@ export function EventComponent(props: Props) {
 
   useEffect(() => {
     setFilters([
-      { type: 'stage', value: currentStage.name },
-      { type: 'day', value: eventDayNum },
+      { type: 'stage', value: [currentStage.name] },
+      { type: 'day', value: [eventDayNum] },
     ])
   }, [currentStage, eventDayNum, setFilters])
 

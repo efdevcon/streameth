@@ -26,6 +26,7 @@
     "ipfs-http-client": "^56.0.3",
     "it-all": "^1.0.6",
     "it-to-buffer": "^2.0.2",
+    "lodash": "^4.17.21",
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.37",
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
+    "@types/lodash": "^4.14.186",
     "@types/memory-cache": "^0.2.2",
     "@types/node": "17.0.21",
     "@types/react": "17.0.40",

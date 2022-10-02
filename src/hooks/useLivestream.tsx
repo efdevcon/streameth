@@ -50,6 +50,7 @@ const useLiveStream = (streamIds: string[]) => {
   return {
     activeSource: activeStream ? ({ src: activeStream.playbackUrl, type: 'application/x-mpegURL' } as Source) : null,
     onStreamError,
+    activeStreams: streams,
   }
 }
 
