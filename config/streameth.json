@@ -1,145 +1,23 @@
 {
   "version": 2,
-  "name": "Devcon Bogotá",
-  "description": "Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.",
-  "start": "2022-10-11",
-  "end": "2022-10-14",
+  "name": "Live @ ETH Latam Bogotá",
+  "description": "ETH Latam Bogota will be a one-day event with talks and workshops in Spanish for people who want to learn about Ethereum. ",
+  "start": "2022-10-10",
+  "end": "2022-10-10",
   "timezone": "America/Bogota",
-  "streamUrl": "https://live.devcon.org/",
-  "website": "https://devcon.org/",
+  "streamUrl": "https://ethlatam.streameth.tv/",
+  "website": "https://ethlatam.org/",
   "stream": {
     "version": 2,
     "type": "livepeer",
-    "stages": [
-      {
-        "id": "main-stage-oc",
-        "name": "Main Stage - OC",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "main-stage",
-        "name": "Main Stage",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "talk-1",
-        "name": "Talk 1",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "talk-2",
-        "name": "Talk 2",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "talk-3",
-        "name": "Talk 3",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "talk-4",
-        "name": "Talk 4",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "workshop-1",
-        "name": "Workshop 1",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "workshop-2",
-        "name": "Workshop 2",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "workshop-3",
-        "name": "Workshop 3",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
-        "id": "workshop-4",
-        "name": "Workshop 4",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      }
-    ],
+    "stages": [],
     "config": {}
   },
   "schedule": {
     "version": 2,
     "type": "fs",
     "config": {
-      "path": "./config/schedule.json",
-      "apiBaseUri": "https://speak.devcon.org/api/events/devcon-vi-2022/"
+      "path": "./config/schedule.json"
     }
   },
   "archive": {
@@ -147,13 +25,5 @@
     "type": "",
     "config": {}
   },
-  "plugins": [
-    {
-      "name": "matomo",
-      "config": {
-        "url": "https://matomo.ethereum.org",
-        "siteId": 34
-      }
-    }
-  ]
+  "plugins": []
 }
