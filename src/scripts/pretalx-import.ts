@@ -7,10 +7,11 @@ require('dotenv').config()
 Run()
 
 async function Run() {
+    const conf: any = config
     console.log('Run Pretalx importer..')
 
     const schedule = await GetSchedule({
-        apiBaseUri: config.schedule.config['apiBaseUri']
+        apiBaseUri: conf.schedule.config['apiBaseUri']
     })
 
     fs.writeFile("./config/schedule.json", JSON.stringify(schedule, null, 2), function (err) {
