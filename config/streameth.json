@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "name": "Live @ ETH Latam Bogotá",
-  "description": "ETH Latam Bogota will be a one-day event with talks and workshops in Spanish for people who want to learn about Ethereum. ",
+  "name": "Music @ Devcon Bogotá",
+  "description": "Featuring ETH Community Artists",
   "start": "2022-10-10",
-  "end": "2022-10-10",
+  "end": "2022-10-14",
   "timezone": "America/Bogota",
-  "streamUrl": "https://ethlatam.streameth.tv/",
-  "website": "https://ethlatam.org/",
+  "streamUrl": "https://music.streameth.tv/",
+  "website": "https://wearedmt.notion.site/CHIVA-LOUNGE-deceead7289944a6a042bcecc52b5772",
   "stream": {
     "version": 2,
     "type": "livepeer",
