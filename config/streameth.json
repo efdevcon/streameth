@@ -12,26 +12,14 @@
     "type": "livepeer",
     "stages": [
       {
-        "id": "main-stage-oc",
-        "name": "Main Stage - OC",
-        "stream": [
-          {
-            "id": "x"
-          },
-          {
-            "id": "x"
-          }
-        ]
-      },
-      {
         "id": "main-stage",
         "name": "Main Stage",
         "stream": [
           {
-            "id": "x"
+            "id": "a0a72ed1-2602-46fb-b813-40f1096f2d24"
           },
           {
-            "id": "x"
+            "id": "ec7f1580-e815-47de-a1ee-db06cb9e819f"
           }
         ]
       },
@@ -40,10 +28,10 @@
         "name": "Talk 1",
         "stream": [
           {
-            "id": "x"
+            "id": "ec7f1580-e815-47de-a1ee-db06cb9e819f"
           },
           {
-            "id": "x"
+            "id": "0953b6cb-7077-43a3-8322-8a10c1d2e071"
           }
         ]
       },
@@ -52,10 +40,10 @@
         "name": "Talk 2",
         "stream": [
           {
-            "id": "x"
+            "id": "bf414301-9756-4a48-afc8-c386a4f63572"
           },
           {
-            "id": "x"
+            "id": "771b4231-5556-477b-8f24-c89af0651fbd"
           }
         ]
       },
@@ -64,10 +52,10 @@
         "name": "Talk 3",
         "stream": [
           {
-            "id": "x"
+            "id": "146e499a-8f95-4be7-bab6-b399aedeb229"
           },
           {
-            "id": "x"
+            "id": "78e1c7f2-268f-43af-8654-cb9cb1c533c9"
           }
         ]
       },
@@ -76,10 +64,10 @@
         "name": "Talk 4",
         "stream": [
           {
-            "id": "x"
+            "id": "8ce01032-9e57-4597-b35d-ab507f95f510"
           },
           {
-            "id": "x"
+            "id": "ad31225a-a202-481d-9cc6-725547300ba6"
           }
         ]
       },
@@ -88,10 +76,10 @@
         "name": "Workshop 1",
         "stream": [
           {
-            "id": "x"
+            "id": "7af7bed3-ace4-4de3-9c80-607c51474d80"
           },
           {
-            "id": "x"
+            "id": "92db0e90-c26f-493b-a7f0-0d055c0132d5"
           }
         ]
       },
@@ -100,10 +88,10 @@
         "name": "Workshop 2",
         "stream": [
           {
-            "id": "x"
+            "id": "ed54f91f-9ded-4ff2-8c16-3e9e0ef026b3"
           },
           {
-            "id": "x"
+            "id": "54f40a92-5278-40d8-8e39-af51cbb62e94"
           }
         ]
       },
@@ -112,10 +100,10 @@
         "name": "Workshop 3",
         "stream": [
           {
-            "id": "x"
+            "id": "fde7d0d7-147e-4dd6-8a18-89bb95c9f349"
           },
           {
-            "id": "x"
+            "id": "babfc3d9-ac0c-4586-9f90-8927e2374faf"
           }
         ]
       },
@@ -124,10 +112,10 @@
         "name": "Workshop 4",
         "stream": [
           {
-            "id": "x"
+            "id": "e5bf56af-f4f9-441f-956f-9344dc1bda37"
           },
           {
-            "id": "x"
+            "id": "a52f1f64-084a-47f7-94c9-3205a1935af1"
           }
         ]
       }
