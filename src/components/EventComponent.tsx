@@ -101,7 +101,7 @@ export function EventComponent(props: Props) {
             }
           </div>
           <div className={styles.sidebar}>
-            <Sidebar timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={!!activeSource} height={sidebarHeight} />
+            <Sidebar timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={false} height={sidebarHeight} />
           </div>
           <div className={styles.eventInfo}>
             <ul className={styles.tabs}>
