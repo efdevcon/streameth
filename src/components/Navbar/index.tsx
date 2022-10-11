@@ -54,6 +54,7 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         target={isExternal ? "_blank" : '_self'}
+                        rel={isExternal ? 'noopener noreferrer' : ''}
                         className={classNames(item.href === path ? css.active : '', css.navbar__nav__item)}
                         aria-current={item.href === path ? 'page' : undefined}>
                         {item.name}
