@@ -31,6 +31,7 @@ export function EventComponent(props: Props) {
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
   const [sidebarHeight, setSidebarHeight] = useState<string>('auto')
+  const [streamType, setStreamType] = useState<'livepeer' | 'youtube'>('livepeer')
 
   useEffect(() => {
     setFilters([
@@ -84,12 +85,26 @@ export function EventComponent(props: Props) {
             <EventHeader title={currentSession.name} showLive={!!activeSource} />
           </div>
           <div id="playerContainer" className={styles.player}>
-            <Player source={activeSource} onStreamError={onStreamError} />
+            {streamType === 'livepeer' &&
+              <Player source={activeSource} onStreamError={onStreamError} />
+            }
+            {streamType === 'youtube' &&
+              <iframe
+                src={currentStage.youtube}
+                width="100%"
+                height="100%"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            }
           </div>
           <div className={styles.sidebar}>
             <Sidebar timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={!!activeSource} height={sidebarHeight} />
           </div>
           <div className={styles.eventInfo}>
+            {/* Watch on <span onClick={() => setStreamType('livepeer')}>Livepeer</span> | <span onClick={() => setStreamType('youtube')}>YouTube</span> */}
             <SessionInfoBox
               session={currentSession}
               onShareClick={() => openModal('share')}

@@ -8,7 +8,9 @@ import { useRouter } from 'next/router'
 import { DEFAULT_LOGO_IMAGE } from 'utils/constants'
 
 const pages = [
-  { name: 'Schedule', href: '/schedule' },
+  { name: 'Devcon.org', href: 'https://devcon.org/' },
+  { name: 'Devcon App', href: 'https://app.devcon.org/' },
+  // { name: 'Schedule', href: '/schedule' },
   // { name: 'Archive', href: '/archive' }
 ]
 
@@ -46,17 +48,19 @@ export default function Navbar() {
                 </div>
                 <div className={css.navbar__nav__items}>
                   <div className="flex space-x-4">
-                    {pages.map((item) => (
-                      <a
+                    {pages.map((item) => {
+                      const isExternal = item.href.match(/^([a-z0-9]*:|.{0})\/\/.*$/)
+                      return <a
                         key={item.name}
                         href={item.href}
+                        target={isExternal ? "_blank" : '_self'}
                         className={classNames(item.href === path ? css.active : '', css.navbar__nav__item)}
                         aria-current={item.href === path ? 'page' : undefined}>
                         {item.name}
                       </a>
-                    ))}
+                    })}
                   </div>
-                  <DarkModeToggle />
+                  {/* <DarkModeToggle /> */}
                 </div>
               </div>
             </div>

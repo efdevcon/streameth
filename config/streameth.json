@@ -12,8 +12,9 @@
     "type": "livepeer",
     "stages": [
       {
-        "id": "main-stage",
-        "name": "Main Stage",
+        "id": "talk-5-opening-ceremonies",
+        "name": "Talk 5 - Opening Ceremonies",
+        "youtube": "https://www.youtube.com/embed/HaqYiE8W0yU",
         "stream": [
           {
             "id": "a0a72ed1-2602-46fb-b813-40f1096f2d24"
@@ -26,6 +27,7 @@
       {
         "id": "talk-1",
         "name": "Talk 1",
+        "youtube": "https://www.youtube.com/embed/l9l0DKWbYCg",
         "stream": [
           {
             "id": "ec7f1580-e815-47de-a1ee-db06cb9e819f"
@@ -38,6 +40,7 @@
       {
         "id": "talk-2",
         "name": "Talk 2",
+        "youtube": "https://www.youtube.com/embed/TJtC7J1WFKM",
         "stream": [
           {
             "id": "bf414301-9756-4a48-afc8-c386a4f63572"
@@ -50,6 +53,7 @@
       {
         "id": "talk-3",
         "name": "Talk 3",
+        "youtube": "https://www.youtube.com/embed/FpPC8C5E8TE",
         "stream": [
           {
             "id": "146e499a-8f95-4be7-bab6-b399aedeb229"
@@ -62,6 +66,7 @@
       {
         "id": "talk-4",
         "name": "Talk 4",
+        "youtube": "https://www.youtube.com/embed/Z-ayS2jGcjo",
         "stream": [
           {
             "id": "8ce01032-9e57-4597-b35d-ab507f95f510"
@@ -74,6 +79,7 @@
       {
         "id": "workshop-1",
         "name": "Workshop 1",
+        "youtube": "https://www.youtube.com/embed/idBYmaok520",
         "stream": [
           {
             "id": "7af7bed3-ace4-4de3-9c80-607c51474d80"
@@ -86,6 +92,7 @@
       {
         "id": "workshop-2",
         "name": "Workshop 2",
+        "youtube": "https://www.youtube.com/embed/QMYdRffR6uc",
         "stream": [
           {
             "id": "ed54f91f-9ded-4ff2-8c16-3e9e0ef026b3"
@@ -98,6 +105,7 @@
       {
         "id": "workshop-3",
         "name": "Workshop 3",
+        "youtube": "https://www.youtube.com/embed/nYlmhZqJMkU",
         "stream": [
           {
             "id": "fde7d0d7-147e-4dd6-8a18-89bb95c9f349"
@@ -110,6 +118,7 @@
       {
         "id": "workshop-4",
         "name": "Workshop 4",
+        "youtube": "https://www.youtube.com/embed/lJ8KXQVlU6A",
         "stream": [
           {
             "id": "e5bf56af-f4f9-441f-956f-9344dc1bda37"

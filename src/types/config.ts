@@ -9,6 +9,7 @@ export interface Stream {
   id: string
   version: number
   type: StreamTypes
+  youtube: string // TODO: Should use Streamtype to configure different providers 
   stages: Stage[]
   config: Config
 }

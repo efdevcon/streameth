@@ -1,6 +1,6 @@
 import { Session } from 'types'
 import css from './SessionSnack.module.scss'
-import { CalendarIcon, VideoCameraIcon, PlayCircleIcon } from '@heroicons/react/24/outline'
+import { CalendarIcon, VideoCameraIcon, PlayCircleIcon, TagIcon } from '@heroicons/react/24/outline'
 import SpeakerIconList from 'components/Speaker/IconList'
 import Link from 'next/link'
 import { localizedMoment } from 'utils/dateTime'
@@ -44,6 +44,10 @@ export default function SessionSnack({ session, learnMore, status = 'normal', is
           <div className={css.iconText}>
             <VideoCameraIcon />
             <span>{session.stage}</span>
+          </div>
+          <div className={css.iconText}>
+            <TagIcon />
+            <span>{session.track}</span>
           </div>
         </div>
         <div className="flex">

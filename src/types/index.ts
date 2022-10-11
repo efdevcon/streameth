@@ -60,6 +60,7 @@ export interface Stage {
   info?: string
   capacity?: number
   stream: streamId[]
+  youtube: string // TODO: Should use Streamtype to configure different providers 
 }
 
 export type VideoTypes = 'youtube' | 'ipfs' | 'livepeer'

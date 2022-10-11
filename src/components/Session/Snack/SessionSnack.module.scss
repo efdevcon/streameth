@@ -29,8 +29,15 @@
 }
 
 .iconText {
-  @apply flex items-center;
+  @apply flex items-start;
+  gap: 4px;
 
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
   svg {
     @apply h-5 w-5 mr-1;
   }

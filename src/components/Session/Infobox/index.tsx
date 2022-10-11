@@ -30,8 +30,7 @@ export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }
         <p className={css.box__description}>{currentSession.description || currentSession.abstract}</p>
       </div>
       <div className={css.speakers}>
-        <div className={css.speakers__title}>Speakers:</div>
-        <SpeakerIconList speakers={currentSession.speakers} onSpeakerClick={onSpeakerClick} />
+        <SpeakerIconList speakers={currentSession.speakers} onSpeakerClick={onSpeakerClick} rows />
       </div>
     </div>
   )
