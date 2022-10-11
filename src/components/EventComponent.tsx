@@ -104,7 +104,14 @@ export function EventComponent(props: Props) {
             <Sidebar timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={!!activeSource} height={sidebarHeight} />
           </div>
           <div className={styles.eventInfo}>
-            {/* Watch on <span onClick={() => setStreamType('livepeer')}>Livepeer</span> | <span onClick={() => setStreamType('youtube')}>YouTube</span> */}
+            <ul className={styles.tabs}>
+              <li className='mr-2' onClick={() => setStreamType('livepeer')}>
+                <a href='#' className={streamType === 'livepeer' ? styles.active : ''}>Livepeer</a>
+              </li>
+              <li className='mr-2' onClick={() => setStreamType('youtube')}>
+                <a href='#' className={streamType === 'youtube' ? styles.active : ''}>YouTube</a>
+              </li>
+            </ul>
             <SessionInfoBox
               session={currentSession}
               onShareClick={() => openModal('share')}

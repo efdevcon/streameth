@@ -35,4 +35,17 @@
     grid-area: eventInfo;
     margin-bottom: 20px;
   }
+
+  .tabs {
+    @apply flex flex-wrap;
+
+    a {
+      @apply inline-block bg-gray-100 rounded-t-lg py-4 px-4 text-sm font-medium text-center;
+    }
+
+    .active {
+      color: #30354B;
+      text-decoration: underline;
+    }
+  }
 }
