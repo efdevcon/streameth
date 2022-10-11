@@ -49,6 +49,7 @@ export async function GetStages(config: Config): Promise<Stage[]> {
         let stage: Stage = {
             id: i.name?.en ? GetSlug(i.name?.en) : String(i.id),
             name: i.name?.en ?? '',
+            youtube: '',
             stream: [],
         }
 

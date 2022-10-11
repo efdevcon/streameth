@@ -702,8 +702,8 @@
     "end": 1665516000000,
     "speakers": [
       {
-        "id": "BAKZ9F",
-        "name": "Yoav Weiss",
+        "id": "VCBAZX",
+        "name": "Liraz",
         "description": null,
         "avatar": ""
       }
@@ -1028,8 +1028,8 @@
       {
         "id": "QEYVKV",
         "name": "AstroMel",
-        "description": null,
-        "avatar": ""
+        "description": "**AstroMelou**\r\nDj. Producer. Livecoder. Trans artist from Cali, Colombia. \r\n\r\nPacemaker for sound and visual journeys through acid, tropical, electric, fiery, rebellious and diverse frequencies of world music. Their sets denote the fluidity of musical genres,  daydreams of tropical fever.",
+        "avatar": "http://speak.devcon.org/media/avatars/AstroMelou_livecoder_Z8K5atN.jpeg"
       }
     ],
     "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy",
@@ -1308,9 +1308,9 @@
     "speakers": [
       {
         "id": "3VQEST",
-        "name": "Ixshells",
+        "name": "Ix-shells",
         "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-10_at_22.14.15_45brP3Q.png"
       }
     ],
     "description": "Livecoding & art by Ixshells",
@@ -1516,7 +1516,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/foto_IIi6GR9.jpg"
       }
     ],
-    "description": "While layer 2s have seen widescale adoption, they are often less accessible for those users that don't have crypto yet. \r\n\r\nIn this talk, Thijs Maas, the CEO of Onramper, shall share unique insights into the fiat on-ramp market for layer 2s, using unique insights we get as aggregator. We shall demonstrate the gaps in current layer 2 on-ramp coverage (and it's impact), and give insight into the actual performance of layer 2 on-ramps. Spoiler: things are less rosy than they might seem...",
+    "description": "In this talk, Thijs Maas, the CEO of Onramper, shall share unique insights into the fiat on-ramp market for layer 2s, using data on fiat on-ramps. We shall demonstrate the gaps in current layer 2 on-ramp coverage.",
     "track": "Layer 2s",
     "stage": "Talk 4",
     "type": "Lightning Talk"
@@ -1781,9 +1781,9 @@
       },
       {
         "id": "3ZAZ97",
-        "name": "Madison Adams",
-        "description": "Madison Adams is an 18-year-old gap-year student from Verdigris, Oklahoma living in NYC.\r\n\r\nMadison is exploring the intersection of social impact, climate, and technology through her work at Civics Unplugged, the Dream DAO, and self-directed learning journeys.",
-        "avatar": "http://speak.devcon.org/media/avatars/Madison_Profile_Picture_1CSi3n0.jpg"
+        "name": "Vanessa Koh",
+        "description": "-",
+        "avatar": "http://speak.devcon.org/media/avatars/ESP_Graphic_4-removebg-preview_1_pc7Xh0R.png"
       }
     ],
     "description": "ESP Day is a full day of talks and panel discussions with the purpose of exploring topics or projects pertinent to ecosystem development while highlighting the EF's grantees. Join us for wide-ranging conversations on building a post-Merge world, supporting education initiatives across cultures to reach our next billion, game development to achieve ZK scaling, and more!",
@@ -3245,8 +3245,8 @@
       {
         "id": "QEYVKV",
         "name": "AstroMel",
-        "description": null,
-        "avatar": ""
+        "description": "**AstroMelou**\r\nDj. Producer. Livecoder. Trans artist from Cali, Colombia. \r\n\r\nPacemaker for sound and visual journeys through acid, tropical, electric, fiery, rebellious and diverse frequencies of world music. Their sets denote the fluidity of musical genres,  daydreams of tropical fever.",
+        "avatar": "http://speak.devcon.org/media/avatars/AstroMelou_livecoder_Z8K5atN.jpeg"
       }
     ],
     "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy.",
@@ -3255,7 +3255,7 @@
   },
   {
     "id": "MACJT8",
-    "name": "Time in Ethereum",
+    "name": "Time in Ethereum - on the implications of replacing our dear friend Poisson",
     "start": 1665610200000,
     "end": 1665611700000,
     "speakers": [
@@ -3585,9 +3585,9 @@
     "speakers": [
       {
         "id": "3VQEST",
-        "name": "Ixshells",
+        "name": "Ix-shells",
         "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-10_at_22.14.15_45brP3Q.png"
       }
     ],
     "description": "Livecoding & art by Ixshells",
@@ -5204,9 +5204,9 @@
     "speakers": [
       {
         "id": "3VQEST",
-        "name": "Ixshells",
+        "name": "Ix-shells",
         "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-10_at_22.14.15_45brP3Q.png"
       }
     ],
     "description": "Livecoding & art by Ixshells",
@@ -5552,7 +5552,7 @@
       {
         "id": "8SLFHM",
         "name": "Atractor Estudio",
-        "description": "We are a group of artists who work with mechanical, electronic and computer engineering techniques from the field of the arts. We focus on the visualization of natural phenomena, mathematical and scientific paradigms related to sociocultural phenomena not only of the western hegemonic culture, but also of other ways of knowing and understanding the scientific, through the interaction of the viewer with a digital and analog substrate.",
+        "description": "**ATRACTOR STUDIO**\r\nColombian electronic arts collective Atractor understands technology as a field of struggle from their Latin American context. In this scenario, assimilating and experiencing technology always as active users implies that electronic arts and creation have the power to spark conversations and create spaces for community dialogue\r\n\r\nFor DEVCON they will be performing a video game live performance **The Migrants** and launch their NFT Botánica Transgénica.",
         "avatar": "http://speak.devcon.org/media/avatars/277579879_394370306025953_2445270446240223678_n_2k7qYfK.jpeg"
       }
     ],
@@ -6823,8 +6823,8 @@
       {
         "id": "QEYVKV",
         "name": "AstroMel",
-        "description": null,
-        "avatar": ""
+        "description": "**AstroMelou**\r\nDj. Producer. Livecoder. Trans artist from Cali, Colombia. \r\n\r\nPacemaker for sound and visual journeys through acid, tropical, electric, fiery, rebellious and diverse frequencies of world music. Their sets denote the fluidity of musical genres,  daydreams of tropical fever.",
+        "avatar": "http://speak.devcon.org/media/avatars/AstroMelou_livecoder_Z8K5atN.jpeg"
       }
     ],
     "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy",
