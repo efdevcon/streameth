@@ -1,12 +1,9 @@
-name: Import Pretalx schedule
+name: Live Pretalx schedule
 
 on:
   schedule:
     - cron: "0 * * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - live
 
 jobs:
   build:
@@ -15,6 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
         with:
+          ref: 'live'
           token: ${{secrets.GH_ACCESS_TOKEN}}
 
       - name: Use Node.js
