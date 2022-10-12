@@ -18,7 +18,7 @@ export function useSessions(initFilters: Filter[] = []) {
   }, [event])
   const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
-  const [eventDayNum, setEventDayNum] = useState<number | null>(null)
+  const [eventDayNum, setEventDayNum] = useState<number | null>(2)
   const [filters, setFilters] = useState<Filter[]>(initFilters)
   const eventDays = [...new Set(allSessions.map((i) => startOfDay(i.start)))].sort()
 
@@ -101,16 +101,19 @@ export function useSessions(initFilters: Filter[] = []) {
 
   // determine event day number if during event
   useEffect(() => {
-    if (eventDays.length > 1) {
-      for (let i = 0; i < eventDays.length; i++) {
-        const day = eventDays[i]
+    // setEventDayNum(2)
+    // if (eventDays.length > 1) {
+    //   for (let i = 0; i < eventDays.length; i++) {
+    //     const day = eventDays[i]
+    //     console.log('CURRENT DAU', day)
 
-        if (day === startOfDay(currentTimeInUTC())) {
-          setEventDayNum(i + 1)
-          break
-        }
-      }
-    }
+    //     if (day === startOfDay(currentTimeInUTC().startOf('day').valueOf())) {
+    //       console.log('START DAY === SET EVENT DAY', day)
+    //       setEventDayNum(i + 1)
+    //       break
+    //     }
+    //   }
+    // }
   }, [eventDays])
 
   // update time every minute and determine timeState

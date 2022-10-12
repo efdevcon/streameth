@@ -16,7 +16,7 @@ interface Params extends ParsedUrlQuery {
   id: string
 }
 
-export default function Stage(props: Props) {
+export default function StagePage(props: Props) {
   function getTrackImage() {
     if (props.stage.id === 'talk-5-opening-ceremonies') {
       return '/images/devcon/mainstage.jpg'

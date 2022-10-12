@@ -12,8 +12,8 @@
     "type": "livepeer",
     "stages": [
       {
-        "id": "talk-5-opening-ceremonies",
-        "name": "Main stage",
+        "id": "talk-5",
+        "name": "Talk 5",
         "youtube": "https://www.youtube.com/embed/h4MP1vwnyEE",
         "stream": [
           {
@@ -26,7 +26,7 @@
       },
       {
         "id": "talk-1",
-        "name": "Tropical sunset",
+        "name": "Talk 1",
         "youtube": "https://www.youtube.com/embed/wbQd4yio3bI",
         "stream": [
           {
@@ -39,7 +39,7 @@
       },
       {
         "id": "talk-2",
-        "name": "The cold forest",
+        "name": "Talk 2",
         "youtube": "https://www.youtube.com/embed/Wr_SHOmz4lc",
         "stream": [
           {
@@ -52,7 +52,7 @@
       },
       {
         "id": "talk-3",
-        "name": "Flowers",
+        "name": "Talk 3",
         "youtube": "https://www.youtube.com/embed/aCSOtnIqkaA",
         "stream": [
           {

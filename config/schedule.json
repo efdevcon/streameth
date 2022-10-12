@@ -48,6 +48,35 @@
     "type": "Talk"
   },
   {
+    "id": "VAXV78",
+    "name": "CHIVA LOUNGE OPENING w/ ETH Musicians DAPP",
+    "start": 1665507600000,
+    "end": 1665508200000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "Kick off the Devcon 6 music space with a warm embrace from your Artist hosts Mateo, is.love, and SHAKA. Mateo will introduce a cool way to support our community artists with the ETH Musicians Guild and DAPP.",
+    "track": "Opportunity & Global Impact",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
+    "id": "PU9ZSD",
+    "name": "Traditional Chinese Flute (Hu Lu Si)  Performed by Clara Lin",
+    "start": 1665508500000,
+    "end": 1665509100000,
+    "speakers": [],
+    "description": "The hulusi is a free reed wind instrument from South-East China. It is held vertically and has three bamboo pipes that pass through a Calabash gourd wind chest; the center pipe has finger holes and the outer two are typically drone pipes. It is not uncommon for a hulusi to have only one drone pipe while the second outer pipe is merely ornamental. The drone pipe has a finger hole which allows it to be stopped.",
+    "track": "Opportunity & Global Impact",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "B3UQM7",
     "name": "There Are Many Alternatives: Unlocking Civilizational Hypercomplexity with Ethereum",
     "start": 1665509400000,
@@ -226,6 +255,42 @@
     "track": "Layer 1 Protocol",
     "stage": "Workshop 1",
     "type": "Workshop 2h"
+  },
+  {
+    "id": "QRJZMH",
+    "name": "SHAKA LOOP",
+    "start": 1665509400000,
+    "end": 1665510300000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "SHAKA will build a multi instrumental loop:)",
+    "track": "Opportunity & Global Impact",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
+    "id": "T3QBAN",
+    "name": "Ukulele Workshop",
+    "start": 1665510300000,
+    "end": 1665513000000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "SHAKA has 12 ukuleles he is excited to share during Devcon and donate or gift collectors an ukulele after.  He will teach that TODO ES POSIBLE even learning the ukulele:)",
+    "track": "Opportunity & Global Impact",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "ETHXDV",
@@ -438,24 +503,6 @@
     "type": "Talk"
   },
   {
-    "id": "CTBFSQ",
-    "name": "ELI5: Zero Knowledge",
-    "start": 1665523800000,
-    "end": 1665526800000,
-    "speakers": [
-      {
-        "id": "A3PLVW",
-        "name": "Wanseob Lim",
-        "description": "Tech lead @ EF PSE, Author of Zkopru",
-        "avatar": "http://speak.devcon.org/media/avatars/-IlNT4nV_400x400_X2wzWMp.jpg"
-      }
-    ],
-    "description": ".",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "stage": "Workshop 4",
-    "type": "Workshop 1h"
-  },
-  {
     "id": "DNEG8Y",
     "name": "Web3 in the Ukraine government: integration & impact",
     "start": 1665513000000,
@@ -472,6 +519,41 @@
     "track": "Opportunity & Global Impact",
     "stage": "Talk 1",
     "type": "Talk"
+  },
+  {
+    "id": "C8HYJZ",
+    "name": "ELI5: Account Abstraction",
+    "start": 1665513000000,
+    "end": 1665516000000,
+    "speakers": [
+      {
+        "id": "VCBAZX",
+        "name": "Liraz",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": ".",
+    "track": "Developer Infrastructure",
+    "stage": "Workshop 4",
+    "type": "Workshop 1h"
+  },
+  {
+    "id": "JDBCEL",
+    "name": "OPEN SOURCE JAM",
+    "start": 1665513900000,
+    "end": 1665518400000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "The open source rhythms, chords, and melodies are open to be jammed on by everybody.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "EWZLCP",
@@ -696,24 +778,6 @@
     "type": "Workshop 1h"
   },
   {
-    "id": "C8HYJZ",
-    "name": "ELI5: Account Abstraction",
-    "start": 1665513000000,
-    "end": 1665516000000,
-    "speakers": [
-      {
-        "id": "VCBAZX",
-        "name": "Liraz",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": ".",
-    "track": "Developer Infrastructure",
-    "stage": "Workshop 4",
-    "type": "Workshop 1h"
-  },
-  {
     "id": "NHWBJH",
     "name": "Building blockchain products for UNICEF. How to get involved.",
     "start": 1665516600000,
@@ -741,6 +805,24 @@
     "description": "UNICEF has been experimenting with Ethereum and blockchain for several years. Examples of the solutions they've built include the UNICEF cryptofund (the first crypto denominated fund in the UN), Patchwork kingdoms (the largest UN's NFT for good collection) or staking as financing tool. Do you want be part of this journey? Come to the session and learn more about the solutions (architecture, tech stack, deployment process) and understand how you can help.",
     "track": "Opportunity & Global Impact",
     "stage": "Workshop 2",
+    "type": "Workshop 1h"
+  },
+  {
+    "id": "RAPTXZ",
+    "name": "ELI5: Cryptoeconomics",
+    "start": 1665516600000,
+    "end": 1665519600000,
+    "speakers": [
+      {
+        "id": "G8STKM",
+        "name": "Julian Ma",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": ".",
+    "track": "Developer Infrastructure",
+    "stage": "Workshop 4",
     "type": "Workshop 1h"
   },
   {
@@ -874,6 +956,16 @@
     "track": "Security",
     "stage": "Talk 3",
     "type": "Talk"
+  },
+  {
+    "id": "ZFKLZL",
+    "name": "Remix’s Jazz & Blues Open Source JAM SESSION",
+    "start": 1665518400000,
+    "end": 1665522000000,
+    "speakers": [],
+    "description": "A friendly Jazz & Blues jam where we can play (easy) jazz standards & blues classics and Bossa Nova. We invite all jazz singers, pianists, guitarists, ukulelists, percussionists or any other instrument to join us  on stage. So don’t be shy, always wanted to sing your favourite Sinatra song or play any instrument and know some basic jazz songs like that just hop on. We will support you as much as we can. We will use some sheet music and chord apps to make it happen.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "BBNCUT",
@@ -1094,7 +1186,7 @@
         "id": "MJJN9F",
         "name": "Jordan Sutcliffe",
         "description": "BizDev Lead at StakeWise",
-        "avatar": "http://speak.devcon.org/media/avatars/Tree_of_life_rrS51mp.jpeg"
+        "avatar": "http://speak.devcon.org/media/avatars/Speaker_Profile_Square_Fuknipw.jpg"
       },
       {
         "id": "BJQV8Z",
@@ -1161,66 +1253,6 @@
     "track": "Opportunity & Global Impact",
     "stage": "Talk 1",
     "type": "Talk"
-  },
-  {
-    "id": "RAPTXZ",
-    "name": "ELI5: Cryptoeconomics",
-    "start": 1665516600000,
-    "end": 1665519600000,
-    "speakers": [
-      {
-        "id": "G8STKM",
-        "name": "Julian Ma",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": ".",
-    "track": "Developer Infrastructure",
-    "stage": "Workshop 4",
-    "type": "Workshop 1h"
-  },
-  {
-    "id": "NESKMJ",
-    "name": "How Latam cities are thinking about blockchain solutions.",
-    "start": 1665523800000,
-    "end": 1665526800000,
-    "speakers": [
-      {
-        "id": "QJMMFZ",
-        "name": "Jaime Pumarejo",
-        "description": "Alcalde de Barranquilla",
-        "avatar": "http://speak.devcon.org/media/avatars/jaime_WMU9awU.jpg"
-      },
-      {
-        "id": "DZVDNL",
-        "name": "Diego Fernandez",
-        "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
-        "avatar": ""
-      },
-      {
-        "id": "XXLWA9",
-        "name": "Mauricio Tovar",
-        "description": "Co-Founder at Tropykus.com, CEO at TRU. Co-director of the InTIColombia research group at Universidad Nacional de Colombia. Leader of the Colombia node for the Iberoamerican Blockchain Alliance. Electronic Engineer from the Universidad Nacional de Colombia. Master's Degree in Creation of Innovative and Tech Based Companies from the Universidad de Barcelona",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg"
-      },
-      {
-        "id": "FURT7F",
-        "name": "Irais Reyes",
-        "description": "Diputada del H. Congreso del Estado de Nuevo León, Monterrey",
-        "avatar": ""
-      },
-      {
-        "id": "ZCF8JW",
-        "name": "Alfredo Bateman",
-        "description": "Secretario de Desarrollo Económico de Bogotá",
-        "avatar": "http://speak.devcon.org/media/avatars/WhatsApp_Image_2022-10-08_at_9.32.57_AM_pdFVbRv.jpeg"
-      }
-    ],
-    "description": "Mayors or Innovation Ministers/Secretaries to discuss and share their blockchain projects and impact in citizens.",
-    "track": "Opportunity & Global Impact",
-    "stage": "Talk 1",
-    "type": "Panel"
   },
   {
     "id": "PJP7QM",
@@ -1318,6 +1350,84 @@
     "type": "Workshop 1h"
   },
   {
+    "id": "CTBFSQ",
+    "name": "ELI5: Zero Knowledge",
+    "start": 1665523800000,
+    "end": 1665526800000,
+    "speakers": [
+      {
+        "id": "A3PLVW",
+        "name": "Wanseob Lim",
+        "description": "Tech lead @ EF PSE, Author of Zkopru",
+        "avatar": "http://speak.devcon.org/media/avatars/-IlNT4nV_400x400_X2wzWMp.jpg"
+      }
+    ],
+    "description": ".",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Workshop 4",
+    "type": "Workshop 1h"
+  },
+  {
+    "id": "NESKMJ",
+    "name": "How Latam cities are thinking about blockchain solutions.",
+    "start": 1665523800000,
+    "end": 1665526800000,
+    "speakers": [
+      {
+        "id": "QJMMFZ",
+        "name": "Jaime Pumarejo",
+        "description": "Alcalde de Barranquilla",
+        "avatar": "http://speak.devcon.org/media/avatars/jaime_WMU9awU.jpg"
+      },
+      {
+        "id": "DZVDNL",
+        "name": "Diego Fernandez",
+        "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
+        "avatar": ""
+      },
+      {
+        "id": "XXLWA9",
+        "name": "Mauricio Tovar",
+        "description": "Co-Founder at Tropykus.com, CEO at TRU. Co-director of the InTIColombia research group at Universidad Nacional de Colombia. Leader of the Colombia node for the Iberoamerican Blockchain Alliance. Electronic Engineer from the Universidad Nacional de Colombia. Master's Degree in Creation of Innovative and Tech Based Companies from the Universidad de Barcelona",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg"
+      },
+      {
+        "id": "FURT7F",
+        "name": "Irais Reyes",
+        "description": "Diputada del H. Congreso del Estado de Nuevo León, Monterrey",
+        "avatar": ""
+      },
+      {
+        "id": "ZCF8JW",
+        "name": "Alfredo Bateman",
+        "description": "Secretario de Desarrollo Económico de Bogotá",
+        "avatar": "http://speak.devcon.org/media/avatars/WhatsApp_Image_2022-10-08_at_9.32.57_AM_pdFVbRv.jpeg"
+      }
+    ],
+    "description": "Mayors or Innovation Ministers/Secretaries to discuss and share their blockchain projects and impact in citizens.",
+    "track": "Opportunity & Global Impact",
+    "stage": "Talk 1",
+    "type": "Panel"
+  },
+  {
+    "id": "VCY3RV",
+    "name": "An Evening in the Dark Forest",
+    "start": 1665523800000,
+    "end": 1665536400000,
+    "speakers": [
+      {
+        "id": "KFAEPV",
+        "name": "Justin Glibert",
+        "description": "cyberspace vintner and digital physicist.",
+        "avatar": "http://speak.devcon.org/media/avatars/IOhWHC7W_400x400_1gfjsrI.jpg"
+      }
+    ],
+    "description": "Attention Dark Forest community members! We'll be co-hosting AN EVENING IN THE DARK FOREST with @d_fdao.\r\nJoin us for a community meetup, talks and panels from players and devs, and a new DF gamemode by \r\n@d_fdao!",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Hacker Basement",
+    "type": "Meetup"
+  },
+  {
     "id": "9CCBZF",
     "name": "How Bridges Improve L2 Composability",
     "start": 1665525000000,
@@ -1391,7 +1501,7 @@
   },
   {
     "id": "VEMBB9",
-    "name": "Read-only Reentrency - a Novel Vulnerability Class Responsible for $100m+ Funds at Risk",
+    "name": "Read-only Reentrancy - a Novel Vulnerability class responsible for 100m+ funds at risk",
     "start": 1665525600000,
     "end": 1665526200000,
     "speakers": [
@@ -1654,6 +1764,16 @@
     "type": "Lightning Talk"
   },
   {
+    "id": "8JSG8H",
+    "name": "Matteo Tambussi",
+    "start": 1665528300000,
+    "end": 1665531000000,
+    "speakers": [],
+    "description": "Matteo has been working in the independent music scene since 2000. With different line-ups and as a solo artist, he has released a total of 11 albums, earned radio plays at international level (**BBC6**, Radio J Wave Tokyo, Flux FM, Fritz Radio, Life FM London, Radio Deejay, Lifegate Radio) and played as opening act for artists such as **Nick Cave**, **Boy George**, **Blonde Redhead**, Mando Diao, Africa Unite.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "L9KYYQ",
     "name": "Account Abstraction on StarkNet",
     "start": 1665528600000,
@@ -1694,6 +1814,16 @@
     "track": "Opportunity & Global Impact",
     "stage": "Talk 1",
     "type": "Lightning Talk"
+  },
+  {
+    "id": "FPFE3Y",
+    "name": "DJ ALMND",
+    "start": 1665531000000,
+    "end": 1665538200000,
+    "speakers": [],
+    "description": "Reggaeton and perreo DJ, Almnd is a Mexican performer based in Mexico City. With more than 10 years working around the Mexico creative and cultural scene, as well as hosting different radio and TV sections. She is now a full time Web3 community builder working for different DAOs & multicultural teams. Almnd DJ sets feature underground Latam artists, focused on the alternative and experimental side of the urban genre.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "UXMBLR",
@@ -1849,7 +1979,7 @@
     "id": "QXERQK",
     "name": "Supporting the Ethereum Roadmap with a Decentralized Blockchain Data Supply Chain",
     "start": 1665586800000,
-    "end": 1665588600000,
+    "end": 1665588300000,
     "speakers": [
       {
         "id": "YSBNN3",
@@ -1945,6 +2075,24 @@
     "description": "Liquid staked Ethereum is a reliable source of yield and is fast becoming a key primitive in DeFi. Come hear from Rocket Pool about their experience designing a decentralized Ethereum liquid staking protocol.\r\n\r\nHow do you create a decentralized protocol for staking? What are some of the design trade offs in token design? What tools are available today? What challenges exist due to current L1 structures? What opportunities exist in future upgrades?",
     "track": "Staking & Validator Experience",
     "stage": "Talk 3",
+    "type": "Talk"
+  },
+  {
+    "id": "9V7YQL",
+    "name": "Lessons from the Field: Threat Modeling for the Everyday Use of Digital Currency",
+    "start": 1665588600000,
+    "end": 1665590100000,
+    "speakers": [
+      {
+        "id": "XLEESP",
+        "name": "Andrew",
+        "description": "Andrew Vaziri is a technical lead in GiveDirectly's Innovation Team. He works primarily on geospatial data, machine learning, and blockchain projects. He graduated with an MS in Electrical Engineering from Georgia Tech and has worked for Apple, Microsoft, and multiple successful startups as a software and machine learning engineer.",
+        "avatar": "http://speak.devcon.org/media/avatars/headshot_tWNSyJP.png"
+      }
+    ],
+    "description": "[GiveDirectly](https://givedirectly.org) is a charity that sends money directly to people living in poverty. Over the past decade, GD has transferred hundreds of millions of dollars to recipients using centralized digital currency systems, specifically telco-operated mobile money. Andrew will share some of the measures GD takes to reduce fraud and offer suggestions about how better privacy could drive the everyday use of Ethereum.",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Talk 5",
     "type": "Talk"
   },
   {
@@ -2054,6 +2202,16 @@
     "track": "Cryptoeconomics",
     "stage": "Talk 3",
     "type": "Talk"
+  },
+  {
+    "id": "W9CLNK",
+    "name": "Healing Session by is.love",
+    "start": 1665590400000,
+    "end": 1665594000000,
+    "speakers": [],
+    "description": "is.love lead us through an electronic healing session. Ten headphones available for Silent DJ option. Enjoy meditations and a healing vibration.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "LDYYDR",
@@ -2281,7 +2439,7 @@
     "id": "NK3KHN",
     "name": "Build Your First Contract with the Wizard of OZ",
     "start": 1665594600000,
-    "end": 1665595200000,
+    "end": 1665595020000,
     "speakers": [
       {
         "id": "LUVRZ8",
@@ -2294,6 +2452,16 @@
     "track": "Developer Infrastructure",
     "stage": "Talk 4",
     "type": "Lightning Talk"
+  },
+  {
+    "id": "WSTEX8",
+    "name": "Traditional Chinese Flute (Hu Lu Si)  Performed by Clara Lin",
+    "start": 1665594900000,
+    "end": 1665595800000,
+    "speakers": [],
+    "description": "The hulusi is a free reed wind instrument from South-East China. It is held vertically and has three bamboo pipes that pass through a Calabash gourd wind chest; the center pipe has finger holes and the outer two are typically drone pipes. It is not uncommon for a hulusi to have only one drone pipe while the second outer pipe is merely ornamental. The drone pipe has a finger hole which allows it to be stopped.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "RDKPVL",
@@ -2321,14 +2489,31 @@
   },
   {
     "id": "HFPLPD",
-    "name": "Brewster Kahle",
+    "name": "Publisher’s Denial of Digital Ownership vs Decentralization",
     "start": 1665595800000,
     "end": 1665597600000,
     "speakers": [],
-    "description": "TBD - Hold for Brewster",
+    "description": ".",
     "track": "Opportunity & Global Impact",
     "stage": "Talk 5",
     "type": "Talk"
+  },
+  {
+    "id": "GH8QJC",
+    "name": "Ukulele Workshop",
+    "start": 1665596700000,
+    "end": 1665599400000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "SHAKA has 12 ukuleles he is excited to share during Devcon and donate or gift collectors an ukulele after.  He will teach that TODO ES POSIBLE even learning the ukulele:)",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "U8GHK9",
@@ -2427,7 +2612,7 @@
         "avatar": ""
       }
     ],
-    "description": "As in any complex system there may be emergent behaviors in DeFi protocols. In this workshop we will show the basics of how agent based simulations combined with reinforcement learning can be used to explore these and also for optimization of various protocol parameter values. \r\n\r\nThis will be based on https://github.com/vegaprotocol/vega-market-sim and https://github.com/msabvid/cpm_agent_based_sim . Participants should have Python / Pytorch if they want to hack along.",
+    "description": "As in any complex system there may be emergent behaviors in DeFi protocols. In this workshop we will show the basics of how agent based simulations combined with reinforcement learning can be used to explore these and also for optimization of various protocol parameter values. \r\n\r\nThis will be based on https://github.com/vegaprotocol/vega-market-sim and https://github.com/msabvid/cpm_agent_based_sim . Ideally, try to follow setup in Vega-market-sim beforehand, but we'll go through it together.",
     "track": "Governance & Coordination",
     "stage": "Workshop 3",
     "type": "Workshop 2h"
@@ -2467,6 +2652,23 @@
     "track": "Developer Infrastructure",
     "stage": "Talk 2",
     "type": "Talk"
+  },
+  {
+    "id": "8JGQU8",
+    "name": "SHAKA AND THE OPEN SOURCE ORCHESTRA",
+    "start": 1665599400000,
+    "end": 1665603000000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "Hawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "RCEEUM",
@@ -2655,6 +2857,16 @@
     "type": "Workshop 1h"
   },
   {
+    "id": "US7CFH",
+    "name": "ENREDO LOFI SAMPLE ARTIST",
+    "start": 1665603000000,
+    "end": 1665608400000,
+    "speakers": [],
+    "description": "Beatmaker, Lo-Fi musician and Audiovisual and Multimedia communicator.\r\nBased in Cajicá, Colombia. Enredo is the musical project of Nicolas Gomez Luque in which he explores chill and melancholic atmospheres through his Lo-Fi music and portrays his thoughts about the cotidianity, identity and memory through audiovisual content.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "9VJVKG",
     "name": "zkEVM Vs EVM: Full Equivalence?",
     "start": 1665603000000,
@@ -2743,6 +2955,12 @@
         "name": "Marina Markezic",
         "description": "Marina is the co-founder of EUCI, which aims to propel EU regulation to become Defi-friendly. Since 2017 Marina has been advising crypto projects on governance and legal matters with a focus on decentralization, DeFi and NFTs. She previously led the advisory team of blockchain accelerator cofound.it and co-founded a crowdinvesting platform.",
         "avatar": "http://speak.devcon.org/media/avatars/Marina_Profile_N5vwWCA.jpg"
+      },
+      {
+        "id": "H3VZ9D",
+        "name": "Simon Polrot",
+        "description": "Educating on crypto and public blockchains since 2015",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_0203_bJUzIOG.jpeg"
       }
     ],
     "description": "With the wider adoption, the use of open blockchains and dapps built on top of it is becoming progressively regulated by governments all over the world (especially in the EU and the U.S.). Understanding and adjusting to these regulations is becoming a reality for many projects in the ecosystem, especially the ones facing the users and the community. What will be the impact of regulation on the Ethereum ecosystem and how it might change the existing use cases, designs and utilities?",
@@ -2979,6 +3197,24 @@
     "type": "Talk"
   },
   {
+    "id": "HFNBEY",
+    "name": "0xPARC Autonomous Worlds Arcade",
+    "start": 1665608400000,
+    "end": 1665705600000,
+    "speakers": [
+      {
+        "id": "KFAEPV",
+        "name": "Justin Glibert",
+        "description": "cyberspace vintner and digital physicist.",
+        "avatar": "http://speak.devcon.org/media/avatars/IOhWHC7W_400x400_1gfjsrI.jpg"
+      }
+    ],
+    "description": "Participants will be able to try their hands on two new on-chain games built by  @latticexyz using MUD: an on-chain 3D voxel world and a real-time strategy game. \r\nmore info: https://www.notion.so/0xparc/Autonomous-Worlds-Arcade-602eb2b16e3f455397cfbb218b0b7843",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Hacker Basement",
+    "type": "Meetup"
+  },
+  {
     "id": "9QYTX3",
     "name": "Streameth: Decentralized Video CMS",
     "start": 1665608400000,
@@ -3088,7 +3324,7 @@
   },
   {
     "id": "KTAGUQ",
-    "name": "Multidimensional Resource Pricing OR L2EVM OR tbd",
+    "name": "How to Scale a Blockchain: Motivating the Ethereum Rollup-Centric Roadmap",
     "start": 1665608400000,
     "end": 1665610200000,
     "speakers": [
@@ -3099,7 +3335,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/starship-1_OrtNLyK.jpg"
       }
     ],
-    "description": "Multidim. Resource Pricing: EIP-4844 will for the first time introduce a new resource type, priced independently from main execution. Can we split existing pricing into multiple dimensions as well, to make resource usage more efficient?\r\n\r\nOR\r\n\r\nL2EVM: Rollups are converging on EVM equivalence. Minimizing the difference to the base layer EVM brings many standardization benefits, but reduces speed of innovation. Can we have the best of both worlds by having a separate standard L2EVM?\r\n\r\nOR\r\n\r\ntbd",
+    "description": "Scaling blockchains to support billions of users without compromising decentralization is one of the biggest remaining challenges in the crypto space. This talk will showcase why there is a fundamental scalability-dencentralization tradeoff for any monolithic chain, and how scalable rollups on top of decentralized settlement chains can overcome this tradeoff. What implications does this have for the future of Ethereum? Beginner friendly, with pictures!",
     "track": "Layer 1 Protocol",
     "stage": "Talk 5",
     "type": "Talk"
@@ -3169,24 +3405,6 @@
     "track": "Opportunity & Global Impact",
     "stage": "Workshop 3",
     "type": "Workshop 2h"
-  },
-  {
-    "id": "ERDPUV",
-    "name": "Hold - Temporary",
-    "start": 1665613800000,
-    "end": 1665615300000,
-    "speakers": [
-      {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": ".",
-    "track": "Opportunity & Global Impact",
-    "stage": "Talk 2",
-    "type": "Talk"
   },
   {
     "id": "EL7FFV",
@@ -3278,6 +3496,24 @@
     "type": "Talk"
   },
   {
+    "id": "XPHSYR",
+    "name": "Advanced Seaport Techniques",
+    "start": 1665612000000,
+    "end": 1665615000000,
+    "speakers": [
+      {
+        "id": "3GSD8J",
+        "name": "Zero Age",
+        "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
+        "avatar": "http://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif"
+      }
+    ],
+    "description": "Seaport is a marketplace protocol for buying and selling NFTs. While it powers OpenSea in a horizontal capacity, Seaport is open source and allows marketplaces to share a pool of liquidity – enabling project-specific, bespoke vertical marketplaces. Since launch, it’s helped spur innovation across emerging NFT verticals, including ENS names, in-game purchases, etc. This workshop will explore advanced techniques and use cases for the Seaport protocol.",
+    "track": "Developer Infrastructure",
+    "stage": "Workshop 2",
+    "type": "Workshop 1h"
+  },
+  {
     "id": "WVPYNS",
     "name": "The Power of Stories",
     "start": 1665612000000,
@@ -3312,24 +3548,6 @@
     "track": "Security",
     "stage": "Talk 3",
     "type": "Talk"
-  },
-  {
-    "id": "TLHM7N",
-    "name": "Herodotus Workshop",
-    "start": 1665612000000,
-    "end": 1665615600000,
-    "speakers": [
-      {
-        "id": "BAU3ZE",
-        "name": "Marcello Bardus",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
-    "track": "Developer Infrastructure",
-    "stage": "Workshop 2",
-    "type": "Workshop 1h"
   },
   {
     "id": "L733ZW",
@@ -3386,6 +3604,12 @@
         "avatar": "http://speak.devcon.org/media/avatars/E01HRQM32TX-U01MY7HFNA3-70b2d4e413d5-512_gSUmJAj.jpg"
       },
       {
+        "id": "GNJMSB",
+        "name": "Sreeram Kannan",
+        "description": "Sreeram Kannan is Founder of EigenLayer and an associate professor at the Department of Electrical & Computer Engineering at the University of Washington, Seattle, where he leads the UW Blockchain Lab. He was a postdoctoral scholar at University of California, Berkeley and a visiting postdoc at Stanford between 2012-2014 before which he received his Ph.D. in Electrical and Computer Engineering and M.S. in mathematics from the University of Illinois Urbana Champaign.",
+        "avatar": "http://speak.devcon.org/media/avatars/sk_fuNT6By.jpeg"
+      },
+      {
         "id": "BCDDEU",
         "name": "Mark",
         "description": null,
@@ -3402,6 +3626,24 @@
     "track": "Staking & Validator Experience",
     "stage": "Workshop 4",
     "type": "Panel"
+  },
+  {
+    "id": "PRZWNN",
+    "name": "How to Ethically Build Public Good Infrastructure",
+    "start": 1665612000000,
+    "end": 1665613500000,
+    "speakers": [
+      {
+        "id": "SDXR33",
+        "name": "Corey Petty",
+        "description": "Dr. Corey Petty started his blockchain focused research around 2012 as a personal hobby while doing his PhD candidacy at Texas Tech University in Computational Chemical Physics. He then went on to co-found The Bitcoin Podcast Network and still serves as a host on Hashing It Out. Corey entered the data science/blockchain security industry for a few years attempting to fix vulnerabilities in ICS/SCADA networks before transitioning to Status as Chief Security Officer. Now he works on infrastructure",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_20190918_130908_475_dmLZppk.jpg"
+      }
+    ],
+    "description": "We at Status have been working to enable an interface to Web3 since our inception. We bought into the principles of this ecosystem, and have spent extraordinary effort to not compromise on those ethics while we continue to create applications that are easily accessible while also maintaining our user's rights. \r\n\r\nThis talk is an overview of this journey, lessons learned, the fruits of this labor, why we're doubling down on this process, and why you should to.",
+    "track": "Layer 1 Protocol",
+    "stage": "Talk 2",
+    "type": "Talk"
   },
   {
     "id": "SPUUGF",
@@ -3446,20 +3688,30 @@
     "type": "Lightning Talk"
   },
   {
-    "id": "PRZWNN",
-    "name": "How to Ethically Build Public Good Infrastructure",
-    "start": 1665612000000,
-    "end": 1665613500000,
+    "id": "8WZKGB",
+    "name": "DJ is.love and VJ Cbazperrez",
+    "start": 1665613800000,
+    "end": 1665619200000,
+    "speakers": [],
+    "description": "Music curator & DJ. Listening experiences designer. Product Manager focused on media+entertainment technology products/events.\r\n\r\nBased in Bogotá, Camilo is leading the **[[DMT- Discovery, Music & Technology]]",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
+    "id": "ERDPUV",
+    "name": "Hold - Temporary",
+    "start": 1665613800000,
+    "end": 1665615300000,
     "speakers": [
       {
-        "id": "SDXR33",
-        "name": "Corey Petty",
-        "description": "Dr. Corey Petty started his blockchain focused research around 2012 as a personal hobby while doing his PhD candidacy at Texas Tech University in Computational Chemical Physics. He then went on to co-found The Bitcoin Podcast Network and still serves as a host on Hashing It Out. Corey entered the data science/blockchain security industry for a few years attempting to fix vulnerabilities in ICS/SCADA networks before transitioning to Status as Chief Security Officer. Now he works on infrastructure",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_20190918_130908_475_dmLZppk.jpg"
+        "id": "3RRW9H",
+        "name": "Ethereum Foundation",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "description": "We at Status have been working to enable an interface to Web3 since our inception. We bought into the principles of this ecosystem, and have spent extraordinary effort to not compromise on those ethics while we continue to create applications that are easily accessible while also maintaining our user's rights. \r\n\r\nThis talk is an overview of this journey, lessons learned, the fruits of this labor, why we're doubling down on this process, and why you should to.",
-    "track": "Layer 1 Protocol",
+    "description": ".",
+    "track": "Opportunity & Global Impact",
     "stage": "Talk 2",
     "type": "Talk"
   },
@@ -3584,6 +3836,16 @@
     "type": "Lightning Talk"
   },
   {
+    "id": "A8GWNA",
+    "name": "Justin Holmes and Friends",
+    "start": 1665619200000,
+    "end": 1665624600000,
+    "speakers": [],
+    "description": "\"Settle in for strings and flutes, with songs of surveillance and covers of classic video games - Zelda, Final Fantasy, Chrono Trigger. A mix of hard-driving bluegrass style and thoughts of cryptologic society at a relaxed pace. Acoustic and live.”",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "MTLQFS",
     "name": "Livecoding Performance",
     "start": 1665619200000,
@@ -3599,6 +3861,173 @@
     "description": "Livecoding & art by Ixshells",
     "stage": "Hacker Basement",
     "type": "Workshop 1h"
+  },
+  {
+    "id": "HJ7EFD",
+    "name": "OPEN SOURCE JAM",
+    "start": 1665625500000,
+    "end": 1665629100000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "The open source rhythms, chords, and melodies are open to be jammed on by everybody.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
+    "id": "XMHCA7",
+    "name": "ZK Security Self Led Session",
+    "start": 1665669600000,
+    "end": 1665676800000,
+    "speakers": [
+      {
+        "id": "CJ9RVC",
+        "name": "Jordi Baylina",
+        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
+        "avatar": ""
+      },
+      {
+        "id": "TZGGNW",
+        "name": "Jon Stephens",
+        "description": "I am a current PhD student at UT Austin as well as the CTO and a co-founder of Veridise. My work focuses on developing automated techniques to verify and identify bugs in various locations in the blockchain stack.",
+        "avatar": "http://speak.devcon.org/media/avatars/jon1_UiU1u9V.jpeg"
+      },
+      {
+        "id": "LSGVGP",
+        "name": "Kyle Charbonnet",
+        "description": "Software Security Engineer at the Privacy & Scaling Explorations Team",
+        "avatar": ""
+      },
+      {
+        "id": "ZYXBSK",
+        "name": "gubsheep",
+        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
+        "avatar": ""
+      },
+      {
+        "id": "CMSZNX",
+        "name": "David Theodore",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "8DMBJM",
+        "name": "Remy",
+        "description": "Ops, startups, higher ed + tech, outdoor activities.",
+        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
+      },
+      {
+        "id": "ZRNNVV",
+        "name": "Barry Whitehat",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      },
+      {
+        "id": "KQNENU",
+        "name": "Lucas",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "UHSVVC",
+        "name": "Haichen Shen",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": "As more ZK-enabled applications come online, we'll need to build a robust security ecosystem and new techniques to ensure that our ZK apps aren't vulnerable to attackers. In this session hosted by 0xPARC and Privacy and Scaling Explorations, specialists in ZK, formal verification, and assurance discuss new approaches to securing these next-generation decentralized apps. \r\n\r\nFull schedule here: https://0xparc.notion.site/ZK-Security-SLS-Schedule-df4675aa9ad04f49a2836191ec44f8d8",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Workshop 1",
+    "type": "Workshop 2h"
+  },
+  {
+    "id": "KPR8CL",
+    "name": "Future of ZK Proving Systems Self Led Session",
+    "start": 1665673200000,
+    "end": 1665683700000,
+    "speakers": [
+      {
+        "id": "CJ9RVC",
+        "name": "Jordi Baylina",
+        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
+        "avatar": ""
+      },
+      {
+        "id": "A7VEH7",
+        "name": "Ye Zhang",
+        "description": "Ye Zhang is the co-founder and zk-researcher at Scroll. He used to work on hardware acceleration for ZKP algorithms and theoretical constructions behind ZKP protocols. Now his focus is on optimizing the zkEVM.",
+        "avatar": "http://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg"
+      },
+      {
+        "id": "WVSWJD",
+        "name": "Youssef El Housni",
+        "description": "I am an applied cryptographer at ConsenSys working on cryptography and SNARK libraries in Go (see gnark and gnark-crypto). I am also a final year PhD student in cryptography at Ecole Polytechnique in Paris.",
+        "avatar": "http://speak.devcon.org/media/avatars/0411D19C-9905-49E9-AFD5-2F9AE18B9B92_S9EnkOM.jpeg"
+      },
+      {
+        "id": "DBEDPK",
+        "name": "Adrian Hamelink",
+        "description": "Cryptography engineer @ Aztec",
+        "avatar": ""
+      },
+      {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      },
+      {
+        "id": "DKZWNJ",
+        "name": "Ying Tong",
+        "description": "Core Developer at Electric Coin Company",
+        "avatar": ""
+      },
+      {
+        "id": "XPGGMQ",
+        "name": "Louis Guthmann",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      },
+      {
+        "id": "9Q9ZTE",
+        "name": "Janmajaya Mall",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9DUZUZ",
+        "name": "Brandon Kase",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "LJJQBM",
+        "name": "Kev",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": "Modern proof systems are informed by modular and composable designs. This self led session hosted by 0xPARC and Privacy and Scaling Explorations explores the techniques, tools, and applications enabling the interoperable and efficient proof systems of the future. \r\nFull agenda here: https://0xparc.notion.site/Future-of-Proving-Systems-SLS-Schedule-c030e251ffaf4f10bfd3389195f6cb28",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Workshop 1",
+    "type": "Workshop 2h"
   },
   {
     "id": "KVMVBU",
@@ -3733,78 +4162,6 @@
     "type": "Talk"
   },
   {
-    "id": "XMHCA7",
-    "name": "ZK Security Self Led Session",
-    "start": 1665694800000,
-    "end": 1665702000000,
-    "speakers": [
-      {
-        "id": "CJ9RVC",
-        "name": "Jordi Baylina",
-        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
-        "avatar": ""
-      },
-      {
-        "id": "TZGGNW",
-        "name": "Jon Stephens",
-        "description": "I am a current PhD student at UT Austin as well as the CTO and a co-founder of Veridise. My work focuses on developing automated techniques to verify and identify bugs in various locations in the blockchain stack.",
-        "avatar": "http://speak.devcon.org/media/avatars/jon1_UiU1u9V.jpeg"
-      },
-      {
-        "id": "LSGVGP",
-        "name": "Kyle Charbonnet",
-        "description": "Software Security Engineer at the Privacy & Scaling Explorations Team",
-        "avatar": ""
-      },
-      {
-        "id": "ZYXBSK",
-        "name": "gubsheep",
-        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
-        "avatar": ""
-      },
-      {
-        "id": "CMSZNX",
-        "name": "David Theodore",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "8DMBJM",
-        "name": "Remy",
-        "description": "Ops, startups, higher ed + tech, outdoor activities.",
-        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
-      },
-      {
-        "id": "ZRNNVV",
-        "name": "Barry Whitehat",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9RKGBT",
-        "name": "Jason Morton",
-        "description": "ZKonduit & 0xPARC",
-        "avatar": ""
-      },
-      {
-        "id": "KQNENU",
-        "name": "Lucas",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "UHSVVC",
-        "name": "Haichen Shen",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": "As more ZK-enabled applications come online, we'll need to build a robust security ecosystem and new techniques to ensure that our ZK apps aren't vulnerable to attackers. In this session hosted by 0xPARC and Privacy and Scaling Explorations, specialists in ZK, formal verification, and assurance discuss new approaches to securing these next-generation decentralized apps. \r\n\r\nFull schedule here: https://0xparc.notion.site/ZK-Security-SLS-Schedule-df4675aa9ad04f49a2836191ec44f8d8",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "stage": "Workshop 1",
-    "type": "Workshop 2h"
-  },
-  {
     "id": "8DGJYP",
     "name": "Adoption Day — UX Unconference",
     "start": 1665673200000,
@@ -3853,7 +4210,7 @@
         "avatar": ""
       }
     ],
-    "description": "[Ethereum consensus pyspec](https://github.com/ethereum/consensus-specs) is an executable specification that serves as a reference for consensus layer devs. It is also used for creating the test case vectors for client teams.\r\n\r\nIn this lightning talk, we will have a tutorial on how to run [Ethereum consensus pyspec](https://github.com/ethereum/consensus-specs). And bonus, learn how to write a test by yourself!",
+    "description": "Ethereum consensus pyspec (https://github.com/ethereum/consensus-specs) is an executable specification that serves as a reference for consensus layer devs. It is also used for creating the test case vectors for client teams.\r\n\r\nIn this lightning talk, we will have a tutorial on how to run the Ethereum consensus pyspec. And bonus, learn how to write a test by yourself!",
     "track": "Layer 1 Protocol",
     "stage": "Talk 2",
     "type": "Lightning Talk"
@@ -3947,6 +4304,16 @@
     "track": "Opportunity & Global Impact",
     "stage": "Talk 4",
     "type": "Talk"
+  },
+  {
+    "id": "XHHSTN",
+    "name": "Healing Session by is.love",
+    "start": 1665676800000,
+    "end": 1665680400000,
+    "speakers": [],
+    "description": "is.love lead us through an electronic healing session. Ten headphones available for Silent DJ option. Enjoy meditations and a healing vibration.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "WKLUNK",
@@ -4084,7 +4451,7 @@
     "id": "8YZTRZ",
     "name": "GHO",
     "start": 1665676800000,
-    "end": 1665678600000,
+    "end": 1665678300000,
     "speakers": [
       {
         "id": "UP9DY8",
@@ -4261,6 +4628,16 @@
     "type": "Lightning Talk"
   },
   {
+    "id": "GUK7UR",
+    "name": "DJ ALMND",
+    "start": 1665681300000,
+    "end": 1665685800000,
+    "speakers": [],
+    "description": "Reggaeton and perreo DJ, Almnd is a Mexican performer based in Mexico City. With more than 10 years working around the Mexico creative and cultural scene, as well as hosting different radio and TV sections. She is now a full time Web3 community builder working for different DAOs & multicultural teams. Almnd DJ sets feature underground Latam artists, focused on the alternative and experimental side of the urban genre.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "8VHU3E",
     "name": "How to Integrate Diverse Sources of Reputational Evidence: Learnings from the Lens Protocol Reputation System",
     "start": 1665681600000,
@@ -4273,7 +4650,7 @@
         "avatar": ""
       }
     ],
-    "description": "Machine learning is typically a compute-intensive task that is prohibitively expensive to do on-chain. In this talk I’ll discuss strategies that Aave and the Lens API have used for training and deploying machine learning models in a way that maintains the transparent and trustless ethos of web3. I’ll also cover how we developed some of the models used in the Lens API and how to contribute your own models to the Lens ecosystem.",
+    "description": "Many people are working on reputation systems. Many are computing reputation scores as linear models, which is less than ideal. I propose a new way of combining sources of reputational evidence based on Bayesian updating.",
     "track": "Developer Infrastructure",
     "stage": "Talk 4",
     "type": "Lightning Talk"
@@ -4435,6 +4812,96 @@
     "type": "Workshop 2h"
   },
   {
+    "id": "8QFEHB",
+    "name": "ZK Application Showcase",
+    "start": 1665684000000,
+    "end": 1665694800000,
+    "speakers": [
+      {
+        "id": "77HGTH",
+        "name": "Althea Allen",
+        "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
+        "avatar": ""
+      },
+      {
+        "id": "VXMHCZ",
+        "name": "Oskar Thorén",
+        "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
+        "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
+      },
+      {
+        "id": "JN83LR",
+        "name": "Shumo Chu",
+        "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
+        "avatar": ""
+      },
+      {
+        "id": "RGKJGA",
+        "name": "AtHeartEngineer",
+        "description": "Aspiring polymath doing R&D on the privacy and scaling team",
+        "avatar": "http://speak.devcon.org/media/avatars/AtHeartEngineerLogo_small_F6ZbKfj.png"
+      },
+      {
+        "id": "LVC7MN",
+        "name": "Aayush Gupta",
+        "description": "0xPARC",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_5176_5BsafLR.jpg"
+      },
+      {
+        "id": "8MUK7D",
+        "name": "Remco Bloemen",
+        "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
+        "avatar": ""
+      },
+      {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      },
+      {
+        "id": "KGGWEZ",
+        "name": "Uma Roy",
+        "description": "Building proof of consensus at succinct.xyz",
+        "avatar": ""
+      },
+      {
+        "id": "S8R9ND",
+        "name": "Ya-wen Jeng",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      },
+      {
+        "id": "7N9ZJE",
+        "name": "Vivek",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "NLKC7B",
+        "name": "Iskander",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "URAKDD",
+        "name": "Sampriti Panda",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": "Demos and presentations covering a wide range of applications of zero knowledge proofs, from light clients to machine learning to spam-resistant messaging and anonymous social media. Focusing more on the application layer than deep technical details, this session will provide an overview of the applied ZK landscape for people at any level of technical knowledge. \r\nFull schedule here: https://www.notion.so/0xparc/Applied-ZK-SLS-360fcd3f2a824759b1373ddeef5bf564",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Workshop 1",
+    "type": "Workshop 2h"
+  },
+  {
     "id": "DLSBGB",
     "name": "Private Value Transfer in 10 Lines",
     "start": 1665685800000,
@@ -4493,6 +4960,16 @@
     "track": "Staking & Validator Experience",
     "stage": "Talk 4",
     "type": "Talk"
+  },
+  {
+    "id": "ZRJKJ3",
+    "name": "Remix’s Jazz & Blues Open Source JAM SESSION",
+    "start": 1665687600000,
+    "end": 1665691200000,
+    "speakers": [],
+    "description": "A friendly Jazz & Blues jam where we can play (easy) jazz standards & blues classics and Bossa Nova. We invite all jazz singers, pianists, guitarists, ukulelists, percussionists or any other instrument to join us  on stage. So don’t be shy, always wanted to sing your favourite Sinatra song or play any instrument and know some basic jazz songs like that just hop on. We will support you as much as we can. We will use some sheet music and chord apps to make it happen.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "JYEM97",
@@ -4601,96 +5078,6 @@
     "track": "Cryptoeconomics",
     "stage": "Talk 4",
     "type": "Talk"
-  },
-  {
-    "id": "8QFEHB",
-    "name": "ZK Application Showcase",
-    "start": 1665684000000,
-    "end": 1665694800000,
-    "speakers": [
-      {
-        "id": "77HGTH",
-        "name": "Althea Allen",
-        "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
-        "avatar": ""
-      },
-      {
-        "id": "VXMHCZ",
-        "name": "Oskar Thorén",
-        "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
-        "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
-      },
-      {
-        "id": "JN83LR",
-        "name": "Shumo Chu",
-        "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
-        "avatar": ""
-      },
-      {
-        "id": "RGKJGA",
-        "name": "AtHeartEngineer",
-        "description": "Aspiring polymath doing R&D on the privacy and scaling team",
-        "avatar": "http://speak.devcon.org/media/avatars/AtHeartEngineerLogo_small_F6ZbKfj.png"
-      },
-      {
-        "id": "LVC7MN",
-        "name": "Aayush Gupta",
-        "description": "0xPARC",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_5176_5BsafLR.jpg"
-      },
-      {
-        "id": "8MUK7D",
-        "name": "Remco Bloemen",
-        "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
-        "avatar": ""
-      },
-      {
-        "id": "LXM3XY",
-        "name": "Yi Sun",
-        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
-        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
-      },
-      {
-        "id": "KGGWEZ",
-        "name": "Uma Roy",
-        "description": "Building proof of consensus at succinct.xyz",
-        "avatar": ""
-      },
-      {
-        "id": "S8R9ND",
-        "name": "Ya-wen Jeng",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9RKGBT",
-        "name": "Jason Morton",
-        "description": "ZKonduit & 0xPARC",
-        "avatar": ""
-      },
-      {
-        "id": "7N9ZJE",
-        "name": "Vivek",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "NLKC7B",
-        "name": "Iskander",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "URAKDD",
-        "name": "Sampriti Panda",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": "Demos and presentations covering a wide range of applications of zero knowledge proofs, from light clients to machine learning to spam-resistant messaging and anonymous social media. Focusing more on the application layer than deep technical details, this session will provide an overview of the applied ZK landscape for people at any level of technical knowledge. \r\nFull schedule here: https://www.notion.so/0xparc/Applied-ZK-SLS-360fcd3f2a824759b1373ddeef5bf564",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "stage": "Workshop 1",
-    "type": "Workshop 2h"
   },
   {
     "id": "AHR8DQ",
@@ -5017,48 +5404,6 @@
     "type": "Talk"
   },
   {
-    "id": "7NU8VB",
-    "name": "The Biggest Web3 Opportunity No One is Talking About!",
-    "start": 1665694800000,
-    "end": 1665696600000,
-    "speakers": [
-      {
-        "id": "XDDWFU",
-        "name": "Griff Green",
-        "description": "Cofounder of Giveth, Commons Stack, & dappnode. Community manager for TheDAO, led the crisis response effort for TheDAO Hack and first Parity Multisig Hack from every angle, co-founder of the White Hat Group and led the creation of Token Engineering Commons. Advisor for PolygonID, PolygonHermez, brightID, Doingud, and steward for Gitcoin, ENS & Optimism.\r\n\r\nI also lead 2 crypto focused burning man camps ;-)",
-        "avatar": "http://speak.devcon.org/media/avatars/photo_2022-05-10_15-17-42_Hd7Z7Km.jpg"
-      }
-    ],
-    "description": "$10.5 Trillion were spent, not invested, SPENT in 2021 in the US alone, and this is a global sector.\r\nThis sector has a for-loss model... the capital providers, despite creating an abundance of value that is in high demand, are losing money had over fist, and web3 has the solution.\r\n\r\nYou missed Bitcoin, you missed Ethereum, don't sleep on this.",
-    "track": "Opportunity & Global Impact",
-    "stage": "Talk 1",
-    "type": "Talk"
-  },
-  {
-    "id": "7XN3JL",
-    "name": "ZK Application Design Patterns",
-    "start": 1665694800000,
-    "end": 1665696600000,
-    "speakers": [
-      {
-        "id": "LXM3XY",
-        "name": "Yi Sun",
-        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
-        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
-      },
-      {
-        "id": "MYNS3X",
-        "name": "Lakshman Sankar",
-        "description": "Previous Ethereum Foundation Research. Now working on new primitives for identity at Personae Labs and 0xPARC.",
-        "avatar": ""
-      }
-    ],
-    "description": "We build a brief mental model of zkSNARKs and give an overview of application design patterns and techniques for ZK-enabled apps. We discuss the overall landscape of proving environments and applications of each: the affordances of browser proving, mobile proving, server proving, GPU proving, etc. We'll go over the current state of the art and key benchmarks, and how improvements across the landscape can unlock new applications of both privacy and succinctness.",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "stage": "Talk 3",
-    "type": "Talk"
-  },
-  {
     "id": "CLUZBW",
     "name": "Battle of the Bridges: Untangling the Tradeoffs of Various Bridge Designs",
     "start": 1665694800000,
@@ -5149,6 +5494,48 @@
     "type": "Talk"
   },
   {
+    "id": "7NU8VB",
+    "name": "The Biggest Web3 Opportunity No One is Talking About!",
+    "start": 1665694800000,
+    "end": 1665696600000,
+    "speakers": [
+      {
+        "id": "XDDWFU",
+        "name": "Griff Green",
+        "description": "Cofounder of Giveth, Commons Stack, & dappnode. Community manager for TheDAO, led the crisis response effort for TheDAO Hack and first Parity Multisig Hack from every angle, co-founder of the White Hat Group and led the creation of Token Engineering Commons. Advisor for PolygonID, PolygonHermez, brightID, Doingud, and steward for Gitcoin, ENS & Optimism.\r\n\r\nI also lead 2 crypto focused burning man camps ;-)",
+        "avatar": "http://speak.devcon.org/media/avatars/photo_2022-05-10_15-17-42_Hd7Z7Km.jpg"
+      }
+    ],
+    "description": "$10.5 Trillion were spent, not invested, SPENT in 2021 in the US alone, and this is a global sector.\r\nThis sector has a for-loss model... the capital providers, despite creating an abundance of value that is in high demand, are losing money had over fist, and web3 has the solution.\r\n\r\nYou missed Bitcoin, you missed Ethereum, don't sleep on this.",
+    "track": "Opportunity & Global Impact",
+    "stage": "Talk 1",
+    "type": "Talk"
+  },
+  {
+    "id": "7XN3JL",
+    "name": "ZK Application Design Patterns",
+    "start": 1665694800000,
+    "end": 1665696600000,
+    "speakers": [
+      {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      },
+      {
+        "id": "MYNS3X",
+        "name": "Lakshman Sankar",
+        "description": "Previous Ethereum Foundation Research. Now working on new primitives for identity at Personae Labs and 0xPARC.",
+        "avatar": ""
+      }
+    ],
+    "description": "We build a brief mental model of zkSNARKs and give an overview of application design patterns and techniques for ZK-enabled apps. We discuss the overall landscape of proving environments and applications of each: the affordances of browser proving, mobile proving, server proving, GPU proving, etc. We'll go over the current state of the art and key benchmarks, and how improvements across the landscape can unlock new applications of both privacy and succinctness.",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Talk 3",
+    "type": "Talk"
+  },
+  {
     "id": "7GP9EF",
     "name": "My Mother Hates Your Project (And Mine)! Why We Need More Soft Skills In Crypto",
     "start": 1665696600000,
@@ -5179,7 +5566,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/laser-eth-glyph_Zg03e83.jpeg"
       }
     ],
-    "description": "Content as a public good attracts less attention vs. protocol infrastructure yet is critical resource for our community. See an overview of the mission, progress & evolution of ethereum.org as an educational public good. As the \"front door\" to Ethereum for many web users across the globe, ethereum.org currently receives ~20 million visits per year across ~50 languages. It continues to expand & grow thanks to thousands of open source contributors. Let's dive into what's next for ethereum.org!",
+    "description": "Content as a public good attracts less attention vs. protocol infrastructure yet is a critical resource for our community. See an overview of the mission, progress & evolution of ethereum.org as an educational public good. As the \"front door\" to Ethereum for many web users across the globe, ethereum.org currently receives ~20 million visits per year across ~50 languages. It continues to expand & grow thanks to thousands of open source contributors. Let's dive into what's next for ethereum.org!",
     "track": "UX & Design",
     "stage": "Talk 5",
     "type": "Talk"
@@ -5487,7 +5874,7 @@
     "id": "XFTSSQ",
     "name": "Data + Empathy: How to Approach UX Decisions in Web3",
     "start": 1665700800000,
-    "end": 1665701400000,
+    "end": 1665701220000,
     "speakers": [
       {
         "id": "KMMVNU",
@@ -5523,7 +5910,7 @@
     "id": "ZW9RKE",
     "name": "A Playbook for Product Development in DeFi",
     "start": 1665701400000,
-    "end": 1665702000000,
+    "end": 1665701820000,
     "speakers": [
       {
         "id": "MZDPKB",
@@ -5556,6 +5943,26 @@
     "type": "Lightning Talk"
   },
   {
+    "id": "Z3CKLW",
+    "name": "Tomosaito DJ SESSION",
+    "start": 1665702000000,
+    "end": 1665707400000,
+    "speakers": [],
+    "description": "Tomo is a multi talented mixer, drummer, and designer for the Ethereum Foundation.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
+    "id": "8YLUG3",
+    "name": "Justin Holmes and Friends",
+    "start": 1665708300000,
+    "end": 1665713700000,
+    "speakers": [],
+    "description": "\"Settle in for strings and flutes, with songs of surveillance and covers of classic video games - Zelda, Final Fantasy, Chrono Trigger. A mix of hard-driving bluegrass style and thoughts of cryptologic society at a relaxed pace. Acoustic and live.”",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "NXXHPC",
     "name": "ATRACTOR-LP-MIGRANTS",
     "start": 1665709200000,
@@ -5571,6 +5978,16 @@
     "description": "Colombian electronic arts collective Atractor understands technology as a field of struggle from their Latin American context. In this scenario, assimilating and experiencing technology always as active users implies that electronic arts and creation have the power to spark conversations and create spaces for community dialogue.\r\nThey will be performing a video game live performance *The Migrants* and launch their NFT Botánica transgénica, come discover RITUALES in the hacker basement.",
     "stage": "Hacker Basement",
     "type": "Workshop 1h"
+  },
+  {
+    "id": "UXZG8D",
+    "name": "DJ Erick Bustamante",
+    "start": 1665714600000,
+    "end": 1665718200000,
+    "speakers": [],
+    "description": "Eric came from Mexico City and as well as a DJ he is an ETH Bogota and Devcon 6 volunteer. LATAM is turning the Chiva Lounge turn tables on fire.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "8UDYZP",
@@ -5658,7 +6075,7 @@
   },
   {
     "id": "ZPHEXR",
-    "name": "Danksharding + Data Availability Sampling (DAS) Workshop",
+    "name": "Danksharding Workshop",
     "start": 1665759600000,
     "end": 1665766800000,
     "speakers": [
@@ -5699,7 +6116,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/4BD65556-C52A-4445-AD27-EF0EA24B6569_Lwys6xX.jpeg"
       }
     ],
-    "description": "[Danksharding](https://notes.ethereum.org/3t5cbN7cQnG6VxjgNMKymA) and [Data Availability Sampling (DAS)](https://hackmd.io/@vbuterin/sharding_proposal) are the two main Ethereum layer 1 scaling mechanisms in the near future. This workshop is organized by the Ethereum Foundation Consensus R&D team.",
+    "description": "Danksharding (full danksharding and EIP-4844) is the Ethereum layer 1 scaling protocol that Ethereum R&D teams are working on these days. This workshop is organized by the Ethereum Foundation Consensus R&D team. We will introduce to you the danksharding family solutions.",
     "track": "Layer 1 Protocol",
     "stage": "Workshop 2",
     "type": "Workshop 2h"
@@ -5819,26 +6236,8 @@
     "type": "Talk"
   },
   {
-    "id": "ZCNBYS",
-    "name": "Reaching The Next Billion Users for Ethereum - Leverage the African Numbers",
-    "start": 1665761400000,
-    "end": 1665763200000,
-    "speakers": [
-      {
-        "id": "TS3DE7",
-        "name": "Awosika Ayodeji",
-        "description": "Founder, Web3bridge",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_3935_xZiNqlX.jpeg"
-      }
-    ],
-    "description": "The talk will explore how the growing African population especially the young population which is projected to be 80% of the 2billion subsaharan African population by 2025 can be leverage on to earn Ethereum next billion users",
-    "track": "Opportunity & Global Impact",
-    "stage": "Talk 5",
-    "type": "Talk"
-  },
-  {
     "id": "BMU3GS",
-    "name": "ZK Badges",
+    "name": "ZK Badges: A new primitive for self sovereign identities",
     "start": 1665761400000,
     "end": 1665763200000,
     "speakers": [
@@ -5849,7 +6248,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/pfp_dhadrien_jjSZvKL.png"
       }
     ],
-    "description": "How to prove that you donated to Gitcoin grants or that you voted for a specific DAO proposal without giving out your Ethereum address? \r\n\r\nYou can prove - in a SNARK - that you own an Ethereum account part of a group (e.g Gitcoin donors or DAO voters) and receive a ZK Badge!\r\n\r\nBuilt as a new primitive, ZK Badges are a reputation and access control tool used by on-chain (e.g governances) and off-chain apps.\r\n\r\nThey enable users to fully leverage their on-chain data, with privacy.",
+    "description": "How to prove that you donated to Gitcoin grants or that you voted for a specific DAO proposal without giving out your Ethereum address? \r\n\r\nHow to aggregate your reputation from multiple wallets?\r\n\r\nBuilt as a new primitive, ZK Badges enable you to: \r\n- Import reputation from an account to another\r\n- Selectively reveal personal data\r\n- Aggregate your personal data from multiple accounts",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "stage": "Talk 2",
     "type": "Talk"
@@ -5877,6 +6276,24 @@
     "track": "Developer Infrastructure",
     "stage": "Talk 3",
     "type": "Talk"
+  },
+  {
+    "id": "WWDVQA",
+    "name": "Hold",
+    "start": 1665761400000,
+    "end": 1665763200000,
+    "speakers": [
+      {
+        "id": "3RRW9H",
+        "name": "Ethereum Foundation",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": ".",
+    "track": "Developer Infrastructure",
+    "stage": "Talk 5",
+    "type": "Workshop 2h"
   },
   {
     "id": "LMYCPX",
@@ -5957,24 +6374,6 @@
     "type": "Talk"
   },
   {
-    "id": "XPHSYR",
-    "name": "Advanced Seaport Techniques",
-    "start": 1665763200000,
-    "end": 1665766200000,
-    "speakers": [
-      {
-        "id": "3GSD8J",
-        "name": "Zero Age",
-        "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
-        "avatar": "http://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif"
-      }
-    ],
-    "description": "Seaport is a marketplace protocol for buying and selling NFTs. While it powers OpenSea in a horizontal capacity, Seaport is open source and allows marketplaces to share a pool of liquidity – enabling project-specific, bespoke vertical marketplaces. Since launch, it’s helped spur innovation across emerging NFT verticals, including ENS names, in-game purchases, etc. This workshop will explore advanced techniques and use cases for the Seaport protocol.",
-    "track": "Developer Infrastructure",
-    "stage": "Workshop 4",
-    "type": "Workshop 1h"
-  },
-  {
     "id": "BEPJ3A",
     "name": "Climate Change or Social Change? The Role of Blockchain",
     "start": 1665763200000,
@@ -5991,6 +6390,34 @@
     "track": "Opportunity & Global Impact",
     "stage": "Talk 5",
     "type": "Talk"
+  },
+  {
+    "id": "3NVGZE",
+    "name": "Healing Session by is.love",
+    "start": 1665763200000,
+    "end": 1665766800000,
+    "speakers": [],
+    "description": "is.love lead us through an electronic healing session. Ten headphones available for Silent DJ option. Enjoy meditations and a healing vibration.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
+    "id": "TLHM7N",
+    "name": "Herodotus Workshop",
+    "start": 1665763200000,
+    "end": 1665766200000,
+    "speakers": [
+      {
+        "id": "BAU3ZE",
+        "name": "Marcello Bardus",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
+    "track": "Developer Infrastructure",
+    "stage": "Workshop 4",
+    "type": "Workshop 1h"
   },
   {
     "id": "A9TGP7",
@@ -6110,7 +6537,7 @@
     "id": "GA3PWU",
     "name": "The Road to Standardized Subgraphs",
     "start": 1665766200000,
-    "end": 1665766800000,
+    "end": 1665766620000,
     "speakers": [
       {
         "id": "R9H73V",
@@ -6197,6 +6624,16 @@
     "type": "Lightning Talk"
   },
   {
+    "id": "LDKEPV",
+    "name": "Traditional Chinese Flute (Hu Lu Si)  Performed by Clara Lin",
+    "start": 1665767700000,
+    "end": 1665768600000,
+    "speakers": [],
+    "description": "The hulusi is a free reed wind instrument from South-East China. It is held vertically and has three bamboo pipes that pass through a Calabash gourd wind chest; the center pipe has finger holes and the outer two are typically drone pipes. It is not uncommon for a hulusi to have only one drone pipe while the second outer pipe is merely ornamental. The drone pipe has a finger hole which allows it to be stopped.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "7FKGQ7",
     "name": "The Future of Wallets: MPC vs Smart Wallets",
     "start": 1665768000000,
@@ -6231,6 +6668,23 @@
     "track": "Layer 1 Protocol",
     "stage": "Talk 5",
     "type": "Talk"
+  },
+  {
+    "id": "HGQLYD",
+    "name": "SHAKA AND THE OPEN SOURCE ORCHESTRA",
+    "start": 1665769500000,
+    "end": 1665773100000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "Hawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "SFFEVV",
@@ -6521,58 +6975,21 @@
     "type": "Talk"
   },
   {
-    "id": "AFEB8Z",
-    "name": "Balkanize Learn2Earn - Educating & Financing the Next Batch of Web3 Developers in the Balkans",
-    "start": 1665775800000,
-    "end": 1665776400000,
+    "id": "JZZBST",
+    "name": "OPEN SOURCE JAM",
+    "start": 1665774000000,
+    "end": 1665779400000,
     "speakers": [
       {
-        "id": "TQXSE3",
-        "name": "Denis Vuckovac",
-        "description": "Born in former Yugoslavia in 1988\r\nLeft for Germany as a refugee in 1992\r\nFinished studying Industrial Engineering in Germany in 2013\r\nFinished a PhD in Machine Learning in 2019\r\nInvolved in Bitcoin and Ethereum since 2016, attended devcon IV in Prague in 2018\r\nWorked as a Data Scientist until the end of 2021\r\nStarted inat scholarship in 2022 to finance and educate students in Bosnia and Hercegovina",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_9906_1_IvEuLd3.jpeg"
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
-    "description": "The next iteration of “the web” is not going to build itself - and people in developing countries are not going to participate in this (r)evolution without some guidance and financial support. \r\nSee what can be achieved by handing out scholarships to students in developing countries and guiding them in their learning process towards becoming proficient in the web3 ecosystem.",
-    "track": "Opportunity & Global Impact",
-    "stage": "Talk 4",
-    "type": "Lightning Talk"
-  },
-  {
-    "id": "WGZVAG",
-    "name": "Fixing the Internet with Layer 2 Governance",
-    "start": 1665775800000,
-    "end": 1665777300000,
-    "speakers": [
-      {
-        "id": "7UWEU9",
-        "name": "Ben Jones",
-        "description": "Ben is Chief Scientist and Musician at the Optimism Foundation.",
-        "avatar": ""
-      }
-    ],
-    "description": "Web3 opens the door to a new cyberspace—one not only occupied, but governed, by its citizens.\r\n\r\n[The Optimism Collective](http://optimism.io/vision) is our attempt to correct meatspace's market failures with an L2.\r\n\r\nBut this talk isn't on scaling. It's about...\r\n\r\n...the past: why Ethereum is not an opportunity, but a responsibility.\r\n\r\n...the present: what we're doing to take this seriously & how it impacts our governance designs.\r\n\r\n...the future: the path towards summoning Ether's Phoenix.",
-    "track": "Governance & Coordination",
-    "stage": "Talk 5",
-    "type": "Talk"
-  },
-  {
-    "id": "7CAZ7U",
-    "name": "Rotki: Why it’s Open Source and Local-First and Why Should You Care?",
-    "start": 1665775800000,
-    "end": 1665777600000,
-    "speakers": [
-      {
-        "id": "J9HBR7",
-        "name": "Konstantinos Paparas",
-        "description": "Open-source software developer",
-        "avatar": ""
-      }
-    ],
-    "description": "This will be a talk on the why we need opensource, local-first privacy preserving tools in this field. \r\n\r\nReiterate the benefits of opensource and the cypherphunk ethos that built the crypto field. Ponder why so many people still develop closed source centralized tools and explain why this is contrary to the core ethos of the field.\r\n\r\nThen by using rotki as a main example show how things can and should be done differently. The opensource, local-first way.\r\n\r\nExplore both benefits and drawbacks",
-    "track": "Opportunity & Global Impact",
-    "stage": "Talk 2",
-    "type": "Talk"
+    "description": "The open source rhythms, chords, and melodies are open to be jammed on by everybody.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
   },
   {
     "id": "QVPC3L",
@@ -6633,6 +7050,60 @@
     "track": "Governance & Coordination",
     "stage": "Talk 1",
     "type": "Panel"
+  },
+  {
+    "id": "AFEB8Z",
+    "name": "Balkanize Learn2Earn - Educating & Financing the Next Batch of Web3 Developers in the Balkans",
+    "start": 1665775800000,
+    "end": 1665776400000,
+    "speakers": [
+      {
+        "id": "TQXSE3",
+        "name": "Denis Vuckovac",
+        "description": "Born in former Yugoslavia in 1988\r\nLeft for Germany as a refugee in 1992\r\nFinished studying Industrial Engineering in Germany in 2013\r\nFinished a PhD in Machine Learning in 2019\r\nInvolved in Bitcoin and Ethereum since 2016, attended devcon IV in Prague in 2018\r\nWorked as a Data Scientist until the end of 2021\r\nStarted inat scholarship in 2022 to finance and educate students in Bosnia and Hercegovina",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_9906_1_IvEuLd3.jpeg"
+      }
+    ],
+    "description": "The next iteration of “the web” is not going to build itself - and people in developing countries are not going to participate in this (r)evolution without some guidance and financial support. \r\nSee what can be achieved by handing out scholarships to students in developing countries and guiding them in their learning process towards becoming proficient in the web3 ecosystem.",
+    "track": "Opportunity & Global Impact",
+    "stage": "Talk 4",
+    "type": "Lightning Talk"
+  },
+  {
+    "id": "WGZVAG",
+    "name": "Fixing the Internet with Layer 2 Governance",
+    "start": 1665775800000,
+    "end": 1665777300000,
+    "speakers": [
+      {
+        "id": "7UWEU9",
+        "name": "Ben Jones",
+        "description": "Ben is Chief Scientist and Musician at the Optimism Foundation.",
+        "avatar": ""
+      }
+    ],
+    "description": "Web3 opens the door to a new cyberspace—one not only occupied, but governed, by its citizens.\r\n\r\n[The Optimism Collective](http://optimism.io/vision) is our attempt to correct meatspace's market failures with an L2.\r\n\r\nBut this talk isn't on scaling. It's about...\r\n\r\n...the past: why Ethereum is not an opportunity, but a responsibility.\r\n\r\n...the present: what we're doing to take this seriously & how it impacts our governance designs.\r\n\r\n...the future: the path towards summoning Ether's Phoenix.",
+    "track": "Governance & Coordination",
+    "stage": "Talk 5",
+    "type": "Talk"
+  },
+  {
+    "id": "7CAZ7U",
+    "name": "Rotki: Why it’s Open Source and Local-First and Why Should You Care?",
+    "start": 1665775800000,
+    "end": 1665777600000,
+    "speakers": [
+      {
+        "id": "J9HBR7",
+        "name": "Konstantinos Paparas",
+        "description": "Open-source software developer",
+        "avatar": ""
+      }
+    ],
+    "description": "This will be a talk on the why we need opensource, local-first privacy preserving tools in this field. \r\n\r\nReiterate the benefits of opensource and the cypherphunk ethos that built the crypto field. Ponder why so many people still develop closed source centralized tools and explain why this is contrary to the core ethos of the field.\r\n\r\nThen by using rotki as a main example show how things can and should be done differently. The opensource, local-first way.\r\n\r\nExplore both benefits and drawbacks",
+    "track": "Opportunity & Global Impact",
+    "stage": "Talk 2",
+    "type": "Talk"
   },
   {
     "id": "AKTBQR",
@@ -6842,83 +7313,5 @@
     "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy",
     "stage": "ETHLatam Chiva Chillout",
     "type": "Workshop 1h"
-  },
-  {
-    "id": "KPR8CL",
-    "name": "Future of ZK Proving Systems Self Led Session",
-    "start": 1665673200000,
-    "end": 1665684000000,
-    "speakers": [
-      {
-        "id": "CJ9RVC",
-        "name": "Jordi Baylina",
-        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
-        "avatar": ""
-      },
-      {
-        "id": "A7VEH7",
-        "name": "Ye Zhang",
-        "description": "Ye Zhang is the co-founder and zk-researcher at Scroll. He used to work on hardware acceleration for ZKP algorithms and theoretical constructions behind ZKP protocols. Now his focus is on optimizing the zkEVM.",
-        "avatar": "http://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg"
-      },
-      {
-        "id": "WVSWJD",
-        "name": "Youssef El Housni",
-        "description": "I am an applied cryptographer at ConsenSys working on cryptography and SNARK libraries in Go (see gnark and gnark-crypto). I am also a final year PhD student in cryptography at Ecole Polytechnique in Paris.",
-        "avatar": "http://speak.devcon.org/media/avatars/0411D19C-9905-49E9-AFD5-2F9AE18B9B92_S9EnkOM.jpeg"
-      },
-      {
-        "id": "DBEDPK",
-        "name": "Adrian Hamelink",
-        "description": "Cryptography engineer @ Aztec",
-        "avatar": ""
-      },
-      {
-        "id": "LXM3XY",
-        "name": "Yi Sun",
-        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
-        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
-      },
-      {
-        "id": "DKZWNJ",
-        "name": "Ying Tong",
-        "description": "Core Developer at Electric Coin Company",
-        "avatar": ""
-      },
-      {
-        "id": "XPGGMQ",
-        "name": "Louis Guthmann",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9RKGBT",
-        "name": "Jason Morton",
-        "description": "ZKonduit & 0xPARC",
-        "avatar": ""
-      },
-      {
-        "id": "9Q9ZTE",
-        "name": "Janmajaya Mall",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9DUZUZ",
-        "name": "Brandon Kase",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "LJJQBM",
-        "name": "Kev",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": "Modern proof systems are informed by modular and composable designs. This self led session hosted by 0xPARC and Privacy and Scaling Explorations explores the techniques, tools, and applications enabling the interoperable and efficient proof systems of the future. \r\nFull agenda here: https://0xparc.notion.site/Future-of-Proving-Systems-SLS-Schedule-c030e251ffaf4f10bfd3389195f6cb28",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "stage": "Workshop 1",
-    "type": "Workshop 2h"
   }
 ]
