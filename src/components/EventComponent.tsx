@@ -68,7 +68,7 @@ export function EventComponent(props: Props) {
 
   if (props.embedded) {
     return (
-      <div className={styles.player}>
+      <div style={{ width: '100vw', height: '100vh' }}>
         <iframe
           src={currentStage.youtube}
           width="100%"
