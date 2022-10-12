@@ -31,7 +31,7 @@ export function EventComponent(props: Props) {
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
   const [sidebarHeight, setSidebarHeight] = useState<string>('auto')
-  const [streamType, setStreamType] = useState<'livepeer' | 'youtube'>('livepeer')
+  const [streamType, setStreamType] = useState<'livepeer' | 'youtube'>('youtube')
 
   useEffect(() => {
     setFilters([
