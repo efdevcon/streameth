@@ -127,6 +127,16 @@
             "id": "a52f1f64-084a-47f7-94c9-3205a1935af1"
           }
         ]
+      },
+      {
+        "id": "hacker-basement",
+        "name": "Hacker basement",
+        "youtube": "",
+        "stream": [
+          {
+            "id": "35189958-27bf-4280-8168-8f768b695c04"
+          }
+        ]
       }
     ],
     "config": {}
