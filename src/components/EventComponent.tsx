@@ -31,7 +31,7 @@ export function EventComponent(props: Props) {
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
   const [sidebarHeight, setSidebarHeight] = useState<string>('auto')
-  const [streamType, setStreamType] = useState<'livepeer' | 'youtube'>('youtube')
+  const [streamType, setStreamType] = useState<'livepeer' | 'youtube'>('livepeer')
 
   useEffect(() => {
     setFilters([
@@ -69,7 +69,8 @@ export function EventComponent(props: Props) {
   if (props.embedded) {
     return (
       <div style={{ width: '100vw', height: '100vh' }}>
-        <iframe
+        <Player source={activeSource} onStreamError={onStreamError} />
+        {/* <iframe
           src={currentStage.youtube}
           width="100%"
           height="100%"
@@ -77,7 +78,7 @@ export function EventComponent(props: Props) {
           frameBorder="0"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        />
+        /> */}
       </div>
     )
   }
