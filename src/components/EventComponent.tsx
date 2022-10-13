@@ -69,7 +69,7 @@ export function EventComponent(props: Props) {
   if (props.embedded) {
     return (
       <div style={{ width: '100vw', height: '100vh' }}>
-        <Player source={activeSource} onStreamError={onStreamError} />
+        <Player source={activeSource} onStreamError={onStreamError} embedded />
         {/* <iframe
           src={currentStage.youtube}
           width="100%"

@@ -1,5 +1,6 @@
 export interface PlayerProps {
   source: Source | null
+  embedded?: boolean
   playlist?: Playlist | null
   poster?: string
   onStreamError: () => void
@@ -7,6 +8,7 @@ export interface PlayerProps {
 
 export interface VideoJSProps {
   source: Source
+  autoPlay?: boolean
   playlist: Playlist | null
   poster: string
   onReady: (player: any) => void
