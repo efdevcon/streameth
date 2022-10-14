@@ -18,7 +18,7 @@ export function useSessions(initFilters: Filter[] = []) {
   }, [event])
   const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
-  const [eventDayNum, setEventDayNum] = useState<number | null>(3)
+  const [eventDayNum, setEventDayNum] = useState<number | null>(4)
   const [filters, setFilters] = useState<Filter[]>(initFilters)
   const eventDays = [...new Set(allSessions.map((i) => startOfDay(i.start)))].sort()
 
