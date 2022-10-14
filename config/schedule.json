@@ -1826,6 +1826,42 @@
     "type": "Music"
   },
   {
+    "id": "PBH9DE",
+    "name": "Reinforcement Learning for Query Pricing in The Graph",
+    "start": 1665586800000,
+    "end": 1665588600000,
+    "speakers": [
+      {
+        "id": "DLDW8M",
+        "name": "Tomasz Kornuta",
+        "description": "I am an applied research scientist, able to drive research into novel directions.\r\n\r\nWith over 20 years in academia and industry, I have developed strong analytical & problem solving skills along with deep expertise in software engineering, robotics, visual perception and machine learning.\r\n\r\nI am a fan of robotics, AI, design patterns and MOOCs.",
+        "avatar": ""
+      }
+    ],
+    "description": "Indexers​​ in The Graph protocol use a DSL called Agora​ to map query shapes to prices. However, manually populating and updating Agora models for each query is a tedious task, and, as a consequence, most indexers default to a flat pricing model. We have created and deployed reinforcement learning agents for Indexers to automatically compete on pricing. This talk will focus on our development process and our study of the market effects of multiple competing pricing agents.",
+    "track": "Cryptoeconomics",
+    "stage": "Talk 3",
+    "type": "Talk"
+  },
+  {
+    "id": "NQHE7W",
+    "name": "Privacy & Scaling Exploration — What We Do and How to Collaborate",
+    "start": 1665586800000,
+    "end": 1665588300000,
+    "speakers": [
+      {
+        "id": "DJE7ME",
+        "name": "Thore Hildebrandt",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": "TBD",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Workshop 1",
+    "type": "Talk"
+  },
+  {
     "id": "UXMBLR",
     "name": "An Overview of AMM Mechanisms",
     "start": 1665586800000,
@@ -1970,42 +2006,6 @@
     "type": "Talk"
   },
   {
-    "id": "PBH9DE",
-    "name": "Reinforcement Learning for Query Pricing in The Graph",
-    "start": 1665586800000,
-    "end": 1665588600000,
-    "speakers": [
-      {
-        "id": "DLDW8M",
-        "name": "Tomasz Kornuta",
-        "description": "I am an applied research scientist, able to drive research into novel directions.\r\n\r\nWith over 20 years in academia and industry, I have developed strong analytical & problem solving skills along with deep expertise in software engineering, robotics, visual perception and machine learning.\r\n\r\nI am a fan of robotics, AI, design patterns and MOOCs.",
-        "avatar": ""
-      }
-    ],
-    "description": "Indexers​​ in The Graph protocol use a DSL called Agora​ to map query shapes to prices. However, manually populating and updating Agora models for each query is a tedious task, and, as a consequence, most indexers default to a flat pricing model. We have created and deployed reinforcement learning agents for Indexers to automatically compete on pricing. This talk will focus on our development process and our study of the market effects of multiple competing pricing agents.",
-    "track": "Cryptoeconomics",
-    "stage": "Talk 3",
-    "type": "Talk"
-  },
-  {
-    "id": "NQHE7W",
-    "name": "Privacy & Scaling Exploration — What We Do and How to Collaborate",
-    "start": 1665586800000,
-    "end": 1665588300000,
-    "speakers": [
-      {
-        "id": "DJE7ME",
-        "name": "Thore Hildebrandt",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": "TBD",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "stage": "Workshop 1",
-    "type": "Talk"
-  },
-  {
     "id": "3Y8WP3",
     "name": "Penumbra: Building a Private DEX with ZKPs and Threshold Cryptography",
     "start": 1665588600000,
@@ -2114,6 +2114,34 @@
     "type": "Talk"
   },
   {
+    "id": "ELDVRA",
+    "name": "The Fight for MEV",
+    "start": 1665590400000,
+    "end": 1665592200000,
+    "speakers": [
+      {
+        "id": "MDNX8S",
+        "name": "Alex Vinyas",
+        "description": "Master of the CoWmunity",
+        "avatar": ""
+      }
+    ],
+    "description": "The Fight for MEV is a talk that focuses on the two most \"famous\" MEV solutions designs, CowSwap and Flashbots. It will go over the differences in how each model is designed, and why each solution has made those choices (users, objectives). We will end on how we see the future at CowSwap in relation to the merge, MEV, and the overall Ethereum DeFi ecosystem.",
+    "track": "Cryptoeconomics",
+    "stage": "Talk 3",
+    "type": "Talk"
+  },
+  {
+    "id": "W9CLNK",
+    "name": "Healing Session by is.love",
+    "start": 1665590400000,
+    "end": 1665594000000,
+    "speakers": [],
+    "description": "is.love lead us through an electronic healing session. Ten headphones available for Silent DJ option. Enjoy meditations and a healing vibration.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "FRAYEB",
     "name": "Build a DApp on Optimism: How to Conquer L2 Bridging",
     "start": 1665590400000,
@@ -2202,34 +2230,6 @@
     "track": "Security",
     "stage": "Workshop 3",
     "type": "Workshop 1h"
-  },
-  {
-    "id": "ELDVRA",
-    "name": "The Fight for MEV",
-    "start": 1665590400000,
-    "end": 1665592200000,
-    "speakers": [
-      {
-        "id": "MDNX8S",
-        "name": "Alex Vinyas",
-        "description": "Master of the CoWmunity",
-        "avatar": ""
-      }
-    ],
-    "description": "The Fight for MEV is a talk that focuses on the two most \"famous\" MEV solutions designs, CowSwap and Flashbots. It will go over the differences in how each model is designed, and why each solution has made those choices (users, objectives). We will end on how we see the future at CowSwap in relation to the merge, MEV, and the overall Ethereum DeFi ecosystem.",
-    "track": "Cryptoeconomics",
-    "stage": "Talk 3",
-    "type": "Talk"
-  },
-  {
-    "id": "W9CLNK",
-    "name": "Healing Session by is.love",
-    "start": 1665590400000,
-    "end": 1665594000000,
-    "speakers": [],
-    "description": "is.love lead us through an electronic healing session. Ten headphones available for Silent DJ option. Enjoy meditations and a healing vibration.",
-    "stage": "Chiva Lounge",
-    "type": "Music"
   },
   {
     "id": "STYC97",
@@ -3826,24 +3826,6 @@
     "type": "Talk"
   },
   {
-    "id": "TLHM7N",
-    "name": "Herodotus Workshop",
-    "start": 1665612000000,
-    "end": 1665615000000,
-    "speakers": [
-      {
-        "id": "BAU3ZE",
-        "name": "Marcello Bardus",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
-    "track": "Developer Infrastructure",
-    "stage": "Workshop 2",
-    "type": "Workshop 1h"
-  },
-  {
     "id": "SPUUGF",
     "name": "2022 statistics on MakerDAO voter delegation",
     "start": 1665612600000,
@@ -4075,6 +4057,23 @@
     "type": "Meetup"
   },
   {
+    "id": "MTLQFS",
+    "name": "Livecoding Performance",
+    "start": 1665615600000,
+    "end": 1665618600000,
+    "speakers": [
+      {
+        "id": "3VQEST",
+        "name": "Ix-shells",
+        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-10_at_22.14.15_45brP3Q.png"
+      }
+    ],
+    "description": "Livecoding & art by Ixshells",
+    "stage": "Hacker Basement",
+    "type": "Workshop 1h"
+  },
+  {
     "id": "7MUHSE",
     "name": "Old People Party",
     "start": 1665619200000,
@@ -4095,26 +4094,9 @@
     "type": "Music"
   },
   {
-    "id": "MTLQFS",
-    "name": "Livecoding Performance",
-    "start": 1665619200000,
-    "end": 1665622200000,
-    "speakers": [
-      {
-        "id": "3VQEST",
-        "name": "Ix-shells",
-        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
-        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-10_at_22.14.15_45brP3Q.png"
-      }
-    ],
-    "description": "Livecoding & art by Ixshells",
-    "stage": "Hacker Basement",
-    "type": "Workshop 1h"
-  },
-  {
     "id": "V9ET3R",
     "name": "Chess Tournament",
-    "start": 1665622800000,
+    "start": 1665621000000,
     "end": 1665633600000,
     "speakers": [
       {
@@ -4147,7 +4129,7 @@
   },
   {
     "id": "W9R3C3",
-    "name": "Under 2 Min - Become an Etheruem Staker and Set Up Node",
+    "name": "Under 2 Min - Become an Ethereum Staker and Set Up Node",
     "start": 1665673200000,
     "end": 1665673800000,
     "speakers": [
@@ -4158,7 +4140,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/blueprofile_pp0Mjfp.jpg"
       }
     ],
-    "description": "We need more mainstream users to partake in Etheruem PoS activity, \r\n\r\nA brief talk showcasing stake tooling for Etheruem deposit contract that allows a normal user to safely stake 32 ETH and have his/her Ethereum Validator from 0, this includes generating credentials and processing deposit, another 60 seconds will allow them to have a node up and running using DVT techstack.",
+    "description": "We need more mainstream users to partake in Etheruem PoS activity, \r\n\r\nA brief talk showcasing stake tooling for Ethereum deposit contract that allows a normal user to safely stake 32 ETH and have his/her Ethereum Validator from 0, this includes generating credentials and processing deposit, another 60 seconds will allow them to have a node up and running using DVT techstack.",
     "track": "Staking & Validator Experience",
     "stage": "Talk 2",
     "type": "Lightning Talk"
@@ -4910,6 +4892,96 @@
     "type": "Talk"
   },
   {
+    "id": "8QFEHB",
+    "name": "ZK Application Showcase",
+    "start": 1665684000000,
+    "end": 1665694800000,
+    "speakers": [
+      {
+        "id": "77HGTH",
+        "name": "Althea Allen",
+        "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
+        "avatar": ""
+      },
+      {
+        "id": "VXMHCZ",
+        "name": "Oskar Thorén",
+        "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
+        "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
+      },
+      {
+        "id": "JN83LR",
+        "name": "Shumo Chu",
+        "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
+        "avatar": ""
+      },
+      {
+        "id": "RGKJGA",
+        "name": "AtHeartEngineer",
+        "description": "Aspiring polymath doing R&D on the privacy and scaling team",
+        "avatar": "http://speak.devcon.org/media/avatars/AtHeartEngineerLogo_small_F6ZbKfj.png"
+      },
+      {
+        "id": "LVC7MN",
+        "name": "Aayush Gupta",
+        "description": "0xPARC",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_5176_5BsafLR.jpg"
+      },
+      {
+        "id": "8MUK7D",
+        "name": "Remco Bloemen",
+        "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
+        "avatar": ""
+      },
+      {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      },
+      {
+        "id": "KGGWEZ",
+        "name": "Uma Roy",
+        "description": "Building proof of consensus at succinct.xyz",
+        "avatar": ""
+      },
+      {
+        "id": "S8R9ND",
+        "name": "Ya-wen Jeng",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      },
+      {
+        "id": "7N9ZJE",
+        "name": "Vivek",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "NLKC7B",
+        "name": "Iskander",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "URAKDD",
+        "name": "Sampriti Panda",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": "Demos and presentations covering a wide range of applications of zero knowledge proofs, from light clients to machine learning to spam-resistant messaging and anonymous social media. Focusing more on the application layer than deep technical details, this session will provide an overview of the applied ZK landscape for people at any level of technical knowledge. \r\nFull schedule here: https://www.notion.so/0xparc/Applied-ZK-SLS-360fcd3f2a824759b1373ddeef5bf564",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "stage": "Workshop 1",
+    "type": "Workshop 2h"
+  },
+  {
     "id": "3KQ8QX",
     "name": "Lodestar: Metrics-Driven Development",
     "start": 1665684000000,
@@ -5027,96 +5099,6 @@
     "description": "We all know there are not enough qualified people in the world to fill all the roles Web3 is asking for. We’ve got to *create* those people! Join our workshop to learn ways for developing good contributors.\r\nWe’ll start with an open office session where you can ask us your most burning questions. Then we’ll move into workstations where you can get 1on1 guidance on specific aspects of Web3 talent building. This means web2 to web3 conversion AND sharpening contributors who are already web3 native.",
     "track": "Governance & Coordination",
     "stage": "Workshop 3",
-    "type": "Workshop 2h"
-  },
-  {
-    "id": "8QFEHB",
-    "name": "ZK Application Showcase",
-    "start": 1665684000000,
-    "end": 1665694800000,
-    "speakers": [
-      {
-        "id": "77HGTH",
-        "name": "Althea Allen",
-        "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
-        "avatar": ""
-      },
-      {
-        "id": "VXMHCZ",
-        "name": "Oskar Thorén",
-        "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
-        "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
-      },
-      {
-        "id": "JN83LR",
-        "name": "Shumo Chu",
-        "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
-        "avatar": ""
-      },
-      {
-        "id": "RGKJGA",
-        "name": "AtHeartEngineer",
-        "description": "Aspiring polymath doing R&D on the privacy and scaling team",
-        "avatar": "http://speak.devcon.org/media/avatars/AtHeartEngineerLogo_small_F6ZbKfj.png"
-      },
-      {
-        "id": "LVC7MN",
-        "name": "Aayush Gupta",
-        "description": "0xPARC",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_5176_5BsafLR.jpg"
-      },
-      {
-        "id": "8MUK7D",
-        "name": "Remco Bloemen",
-        "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
-        "avatar": ""
-      },
-      {
-        "id": "LXM3XY",
-        "name": "Yi Sun",
-        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
-        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
-      },
-      {
-        "id": "KGGWEZ",
-        "name": "Uma Roy",
-        "description": "Building proof of consensus at succinct.xyz",
-        "avatar": ""
-      },
-      {
-        "id": "S8R9ND",
-        "name": "Ya-wen Jeng",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9RKGBT",
-        "name": "Jason Morton",
-        "description": "ZKonduit & 0xPARC",
-        "avatar": ""
-      },
-      {
-        "id": "7N9ZJE",
-        "name": "Vivek",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "NLKC7B",
-        "name": "Iskander",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "URAKDD",
-        "name": "Sampriti Panda",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "description": "Demos and presentations covering a wide range of applications of zero knowledge proofs, from light clients to machine learning to spam-resistant messaging and anonymous social media. Focusing more on the application layer than deep technical details, this session will provide an overview of the applied ZK landscape for people at any level of technical knowledge. \r\nFull schedule here: https://www.notion.so/0xparc/Applied-ZK-SLS-360fcd3f2a824759b1373ddeef5bf564",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "stage": "Workshop 1",
     "type": "Workshop 2h"
   },
   {
@@ -5886,23 +5868,6 @@
     "type": "Talk"
   },
   {
-    "id": "8WD3CV",
-    "name": "Livecoding Performance",
-    "start": 1665696600000,
-    "end": 1665699600000,
-    "speakers": [
-      {
-        "id": "3VQEST",
-        "name": "Ix-shells",
-        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
-        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-10_at_22.14.15_45brP3Q.png"
-      }
-    ],
-    "description": "Livecoding & art by Ixshells",
-    "stage": "Hacker Basement",
-    "type": "Workshop 1h"
-  },
-  {
     "id": "U9BVUS",
     "name": "The Showdown: Best Ethereum Language",
     "start": 1665698400000,
@@ -5981,7 +5946,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/baz_CMug4q6.jpeg"
       }
     ],
-    "description": "EVM assembly can be quite opaque and intimidating at first glance.  In this talk we'll take a look at exactly how EVM assembly works under the hood while dissecting (and implementing) some common functionality we see in smart contracts - as well as showing some optimization techniques you can use by jumping down to assembly in your solidity contracts.",
+    "description": "EVM assembly can be quite opaque and intimidating at first glance.  In this talk we'll take a look at exactly how EVM assembly works under the hood while analyzing some common functionality we see in smart contracts - as well as showing some optimization techniques you can use by jumping down to assembly in your solidity contracts.",
     "track": "Developer Infrastructure",
     "stage": "Talk 2",
     "type": "Talk"
@@ -6057,6 +6022,16 @@
     "track": "Opportunity & Global Impact",
     "stage": "Talk 1",
     "type": "Panel"
+  },
+  {
+    "id": "NERSUP",
+    "name": "Token Engineering Approach to Building Communities & Membership",
+    "start": 1665698400000,
+    "end": 1665709200000,
+    "speakers": [],
+    "description": "Workshop by Eduardo Vega",
+    "stage": "Hacker Basement",
+    "type": "Meetup"
   },
   {
     "id": "QMEXAS",
@@ -6263,23 +6238,30 @@
     "type": "Lightning Talk"
   },
   {
-    "id": "7XGQQB",
-    "name": "Meditation & Public Goods Workshop",
+    "id": "8WD3CV",
+    "name": "Livecoding Performance",
     "start": 1665702000000,
-    "end": 1665709200000,
-    "speakers": [],
-    "description": "-",
-    "stage": "Ethereum Jungle",
-    "type": "Meetup"
+    "end": 1665705600000,
+    "speakers": [
+      {
+        "id": "3VQEST",
+        "name": "Ix-shells",
+        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-10_at_22.14.15_45brP3Q.png"
+      }
+    ],
+    "description": "Livecoding & art by Ixshells",
+    "stage": "Hacker Basement",
+    "type": "Workshop 1h"
   },
   {
-    "id": "NERSUP",
-    "name": "Token Engineering Approach to Building Communities & Membership",
+    "id": "7XGQQB",
+    "name": "Decompressing & Social Impact",
     "start": 1665702000000,
     "end": 1665709200000,
     "speakers": [],
-    "description": "Workshop by Eduardo Vega",
-    "stage": "Hacker Basement",
+    "description": "Join DoinGud for a workshop on social impact in the Ethereum Jungle on the 2nd floor!",
+    "stage": "Ethereum Jungle",
     "type": "Meetup"
   },
   {
@@ -6393,7 +6375,19 @@
       },
       {
         "id": "FAC9CX",
-        "name": "Flynn Swainston-Calcutt",
+        "name": "Flynn Calcutt",
+        "description": "Interested in building virtual worlds.",
+        "avatar": "http://speak.devcon.org/media/avatars/profile_pic_i9963IS.jpg"
+      },
+      {
+        "id": "T9MUGF",
+        "name": "Fraser",
+        "description": "building ZK rollups for games at the 0xPARC AW Residency",
+        "avatar": "http://speak.devcon.org/media/avatars/6DB7F382-63EA-40DA-96BE-D294DC50F4E7_5DvKsJb.png"
+      },
+      {
+        "id": "FATTF3",
+        "name": "Omar Mezenner",
         "description": null,
         "avatar": ""
       }
@@ -6447,7 +6441,7 @@
   },
   {
     "id": "ADVND7",
-    "name": "EVM Panel",
+    "name": "EVM-first EIPs Workshop",
     "start": 1665759600000,
     "end": 1665761400000,
     "speakers": [
@@ -6464,7 +6458,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg"
       }
     ],
-    "description": "This is a panel discussion about the EVM.\r\n\r\nWe want to be a bit more unconventional and would like to transform the room into a \"live voting space\" where attendees can fight for their favourite new EVM feature.\r\n\r\nDifferent proposals will be listed and discussed for 3-5 minutes each, where invited panelists give a short opinion followed by loud interaction from the audience.",
+    "description": "This is a workshop discussion about the EVM. Anyone can come up and pitch their favourite EVM-first EIPs.\r\n\r\nWe want to be a bit more unconventional and would like to transform the room into a \"live voting space\" where attendees can fight for their favourite new EVM feature.\r\n\r\nDifferent proposals will be listed and discussed for 3-5 minutes each, where invited panelists give a short opinion followed by loud interaction from the audience.",
     "track": "Developer Infrastructure",
     "stage": "Talk 4",
     "type": "Panel"
@@ -6766,7 +6760,7 @@
       {
         "id": "PCUMSY",
         "name": "Agustín Matteri",
-        "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
+        "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with more than 12 years of experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current leader of the Regional Hub for Blockchain at the Service of Nature.",
         "avatar": "http://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg"
       }
     ],
@@ -6782,7 +6776,7 @@
     "end": 1665766800000,
     "speakers": [],
     "description": "is.love lead us through an electronic healing session. Ten headphones available for Silent DJ option. Enjoy meditations and a healing vibration.",
-    "stage": "Chiva Lounge",
+    "stage": "Hacker Basement",
     "type": "Music"
   },
   {
@@ -6930,7 +6924,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/profile-picture-2_I4y0GRy.jpg"
       }
     ],
-    "description": "MakerDAO is one of the foundational projects in Ethereum that originally created DeFi. The project has a rich history of gradual decentralization and, today, is one of the largest and most advanced DAOs in the space.\r\nIn this talk I will outline the evolution of decentralized operations and governance at MakerDAO. We will have a look at a few of the most recent scaling challenges, how they developed, and how MakerDAO is dealing with them.",
+    "description": "MakerDAO is one of the foundational projects in Ethereum that originally created DeFi, and the creator of the DAI stablecoin. The project has a rich history of gradual decentralization and, today, is one of the largest and most advanced DAOs in the space.\r\nIn this talk I will outline the evolution of decentralized operations and governance at MakerDAO. We will have a look at a few of the most recent scaling challenges, how they developed, and how MakerDAO is dealing with them.",
     "track": "Governance & Coordination",
     "stage": "Talk 3",
     "type": "Talk"
@@ -7143,19 +7137,19 @@
     "type": "Workshop 2h"
   },
   {
-    "id": "XMNKDU",
-    "name": "Taxing Crypto in Colombia",
+    "id": "XUVZTP",
+    "name": "Ethereum Event Showcase",
     "start": 1665770400000,
     "end": 1665771900000,
     "speakers": [
       {
-        "id": "EE3GXS",
-        "name": "Luis Carlos",
-        "description": "Luis Carlos holds a B.A. in Economics and History from Florida International University (2005), with Magna Cum Laude distinction. Master in Economics and Ph.D in Economics from Michigan State University. Professor and researcher, co-founder and first director of the Fiscal Observatory of the Pontificia Universidad Javeriana.  He has also served as an economist for the FCC during the Obama administration. He was appointed as the director general of DIAN by President Gustavo Petro on July 11,2022",
-        "avatar": ""
+        "id": "VQMDYU",
+        "name": "Juan David Reyes",
+        "description": "Leader of EthColombia and Community Supporter at Devcon.",
+        "avatar": "http://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg"
       }
     ],
-    "description": "The director of the Colombian Tax and Customs Administration will present a document unifying the current rules about the taxation of digital assets in Colombia and will discuss gaps in the current normative framework. He will also invite feedback from the community on how to address these gaps.",
+    "description": "tbd",
     "track": "Opportunity & Global Impact",
     "stage": "Talk 2",
     "type": "Talk"
@@ -7233,6 +7227,41 @@
     "type": "Talk"
   },
   {
+    "id": "HLLCLF",
+    "name": "Universal Access to All Knowledge: Decentralization Experiments at the Internet Archive",
+    "start": 1665774000000,
+    "end": 1665775800000,
+    "speakers": [
+      {
+        "id": "KDUATR",
+        "name": "Arkadiy Kukarkin",
+        "description": "Arkadiy is currently the Decentralization Lead at the Internet Archive. Previously he was an IPFS integrations/grants coordinator at Protocol Labs, CTO at Mediachain, and worked on supporting independent music (Hype Machine, Ampled) and cartography (Foursquare)",
+        "avatar": "http://speak.devcon.org/media/avatars/WgZMHBaj_400x400_JRq95GG.jpg"
+      }
+    ],
+    "description": "The Internet Archive holds over 100PB of data, spanning the Wayback Machine, films, scientific publications, vintage video games, and more. What is it like to try to decentalize at this scale?\r\n\r\nWe'll share our experience with networks like Filecoin, Storj, and arweave, discuss design trade-offs, offer recommendations for both builders and those curious about storing large amounts of data, and maybe even muse about how institutions could \"disappear from sight... and become all of us\"",
+    "track": "Opportunity & Global Impact",
+    "stage": "Talk 4",
+    "type": "Talk"
+  },
+  {
+    "id": "JZZBST",
+    "name": "OPEN SOURCE JAM",
+    "start": 1665774000000,
+    "end": 1665779400000,
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "description": "The open source rhythms, chords, and melodies are open to be jammed on by everybody.",
+    "stage": "Chiva Lounge",
+    "type": "Music"
+  },
+  {
     "id": "CZRWES",
     "name": "What Alternative Blockchains Compatibility with Ethereum Tooling Can Teach Us About Ethereum's Future",
     "start": 1665774000000,
@@ -7299,63 +7328,22 @@
     "type": "Talk"
   },
   {
-    "id": "HLLCLF",
-    "name": "Universal Access to All Knowledge: Decentralization Experiments at the Internet Archive",
+    "id": "WGZVAG",
+    "name": "Fixing the Internet with Layer 2 Governance",
     "start": 1665774000000,
-    "end": 1665775800000,
+    "end": 1665775500000,
     "speakers": [
       {
-        "id": "KDUATR",
-        "name": "Arkadiy Kukarkin",
-        "description": "Arkadiy is currently the Decentralization Lead at the Internet Archive. Previously he was an IPFS integrations/grants coordinator at Protocol Labs, CTO at Mediachain, and worked on supporting independent music (Hype Machine, Ampled) and cartography (Foursquare)",
-        "avatar": "http://speak.devcon.org/media/avatars/WgZMHBaj_400x400_JRq95GG.jpg"
-      }
-    ],
-    "description": "The Internet Archive holds over 100PB of data, spanning the Wayback Machine, films, scientific publications, vintage video games, and more. What is it like to try to decentalize at this scale?\r\n\r\nWe'll share our experience with networks like Filecoin, Storj, and arweave, discuss design trade-offs, offer recommendations for both builders and those curious about storing large amounts of data, and maybe even muse about how institutions could \"disappear from sight... and become all of us\"",
-    "track": "Opportunity & Global Impact",
-    "stage": "Talk 4",
-    "type": "Talk"
-  },
-  {
-    "id": "R9QRVK",
-    "name": "DEVA Awards",
-    "start": 1665774000000,
-    "end": 1665775800000,
-    "speakers": [
-      {
-        "id": "V33CZQ",
-        "name": "Aqeel Mohammad",
-        "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
-        "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
-      },
-      {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
+        "id": "7UWEU9",
+        "name": "Ben Jones",
+        "description": "Ben is Chief Scientist and Musician at the Optimism Foundation.",
         "avatar": ""
       }
     ],
-    "description": "DEVA awards are simply a fun way to come together to celebrate and allow the community to signal their appreciation for the amazing work that has been done in the ecosystem since last Devcon to drastically improve the utility and usability of Web 3 technologies for the masses. Come celebrate community achievements!\r\n\r\nThese awards are not meant to be taken seriously in any regard, Project nominations were gathered through community input of over 2000 unique nominations.",
-    "track": "UX & Design",
+    "description": "Web3 opens the door to a new cyberspace—one not only occupied, but governed, by its citizens.\r\n\r\n[The Optimism Collective](http://optimism.io/vision) is our attempt to correct meatspace's market failures with an L2.\r\n\r\nBut this talk isn't on scaling. It's about...\r\n\r\n...the past: why Ethereum is not an opportunity, but a responsibility.\r\n\r\n...the present: what we're doing to take this seriously & how it impacts our governance designs.\r\n\r\n...the future: the path towards summoning Ether's Phoenix.",
+    "track": "Governance & Coordination",
     "stage": "Talk 5",
     "type": "Talk"
-  },
-  {
-    "id": "JZZBST",
-    "name": "OPEN SOURCE JAM",
-    "start": 1665774000000,
-    "end": 1665779400000,
-    "speakers": [
-      {
-        "id": "GTUCY9",
-        "name": "SHAKA LEI KAUMAKA",
-        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
-        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
-      }
-    ],
-    "description": "The open source rhythms, chords, and melodies are open to be jammed on by everybody.",
-    "stage": "Chiva Lounge",
-    "type": "Music"
   },
   {
     "id": "QVPC3L",
@@ -7436,24 +7424,6 @@
     "type": "Lightning Talk"
   },
   {
-    "id": "WGZVAG",
-    "name": "Fixing the Internet with Layer 2 Governance",
-    "start": 1665775800000,
-    "end": 1665777300000,
-    "speakers": [
-      {
-        "id": "7UWEU9",
-        "name": "Ben Jones",
-        "description": "Ben is Chief Scientist and Musician at the Optimism Foundation.",
-        "avatar": ""
-      }
-    ],
-    "description": "Web3 opens the door to a new cyberspace—one not only occupied, but governed, by its citizens.\r\n\r\n[The Optimism Collective](http://optimism.io/vision) is our attempt to correct meatspace's market failures with an L2.\r\n\r\nBut this talk isn't on scaling. It's about...\r\n\r\n...the past: why Ethereum is not an opportunity, but a responsibility.\r\n\r\n...the present: what we're doing to take this seriously & how it impacts our governance designs.\r\n\r\n...the future: the path towards summoning Ether's Phoenix.",
-    "track": "Governance & Coordination",
-    "stage": "Talk 5",
-    "type": "Talk"
-  },
-  {
     "id": "7CAZ7U",
     "name": "Rotki: Why it’s Open Source and Local-First and Why Should You Care?",
     "start": 1665775800000,
@@ -7469,6 +7439,24 @@
     "description": "This will be a talk on the why we need opensource, local-first privacy preserving tools in this field. \r\n\r\nReiterate the benefits of opensource and the cypherphunk ethos that built the crypto field. Ponder why so many people still develop closed source centralized tools and explain why this is contrary to the core ethos of the field.\r\n\r\nThen by using rotki as a main example show how things can and should be done differently. The opensource, local-first way.\r\n\r\nExplore both benefits and drawbacks",
     "track": "Opportunity & Global Impact",
     "stage": "Talk 2",
+    "type": "Talk"
+  },
+  {
+    "id": "ZC9D8N",
+    "name": "The Future is Collective",
+    "start": 1665775800000,
+    "end": 1665777300000,
+    "speakers": [
+      {
+        "id": "ZUMDMJ",
+        "name": "Pia Mancini",
+        "description": "Democracy activist, open source sustainer, co-founder & CEO at Open Collective and Chair of DemocracyEarth Foundation. I worked in politics in Argentina and developed technology for democracy around the world. YC Alum, YGL (World Economic Forum),  globe-trotter and Roma's mum.",
+        "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2022-09-28_at_9.08.20_AM_53SDATc.png"
+      }
+    ],
+    "description": "The future is Collective. Building bridges between the legacy and decentralized systems to fund public goods for the future.",
+    "track": "Opportunity & Global Impact",
+    "stage": "Talk 5",
     "type": "Talk"
   },
   {
@@ -7491,14 +7479,14 @@
   },
   {
     "id": "AMZ7GZ",
-    "name": "The Community Support Team in China",
+    "name": "Building ethereum community together in china",
     "start": 1665777000000,
     "end": 1665777600000,
     "speakers": [
       {
         "id": "VEDWYZ",
-        "name": "Haoyun",
-        "description": "Based in Shanghai China｜ETHPlanet TEAM ｜ EDCON TEAM ｜ Member of togETHer",
+        "name": "GUO Haoyun",
+        "description": "Based in Shanghai China｜ETHPlanet - Community Support Team | EDCON Team｜ Member of togETHer",
         "avatar": ""
       },
       {
@@ -7508,25 +7496,85 @@
         "avatar": ""
       }
     ],
-    "description": "We hope to share our community growth experience in China with more people",
+    "description": "Introducing the many Ether communities in China and how they are growing together",
     "track": "Opportunity & Global Impact",
     "stage": "Talk 4",
     "type": "Lightning Talk"
   },
   {
-    "id": "XUVZTP",
-    "name": "Ethereum Event Showcase",
+    "id": "TLHM7N",
+    "name": "Herodotus Workshop",
+    "start": 1665777300000,
+    "end": 1665780300000,
+    "speakers": [
+      {
+        "id": "BAU3ZE",
+        "name": "Marcello Bardus",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
+    "track": "Developer Infrastructure",
+    "stage": "Workshop 2",
+    "type": "Workshop 1h"
+  },
+  {
+    "id": "R9QRVK",
+    "name": "DEVA Awards",
     "start": 1665777600000,
     "end": 1665779100000,
     "speakers": [
       {
-        "id": "VQMDYU",
-        "name": "Juan David Reyes",
-        "description": "Leader of EthColombia and Community Supporter at Devcon.",
-        "avatar": "http://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg"
+        "id": "V33CZQ",
+        "name": "Aqeel Mohammad",
+        "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
+        "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
+      },
+      {
+        "id": "3RRW9H",
+        "name": "Ethereum Foundation",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "description": "tbd",
+    "description": "DEVA awards are simply a fun way to come together to celebrate and allow the community to signal their appreciation for the amazing work that has been done in the ecosystem since last Devcon to drastically improve the utility and usability of Web 3 technologies for the masses. Come celebrate community achievements!\r\n\r\nThese awards are not meant to be taken seriously in any regard, Project nominations were gathered through community input of over 2000 unique nominations.",
+    "track": "UX & Design",
+    "stage": "Talk 5",
+    "type": "Talk"
+  },
+  {
+    "id": "7UXY97",
+    "name": "A Mechanism for Pricing Non-fungible Resources: Toward Multi-dimensional Fee Markets",
+    "start": 1665777600000,
+    "end": 1665779100000,
+    "speakers": [
+      {
+        "id": "A8XKQC",
+        "name": "Theo Diamandis",
+        "description": "Researcher at Bain Capital Crypto & MIT PhD student",
+        "avatar": "http://speak.devcon.org/media/avatars/twitter-pfp_head_8KfzcIX.png"
+      }
+    ],
+    "description": "We propose a new mechanism for multi-dimensional resource pricing in blockchains. Currently, many blockchain systems operate with either fixed transaction fees or fixed relative prices of different resources (e.g., compute, memory, storage). Our proposed mechanism prices resources independently and automatically in a way that maximizes some utility set by the protocol designer.",
+    "track": "Cryptoeconomics",
+    "stage": "Talk 3",
+    "type": "Talk"
+  },
+  {
+    "id": "XMNKDU",
+    "name": "Taxing Crypto in Colombia",
+    "start": 1665777600000,
+    "end": 1665779100000,
+    "speakers": [
+      {
+        "id": "EE3GXS",
+        "name": "Luis Carlos",
+        "description": "Luis Carlos holds a B.A. in Economics and History from Florida International University (2005), with Magna Cum Laude distinction. Master in Economics and Ph.D in Economics from Michigan State University. Professor and researcher, co-founder and first director of the Fiscal Observatory of the Pontificia Universidad Javeriana.  He has also served as an economist for the FCC during the Obama administration. He was appointed as the director general of DIAN by President Gustavo Petro on July 11,2022",
+        "avatar": ""
+      }
+    ],
+    "description": "The director of the Colombian Tax and Customs Administration will present a document unifying the current rules about the taxation of digital assets in Colombia and will discuss gaps in the current normative framework. He will also invite feedback from the community on how to address these gaps.",
     "track": "Opportunity & Global Impact",
     "stage": "Talk 2",
     "type": "Talk"
@@ -7548,42 +7596,6 @@
     "track": "Opportunity & Global Impact",
     "stage": "Talk 4",
     "type": "Lightning Talk"
-  },
-  {
-    "id": "ZC9D8N",
-    "name": "Pia Mancini",
-    "start": 1665777600000,
-    "end": 1665779400000,
-    "speakers": [
-      {
-        "id": "ZUMDMJ",
-        "name": "Pia Mancini",
-        "description": "Democracy activist, open source sustainer, co-founder & CEO at Open Collective and Chair of DemocracyEarth Foundation. I worked in politics in Argentina and developed technology for democracy around the world. YC Alum, YGL (World Economic Forum),  globe-trotter and Roma's mum.",
-        "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2022-09-28_at_9.08.20_AM_53SDATc.png"
-      }
-    ],
-    "description": "TBD",
-    "track": "Opportunity & Global Impact",
-    "stage": "Talk 5",
-    "type": "Talk"
-  },
-  {
-    "id": "7UXY97",
-    "name": "A Mechanism for Pricing Non-fungible Resources: Toward Multi-dimensional Fee Markets",
-    "start": 1665777600000,
-    "end": 1665779100000,
-    "speakers": [
-      {
-        "id": "A8XKQC",
-        "name": "Theo Diamandis",
-        "description": "Researcher at Bain Capital Crypto & MIT PhD student",
-        "avatar": "http://speak.devcon.org/media/avatars/twitter-pfp_head_8KfzcIX.png"
-      }
-    ],
-    "description": "We propose a new mechanism for multi-dimensional resource pricing in blockchains. Currently, many blockchain systems operate with either fixed transaction fees or fixed relative prices of different resources (e.g., compute, memory, storage). Our proposed mechanism prices resources independently and automatically in a way that maximizes some utility set by the protocol designer.",
-    "track": "Cryptoeconomics",
-    "stage": "Talk 3",
-    "type": "Talk"
   },
   {
     "id": "XDAPTD",
@@ -7688,6 +7700,16 @@
     "speakers": [],
     "description": "Join us on the first floor for drinks at the happy hour!",
     "stage": "Food and Beverages",
+    "type": "Meetup"
+  },
+  {
+    "id": "ETFNAH",
+    "name": "Hands-On NFT Workshop by web3beach",
+    "start": 1665783000000,
+    "end": 1665788400000,
+    "speakers": [],
+    "description": "We'll explore multiples uses of NFT across various industries. We'll have art supplies and also help attendees mint their Devcon photos or videos as NFTs.",
+    "stage": "Workshop 1",
     "type": "Meetup"
   },
   {
