@@ -10,6 +10,7 @@ import { DEFAULT_LOGO_IMAGE } from 'utils/constants'
 const pages = [
   { name: 'Devcon.org', href: 'https://devcon.org/' },
   { name: 'Devcon App', href: 'https://app.devcon.org/' },
+  { name: 'Recordings', href: 'https://archive.devcon.org/' },
   // { name: 'Schedule', href: '/schedule' },
   // { name: 'Archive', href: '/archive' }
 ]
