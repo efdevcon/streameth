@@ -1,48 +1,20 @@
-import { useState, useRef } from 'react'
+import Image from 'next/image'
 import VideoJS from './VideoJS'
-import { Room, Stream, Event } from 'types'
+import { PlayerProps } from './types'
+import defaultPoster from 'assets/images/default.png'
 
-interface PlayerProps {
-  src: string | null
-  poster: string
-  eventName: Event['name']
-  setStatus?: (status: string) => void
-  onStreamError: () => void
-}
-
-const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
-  if (!src) return <img width={'100%'} src={poster ?? '/posters/default.png'} alt="poster" />
-
-  const playerRef = useRef(null)
-  const videoJsOptions = {
-   techOrder:['html5','youtube'],
-    poster: poster || '',
-    autoplay: true,
-    controls: true,
-    responsive: true,
-    fluid: true,
-    sources: [
-      {
-        src: src,
-        type: src.includes('youtube') ?'video/youtube' : 'application/x-mpegURL',
-      },
-    ],
-  }
+const Player = ({ ...props }: PlayerProps) => {
+  if (!props.source) return <Image alt="text" layout='responsive' src={defaultPoster} />
+  if (props.poster === undefined) props.poster = '/images/default.png'
+  if (props.playlist === undefined) props.playlist = null
+  // override src url for spain
+  const source = props.source
+  source.src = source.src.replace('cdn.livepeer.com', 'livepeercdn.com')
 
   const handlePlayerReady = (player: any) => {
-    playerRef.current = player
-
-    player.reloadSourceOnError({
-      // getSource allows you to override the source object used when an error occurs
-      getSource: function (reload: any) {
-        console.log('Reloading because of an error')
-        onStreamError() // this should automatically trigger player reload
-      },
-      errorInterval: 1,
-    })
-
     player.on('error', (e: any) => {
       console.log('error', e)
+      props.onStreamError()
     })
 
     player.on('waiting', () => {
@@ -54,7 +26,7 @@ const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
     })
   }
 
-  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} eventName={eventName} />
+  return <VideoJS source={props.source} poster={props.poster} onReady={handlePlayerReady} playlist={props.playlist} />
 }
 
 export default Player

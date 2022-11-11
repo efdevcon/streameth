@@ -8,7 +8,7 @@ const baseFileName = 'TrustX_22-04_Ijzaal_'
 const nrOfFiles = 10
 const date = '2022-04-22'
 const track = 'Layer-2'
-const room = 'Ijzaal'
+const stage = 'Ijzaal'
 
 // TrustX_21-04_GroteZaal_ // 15
 // TrustX_22-04_GroteZaal_ // 17
@@ -33,7 +33,7 @@ async function Generate() {
             "end": date,
         }
         if (track) session.track = track
-        if (room) session.room = room
+        if (stage) session.stage = stage
 
         fs.writeFileSync(`${baseDir}/${baseFileName}${id}.json`, JSON.stringify(session, null, 2))
     }

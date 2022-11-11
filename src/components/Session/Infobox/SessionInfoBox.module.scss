@@ -1,0 +1,31 @@
+.box {
+  @apply bg-gray-200 px-3 border border-transparent py-2 space-y-2 rounded dark:bg-black dark:border-white;
+
+  &__header {
+    @apply border-b-2 border-gray-400 pb-1 flex justify-between items-center;
+  }
+
+  &__body {
+    @apply py-2 flex justify-between items-center dark:text-gray-400;
+  }
+
+  &__date {
+    @apply text-gray-500 dark:text-gray-300;
+  }
+
+  // &__description {
+  //   @apply max-w-lg;
+  // }
+
+  &__shareIcon {
+    @apply h-8 w-8 cursor-pointer text-gray-600 shrink-0 ml-3 dark:text-gray-300;
+  }
+}
+
+.speakers {
+  @apply flex items-center;
+
+  &__title {
+    @apply mr-2 leading-none text-gray-600 dark:text-gray-300;
+  }
+}

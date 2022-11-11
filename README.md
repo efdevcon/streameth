@@ -22,63 +22,50 @@ npm run dev
 yarn dev
 ```
 
-## Add Event
+# Configuration
 
-Events are stored in the `/data` folder via JSON metadata. Below is a description of the fields and structure of the JSON:
+The 3 core modules (`stream`, `schedule` and `archive` can be configured to use different kind of implementations.
 
-| **Field**         | **Description**                                                                                                                                                                                            | **Required** | **Default** |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ----------- |
-| name              | Name of event                                                                                                                                                                                              | Yes          |             |
-| description       | Description of event                                                                                                                                                                                       | Yes          |             |
-| start             | Start date of event. Format YYYY-MM-DD                                                                                                                                                                     | Yes          |             |
-| end               | End date of event. Format YYYY-MM-DD                                                                                                                                                                       | Yes          |             |
-| website           | Website URL                                                                                                                                                                                                |              |             |
-| schedule          |                                                                                                                                                                                                            | Yes          |             |
-| schedule.sessions | Lists all event sessions. Can be an empty array. See the Session section below for more details about the Session object.                                                                                  | Yes          | []          |
-| rooms             | Lists all streaming rooms. Can be empty array. See Room section below for more details about Room object.                                                                                                  | Yes          | []          |
-| recordings        | Lists all event recordings. Can be empty array. The presence of recordings generally indicates the event and the livestream are over. See Recording section below for more details about Recording object. | Yes          | []          |
+## Stream
 
-### Session object
+Available implementation types: `livepeer`
 
-| **Field**  | **Description**                                                                                                                 | **Required** | **Default** |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------ | ----------- |
-| id         | Session ID                                                                                                                      | Yes          |             |
-| name       | Session name                                                                                                                    |              |             |
-| abstract   | Session abstract                                                                                                                |              |             |
-| descripion | Session description                                                                                                             |              |             |
-| track      |                                                                                                                                 |              |             |
-| speakers   | List all speakers for the session. Can be empty array. See the Speaker section below for more details about the Speaker object. | Yes          | []          |
-| start      | Session start datetime in UTC ISO 8601 format.                                                                                  |              |             |
-| end        | Session end datetime in UTC ISO 8601 format.                                                                                    |              |             |
-| room       | The Room associated with the session.                                                                                           |              |             |
+## Schedule
 
-### Speaker object
+Available implementation types: `fs`, `pretalx`
 
-| **Field**  | **Description**     | **Required** | **Default** |
-| ---------- | ------------------- | ------------ | ----------- |
-| id         | Speaker ID          |              |             |
-| name       | Speaker name        |              |             |
-| descripion | Speaker description |              |             |
+### Filesystem
 
-### Room object
+The filesystem module points to a local json file in the same repository.
 
-| **Field** | **Description**                                                                                     | **Required** | **Default** |
-| --------- | --------------------------------------------------------------------------------------------------- | ------------ | ----------- |
-| id        | Room ID                                                                                             | Yes          |             |
-| streams   | List of streams. Can be empty array. See Stream section below for more details about Stream object. | Yes          | []          |
+```
+"schedule": {
+  "version": 2,
+  "type": "fs",
+  "config": {
+    "path": "./config/schedule.json"
+  }
+},
+```
 
-### Stream object
+### Pretalx
 
-| **Field** | **Description** | **Required** | **Default** |
-| --------- | --------------- | ------------ | ----------- |
-| id        | Stream ID       | Yes          |             |
+The pretalx module fetches programming info from a pretalx API. Read the [pretalx documentation](https://docs.pretalx.org/api/) for more info.
 
-### Recording object
+```
+"schedule": {
+  "version": 2,
+  "type": "pretalx",
+  "config": {
+    "baseApiUrl": "https://pretalx.com/api/events/democon/"
+  }
+},
+```
 
-| **Field**    | **Description**      | **Required** | **Default** |
-| ------------ | -------------------- | ------------ | ----------- |
-| name         | Recording name       | Yes          |             |
-| recordingUrl | URL to mp4 recording | Yes          |             |
+
+## Archive
+
+Available implementation types: `ipfs`, `livepeer`, `youtube`
 
 ## Livestream setup
 

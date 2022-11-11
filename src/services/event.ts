@@ -1,57 +1,32 @@
 import fs from 'fs'
-import { resolve, join } from 'path'
-import { Event, Stream } from 'types'
+import { Event } from 'types'
+import { GetArchive } from './archive'
+import { GetSchedule } from './schedule'
+import cacheData from "memory-cache"
 
-// const mergeStreamData = (event: Event, streams: Stream[]) => {
-//   const eventDup = { ...event }
+const configPath = './config/streameth.json'
 
-//   for (let i = 0; i < eventDup.streams.length; i++) {
-//     let eventStreamObj: Stream = eventDup.streams[i]
+export async function GetEvent(): Promise<Event | undefined> {
+  const value = cacheData.get('event')
+  if (value) {
+    console.log('Return event data from memory-cache..')
+    return value
+  }
 
-//     for (let j = 0; j < streams.length; j++) {
-//       const stream: Stream = streams[j]
+  if (fs.existsSync(configPath)) {
+    const config = fs.readFileSync(configPath, 'utf8')
+    let event = JSON.parse(config)
 
-//       if (stream.id === eventStreamObj.id) {
-//         eventStreamObj = Object.assign(eventStreamObj, stream)
-//       }
-//     }
-//   }
+    // get core modules
+    // - streams
 
-//   return eventDup
-// }
+    const sessions = await GetSchedule(event.schedule.type, event.schedule.config)
+    event.schedule.sessions = sessions
 
-export function GetEventNames(): string[] {
-  const dir = resolve('./data/events')
-  const dirs = fs
-    .readdirSync(dir, { withFileTypes: true })
-    .filter(i => i.isFile() && i.name.endsWith('.json'))
-    .map(i => i.name.replace('.json', ''))
+    const archive = await GetArchive(event.archive.type, event.archive.config)
+    event.archive.sessions = archive
 
-  return dirs
-}
-
-export function GetEvents(): Event[] {
-  const dir = resolve('./data/events')
-  const files = fs.readdirSync(dir, { withFileTypes: true }).filter(i => i.isFile() && i.name.endsWith('.json'))
-
-  const items = files
-    .map(i => {
-      const fullPath = join(dir, i.name)
-      const content = fs.readFileSync(fullPath, 'utf8')
-      if (!content) {
-        console.log('File has no content..', i.name)
-      }
-
-      if (content) {
-        let event = JSON.parse(content) as Event
-
-        return {
-          ...event,
-          id: i.name.replace('.json', ''),
-        }
-      }
-    })
-    .filter(i => !!i) as Event[]
-
-  return items
+    cacheData.put('event', event)
+    return event
+  }
 }

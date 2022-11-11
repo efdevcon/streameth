@@ -1,9 +1,3 @@
 {
-  "extends": "next/core-web-vitals",
-  "import/no-anonymous-default-export": [
-    "error",
-    {
-      "allowArrowFunction": true
-    }
-  ]
+  "extends": "next/core-web-vitals"
 }

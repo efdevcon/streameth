@@ -1,96 +1,49 @@
 import { GetStaticProps } from 'next'
-import { GetEvents } from 'services/event'
-import { Event } from 'types'
-import Link from 'next/link'
-import Image from 'next/image'
-import css from './index.module.scss'
+import { GetEvent } from 'services/event'
+import { Event, Session, Stage } from 'types'
+import Page from 'layouts/event-page'
+import ScheduleComponent from 'components/Schedule/ScheduleComponent'
 import moment from 'moment'
-import { LivePulse } from 'components/LivePulse'
-import { getStreams } from 'services/stream'
-import { useEffect, useState } from 'react'
-import { GetDomainName } from 'utils/format'
+import { SEO } from 'components/seo'
 
 interface Props {
-  events: Event[]
+  event?: Event
+  sessions: Session[]
+  stages: Stage['name'][]
+  days: string[]
 }
 
-const eventStreamIds = (event: Event) => {
-  return event.rooms?.length > 0 ? event.rooms.map(room => room.streams.map(stream => stream.id)).flat() : []
-}
+export default function Schedule(props: Props) {
 
-export default function Home(props: Props) {
-  const [activeStreamIds, setActiveStreamIds] = useState<string[]>([])
-
-  useEffect(() => {
-    const getActiveStreams = async () => {
-      // collect all stream ids
-      const streamIds = props.events.map(event => eventStreamIds(event)).flat()
-      const allStreams = await getStreams(streamIds)
-      const activeIds = allStreams.filter(stream => stream.isActive).map(stream => stream.id)
-
-      setActiveStreamIds(activeIds)
-    }
-
-    getActiveStreams()
-  }, [])
-
-  const dates = [...new Set(props.events.map(i => i.start).concat(props.events.map(i => i.end)))].sort()
-
-  return dates.map(date => {
-    const dateHasPassed = moment(date).isBefore(moment())
-    const eventDate = new Date(date).getDate()
-
-    return (
-      <div key={date} className={css.container}>
-        <h3>
-          {moment(date).format('MMM DD')} {eventDate >= 18 && <small>day {eventDate - 17}</small>}
-        </h3>
-
-        <section>
-          {props.events
-            .filter(event => event.start === date || event.end === date)
-            .map((event: Event) => {
-              // check if any of the event's stream ids are present within the active stream ids
-              const eventIsStreaming = eventStreamIds(event).some(el => activeStreamIds.includes(el))
-
-              let className = css.event
-              if (dateHasPassed) className += ` ${css.passed}`
-
-              return (
-                <Link key={`event_${event.id}`} href={`event/${event.id}`}>
-                  <article className={className}>
-                    <div className={css.poster}>
-                      <Image
-                        src={event.poster ?? '/posters/default.png'}
-                        alt={event.name}
-                        objectFit="cover"
-                        layout="fill"
-                      />
-                    </div>
-                    <div className={css.info}>
-                      <div className={css.title}>
-                        <h4>{event.name}</h4>
-                        {eventIsStreaming && <LivePulse style={{ marginLeft: '8px' }} />}
-                      </div>
-                      <p className={css.description}>{event.description}</p>
-                      <span className={css.domain}>{GetDomainName(event.website)}</span>
-                    </div>
-                  </article>
-                </Link>
-              )
-            })}
-        </section>
-      </div>
-    )
-  })
+  return (
+    <Page event={props.event}>
+      <SEO title='Schedule' />
+      <ScheduleComponent sessions={props.sessions} stages={props.stages} days={props.days} />
+    </Page>
+  )
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const events = GetEvents().filter(i => i.id !== 'test')
+  const event = await GetEvent()
+  const stages = event?.stream.stages.map((i) => i.name) || []
+  // get all different days in the sessions
+  const days = event?.schedule.sessions.reduce((acc, session) => {
+    const day = moment(session.start).format('MMM DD')
+    if (!acc.includes(day)) {
+      acc.push(day)
+    }
+
+    return acc
+  }, [] as string[]) || []
+  const sessions = event?.schedule.sessions || []
+
 
   return {
     props: {
-      events,
+      event,
+      sessions,
+      stages,
+      days,
     },
   }
 }

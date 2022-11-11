@@ -1,19 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { Stream, Recording } from 'types'
-import { initStreamProvider } from 'models/streamProvider'
+import { streamItem } from 'types'
+import { getStream } from 'services/stream'
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { id } = req.query
-    const provider = initStreamProvider()
+    //const provider = initStreamProvider()
 
     if (id && typeof id === 'string') {
       try {
-        const stream: Stream = await provider.getStream(id)
+        const stream: streamItem | null = await getStream(id)
         // const recordings: Recording[] = await provider.getRecordings(id)
-
         // stream.recordings = recordings
-
         return res.status(200).json(stream)
       } catch (e: any) {
         console.log('Unable to fetch stream', id)

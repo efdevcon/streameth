@@ -1,0 +1,49 @@
+.container {
+  @apply flex flex-col border border-gray-500 p-3 rounded-md;
+
+  &.past {
+    @apply opacity-50;
+  }
+
+  &.active {
+    @apply border-2;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+  }
+}
+
+.header {
+  @apply flex justify-between items-start;
+
+  &__title {
+    @apply text-lg font-medium leading-tight mb-2 dark:text-gray-200;
+  }
+
+  &__icon {
+    @apply ml-2;
+  }
+}
+
+.body {
+  @apply flex-grow flex flex-col text-gray-400 text-sm space-y-2 justify-between;
+}
+
+.iconText {
+  @apply flex items-center;
+
+  svg {
+    @apply h-5 w-5 mr-1;
+  }
+}
+
+.learnMore {
+  @apply text-gray-500 text-sm font-medium text-end cursor-pointer;
+}
+
+.link {
+  @apply cursor-pointer;
+}
+
+.container:hover {
+  @apply shadow-lg;
+}

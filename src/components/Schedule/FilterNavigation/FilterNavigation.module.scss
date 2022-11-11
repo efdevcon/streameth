@@ -1,0 +1,32 @@
+.filterNavigation {
+  @apply w-4/6 md:w-1/3 lg:w-1/6 h-full fixed z-50 bg-[#FBFBFB] px-6 py-14 border-r-slate-200 border-r-2 dark:bg-black;
+
+  &__slide_button {
+    @apply flex h-16 bg-slate-200 rounded-r-lg px-2 cursor-pointer absolute items-center lg:hidden;
+    top: 15%;
+  }
+
+  &__back_button {
+    @apply absolute p-5 right-0 top-0 lg:hidden text-2xl font-bold cursor-pointer;
+  }
+
+  &__header {
+    @apply text-3xl lg:text-4xl xl:text-4xl dark:text-white;
+  }
+
+  &__item {
+    @apply flex flex-col justify-between my-5 lg:my-10;
+  }
+
+  &__item__title {
+    @apply text-xl font-normal dark:text-gray-200;
+  }
+
+  &__item__list {
+    @apply flex flex-col p-2;
+
+    &__item {
+      @apply my-2 text-base xl:text-lg font-light dark:text-gray-200;
+    }
+  }
+}

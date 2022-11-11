@@ -1,0 +1,11 @@
+.box {
+  @apply flex-col flex items-center;
+}
+
+.name {
+  @apply text-lg font-bold;
+}
+
+.description {
+  @apply text-base;
+}
