@@ -17,7 +17,6 @@ export interface Event {
   stream: Stream
   schedule: Schedule
   archive: Archive
-  youtube?: YouTube
 }
 
 export interface Session {
