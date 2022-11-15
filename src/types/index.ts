@@ -55,6 +55,7 @@ export interface Stage {
   id: string
   name: string
   stream: streamId[]
+  image?: string
 }
 
 export type VideoTypes = 'youtube' | 'ipfs' | 'livepeer'

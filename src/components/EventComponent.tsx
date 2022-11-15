@@ -23,6 +23,8 @@ export function EventComponent() {
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
 
+  console.log(currentStage)
+
   useEffect(() => {
     setFilters([
       { type: 'stage', value: currentStage.name },

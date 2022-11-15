@@ -1,10 +1,11 @@
 import { ReactNode } from 'react'
 import { EventContextProvider } from 'context/event-context'
-import { Event } from 'types'
+import { Event, Stage } from 'types'
 
 interface Props {
   event?: Event
   stageId?: string
+  stage: Stage | null
   children: ReactNode
 }
 
@@ -17,9 +18,7 @@ export default function EventPage(props: Props) {
     )
   }
 
-  const activeStage = props.stageId
-    ? props.event.stream.stages.find((i) => i.id.toLowerCase() === props.stageId?.toLowerCase())
-    : props.event.stream.stages[0]
+  const activeStage = props.stage
 
   if (!activeStage) {
     return (
