@@ -82,7 +82,7 @@ export const VideoJS = ({ ...props }: VideoJSProps) => {
   }, [playerRef])
 
   return (
-    <div data-vjs-player style={{ borderRadius: '5px' }}>
+    <div data-vjs-player>
       <video ref={videoRef} className="video-js vjs-16-9 vjs-big-play-centered" />
     </div>
   )

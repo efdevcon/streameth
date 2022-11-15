@@ -2,6 +2,15 @@
   @apply mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-.sessionContainer {
+.container__session{
   @apply mx-auto max-w-[1512px] p-6 lg:p-8;
+}
+
+.container__stage {
+  height: calc(100vh - 4rem);
+  overflow: hidden;
+  @media screen and (min-width: 1240px) {
+    height: calc(100vh - 5rem);
+  }
+    
 }

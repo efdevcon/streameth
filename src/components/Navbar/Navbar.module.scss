@@ -1,5 +1,5 @@
 .navbar {
-  @apply border-b-2 border-gray-200 py-4;
+  @apply border-b-2 border-gray-200 py-4 lg:h-20;
 
   &__inner {
     @apply relative flex items-center justify-between;

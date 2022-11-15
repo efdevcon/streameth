@@ -10,5 +10,9 @@ export default function Container({ children }: Props) {
 }
 
 export function SessionContainer({ children }: Props) {
-  return <div className={styles.sessionContainer}>{children}</div>
+  return <div className={styles.container__session}>{children}</div>
+}
+
+export function StageContainer({ children }: Props) {
+  return <div className={styles.container__stage}>{children}</div>
 }

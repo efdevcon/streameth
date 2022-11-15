@@ -11,7 +11,7 @@ export default function StageSelect() {
   if (event.stream.stages.length <= 1) return <></>
 
   return (
-    <div>
+    <div className="h-full w-full">
       <label htmlFor="stage" className={styles.label}>
         Select Stage
       </label>

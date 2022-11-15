@@ -16,20 +16,21 @@ interface Props {
 export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }: Props) {
   const event = useEvent()
   const stage = useStage()
-  const sessions = useSessions(event)
+  const sessions = useSessions()
   const current = sessions.sessions.find((i) => i.stage === stage.id && localizedMoment(i.start).isAfter(currentTimeInUTC()))
   const currentSession = session
 
   return (
     <div className={css.box}>
-      <div className={css.box__header}>
+      {/* <div className={css.box__header}>
         <div className={css.box__date}>
           {localizedMoment(currentSession.start).format('MMM DD / HH:mm')} - {localizedMoment(currentSession.end).format('HH:mm')}
         </div>
-        <ShareIcon className={css.box__shareIcon} onClick={onShareClick} />
-      </div>
+      </div> */}
       <div className={css.box__body}>
-        <p className={css.box__description}>{currentSession.description || currentSession.abstract}</p>
+        <p className={css.box__description}>{currentSession.name}</p>
+        <ShareIcon className={css.box__shareIcon} onClick={onShareClick} />
+      
       </div>
       <div className={css.speakers}>
         <div className={css.speakers__title}>Speakers:</div>
