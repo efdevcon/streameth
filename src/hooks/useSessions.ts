@@ -2,6 +2,8 @@ import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Session, Event } from 'types'
 import { startOfDay, currentTimeInUTC } from 'utils/dateTime'
 import useInterval from '@use-it/interval'
+import { useContext } from 'react'
+import { EventContext } from 'context/event-context'
 
 interface Filter {
   type: 'stage' | 'day'
@@ -10,8 +12,15 @@ interface Filter {
 
 export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'
 
-export function useSessions(event: Event, initFilters: Filter[] = []) {
-  const allSessions = event.schedule.sessions
+export function useSessions(initFilters: Filter[] = []) {
+
+  const context = useContext(EventContext)
+
+  if (context === undefined) {
+    throw new Error('useStage must be used within an EventContextProvider')
+  }
+
+  const allSessions = context.sessions
   const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
   const [eventDayNum, setEventDayNum] = useState<number | null>(null)

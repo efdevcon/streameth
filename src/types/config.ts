@@ -18,7 +18,6 @@ export interface Schedule {
   version: number
   type: ScheduleTypes
   config: Config
-  sessions: Session[]
 }
 
 export type ArchiveTypes = 'gsheet'

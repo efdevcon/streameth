@@ -1,9 +1,10 @@
 import React, { createContext, ReactNode } from 'react'
-import { Event, Stage } from 'types'
+import { Event, Stage, Session } from 'types'
 
 interface ContextType {
   event: Event
   activeStage: Stage
+  sessions: Session[]
 }
 
 interface Props extends ContextType {

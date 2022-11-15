@@ -1,32 +1,46 @@
 import fs from 'fs'
 import { Event } from 'types'
 import { GetArchive } from './archive'
-import { GetSchedule } from './schedule'
 import cacheData from "memory-cache"
+
+
 
 const configPath = './config/streameth.json'
 
-export async function GetEvent(): Promise<Event | undefined> {
-  // const value = cacheData.get('event')
-  // if (value) {
-  //   console.log('Return event data from memory-cache..')
-  //   return value
-  // }
+export class EventController {
 
-  if (fs.existsSync(configPath)) {
+
+  static async getEvent(): Promise<Event> {
+    if (!fs.existsSync(configPath)) {
+      new Error('No config file found')
+    }
     const config = fs.readFileSync(configPath, 'utf8')
-    let event = JSON.parse(config)
-
-    // get core modules
-    // - streams
-
-    const sessions = await GetSchedule(event.schedule.type, event.schedule.config)
-    event.schedule.sessions = sessions
-
-    const archive = await GetArchive(event.archive.type, event.archive.config)
-    event.archive.sessions = archive
-
-    // cacheData.put('event', event)
-    return event
+    return JSON.parse(config)
   }
+
+  static async getArchive(): Promise<Event["archive"] | null> {
+
+    const event = await this.getEvent()
+    if (!event.archive) {
+      return null
+    }
+    return event.archive
+  }
+
+  static async getSchedule(): Promise<Event["schedule"] | null> {
+    const event = await this.getEvent()
+    if (!event.schedule) {
+      return null
+    }
+    return event.schedule
+  }
+
+  static async getStream(): Promise<Event["stream"] | null> {
+    const event = await this.getEvent()
+    if (!event.stream) {
+      return null
+    }
+    return event.stream
+  }
+
 }

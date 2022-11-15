@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 import { EventContextProvider } from 'context/event-context'
-import { Event, Stage } from 'types'
+import { Event, Stage, Session } from 'types'
 
 interface Props {
   event?: Event
-  stageId?: string
   stage: Stage | null
+  sessions: Session[] | null
   children: ReactNode
 }
 
@@ -28,8 +28,19 @@ export default function EventPage(props: Props) {
     )
   }
 
+  const sessions = props.sessions
+
+  if (!sessions) {
+    return (
+      <div>
+        Sessions not properly configured. Please <a href="https://github.com/efdevcon/streameth">read the docs</a> to configure your event website.
+      </div>
+    )
+  }
+
+
   return (
-    <EventContextProvider event={props.event} activeStage={activeStage}>
+    <EventContextProvider event={props.event} activeStage={activeStage} sessions={sessions}>
       {props.children}
     </EventContextProvider>
   )

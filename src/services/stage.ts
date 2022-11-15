@@ -1,18 +1,8 @@
-import { Stage, Event } from 'types'
+import { Stage } from 'types'
 import fs from 'fs'
 import matter from 'gray-matter'
+import { EventController } from 'services/event'
 
-const configPath = './config/streameth.json'
-
-export class EventController {
-  static async getEvent(): Promise<Event> {
-    if (!fs.existsSync(configPath)) {
-      new Error('No config file found')
-    }
-    const config = fs.readFileSync(configPath, 'utf8')
-    return JSON.parse(config)
-  }
-}
 
 const cmsContentPath = './content/stages'
 
@@ -31,7 +21,7 @@ export class StageController {
       return {
         id: filename,
         name: data.data.name,
-        image: data.data?.image,
+         //image: data.data?.image,
         stream: data.data?.stream,
       }
     })
@@ -54,7 +44,7 @@ export class StageController {
 
   static validateStage(stage: Stage): boolean {
     // check if stage attributes are not undefined
-    if (!stage.id || !stage.name || !stage.stream || !stage.image) {
+    if (!stage.id || !stage.name || !stage.stream ) {
       return false
     }
     return true
