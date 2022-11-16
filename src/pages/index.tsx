@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const event = await EventController.getEvent()
   const sessions = await SessionController.getSessions()
-
+  console.log(sessions[0])
   return {
     props: {
       event,

@@ -1,22 +1,50 @@
 local_backend: true 
 backend:
   name: git-gateway
-  branch: netifly-cms # Branch to update (optional; defaults to master)
-
-media_folder: "public/uploads" # Where media files will be stored
-public_folder: "/uploads" # Where the media files can be accesed from the server
-publish_mode: editorial_workflow # For Drafts
+  branch: netifly-cms 
+media_folder: "public/uploads"
+public_folder: "/uploads" 
+publish_mode: editorial_workflow 
 
 collections:
-  - name: "stages" # Used in routes, e.g., /admin/collections/blog
+  - name: "stages"
     identifier_field: "name"
-    label: "stages" # Used in the UI
-    folder: "content/stages" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+    label: "stages"
+    folder: "content/stages" 
+    create: true 
+    slug: "{{slug}}"
+    fields: 
       - {label: "name", name: "name", widget: "string"}
-      - {label: "stream", name: "stream", widget: "list", fields: [
-          {label: "id", name: "id", widget: "string"},
-      ]}
+      - {label: "stream", name: "stream", widget: "list", fields: [{label: "id", name: "id", widget: "string"}]}
       - {label: "image", name: "image", widget: "image"}
+  
+  - name: "sessions"
+    identifier_field: "name"
+    label: "sessions"
+    folder: "content/sessions"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "name", name: "name", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: "stage", name: "stage", widget: "relation", collection: "stages", value_field: "name", search_fields: ["name"], display_fields: ["name"]}
+      - {label: "start", name: "start", widget: "datetime"}
+      - {label: "end", name: "end", widget: "datetime"}
+      - {label: "speakers", name: "speakers", widget: "list", fields: [
+          {label: "speaker", name: "speaker", widget: "relation", collection: "speakers", searchFields: ["name"], valueField: "name", displayFields: ["name"]}
+       ]}
+      - {label: "video", name: "video url", widget: "string", required: false}
+
+  - name: "speakers"
+    identifier_field: "name"
+    label: "speakers"
+    folder: "content/speakers"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "name", name: "name", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: "avatarUrl", name: "avatarUrl", widget: "string", required: false}
+      - {label: "company", name: "company", widget: "string", required: false}
+      - {label: "twitter", name: "twitter", widget: "string", required: false}
+      - {label: "github", name: "github", widget: "string",   required: false}  

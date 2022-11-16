@@ -19,7 +19,6 @@ export function useSessions(initFilters: Filter[] = []) {
   const [filters, setFilters] = useState<Filter[]>(initFilters)
   const eventDays = [...new Set(allSessions.map((i) => startOfDay(i.start)))].sort()
   const stages = [...new Set(allSessions.map((i) => i.stage))].sort()
-  const tracks = [...new Set(allSessions.map((i) => i.track))].sort()
   const speakers = [...new Set(allSessions.map((i) => i.speakers.map((s) => s.name)).flat())].sort()
 
   const possibleFilters: PossibleFilter[] = useMemo(() => {
@@ -50,52 +49,23 @@ export function useSessions(initFilters: Filter[] = []) {
         if (filters.length === 0) {
           return true
         }
-        for (let i = 0; i < filters.length; i++) {
-          const filter = filters[i]
-          const { type, value } = filter
-          if (type === 'stage' && value !== session.stage) {
-            return false
-          }
-
-          if (type === 'day' && value !== startOfDay(session.start)) {
-            console.log(value, startOfDay(session.start))
-            return false
-          }
-
-          if (type === 'track' && value !== session.track) {
-            return false
-          }
-
-          if (type === 'speaker' && !session.speakers.map((s) => s.name).includes(value)) {
-            return false
-          }
-
-          if (type === 'recording') {
-            const valueAsBool = value === 'yes' ? true : false
-            if (valueAsBool !== !!session.video) {
+        return filters.some((filter) => {
+          switch (filter.type) {
+            case 'day':
+              return startOfDay(session.start) === filter.value
+            case 'stage':
+              return session.stage === filter.value
+            case 'recording':
+              return filter.value === 'yes' ? !!session.video : !session.video
+            case 'speaker':
+              return session.speakers.some((speaker) => speaker.name === filter.value)
+            default:
               return false
-            }
           }
-
-          // eventDayNum is only set during the event; otherwise it is null
-          // When null, use value of 0 to check the first day in eventDays
-          // Otherwise, subtract 1 from eventDayNum to get corresponding index in eventDays
-          // if (type === 'day') {
-          //   let v = 0
-          //   console.log("day", value)
-          //   if (value) {
-          //     v = value - 1
-          //   }
-          //   if (eventDays[v] !== startOfDay(session.start)) {
-          //     return false
-          //   }
-          // }
-        }
-
-        return true
+        })
       })
       .sort((a: any, b: any) => a.start - b.start)
-  }, [allSessions, filters, eventDays])
+  }, [allSessions, filters])
 
   // Determines when the user visits the website in relation to the event
   // Different timeStates are:

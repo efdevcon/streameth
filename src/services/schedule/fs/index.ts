@@ -1,13 +1,23 @@
 import fs from 'fs'
-import { Session } from 'types';
-import { Config } from "types/config";
+import { Session } from 'types'
+import matter from 'gray-matter'
+const cmsContentPath = './content/sessions'
+import {datetimeToUnixTimestamp} from 'utils/dateTime'
 
-const defaultScheduleFilePath = './config/schedule.json'
-
-export async function GetSchedule(config: Config): Promise<Session[]> {
-    const filePath = config['path'] ? config['path'] as string : defaultScheduleFilePath
-    if (!fs.existsSync(filePath)) throw new Error('Schedule file not found')
-
-    const schedule = fs.readFileSync(filePath, 'utf8')
-    return JSON.parse(schedule)
+export async function GetSchedule(): Promise<Session[]> {
+  const filesInProjects = fs.readdirSync(cmsContentPath)
+  return filesInProjects.map((file) => {
+    const filename = file.slice(0, file.indexOf('.'))
+    const data = matter(fs.readFileSync(`${cmsContentPath}/${filename}.md`, 'utf8'))
+    return {
+      id: filename,
+      name: data.data.name,
+      description: data.data.description,
+      stage: data.data.stage,
+      start: datetimeToUnixTimestamp(data.data.start),
+      end: datetimeToUnixTimestamp(data.data.end),
+      speakers: data.data.speakers,
+      video: data.data.video ?? null,
+    }
+  })
 }

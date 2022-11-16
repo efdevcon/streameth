@@ -47,7 +47,7 @@ export default function SessionSnack({ session, learnMore, status = 'normal', is
           </div>
         </div>
         <div className="flex">
-          <SpeakerIconList speakers={session.speakers} />
+          {/* <SpeakerIconList speakers={session.speakers} /> */}
         </div>
       </div>
     </div>

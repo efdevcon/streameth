@@ -35,7 +35,7 @@ export default function SessionComponent(props: Props) {
               <h2 className={styles.header__title}>{props.session.name}</h2>
             </div>
             <div className={styles.textBox}>
-              <p>{props.session.abstract}</p>
+              <p>{props.session.description}</p>
             </div>
             <div className={styles.details}>
               <DateDetail start={props.session.start} end={props.session.end} />
@@ -47,9 +47,9 @@ export default function SessionComponent(props: Props) {
               <h2 className={styles.header__speakerTitle}>Speakers:</h2>
             </div>
 
-            {props.session.speakers.map((speaker) => (
+            {/* {props.session.speakers.map((speaker) => (
               <SpeakerBox key={speaker.id} speaker={speaker} />
-            ))}
+            ))} */}
           </div>
         </div>
       </SessionContainer>

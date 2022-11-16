@@ -22,11 +22,11 @@ export interface Event {
 export interface Session {
   id: string
   name: string
-  abstract?: string
-  description?: string
-  track?: string
-  type?: string
-  stage?: string
+  //abstract?: string
+  description: string
+  //track?: string
+  //type?: string
+  stage: string
   start: number
   end: number
   speakers: Speaker[]
@@ -38,7 +38,6 @@ export interface Speaker {
   name: string
   description: string
   avatarUrl?: string
-  sessions: Session[]
 }
 
 export interface streamItem {
