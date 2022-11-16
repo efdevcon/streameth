@@ -8,9 +8,7 @@
 
 .container__stage {
   height: calc(100vh - 4rem);
-  overflow: hidden;
   @media screen and (min-width: 1240px) {
     height: calc(100vh - 5rem);
   }
-    
 }

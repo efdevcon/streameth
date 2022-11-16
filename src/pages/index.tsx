@@ -1,49 +1,35 @@
 import { GetStaticProps } from 'next'
-import { GetEvent } from 'services/event'
+import { EventController } from 'services/event'
+import { SessionController } from 'services/session'
 import { Event, Session, Stage } from 'types'
-import Page from 'layouts/event-page'
+import Page from 'layouts/sessions-page'
 import ScheduleComponent from 'components/Schedule/ScheduleComponent'
-import moment from 'moment'
 import { SEO } from 'components/seo'
 
 interface Props {
-  event?: Event
-  sessions: Session[]
-  stages: Stage['name'][]
-  days: string[]
+  event?: Event 
+  sessions: Session[] | null
 }
 
 export default function Schedule(props: Props) {
 
   return (
-    <Page event={props.event}>
+    <Page event={props.event} sessions={props.sessions}>
       <SEO title='Schedule' />
-      <ScheduleComponent sessions={props.sessions} stages={props.stages} days={props.days} />
+      <ScheduleComponent />
     </Page>
   )
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const event = await GetEvent()
-  const stages = event?.stream.stages.map((i) => i.name) || []
-  // get all different days in the sessions
-  const days = event?.schedule.sessions.reduce((acc, session) => {
-    const day = moment(session.start).format('MMM DD')
-    if (!acc.includes(day)) {
-      acc.push(day)
-    }
 
-    return acc
-  }, [] as string[]) || []
-  const sessions = event?.schedule.sessions || []
-
+  const event = await EventController.getEvent()
+  const sessions = await SessionController.getSessions()
 
   return {
     props: {
       event,
       sessions,
-      stages,
-      days,
     },
   }
 }

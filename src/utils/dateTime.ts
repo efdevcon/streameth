@@ -17,3 +17,7 @@ export const currentTimeInUTC = () => {
 export const localizedMoment = (value: number): Moment => {
   return moment(value).tz(EVENT_TIMEZONE).subtract(2, 'hours') // TODO: Fix properly based on user
 }
+
+export const getDate = (value: number): string => {
+  return localizedMoment(value).format('ddd, MMM D')
+}

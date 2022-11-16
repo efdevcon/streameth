@@ -65,3 +65,15 @@ export interface Video {
   type: VideoTypes
   url: string
 }
+
+export interface Filter {
+  type: 'stage' | 'day' | 'track' | 'recording' | 'speaker' 
+  value: any
+}
+
+export interface PossibleFilter {
+  type: Filter['type']
+  value: any[]
+}
+
+export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'

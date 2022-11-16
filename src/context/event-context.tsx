@@ -3,7 +3,7 @@ import { Event, Stage, Session } from 'types'
 
 interface ContextType {
   event: Event
-  activeStage: Stage
+  activeStage?: Stage
   sessions: Session[]
 }
 

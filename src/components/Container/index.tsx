@@ -13,6 +13,6 @@ export function SessionContainer({ children }: Props) {
   return <div className={styles.container__session}>{children}</div>
 }
 
-export function StageContainer({ children }: Props) {
+export function PageContainer({ children }: Props) {
   return <div className={styles.container__stage}>{children}</div>
 }

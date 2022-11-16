@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
-import { useEvent } from 'hooks/useEvent'
 import { useStage } from 'hooks/useStage'
 import useLivestream from 'hooks/useLivestream'
-import { StageContainer } from 'components/Container'
-import EventHeader from './Event/Header'
+import { PageContainer } from 'components/Container'
 import SessionInfoBox from './Session/Infobox'
 import styles from './EventComponent.module.scss'
 import StageSelector from 'components/Stage/Selector'
@@ -53,7 +51,7 @@ export function EventComponent() {
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
         {modalContent()}
       </Modal>
-      <StageContainer>
+      <PageContainer>
         <div className="flex flex-col xl:flex-row h-full">
           {/* <div className={styles.header}>
             <EventHeader title={currentSession.name} showLive={!!activeSource} />
@@ -82,7 +80,7 @@ export function EventComponent() {
             </div>
           </div>
         </div>
-      </StageContainer>
+      </PageContainer>
     </div>
   )
 }

@@ -32,10 +32,10 @@ export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }
         <ShareIcon className={css.box__shareIcon} onClick={onShareClick} />
       
       </div>
-      <div className={css.speakers}>
+      {/* <div className={css.speakers}>
         <div className={css.speakers__title}>Speakers:</div>
         <SpeakerIconList speakers={currentSession.speakers} onSpeakerClick={onSpeakerClick} />
-      </div>
+      </div> */}
     </div>
   )
 }
