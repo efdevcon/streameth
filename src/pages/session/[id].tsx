@@ -1,15 +1,13 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { GetEvent } from 'services/event'
-import { Event, Session } from 'types'
-import Page from 'layouts/event-page'
+import { EventController } from 'services/event'
+import { SessionController } from 'services/session'
+import { Session } from 'types'
 import { ParsedUrlQuery } from 'querystring'
 
 import SessionComponent from 'components/Session/SessionComponent'
 import { SEO } from 'components/seo'
 interface Props {
-  event?: Event
-  session?: Session
-  sessionId?: string
+  session: Session
 }
 
 interface Params extends ParsedUrlQuery {
@@ -17,21 +15,19 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function Stage(props: Props) {
-  if (!props.session) return <></>
 
   return (
-    <Page event={props.event}>
+    <>
       <SEO title={props.session.name} />
       <SessionComponent session={props.session} />
-    </Page>
+    </>
   )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const event = await GetEvent()
-
+  const sessions = await SessionController.getSessions()
   return {
-    paths: event ? event.schedule.sessions.map((i) => ({ params: { id: i.id } })) : [],
+    paths: sessions ? sessions.map((session) => ({ params: { id: session.id } })) : [],
     fallback: false,
   }
 }
@@ -40,14 +36,14 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   const sessionId = context.params?.id
   if (!sessionId) return { props: null, notFound: true }
 
-  const event = await GetEvent()
-  const session = event?.archive.sessions.find((i) => i.id === sessionId)
+  const event = await EventController.getEvent()
+  const session = await SessionController.getSession(sessionId)
+
+  if (!session) return { props: null, notFound: true }
 
   return {
     props: {
-      event,
       session,
-      sessionId,
     },
   }
 }

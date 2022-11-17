@@ -6,9 +6,40 @@
   }
 
   &.active {
-    @apply border-2;
-    border-image: linear-gradient(to bottom right, #b827fc 0%, #fec837 75%, #fd1892 100%);
-    border-image-slice: 1;
+    @apply border-0;
+    --border-radius: .5rem;
+    --border-size: .2rem;
+    --border-bg: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+    --padding: 1rem;
+    
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      display: block;
+      background: var(--border-bg);
+      width: calc(100% * 1.41421356237);
+      padding-bottom: calc(100% * 1.41421356237);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      z-index: -2;
+      animation: spin 10s linear infinite;
+    }
+    &--reverse::before{
+      animation-direction: reverse;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      inset: var(--border-size);
+      background: white;
+      z-index: -1;
+      border-radius: calc(var(--border-radius) - var(--border-size));
+    }
   }
 }
 
@@ -46,4 +77,57 @@
 
 .container:hover {
   @apply shadow-lg;
+}
+
+
+@keyframes spin {
+  from {transform: translate(-50%, -50%) rotate(0);}
+  to   {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+.rotating-border--rainbow {
+  --border-radius: 1.5rem;
+  --border-size: 0.5rem;
+  --border-bg: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+} 
+
+
+.rotating-border {
+  --border-radius: 1rem;
+  --border-size: 0.5rem;
+  --border-bg: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  --padding: 1rem;
+  
+  position: relative;
+  overflow: hidden;
+  font-size: 2rem;
+  padding: calc(var(--padding) + var(--border-size));
+  border-radius: var(--border-radius);
+  display: inline-block;
+  
+  &::before {
+    content: '';
+    display: block;
+    background: var(--border-bg);
+    width: calc(100% * 1.41421356237);
+    padding-bottom: calc(100% * 1.41421356237);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    z-index: -2;
+    animation: spin 5s linear infinite;
+  }
+  &--reverse::before{
+    animation-direction: reverse;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    inset: var(--border-size);
+    background: white;
+    z-index: -1;
+    border-radius: calc(var(--border-radius) - var(--border-size));
+  }
 }

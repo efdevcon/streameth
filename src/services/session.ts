@@ -29,4 +29,13 @@ export class SessionController {
 
     return null
 }
+
+  static async getSession(id: string): Promise<Session | undefined> {
+    const sessions = await this.getSessions()
+    if (!sessions) {
+      return undefined
+    }
+    sessions.find((session) => session.id === id)
+  }
+
 }

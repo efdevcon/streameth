@@ -1,5 +1,5 @@
 import { Session } from 'types'
-import type { TimeState } from 'hooks/useSessions'
+import type { TimeState } from 'types'
 import type { SessionStatus } from '../Snack'
 import Scroll, { Element } from 'react-scroll'
 import SessionSnack from '../Snack'

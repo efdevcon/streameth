@@ -9,5 +9,9 @@ export function useStage(): Stage {
     throw new Error('useStage must be used within an EventContextProvider')
   }
 
+  if (!context.activeStage) {
+    throw new Error('No stage found')
+  }
+
   return context.activeStage
 }

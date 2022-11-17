@@ -4,7 +4,7 @@ import { Event, Stage, Session } from 'types'
 interface ContextType {
   event: Event
   activeStage?: Stage
-  sessions: Session[]
+  sessions?: Session[]
 }
 
 interface Props extends ContextType {

@@ -12,6 +12,10 @@ export function useSessions(initFilters: Filter[] = []) {
     throw new Error('useStage must be used within an EventContextProvider')
   }
 
+  if (!context.sessions) {
+    throw new Error('No sessions found')
+  }
+
   const allSessions = context.sessions
   const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])

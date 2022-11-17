@@ -56,7 +56,7 @@ export function EventComponent() {
           {/* <div className={styles.header}>
             <EventHeader title={currentSession.name} showLive={!!activeSource} />
           </div> */}
-          <div className=" bg-black flex flex-col w-full h-xl:h-full xl:w-4/5">
+          <div className="flex flex-col w-full h-xl:h-full xl:w-4/5">
             <div className="w-full xl:h-full relative h-[300px] lg:h-[500px]">
               <Player source={activeSource} onStreamError={onStreamError} />
             </div>
@@ -75,7 +75,7 @@ export function EventComponent() {
             <div className="flex w-full py-4">
               <StageSelector />
             </div>
-            <div className="flex flex-col w-full overflow-y-scroll">
+            <div className="flex flex-col w-full overflow-y-auto">
               <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={!!activeSource} />
             </div>
           </div>
