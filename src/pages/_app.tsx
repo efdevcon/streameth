@@ -4,8 +4,9 @@ import { LayoutPageType, DefaultLayout } from 'layouts'
 import { SEO } from 'components/seo'
 import type { AppProps } from 'next/app'
 import init from '@socialgouv/matomo-next'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import Script from 'next/script'
+import { LivepeerConfig, createReactClient, studioProvider } from '@livepeer/react'
 
 type AppLayoutProps = AppProps & {
   Component: LayoutPageType
@@ -24,13 +25,25 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
     }
   }, [pageProps.event])
 
+  const livepeerClient = useMemo(
+    () =>
+      createReactClient({
+        provider: studioProvider({
+          apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY,
+        }),
+      }),
+    []
+  )
+
   return (
     <>
       <Script src="/theme.js" />
-      <Layout>
-        <SEO />
-        <Component {...pageProps} />
-      </Layout>
+      <LivepeerConfig dehydratedState={pageProps?.dehydratedState} client={livepeerClient}>
+        <Layout>
+          <SEO />
+          <Component {...pageProps} />
+        </Layout>
+      </LivepeerConfig>
     </>
   )
 }

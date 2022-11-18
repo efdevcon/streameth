@@ -28,7 +28,7 @@ export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }
       <div className="py-2 flex justify-between items-center dark:text-gray-400">
         <p className="text-xl font-medium">{`${stage.name} stage: ${currentSession.name}`}</p>
         <span className=" p-1 cursor-pointer text-gray-600 border-2 rounded-lg ml-auto dark:text-gray-300">embed</span>
-        <ShareIcon className="h-8 w-8 cursor-pointer text-gray-600 ml-3 mr-3 dark:text-gray-300" onClick={onShareClick} />
+        <ShareIcon className="h-8 w-8 cursor-pointer text-gray-600 ml-3 dark:text-gray-300" onClick={onShareClick} />
       
       </div>
       {/* <div className={css.speakers}>

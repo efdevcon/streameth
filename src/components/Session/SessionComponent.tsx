@@ -7,7 +7,7 @@ import Image from 'next/image'
 import sessionHeader from 'assets/images/session-header.png'
 import styles from './SessionComponent.module.scss'
 import { DateDetail, StageDetail } from 'components/Session/SessionDetails'
-import Player from 'components/Player'
+import Player from 'components/Player/old'
 interface Props {
   session: Session
 }
@@ -28,9 +28,7 @@ export default function SessionComponent(props: Props) {
       <SessionContainer>
         <div className={styles.grid}>
           <div className={styles.grid__column__full}>
-            {props.session.video?.type === 'youtube' && props.session.video?.url && (
-                <Player source={source} onStreamError={() => {}} />
-            )}
+            {props.session.video?.type === 'youtube' && props.session.video?.url && <Player source={source} onStreamError={() => {}} />}
             <div className={styles.header}>
               <h2 className={styles.header__title}>{props.session.name}</h2>
             </div>

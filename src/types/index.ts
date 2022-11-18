@@ -46,23 +46,22 @@ export interface streamItem {
   isActive: boolean
 }
 
-export interface streamId {
+export interface StreamId {
   id: string
 }
 
 export interface Stage {
   id: string
   name: string
-  stream: streamId[]
+  stream: StreamId[]
   image?: string
 }
 
 export type VideoTypes = 'youtube' | 'ipfs' | 'livepeer'
 export interface Video {
-  id: string
-  slug: string
+  id?: string
+  src?: string
   type: VideoTypes
-  url: string
 }
 
 export interface Filter {

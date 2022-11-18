@@ -17,7 +17,6 @@ export class StageController {
     return filesInProjects.map((file) => {
       const filename = file.slice(0, file.indexOf('.'))
       const data = matter(fs.readFileSync(`${cmsContentPath}/${filename}.md`, 'utf8'))
-      console.log(data)
       return {
         id: filename,
         name: data.data.name,

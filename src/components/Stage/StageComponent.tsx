@@ -1,19 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useStage } from 'hooks/useStage'
-import useLivestream from 'hooks/useLivestream'
-import { PageContainer } from 'components/Container'
-import SessionInfoBox from './Session/Infobox'
-import styles from './EventComponent.module.scss'
-import StageSelector from 'components/Stage/Selector'
-import Player from './Player'
 import { useSessions } from 'hooks/useSessions'
-import Modal from './Modal'
-import { ShareBox } from './Share/Box'
+import StreamethPlayer from 'components/Player'
+import { PageContainer } from 'components/Container'
+import SessionInfoBox from 'components/Session/Infobox'
+import StageSelector from 'components/Stage/Selector'
+import SpeakerModalBox from 'components/Speaker/ModalBox'
+import SessionList from 'components/Session/List'
+import Modal from '../Modal'
+import { ShareBox } from '../Share/Box'
 import { Speaker } from 'types'
-import SpeakerModalBox from './Speaker/ModalBox'
-import SessionList from './Session/List'
 
-export function EventComponent() {
+export function StageComponent() {
   const currentStage = useStage()
   const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions()
   const [modalOpen, setModalOpen] = useState(false)
@@ -26,8 +24,6 @@ export function EventComponent() {
       { type: 'day', value: eventDayNum },
     ])
   }, [currentStage, eventDayNum, setFilters])
-
-  const { activeSource, onStreamError } = useLivestream(currentStage?.stream.map((i) => i.id) ?? [])
 
   // Modal probably needs to be global context
   const openModal = (type: 'share' | 'speaker', speaker?: Speaker) => {
@@ -42,7 +38,6 @@ export function EventComponent() {
     } else if (modalContentType === 'speaker') {
       return <SpeakerModalBox speaker={speaker} />
     }
-
     return null
   }
 
@@ -53,15 +48,10 @@ export function EventComponent() {
       </Modal>
       <PageContainer>
         <div className="flex flex-col xl:flex-row h-full">
-          {/* <div className={styles.header}>
-            <EventHeader title={currentSession.name} showLive={!!activeSource} />
-          </div> */}
           <div className="flex flex-col w-full h-xl:h-full xl:w-4/5">
-            <div className="w-full xl:h-full relative h-[300px] lg:h-[500px]">
-              <Player source={activeSource} onStreamError={onStreamError} />
-            </div>
+              <StreamethPlayer stage={currentStage}  />
             <div className="mt-auto">
-              <div className={styles.eventInfo}>
+              <div>
                 <SessionInfoBox
                   session={currentSession}
                   onShareClick={() => openModal('share')}
@@ -76,7 +66,7 @@ export function EventComponent() {
               <StageSelector />
             </div>
             <div className="flex flex-col w-full overflow-y-auto">
-              <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={!!activeSource} />
+              <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={false} />
             </div>
           </div>
         </div>

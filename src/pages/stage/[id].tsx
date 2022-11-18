@@ -1,12 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { Event, Stage, Session } from 'types'
 import Page from 'layouts/event-page'
-import { EventComponent } from 'components/EventComponent'
+import { StageComponent } from 'components/Stage/StageComponent'
 import { ParsedUrlQuery } from 'querystring'
 import { SEO } from 'components/seo'
-import {StageController} from 'services/stage'
-import {EventController} from 'services/event'
-import {SessionController} from 'services/session'
+import { StageController } from 'services/stage'
+import { EventController } from 'services/event'
+import { SessionController } from 'services/session'
 interface Props {
   event?: Event
   stage: Stage | null
@@ -23,7 +23,7 @@ export default function StagePage(props: Props) {
   return (
     <Page event={event} sessions={sessions} stage={stage}>
       {stage && <SEO title={stage.name} />}
-      <EventComponent />
+      <StageComponent />
     </Page>
   )
 }

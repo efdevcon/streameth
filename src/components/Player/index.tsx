@@ -1,40 +1,80 @@
-import Image from 'next/image'
-import VideoJS from './VideoJS'
-import { PlayerProps } from './types'
-import defaultPoster from 'assets/images/default.png'
+import { Player, useStream, useStreamSessions, useStreamSession, StreamSession, Stream } from '@livepeer/react'
+import { Stage } from 'types'
+import { useState, useEffect } from 'react'
+export interface Props {
+  stage: Stage
+}
 
 const OfflinePlayer = () => {
   return (
-    <div className='bg-gray-800 flex flex-col items-center justify-center w-full h-full'>
-      <span className='round text-2xl font-bold text-gray-500'>Offline</span>
+    <div className="bg-gray-800 flex flex-col items-center justify-center w-full h-full">
+      <span className="round text-2xl font-bold text-gray-500">Offline</span>
     </div>
   )
 }
 
-const Player = ({ ...props }: PlayerProps) => {
-  if (!props.source) return <OfflinePlayer />
-  if (props.poster === undefined) props.poster = '/images/default.png'
-  if (props.playlist === undefined) props.playlist = null
-  // override src url for spain
-  const source = props.source
-  source.src = source.src.replace('cdn.livepeer.com', 'livepeercdn.com')
+const StreamethPlayer = ({ ...props }: Props) => {
+  const [currentPlaybackUrl, setCurrentPlaybackUrl] = useState<string | null>(null)
+  const [currentStreamSession, setCurrentStreamSession] = useState<StreamSession['id']>('')
 
-  const handlePlayerReady = (player: any) => {
-    player.on('error', (e: any) => {
-      console.log('error', e)
-      props.onStreamError()
-    })
+  const { data: stream } = useStream({
+    streamId: props.stage.stream[0].id,
+    refetchInterval: (stream) => 5000,
+  })
+  const { data: sessions } = useStreamSessions(props.stage.stream[0].id)
+  const { data: session } = useStreamSession(currentStreamSession)
 
-    player.on('waiting', () => {
-      console.log('player is waiting')
-      const currentPlaylist = player.tech().vhs.playlists.media()
-      if (currentPlaylist?.custom?.livepeerError) {
-        player.error({ code: '4' })
-      }
-    })
-  }
+  useEffect(() => {
+    if (sessions && sessions?.length > 0) {
+      const allReadySessions = sessions.filter((s) => s.recordingStatus === 'ready')
+      // find latest session
+      const latestSession = allReadySessions.reduce((prev, current) => (prev.createdAt > current.createdAt ? prev : current))
 
-  return <VideoJS source={props.source} poster={props.poster} onReady={handlePlayerReady} playlist={props.playlist} />
+      setCurrentStreamSession(latestSession.id)
+    }
+  }, [sessions])
+
+  useEffect(() => {
+    console.log('stream', stream)
+    if (stream && stream.isActive) {
+      setCurrentPlaybackUrl(stream.playbackUrl)
+    } else if (session && session.recordingUrl && session.recordingStatus === 'ready') {
+      setCurrentPlaybackUrl(session.recordingUrl)
+    }
+  }, [session, stream])
+
+  if (!currentPlaybackUrl) return <OfflinePlayer />
+
+  return (
+    <Player
+      title={props.stage.name}
+      src={currentPlaybackUrl}
+      showTitle={false}
+      showPipButton={false}
+      autoPlay
+      theme={{
+        borderStyles: {
+          containerBorderStyle: 'hidden',
+        },
+        colors: {
+          accent: '#00a55f',
+        },
+        shadows: {
+          containerShadow: 'none',
+          containerShadowHover: 'none',
+        },
+        space: {
+          controlsBottomMarginX: '10px',
+          controlsBottomMarginY: '5px',
+          controlsTopMarginX: '15px',
+          controlsTopMarginY: '10px',
+        },
+        radii: {
+          containerBorderRadius: '0px',
+        },
+      }}
+    />
+  )
 }
 
-export default Player
+export default StreamethPlayer
