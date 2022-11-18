@@ -4,15 +4,6 @@ const nextConfig = {
   staticPageGenerationTimeout: 180,
   workerThreads: false,
   cpus: 1,
-  async redirects() {
-    return [
-      {
-        source: '/schedule',
-        destination: '/',
-        permanent: true,
-      },
-    ]
-  },
   webpack(config) {
     const rules = config.module.rules.find((r) => !!r.oneOf)
 
