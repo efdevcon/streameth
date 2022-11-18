@@ -11,9 +11,10 @@ interface Props {
   session: Session
   onShareClick: () => void
   onSpeakerClick: (speaker: Speaker) => void
+  onEmbedClick: () => void
 }
 
-export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }: Props) {
+export default function SessionInfoBox({ session, onShareClick, onSpeakerClick, onEmbedClick }: Props) {
   const stage = useStage()
   const sessions = useSessions()
   const currentSession = session
@@ -27,9 +28,10 @@ export default function SessionInfoBox({ session, onShareClick, onSpeakerClick }
       </div> */}
       <div className="py-2 flex justify-between items-center dark:text-gray-400">
         <p className="text-xl font-medium">{`${stage.name} stage: ${currentSession.name}`}</p>
-        <span className=" p-1 cursor-pointer text-gray-600 border-2 rounded-lg ml-auto dark:text-gray-300">embed</span>
+        <span className=" p-1 cursor-pointer text-gray-600 border-2 rounded-lg ml-auto dark:text-gray-300" onClick={onEmbedClick}>
+          embed
+        </span>
         <ShareIcon className="h-8 w-8 cursor-pointer text-gray-600 ml-3 dark:text-gray-300" onClick={onShareClick} />
-      
       </div>
       {/* <div className={css.speakers}>
         <div className={css.speakers__title}>Speakers:</div>

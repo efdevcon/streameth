@@ -39,7 +39,7 @@
   },
   "schedule": {
     "version": 2,
-    "type": "fs",
+    "type": "gsheet",
     "config": {
       "sheetId": "14BI4ogkBn1ISuu3TetXSKRszYNsdzQwppgH-uOghdfU"
     }

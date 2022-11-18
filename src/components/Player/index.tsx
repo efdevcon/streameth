@@ -1,4 +1,4 @@
-import { Player, useStream, useStreamSessions, useStreamSession, StreamSession, Stream } from '@livepeer/react'
+import { Player, useStream, useStreamSessions, useStreamSession, StreamSession } from '@livepeer/react'
 import { Stage } from 'types'
 import { useState, useEffect } from 'react'
 export interface Props {

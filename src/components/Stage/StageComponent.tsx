@@ -10,7 +10,7 @@ import SessionList from 'components/Session/List'
 import Modal from '../Modal'
 import { ShareBox } from '../Share/Box'
 import { Speaker } from 'types'
-
+import Embed from 'components/Embed'
 export function StageComponent() {
   const currentStage = useStage()
   const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions()
@@ -26,7 +26,7 @@ export function StageComponent() {
   }, [currentStage, eventDayNum, setFilters])
 
   // Modal probably needs to be global context
-  const openModal = (type: 'share' | 'speaker', speaker?: Speaker) => {
+  const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {
     setModalContentType(type)
     setSpeaker(speaker)
     setModalOpen(true)
@@ -37,6 +37,8 @@ export function StageComponent() {
       return <ShareBox title={currentSession.name} />
     } else if (modalContentType === 'speaker') {
       return <SpeakerModalBox speaker={speaker} />
+    } else if (modalContentType === 'embed') {
+      return <Embed stageName={currentStage.name} />
     }
     return null
   }
@@ -47,15 +49,16 @@ export function StageComponent() {
         {modalContent()}
       </Modal>
       <PageContainer>
-        <div className="flex flex-col xl:flex-row h-full">
+        <div className="flex flex-col xl:flex-row h-full overflow-hidden">
           <div className="flex flex-col w-full h-xl:h-full xl:w-4/5">
-              <StreamethPlayer stage={currentStage}  />
+            <StreamethPlayer stage={currentStage} />
             <div className="mt-auto">
               <div>
                 <SessionInfoBox
                   session={currentSession}
                   onShareClick={() => openModal('share')}
                   onSpeakerClick={(speaker) => openModal('speaker', speaker)}
+                  onEmbedClick={() => openModal('embed')}
                 />
               </div>
             </div>

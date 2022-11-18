@@ -3,7 +3,7 @@ import { EventController } from 'services/event'
 import { SessionController } from 'services/session'
 import { Session } from 'types'
 import { ParsedUrlQuery } from 'querystring'
-
+import Page from 'layouts/event-page'
 import SessionComponent from 'components/Session/SessionComponent'
 import { SEO } from 'components/seo'
 interface Props {
@@ -36,9 +36,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   const sessionId = context.params?.id
   if (!sessionId) return { props: null, notFound: true }
 
-  const event = await EventController.getEvent()
   const session = await SessionController.getSession(sessionId)
-
   if (!session) return { props: null, notFound: true }
 
   return {

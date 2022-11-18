@@ -1,6 +1,7 @@
 import { EventController } from 'services/event'
 import { ScheduleTypes, Schedule } from 'types/config'
 import { Session } from 'types'
+import { convertCompilerOptionsFromJson } from 'typescript'
 
 
 export class SessionController {
@@ -35,7 +36,7 @@ export class SessionController {
     if (!sessions) {
       return undefined
     }
-    sessions.find((session) => session.id === id)
+    return sessions.find((session) => session.id === id)
   }
 
 }

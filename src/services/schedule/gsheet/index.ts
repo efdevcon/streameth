@@ -82,9 +82,9 @@ export async function GetSchedule(config: Config): Promise<Session[]> {
         if (i[17]) {
             session.video = {
                 id: GetYouTubeVideoIdFromUrl(i[17].trim()) ?? '',
-                slug: GetYouTubeVideoIdFromUrl(i[17].trim()) ?? '',
+                //slug: GetYouTubeVideoIdFromUrl(i[17].trim()) ?? '',
                 type: 'youtube',
-                url: i[17].trim()
+                src: i[17].trim()
             }
         }
 
