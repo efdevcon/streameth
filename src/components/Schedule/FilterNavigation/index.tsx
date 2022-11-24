@@ -27,7 +27,7 @@ function FilterNavigationItem({
         {value?.map((item, index) => (
           <div
             key={index}
-            className={`cursor-pointer p-1 m-1 border-2 rounded text-xs font-light dark:text-gray-200 ${isSelected(item) && 'bg-gray-200 dark:bg-gray-800'}`}
+            className={`cursor-pointer p-1 m-1 border-2 rounded text-sm font-light dark:text-gray-200 ${isSelected(item) && 'bg-gray-200 dark:bg-gray-800'}`}
             onClick={() => onItemSelect({ type, value: item })}>
             {type === "day" ? getDate(item) : item}
           </div>

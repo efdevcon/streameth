@@ -1,10 +1,7 @@
 import React from 'react'
-import { SessionContainer } from 'components/Container'
+import { PageContainer } from 'components/Container'
 import SpeakerBox from './SpeakerBox'
 import { Session } from 'types'
-import Image from 'next/image'
-import sessionHeader from 'assets/images/session-header.png'
-import styles from './SessionComponent.module.scss'
 import { DateDetail, StageDetail } from 'components/Session/SessionDetails'
 import { Player } from '@livepeer/react'
 interface Props {
@@ -12,38 +9,60 @@ interface Props {
 }
 
 export default function SessionComponent(props: Props) {
-  console.log(props.session)
   return (
-    <>
-      <div className={styles.header__image}>
-        <Image src={sessionHeader} alt="sessionHeader" layout="responsive" />
-      </div>
-      <SessionContainer>
-        <div className={styles.grid}>
-          <div className={styles.grid__column__full}>
-            <Player src={props.session.video?.src} />
-            <div className={styles.header}>
-              <h2 className={styles.header__title}>{props.session.name}</h2>
-            </div>
-            <div className={styles.textBox}>
-              <p>{props.session.description}</p>
-            </div>
-            <div className={styles.details}>
+    <PageContainer>
+      <div className="flex flex-col lg:flex-row h-full">
+        <div className="flex flex-col bg-black w-full h-full">
+          <div className="m-auto">
+            <Player
+              src={props.session.video?.src}
+              autoPlay
+              objectFit='cover'
+              aspectRatio='16to9'
+              theme={{
+                borderStyles: {
+                  containerBorderStyle: 'hidden',
+                },
+                colors: {
+                  accent: '#00a55f',
+                },
+                shadows: {
+                  containerShadow: 'none',
+                  containerShadowHover: 'none',
+                },
+                space: {
+                  controlsBottomMarginX: '10px',
+                  controlsBottomMarginY: '5px',
+                  controlsTopMarginX: '15px',
+                  controlsTopMarginY: '10px',
+                },
+                radii: {
+                  containerBorderRadius: '0px',
+                },
+              }}
+            />
+          </div>
+        </div>
+        <div className="flex flex-col w-full lg:w-2/5 px-5">
+          <div className=" my-5 lg:mb-2">
+            <h2 className="font-bold text-xl lg:text-3xl dark:text-white mb-3">{props.session.name}</h2>
+            <div className="flex flex-row space-x-4 my-2">
               <DateDetail start={props.session.start} end={props.session.end} />
               <StageDetail stage={props.session.stage} />
             </div>
           </div>
-          <div className={styles.grid__column__third}>
-            <div className={styles.header}>
-              <h2 className={styles.header__speakerTitle}>Speakers:</h2>
-            </div>
 
-            {/* {props.session.speakers.map((speaker) => (
-              <SpeakerBox key={speaker.id} speaker={speaker} />
-            ))} */}
+          <div className="dark:text-gray-300">
+            <p>{props.session.description}</p>
           </div>
+          <div className="flex items-center justify-between my-5 lg:mb-2">
+            <h2 className="font-bold text-lg lg:text-3xl dark:text-gray-300">Speakers:</h2>
+          </div>
+          {props.session.speakers.map((speaker) => (
+              <SpeakerBox key={speaker.id} speaker={speaker} />
+            ))}
         </div>
-      </SessionContainer>
-    </>
+      </div>
+    </PageContainer>
   )
 }

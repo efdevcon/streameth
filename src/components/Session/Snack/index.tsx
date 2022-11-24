@@ -21,6 +21,8 @@ const formatDateTime = (start: number, end: number) => {
 }
 
 export default function SessionSnack({ session, learnMore, status = 'normal', isLive = false, hasRecording = false }: Props) {
+
+  console.log(session.id)
   const component = (
     <div className={`rotating-border ${css.container} ${css[status]} ${learnMore ? css['link'] : ''}`}>
       <div className={css.header}>
@@ -47,7 +49,7 @@ export default function SessionSnack({ session, learnMore, status = 'normal', is
           </div>
         </div>
         <div className="flex">
-          {/* <SpeakerIconList speakers={session.speakers} /> */}
+          <SpeakerIconList speakers={session.speakers} />
         </div>
       </div>
     </div>

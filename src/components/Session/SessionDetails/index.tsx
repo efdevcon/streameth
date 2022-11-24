@@ -10,7 +10,7 @@ export function DateDetail({ start, end }: { start: Session['start']; end: Sessi
   return (
     <div className="flex items-center">
       <Calendar />
-      <div className="ml-2 text-gray-500 text-base">
+      <div className="ml-2 text-gray-500 text-sm">
         {localizedMoment(start).format('MMM DD / HH:mm')} - {localizedMoment(end).format('HH:mm')}
       </div>
     </div>
@@ -29,7 +29,7 @@ export function StageDetail({ stage }: { stage: Session["stage"] }) {
   return (
     <div className="flex items-center">
       <Camera />
-      <div className="ml-2 text-gray-500 text-base">
+      <div className="ml-2 text-gray-500 text-sm">
         {stage}</div>
     </div>
   )

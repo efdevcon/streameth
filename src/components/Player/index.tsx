@@ -7,7 +7,7 @@ export interface Props {
 
 const OfflinePlayer = () => {
   return (
-    <div className="bg-gray-800 flex flex-col items-center justify-center w-full h-full">
+    <div className="bg-gray-800 flex flex-col items-center justify-center w-full h-44 lg:h-full">
       <span className="round text-2xl font-bold text-gray-500">Offline</span>
     </div>
   )
@@ -35,7 +35,6 @@ const StreamethPlayer = ({ ...props }: Props) => {
   }, [sessions])
 
   useEffect(() => {
-    console.log('stream', stream)
     if (stream && stream.isActive) {
       setCurrentPlaybackUrl(stream.playbackUrl)
     } else if (session && session.recordingUrl && session.recordingStatus === 'ready') {
