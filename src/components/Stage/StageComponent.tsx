@@ -64,10 +64,10 @@ export function StageComponent() {
             </div>
           </div>
           <div className="xl:w-1/5 p-3 xl:p-5 box-border flex flex-col overflow-auto">
-            <h3 className="text-2xl font-bold dark:text-white flex">Schedule</h3>
-            <div className="flex w-full py-4">
+            <h3 className="text-2xl font-bold dark:text-white flex mb-3">Schedule</h3>
+            {/* <div className="flex w-full py-4">
               <StageSelector />
-            </div>
+            </div> */}
             <div className="flex flex-col w-full overflow-y-auto">
               <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={false} />
             </div>

@@ -10,7 +10,7 @@ export default function SessionComponent() {
   return (
     <PageContainer>
       <div>
-        <FilterNavigation possibleFilters={possibleFilters} onItemSelect={addOrUpdateFilter} selectedItems={filters} />
+        <FilterNavigation title={"Schedule"} possibleFilters={possibleFilters} onItemSelect={addOrUpdateFilter} selectedItems={filters} />
       </div>
       <div className="lg:w-3/4 h-full overflow-y-auto ml-auto">
         <Container>

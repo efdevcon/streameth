@@ -6,6 +6,7 @@ interface Props {
   possibleFilters: PossibleFilter[]
   onItemSelect: (filter: Filter) => void
   selectedItems: Filter[]
+  title?: string
 }
 
 function FilterNavigationItem({
@@ -54,11 +55,12 @@ export default function FilterNavigation(props: Props) {
   return (
     <>
       {isOpen ? (
-        <div className="overflow-auto w-full sm:w-2/4 lg:w-1/4 h-full fixed z-50 px-6 py-14 border-r-slate-200 sm:border-r-2 bg-white dark:bg-black">
+        <div className="overflow-auto w-full sm:w-2/4 lg:w-1/4 h-full fixed z-50 p-5 border-r-slate-200 sm:border-r-2 bg-white dark:bg-black">
           <div onClick={() => setIsOpen(false)} className="absolute p-5 right-0 top-0 lg:hidden text-2xl font-bold cursor-pointer">
             x
           </div>
-          <div className="text-3xl lg:text-4xl xl:text-4xl dark:text-white">Filter</div>
+          {props.title && <div className="text-3xl lg:text-4xl xl:text-4xl dark:text-white">{props.title}</div>}
+
           <div>
             {props.possibleFilters.map((possibleFilter) => (
               <FilterNavigationItem
@@ -72,11 +74,12 @@ export default function FilterNavigation(props: Props) {
         </div>
       ) : (
         <div
-          className="flex h-16 bg-slate-200 rounded-r-lg px-2 cursor-pointer absolute items-center lg:hidden"
+          className="flex p-5 cursor-pointer items-center lg:hidden"
           onClick={() => {
             setIsOpen(true)
           }}>
-          <Calendar />
+          {props.title && <div className="text-3xl lg:text-4xl xl:text-4xl dark:text-white">{props.title}</div>}
+          <span className='ml-auto'>filter</span>
         </div>
       )}
     </>
