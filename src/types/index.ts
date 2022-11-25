@@ -1,4 +1,4 @@
-import { Stream, Schedule, Archive } from './config'
+import { Stream, DataConfig } from './config'
 
 // TODO: Might be good to keep track of event state at a higher level
 // TODO: Same for stage state. E.g. which rooms/stages have ended and should go to archive functions
@@ -14,9 +14,14 @@ export interface Event {
   end: string
   website: string
   imageUrl: string
-  stream: Stream
-  schedule: Schedule
-  archive: Archive
+  stages: Stage[]
+  data: DataConfig
+  // Sessions: Session[]
+  // Speakers: Speaker[]
+
+  // stream: Stream
+  // schedule: Schedule
+  // archive: Archive
 }
 
 export interface Session {

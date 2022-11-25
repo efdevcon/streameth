@@ -14,16 +14,15 @@ export interface Stream {
 }
 
 export type ScheduleTypes = 'fs' | 'pretalx' | 'gsheet'
-export interface Schedule {
-  version: number
+export interface DataConfig {
   type: ScheduleTypes
   config: Config
 }
 
-export type ArchiveTypes = 'gsheet'
-export interface Archive {
-  version: number
-  type: ArchiveTypes
-  config: Config
-  sessions: Session[]
-}
+  // export type ArchiveTypes = 'gsheet'
+  // export interface Archive {
+  //   version: number
+  //   type: ArchiveTypes
+  //   config: Config
+  //   sessions: Session[]
+  // }

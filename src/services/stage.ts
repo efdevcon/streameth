@@ -9,7 +9,7 @@ const cmsContentPath = './content/stages'
 export class StageController {
   static async getStagesFromConfig(): Promise<Stage[]> {
     const event = await EventController.getEvent()
-    return event.stream.stages
+    return event.stages
   }
 
   static async getStagesFromCms(): Promise<Stage[]> {

@@ -8,7 +8,7 @@ export default function StageSelect() {
   const event = useEvent()
   const stage = useStage()
 
-  if (event.stream.stages.length <= 1) return <></>
+  if (event.stages.length <= 1) return <></>
 
   return (
     <div className="h-full w-full">
@@ -22,7 +22,7 @@ export default function StageSelect() {
         defaultValue={stage.id}
         placeholder="Select Stage"
         onChange={(e) => router.push(`/stage/${e.target.value}`)}>
-        {event.stream.stages.map((stage) => {
+        {event.stages.map((stage) => {
           return (
             <option key={stage.id} value={stage.id}>
               {stage.name}
