@@ -5,34 +5,6 @@
   "end": "2022-09-18",
   "website": "https://ethberlin.ooo/",
   "poster": "/images/default.png",
-  "stages": [
-    {
-      "id": "Lexis",
-      "name": "Lexis",
-      "type": "livepeer",
-      "stream": [
-        {
-          "id": "67394e41-88f5-44b9-a685-ef82548a96eb"
-        },
-        {
-          "id": "c9bd87ae-1df5-4243-ae3b-21adca718587"
-        }
-      ]
-    },
-    {
-      "id": "CreatorsLab",
-      "name": "Creators Lab",
-      "type": "livepeer",
-      "stream": [
-        {
-          "id": "421b0316-de28-4c64-a895-071d7a3660a7"
-        },
-        {
-          "id": "a6bbfc79-dd2e-4c5f-b51d-12654a359537"
-        }
-      ]
-    }
-  ],
   "data": {
     "type": "cms"
   },
