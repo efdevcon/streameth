@@ -1,17 +1,15 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { Speaker, Stage, Session } from 'types'
+import { Stage, Session } from 'types'
 import { StageComponent } from 'components/Stage/StageComponent'
 import { ParsedUrlQuery } from 'querystring'
 import { SEO } from 'components/seo'
-import { StageController } from 'services/stage'
+import { GetStages, GetStageById } from 'services/stage'
 import { GetSessionsForStage } from 'services/sessions'
-import { GetSpeakers } from 'services/speakers'
 import { PageContextProvider } from 'context/page-context'
 
 interface Props {
   stage: Stage 
   sessions: Session[] 
-  speakers: Speaker[] 
 }
 
 interface Params extends ParsedUrlQuery {
@@ -19,10 +17,10 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function StagePage(props: Props) {
-  const { stage, speakers, sessions } = props
+  const { stage, sessions } = props
 
   return (
-    <PageContextProvider activeStage={stage} sessions={sessions} speakers={speakers}>
+    <PageContextProvider stage={stage} sessions={sessions}>
       {stage && <SEO title={stage.name} />}
       <StageComponent />
     </PageContextProvider>
@@ -30,8 +28,7 @@ export default function StagePage(props: Props) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const stages = await StageController.getStages()
-
+  const stages = await GetStages()
   return {
     paths: stages.map((stage) => ({ params: { id: stage.id } })),
     fallback: false,
@@ -41,17 +38,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
   const stageId = context.params?.id
   if (!stageId) return { props: null, notFound: true }
-  const stage = await StageController.getStage(stageId)
+  const stage = await GetStageById(stageId)
   if (!stage) return { props: null, notFound: true }
-
   const sessions = await GetSessionsForStage(stageId)
+  console.log(sessions)
 
-  const speakers = await GetSpeakers()
   return {
     props: {
       stage,
       sessions,
-      speakers,
     },
   }
 }

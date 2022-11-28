@@ -58,7 +58,7 @@ export function useSessions(initFilters: Filter[] = []) {
             case 'day':
               return startOfDay(session.start) === filter.value
             case 'stage':
-              return session.stage === filter.value
+              return session.stage.name === filter.value
             case 'recording':
               return filter.value === 'yes' ? !!session.video : !session.video
             case 'speaker':

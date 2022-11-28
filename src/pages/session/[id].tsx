@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { EventController } from 'services/event'
-import { SessionController } from 'services/sessions'
+import { GetSessions, GetSessionById } from 'services/sessions'
 import { Session } from 'types'
 import { ParsedUrlQuery } from 'querystring'
 import SessionComponent from 'components/Session/SessionComponent'
@@ -24,7 +23,7 @@ export default function Stage(props: Props) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const sessions = await SessionController.getSessions()
+  const sessions = await GetSessions()
   return {
     paths: sessions ? sessions.map((session) => ({ params: { id: session.id } })) : [],
     fallback: false,
@@ -35,7 +34,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   const sessionId = context.params?.id
   if (!sessionId) return { props: null, notFound: true }
 
-  const session = await SessionController.getSession(sessionId)
+  const session = await GetSessionById(sessionId)
   if (!session) return { props: null, notFound: true }
 
   return {

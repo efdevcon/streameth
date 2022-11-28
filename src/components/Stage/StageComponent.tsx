@@ -4,13 +4,15 @@ import { useSessions } from 'hooks/useSessions'
 import StreamethPlayer from 'components/Player'
 import { PageContainer } from 'components/Container'
 import SessionInfoBox from 'components/Session/Infobox'
-import StageSelector from 'components/Stage/Selector'
+//import StageSelector from 'components/Stage/Selector'
 import SpeakerModalBox from 'components/Speaker/ModalBox'
 import SessionList from 'components/Session/List'
 import Modal from '../Modal'
 import { ShareBox } from '../Share/Box'
 import { Speaker } from 'types'
 import Embed from 'components/Embed'
+
+
 export function StageComponent() {
   const currentStage = useStage()
   const { timeState, currentSession, eventDayNum, sessions, setFilters } = useSessions()
@@ -24,6 +26,7 @@ export function StageComponent() {
       { type: 'day', value: eventDayNum },
     ])
   }, [currentStage, eventDayNum, setFilters])
+
 
   // Modal probably needs to be global context
   const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {
@@ -51,7 +54,7 @@ export function StageComponent() {
       <PageContainer>
         <div className="flex flex-col xl:flex-row h-full overflow-hidden">
           <div className="flex flex-col w-full h-xl:h-full xl:w-4/5">
-            <StreamethPlayer stage={currentStage} />
+            <StreamethPlayer />
             <div className="mt-auto">
               <div>
                 <SessionInfoBox

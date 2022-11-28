@@ -6,15 +6,14 @@ import ScheduleComponent from 'components/Schedule/ScheduleComponent'
 import { SEO } from 'components/seo'
 import { PageContextProvider } from 'context/page-context'
 interface Props {
-  speakers: Speaker[] 
   sessions: Session[]
 }
 
 export default function Schedule(props: Props) {
-  const { speakers, sessions } = props
+  const { sessions } = props
 
   return (
-    <PageContextProvider speakers={speakers} sessions={sessions}>
+    <PageContextProvider sessions={sessions}>
       <SEO title='Schedule' />
       <ScheduleComponent />
     </PageContextProvider>
@@ -24,10 +23,8 @@ export default function Schedule(props: Props) {
 export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const sessions = await GetSessions()
-  const speakers = await GetSpeakers()
   return {
     props: {
-      speakers,
       sessions,
     },
   }
