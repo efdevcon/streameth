@@ -12,16 +12,12 @@ export async function GetStages(): Promise<Stage[]> {
 
   const { type, config } = event.data
 
-
-  try {
     const module: any = await import(`services/${type}/index`)
     const stages = await module.GetStages(config)
+    if (!stages || stages.length === 0) {
+      throw new Error('No stages found, please check configuration object')
+    }
     return stages
-  }
-  catch (e) {
-    console.error(e)
-    throw new Error('Unable to get stages data...')
-  }
 }
 
 export async function GetStageById(id: string): Promise<Stage | undefined > {
