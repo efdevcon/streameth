@@ -10,11 +10,11 @@ export default function EventCard(props: Props) {
   const { name, start, end, stage, speakers, id, video } = props.session
 
   return (
-    <div className={Style.box}>
+    <div className="flex flex-col p-5 my-5 border-[#757575] border-2 box-border w-full lg:max-w-md rounded-lg">
       <div className={Style.box__title}>{name}</div>
       <div className={Style.box__details}>
         <DateDetail start={start} end={end} />
-        <StageDetail stage={stage} />
+        <StageDetail stage={stage.name} />
       </div>
       <div className={Style.box__speakers}>
         {speakers.map((speaker) => (

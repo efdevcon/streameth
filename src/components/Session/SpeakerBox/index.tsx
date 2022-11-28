@@ -1,8 +1,6 @@
 import React from 'react'
 import { Speaker } from 'types'
-import styles from './SpeakerBox.module.scss'
 import SpeakerIcon from 'components/Speaker/Icon'
-import EthBerlinSpeakerIcon from 'components/Speaker/Icon/EthBerlin'
 import SpeakerModalBox from 'components/Speaker/ModalBox'
 import Modal from 'components/Modal'
 
@@ -22,11 +20,12 @@ export default function SpeakerBox(props: Props) {
           <SpeakerModalBox speaker={speaker} />
         </Modal>
       )}
-      <div className={styles.box} onClick={() => setIsOpen(true)}>
+      <div
+        className="flex flex-row items-center rounded bg-gray-200 p-4 box-border cursor-pointer mb-3 dark:bg-black dark:shadow-white dark:shadow"
+        onClick={() => setIsOpen(true)}>
         <SpeakerIcon speaker={speaker} />
-        {/* <EthBerlinSpeakerIcon speaker={speaker} /> */}
-        <div className={styles.box__text}>
-          <h3 className={styles.box__name}>{name}</h3>
+        <div>
+          <h3 className="font-normal text-lg ml-4 dark:text-gray-200">{name}</h3>
         </div>
       </div>
     </>

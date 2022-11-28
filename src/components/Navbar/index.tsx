@@ -9,8 +9,6 @@ import Container from 'components/Container'
 import { useRouter } from 'next/router'
 
 const pages = [
-  { name: 'Lexi Stage', href: '/stage/Lexis' },
-  { name: 'Creators Stage', href: '/stage/CreatorsLab' },
   { name: 'Schedule', href: '/schedule' }
 
 ]

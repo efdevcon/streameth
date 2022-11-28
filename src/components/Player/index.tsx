@@ -1,7 +1,11 @@
-import { Player, useStream, useStreamSessions, useStreamSession, StreamSession } from '@livepeer/react'
-import { Stage } from 'types'
+import { Player as LivepeerPlayer, useStream, useStreamSessions, useStreamSession, StreamSession } from '@livepeer/react'
 import { useState, useEffect } from 'react'
-import { useStage } from 'hooks/useStage'
+import { StreamId } from 'types/index'
+
+interface Props {
+  stream: StreamId[]
+}
+
 
 const OfflinePlayer = () => {
   return (
@@ -11,15 +15,15 @@ const OfflinePlayer = () => {
   )
 }
 
-const StreamethPlayer = () => {
+export const Player = ({...props}: Props) => {
+  
   const [currentPlaybackUrl, setCurrentPlaybackUrl] = useState<string | null>(null)
   const [currentStreamSession, setCurrentStreamSession] = useState<StreamSession['id']>('')
-  const stage = useStage()
   const { data: stream } = useStream({
-    streamId: stage.stream[0].id,
+    streamId: props.stream[0].id,
     refetchInterval: () => 5000,
   })
-  const { data: sessions } = useStreamSessions(stage.stream[0].id)
+  const { data: sessions } = useStreamSessions(props.stream[0].id)
   const { data: session } = useStreamSession(currentStreamSession)
 
   useEffect(() => {
@@ -43,7 +47,7 @@ const StreamethPlayer = () => {
   if (!currentPlaybackUrl) return <OfflinePlayer />
 
   return (
-    <Player
+    <LivepeerPlayer
       src={currentPlaybackUrl}
       showTitle={false}
       showPipButton={false}
@@ -72,5 +76,3 @@ const StreamethPlayer = () => {
     />
   )
 }
-
-export default StreamethPlayer

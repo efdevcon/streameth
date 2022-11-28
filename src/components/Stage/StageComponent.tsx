@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useStage } from 'hooks/useStage'
 import { useSessions } from 'hooks/useSessions'
-import StreamethPlayer from 'components/Player'
+import { Player } from 'components/Player'
 import { PageContainer } from 'components/Container'
 import SessionInfoBox from 'components/Session/Infobox'
 //import StageSelector from 'components/Stage/Selector'
@@ -11,7 +11,6 @@ import Modal from '../Modal'
 import { ShareBox } from '../Share/Box'
 import { Speaker } from 'types'
 import Embed from 'components/Embed'
-
 
 export function StageComponent() {
   const currentStage = useStage()
@@ -26,7 +25,6 @@ export function StageComponent() {
       { type: 'day', value: eventDayNum },
     ])
   }, [currentStage, eventDayNum, setFilters])
-
 
   // Modal probably needs to be global context
   const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {
@@ -54,7 +52,7 @@ export function StageComponent() {
       <PageContainer>
         <div className="flex flex-col xl:flex-row h-full overflow-hidden">
           <div className="flex flex-col w-full h-xl:h-full xl:w-4/5">
-            <StreamethPlayer />
+            <Player stream={currentStage.stream} />
             <div className="mt-auto">
               <div>
                 <SessionInfoBox
@@ -68,9 +66,6 @@ export function StageComponent() {
           </div>
           <div className="xl:w-1/5 p-3 xl:p-5 box-border flex flex-col overflow-auto">
             <h3 className="text-2xl font-bold dark:text-white flex mb-3">Schedule</h3>
-            {/* <div className="flex w-full py-4">
-              <StageSelector />
-            </div> */}
             <div className="flex flex-col w-full overflow-y-auto">
               <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={false} />
             </div>
