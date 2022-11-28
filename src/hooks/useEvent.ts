@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { EventContext } from 'context/event-context'
+import { PageContext } from 'context/page-context'
 import { Event } from 'types'
 
 export function useEvent(): Event {

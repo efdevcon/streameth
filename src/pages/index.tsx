@@ -1,33 +1,33 @@
 import { GetStaticProps } from 'next'
-import { EventController } from 'services/event'
-import { SessionController } from 'services/session'
-import { Event, Session, Stage } from 'types'
-import Page from 'layouts/sessions-page'
+import { GetSessions } from 'services/sessions'
+import { GetSpeakers } from 'services/speakers'
+import { Session, Speaker } from 'types'
 import ScheduleComponent from 'components/Schedule/ScheduleComponent'
 import { SEO } from 'components/seo'
-
+import { PageContextProvider } from 'context/page-context'
 interface Props {
-  event?: Event 
-  sessions: Session[] | null
+  speakers: Speaker[] 
+  sessions: Session[]
 }
 
 export default function Schedule(props: Props) {
+  const { speakers, sessions } = props
 
   return (
-    <Page event={props.event} sessions={props.sessions}>
+    <PageContextProvider speakers={speakers} sessions={sessions}>
       <SEO title='Schedule' />
       <ScheduleComponent />
-    </Page>
+    </PageContextProvider>
   )
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
 
-  const event = await EventController.getEvent()
-  const sessions = await SessionController.getSessions()
+  const sessions = await GetSessions()
+  const speakers = await GetSpeakers()
   return {
     props: {
-      event,
+      speakers,
       sessions,
     },
   }

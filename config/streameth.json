@@ -34,10 +34,7 @@
     }
   ],
   "data": {
-    "type": "gsheet",
-    "config": {
-      "sheetId": "14BI4ogkBn1ISuu3TetXSKRszYNsdzQwppgH-uOghdfU"
-    }
+    "type": "fs"
   },
   "plugins": []
 }

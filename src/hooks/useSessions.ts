@@ -3,27 +3,27 @@ import { Session, Filter, PossibleFilter, TimeState } from 'types'
 import { startOfDay, currentTimeInUTC } from 'utils/dateTime'
 import useInterval from '@use-it/interval'
 import { useContext } from 'react'
-import { EventContext } from 'context/event-context'
+import { PageContext } from 'context/page-context'
 
 export function useSessions(initFilters: Filter[] = []) {
-  const context = useContext(EventContext)
+  const context = useContext(PageContext)
 
   if (context === undefined) {
-    throw new Error('useStage must be used within an EventContextProvider')
+    throw new Error('useSession must be used within an EventContextProvider')
   }
 
   if (!context.sessions) {
     throw new Error('No sessions found')
   }
-
   const allSessions = context.sessions
   const [timeState, setTimeState] = useState<TimeState>('DURING_DAY')
+  // revisit
   const [currentSession, setCurrentSession] = useState<Session>(allSessions[0])
   const [eventDayNum, setEventDayNum] = useState<number | null>(null)
   const [filters, setFilters] = useState<Filter[]>(initFilters)
   const eventDays = [...new Set(allSessions.map((i) => startOfDay(i.start)))].sort()
-  const stages = [...new Set(allSessions.map((i) => i.stage))].sort()
-  const speakers = [...new Set(allSessions.map((i) => i.speakers.map((s) => s.name)).flat())].sort()
+  const stages = [...new Set(allSessions.map((i) => i.stage.name))].sort()
+  const speakers = [...new Set(allSessions.map((i) => i.speakers.map((j) => j.name)).flat())].sort()
 
   const possibleFilters: PossibleFilter[] = useMemo(() => {
     return [

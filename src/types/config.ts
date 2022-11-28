@@ -13,9 +13,9 @@ export interface Stream {
   config: Config
 }
 
-export type ScheduleTypes = 'fs' | 'pretalx' | 'gsheet'
+export type DataConfigTypes = 'fs' | 'pretalx' | 'gsheet'
 export interface DataConfig {
-  type: ScheduleTypes
+  type: DataConfigTypes
   config: Config
 }
 

@@ -18,7 +18,6 @@ export interface Event {
   data: DataConfig
   // Sessions: Session[]
   // Speakers: Speaker[]
-
   // stream: Stream
   // schedule: Schedule
   // archive: Archive
@@ -31,7 +30,7 @@ export interface Session {
   description: string
   //track?: string
   //type?: string
-  stage: string
+  stage: Stage
   start: number
   end: number
   speakers: Speaker[]
@@ -42,7 +41,7 @@ export interface Speaker {
   id: string
   name: string
   description: string
-  avatarUrl?: string
+  avatarUrl: string | null
 }
 
 export interface streamItem {

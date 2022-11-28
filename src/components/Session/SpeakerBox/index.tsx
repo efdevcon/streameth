@@ -23,8 +23,8 @@ export default function SpeakerBox(props: Props) {
         </Modal>
       )}
       <div className={styles.box} onClick={() => setIsOpen(true)}>
-        {/* <SpeakerIcon speaker={speaker} /> */}
-        <EthBerlinSpeakerIcon speaker={speaker} />
+        <SpeakerIcon speaker={speaker} />
+        {/* <EthBerlinSpeakerIcon speaker={speaker} /> */}
         <div className={styles.box__text}>
           <h3 className={styles.box__name}>{name}</h3>
         </div>

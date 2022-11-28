@@ -48,7 +48,7 @@ export default function SessionComponent(props: Props) {
             <h2 className="font-bold text-xl lg:text-3xl dark:text-white mb-3">{props.session.name}</h2>
             <div className="flex flex-row space-x-4 my-2">
               <DateDetail start={props.session.start} end={props.session.end} />
-              <StageDetail stage={props.session.stage} />
+              <StageDetail stage={props.session.stage.name} />
             </div>
           </div>
 

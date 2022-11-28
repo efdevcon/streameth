@@ -16,12 +16,13 @@ const initials = (name: string) => {
 }
 
 export default function SpeakerIcon({ speaker, onSpeakerClick, size = 'sm' }: Props) {
+  console.log(speaker)
   return (
     <div
       onClick={() => onSpeakerClick?.(speaker)}
       className={`${css.icon} ${css[size]} ${onSpeakerClick ? css.pointer : ''}`}
       style={{ backgroundImage: `url('${speaker.avatarUrl}')` }}>
-      {!speaker.avatarUrl && <span>{initials(speaker.name)}</span>}
+      {/* {!speaker.avatarUrl && <span>{initials(speaker.name)}</span>} */}
     </div>
   )
 }

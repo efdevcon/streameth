@@ -1,9 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { EventController } from 'services/event'
-import { SessionController } from 'services/session'
+import { SessionController } from 'services/sessions'
 import { Session } from 'types'
 import { ParsedUrlQuery } from 'querystring'
-import Page from 'layouts/event-page'
 import SessionComponent from 'components/Session/SessionComponent'
 import { SEO } from 'components/seo'
 interface Props {

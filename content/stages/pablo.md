@@ -1,4 +1,0 @@
----
-id: pablo
-title: pablo
----

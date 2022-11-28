@@ -1,5 +1,5 @@
 import React from 'react'
-import { Session, Speaker } from 'types'
+import { Session, Speaker, Stage } from 'types'
 import defaultAvatar from 'assets/images/default-avatar.png'
 import Image from 'next/image'
 import Calendar from 'assets/images/calendar.svg'
@@ -25,7 +25,7 @@ export function UserAvatar({ avatarUrl }: { avatarUrl: Speaker['avatarUrl'] }) {
   )
 }
 
-export function StageDetail({ stage }: { stage: Session["stage"] }) {
+export function StageDetail({ stage }: { stage: Stage["name"] }) {
   return (
     <div className="flex items-center">
       <Camera />

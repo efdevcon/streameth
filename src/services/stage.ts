@@ -32,11 +32,11 @@ export class StageController {
     return [...cmsStages, ...configStages]
   }
 
-  static async getStage(id: string): Promise<Stage | null > {
+  static async getStage(id: string): Promise<Stage | undefined > {
     const stages = await this.getStages()
     const stage = stages.find((stage) => stage.id === id)
     if (!stage || !this.validateStage(stage)) {
-      return null
+      return undefined
     }
     return stage
   }

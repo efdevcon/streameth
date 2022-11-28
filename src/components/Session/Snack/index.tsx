@@ -45,7 +45,7 @@ export default function SessionSnack({ session, learnMore, status = 'normal', is
           </div>
           <div className={css.iconText}>
             <VideoCameraIcon />
-            <span>{session.stage}</span>
+            <span>{session.stage.name}</span>
           </div>
         </div>
         <div className="flex">
