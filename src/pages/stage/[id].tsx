@@ -41,7 +41,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   const stage = await GetStageById(stageId)
   if (!stage) return { props: null, notFound: true }
   const sessions = await GetSessionsForStage(stageId)
-  console.log(sessions)
 
   return {
     props: {

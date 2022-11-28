@@ -85,7 +85,6 @@ export async function GetSpeakers(): Promise<Speaker[]> {
 }
 
 const findSpeakerForSession = (sessionSpeakers: RawSessionData['speakers'], speakers: Speaker[]): Speaker[] => {
-  console.log(speakers)
   return sessionSpeakers.map((sessionSpeaker) => {
     const speaker = speakers.find((speaker) => speaker.id === sessionSpeaker.id)
     if (!speaker) {

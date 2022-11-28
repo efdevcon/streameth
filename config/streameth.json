@@ -34,7 +34,7 @@
     }
   ],
   "data": {
-    "type": "fs"
+    "type": "cms"
   },
   "plugins": []
 }

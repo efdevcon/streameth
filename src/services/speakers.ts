@@ -11,7 +11,6 @@ export async function GetSpeakers(): Promise<Speaker[]> {
 
   try {
     const module: any = await import(`services/${type}/index`)
-    console.log(module)
     const schedule = await module.GetSpeakers(config)
     return schedule
   } catch (e) {

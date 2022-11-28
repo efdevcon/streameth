@@ -22,7 +22,6 @@ const formatDateTime = (start: number, end: number) => {
 
 export default function SessionSnack({ session, learnMore, status = 'normal', isLive = false, hasRecording = false }: Props) {
 
-  console.log(session.id)
   const component = (
     <div className={`rotating-border ${css.container} ${css[status]} ${learnMore ? css['link'] : ''}`}>
       <div className={css.header}>

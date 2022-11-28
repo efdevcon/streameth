@@ -41,7 +41,7 @@ export async function GetSchedule(config: Config): Promise<Session[]> {
         //if (i[3]) session.track = i[3].trim()
         //if (i[4]) session.type = i[4].trim()
 
-        // // // Speaker 1
+        // // Speaker 1
         // if (i[9]) {
         //     session.speakers.push({
         //         id: GetSlug(i[9]).trim(),
