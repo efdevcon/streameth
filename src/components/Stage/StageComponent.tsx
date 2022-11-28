@@ -4,7 +4,6 @@ import { useSessions } from 'hooks/useSessions'
 import { Player } from 'components/Player'
 import { PageContainer } from 'components/Container'
 import SessionInfoBox from 'components/Session/Infobox'
-//import StageSelector from 'components/Stage/Selector'
 import SpeakerModalBox from 'components/Speaker/ModalBox'
 import SessionList from 'components/Session/List'
 import Modal from '../Modal'
@@ -39,7 +38,7 @@ export function StageComponent() {
     } else if (modalContentType === 'speaker') {
       return <SpeakerModalBox speaker={speaker} />
     } else if (modalContentType === 'embed') {
-      return <Embed stageName={currentStage.name} />
+      return <Embed stageId={currentStage.id} />
     }
     return null
   }
@@ -51,7 +50,7 @@ export function StageComponent() {
       </Modal>
       <PageContainer>
         <div className="flex flex-col xl:flex-row h-full overflow-hidden">
-          <div className="flex flex-col w-full h-xl:h-full xl:w-4/5">
+          <div className="flex flex-col w-full xl:w-4/5 h-60 md:h-96  xl:h-full">
             <Player stream={currentStage.stream} />
             <div className="mt-auto">
               <div>

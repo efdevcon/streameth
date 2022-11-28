@@ -9,7 +9,7 @@ interface Props {
 
 const OfflinePlayer = () => {
   return (
-    <div className="bg-gray-800 flex flex-col items-center justify-center w-full h-60 md:h-96  xl:h-full">
+    <div className="bg-gray-800 flex flex-col items-center justify-center w-full h-full">
       <span className="round text-2xl font-bold text-gray-500">Offline</span>
     </div>
   )

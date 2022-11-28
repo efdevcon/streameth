@@ -1,7 +1,8 @@
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { useState } from 'react'
+import { Stage } from 'types'
 interface Props {
-  stageName: string
+  stageId: Stage["id"]
 }
 
 
@@ -10,7 +11,7 @@ export default function Embed({ ...props }: Props) {
 
   const generateEmbedCode = () => {
     const url = window.location.href
-    return `<iframe src="${url}/embed/${props.stageName}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`
+    return `<iframe src="${url}embed/${props.stageId}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`
   }
   return (
     <div className="flex flex-col items-center justify-center w-full h-full px-5">
