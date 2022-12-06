@@ -53,7 +53,7 @@ export function Archive(props: Props) {
         <div className={className}>
             <EventInfoBox event={props.event} />
 
-            {filtered.length === 0 && <div>No videos found</div>}
+            {!props.event.youtube?.url && filtered.length === 0 && <div>No videos found</div>}
 
             {(filter.rooms || filter.tracks || filter.days) && (
                 <Filter className={css.filter} filters={filter} onFilter={onFilter} />
