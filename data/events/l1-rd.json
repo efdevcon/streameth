@@ -8,13 +8,6 @@
   "stream": {
     "version": 1
   },
-  "archive": {
-    "version": 1,
-    "type": "ipfs",
-    "config": {
-      "directory": "QmT88Hj9wXzUoTJ8nRyKQkrBTVo7pWaQEnE9aqNYUT3i45"
-    }
-  },
   "youtube": {
     "url": "https://youtube.com/playlist?list=PLJijNYoOwnsuqDH9ITSvbqDOaUdA1vp2O"
   },
