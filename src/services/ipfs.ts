@@ -7,6 +7,8 @@ import { tryUntilSucceed } from 'utils/retry'
 const ipfsBaseUri = 'https://gateway.ipfs.io'
 
 export async function GetVideos(hash: string): Promise<Video[]> {
+    if (!hash) return []
+
     const node = httpClient({
         url: `${ipfsBaseUri}/api/v0/`,
     })

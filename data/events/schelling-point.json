@@ -11,6 +11,11 @@
     "schedule": {
         "sessions": []
     },
+    "archive": {
+      "version": 1,
+      "type": "ipfs",
+      "config": {}
+    },
     "youtube": {
         "url": "https://youtube.com/playlist?list=PLvTrX8LNPbPlLNcFPuWiac3W19cUSaKFF"
     },
