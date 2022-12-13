@@ -31,9 +31,9 @@ The configuration file is used to store event details, data sources, and install
     
   2. The data object defines which data integration to use. Currently, streameth supports the following integrations:
   
-- [CMS](src/services/cms/README.md)
-- [Google Sheets](src/services/gsheet/README.md)
-- [Pretalx](src/services/pretalx/readme.md)
+  - [CMS](src/services/cms/README.md)
+  - [Google Sheets](src/services/gsheet/README.md)
+  - [Pretalx](src/services/pretalx/readme.md)
   
   3. If any plugins are installed for the event, add their names to the plugins array. ( Not supported yet)
 
