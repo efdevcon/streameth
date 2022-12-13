@@ -1,15 +1,12 @@
 {
-  "name": "ETHBerlin",
-  "description": "ETHBerlin³ is a hackathon, a cultural festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward.",
-  "start": "2022-09-16",
-  "end": "2022-09-18",
-  "website": "https://ethberlin.ooo/",
-  "poster": "/images/default.png",
+  "name": "",
+  "description": "",
+  "start": "",
+  "end": "",
+  "website": "",
+  "poster": "",
   "data": {
-    "type": "gsheet",
-    "config": {
-      "sheetId": "1IDUQ1bkgV0NSLLhZ3qoJqh4CGMdKmxGr_TlYKVsGO3o"
-    }
+    "type": ""
   },
   "plugins": []
 }
