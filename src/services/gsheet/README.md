@@ -11,7 +11,7 @@ GOOGLE_API_KEY=<your key here>
 ```
 Configure the data object in streameth config file like so:
 
-
+```
   "data": {
     "type": "gsheet",
     "config": {
