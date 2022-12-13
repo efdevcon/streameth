@@ -1,0 +1,27 @@
+
+.box {
+
+  @apply  ;
+  
+
+  &__title {
+    @apply  font-medium text-3xl items-center;
+  }
+
+  &__details {
+    @apply  flex flex-col space-y-2 my-5 lg:my-4;
+  }
+
+  &__speakers {
+    @apply  flex flex-row mt-auto;
+  }
+  
+  &__speaker__learn_more {
+    @apply ml-auto mt-auto mb-auto text-[#AAAAAA] text-base;
+  }
+
+}
+
+.box:hover {
+  @apply  shadow-xl;
+}

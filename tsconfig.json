@@ -16,6 +16,6 @@
     "baseUrl": "./src",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "src"],
+  "include": ["next-env.d.ts", "src", "config/DarkMode"],
   "exclude": ["node_modules"]
 }

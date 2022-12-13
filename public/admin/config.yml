@@ -1,0 +1,53 @@
+local_backend: true 
+backend:
+  name: git-gateway
+  branch: netifly-cms 
+media_folder: "public/uploads"
+public_folder: "/uploads" 
+publish_mode: editorial_workflow 
+
+collections:
+  - name: "stages"
+    identifier_field: "id"
+    label: "stages"
+    folder: "content/stages" 
+    create: true 
+    slug: "{{slug}}"
+    fields: 
+      - {label: "ID", name: "id", widget: "ncw-id", prefix: "stage", timestamp: false}
+      - {label: "name", name: "name", widget: "string"}
+      - {label: "stream", name: "stream", widget: "list", fields: [{label: "id", name: "id", widget: "string"}]}
+      - {label: "image", name: "image", widget: "image"}
+  
+  - name: "sessions"
+    identifier_field: "id"
+    label: "sessions"
+    folder: "content/sessions"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "ncw-id", prefix: "session", timestamp: false}
+      - {label: "name", name: "name", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: "stage", name: "stage", widget: "relation", collection: "stages", valueField: "id", searchFields: ["name"], displayFields: ["name"]}
+      - {label: "start", name: "start", widget: "datetime"}
+      - {label: "end", name: "end", widget: "datetime"}
+      - {label: "speakers", name: "speakers", widget: "list", fields: [
+          {label: "speaker", name: "id", widget: "relation", collection: "speakers", searchFields: ["name"], valueField: "id", displayFields: ["name"]}
+       ]}
+      - {label: "video", name: "video url", widget: "string", required: false}
+
+  - name: "speakers"
+    identifier_field: "id"
+    label: "speakers"
+    folder: "content/speakers"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "ncw-id", prefix: "speaker", timestamp: false, hidden: true}
+      - {label: "name", name: "name", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: "avatarUrl", name: "avatarUrl", widget: "string", required: false}
+      - {label: "company", name: "company", widget: "string", required: false}
+      - {label: "twitter", name: "twitter", widget: "string", required: false}
+      - {label: "github", name: "github", widget: "string",   required: false}  

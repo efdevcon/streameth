@@ -1,0 +1,22 @@
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.container__session{
+  @apply mx-auto max-w-[1512px] p-6 lg:p-8;
+}
+
+.container__stage {
+  height: calc(100vh - 4rem);
+
+  @media screen and (max-height: 768px) {
+    min-height: calc(100vh);
+    height: auto;
+
+  }
+
+
+  @media screen and (min-width: 1240px) {
+    height: calc(100vh - 5rem);
+  }
+}

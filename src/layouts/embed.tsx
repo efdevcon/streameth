@@ -5,5 +5,5 @@ type Props = {
 }
 
 export default function EmbedLayout(props: Props) {
-  return <div>{props.children}</div>
+  return <div className='h-screen'>{props.children}</div>
 }

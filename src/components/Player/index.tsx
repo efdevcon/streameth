@@ -1,60 +1,78 @@
-import { useState, useRef } from 'react'
-import VideoJS from './VideoJS'
-import { Room, Stream, Event } from 'types'
+import { Player as LivepeerPlayer, useStream, useStreamSessions, useStreamSession, StreamSession } from '@livepeer/react'
+import { useState, useEffect } from 'react'
+import { StreamId } from 'types/index'
 
-interface PlayerProps {
-  src: string | null
-  poster: string
-  eventName: Event['name']
-  setStatus?: (status: string) => void
-  onStreamError: () => void
+interface Props {
+  stream: StreamId[]
 }
 
-const Player = ({ src, poster, onStreamError, eventName }: PlayerProps) => {
-  if (!src) return <img width={'100%'} src={poster ?? '/posters/default.png'} alt="poster" />
 
-  const playerRef = useRef(null)
-  const videoJsOptions = {
-   techOrder:['html5','youtube'],
-    poster: poster || '',
-    autoplay: true,
-    controls: true,
-    responsive: true,
-    fluid: true,
-    sources: [
-      {
-        src: src,
-        type: src.includes('youtube') ?'video/youtube' : 'application/x-mpegURL',
-      },
-    ],
-  }
-
-  const handlePlayerReady = (player: any) => {
-    playerRef.current = player
-
-    player.reloadSourceOnError({
-      // getSource allows you to override the source object used when an error occurs
-      getSource: function (reload: any) {
-        console.log('Reloading because of an error')
-        onStreamError() // this should automatically trigger player reload
-      },
-      errorInterval: 1,
-    })
-
-    player.on('error', (e: any) => {
-      console.log('error', e)
-    })
-
-    player.on('waiting', () => {
-      console.log('player is waiting')
-      const currentPlaylist = player.tech().vhs.playlists.media()
-      if (currentPlaylist?.custom?.livepeerError) {
-        player.error({ code: '4' })
-      }
-    })
-  }
-
-  return <VideoJS options={videoJsOptions} onReady={handlePlayerReady} eventName={eventName} />
+const OfflinePlayer = () => {
+  return (
+    <div className="bg-gray-800 flex flex-col items-center justify-center w-full h-full">
+      <span className="round text-2xl font-bold text-gray-500">Offline</span>
+    </div>
+  )
 }
 
-export default Player
+export const Player = ({...props}: Props) => {
+  
+  const [currentPlaybackUrl, setCurrentPlaybackUrl] = useState<string | null>(null)
+  const [currentStreamSession, setCurrentStreamSession] = useState<StreamSession['id']>('')
+  const { data: stream } = useStream({
+    streamId: props.stream[0].id,
+    refetchInterval: () => 5000,
+  })
+  const { data: sessions } = useStreamSessions(props.stream[0].id)
+  const { data: session } = useStreamSession(currentStreamSession)
+
+  useEffect(() => {
+    if (sessions && sessions?.length > 0) {
+      const allReadySessions = sessions.filter((s) => s.recordingStatus === 'ready')
+      // find latest session
+      const latestSession = allReadySessions.reduce((prev, current) => (prev.createdAt > current.createdAt ? prev : current))
+
+      setCurrentStreamSession(latestSession.id)
+    }
+  }, [sessions])
+
+  useEffect(() => {
+    if (stream && stream.isActive) {
+      setCurrentPlaybackUrl(stream.playbackUrl)
+    } else if (session && session.recordingUrl && session.recordingStatus === 'ready') {
+      setCurrentPlaybackUrl(session.recordingUrl)
+    }
+  }, [session, stream])
+
+  if (!currentPlaybackUrl) return <OfflinePlayer />
+
+  return (
+    <LivepeerPlayer
+      src={currentPlaybackUrl}
+      showTitle={false}
+      showPipButton={false}
+      autoPlay
+      theme={{
+        borderStyles: {
+          containerBorderStyle: 'hidden',
+        },
+        colors: {
+          accent: '#00a55f',
+        },
+        shadows: {
+          containerShadow: 'none',
+          containerShadowHover: 'none',
+        },
+        space: {
+          controlsBottomMarginX: '10px',
+          controlsBottomMarginY: '5px',
+          controlsTopMarginX: '15px',
+          controlsTopMarginY: '10px',
+        },
+        radii: {
+          containerBorderRadius: '0px',
+        },
+      }}
+    />
+  )
+}

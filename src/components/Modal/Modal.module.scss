@@ -1,0 +1,19 @@
+.modal {
+  @apply fixed inset-0 z-10 overflow-y-auto;
+
+  &__container {
+    @apply relative z-10;
+  }
+
+  &__bg {
+    @apply fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity;
+  }
+
+  &__inner {
+    @apply flex min-h-full items-center justify-center p-4 text-center sm:p-0;
+  }
+
+  &__box {
+    @apply relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6;
+  }
+}

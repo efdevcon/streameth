@@ -54,7 +54,7 @@ async function Import() {
             if (i[3]) session.description = i[3].trim()
             if (i[4]) session.track = i[4].trim()
             if (i[5]) session.type = i[5].trim()
-            if (i[6]) session.room = i[6].trim()
+            if (i[6]) session.stage = i[6].trim()
 
             session.speakers = []
             // Speaker 1
