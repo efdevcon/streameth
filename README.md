@@ -9,6 +9,8 @@ This open-source live-streaming and playback solution utilizes decentralized tec
 ## Demo
 
 - https://streameth.tv/
+- https://watch.ethberlin.ooo
+- https://live.devcon.org
 
 ## Development
 
@@ -23,49 +25,38 @@ yarn dev
 ```
 
 # Configuration
+The configuration file can be found at config/streameth.json
 
-The 3 core modules (`stream`, `schedule` and `archive` can be configured to use different kind of implementations.
+The configuration file is used to store event details, data sources, and installed plugins. To use it, follow these steps:
 
-## Stream
+  1. Replace the placeholder values for name, description, start, end, website, and poster with the appropriate values for your event.
+    
+  2. The data object defines which data integration to use. Currently, streameth supports the following integrations: 
+    - CMS
+    - Google sheets
+    - Pretalx (coming soon)
+  
+  3. If any plugins are installed for the event, add their names to the plugins array. ( Not supported yet)
 
-Available implementation types: `livepeer`
-
-## Schedule
-
-Available implementation types: `fs`, `pretalx`
-
-### Filesystem
-
-The filesystem module points to a local json file in the same repository.
-
+Example:
 ```
-"schedule": {
-  "version": 2,
-  "type": "fs",
-  "config": {
-    "path": "./config/schedule.json"
-  }
-},
-```
-
-### Pretalx
-
-The pretalx module fetches programming info from a pretalx API. Read the [pretalx documentation](https://docs.pretalx.org/api/) for more info.
-
-```
-"schedule": {
-  "version": 2,
-  "type": "pretalx",
-  "config": {
-    "baseApiUrl": "https://pretalx.com/api/events/democon/"
-  }
-},
+{
+  "name": "ETHBerlin",
+  "description": "ETHBerlin³ is a hackathon, a cultural festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward.",
+  "start": "2022-09-16",
+  "end": "2022-09-18",
+  "website": "https://ethberlin.ooo/",
+  "poster": "/images/default.png",
+  "data": {
+    "type": "gsheet",
+    "config": {
+      "sheetId": "1IDUQ1bkgV0NSLLhZ3qoJqh4CGMdKmxGr_TlYKVsGO3o"
+    }
+  },
+  "plugins": []
+}
 ```
 
-
-## Archive
-
-Available implementation types: `ipfs`, `livepeer`, `youtube`
 
 ## Livestream setup
 
@@ -79,52 +70,7 @@ To get your own livestreams working, follow these steps:
 ### 2. Create streams
 
 1. You can create streams directly from the Livepeer dashboard. After each stream creation, you will get a livepeer stream ID. Copy it.
-2. Add the stream ID to the `streams` field within the `rooms` field of the event JSON
-
-Every room can have multiple streams. Generally there will be a primary stream, followed by any backup/failover streams. Separate rooms would have separate streams.
-
-Below is an example event JSON file with 4 streams created in the Livepeer dashboard.
-
-```json
-{
-  "version": 1,
-  "name": "Event Name",
-  "description": "Event description",
-  "start": "2022-04-19",
-  "end": "2022-04-19",
-  "website": "https://example.com",
-  "schedule": {
-    "sessions": []
-  },
-  "rooms": [
-    {
-      "id": "Main",
-      "streams": [
-        {
-          "id": "s3h6iabv-t4xp-t2i4-zu8bmdtsqg50"
-        },
-        {
-          "id": "unr6b8mk-tzpm-18cm-8hmd56ef9r4a"
-        }
-      ]
-    },
-    {
-      "id": "Second",
-      "streams": [
-        {
-          "id": "06f5ewvi-18yl-vjmc-ds2sojzc7gku"
-        },
-        {
-          "id": "o5tqsfd0-bod9-8tj0-fe9myey5rfha"
-        }
-      ]
-    }
-  ],
-  "recordings": []
-}
-```
-
-The first stream in each array would generally be the primary stream, while every subsequent stream in the array acts as the backup/failover stream.
+2. Add the stream ID to the `streams` field for a stage object. Accessing the stage object will vary depending on which data integration you are using. 
 
 ### 3. (Optional) Get Mux Data API key
 

@@ -1,7 +1,7 @@
 local_backend: true 
 backend:
   name: git-gateway
-  branch: netifly-cms 
+  branch: main
 media_folder: "public/uploads"
 public_folder: "/uploads" 
 publish_mode: editorial_workflow 
