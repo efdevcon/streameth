@@ -6,7 +6,10 @@
   "website": "https://ethberlin.ooo/",
   "poster": "/images/default.png",
   "data": {
-    "type": "cms"
+    "type": "gsheet",
+    "config": {
+      "sheetId": "1IDUQ1bkgV0NSLLhZ3qoJqh4CGMdKmxGr_TlYKVsGO3o"
+    }
   },
   "plugins": []
 }

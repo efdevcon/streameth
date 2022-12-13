@@ -34,7 +34,7 @@ export interface Session {
   start: number
   end: number
   speakers: Speaker[]
-  video?: Video
+  video?: string
 }
 
 export interface Speaker {

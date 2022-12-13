@@ -10,7 +10,7 @@ interface RawSessionData {
   stage: string
   start: string
   end: string
-  speakers: {id: string}[]
+  speakers: { id: string }[]
   video?: any
 }
 
@@ -101,4 +101,3 @@ const findStageForSession = (sessionStage: RawSessionData['stage'], stages: Stag
   }
   return stage
 }
-

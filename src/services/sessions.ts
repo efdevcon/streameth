@@ -11,7 +11,6 @@ export async function GetSessions(): Promise<Session[]> {
 
   try {
     const module: any = await import(`services/${type}/index`)
-    console.log(module)
     const schedule = await module.GetSchedule(config)
     return schedule
   }

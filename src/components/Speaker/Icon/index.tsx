@@ -16,7 +16,6 @@ const initials = (name: string) => {
 }
 
 export default function SpeakerIcon({ speaker, onSpeakerClick, size = 'sm' }: Props) {
-  console.log(speaker)
   return (
     <div
       onClick={() => onSpeakerClick?.(speaker)}

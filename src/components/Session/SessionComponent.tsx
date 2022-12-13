@@ -17,7 +17,7 @@ export default function SessionComponent(props: Props) {
       <div className="flex flex-col lg:flex-row h-full">
         <div className="flex flex-col bg-black w-full h-full">
           <div className="m-auto">
-            <Player src={video?.src} />
+            <Player src={video} />
           </div>
         </div>
         <div className="flex flex-col w-full lg:w-2/6 px-5">
