@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a00af031-d631-4fdd-b041-add6f1f0594a/deploy-status)](https://app.netlify.com/sites/efdevcon-tv/deploys)
-
 # StreamETH
 
 This blockchain space has a very remote culture. Even events that are held physically still want to give remote attendees an experience as close to being physically present as possible. While solutions such as YouTube or other social media ‘Live’ media broadcasting solutions exist, they do not align with the core values of decentralization.
@@ -31,10 +29,11 @@ The configuration file is used to store event details, data sources, and install
 
   1. Replace the placeholder values for name, description, start, end, website, and poster with the appropriate values for your event.
     
-  2. The data object defines which data integration to use. Currently, streameth supports the following integrations: 
-    - CMS
-    - Google sheets
-    - Pretalx (coming soon)
+  2. The data object defines which data integration to use. Currently, streameth supports the following integrations:
+  
+- [CMS](CMS.md)
+- [Google Sheets](SHEETS.md)
+- Pretalx (coming soon)
   
   3. If any plugins are installed for the event, add their names to the plugins array. ( Not supported yet)
 
