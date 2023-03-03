@@ -7,6 +7,7 @@ import img from 'assets/images/logo.png'
 import DarkModeToggle from 'components/DarkMode/Toggle'
 import Container from 'components/Container'
 import { useRouter } from 'next/router'
+import { TITLE } from 'utils/constants'
 
 const pages = [
   { name: 'Schedule', href: '/schedule' },
@@ -40,7 +41,7 @@ export default function Navbar() {
                 <div className={css.navbar__logo}>
                   <Link href="/">
                     <a>
-                      <Image src={img} alt="StreamETH" layout="fill" />
+                      <Image src={img} alt={TITLE} layout="fill" />
                     </a>
                   </Link>
                 </div>
