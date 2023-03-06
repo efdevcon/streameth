@@ -21,6 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@use-it/interval": "^1.0.0",
     "bootstrap-icons": "^1.8.1",
+    "ethereum-blockies-base64": "^1.0.2",
     "googleapis": "^107.0.0",
     "gray-matter": "^4.0.3",
     "ipfs-core": "^0.14.3",
