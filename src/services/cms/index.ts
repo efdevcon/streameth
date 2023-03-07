@@ -18,6 +18,7 @@ interface RawSpeakerData {
   id: string
   name: string
   description: string
+  avatar?: string
   avatarUrl?: string
 }
 
@@ -79,6 +80,7 @@ export async function GetSpeakers(): Promise<Speaker[]> {
       id: rawSpeaker.id,
       name: rawSpeaker.name,
       description: rawSpeaker.description,
+      avatar: rawSpeaker.avatar ?? null, // TODO: Fix types avatar // avatarUrl 
       avatarUrl: rawSpeaker.avatarUrl ?? null,
     }
   })
