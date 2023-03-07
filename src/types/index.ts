@@ -41,6 +41,7 @@ export interface Speaker {
   id: string
   name: string
   description: string
+  avatar: string | null
   avatarUrl: string | null
 }
 

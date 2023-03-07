@@ -17,7 +17,8 @@ const initials = (name: string) => {
 }
 
 export default function SpeakerIcon({ speaker, onSpeakerClick, size = 'sm' }: Props) {
-  const avatar = speaker.avatarUrl ?? CreateBlockie(speaker.name)
+  // TODO: Fix types avatar and avatarUrl
+  const avatar = speaker.avatar ?? speaker.avatarUrl ?? CreateBlockie(speaker.name)
   return (
     <div
       onClick={() => onSpeakerClick?.(speaker)}
