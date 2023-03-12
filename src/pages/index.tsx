@@ -5,6 +5,7 @@ import { SEO } from 'components/seo'
 import { GetStages } from 'services/stage'
 import { GetSessionsForStage } from 'services/sessions'
 import { PageContextProvider } from 'context/page-context'
+import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
 interface Props {
   stage: Stage 
@@ -25,12 +26,15 @@ export default function StagePage(props: Props) {
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const stages = await GetStages()
   const stage = stages[0]
-  const sessions = await GetSessionsForStage(stage.id)
   if (!stage) return { props: null, notFound: true }
+
+  const sessions = await GetSessionsForStage(stage.id)
+
   return {
     props: {
       stage,
       sessions,
     },
+    revalidate: DEFAULT_REVALIDATE_PERIOD
   }
 }

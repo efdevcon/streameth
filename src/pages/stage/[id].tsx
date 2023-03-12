@@ -6,6 +6,7 @@ import { SEO } from 'components/seo'
 import { GetStages, GetStageById } from 'services/stage'
 import { GetSessionsForStage } from 'services/sessions'
 import { PageContextProvider } from 'context/page-context'
+import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
 interface Props {
   stage: Stage 
@@ -38,8 +39,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
   const stageId = context.params?.id
   if (!stageId) return { props: null, notFound: true }
+
   const stage = await GetStageById(stageId)
   if (!stage) return { props: null, notFound: true }
+
   const sessions = await GetSessionsForStage(stageId)
 
   return {
@@ -47,5 +50,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
       stage,
       sessions,
     },
+    revalidate: DEFAULT_REVALIDATE_PERIOD
   }
 }
