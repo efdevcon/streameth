@@ -5,7 +5,6 @@ import { SEO } from 'components/seo'
 import { GetStages } from 'services/stage'
 import { GetSessionsForStage } from 'services/sessions'
 import { PageContextProvider } from 'context/page-context'
-import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
 interface Props {
   stage: Stage 
@@ -35,6 +34,5 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
       stage,
       sessions,
     },
-    revalidate: DEFAULT_REVALIDATE_PERIOD
   }
 }

@@ -4,7 +4,7 @@ import { Session } from 'types'
 import { ParsedUrlQuery } from 'querystring'
 import SessionComponent from 'components/Session/SessionComponent'
 import { SEO } from 'components/seo'
-import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
+
 interface Props {
   session: Session
 }
@@ -42,6 +42,5 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
     props: {
       session,
     },
-    revalidate: DEFAULT_REVALIDATE_PERIOD
   }
 }

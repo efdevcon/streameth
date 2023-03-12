@@ -4,7 +4,6 @@ import { Session } from 'types'
 import ScheduleComponent from 'components/Schedule/ScheduleComponent'
 import { SEO } from 'components/seo'
 import { PageContextProvider } from 'context/page-context'
-import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
 interface Props {
   sessions: Session[]
@@ -28,6 +27,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       sessions,
     },
-    revalidate: DEFAULT_REVALIDATE_PERIOD
   }
 }
