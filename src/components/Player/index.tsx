@@ -21,7 +21,7 @@ export const Player = ({...props}: Props) => {
   const [currentStreamSession, setCurrentStreamSession] = useState<StreamSession['id']>('')
   const { data: stream } = useStream({
     streamId: props.stream[0].id,
-    refetchInterval: () => 5000,
+    refetchInterval: (s) =>  (s?.isActive ? false : 5000),
   })
   const { data: sessions } = useStreamSessions(props.stream[0].id)
   const { data: session } = useStreamSession(currentStreamSession)
