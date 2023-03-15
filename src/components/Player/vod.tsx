@@ -24,15 +24,11 @@ export const Player = ({ ...props }: Props) => {
       showPipButton={false}
       autoPlay
       theme={{
-        borderStyles: {
-          containerBorderStyle: 'hidden',
+        borderWidths: {
+          containerBorderWidth: 0
         },
         colors: {
           accent: '#00a55f',
-        },
-        shadows: {
-          containerShadow: 'none',
-          containerShadowHover: 'none',
         },
         space: {
           controlsBottomMarginX: '10px',
