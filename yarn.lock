@@ -5444,6 +5444,11 @@ mux-embed@4.15.0:
   resolved "https://registry.yarnpkg.com/mux-embed/-/mux-embed-4.15.0.tgz#634d081b61e19ad9f672ed721a0e72cabdad128e"
   integrity sha512-eYlZmSkfc2xf+k2aWaPHLeh81wtPQsWxRMob0YoUyBCEX1iuJhPKpJE+9C8ASY+LrE+Z44K306rbg8a5oPCrjg==
 
+mux-embed@^4.23.0:
+  version "4.23.0"
+  resolved "https://registry.yarnpkg.com/mux-embed/-/mux-embed-4.23.0.tgz#a820e23c0150db7b47aade2dceee9bb4ef6c44c4"
+  integrity sha512-bTPMsv2tfpYXJdog4WAVg4A6naO6IG1LiOPd6hLZBASVOPTNvBSS4nXHb7CMSODyV13zqU8seAsSrEpTSKsb/g==
+
 mux.js@6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/mux.js/-/mux.js-6.0.1.tgz#65ce0f7a961d56c006829d024d772902d28c7755"
