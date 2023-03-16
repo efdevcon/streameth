@@ -31,21 +31,21 @@ export const Player = ({ ...props }: Props) => {
   //     const allReadySessions = sessions.filter((s) => s.recordingStatus === 'ready')
   //     // find latest session
   //     const latestSession = allReadySessions.reduce((prev, current) => (prev.createdAt > current.createdAt ? prev : current))
-  const mediaElementRef = useCallback((ref: HTMLMediaElement) => {
-    if (ref) {
-      const initTime = mux.utils.now()
+  // const mediaElementRef = useCallback((ref: HTMLMediaElement) => {
+  //   if (ref) {
+  //     const initTime = mux.utils.now()
 
-      mux.monitor(ref, {
-        debug: true,
-        data: {
-          env_key: process.env.MUX_SECRET_KEY, // required
-          // Metadata fields
-          player_name: 'Main Player', // any arbitrary string you want to use to identify this player
-          player_init_time: initTime,
-        },
-      })
-    }
-  }, [])
+  //     mux.monitor(ref, {
+  //       debug: true,
+  //       data: {
+  //         env_key: process.env.MUX_SECRET_KEY, // required
+  //         // Metadata fields
+  //         player_name: 'Main Player', // any arbitrary string you want to use to identify this player
+  //         player_init_time: initTime,
+  //       },
+  //     })
+  //   }
+  // }, [])
 
   useEffect(() => {
     if (stream && stream.isActive) {
@@ -59,7 +59,7 @@ export const Player = ({ ...props }: Props) => {
 
   return (
     <LivepeerPlayer
-      mediaElementRef={mediaElementRef}
+      // mediaElementRef={mediaElementRef}
       src={currentPlaybackUrl}
       showTitle={false}
       showPipButton={false}
