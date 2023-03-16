@@ -26,15 +26,15 @@ export const Player = ({...props}: Props) => {
   const { data: sessions } = useStreamSessions(props.stream[0].id)
   const { data: session } = useStreamSession(currentStreamSession)
 
-  useEffect(() => {
-    if (sessions && sessions?.length > 0) {
-      const allReadySessions = sessions.filter((s) => s.recordingStatus === 'ready')
-      // find latest session
-      const latestSession = allReadySessions.reduce((prev, current) => (prev.createdAt > current.createdAt ? prev : current))
+  // useEffect(() => {
+  //   if (sessions && sessions?.length > 0) {
+  //     const allReadySessions = sessions.filter((s) => s.recordingStatus === 'ready')
+  //     // find latest session
+  //     const latestSession = allReadySessions.reduce((prev, current) => (prev.createdAt > current.createdAt ? prev : current))
 
-      setCurrentStreamSession(latestSession.id)
-    }
-  }, [sessions])
+  //     setCurrentStreamSession(latestSession.id)
+  //   }
+  // }, [sessions])
 
   useEffect(() => {
     if (stream && stream.isActive) {
