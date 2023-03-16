@@ -1,7 +1,7 @@
 import { Session, Stage, Speaker } from 'types'
 import { Config } from 'types/config'
 import { google } from 'googleapis'
-import { GetSlug, GetYouTubeVideoIdFromUrl } from 'utils/format'
+import { GetSlug } from 'utils/format'
 import { datetimeToUnixTimestamp } from 'utils/dateTime'
 
 async function createLocalJsonCache(data: any, filename: string) {
@@ -87,7 +87,7 @@ export async function GetStages(config: Config): Promise<Stage[]> {
   return data.map((row: any) => {
     const [id, name, streamId, image] = row
     return {
-      id,
+      id: GetSlug(id),
       name,
       stream: [
         {
@@ -105,7 +105,7 @@ export async function GetSpeakers(config: Config): Promise<Speaker[]> {
   return data.map((row: any) => {
     const [id, name, Description, AvatarUrl] = row
     return {
-      id,
+      id: GetSlug(id),
       name,
       description: Description,
       avatar: AvatarUrl ?? null,
@@ -123,20 +123,20 @@ export async function GetSessions(config: Config): Promise<Session[]> {
     const [id, Name, Description, stageId, Day, Start, End, Speaker1Id, Speaker2Id, Speaker3Id, Speaker4Id, video] = row
     const speakersRaw = [Speaker1Id, Speaker2Id, Speaker3Id, Speaker4Id].map((id: string) => {
       if (!id) return null
-      const speaker = speakerData.find((i) => i.id === id)
+      const speaker = speakerData.find((i) => i.id === GetSlug(id))
       if (!speaker) throw new Error(`No speaker found for id ${id}`)
       return speaker
     })
 
     const speakers = speakersRaw.filter((i) => i !== null)
 
-    const stage = stageData.find((i) => i.id === stageId)
+    const stage = stageData.find((i) => i.id === GetSlug(stageId))
     if (!stage) throw new Error(`No stage found for id ${stageId}`)
 
     const start = datetimeToUnixTimestamp(`${Day} ${Start}`)
     const end = datetimeToUnixTimestamp(`${Day} ${End}`)
     return {
-      id,
+      id: GetSlug(id),
       name: Name,
       description: Description,
       start,
