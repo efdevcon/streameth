@@ -14,7 +14,7 @@ export default function SessionComponent(props: Props) {
 
   return (
     <PageContainer>
-      <div className="flex flex-col lg:flex-row h-full">
+      <div className="flex flex-col md:flex-row h-full">
         <div className="flex flex-col bg-black w-full h-full">
           <div className="m-auto">
             <Player src={video} />

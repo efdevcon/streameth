@@ -14,7 +14,7 @@ const OfflinePlayer = () => {
 
 export const Player = ({ ...props }: Props) => {
   const { src } = props
-
+  console.log(src)
   if (!src) return <OfflinePlayer />
 
   return (
@@ -23,23 +23,6 @@ export const Player = ({ ...props }: Props) => {
       showTitle={false}
       showPipButton={false}
       autoPlay
-      theme={{
-        borderWidths: {
-          containerBorderWidth: 0
-        },
-        colors: {
-          accent: '#00a55f',
-        },
-        space: {
-          controlsBottomMarginX: '10px',
-          controlsBottomMarginY: '5px',
-          controlsTopMarginX: '15px',
-          controlsTopMarginY: '10px',
-        },
-        radii: {
-          containerBorderRadius: '0px',
-        },
-      }}
     />
   )
 }
