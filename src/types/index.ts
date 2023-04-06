@@ -71,7 +71,7 @@ export interface Video {
 
 export interface Filter {
   type: 'stage' | 'day' | 'track' | 'recording' | 'speaker' 
-  value: any
+  value: string
 }
 
 export interface PossibleFilter {

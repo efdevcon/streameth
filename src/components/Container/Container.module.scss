@@ -8,7 +8,6 @@
 
 .container__stage {
   height: calc(100vh - 4rem);
-
   @media screen and (max-height: 768px) {
     min-height: calc(100vh);
     height: auto;

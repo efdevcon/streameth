@@ -9,9 +9,12 @@ import Container from 'components/Container'
 import { useRouter } from 'next/router'
 import { TITLE } from 'utils/constants'
 
-const pages = [
-  { name: 'Schedule', href: '/schedule' },
-]
+interface page {
+  name: string
+  href: string
+}
+
+const pages: page[] = []
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
