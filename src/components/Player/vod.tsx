@@ -1,9 +1,5 @@
 import { Player as LivepeerPlayer } from '@livepeer/react'
 
-interface Props {
-  src?: string
-}
-
 const OfflinePlayer = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-60 md:h-96  xl:h-full">
@@ -12,18 +8,8 @@ const OfflinePlayer = () => {
   )
 }
 
-export const Player = ({ ...props }: Props) => {
-  const { src } = props
-  console.log(src)
+export const Player = ({ src }: { src?: string }) => {
   if (!src) return <OfflinePlayer />
 
-  return (
-    <LivepeerPlayer
-      src={src}
-      showTitle={false}
-      showPipButton={false}
-      autoPlay
-    />
-  )
+  return <LivepeerPlayer objectFit="cover" src={src} showTitle={false} showPipButton={false} muted={false} autoPlay />
 }
-
