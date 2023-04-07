@@ -82,8 +82,9 @@ async function getDataForRange(config: Config, range: string): Promise<any> {
 const STAGE_DATA_RANGE = 'A4:D'
 export async function GetStages(config: Config): Promise<Stage[]> {
   const data = await getDataForRange(config, STAGE_DATA_RANGE)
-  return data.map((row: any) => {
+  const a = data.map((row: any) => {
     const [id, name, streamId, image] = row
+    if (!id) return null
     return {
       id: GetSlug(id),
       name,
@@ -94,6 +95,7 @@ export async function GetStages(config: Config): Promise<Stage[]> {
       ],
     }
   })
+  return a.filter((i: any) => i)
 }
 
 const SPEAKER_DATA_RANGE = 'F4:I'
@@ -116,7 +118,6 @@ export async function getSessions(config: Config): Promise<Session[]> {
   const speakerData = await getSpeakers(config)
   const stageData = await GetStages(config)
   return data.map((row: any) => {
-    console.log(row )
     const [id, Name, Description, stageId, Day, Start, End, Speaker1Id, Speaker2Id, Speaker3Id, Speaker4Id, Speaker5Id, video] = row
     const speakersRaw = [Speaker1Id, Speaker2Id, Speaker3Id, Speaker4Id].map((id: string) => {
       if (!id) return null

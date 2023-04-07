@@ -42,7 +42,7 @@ export default function Navbar() {
               </div>
               <div className={css.navbar__nav}>
                 <div className={css.navbar__logo}>
-                  <Link href="/">
+                  <Link href="/schedule">
                     <a>
                       <Image src={img} alt={TITLE} layout="fill" />
                     </a>
