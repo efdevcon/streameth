@@ -62,7 +62,7 @@ export function StageComponent() {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/4 p-3 lg:p-5 box-border flex flex-col overflow-auto mt-6 lg:mt-0">
+          <div className="lg:w-1/4 p-3 lg:p-5 box-border flex flex-col overflow-auto lg:mt-0">
             <h3 className="text-2xl font-bold dark:text-white flex mb-3">Schedule</h3>
             <div className="flex flex-col w-full overflow-y-auto">
               <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={false} />
