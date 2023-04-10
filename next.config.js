@@ -1,14 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/schedule',
-        permanent: true,
-      },
-    ]
-  },
   reactStrictMode: true,
   staticPageGenerationTimeout: 180,
   workerThreads: false,
