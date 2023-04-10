@@ -25,7 +25,6 @@ export function StageComponent() {
     ])
   }, [currentStage, eventDayNum, setFilters])
 
-  // Modal probably needs to be global context
   const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {
     setModalContentType(type)
     setSpeaker(speaker)
@@ -49,8 +48,8 @@ export function StageComponent() {
         {modalContent()}
       </Modal>
       <PageContainer>
-        <div className="flex flex-col xl:flex-row h-full overflow-hidden">
-          <div className="flex flex-col w-full min-h-[50%] h-full">
+        <div className="flex flex-col lg:flex-row h-full overflow-hidden">
+          <div className="flex flex-col w-full h-full">
             <Player stream={currentStage.stream} />
             <div className="mt-auto">
               <div>
@@ -63,7 +62,7 @@ export function StageComponent() {
               </div>
             </div>
           </div>
-          <div className="xl:w-1/5 p-3 xl:p-5 box-border flex flex-col overflow-auto">
+          <div className="lg:w-1/4 p-3 lg:p-5 box-border flex flex-col overflow-auto mt-6 lg:mt-0">
             <h3 className="text-2xl font-bold dark:text-white flex mb-3">Schedule</h3>
             <div className="flex flex-col w-full overflow-y-auto">
               <SessionList timeState={timeState} sessions={sessions} currentSession={currentSession} isLive={false} />

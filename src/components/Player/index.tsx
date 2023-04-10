@@ -10,8 +10,10 @@ interface Props {
 
 const OfflinePlayer = () => {
   return (
-    <div className="bg-gray-800 flex flex-col items-center justify-center w-full h-full">
-      <span className="round text-2xl font-bold text-gray-500">Offline</span>
+    <div className="w-full h-full relative">
+      <div className=" inset-0 bg-gray-800 flex items-center justify-center aspect-video">
+        <span className="text-2xl font-bold text-gray-500">Offline</span>
+      </div>
     </div>
   )
 }
@@ -58,31 +60,5 @@ export const Player = ({ ...props }: Props) => {
 
   if (!currentPlaybackUrl) return <OfflinePlayer />
 
-  return (
-    <LivepeerPlayer
-      mediaElementRef={mediaElementRef}
-      src={currentPlaybackUrl}
-      showTitle={false}
-      showPipButton={false}
-      autoPlay
-      priority
-      theme={{
-        borderWidths: {
-          containerBorderWidth: 0,
-        },
-        colors: {
-          accent: '#00a55f',
-        },
-        space: {
-          controlsBottomMarginX: '10px',
-          controlsBottomMarginY: '5px',
-          controlsTopMarginX: '15px',
-          controlsTopMarginY: '10px',
-        },
-        radii: {
-          containerBorderRadius: '0px',
-        },
-      }}
-    />
-  )
+  return <LivepeerPlayer objectFit="cover" src={currentPlaybackUrl} showTitle={false} showPipButton={false} muted={false} autoPlay />
 }
