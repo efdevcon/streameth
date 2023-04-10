@@ -1,4 +1,4 @@
-import { Stream, DataConfig } from './config'
+import { DataConfig } from './config'
 
 // TODO: Might be good to keep track of event state at a higher level
 // TODO: Same for stage state. E.g. which rooms/stages have ended and should go to archive functions
@@ -16,20 +16,12 @@ export interface Event {
   imageUrl: string
   stages: Stage[]
   data: DataConfig
-  // Sessions: Session[]
-  // Speakers: Speaker[]
-  // stream: Stream
-  // schedule: Schedule
-  // archive: Archive
 }
 
 export interface Session {
   id: string
   name: string
-  //abstract?: string
   description: string
-  //track?: string
-  //type?: string
   stage: Stage
   start: number
   end: number
@@ -80,3 +72,4 @@ export interface PossibleFilter {
 }
 
 export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'
+
