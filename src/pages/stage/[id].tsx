@@ -29,6 +29,7 @@ export default function StagePage(props: Props) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const stages = await GetStages()
+  console.log(stages)
   return {
     paths: stages.map((stage) => ({ params: { id: stage.id } })),
     fallback: false,
@@ -38,14 +39,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
   const stageId = context.params?.id
   if (!stageId) return { props: null, notFound: true }
+
   const stage = await GetStageById(stageId)
   if (!stage) return { props: null, notFound: true }
+
   const sessions = await GetSessionsForStage(stageId)
 
   return {
     props: {
       stage,
       sessions,
-    },
+    }
   }
 }

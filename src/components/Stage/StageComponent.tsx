@@ -50,7 +50,7 @@ export function StageComponent() {
       </Modal>
       <PageContainer>
         <div className="flex flex-col xl:flex-row h-full overflow-hidden">
-          <div className="flex flex-col w-full xl:w-4/5 h-60 md:h-96  xl:h-full">
+          <div className="flex flex-col w-full min-h-[50%] h-full">
             <Player stream={currentStage.stream} />
             <div className="mt-auto">
               <div>

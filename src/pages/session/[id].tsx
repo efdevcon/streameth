@@ -4,6 +4,7 @@ import { Session } from 'types'
 import { ParsedUrlQuery } from 'querystring'
 import SessionComponent from 'components/Session/SessionComponent'
 import { SEO } from 'components/seo'
+
 interface Props {
   session: Session
 }

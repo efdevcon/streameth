@@ -1,8 +1,5 @@
 import { Session, Speaker } from 'types'
 import { ShareIcon } from '@heroicons/react/24/outline'
-import css from './SessionInfoBox.module.scss'
-import SpeakerIconList from 'components/Speaker/IconList'
-import { currentTimeInUTC, localizedMoment } from 'utils/dateTime'
 import { useStage } from 'hooks/useStage'
 import { useSessions } from 'hooks/useSessions'
 

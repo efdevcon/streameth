@@ -1,16 +1,17 @@
-import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import Image from 'next/image'
-import css from './Navbar.module.scss'
-import img from 'assets/images/logo.png'
 import DarkModeToggle from 'components/DarkMode/Toggle'
 import Container from 'components/Container'
 import { useRouter } from 'next/router'
+import { TITLE } from 'utils/constants'
+import img from 'assets/images/logo.png'
 
-const pages = [
-  { name: 'Schedule', href: '/schedule' },
-]
+interface page {
+  name: string
+  href: string
+}
+
+const pages: page[] = []
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -21,65 +22,38 @@ export default function Navbar() {
   const path = router.asPath
 
   return (
-    <Disclosure as="nav" className={css.navbar}>
-      {({ open }) => (
-        <>
-          <Container>
-            <div className={css.navbar__inner}>
-              <div className={css.navbar__hamburger}>
-                <Disclosure.Button className={css.navbar__hamburger__button}>
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className={css.navbar__hamburger__button__icon} aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className={css.navbar__hamburger__button__icon} aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className={css.navbar__nav}>
-                <div className={css.navbar__logo}>
-                  <Link href="/">
-                    <a>
-                      <Image src={img} alt="StreamETH" layout="fill" />
-                    </a>
-                  </Link>
-                </div>
-                <div className={css.navbar__nav__items}>
-                  <div className="flex space-x-4">
-                    {pages.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(item.href === path ? css.active : '', css.navbar__nav__item)}
-                        aria-current={item.href === path ? 'page' : undefined}>
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                  <DarkModeToggle />
-                </div>
-              </div>
-            </div>
-          </Container>
-          <Disclosure.Panel className={css.navbar__mobileMenu}>
-            <div className={css.navbar__mobileMenu__items}>
+    <nav className="bg-white border-b-2 border-opacity-1 border-gray-300">
+      <Container>
+        <div className="flex justify-between items-center py-2">
+          <div className="flex items-center">
+            <Link href="/">
+              <a className="relative w-32 h-12 lg:w-56 lg:h-16">
+                <Image src={img} alt={TITLE} layout="fill" objectFit="contain" />
+              </a>
+            </Link>
+          </div>
+          <div className="flex-1 flex items-center justify-start">
+            <div>
               {pages.map((item) => (
-                <Disclosure.Button
+                <a
                   key={item.name}
-                  as="a"
                   href={item.href}
-                  className={classNames(item.href === path ? css.active : '', css.navbar__mobileMenu__item)}
+                  className={classNames(item.href === path ? 'text-gray-900' : 'text-gray-500', 'px-3 py-2 font-medium text-sm')}
                   aria-current={item.href === path ? 'page' : undefined}>
                   {item.name}
-                </Disclosure.Button>
+                </a>
               ))}
-              <div className="px-3">
-                <DarkModeToggle />
-              </div>
             </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+          </div>
+          <div className="flex items-center">
+            <span className="mr-2 hidden md:block">Powered by</span>
+            <a className="relative w-32 lg:w-40 h-6" href="https://streameth.org" target="_blank" rel="noreferrer">
+              <Image src="/streameth.png" alt="streamETH" layout="fill" objectFit="contain" />
+            </a>
+            {/* <DarkModeToggle /> */}
+          </div>
+        </div>
+      </Container>
+    </nav>
   )
 }

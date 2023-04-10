@@ -25,11 +25,15 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
     }
   }, [pageProps.event])
 
+  if (!process.env.NEXT_PUBLIC_STUDIO_API_KEY){ 
+    console.error('process.env.NEXT_PUBLIC_STUDIO_API_KEY is not set')
+  }
+
   const livepeerClient = useMemo(
     () =>
       createReactClient({
         provider: studioProvider({
-          apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY,
+          apiKey: process.env.NEXT_PUBLIC_STUDIO_API_KEY ?? '',
         }),
       }),
     []
