@@ -23,6 +23,8 @@ export interface Event {
   // archive: Archive
 }
 
+export type SessionStatus = 'UPCOMING' | 'LIVE' | 'COMPLETED'
+
 export interface Session {
   id: string
   name: string
@@ -35,6 +37,7 @@ export interface Session {
   end: number
   speakers: Speaker[]
   video?: string
+  status: SessionStatus
 }
 
 export interface Speaker {
@@ -70,7 +73,7 @@ export interface Video {
 }
 
 export interface Filter {
-  type: 'stage' | 'day' | 'track' | 'recording' | 'speaker' 
+  type: 'stage' | 'day' | 'track' | 'recording' | 'speaker' | 'time'
   value: any
 }
 

@@ -15,7 +15,7 @@ const SessionInfoBox: React.FC<Props> = ({ session, onShareClick, onEmbedClick }
   return (
     <div className="bg-white px-3 border border-transparent py-2 space-y-2 dark:bg-black">
       <div className="py-2 flex justify-between items-center dark:text-gray-400">
-        <p className="text-xl font-medium">{`${stage.name} stage: ${session.name}`}</p>
+        <p className="text-xl font-medium">{`${stage?.name} stage: ${session?.name}`}</p>
         <span className="p-1 cursor-pointer text-gray-600 border-2 rounded-lg ml-auto dark:text-gray-300" onClick={onEmbedClick}>
           embed
         </span>
