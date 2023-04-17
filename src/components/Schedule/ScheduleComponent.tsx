@@ -9,17 +9,13 @@ export default function SessionComponent() {
 
   return (
     <PageContainer>
-      <div className="flex flex-col lg:flex-row h-full relative">
+      <div className="flex flex-col h-full relative">
         <FilterNavigation title={'Archive'} possibleFilters={possibleFilters} onItemSelect={addOrUpdateFilter} selectedItems={filters} />
-        <div className="w-full lg:w-3/4 h-full overflow-y-auto ml-auto">
-          <Container>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 px-4 lg:px-8 overflow-scroll ">
               {sessions.map((session) => (
                 <SessionSnack key={session.id} session={session} learnMore />
               ))}
-            </div>
-          </Container>
-        </div>
+          </div>
       </div>
     </PageContainer>
   )

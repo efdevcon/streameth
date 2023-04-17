@@ -22,29 +22,24 @@ const formatDateTime = (start: number, end: number) => {
 
 export default function SessionSnack({ session, learnMore, isLive = false, hasRecording = false }: Props) {
   const component = (
-    <div className={`rounded-lg border border-gray-200 p-3 bg-white dark:bg-gray-800 space-y-3 ${learnMore ? 'cursor-pointer' : ''}`}>
-      <div className="flex justify-between items-start">
-        <div>
-          <h3 className="text-xl font-semibold">{session.name}</h3>
-          <div className="flex items-center space-x-2 mt-2">
-            <StatusDot color={session.status === 'LIVE' ? 'green' : session.status === 'COMPLETED' ? 'red' : 'blue'} />
-            <span className="text-sm text-gray-500">{session.status === 'LIVE' ? 'Live' : session.status === 'COMPLETED' ? 'Past' : 'Upcoming'}</span>
-          </div>
+    <div className={`border p-4 bg-white space-y-3 hover:shadow-lg ${learnMore ? 'cursor-pointer' : ''}`}>
+      <div className="flex flex-col justify-between items-start">
+        <div className="flex items-center mb-1 w-full">
+          {/* <CalendarIcon className="h-5 w-5 text-gray-600" /> */}
+          <span className="font-thin">{session.stage.name}</span>
+          <StatusDot color={session.status === 'LIVE' ? 'green' : session.status === 'COMPLETED' ? 'red' : 'blue'} />
+          {/* <span className="text-sm text-gray-500">{session.status === 'LIVE' ? 'Live' : session.status === 'COMPLETED' ? 'Complete' : 'Upcoming'}</span> */}
         </div>
+        <p className="text-xl font-bold">{session.name}</p>
         {isLive ? <LiveIndicator /> : hasRecording ? <PlayCircleIcon className="h-6 w-6 text-gray-600" /> : null}
       </div>
       <div>
         <div className="flex items-center space-x-2 mb-2">
-          <CalendarIcon className="h-5 w-5 text-gray-600" />
-          <span className="text-gray-600 text-sm">{formatDateTime(session.start, session.end)}</span>
-        </div>
-        <div className="flex items-center space-x-2 mb-2">
-          <VideoCameraIcon className="h-5 w-5 text-gray-600" />
-          <span className="text-gray-600 text-sm">{session.stage.name}</span>
+          {/* <VideoCameraIcon className="h-5 w-5 text-gray-600" /> */}
+          <span className="text text-gray-400 text-md font-thin">{formatDateTime(session.start, session.end)}</span>
         </div>
       </div>
       <div>
-        <h4 className="text-sm font-semibold text-gray-600 mb-2">Speakers</h4>
         <SpeakerIconList speakers={session.speakers} />
       </div>
     </div>
