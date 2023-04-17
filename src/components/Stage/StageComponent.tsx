@@ -20,7 +20,7 @@ export function StageComponent() {
 
   useEffect(() => {
     addOrUpdateFilter({ type: 'stage', value: currentStage.id })
-    addOrUpdateFilter({ type: 'day', value: 'today' })
+    // addOrUpdateFilter({ type: 'day', value: 'today' })
   }, [currentStage])
 
   const currentSession = sessions[0]
@@ -62,9 +62,9 @@ export function StageComponent() {
             </div>
           </Container>
         </div>
-        <div className="flex flex-col lg:flex-row md:h-full">
-          <div className="flex flex-col w-full px-8 py-4 overflow-scroll">
-              <Player stream={currentStage.stream} />
+        <div className="flex flex-col lg:flex-row md:h-full h-full overflow-auto">
+          <div className="flex flex-col w-full lg:px-8 lg:py-4 overflow-y-scroll box-border">
+            <Player stream={currentStage.stream} />
             <SessionInfoBox
               session={currentSession}
               onShareClick={() => openModal('share')}
@@ -72,7 +72,7 @@ export function StageComponent() {
               onEmbedClick={() => openModal('embed')}
             />
           </div>
-          <div className="lg:w-1/3 p-3 lg:p-5 box-border flex flex-col overflow-auto lg:mt-0 h-full">
+          <div className="h-1/2 lg:w-1/3 p-3 lg:pb-0 lg:pl-0 lg:pt-4 lg:pr-4 box-border flex flex-col overflow-auto lg:mt-0 lg:h-full">
             {/* <h3 className="text-2xl font-bold dark:text-white flex mb-3">Schedule</h3> */}
             <div className="flex flex-col w-full overflow-y-auto h-full">
               <SessionList sessions={sessions} currentSession={currentSession} isLive={false} />

@@ -16,7 +16,7 @@ export default function Navbar({ pages }: { pages: page[] }) {
   const path = router.asPath
 
   return (
-    <nav className="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 h-18 py-2">
+    <nav className="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2">
       <Container>
         <div className="flex justify-between py-2">
           <div className="flex items-center">

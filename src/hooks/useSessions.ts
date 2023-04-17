@@ -3,6 +3,7 @@ import { Session, Filter, PossibleFilter, SessionStatus } from 'types';
 import { startOfDay, currentTimeInUTC, localizedMoment } from 'utils/dateTime';
 import { useContext } from 'react';
 import { PageContext } from 'context/page-context';
+import moment from 'moment';
 
 export function useSessions(initFilters: Filter[] = []) {
   const context = useContext(PageContext);
@@ -57,7 +58,7 @@ export function useSessions(initFilters: Filter[] = []) {
   const sessions = useMemo(() => {
     let filteredSessions = [...allSessions].map((session) => ({
       ...session,
-      status: getSessionStatus(session.start, session.end),
+      status: getSessionStatus(moment(session.start).toDate(), moment(session.end).toDate()),
     }));
     return filteredSessions.filter((session) => {
       if (filters.length === 0) {
@@ -83,12 +84,13 @@ export function useSessions(initFilters: Filter[] = []) {
   }, [allSessions, filters]);
 
   const addOrUpdateFilter = useCallback((filter: Filter) => {
+    console.log(filter)
     const index = filters.findIndex((f) => f.type === filter.type);
     if (index === -1) {
       setFilters([...filters, filter]);
     } else {
       const newFilters = [...filters];
-      newFilters.splice(index, 1, filter);
+      newFilters.splice(index, 1);
       setFilters(newFilters);
     }
   }, [filters]);

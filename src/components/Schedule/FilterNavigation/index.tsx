@@ -14,8 +14,6 @@ function FilterNavigationItem({
 }) {
   const { type, value } = possibleFilter
 
-  const isSelected = (item: string) => selectedItems.some((selectedItem) => selectedItem.value === item)
-
   if (type === 'speaker') {
     return <SpeakerFilterItem options={value} selectedItems={selectedItems} onItemSelect={onItemSelect} />
   }
@@ -23,10 +21,10 @@ function FilterNavigationItem({
   return (
     <div className="flex flex-col justify-between box-content p-4">
       <div className="flex flex-row flex-wrap">
-        <select className="p-3 border-2  bg-black text-white border-black">
+        <select className="p-3 border-2  bg-black text-white border-black" onChange={(e) => onItemSelect({ type, value: e.target.value })}>
           <option>{type}</option>
           {value?.map((item, index) => (
-            <option key={`${type}-${item}-${index}`} onClick={() => onItemSelect({ type, value: item })}>
+            <option key={`${type}-${item}-${index}`}>
               {type === 'day' ? getDate(item) : item}
             </option>
           ))}
@@ -60,7 +58,7 @@ export default function FilterNavigation({
     }
   }, [])
 
-  if (isMobile) {
+  if (isMobile && !isOpen) {
     return (
       <div className="bg-black opacity-80 text-white mb-4 cursor-pointer" onClick={() => setIsOpen(true)}>
         <div className="flex flex-row justify-between items-center px-7 lg:px-8 py-4">
