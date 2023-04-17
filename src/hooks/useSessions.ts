@@ -97,7 +97,6 @@ export function useSessions(initFilters: Filter[] = []) {
     setFilters(filters.filter((f) => f.type !== filterType));
   }, [filters]);
 
-  console.log(sessions, stages, filters)
 
   return {
     sessions,

@@ -83,3 +83,8 @@ export interface PossibleFilter {
 }
 
 export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'
+
+export interface page {
+  name: string
+  href: string
+}

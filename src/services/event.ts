@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { Event } from 'types'
-
+import { page } from 'types'
 const configPath = './config/streameth.json'
 
 export class EventController {

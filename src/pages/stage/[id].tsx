@@ -6,7 +6,7 @@ import { SEO } from 'components/seo'
 import { GetStages, GetStageById } from 'services/stage'
 import { GetSessionsForStage } from 'services/sessions'
 import { PageContextProvider } from 'context/page-context'
-
+import { page } from 'types'
 interface Props {
   stage: Stage 
   sessions: Session[] 
@@ -29,7 +29,6 @@ export default function StagePage(props: Props) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const stages = await GetStages()
-  console.log(stages)
   return {
     paths: stages.map((stage) => ({ params: { id: stage.id } })),
     fallback: false,
@@ -44,7 +43,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   if (!stage) return { props: null, notFound: true }
 
   const sessions = await GetSessionsForStage(stageId)
-
   return {
     props: {
       stage,

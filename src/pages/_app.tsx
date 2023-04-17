@@ -7,14 +7,26 @@ import init from '@socialgouv/matomo-next'
 import { useEffect, useMemo } from 'react'
 import Script from 'next/script'
 import { LivepeerConfig, createReactClient, studioProvider } from '@livepeer/react'
+import { page } from 'types'
+
+type Props = {
+  pages: page[]
+}
 
 type AppLayoutProps = AppProps & {
   Component: LayoutPageType
+  pageProps: Props
+}
+
+type LayoutProps = {
+  pages: page[]
+  children: React.ReactNode
 }
 
 export default function App({ Component, pageProps }: AppLayoutProps) {
-  const Layout = Component.layout || ((props) => <DefaultLayout>{props.children}</DefaultLayout>)
+  const Layout = Component.layout || ((props: LayoutProps) => <DefaultLayout pages={props.pages}>{props.children}</DefaultLayout>)
 
+  console.log('pageProps', pageProps)
   useEffect(() => {
     const plugin = pageProps.event?.plugins.find((i: any) => i['name'] === 'matomo')
     if (plugin) {
@@ -25,7 +37,7 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
     }
   }, [pageProps.event])
 
-  if (!process.env.NEXT_PUBLIC_STUDIO_API_KEY){ 
+  if (!process.env.NEXT_PUBLIC_STUDIO_API_KEY) {
     console.error('process.env.NEXT_PUBLIC_STUDIO_API_KEY is not set')
   }
 
@@ -43,7 +55,7 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
     <>
       <Script src="/theme.js" />
       <LivepeerConfig dehydratedState={pageProps?.dehydratedState} client={livepeerClient}>
-        <Layout>
+        <Layout pages={pageProps.pages}>
           <SEO />
           <Component {...pageProps} />
         </Layout>
