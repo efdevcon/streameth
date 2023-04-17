@@ -13,10 +13,13 @@ const SessionInfoBox: React.FC<Props> = ({ session, onShareClick, onEmbedClick }
   const stage = useStage()
 
   return (
-    <div className="bg-white px-3 border border-transparent py-2 space-y-2 dark:bg-black">
-      <div className="py-2 flex justify-between items-center dark:text-gray-400">
-        <p className="text-xl font-medium">{`${stage?.name} stage: ${session?.name}`}</p>
-        <span className="p-1 cursor-pointer text-gray-600 border-2 rounded-lg ml-auto dark:text-gray-300" onClick={onEmbedClick}>
+    <div className="bg-white px-3 border border-transparent py-2 space-y-2">
+      <div className="py-2 flex justify-between items-center">
+        <div className="flex flex-col">
+          <p className="text-xl font-medium">{`${session?.name}`}</p>
+          <p className="text-xl font-thin">{`${session?.start}`}</p>
+        </div>
+        <span className="p-1 cursor-pointer text-black border-black border-2  ml-auto" onClick={onEmbedClick}>
           embed
         </span>
         <ShareIcon className="h-8 w-8 cursor-pointer text-gray-600 ml-3 dark:text-gray-300" onClick={onShareClick} />

@@ -23,8 +23,15 @@ type LayoutProps = {
   children: React.ReactNode
 }
 
+const pages = [
+  {
+    name: 'Schedule',
+    href: '/schedule',
+  },
+]
+
 export default function App({ Component, pageProps }: AppLayoutProps) {
-  const Layout = Component.layout || ((props: LayoutProps) => <DefaultLayout pages={props.pages}>{props.children}</DefaultLayout>)
+  const Layout = Component.layout || ((props: LayoutProps) => <DefaultLayout pages={pages}>{props.children}</DefaultLayout>)
 
   console.log('pageProps', pageProps)
   useEffect(() => {
