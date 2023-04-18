@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import DarkModeToggle from 'components/DarkMode/Toggle'
 import Container from 'components/Container'
 import { useRouter } from 'next/router'
 import { TITLE } from 'utils/constants'

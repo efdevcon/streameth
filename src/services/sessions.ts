@@ -22,6 +22,7 @@ export async function GetSessions(): Promise<Session[]> {
 
 export async function GetSessionsForStage(stage: Stage["id"]): Promise<Session[]> {
   const sessions = await GetSessions()
+  console.log("dwa")
   const filteredSessions = sessions.filter((i) => i.stage.id === stage)
   if (filteredSessions.length === 0) {
     throw new Error(`No sessions found for stage ${stage}, at least 1 is required`)

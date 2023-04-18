@@ -11,16 +11,18 @@ import { Speaker } from 'types'
 import Embed from 'components/Embed'
 import Container from 'components/Container'
 import SessionInfoBox from 'components/Session/Infobox'
+import moment from 'moment'
 export function StageComponent() {
   const currentStage = useStage()
   const { sessions, addOrUpdateFilter } = useSessions()
   const [modalOpen, setModalOpen] = useState(false)
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
-
+  console.log(moment().startOf('day').valueOf())
   useEffect(() => {
     addOrUpdateFilter({ type: 'stage', value: currentStage.id })
-    // addOrUpdateFilter({ type: 'day', value: 'today' })
+    // current date in unix timestamp
+    addOrUpdateFilter({ type: 'day', value: moment().startOf('day').valueOf() })
   }, [currentStage])
 
   const currentSession = sessions[0]

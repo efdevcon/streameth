@@ -6,7 +6,7 @@
   "website": "https://ethporto.org/",
   "poster": "/social.png",
   "data": {
-    "type": "gsheet",
+    "type": "zuzalu",
     "config": {
       "sheetId": "1oe2C9BFunInC0-rLVOHuQQ3Uu5osOHUlAJxLooLd69c"
     }

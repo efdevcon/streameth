@@ -25,7 +25,15 @@ type LayoutProps = {
 
 const pages = [
   {
-    name: 'Schedule',
+    name: 'Dome',
+    href: '/stage/5',
+  },
+  {
+    name: 'Board Room',
+    href: '/stage/4',
+  },
+  {
+    name: 'Archive',
     href: '/schedule',
   },
 ]
