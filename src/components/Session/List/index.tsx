@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Session } from 'types'
 import Scroll, { Element } from 'react-scroll'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import SessionSnack from '../Snack'
@@ -39,7 +38,7 @@ export default function SessionList({ sessions, currentSession, isLive }: Props)
   }, [currentSession])
 
   return (
-    <ul id="sessionList" className={styles.list}>
+    <ul id="sessionList" className="relative space-y-2 mt-1">
       {sessions.map((i) => {
         return (
           <Element key={i.id} name={i.id}>

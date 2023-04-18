@@ -37,7 +37,7 @@ export interface Session {
   end: number
   speakers: Speaker[]
   video?: string
-  status: SessionStatus
+  status?: SessionStatus
 }
 
 export interface Speaker {

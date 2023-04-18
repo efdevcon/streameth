@@ -11,7 +11,7 @@ interface Props {
 const SessionInfoBox: React.FC<Props> = ({ session, onShareClick, onEmbedClick }) => {
   return (
     <div className="bg-white px-3 border border-transparent py-2 space-y-2">
-      <div className="py-2 flex justify-between items-center">
+      <div className="flex justify-between items-center">
         <div className="flex flex-col">
           <p className="text-xl font-medium">{`${session?.name}`}</p>
           <p className="text-xl font-thin">{`${moment(session?.start).format('HH:mm')} - ${moment(session?.end).format('HH:mm')}`}</p>

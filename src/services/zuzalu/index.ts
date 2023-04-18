@@ -8,7 +8,7 @@ import { Session, Speaker, Stage } from 'types' // Update the import path to the
 const API_QUEUE = new PQueue({ concurrency: 1, interval: 1500 })
 
 async function fetchApi(endpoint: string) {
-  const response = await API_QUEUE.add(() => fetch(endpoint))
+  const response: any = await API_QUEUE.add(() => fetch(endpoint))
   if (!response.ok) {
     throw new Error(`API call failed with status ${response.status}: ${response.statusText}`)
   }
@@ -28,7 +28,7 @@ async function getLocalJsonCache(filename: string) {
   try {
     const cacheData = await fs.readFile(cacheFile, 'utf8')
     return JSON.parse(cacheData)
-  } catch (err) {
+  } catch (err: any) {
     if (err.code === 'ENOENT') return null
     throw err
   }
@@ -63,11 +63,13 @@ async function fetchSession(sessionId: number): Promise<Session> {
     id: session.id.toString(),
     name: session.name,
     description: session.description,
-    track: session.track,
+    //track: session.track,
     stage: await GetStages().then((stages) => {
-      return stages.find((stage) => {
-        return stage.name === session.location
-      })
+      return (
+        stages.find((stage) => {
+          return stage.name === session.location
+        }) || { id: '0', name: 'Unknown', stream: [{ id: '' }] }
+      )
     }),
     start: moment(`${session.startDate} ${session.startTime}`).valueOf(),
     end: moment(`${session.startDate} ${session.startTime}`).add(timeToAdd, 'minutes').valueOf(),
