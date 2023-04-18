@@ -1,0 +1,105 @@
+[
+  {
+    "id": "1",
+    "name": "Amphitheater",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Almara Beach",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Ballroom",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Board Room",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Dome",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Kiki’s Restaurant inside",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Kiki’s Restaurant outside",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Lighthouse",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Outdoor Gym Deck",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Rock Bar",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Tony’s Bar",
+    "stream": [
+      {
+        "id": "1"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Other"
+  }
+]

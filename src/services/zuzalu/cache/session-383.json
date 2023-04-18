@@ -1,0 +1,15 @@
+{
+  "id": 383,
+  "name": "Polynomial commitments tutorial pt. 2",
+  "description": "<p>A tutorial on polynomial commitments with Barry Whitehat. &nbsp;<br>\n<br>\nBecause of the location this session will be limited to a capacity of 15 people. First come, first serve.<br>\n</p>\n<p>This even is being held in one of the Lustica Apartments, located in Townhouse 14. Use the Google Maps link below to access a pinned location.<br>\n</p>\n<p>https://goo.gl/maps/pC5bgcGkMDRT7Ncz7&nbsp;</p>",
+  "track": "ZK Week",
+  "stage": "Other",
+  "start": 1681907400000,
+  "end": 1681914600000,
+  "speakers": [
+    {
+      "id": "Barry Whitehat",
+      "name": "Barry Whitehat"
+    }
+  ]
+}
