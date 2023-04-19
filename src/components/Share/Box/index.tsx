@@ -42,9 +42,9 @@ export function ShareBox({ title }: Props) {
       </div>
       <div className="flex justify-between">
         <div className="bg-gray-100 px-2 py-1 grow border border-gray-200">{url}</div>
-        <CopyToClipboard text={url} onCopy={() => setButtonText('Copied')}>
+        {/* <CopyToClipboard text={url} onCopy={() => setButtonText('Copied')}>
           <button className="px-3 py-1 ml-3 bg-gray-300">{buttonText}</button>
-        </CopyToClipboard>
+        </CopyToClipboard> */}
       </div>
     </div>
   )

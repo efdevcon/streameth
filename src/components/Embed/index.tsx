@@ -19,9 +19,9 @@ export default function Embed({ ...props }: Props) {
         <span className="round text-lg mb-4">Easily embed this stream into your website by adding the iframe code below</span>
         <div className="flex justify-between">
         <div className="bg-gray-100 px-2 py-1 border border-gray-200 w-full max-w-[250px] overflow-hidden whitespace-nowrap">{generateEmbedCode()}</div>
-        <CopyToClipboard text={generateEmbedCode()} onCopy={() => setButtonText('Copied')}>
+        {/* <CopyToClipboard text={generateEmbedCode()} onCopy={() => setButtonText('Copied')}>
           <button className="px-3 py-1 ml-3 bg-gray-300">{buttonText}</button>
-        </CopyToClipboard>
+        </CopyToClipboard> */}
       </div>
       </div>
     </div>

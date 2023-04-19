@@ -81,7 +81,6 @@ async function fetchSession(sessionId: number): Promise<Session> {
     }),
     //video: session.video,
   }
-  console.log(data)
   await createLocalJsonCache(data, `session-${sessionId}`)
   return data
 }

@@ -62,7 +62,6 @@ export function useSessions(initFilters: Filter[] = []) {
       return filters.every((filter) => {
         switch (filter.type) {
           case 'day':
-            console.log(startOfDay(session.start))
             return startOfDay(session.start) === filter.value
           case 'stage':
             return session.stage.id === filter.value
@@ -81,7 +80,6 @@ export function useSessions(initFilters: Filter[] = []) {
 
   const addOrUpdateFilter = useCallback(
     (filter: Filter) => {
-      console.log(filter)
       const index = filters.findIndex((f) => f.type === filter.type)
       if (index === -1) {
         setFilters([...filters, filter])

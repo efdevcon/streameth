@@ -13,12 +13,13 @@ import '@rainbow-me/rainbowkit/styles.css'
 
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import { configureChains, createClient, WagmiConfig } from 'wagmi'
-import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains'
+import { mainnet } from 'wagmi/chains'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
 
 type Props = {
   pages: page[]
+  event: any
 }
 
 type AppLayoutProps = AppProps & {
@@ -46,24 +47,25 @@ const pages = [
   },
 ]
 
+const { chains, provider } = configureChains(
+  [mainnet],
+  [infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY ?? '' }), publicProvider()]
+)
+const { connectors } = getDefaultWallets({
+  appName: 'StreamETH',
+  chains,
+})
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider,
+})
+
 export default function App({ Component, pageProps }: AppLayoutProps) {
   const Layout = Component.layout || ((props: LayoutProps) => <DefaultLayout pages={pages}>{props.children}</DefaultLayout>)
 
-  const { chains, provider } = configureChains(
-    [mainnet, polygon, optimism, arbitrum],
-    [infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY ?? '' }), publicProvider()]
-  )
-  const { connectors } = getDefaultWallets({
-    appName: 'StreamETH',
-    chains,
-  })
-  const wagmiClient = createClient({
-    autoConnect: true,
-    connectors,
-    provider,
-  })
 
-  console.log('pageProps', pageProps)
+
   useEffect(() => {
     const plugin = pageProps.event?.plugins.find((i: any) => i['name'] === 'matomo')
     if (plugin) {
@@ -92,10 +94,10 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
         <Script src="/theme.js" />
-        <LivepeerConfig dehydratedState={pageProps?.dehydratedState} client={livepeerClient}>
+        <LivepeerConfig client={livepeerClient}>
           <Layout pages={pageProps.pages}>
             <SEO />
-            <Component {...pageProps} />
+            <Component {...pageProps as any} />
           </Layout>
         </LivepeerConfig>
       </RainbowKitProvider>

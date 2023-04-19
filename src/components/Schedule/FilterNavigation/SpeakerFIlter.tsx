@@ -24,7 +24,7 @@ export default function SpeakerFilterItem({
   const selectedSpeakerOptions = useMemo(() => selectedItems.filter((item) => item.type === 'speaker').map((item) => item.value), [selectedItems])
 
   const handleSpeakerSelect = useCallback(
-    (speaker) => {
+    (speaker:string) => {
       onItemSelect({ type: 'speaker', value: speaker })
       setSpeakerFilter('')
     },
