@@ -14,8 +14,6 @@ import SessionInfoBox from 'components/Session/Infobox'
 import moment from 'moment'
 import Tab from './Tab'
 import ChatBar from 'components/Chat'
-import CustomPlayer from 'components/Player/CustomPlayer'
-import { useStream } from '@livepeer/react'
 export function StageComponent() {
   const currentStage = useStage()
   const { sessions, addOrUpdateFilter } = useSessions()
@@ -25,10 +23,7 @@ export function StageComponent() {
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
   const [tab, setTab] = useState<number>(0)
-  const { data: stream } = useStream({
-    streamId: currentStage.stream[0].id,
-    refetchInterval: (s) => (s?.isActive ? false : 5000),
-  })
+
   useEffect(() => {
     addOrUpdateFilter({ type: 'stage', value: currentStage.id })
     // current date in unix timestamp
@@ -74,11 +69,11 @@ export function StageComponent() {
         </div>
         <div className="flex flex-col lg:flex-row h-[calc(100%-5rem)] relative">
           <div className="flex flex-col w-full lg:px-8 lg:py-2">
-            {/* <Player stream={currentStage.stream} /> */}
-            <CustomPlayer
+            <Player stream={currentStage.stream} />
+            {/* <CustomPlayer
               source={stream?.isActive ? { src: stream?.playbackUrl, type: 'application/x-mpegURL' } : null}
               onStreamError={() => console.log('stream error')}
-            />
+            /> */}
             <div className="hidden md:block">
               <SessionInfoBox
                 session={currentSession}

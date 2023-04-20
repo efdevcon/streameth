@@ -35,11 +35,11 @@ type LayoutProps = {
 const pages = [
   {
     name: 'Dome',
-    href: '/stage/5',
+    href: '/stage/Dome',
   },
   {
     name: 'Board Room',
-    href: '/stage/4',
+    href: '/stage/Board Room',
   },
   {
     name: 'Archive',

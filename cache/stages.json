@@ -1,109 +1,28 @@
 [
   {
-    "id": "1",
-    "name": "Amphitheater",
-    "stream": [
-      {
-        "id": "1"
-      }
-    ]
-  },
-  {
-    "id": "2",
-    "name": "Almara Beach",
-    "stream": [
-      {
-        "id": "1"
-      }
-    ]
-  },
-  {
-    "id": "3",
+    "id": "Ballroom",
     "name": "Ballroom",
     "stream": [
       {
-        "id": "1"
+        "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec"
       }
     ]
   },
   {
-    "id": "4",
+    "id": "Board Room",
     "name": "Board Room",
     "stream": [
       {
-        "id": "1"
+        "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec"
       }
     ]
   },
   {
-    "id": "5",
+    "id": "Dome",
     "name": "Dome",
     "stream": [
       {
         "id": "dd91a031-33e3-4567-aa35-d8df14a030f4"
-      }
-    ]
-  },
-  {
-    "id": "6",
-    "name": "Kiki’s Restaurant inside",
-    "stream": [
-      {
-        "id": "1"
-      }
-    ]
-  },
-  {
-    "id": "7",
-    "name": "Kiki’s Restaurant outside",
-    "stream": [
-      {
-        "id": "1"
-      }
-    ]
-  },
-  {
-    "id": "8",
-    "name": "Lighthouse",
-    "stream": [
-      {
-        "id": "1"
-      }
-    ]
-  },
-  {
-    "id": "9",
-    "name": "Outdoor Gym Deck",
-    "stream": [
-      {
-        "id": "1"
-      }
-    ]
-  },
-  {
-    "id": "10",
-    "name": "Rock Bar",
-    "stream": [
-      {
-        "id": "1"
-      }
-    ]
-  },
-  {
-    "id": "11",
-    "name": "Tony’s Bar",
-    "stream": [
-      {
-        "id": "1"
-      }
-    ]
-  },
-  {
-    "id": "12",
-    "name": "Other",
-    "stream": [
-      {
-        "id": "1"
       }
     ]
   }

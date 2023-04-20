@@ -1617,12 +1617,12 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.0.0"
 
-"@livepeer/core-react@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@livepeer/core-react/-/core-react-1.4.2.tgz#c1596004b201ab2e883bba4e786b93ddda87419c"
-  integrity sha512-0ZFy4fX9apGgyzZT8jH7w55vsVEiIBZGAfcGSwuTCk/fcqrn4U8Eyi6whgtdq4gmBFxpe7KAvejh73b9C7DorA==
+"@livepeer/core-react@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@livepeer/core-react/-/core-react-1.4.3.tgz#6a3acfae99e4781754a6144e514262bc79c23739"
+  integrity sha512-DLH0HNq+DpMCn0yjYv8hfhCPcchVaQtpjHb2f/CUpXTYOR3BH9yBvvtrDTxtHDU8OsWMX9VpQ3Phq8kSU2RfIw==
   dependencies:
-    "@livepeer/core" "^1.4.2"
+    "@livepeer/core" "^1.4.3"
     "@tanstack/query-async-storage-persister" "4.22.4"
     "@tanstack/query-core" "4.22.4"
     "@tanstack/react-query" "4.22.4"
@@ -1630,10 +1630,10 @@
     use-sync-external-store "^1.2.0"
     zustand "^4.3.2"
 
-"@livepeer/core@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@livepeer/core/-/core-1.4.2.tgz#752ff483db9e51a9d7081a3b656a0b9950d21565"
-  integrity sha512-hWL3g3d/oeo5/mMfh8Strjhh7ECkTVq6TiCXThE9gqlsRE4DdAzmH8NGsI6TlnbtdS2Eg7ZEPrpiD/lzOZbfZQ==
+"@livepeer/core@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@livepeer/core/-/core-1.4.3.tgz#e050ce44eae105a2fefbcff24d2961e0dfc68cbe"
+  integrity sha512-vn97Gy6dLbJ1edAirrN0yhxcC/gAzQQ1Go1nQRO/wT4yZz4+ELefNlKNKUbEqRF5iD7YjSSKZwZtYenTRUOSWQ==
   dependencies:
     cross-fetch "^3.1.5"
     ms "^3.0.0-canary.1"
@@ -1641,15 +1641,15 @@
     tus-js-client "^3.0.1"
     zustand "^4.3.2"
 
-"@livepeer/react@^2.4.0":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/@livepeer/react/-/react-2.4.2.tgz#00b99e803eaf515c44171b0b55975a6da98143cb"
-  integrity sha512-Vcqid3MdsSwBRVSlhIEEG8FJPFD85NWAxJVELmRKOp5JZmlvHwMal1+hgBOhhyAZdMD7O9m2fBzP4sqmP8szdw==
+"@livepeer/react@2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@livepeer/react/-/react-2.4.3.tgz#437fcd3f40b2ff91126c48f012a4bc730e33bd2e"
+  integrity sha512-CaxDE6uhu7F9nFNL0nEoDiow5Yy+T0iPH8SDN9vpTdKrDpWD44imp19jSH2hs8OGgfzwUW3UfVSQixXPgKPIFw==
   dependencies:
-    "@livepeer/core-react" "^1.4.2"
+    "@livepeer/core-react" "^1.4.3"
     "@stitches/react" "^1.2.8"
     core-js "^3.27.2"
-    livepeer "2.4.2"
+    livepeer "2.4.3"
     zustand "^4.3.2"
 
 "@metamask/safe-event-emitter@2.0.0", "@metamask/safe-event-emitter@^2.0.0":
@@ -5892,7 +5892,7 @@ hey-listen@^1.0.8:
   resolved "https://registry.yarnpkg.com/hey-listen/-/hey-listen-1.0.8.tgz#8e59561ff724908de1aa924ed6ecc84a56a9aa68"
   integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==
 
-hls.js@^1.3.1:
+hls.js@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/hls.js/-/hls.js-1.4.0.tgz#e73af3e7c8d4310a2bcc92d5ade362dfb781fef7"
   integrity sha512-VEjg7Rx5FlE9TB3MIn0HPgq3J+vR7EoQnjaqMCk/ISEaCOSZlAFh4g867f1QkSxZiq9kHeUZo+iH16X7VS3jKA==
@@ -7736,16 +7736,16 @@ lit@2.7.2:
     lit-element "^3.3.0"
     lit-html "^2.7.0"
 
-livepeer@2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/livepeer/-/livepeer-2.4.2.tgz#0b83013ac853d75693639755084f2ceeccf1fc6b"
-  integrity sha512-a2nkJ8g+x7FJCDbZtME3gX8bj6PzETZTsP9BZXU/rMPm3DtAqUKNosjqGXR843od7J/uDVVU4/WiCH8zdC+F1Q==
+livepeer@2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/livepeer/-/livepeer-2.4.3.tgz#99a64e1a0a9a3ff6532a7ffbeaa24c7f2737f2cc"
+  integrity sha512-MufpHS1k/MICk6xLJldaJs6Lx9+RsCj1ZOWh7X/9IrnRCbTDD3Dv2G6P0w96w6+Hkml7M0CkeuU0HCfoZwWQWw==
   dependencies:
-    "@livepeer/core" "^1.4.2"
+    "@livepeer/core" "^1.4.3"
     "@stitches/core" "^1.2.8"
     core-js "^3.27.2"
     cross-fetch "^3.1.5"
-    hls.js "^1.3.1"
+    hls.js "^1.4.0"
     ms "^3.0.0-canary.1"
     multiformats "9.9.0"
     tus-js-client "^3.0.1"

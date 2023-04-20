@@ -42,7 +42,7 @@ export async function GetStages(): Promise<Stage[]> {
   const response = await fetchApi('https://zuzalu.city/api/fetchLocations')
   const stages: Stage[] = response.map((location: any) => {
     return {
-      id: location.id.toString(),
+      id: location.location,
       name: location.location,
     }
   })
