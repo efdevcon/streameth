@@ -65,5 +65,15 @@ export const Player = ({ ...props }: Props) => {
 
   if (!currentPlaybackUrl) return <OfflinePlayer />
 
-  return <LivepeerPlayer objectFit="cover" src={currentPlaybackUrl} showTitle={false} showPipButton={false} muted={false} autoPlay />
+  return (
+    <LivepeerPlayer
+      mediaElementRef={mediaElementRef}
+      objectFit="cover"
+      src={currentPlaybackUrl}
+      showTitle={false}
+      showPipButton={false}
+      muted={false}
+      autoPlay
+    />
+  )
 }
