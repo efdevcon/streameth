@@ -38,8 +38,8 @@ const pages = [
     href: '/stage/Dome',
   },
   {
-    name: 'Board Room',
-    href: '/stage/Board Room',
+    name: 'Ballroom',
+    href: '/stage/Ballroom',
   },
   {
     name: 'Archive',
