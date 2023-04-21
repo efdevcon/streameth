@@ -30,7 +30,7 @@ export interface Session {
   name: string
   //abstract?: string
   description: string
-  //track?: string
+  track?: string
   //type?: string
   stage: Stage
   start: number

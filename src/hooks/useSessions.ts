@@ -21,11 +21,16 @@ export function useSessions(initFilters: Filter[] = []) {
   const eventDays = [...new Set(allSessions.map((i) => startOfDay(i.start)))].sort()
   const stages = [...new Set(allSessions.map((i) => i.stage.id))].sort()
   const speakers = [...new Set(allSessions.map((i) => i.speakers.map((j) => j.name)).flat())].sort()
+  const tracks = [...new Set(allSessions.map((i) => i.track))].sort()
   const possibleFilters: PossibleFilter[] = useMemo(() => {
     return [
       {
         type: 'day',
         value: eventDays,
+      },
+      {
+        type: 'track',
+        value: tracks,
       },
       {
         type: 'stage',
@@ -71,6 +76,8 @@ export function useSessions(initFilters: Filter[] = []) {
             return session.start >= filter.value
           case 'recording':
             return filter.value === 'yes' ? !!session.video : !session.video
+          case 'track':
+            return session.track === filter.value
           default:
             return false
         }

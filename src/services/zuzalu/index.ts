@@ -63,7 +63,7 @@ async function fetchSession(sessionId: number): Promise<Session> {
     id: session.id.toString(),
     name: session.name,
     description: session.description,
-    //track: session.track,
+    track: session.track,
     stage: await GetStages().then((stages) => {
       return (
         stages.find((stage) => {
