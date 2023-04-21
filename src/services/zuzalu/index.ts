@@ -87,13 +87,8 @@ async function fetchSession(sessionId: number): Promise<Session> {
 
 export async function GetSessions(): Promise<Session[]> {
   let sessions: any[]
-  const cache = await getLocalJsonCache('sessions')
-  if (!cache) {
-    sessions = await fetchApi('https://zuzalu.city/api/fetchSessions')
-    await createLocalJsonCache(sessions, 'sessions')
-  } else {
-    sessions = cache
-  }
+  sessions = await fetchApi('https://zuzalu.city/api/fetchSessions')
+  await createLocalJsonCache(sessions, 'sessions')
   const fetchedSessions: Session[] = await Promise.all(
     sessions.map(async (session: any) => {
       return await fetchSession(session.id)
