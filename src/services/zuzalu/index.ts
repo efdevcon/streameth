@@ -8,7 +8,15 @@ import { Session, Speaker, Stage } from 'types' // Update the import path to the
 const API_QUEUE = new PQueue({ concurrency: 1, interval: 1500 })
 
 async function fetchApi(endpoint: string) {
-  const response: any = await API_QUEUE.add(() => fetch(endpoint))
+  const response: any = await API_QUEUE.add(() =>
+    fetch(endpoint, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        htmlcode: process.env.ZUZALU_HTMLCODE as string,
+      },
+    })
+  )
   if (!response.ok) {
     throw new Error(`API call failed with status ${response.status}: ${response.statusText}`)
   }

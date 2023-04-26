@@ -40,13 +40,7 @@ export default function Navbar({ pages }: { pages: page[] }) {
             </div>
           </div>
           <div className="hidden md:flex">
-            <ConnectButton
-              accountStatus={{
-                smallScreen: 'avatar',
-                largeScreen: 'full',
-              }}
-              chainStatus="none"
-            />
+     
           </div>
           <button
             className="md:hidden border-2 border-black p-2"
