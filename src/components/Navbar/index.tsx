@@ -28,7 +28,7 @@ export default function Navbar({ pages }: { pages: page[] }) {
               </a>
             </Link>
           </div>
-          <div className="flex-1 flex items-center space-x-2 justify-center">
+          <div className="flex-1 flex items-center space-x-2 justify-end">
             <div className="hidden md:flex">
               {pages.map((item) => (
                 <Link key={item.name} href={item.href}>
@@ -61,13 +61,13 @@ export default function Navbar({ pages }: { pages: page[] }) {
             ))}
             <li>
               {/* <div className="border-2 border-black p-2 my-2">Sign in with Ethereum</div> */}
-              <ConnectButton
+              {/* <ConnectButton
                 accountStatus={{
                   smallScreen: 'full',
                   largeScreen: 'full',
                 }}
                 chainStatus="none"
-              />
+              /> */}
             </li>
           </ul>
         </div>
