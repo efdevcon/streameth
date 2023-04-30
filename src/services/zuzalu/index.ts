@@ -75,6 +75,7 @@ async function fetchSession(sessionId: number): Promise<Session> {
     stage: await GetStages().then((stages) => {
       return (
         stages.find((stage) => {
+          console.log(stage.name, session.location)
           return stage.name === session.location
         }) || { id: '0', name: 'Unknown', stream: [{ id: '' }] }
       )

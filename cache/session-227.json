@@ -1,1 +1,19 @@
-{"id":"227","name":"Synthetic Biology for carbon negative manufacturing of chemicals and materials","description":"From 10.40am to 11.00am.","track":"ZK Week","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1680424200000,"end":1680425100000,"speakers":[{"id":"Jennifer Holmgren, CEO, LanzaTech","name":"Jennifer Holmgren, CEO, LanzaTech"}]}
+{
+  "id": "227",
+  "name": "Synthetic Biology for carbon negative manufacturing of chemicals and materials",
+  "description": "From 10.40am to 11.00am.",
+  "track": "Longevity 0-1",
+  "stage": {
+    "id": "Dome",
+    "name": "Dome"
+  },
+  "start": 1680424200000,
+  "end": 1680425100000,
+  "speakers": [
+    {
+      "id": "Jennifer Holmgren, CEO, LanzaTech",
+      "name": "Jennifer Holmgren, CEO, LanzaTech"
+    }
+  ],
+  "video": "https://lp-playback.com/hls/56a9b8a44r2ljxlu/index.m3u8"
+}
