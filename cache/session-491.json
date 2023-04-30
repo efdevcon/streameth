@@ -1,1 +1,10 @@
-{"id":"491","name":"Sumcheck and Nova","description":"<p><strong>By Ariel Gabizon and Zac Williamson</strong><strong><br>\n</strong><br>\nWe will go over the basics of the sumcheck protocol, and then discuss how it might offer competing advantages to Nova, especially for high degree constraints.</p>","track":"ZK Week","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1682159400000,"end":1682163000000,"speakers":[{"id":"Zac Williamson","name":"Zac Williamson"}]}
+{
+  "id": "491",
+  "name": "Sumcheck and Nova",
+  "description": "<p><strong>By Ariel Gabizon and Zac Williamson</strong><strong><br>\n</strong><br>\nWe will go over the basics of the sumcheck protocol, and then discuss how it might offer competing advantages to Nova, especially for high degree constraints.</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682159400000,
+  "end": 1682163000000,
+  "speakers": [{ "id": "Zac Williamson", "name": "Zac Williamson" }]
+}

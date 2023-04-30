@@ -43,7 +43,7 @@ const pages = [
   },
   {
     name: 'Archive',
-    href: '/schedule',
+    href: '/archive',
   },
 ]
 

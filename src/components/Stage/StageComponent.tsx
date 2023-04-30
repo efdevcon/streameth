@@ -16,13 +16,14 @@ import Tab from './Tab'
 import ChatBar from 'components/Chat'
 export function StageComponent() {
   const currentStage = useStage()
-  const { sessions, addOrUpdateFilter } = useSessions()
-  const currentSession = sessions[0]
-
+  const { sessions, addOrUpdateFilter, currentSession } = useSessions()
+  console.log(currentSession)
   const [modalOpen, setModalOpen] = useState(false)
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
   const [tab, setTab] = useState<number>(0)
+
+  const activeSession = currentSession ?? sessions[0]
 
   useEffect(() => {
     addOrUpdateFilter({ type: 'stage', value: currentStage.id })
@@ -38,7 +39,7 @@ export function StageComponent() {
 
   const modalContent = () => {
     if (modalContentType === 'share') {
-      return <ShareBox title={currentSession.name} />
+      return <ShareBox title={activeSession.name} />
     } else if (modalContentType === 'speaker') {
       return <SpeakerModalBox speaker={speaker} />
     } else if (modalContentType === 'embed') {
@@ -58,7 +59,7 @@ export function StageComponent() {
             <div className="py-2 flex justify-between items-center dark:text-gray-400">
               <div className="flex flex-col">
                 <p className="font-thin text-white">WATCHING:</p>
-                <p className="font-medium text-white">{`${currentSession?.name}`}</p>
+                <p className="font-medium text-white">{`${activeSession?.name}`}</p>
               </div>
               <div className="hidden md:flex flex-col">
                 <p className="font-thin text-white">NEXT:</p>
@@ -76,7 +77,7 @@ export function StageComponent() {
             /> */}
             <div className="hidden md:block">
               <SessionInfoBox
-                session={currentSession}
+                session={activeSession}
                 onShareClick={() => openModal('share')}
                 onSpeakerClick={(speaker) => openModal('speaker', speaker)}
                 onEmbedClick={() => openModal('embed')}
@@ -94,7 +95,7 @@ export function StageComponent() {
             </div>
             <div className="flex flex-col w-full overflow-y-auto h-full">
               {tab === 0 && <ChatBar conversationId={currentStage.id} />}
-              {tab === 1 && <SessionList sessions={sessions} currentSession={currentSession} isLive={false} />}
+              {tab === 1 && <SessionList sessions={sessions} currentSession={activeSession} isLive={false} />}
             </div>
           </div>
         </div>

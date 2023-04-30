@@ -1,1 +1,10 @@
-{"id":"521","name":"Womens Circle (women only)","description":"<p>Our weekly women's circle in Zuzalu is a safe and confidential space for female residents to connect with their divine feminine and strengthen sisterhood. Through guided meditation, reflection, and discussion, we deepen our understanding of ourselves and each other. This co-created space encourages participants to open up and share their life experiences, challenges, and celebrations, fostering a deeper connection with others. Join our community of supportive and like-minded women, and experience the transformative power of feminine energy. This is an opportunity to connect with your true self and build meaningful relationships with other women in your community.</p>\n<p><strong>If you would like to join, we request that you stay for the duration of the experience. We will be closing door at 7:35pm.</strong></p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1682357400000,"end":1682361000000,"speakers":[{"id":"Ilana Brown","name":"Ilana Brown"}]}
+{
+  "id": "521",
+  "name": "Womens Circle (women only)",
+  "description": "<p>Our weekly women's circle in Zuzalu is a safe and confidential space for female residents to connect with their divine feminine and strengthen sisterhood. Through guided meditation, reflection, and discussion, we deepen our understanding of ourselves and each other. This co-created space encourages participants to open up and share their life experiences, challenges, and celebrations, fostering a deeper connection with others. Join our community of supportive and like-minded women, and experience the transformative power of feminine energy. This is an opportunity to connect with your true self and build meaningful relationships with other women in your community.</p>\n<p><strong>If you would like to join, we request that you stay for the duration of the experience. We will be closing door at 7:35pm.</strong></p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Other", "name": "Other" },
+  "start": 1683567000000,
+  "end": 1683570600000,
+  "speakers": [{ "id": "Ilana Brown", "name": "Ilana Brown" }]
+}

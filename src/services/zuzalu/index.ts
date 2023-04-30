@@ -8,7 +8,15 @@ import { Session, Speaker, Stage } from 'types' // Update the import path to the
 const API_QUEUE = new PQueue({ concurrency: 1, interval: 1500 })
 
 async function fetchApi(endpoint: string) {
-  const response: any = await API_QUEUE.add(() => fetch(endpoint))
+  const response: any = await API_QUEUE.add(() =>
+    fetch(endpoint, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        htmlcode: process.env.ZUZALU_HTMLCODE as string,
+      },
+    })
+  )
   if (!response.ok) {
     throw new Error(`API call failed with status ${response.status}: ${response.statusText}`)
   }
@@ -67,6 +75,7 @@ async function fetchSession(sessionId: number): Promise<Session> {
     stage: await GetStages().then((stages) => {
       return (
         stages.find((stage) => {
+          console.log(stage.name, session.location)
           return stage.name === session.location
         }) || { id: '0', name: 'Unknown', stream: [{ id: '' }] }
       )

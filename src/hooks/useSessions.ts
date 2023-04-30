@@ -106,11 +106,23 @@ export function useSessions(initFilters: Filter[] = []) {
     [filters]
   )
 
+  const currentSession = useMemo(() => {
+    const currentTime = currentTimeInUTC()
+    return sessions.find((session) => {
+      const start = moment(session.start).utc()
+      const end = moment(session.end).utc()
+      return currentTime.isBetween(start, end)
+    })
+  }, [sessions])
+
+
+
   return {
     sessions,
     addOrUpdateFilter,
     removeFilter,
     filters,
     possibleFilters,
+    currentSession,
   }
 }
