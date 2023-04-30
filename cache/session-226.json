@@ -1,1 +1,10 @@
-{"id":"226","name":"Engineering Human Cells, Longevity, & the Future of Medicine","description":"From 10.20am to 10.40am.","track":"ZK Week","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1680423300000,"end":1680424200000,"speakers":[{"id":"Mark Kotter, CEO & Founder, Bit.bio","name":"Mark Kotter, CEO & Founder, Bit.bio"}]}
+{
+  "id": "226",
+  "name": "Engineering Human Cells, Longevity, & the Future of Medicine",
+  "description": "From 10.20am to 10.40am.",
+  "track": "ZK Week",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1680423300000,
+  "end": 1680424200000,
+  "speakers": [{ "id": "Mark Kotter, CEO & Founder, Bit.bio", "name": "Mark Kotter, CEO & Founder, Bit.bio" }]
+}

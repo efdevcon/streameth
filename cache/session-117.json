@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Vitalik Buterin", "name": "Vitalik Buterin" },
     { "id": " Drew Endy", "name": " Drew Endy" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/96daut16x6qr2iu7/index.m3u8"
 }

@@ -1,1 +1,16 @@
-{"id":"233","name":"Investor Panel: Investing in web3-enabled organizations","description":"Investor Panel: Investing in web3-enabled organizations","track":"ZK Week","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1680438600000,"end":1680440400000,"speakers":[{"id":"Niklas Anzinger","name":"Niklas Anzinger"},{"id":"Cecilia Manduca","name":"Cecilia Manduca"},{"id":"Sandro G","name":"Sandro G"},{"id":"Steven Jacobs","name":"Steven Jacobs"},{"id":"Sebastian Brunemeier","name":"Sebastian Brunemeier"}]}
+{
+  "id": "233",
+  "name": "Investor Panel: Investing in web3-enabled organizations",
+  "description": "Investor Panel: Investing in web3-enabled organizations",
+  "track": "ZK Week",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1680438600000,
+  "end": 1680440400000,
+  "speakers": [
+    { "id": "Niklas Anzinger", "name": "Niklas Anzinger" },
+    { "id": "Cecilia Manduca", "name": "Cecilia Manduca" },
+    { "id": "Sandro G", "name": "Sandro G" },
+    { "id": "Steven Jacobs", "name": "Steven Jacobs" },
+    { "id": "Sebastian Brunemeier", "name": "Sebastian Brunemeier" }
+  ]
+}
