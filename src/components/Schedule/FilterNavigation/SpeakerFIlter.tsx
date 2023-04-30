@@ -1,14 +1,16 @@
 import { PossibleFilter, Filter } from 'types'
-import {useMemo, useState, useCallback} from 'react'
+import { useMemo, useState, useCallback } from 'react'
 
 export default function SpeakerFilterItem({
   options,
   selectedItems,
   onItemSelect,
+  removeFilter,
 }: {
   options: string[]
   selectedItems: Filter[]
   onItemSelect: (filter: Filter) => void
+  removeFilter: (filter: Filter) => void
 }) {
   const [speakerFilter, setSpeakerFilter] = useState('')
 
@@ -24,7 +26,7 @@ export default function SpeakerFilterItem({
   const selectedSpeakerOptions = useMemo(() => selectedItems.filter((item) => item.type === 'speaker').map((item) => item.value), [selectedItems])
 
   const handleSpeakerSelect = useCallback(
-    (speaker:string) => {
+    (speaker: string) => {
       onItemSelect({ type: 'speaker', value: speaker })
       setSpeakerFilter('')
     },
@@ -61,7 +63,12 @@ export default function SpeakerFilterItem({
           <div
             key={`${option}-${index}`}
             className="cursor-pointer p-1 m-1 border-2 border-black text-sm font-light text-white bg-black"
-            onClick={() => onItemSelect({ type: 'speaker', value: option })}>
+            onClick={() =>
+              removeFilter({
+                type: 'speaker',
+                value: option,
+              })
+            }>
             {option}
           </div>
         ))}

@@ -7,24 +7,37 @@ function FilterNavigationItem({
   possibleFilter,
   onItemSelect,
   selectedItems,
+  removeFilter,
 }: {
   possibleFilter: PossibleFilter
   onItemSelect: (filter: Filter) => void
   selectedItems: Filter[]
+  removeFilter: (filter: Filter) => void
 }) {
   const { type, value } = possibleFilter
 
   if (type === 'speaker') {
-    return <SpeakerFilterItem options={value} selectedItems={selectedItems} onItemSelect={onItemSelect} />
+    return <SpeakerFilterItem options={value} selectedItems={selectedItems} onItemSelect={onItemSelect} removeFilter={removeFilter} />
   }
 
   return (
     <div className="flex flex-col justify-between box-content p-4">
       <div className="flex flex-row flex-wrap">
-        <select className="p-3 border-2  bg-black text-white border-black" onChange={(e) => onItemSelect({ type, value: e.target.value })}>
-          <option>{type}</option>
+        <select
+          className="p-3 border-2  bg-black text-white border-black"
+          onChange={(e) => {
+            if (e.target.value === 'remove') {
+              removeFilter({
+                type,
+                value: e.target.value,
+              })
+            } else {
+              onItemSelect({ type, value: e.target.value })
+            }
+          }}>
+          <option value={'remove'}>{type}</option>
           {value?.map((item, index) => (
-            <option key={`${type}-${item}-${index}`}>
+            <option value={item} key={`${type}-${item}-${index}`}>
               {type === 'day' ? getDate(item) : item}
             </option>
           ))}
@@ -38,12 +51,12 @@ export default function FilterNavigation({
   possibleFilters,
   onItemSelect,
   selectedItems,
-  title,
+  removeFilter,
 }: {
   possibleFilters: PossibleFilter[]
   onItemSelect: (filter: Filter) => void
   selectedItems: Filter[]
-  title?: string
+  removeFilter: (filter: Filter) => void
 }) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -77,7 +90,13 @@ export default function FilterNavigation({
       )}
       <div className="flex-wrap flex-row flex my-4">
         {possibleFilters.map((possibleFilter) => (
-          <FilterNavigationItem key={possibleFilter.type} possibleFilter={possibleFilter} onItemSelect={onItemSelect} selectedItems={selectedItems} />
+          <FilterNavigationItem
+            key={possibleFilter.type}
+            possibleFilter={possibleFilter}
+            onItemSelect={onItemSelect}
+            selectedItems={selectedItems}
+            removeFilter={removeFilter}
+          />
         ))}
       </div>
     </div>
