@@ -2,18 +2,9 @@
   "id": "229",
   "name": "Building digital infrastructure for the growing bioeconomy",
   "description": "From 12.30am to 12.50am.",
-  "track": "Longevity 0-1",
-  "stage": {
-    "id": "Dome",
-    "name": "Dome"
-  },
+  "track": "ZK Week",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
   "start": 1680431400000,
   "end": 1680433200000,
-  "speakers": [
-    {
-      "id": "Elizabeth Trykin, Product, Invert",
-      "name": "Elizabeth Trykin, Product, Invert"
-    }
-  ],
-  "video": "https://lp-playback.com/hls/d6307n1m10w7sv2a/index.m3u8"
+  "speakers": [{ "id": "Elizabeth Trykin, Product, Invert", "name": "Elizabeth Trykin, Product, Invert" }]
 }

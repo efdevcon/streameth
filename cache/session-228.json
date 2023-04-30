@@ -22,13 +22,8 @@
       "id": "Martin Etzrost (AKASHA) & Sönke Bartling (Blockchain For Science)",
       "name": "Martin Etzrost (AKASHA) & Sönke Bartling (Blockchain For Science)"
     },
-    {
-      "id": "Ashton Trotmant-Grant",
-      "name": "Ashton Trotmant-Grant"
-    },
-    {
-      "id": "Dorothy Zhang, iGEM",
-      "name": "Dorothy Zhang, iGEM"
-    }
-  ]
+    { "id": "Ashton Trotmant-Grant", "name": "Ashton Trotmant-Grant" },
+    { "id": "Dorothy Zhang, iGEM", "name": "Dorothy Zhang, iGEM" }
+  ],
+  "video": "https://lp-playback.com/hls/c108nkq5ofnw1lta/index.m3u8"
 }

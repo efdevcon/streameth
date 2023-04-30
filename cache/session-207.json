@@ -1,1 +1,11 @@
-{"id":"207","name":"Connecting Blockchain and Biology","description":"Connecting Blockchain and Biology","track":"ZK Week","stage":{"id":"Dome","name":"Dome"},"start":1680341400000,"end":1680343200000,"speakers":[{"id":"Benji Leibowitz, Molecule","name":"Benji Leibowitz, Molecule"}]}
+{
+  "id": "207",
+  "name": "Connecting Blockchain and Biology",
+  "description": "Connecting Blockchain and Biology",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1680341400000,
+  "end": 1680343200000,
+  "speakers": [{ "id": "Benji Leibowitz, Molecule", "name": "Benji Leibowitz, Molecule" }],
+  "video": "https://lp-playback.com/hls/2f65fef64iowjduc/index.m3u8"
+}
