@@ -3,7 +3,7 @@
   "name": "Medicine 3.0 (from 12.50pm to 1.10pm)",
   "description": "Medicine 3.0 (from 12.50pm to 1.10pm)",
   "track": "ZK Week",
-  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "stage": { "id": "0", "name": "Dome", "stream": [{ "id": "" }] },
   "start": 1680432300000,
   "end": 1680433200000,
   "speakers": [{ "id": "Laurence Ion, Dealflow Steward, VitaDAO", "name": "Laurence Ion, Dealflow Steward, VitaDAO" }],
