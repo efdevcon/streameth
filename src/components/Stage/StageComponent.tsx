@@ -53,7 +53,7 @@ export function StageComponent() {
         {modalContent()}
       </Modal>
       <PageContainer>
-        <div className="bg-black opacity-80 border border-transparent py-2 space-y-2 max-h-20">
+        <div className="bg-black opacity-80 border border-transparent py-2 space-y-2">
           <Container>
             <div className="py-2 flex justify-between items-center dark:text-gray-400">
               <div className="flex flex-col">
