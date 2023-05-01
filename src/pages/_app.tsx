@@ -8,7 +8,7 @@ import { useEffect, useMemo } from 'react'
 import Script from 'next/script'
 import { LivepeerConfig, createReactClient, studioProvider } from '@livepeer/react'
 import { page } from 'types'
-
+import { Analytics } from '@vercel/analytics/react'
 import '@rainbow-me/rainbowkit/styles.css'
 
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
@@ -47,10 +47,7 @@ const pages = [
   },
 ]
 
-const { chains, provider } = configureChains(
-  [mainnet],
-  [infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY ?? '' }), publicProvider()]
-)
+const { chains, provider } = configureChains([mainnet], [infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY ?? '' }), publicProvider()])
 const { connectors } = getDefaultWallets({
   appName: 'StreamETH',
   chains,
@@ -63,8 +60,6 @@ const wagmiClient = createClient({
 
 export default function App({ Component, pageProps }: AppLayoutProps) {
   const Layout = Component.layout || ((props: LayoutProps) => <DefaultLayout pages={pages}>{props.children}</DefaultLayout>)
-
-
 
   useEffect(() => {
     const plugin = pageProps.event?.plugins.find((i: any) => i['name'] === 'matomo')
@@ -97,8 +92,9 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
         <LivepeerConfig client={livepeerClient}>
           <Layout pages={pageProps.pages}>
             <SEO />
-            <Component {...pageProps as any} />
+            <Component {...(pageProps as any)} />
           </Layout>
+          <Analytics />
         </LivepeerConfig>
       </RainbowKitProvider>
     </WagmiConfig>
