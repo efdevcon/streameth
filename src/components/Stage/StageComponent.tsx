@@ -17,7 +17,6 @@ import ChatBar from 'components/Chat'
 export function StageComponent() {
   const currentStage = useStage()
   const { sessions, addOrUpdateFilter, currentSession } = useSessions()
-  console.log(currentSession)
   const [modalOpen, setModalOpen] = useState(false)
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
@@ -54,7 +53,7 @@ export function StageComponent() {
         {modalContent()}
       </Modal>
       <PageContainer>
-        <div className="bg-black opacity-80 border border-transparent py-2 space-y-2 max-h-20">
+        <div className="bg-black opacity-80 border border-transparent py-2 space-y-2">
           <Container>
             <div className="py-2 flex justify-between items-center dark:text-gray-400">
               <div className="flex flex-col">
@@ -70,11 +69,7 @@ export function StageComponent() {
         </div>
         <div className="flex flex-col lg:flex-row h-[calc(100%-5rem)] relative">
           <div className="flex flex-col w-full lg:px-8 lg:py-2">
-            <Player stream={currentStage.stream} />
-            {/* <CustomPlayer
-              source={stream?.isActive ? { src: stream?.playbackUrl, type: 'application/x-mpegURL' } : null}
-              onStreamError={() => console.log('stream error')}
-            /> */}
+            <Player stream={currentStage.stream} stage={currentStage.name} />
             <div className="hidden md:block">
               <SessionInfoBox
                 session={activeSession}

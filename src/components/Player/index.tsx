@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 interface Props {
   stream: StreamId[]
+  stage: string
 }
 
 const OfflinePlayer = () => {
@@ -30,25 +31,17 @@ export const Player = ({ ...props }: Props) => {
     streamId: props.stream[0].id,
     refetchInterval: (s) => (s?.isActive ? false : 5000),
   })
-  const { data: sessions } = useStreamSessions(props.stream[0].id)
   const { data: session } = useStreamSession(currentStreamSession)
-
-  // useEffect(() => {
-  //   if (sessions && sessions?.length > 0) {
-  //     const allReadySessions = sessions.filter((s) => s.recordingStatus === 'ready')
-  //     // find latest session
-  //     const latestSession = allReadySessions.reduce((prev, current) => (prev.createdAt > current.createdAt ? prev : current))
 
   const mediaElementRef = useCallback((ref: HTMLMediaElement) => {
     if (ref && process.env.NEXT_PUBLIC_MUX_ENV_KEY) {
       const initTime = mux.utils.now()
-
       mux.monitor(ref, {
-        debug: true,
+        debug: false,
         data: {
           env_key: process.env.NEXT_PUBLIC_MUX_ENV_KEY, // required
           // Metadata fields
-          player_name: 'Main Player', // any arbitrary string you want to use to identify this player
+          player_name: props.stage ?? 'livepeer player', // any arbitrary string you want to use to identify this player
           player_init_time: initTime,
         },
       })

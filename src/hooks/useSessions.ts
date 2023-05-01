@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Session, Filter, PossibleFilter, SessionStatus } from 'types'
-import { startOfDay, currentTimeInUTC, localizedMoment } from 'utils/dateTime'
+import { startOfDay, currentTimeInUTC } from 'utils/dateTime'
 import { useContext } from 'react'
 import { PageContext } from 'context/page-context'
 import moment from 'moment'
@@ -41,7 +41,7 @@ export function useSessions(initFilters: Filter[] = []) {
         value: speakers,
       },
     ]
-  }, [eventDays, stages, speakers])
+  }, [eventDays, stages, speakers, tracks])
 
   const getSessionStatus = (start: Date, end: Date): SessionStatus => {
     const currentTime = currentTimeInUTC()
@@ -67,7 +67,7 @@ export function useSessions(initFilters: Filter[] = []) {
       return filters.every((filter) => {
         switch (filter.type) {
           case 'day':
-            return startOfDay(session.start) === filter.value
+            return startOfDay(session.start) - filter.value === 0
           case 'stage':
             return session.stage.id === filter.value
           case 'speaker':
@@ -85,26 +85,20 @@ export function useSessions(initFilters: Filter[] = []) {
     })
   }, [allSessions, filters])
 
-  const addOrUpdateFilter = useCallback(
-    (filter: Filter) => {
-      const index = filters.findIndex((f) => f.type === filter.type)
+  const addOrUpdateFilter = useCallback((filter: Filter) => {
+    setFilters((prevFilters) => {
+      const index = prevFilters.findIndex((f) => f.type === filter.type)
       if (index === -1) {
-        setFilters([...filters, filter])
+        return [...prevFilters, filter]
       } else {
-        const newFilters = [...filters]
-        newFilters.splice(index, 1)
-        setFilters(newFilters)
+        return prevFilters.map((f, i) => (i === index ? filter : f))
       }
-    },
-    [filters]
-  )
+    })
+  }, [])
 
-  const removeFilter = useCallback(
-    (filterType: string) => {
-      setFilters(filters.filter((f) => f.type !== filterType))
-    },
-    [filters]
-  )
+  const removeFilter = useCallback((filter: Filter) => {
+    setFilters((prevFilters) => prevFilters.filter((f) => f.type !== filter.type))
+  }, [])
 
   const currentSession = useMemo(() => {
     const currentTime = currentTimeInUTC()
@@ -114,8 +108,6 @@ export function useSessions(initFilters: Filter[] = []) {
       return currentTime.isBetween(start, end)
     })
   }, [sessions])
-
-
 
   return {
     sessions,

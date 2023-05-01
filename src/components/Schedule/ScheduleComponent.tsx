@@ -5,7 +5,7 @@ import SessionSnack from 'components/Session/Snack'
 import { useSessions } from 'hooks/useSessions'
 import { PageContainer } from 'components/Container'
 export default function SessionComponent() {
-  const { sessions, addOrUpdateFilter, filters, possibleFilters } = useSessions()
+  const { sessions, addOrUpdateFilter, filters, possibleFilters, removeFilter } = useSessions()
   const [isLoading, setIsLoading] = React.useState(true)
   useEffect(() => {
     addOrUpdateFilter({
@@ -18,7 +18,7 @@ export default function SessionComponent() {
   return (
     <PageContainer>
       <div className="flex flex-col h-full relative">
-        <FilterNavigation title={'Archive'} possibleFilters={possibleFilters} onItemSelect={addOrUpdateFilter} selectedItems={filters} />
+        <FilterNavigation removeFilter={removeFilter} possibleFilters={possibleFilters} onItemSelect={addOrUpdateFilter} selectedItems={filters} />
         {sessions.length === 0 && !isLoading && <div className="px-8 m-auto flex h-full w-full">
           <p className="m-auto">No sessions have been uploaded yet</p></div>}
 
