@@ -1,6 +1,8 @@
 import { useRef, useEffect } from 'react'
 import videojs from 'video.js'
 // import videojsPlaylist from 'videojs-playlist'
+import qualitySelector from 'videojs-hls-quality-selector'
+import contribQualityLevels from 'videojs-contrib-quality-levels'
 import 'video.js/dist/video-js.css'
 import 'videojs-mux'
 import 'videojs-youtube'
@@ -19,6 +21,8 @@ export const VideoJS = ({ ...props }: VideoJSProps) => {
     if (!playerRef.current) {
       const videoElement = videoRef.current
       if (!videoElement) return
+      videojs.registerPlugin('hlsQualitySelector', qualitySelector)
+      videojs.registerPlugin('qualityLevels', contribQualityLevels)
       const initTime = Date.now()
       const player = (playerRef.current = videojs(
         videoElement,
@@ -45,9 +49,9 @@ export const VideoJS = ({ ...props }: VideoJSProps) => {
             mux: {
               debug: false,
               data: {
-                env_key: 'tgm8k06hncftrhfi397jte0q1', // required
+                env_key: '1lgdh87bv14j6bhv83buspkj3', // required
                 // Metadata
-                player_name: source.src,
+                player_name: source.src, 
                 player_init_time: initTime, // ex: 1451606400000
               },
             },
@@ -66,16 +70,16 @@ export const VideoJS = ({ ...props }: VideoJSProps) => {
     }
   }, [videoRef, source, poster])
 
-  // useEffect(() => {
-  //   const player = playerRef.current
-  //   if (player) player.hlsQualitySelector({ displayCurrentQuality: true })
-  //   return () => {
-  //     if (player) {
-  //       player.dispose()
-  //       playerRef.current = null
-  //     }
-  //   }
-  // }, [playerRef])
+  useEffect(() => {
+    const player = playerRef.current
+    if (player) player.hlsQualitySelector({ displayCurrentQuality: true })
+    return () => {
+      if (player) {
+        player.dispose()
+        playerRef.current = null
+      }
+    }
+  }, [playerRef])
 
   return (
     <div data-vjs-player>

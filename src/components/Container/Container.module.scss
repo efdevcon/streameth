@@ -8,12 +8,14 @@
 
 .container__stage {
   height: calc(100vh - 4rem);
-  position: relative;
   @media screen and (max-height: 768px) {
     min-height: calc(100vh);
+    height: auto;
 
   }
+
+
   @media screen and (min-width: 1240px) {
-    height: calc(100vh - 81px);
+    height: calc(100vh - 6rem);
   }
 }

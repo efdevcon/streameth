@@ -1,5 +1,6 @@
 import { Speaker } from 'types'
 import SpeakerIcon from '../Icon'
+import css from './SpeakerIconList.module.scss'
 
 interface Props {
   speakers: Speaker[]
@@ -8,7 +9,7 @@ interface Props {
 
 export default function SpeakerIconList({ speakers, onSpeakerClick }: Props) {
   return (
-    <div className={`flex flex-col gap-2`}>
+    <div className={`${css.list} flex-col gap-2`}>
       {speakers.map((speaker) => (
         <div key={speaker.id} className='flex flex-row gap-2'>
           <SpeakerIcon key={speaker.id} speaker={speaker} onSpeakerClick={onSpeakerClick} />
