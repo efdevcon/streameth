@@ -1,0 +1,11 @@
+{
+  "id": "231",
+  "name": "Distributed Biotech for Interstellar Civilisations",
+  "description": "Location: Dome",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1680433200000,
+  "end": 1680434100000,
+  "speakers": [{ "id": "Sarah Rouse, Founder, SpaceBioDAO", "name": "Sarah Rouse, Founder, SpaceBioDAO" }],
+  "video": "https://lp-playback.com/hls/04110jh6vr3zkhkn/index.m3u8"
+}

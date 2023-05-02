@@ -1,0 +1,10 @@
+{
+  "id": "504",
+  "name": "Africa: Tapping the continent's talent - Panel",
+  "description": "<p>A panel about charter cities and network states in Africa</p>\n<p>Panelists: Daniel Yu - Wasoko and Silicon Zanzibar, Chika Uwazih - Afropolitan, Mwiya Musokotwane - Nkwashi</p>\n<p>Moderator: Carl Peterson - Charter Cities Institute</p>",
+  "track": "New Cities & Network States",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682852400000,
+  "end": 1682856000000,
+  "speakers": [{ "id": "Mark Lutter", "name": "Mark Lutter" }]
+}

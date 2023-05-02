@@ -1,0 +1,11 @@
+{
+  "id": "219",
+  "name": "Programming Biology and the Biofoundry Model",
+  "description": "Location: Dome.",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1680337800000,
+  "end": 1680339600000,
+  "speakers": [{ "id": "Jason Kelly, CEO & Founder, Ginkgo Bioworks", "name": "Jason Kelly, CEO & Founder, Ginkgo Bioworks" }],
+  "video": "https://lp-playback.com/hls/f1548umyccllyiss/index.m3u8"
+}

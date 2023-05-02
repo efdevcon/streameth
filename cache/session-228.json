@@ -1,0 +1,19 @@
+{
+  "id": "228",
+  "name": "Solving Inefficiencies in Biomanufacturing with Network States",
+  "description": "Solving Inefficiencies in Biomanufacturing with Network States - Kristen Allbright, Prokarium //\nA Living Experiment with Prospera – Niklas Anzinger, Infinita VC //\nDecentralized science - Martin Etzrost (AKASHA) & Sönke Bartling (Blockchain For Science) //\nGamification of Science - Ashton Trotmant-Grant //\nDistributed Emerging Technology – Dorothy Zhang, iGEM.",
+  "track": "ZK Week",
+  "stage": {
+    "id": "Other",
+    "name": "Other"
+  },
+  "start": 1680427800000,
+  "end": 1680431400000,
+  "speakers": [
+    {
+      "id": "Kristen Allbright, Prokarium",
+      "name": "Kristen Allbright, Prokarium"
+    }
+  ],
+  "video": "https://lp-playback.com/hls/c108nkq5ofnw1lta/index.m3u8"
+}

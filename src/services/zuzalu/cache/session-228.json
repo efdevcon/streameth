@@ -1,0 +1,31 @@
+{
+  "id": 228,
+  "name": "Small Group Workshops",
+  "description": "Solving Inefficiencies in Biomanufacturing with Network States - Kristen Allbright, Prokarium //\nA Living Experiment with Prospera – Niklas Anzinger, Infinita VC //\nDecentralized science - Martin Etzrost (AKASHA) & Sönke Bartling (Blockchain For Science) //\nGamification of Science - Ashton Trotmant-Grant //\nDistributed Emerging Technology – Dorothy Zhang, iGEM.",
+  "track": "ZK Week",
+  "stage": "Other",
+  "start": 1680427800000,
+  "end": 1680431400000,
+  "speakers": [
+    {
+      "id": "Kristen Allbright, Prokarium",
+      "name": "Kristen Allbright, Prokarium"
+    },
+    {
+      "id": "Niklas Anzinger, Infinita VC",
+      "name": "Niklas Anzinger, Infinita VC"
+    },
+    {
+      "id": "Martin Etzrost (AKASHA) & Sönke Bartling (Blockchain For Science)",
+      "name": "Martin Etzrost (AKASHA) & Sönke Bartling (Blockchain For Science)"
+    },
+    {
+      "id": "Ashton Trotmant-Grant",
+      "name": "Ashton Trotmant-Grant"
+    },
+    {
+      "id": "Dorothy Zhang, iGEM",
+      "name": "Dorothy Zhang, iGEM"
+    }
+  ]
+}

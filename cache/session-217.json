@@ -1,0 +1,11 @@
+{
+  "id": "217",
+  "name": "Fixing a broken drug development pipeline",
+  "description": "From 2.30pm to 2.50 pm.",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1680352200000,
+  "end": 1680354000000,
+  "speakers": [{ "id": "Alok Tayi, CEO & Founder, Vibe Bio", "name": "Alok Tayi, CEO & Founder, Vibe Bio" }],
+  "video": "https://lp-playback.com/hls/b06dhe8iy8m6sx0k/index.m3u8"
+}

@@ -24,7 +24,7 @@ export default function StagePage(props: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const stages = await GetStages()
-  const stage = stages[0]
+  const stage = stages[2]
   const sessions = await GetSessionsForStage(stage.id)
   if (!stage) return { props: null, notFound: true }
   return {

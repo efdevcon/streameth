@@ -23,18 +23,21 @@ export interface Event {
   // archive: Archive
 }
 
+export type SessionStatus = 'UPCOMING' | 'LIVE' | 'COMPLETED'
+
 export interface Session {
   id: string
   name: string
   //abstract?: string
   description: string
-  //track?: string
+  track?: string
   //type?: string
   stage: Stage
   start: number
   end: number
   speakers: Speaker[]
   video?: string
+  status?: SessionStatus
 }
 
 export interface Speaker {
@@ -70,7 +73,7 @@ export interface Video {
 }
 
 export interface Filter {
-  type: 'stage' | 'day' | 'track' | 'recording' | 'speaker' 
+  type: 'stage' | 'day' | 'track' | 'recording' | 'speaker' | 'time'
   value: any
 }
 
@@ -80,3 +83,8 @@ export interface PossibleFilter {
 }
 
 export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'
+
+export interface page {
+  name: string
+  href: string
+}

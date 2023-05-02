@@ -1,0 +1,11 @@
+{
+  "id": "443",
+  "name": "Zupass Builders: Presentations",
+  "description": "<p>Zupass contributors will host a discussion session on ideas for Zuzalu infrastructure and for the ZK Hack Weekend. Builders are invited to share ideas, ask questions, make feature requests, and more!</p>\n<p>We'll have Zupass contributors and third-party devs give a few short demos and presentations starting at 2:15PM. Community members are invited to pitch and share ideas during this session as well.</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681992000000,
+  "end": 1681995600000,
+  "speakers": [{ "id": "Brian", "name": "Brian" }],
+  "video": "https://lp-playback.com/hls/93c3olddguprr8kg/index.m3u8"
+}

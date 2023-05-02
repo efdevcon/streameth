@@ -1,0 +1,11 @@
+{
+  "id": "164",
+  "name": "Build your own Private Information Retrieval ",
+  "description": "<p>The plan is to prototype Simple PIR scheme from <a href=\"https://eprint.iacr.org/2022/949.pdf\" title=\"https://eprint.iacr.org/2022/949.pdf\">https://eprint.iacr.org/2022/949.pdf</a>, along with participants, while making it easy for participants to understand its inner workings. Participants can expect to come out the session with an understanding of how easy PIR schemes are.</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682002800000,
+  "end": 1682006400000,
+  "speakers": [{ "id": "Janmajaya Mall", "name": "Janmajaya Mall" }],
+  "video": "https://lp-playback.com/hls/e32ad50sk3ywai6y/index.m3u8"
+}

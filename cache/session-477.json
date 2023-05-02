@@ -1,0 +1,10 @@
+{
+  "id": "477",
+  "name": "Afropolitan Internal Working Group",
+  "description": "<p>Closed session. &nbsp;If you're interested to discuss a specific project related to Afropolitan, contact Matthew @travel4truth.&nbsp;</p>",
+  "track": "New Cities & Network States",
+  "stage": { "id": "Board Room", "name": "Board Room" },
+  "start": 1682341200000,
+  "end": 1682348400000,
+  "speakers": [{ "id": "Matthew", "name": "Matthew" }]
+}

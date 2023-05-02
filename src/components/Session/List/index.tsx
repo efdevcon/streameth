@@ -1,21 +1,31 @@
+import React, { useEffect } from 'react'
 import { Session } from 'types'
-import type { TimeState } from 'types'
-import type { SessionStatus } from '../Snack'
 import Scroll, { Element } from 'react-scroll'
+import Link from 'next/link'
+
 import SessionSnack from '../Snack'
 import styles from './SessionList.module.scss'
-import { useEffect } from 'react'
 
 interface Props {
   sessions: Session[]
   currentSession?: Session
-  timeState: TimeState
   isLive: boolean
 }
 
 const scroll = Scroll.scroller
 
-export default function SessionList({ timeState, sessions, currentSession, isLive }: Props) {
+function NoSessionComponent() {
+  return (
+    <div className="flex flex-col items-center justify-center h-full">
+      <p className="text-gray-600 dark:text-gray-300">No upcoming sessions! Check the archive:</p>
+      <Link href="/schedule">
+        <a className="text-blue-500 hover:text-blue-600">Archive Page</a>
+      </Link>
+    </div>
+  )
+}
+
+export default function SessionList({ sessions, currentSession, isLive }: Props) {
   useEffect(() => {
     if (currentSession) {
       scroll.scrollTo(currentSession.id, {
@@ -28,28 +38,17 @@ export default function SessionList({ timeState, sessions, currentSession, isLiv
   }, [currentSession])
 
   return (
-    <ul id="sessionList" className={styles.list}>
+    <ul id="sessionList" className="relative space-y-2 mt-1">
       {sessions.map((i) => {
-        let sessionStatus: SessionStatus = 'normal'
-
-        if (timeState === 'DURING_DAY' && currentSession) {
-          if (i.start < currentSession.start) {
-            sessionStatus = 'past'
-          }
-
-          if (i.id === currentSession.id) {
-            sessionStatus = 'active'
-          }
-        }
-
         return (
           <Element key={i.id} name={i.id}>
             <li id={i.id} className="mb-3 text-lg">
-              <SessionSnack session={i} status={sessionStatus} isLive={isLive} />
+              <SessionSnack session={i} isLive={isLive} />
             </li>
           </Element>
         )
       })}
+      {sessions.length === 0 && <NoSessionComponent />}
     </ul>
   )
 }
