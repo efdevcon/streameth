@@ -1,1 +1,15 @@
-{"id":"432","name":"Nova Track Ad-Hoc Session: ZK Week Research Projects Discussion","description":"<p>Ad-hoc session to discuss Nova open research problems and technical note explainer projects that we can make progress on this week.</p>","track":"ZK Week","stage":{"id":"Dome","name":"Dome"},"start":1681894800000,"end":1681898400000,"speakers":[{"id":"Barry","name":"Barry"},{"id":"Nalin","name":"Nalin"},{"id":"Justin Drake","name":"Justin Drake"}]}
+{
+  "id": "432",
+  "name": "Nova Track Ad-Hoc Session: ZK Week Research Projects Discussion",
+  "description": "<p>Ad-hoc session to discuss Nova open research problems and technical note explainer projects that we can make progress on this week.</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681894800000,
+  "end": 1681898400000,
+  "speakers": [
+    { "id": "Barry", "name": "Barry" },
+    { "id": "Nalin", "name": "Nalin" },
+    { "id": "Justin Drake", "name": "Justin Drake" }
+  ],
+  "video": "https://lp-playback.com/hls/51dfa8kbmc9q8dn6/index.m3u8"
+}

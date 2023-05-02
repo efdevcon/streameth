@@ -1,1 +1,11 @@
-{"id":"167","name":"How to deploy a polygon zkEVM","description":"<p>In this workshop we will conduct a walk through each step of the deployment process on how to deploy Polygon zkEVM. During this workshop we will cover and describe all the necessary parts to be able to run your own Polygon zkEVM, as well as the requirements and tools needed to deploy and configure it.</p>","track":"ZK Week","stage":{"id":"Dome","name":"Dome"},"start":1681921800000,"end":1681927200000,"speakers":[{"id":"Eduardo","name":"Eduardo"}]}
+{
+  "id": "167",
+  "name": "How to deploy a polygon zkEVM",
+  "description": "<p>In this workshop we will conduct a walk through each step of the deployment process on how to deploy Polygon zkEVM. During this workshop we will cover and describe all the necessary parts to be able to run your own Polygon zkEVM, as well as the requirements and tools needed to deploy and configure it.</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681921800000,
+  "end": 1681927200000,
+  "speakers": [{ "id": "Eduardo", "name": "Eduardo" }],
+  "video": "https://lp-playback.com/hls/9bcex86c0i4n1a79/index.m3u8"
+}
