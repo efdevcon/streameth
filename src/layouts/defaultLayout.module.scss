@@ -1,4 +1,5 @@
 .default_layout {
+  overflow: hidden;
   height: 100vh;
 
   @media screen and (max-height: 768px) {
@@ -6,5 +7,10 @@
     min-height: 100vh;
     height: auto;
 
+  }
+
+  @media screen and (min-width: 1240px) {
+    overflow: auto;
+    height: 100vh;
   }
 }
