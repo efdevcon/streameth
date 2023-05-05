@@ -1,1 +1,12 @@
-{"id": "129", "name": "Philosophy Part 1", "description": "- Patrick Linden + Adam - why aging and death are bad (5-10min)\n- Discussion on concerns & objections (60min)", "track": "Longevity 0-1", "stage": {"id": "Dome", "name": "Dome", "stream": [{"id": "dd91a031-33e3-4567-aa35-d8df14a030f4"}]}, "start": 1680108300000, "end": 1680112800000, "speakers": [{"id": "Patrick Linden", "name": "Patrick Linden"}], "video": "https://lp-playback.com/hls/7b0fw4qm0todu389/index.m3u8", "gpt-description": "The video discusses people's attitudes towards aging and death, and how many are stuck in a box of accepting it as inevitable. The speaker challenges this ideology and presents new possibilities for extending lifespan through medical treatments that slow aging. Surveys show that while many people want to live longer, they are still limited by traditional thinking and are not fully aware of the potential for new technologies. The speaker argues that discussing these possibilities openly and promoting research in this area is important for changing attitudes towards aging and death."}
+{
+  "id": "129",
+  "name": "Philosophy Part 1",
+  "description": "- Patrick Linden + Adam - why aging and death are bad (5-10min)\n- Discussion on concerns & objections (60min)",
+  "track": "Longevity 0-1",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1680108300000,
+  "end": 1680112800000,
+  "speakers": [{ "id": "Patrick Linden", "name": "Patrick Linden" }],
+  "video": "https://lp-playback.com/hls/7b0fw4qm0todu389/index.m3u8",
+  "gpt_description": "The video discusses people's attitudes towards aging and death, and how many are stuck in a box of accepting it as inevitable. The speaker challenges this ideology and presents new possibilities for extending lifespan through medical treatments that slow aging. Surveys show that while many people want to live longer, they are still limited by traditional thinking and are not fully aware of the potential for new technologies. The speaker argues that discussing these possibilities openly and promoting research in this area is important for changing attitudes towards aging and death."
+}

@@ -1,1 +1,16 @@
-{"id": "401", "name": "Undirected Salesman: Revealing the Mindmap", "description": "<p>A journey through consciousness with sxysun, sharing the details of a mindmap like no other. &nbsp;</p>", "track": "Other", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681912800000, "end": 1681916400000, "speakers": [{"id": "Tina", "name": "Tina"}, {"id": "sxysun", "name": "sxysun"}, {"id": "Tim Beiko", "name": "Tim Beiko"}], "video": "https://lp-playback.com/hls/553byj1sp7ruvufp/index.m3u8", "gpt-description": "The video features the theme music for the last show in Montreal by startico on Twitter. The audience is encouraged to click ahead and share their thoughts on the music. The rest of the description appears to be a string of random characters and is not relevant to the video."}
+{
+  "id": "401",
+  "name": "Undirected Salesman: Revealing the Mindmap",
+  "description": "<p>A journey through consciousness with sxysun, sharing the details of a mindmap like no other. &nbsp;</p>",
+  "track": "Other",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681912800000,
+  "end": 1681916400000,
+  "speakers": [
+    { "id": "Tina", "name": "Tina" },
+    { "id": "sxysun", "name": "sxysun" },
+    { "id": "Tim Beiko", "name": "Tim Beiko" }
+  ],
+  "video": "https://lp-playback.com/hls/553byj1sp7ruvufp/index.m3u8",
+  "gpt_description": "The video features the theme music for the last show in Montreal by startico on Twitter. The audience is encouraged to click ahead and share their thoughts on the music. The rest of the description appears to be a string of random characters and is not relevant to the video."
+}

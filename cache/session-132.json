@@ -1,1 +1,12 @@
-{"id": "132", "name": "Biotesting and how to guide your longevity focused actions", "description": "- 5-min meditation session /\n- Mike Geer - Biotesting and how to guide your longevity focused actions (5-10min) /\n- Adam Gries - longevity jurisdictions/network states, politics (5-10min) /\n- Fishbowl discussion (~45min)", "track": "Longevity 0-1", "stage": {"id": "Dome", "name": "Dome", "stream": [{"id": "dd91a031-33e3-4567-aa35-d8df14a030f4"}]}, "start": 1680278400000, "end": 1680282000000, "speakers": [{"id": "Adam Gries", "name": "Adam Gries"}], "video": "https://lp-playback.com/hls/9887t70ol4spzwf3/index.m3u8", "gpt-description": "The video is a discussion about the importance of jurisdictions in the longevity industry, particularly in relation to regulatory hurdles and the need for more mainstream adoption. The speakers discuss the potential benefits of different types of jurisdictions, such as charter cities, autonomous regions, and US states, in terms of attracting more capital, promoting education, and allowing for faster clinical trials. They also touch on the topic of private data for training AI models and the issue of missing or invalid data from wearable devices. The discussion is open to questions and anyone is welcome to join in."}
+{
+  "id": "132",
+  "name": "Biotesting and how to guide your longevity focused actions",
+  "description": "- 5-min meditation session /\n- Mike Geer - Biotesting and how to guide your longevity focused actions (5-10min) /\n- Adam Gries - longevity jurisdictions/network states, politics (5-10min) /\n- Fishbowl discussion (~45min)",
+  "track": "Longevity 0-1",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1680278400000,
+  "end": 1680282000000,
+  "speakers": [{ "id": "Adam Gries", "name": "Adam Gries" }],
+  "video": "https://lp-playback.com/hls/9887t70ol4spzwf3/index.m3u8",
+  "gpt_description": "The video is a discussion about the importance of jurisdictions in the longevity industry, particularly in relation to regulatory hurdles and the need for more mainstream adoption. The speakers discuss the potential benefits of different types of jurisdictions, such as charter cities, autonomous regions, and US states, in terms of attracting more capital, promoting education, and allowing for faster clinical trials. They also touch on the topic of private data for training AI models and the issue of missing or invalid data from wearable devices. The discussion is open to questions and anyone is welcome to join in."
+}

@@ -1,3 +1,4 @@
+import { Description } from '@headlessui/react/dist/components/description/description'
 import { Stream, DataConfig } from './config'
 
 // TODO: Might be good to keep track of event state at a higher level
@@ -30,6 +31,7 @@ export interface Session {
   name: string
   //abstract?: string
   description: string
+  gpt_description: string
   track?: string
   //type?: string
   stage: Stage
