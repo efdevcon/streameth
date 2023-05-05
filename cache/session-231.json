@@ -1,11 +1,1 @@
-{
-  "id": "231",
-  "name": "Distributed Biotech for Interstellar Civilisations",
-  "description": "Location: Dome",
-  "track": "ZK Week",
-  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
-  "start": 1680433200000,
-  "end": 1680434100000,
-  "speakers": [{ "id": "Sarah Rouse, Founder, SpaceBioDAO", "name": "Sarah Rouse, Founder, SpaceBioDAO" }],
-  "video": "https://lp-playback.com/hls/04110jh6vr3zkhkn/index.m3u8"
-}
+{"id": "231", "name": "Distributed Biotech for Interstellar Civilisations", "description": "Location: Dome", "track": "ZK Week", "stage": {"id": "Dome", "name": "Dome", "stream": [{"id": "dd91a031-33e3-4567-aa35-d8df14a030f4"}]}, "start": 1680433200000, "end": 1680434100000, "speakers": [{"id": "Sarah Rouse, Founder, SpaceBioDAO", "name": "Sarah Rouse, Founder, SpaceBioDAO"}], "video": "https://lp-playback.com/hls/04110jh6vr3zkhkn/index.m3u8", "gpt-description": "In this video, the speaker discusses Space BioLab, a company she co-founded that focuses on the impact of microgravity and radiation on the human body during space flight. She talks about the need for a global, decentralized community to democratize access to space and the potential breakthroughs that could come from space exploration. The speaker also mentions the NASA Twin study and the challenges of conducting experiments on human cells in space. She discusses the use of CubeSats for scientific experiments and the need for diverse teams of researchers to automate experiments in self-contained shoebox-sized satellites."}
