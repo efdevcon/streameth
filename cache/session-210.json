@@ -7,5 +7,6 @@
   "start": 1680348600000,
   "end": 1680349500000,
   "speakers": [{ "id": "Lily Hansen-Gillis, Core, LabDAO", "name": "Lily Hansen-Gillis, Core, LabDAO" }],
-  "video": "https://lp-playback.com/hls/1c01c4fripefj869/index.m3u8"
+  "video": "https://lp-playback.com/hls/1c01c4fripefj869/index.m3u8",
+  "gpt_description": "In this video, Lily talks about the project Plex, which is an operating system for network science organizations. She explains LabDow's philosophy of enabling everyone to access laboratory services and creating an open exchange for life science services. She also discusses the challenges of open science and how blockchain technology and web 3 can help scientists collaborate across borders and institutions. Lily dives into the details of Plex, which allows users to run scientific application containers and easily run experiments from anywhere in the world. She explains the use of IPFS for data sharing and back-aloud for container runtime. Finally, she demonstrates how easily scientists can use Plex for small molecule binding and protein docking strategies."
 }

@@ -60,7 +60,7 @@ export default function SessionComponent({ session }: { session: Session }) {
             <Player src={session.video} />
           </div>
           <div className="lg:w-1/3 p-3 lg:p-5 box-border flex flex-col overflow-auto lg:mt-0 h-full">
-            {session.description}
+            {session.gpt_description ? session.gpt_description : session.description}
             <div className="mt-4">
             <SpeakerIconList speakers={session.speakers} />
             </div>
