@@ -31,7 +31,7 @@ export interface Session {
   name: string
   //abstract?: string
   description: string
-  gpt_description: string
+  gpt_description?: string
   track?: string
   //type?: string
   stage: Stage
