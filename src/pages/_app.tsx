@@ -34,6 +34,10 @@ type LayoutProps = {
 
 const pages = [
   {
+    name: 'Lighthouse',
+    href: '/stage/Lighthouse',
+  },
+  {
     name: 'Dome',
     href: '/stage/Dome',
   },

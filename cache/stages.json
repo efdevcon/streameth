@@ -25,5 +25,14 @@
         "id": "dd91a031-33e3-4567-aa35-d8df14a030f4"
       }
     ]
+  },
+  {
+    "id": "Lighthouse",
+    "name": "Lighthouse",
+    "stream": [
+      {
+        "id": "f1af7d3b-f94a-4bab-af0b-e93041a51ff7"
+      }
+    ]
   }
 ]
