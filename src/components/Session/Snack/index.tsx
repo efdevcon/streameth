@@ -25,17 +25,14 @@ export default function SessionSnack({ session, learnMore, isLive = false, hasRe
     <div className={`border p-4 bg-white space-y-3 hover:shadow-lg ${learnMore ? 'cursor-pointer' : ''}`}>
       <div className="flex flex-col justify-between items-start">
         <div className="flex items-center mb-1 w-full">
-          {/* <CalendarIcon className="h-5 w-5 text-gray-600" /> */}
           <span className="font-thin">{session.stage.name}</span>
-          <StatusDot color={session.status === 'LIVE' ? 'green' : session.status === 'COMPLETED' ? 'red' : 'blue'} />
-          {/* <span className="text-sm text-gray-500">{session.status === 'LIVE' ? 'Live' : session.status === 'COMPLETED' ? 'Complete' : 'Upcoming'}</span> */}
+          {session.status == 'LIVE' && <StatusDot />}
         </div>
         <p className="text-xl font-bold">{session.name}</p>
         {isLive ? <LiveIndicator /> : hasRecording ? <PlayCircleIcon className="h-6 w-6 text-gray-600" /> : null}
       </div>
       <div>
         <div className="flex items-center space-x-2 mb-2">
-          {/* <VideoCameraIcon className="h-5 w-5 text-gray-600" /> */}
           <span className="text text-gray-400 text-md font-thin">{formatDateTime(session.start, session.end)}</span>
         </div>
       </div>

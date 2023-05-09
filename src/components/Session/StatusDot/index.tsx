@@ -21,7 +21,7 @@ export const StatusDot: React.FC<Props> = ({ size = 'md', color = 'green' }) => 
 
   return (
     <div
-      className={`ml-auto rounded-full ${sizeClasses[size]} ${colorClasses[color]} border-2 border-white dark:border-gray-800`}
+      className={`ml-auto rounded-full ${sizeClasses[size]} ${colorClasses[color]} border-2 border-white dark:border-gray-800 animate-pulse`}
       aria-label={`${color} status dot`}></div>
   )
 }

@@ -4,7 +4,6 @@ import Scroll, { Element } from 'react-scroll'
 import Link from 'next/link'
 
 import SessionSnack from '../Snack'
-import styles from './SessionList.module.scss'
 
 interface Props {
   sessions: Session[]
@@ -18,7 +17,7 @@ function NoSessionComponent() {
   return (
     <div className="flex flex-col items-center justify-center h-full">
       <p className="text-gray-600 dark:text-gray-300">No upcoming sessions! Check the archive:</p>
-      <Link href="/schedule">
+      <Link href="/archive">
         <a className="text-blue-500 hover:text-blue-600">Archive Page</a>
       </Link>
     </div>
