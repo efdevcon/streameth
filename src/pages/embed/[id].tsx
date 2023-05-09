@@ -20,7 +20,7 @@ export default function Embed(props: Props) {
   return (
     <EmbedLayout>
       {stage && <SEO title={stage.name} />}
-      <Player stream={props.stage.stream} stage={stage.name} />
+      <Player streamId={props.stage.stream} playerName={stage.name} />
     </EmbedLayout>
   )
 }

@@ -76,7 +76,7 @@ async function fetchSession(sessionId: number): Promise<Session> {
       return (
         stages.find((stage) => {
           return stage.name === session.location
-        }) || { id: '0', name: 'Unknown', stream: [{ id: '' }] }
+        }) || { id: '0', name: 'Unknown', stream: { id: '' } }
       )
     }),
     start: moment(`${session.startDate} ${session.startTime}`).valueOf(),

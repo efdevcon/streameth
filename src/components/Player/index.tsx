@@ -1,14 +1,9 @@
-import { Player as LivepeerPlayer, useStream, useStreamSessions, useStreamSession, StreamSession } from '@livepeer/react'
-import { useState, useEffect, useCallback } from 'react'
+import { Player as LivepeerPlayer, useStream } from '@livepeer/react'
+import { useCallback } from 'react'
 import { StreamId } from 'types/index'
 // @ts-ignore
 import mux from 'mux-embed'
 import Image from 'next/image'
-
-interface Props {
-  stream: StreamId[]
-  stage: string
-}
 
 const OfflinePlayer = () => {
   return (
@@ -24,45 +19,37 @@ const OfflinePlayer = () => {
   )
 }
 
-export const Player = ({ ...props }: Props) => {
-  const [currentPlaybackUrl, setCurrentPlaybackUrl] = useState<string | null>(null)
-  const [currentStreamSession, setCurrentStreamSession] = useState<StreamSession['id']>('')
+export const Player = ({ streamId, playerName }: { streamId: StreamId; playerName: string }) => {
   const { data: stream } = useStream({
-    streamId: props.stream[0].id,
+    streamId: streamId.id,
     refetchInterval: (s) => (s?.isActive ? false : 5000),
   })
-  const { data: session } = useStreamSession(currentStreamSession)
 
-  const mediaElementRef = useCallback((ref: HTMLMediaElement) => {
-    if (ref && process.env.NEXT_PUBLIC_MUX_ENV_KEY) {
-      const initTime = mux.utils.now()
-      mux.monitor(ref, {
-        debug: false,
-        data: {
-          env_key: process.env.NEXT_PUBLIC_MUX_ENV_KEY, // required
-          // Metadata fields
-          player_name: props.stage ?? 'livepeer player', // any arbitrary string you want to use to identify this player
-          player_init_time: initTime,
-        },
-      })
-    }
-  }, [])
+  const mediaElementRef = useCallback(
+    (ref: HTMLMediaElement) => {
+      if (ref && process.env.NEXT_PUBLIC_MUX_ENV_KEY) {
+        const initTime = mux.utils.now()
+        mux.monitor(ref, {
+          debug: false,
+          data: {
+            env_key: process.env.NEXT_PUBLIC_MUX_ENV_KEY, // required
+            // Metadata fields
+            player_name: playerName ?? 'livepeer player', // any arbitrary string you want to use to identify this player
+            player_init_time: initTime,
+          },
+        })
+      }
+    },
+    [playerName]
+  )
 
-  useEffect(() => {
-    if (stream && stream.isActive) {
-      setCurrentPlaybackUrl(stream.playbackUrl)
-    } else if (session && session.recordingUrl && session.recordingStatus === 'ready') {
-      setCurrentPlaybackUrl(session.recordingUrl)
-    }
-  }, [session, stream])
-
-  if (!currentPlaybackUrl) return <OfflinePlayer />
+  if (!stream?.isActive) return <OfflinePlayer />
 
   return (
     <LivepeerPlayer
       mediaElementRef={mediaElementRef}
       objectFit="cover"
-      src={currentPlaybackUrl}
+      src={stream.playbackUrl}
       showTitle={false}
       showPipButton={false}
       muted={false}

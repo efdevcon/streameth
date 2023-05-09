@@ -6,7 +6,6 @@ import { useRouter } from 'next/router'
 import { TITLE } from 'utils/constants'
 import img from 'assets/images/logo.png'
 import { page } from 'types'
-import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')

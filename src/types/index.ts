@@ -23,6 +23,7 @@ export type SessionStatus = 'UPCOMING' | 'LIVE' | 'COMPLETED'
 export interface Session {
   id: string
   name: string
+  //abstract?: string
   description: string
   gpt_description?: string
   track?: string
@@ -39,14 +40,8 @@ export interface Speaker {
   id: string
   name: string
   description: string
-  avatar: string | null
-  avatarUrl: string | null
-}
-
-export interface streamItem {
-  id: string
-  playbackUrl: string
-  isActive: boolean
+  avatar?: string
+  avatarUrl?: string
 }
 
 export interface StreamId {
@@ -56,7 +51,7 @@ export interface StreamId {
 export interface Stage {
   id: string
   name: string
-  stream: StreamId[]
+  stream: StreamId
   image?: string
 }
 
@@ -79,3 +74,7 @@ export interface PossibleFilter {
 
 export type TimeState = 'BEFORE_EVENT' | 'DURING_DAY' | 'BEFORE_NEXT_DAY' | 'AFTER_EVENT'
 
+export interface page {
+  name: string
+  href: string
+}

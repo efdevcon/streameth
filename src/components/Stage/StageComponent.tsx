@@ -26,9 +26,8 @@ export function StageComponent() {
 
   useEffect(() => {
     addOrUpdateFilter({ type: 'stage', value: currentStage.id })
-    // current date in unix timestamp
     addOrUpdateFilter({ type: 'day', value: moment().startOf('day').valueOf() })
-  }, [currentStage])
+  }, [currentStage, addOrUpdateFilter])
 
   const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {
     setModalContentType(type)
@@ -69,7 +68,7 @@ export function StageComponent() {
         </div>
         <div className="flex flex-col lg:flex-row h-[calc(100%-5rem)] relative">
           <div className="flex flex-col w-full lg:px-8 lg:py-2">
-            <Player stream={currentStage.stream} stage={currentStage.name} />
+            <Player streamId={currentStage.stream} playerName={currentStage.name} />
             <div className="hidden md:block">
               <SessionInfoBox
                 session={activeSession}
