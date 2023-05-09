@@ -1,0 +1,11 @@
+{
+  "id": "204",
+  "name": "Introduction to Synthetic Biology",
+  "description": "Location: Dome",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1680334200000,
+  "end": 1680336000000,
+  "speakers": [{ "id": "John Cumbers, CEO & Founder, SynBioBeta", "name": "John Cumbers, CEO & Founder, SynBioBeta" }],
+  "video": "https://lp-playback.com/hls/9125xrzahxfeswbk/index.m3u8"
+}

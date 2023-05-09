@@ -40,7 +40,7 @@ export async function GetStages(): Promise<Stage[]> {
     return {
       id: rawStageData.id,
       name: rawStageData.name,
-      stream: rawStageData.stream,
+      stream: rawStageData.stream[0],
       image: rawStageData.image,
     }
   })
@@ -80,8 +80,8 @@ export async function GetSpeakers(): Promise<Speaker[]> {
       id: rawSpeaker.id,
       name: rawSpeaker.name,
       description: rawSpeaker.description,
-      avatar: rawSpeaker.avatar ?? null, // TODO: Fix types avatar // avatarUrl 
-      avatarUrl: rawSpeaker.avatarUrl ?? null,
+      avatar: rawSpeaker.avatar, 
+      avatarUrl: rawSpeaker.avatarUrl,
     }
   })
 }

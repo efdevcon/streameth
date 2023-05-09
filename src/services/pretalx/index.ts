@@ -1,7 +1,7 @@
 import { Session } from "types";
-import { Config } from "types/config";
+import { DataConfig } from "types/config";
 
-export async function GetSchedule(config: Config): Promise<Session[]> {
+export async function GetSchedule(config: DataConfig): Promise<Session[]> {
     if (!config['apiBaseUri']) throw new Error('No valid apiBaseUri set for Pretalx module')
 
     const response = await fetch(`${config['apiBaseUri']}/talks?limit=100`)

@@ -1,0 +1,11 @@
+{
+  "id": "131",
+  "name": "Fishbowl: How each of us can contribute",
+  "description": "- Fishbowl: How each of us can contribute (~15min)\n- **Bryan Johnson**: Fishbowl Q&A (~45min)",
+  "track": "Longevity 0-1",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1680282000000,
+  "end": 1680285600000,
+  "speakers": [{ "id": "Bryan Johnson", "name": "Bryan Johnson" }],
+  "video": "https://lp-playback.com/hls/2ff99qlm7vhk9nvh/index.m3u8"
+}

@@ -3,33 +3,34 @@ import { Stage, Session } from 'types'
 import { StageComponent } from 'components/Stage/StageComponent'
 import { ParsedUrlQuery } from 'querystring'
 import { SEO } from 'components/seo'
-import { GetStages, GetStageById } from 'services/stage'
+import { GetStages, GetStageById, GenerateNavigation } from 'services/stage'
 import { GetSessionsForStage } from 'services/sessions'
 import { PageContextProvider } from 'context/page-context'
-
-interface Props {
-  stage: Stage 
-  sessions: Session[] 
-}
+import { page } from 'types'
+import DefaultLayout from 'layouts/default'
 
 interface Params extends ParsedUrlQuery {
   id: string
 }
+interface Props {
+  stage: Stage
+  sessions: Session[]
+  pages: page[]
+}
 
-export default function StagePage(props: Props) {
-  const { stage, sessions } = props
-
+export default function StagePage({ stage, sessions, pages }: Props) {
   return (
     <PageContextProvider stage={stage} sessions={sessions}>
-      {stage && <SEO title={stage.name} />}
-      <StageComponent />
+      <DefaultLayout pages={pages}>
+        {stage && <SEO title={stage.name} />}
+        <StageComponent />
+      </DefaultLayout>
     </PageContextProvider>
   )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const stages = await GetStages()
-  console.log(stages)
   return {
     paths: stages.map((stage) => ({ params: { id: stage.id } })),
     fallback: false,
@@ -43,12 +44,14 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (context) => 
   const stage = await GetStageById(stageId)
   if (!stage) return { props: null, notFound: true }
 
-  const sessions = await GetSessionsForStage(stageId)
+  const pages = await GenerateNavigation()
 
+  const sessions = await GetSessionsForStage(stageId)
   return {
     props: {
       stage,
       sessions,
-    }
+      pages,
+    },
   }
 }

@@ -1,0 +1,11 @@
+{
+  "id": "451",
+  "name": "Ad-Hoc Session on Goblin PLONK + Nova",
+  "description": "<p>By Zac</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681983000000,
+  "end": 1681986600000,
+  "speakers": [{ "id": "Zac", "name": "Zac" }],
+  "video": "https://lp-playback.com/hls/4202v4stjmv1bvcw/index.m3u8"
+}

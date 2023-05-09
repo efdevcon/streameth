@@ -3,7 +3,7 @@ import { Stage } from 'types'
 import { ParsedUrlQuery } from 'querystring'
 import { SEO } from 'components/seo'
 import { GetStages, GetStageById } from 'services/stage'
-import { EventController } from 'services/event'
+import { ConfigController } from 'services/config'
 import EmbedLayout from 'layouts/embed'
 import { Player } from 'components/Player'
 interface Props {
@@ -20,7 +20,7 @@ export default function Embed(props: Props) {
   return (
     <EmbedLayout>
       {stage && <SEO title={stage.name} />}
-      <Player stream={props.stage.stream} />
+      <Player streamId={props.stage.stream} playerName={stage.name} />
     </EmbedLayout>
   )
 }

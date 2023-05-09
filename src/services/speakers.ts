@@ -1,8 +1,8 @@
-import { EventController } from 'services/event'
+import { ConfigController } from 'services/config'
 import { Speaker } from 'types'
 
 export async function GetSpeakers(): Promise<Speaker[]> {
-  const event = await EventController.getEvent()
+  const event = await ConfigController.getConfig()
   if (!event.data) {
     return []
   }

@@ -1,0 +1,11 @@
+{
+  "id": "151",
+  "name": "Hacking Zuzalu Passport Workshop #1",
+  "description": "TBD",
+  "track": "ZK Week",
+  "stage": { "id": "Ballroom", "name": "Ballroom" },
+  "start": 1681749000000,
+  "end": 1681754400000,
+  "speakers": [{ "id": "Ivan Chub", "name": "Ivan Chub" }],
+  "video": "https://lp-playback.com/hls/b2434d0mi7stlseu/index.m3u8"
+}

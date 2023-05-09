@@ -1,0 +1,12 @@
+{
+  "id": "217",
+  "name": "Fixing a broken drug development pipeline",
+  "description": "From 2.30pm to 2.50 pm.",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1680352200000,
+  "end": 1680354000000,
+  "speakers": [{ "id": "Alok Tayi, CEO & Founder, Vibe Bio", "name": "Alok Tayi, CEO & Founder, Vibe Bio" }],
+  "video": "https://lp-playback.com/hls/b06dhe8iy8m6sx0k/index.m3u8",
+  "gpt_description": "In this video, Luke Taii, CEO and co-founder of Vibe Bio, talks about his personal experience with the broken drug pipeline and how his company is working to fix it. He discusses the challenges of funding potential treatments and the need to prioritize and allocate funds more effectively. He draws inspiration from the success of patient communities in developing transformative medicines and proposes a decentralized science approach using a Dow to bring together capital, people, and tools to advance candidate medicines. Vibe Bio's mission is to find every cure for every community and they are focused on inflection point financing to help finance pivotal studies and unlock a larger portion of value. Taii emphasizes the importance of software in scaling their mission and enabling analysis and collaboration."
+}

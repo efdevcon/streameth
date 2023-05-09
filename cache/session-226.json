@@ -1,0 +1,12 @@
+{
+  "id": "226",
+  "name": "Engineering Human Cells, Longevity, & the Future of Medicine",
+  "description": "From 10.20am to 10.40am.",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1680423300000,
+  "end": 1680424200000,
+  "speakers": [{ "id": "Mark Kotter, CEO & Founder, Bit.bio", "name": "Mark Kotter, CEO & Founder, Bit.bio" }],
+  "video": "https://lp-playback.com/hls/45b6okfxrvtj9uvu/index.m3u8",
+  "gpt_description": "The speaker discusses the limitations of current treatments for spinal cord injuries and proposes using synthetic biology to create new cell therapies. They explain the challenges of creating specialized cell types and the potential of using genomic safe harbocytes to protect and activate inserted genetic material. The speaker showcases their company's ability to rapidly create pure neurons from pro-potent stem cells and the potential for this technology in biomedical research and cell therapies."
+}

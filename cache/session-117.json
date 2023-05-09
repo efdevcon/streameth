@@ -1,0 +1,14 @@
+{
+  "id": "117",
+  "name": "Waterway Fireside Chat - A Decentralized Society That’s Built with Biology",
+  "description": "6pm - Waterway Fireside Chat - A Decentralized Society That’s Built with Biology\nVitalik Buterin + Drew Endy",
+  "track": "ZK Week",
+  "stage": { "id": "Ballroom", "name": "Ballroom", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
+  "start": 1680364800000,
+  "end": 1680368400000,
+  "speakers": [
+    { "id": "Vitalik Buterin", "name": "Vitalik Buterin" },
+    { "id": " Drew Endy", "name": " Drew Endy" }
+  ],
+  "video": "https://lp-playback.com/hls/96daut16x6qr2iu7/index.m3u8"
+}

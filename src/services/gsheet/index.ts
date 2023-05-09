@@ -1,5 +1,5 @@
 import { Session, Stage, Speaker } from 'types'
-import { Config } from 'types/config'
+import { DataConfig } from 'types/config'
 import { google } from 'googleapis'
 import { GetSlug } from 'utils/format'
 import { datetimeToUnixTimestamp } from 'utils/dateTime'
@@ -29,7 +29,7 @@ async function getLocalJsonCache(filename: string) {
 }
 
 
-async function connectToGoogleSheets(config: Config) {
+async function connectToGoogleSheets(config: DataConfig) {
   if (!config['sheetId']) throw new Error('No valid sheetId set for gsheet module')
   if (!process.env.GOOGLE_API_KEY) throw new Error("gsheet module requires a valid 'GOOGLE_API_KEY' env variable")
 
@@ -41,7 +41,7 @@ async function connectToGoogleSheets(config: Config) {
   return sheets
 }
 
-async function getSheetName(config: Config) {
+async function getSheetName(config: DataConfig) {
   const sheets = await connectToGoogleSheets(config)
   const sheetId = config['sheetId'] as string
 
@@ -57,7 +57,7 @@ async function getSheetName(config: Config) {
   return sheetName
 }
 
-async function getDataForRange(config: Config, range: string): Promise<any> {
+async function getDataForRange(config: DataConfig, range: string): Promise<any> {
   const localCache = await getLocalJsonCache(range)
   if (localCache) return localCache
 
@@ -80,7 +80,7 @@ async function getDataForRange(config: Config, range: string): Promise<any> {
 }
 
 const STAGE_DATA_RANGE = 'A4:D'
-export async function GetStages(config: Config): Promise<Stage[]> {
+export async function GetStages(config: DataConfig): Promise<Stage[]> {
   const data = await getDataForRange(config, STAGE_DATA_RANGE)
   const a = data.map((row: any) => {
     const [id, name, streamId, image] = row
@@ -99,7 +99,7 @@ export async function GetStages(config: Config): Promise<Stage[]> {
 }
 
 const SPEAKER_DATA_RANGE = 'F4:I'
-export async function getSpeakers(config: Config): Promise<Speaker[]> {
+export async function getSpeakers(config: DataConfig): Promise<Speaker[]> {
   const data = await getDataForRange(config, SPEAKER_DATA_RANGE)
   return data.map((row: any) => {
     const [id, name, Description, AvatarUrl] = row
@@ -113,7 +113,7 @@ export async function getSpeakers(config: Config): Promise<Speaker[]> {
 }
 
 const SESSION_DATA_RANGE = 'K4:W'
-export async function getSessions(config: Config): Promise<Session[]> {
+export async function getSessions(config: DataConfig): Promise<Session[]> {
   const data = await getDataForRange(config, SESSION_DATA_RANGE)
   const speakerData = await getSpeakers(config)
   const stageData = await GetStages(config)
@@ -146,6 +146,6 @@ export async function getSessions(config: Config): Promise<Session[]> {
   })
 }
 
-export async function GetSchedule(config: Config): Promise<Session[]> {
+export async function GetSchedule(config: DataConfig): Promise<Session[]> {
   return await getSessions(config)
 }

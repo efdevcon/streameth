@@ -2,8 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   staticPageGenerationTimeout: 180,
-  workerThreads: false,
-  cpus: 1,
   webpack(config) {
     const rules = config.module.rules.find((r) => !!r.oneOf)
 
