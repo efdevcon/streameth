@@ -1,1 +1,15 @@
-{"id":"236","name":"Panel discussion: Summary, Takeaways and Next Steps - 4.15pm - 5.00pm","description":"Panel discussion: Summary, Takeaways and Next Steps","track":"ZK Week","stage":{"id":"Other","name":"Other"},"start":1680444900000,"end":1680447600000,"speakers":[{"id":"John Cumbers","name":"John Cumbers"},{"id":"Jennifer Holmgren","name":"Jennifer Holmgren"},{"id":"Drew Endy","name":"Drew Endy"},{"id":"Vincent Weisser","name":"Vincent Weisser"}]}
+{
+  "id": "236",
+  "name": "Panel discussion: Summary, Takeaways and Next Steps - 4.15pm - 5.00pm",
+  "description": "Panel discussion: Summary, Takeaways and Next Steps",
+  "track": "ZK Week",
+  "stage": { "id": "Other", "name": "Other" },
+  "start": 1680444900000,
+  "end": 1680447600000,
+  "speakers": [
+    { "id": "John Cumbers", "name": "John Cumbers" },
+    { "id": "Jennifer Holmgren", "name": "Jennifer Holmgren" },
+    { "id": "Drew Endy", "name": "Drew Endy" },
+    { "id": "Vincent Weisser", "name": "Vincent Weisser" }
+  ]
+}

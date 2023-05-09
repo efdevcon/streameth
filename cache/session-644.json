@@ -1,1 +1,10 @@
-{"id":"644","name":"DeSci Co-working space","description":"<p>If you're working in DeSci, DeSci Curious or working on adjacent projects join us for a DeSci co-work!</p>\n<p>10-11 Cowork</p>\n<p>11-11:30 Introductions! What're you working on, how can the community help.</p>\n<p>11:30 - 1pm Co-work (either solo or collaborate)</p>\n<p>1-2pm Lunch</p>\n<p>2-4pm &nbsp;Some more working &amp; collaboration</p>\n<p>4pm Wrap up - Connect with people in the space!</p>\n<p><br>\nIdeal outcomes of this would be:&nbsp;</p>\n<p>1.Cross-DAO-pollination of ideas</p>\n<p>2. Focusing on common issues within the space, meet some new faces interested in DeSci</p>\n<p>3. Evangelise others working in the co-work space.</p>\n<p>Come with some problems you face in your line of work and lets see what the community can do to address them!&nbsp;&nbsp;</p>","track":"Open Sessions","stage":{"id":"Board Room","name":"Board Room","stream":[{"id":"fe9970f6-1dee-40e1-8e9f-5bc99fed7dec"}]},"start":1683100800000,"end":1683104400000,"speakers":[{"id":"Bharat Harbham","name":"Bharat Harbham"}]}
+{
+  "id": "644",
+  "name": "DeSci Co-working space",
+  "description": "<p>If you're working in DeSci, DeSci Curious or working on adjacent projects join us for a DeSci co-work!</p>\n<p>10-11 Cowork</p>\n<p>11-11:30 Introductions! What're you working on, how can the community help.</p>\n<p>11:30 - 1pm Co-work (either solo or collaborate)</p>\n<p>1-2pm Lunch</p>\n<p>2-4pm &nbsp;Some more working &amp; collaboration</p>\n<p>4pm Wrap up - Connect with people in the space!</p>\n<p><br>\nIdeal outcomes of this would be:&nbsp;</p>\n<p>1.Cross-DAO-pollination of ideas</p>\n<p>2. Focusing on common issues within the space, meet some new faces interested in DeSci</p>\n<p>3. Evangelise others working in the co-work space.</p>\n<p>Come with some problems you face in your line of work and lets see what the community can do to address them!&nbsp;&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
+  "start": 1683100800000,
+  "end": 1683104400000,
+  "speakers": [{ "id": "Bharat Harbham", "name": "Bharat Harbham" }]
+}

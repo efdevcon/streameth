@@ -3,22 +3,10 @@
   "name": "Longevity intro Day 1",
   "description": "6-6:15\nLaurence Ion & Kia Winslow: Open; Distinguishing between lifestyle, supplements & real science / medicine / biotech; Jurisdictions\neven with the perfect diet and lifestyle, we still age. \n[video] Fable of the dragon tyrant\n6:15 - 7\nAubrey de Grey: Overview, history of longevity (10-15min)\nAdam Gries: Dispelling the myths (5-10 min)\nDiscussion (~30min)\n7:15-8\nDanielle Ruiz & Elizabeth Roider: lifestyle, interventions (10-15min)\nLegal disclaimer: this is not medical advice\nDiscussion (~20-30min)",
   "track": "Longevity 0-1",
-  "stage": {
-    "id": "Dome",
-    "name": "Dome",
-    "stream": [
-      {
-        "id": "dd91a031-33e3-4567-aa35-d8df14a030f4"
-      }
-    ]
-  },
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
   "start": 1680019200000,
   "end": 1680020100000,
-  "speakers": [
-    {
-      "id": "Aubrey de Grey",
-      "name": "Aubrey de Grey"
-    }
-  ],
-  "video": "https://lp-playback.com/hls/d4a2rvkxtdcrou77/index.m3u8"
+  "speakers": [{ "id": "Aubrey de Grey", "name": "Aubrey de Grey" }],
+  "video": "https://lp-playback.com/hls/d4a2rvkxtdcrou77/index.m3u8",
+  "gpt_description": "The speaker discusses the history of the crusade against aging and the future of the field, focusing on the damage repair approach and the concept of longevity escape velocity. He introduces his organization, the LEAF Foundation, and discusses their advocacy and education efforts, as well as their flagship project to combine interventions that do damage repair. The speaker also mentions upcoming events and the illustrious speaking roster for the next Longevity Summit."
 }

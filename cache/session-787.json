@@ -1,1 +1,14 @@
-{"id":"787","name":"Zen Bar Opening Party 🎉 - VIBEY CO-WORKING 🍄🎶","description":"<p>Today is a special day.</p>\n<p>Beyond being a full moon, Zuzaluans just unlocked a NEW VENUE for great vibes...</p>\n<p>The Zen Bar! Just past the Kiki's (Spilja) Bar, on the way to the Marina Garden.</p>\n<p>Gary will be posted up there from 11-4pm playing music of the likes of FKJ, Fred Again, various Amapiano mixes, and select requests :)</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683280800000,"end":1683284400000,"speakers":[{"id":"Gary Sheng","name":"Gary Sheng"},{"id":"Camara Cassin","name":"Camara Cassin"},{"id":"Elliott Bayev","name":"Elliott Bayev"}]}
+{
+  "id": "787",
+  "name": "Zen Bar Opening Party 🎉 - VIBEY CO-WORKING 🍄🎶",
+  "description": "<p>Today is a special day.</p>\n<p>Beyond being a full moon, Zuzaluans just unlocked a NEW VENUE for great vibes...</p>\n<p>The Zen Bar! Just past the Kiki's (Spilja) Bar, on the way to the Marina Garden.</p>\n<p>Gary will be posted up there from 11-4pm playing music of the likes of FKJ, Fred Again, various Amapiano mixes, and select requests :)</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683280800000,
+  "end": 1683284400000,
+  "speakers": [
+    { "id": "Gary Sheng", "name": "Gary Sheng" },
+    { "id": "Camara Cassin", "name": "Camara Cassin" },
+    { "id": "Elliott Bayev", "name": "Elliott Bayev" }
+  ]
+}

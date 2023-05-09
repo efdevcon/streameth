@@ -1,1 +1,10 @@
-{"id":"605","name":"Gene Therapy Clinical Trials in Honduras","description":"<p>Mac Davis - Minicircle</p>","track":"New Cities & Network States","stage":{"id":"Dome","name":"Dome"},"start":1682861400000,"end":1682865000000,"speakers":[{"id":"Niklas Anzinger","name":"Niklas Anzinger"}]}
+{
+  "id": "605",
+  "name": "Gene Therapy Clinical Trials in Honduras",
+  "description": "<p>Mac Davis - Minicircle</p>",
+  "track": "New Cities & Network States",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682861400000,
+  "end": 1682865000000,
+  "speakers": [{ "id": "Niklas Anzinger", "name": "Niklas Anzinger" }]
+}

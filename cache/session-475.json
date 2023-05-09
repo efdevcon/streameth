@@ -1,1 +1,13 @@
-{"id":"475","name":"Zero Knowledge Anecdotes","description":"<p>Join us for a roundtable discussion to share the moments when Zero Knowledge has \"clicked\" for you on a conceptual or application level. How have you described Zero Knowledge, or heard it described, that made it feel more real, accessible, or connected to the things you value?<br>\nIf you work in the ZK space: how do you explain what you do and the value of ZKPs in applications? How have you<br>\ntailored your explanations based on the values of your audience?<br>\nIf you do not work in the ZK space: what descriptions have helped you better understand the concept and value of Zero Knowledge?</p>\n<p>Target audience: everyone, especially people who want to attend zk week and connect with contributors in the space but feel like they need an accessible entry point.</p>","track":"ZK Week","stage":{"id":"Dome","name":"Dome"},"start":1682240400000,"end":1682244000000,"speakers":[{"id":"Rachel | PSE","name":"Rachel | PSE"},{"id":"Althea | PSE","name":"Althea | PSE"}]}
+{
+  "id": "475",
+  "name": "Zero Knowledge Anecdotes",
+  "description": "<p>Join us for a roundtable discussion to share the moments when Zero Knowledge has \"clicked\" for you on a conceptual or application level. How have you described Zero Knowledge, or heard it described, that made it feel more real, accessible, or connected to the things you value?<br>\nIf you work in the ZK space: how do you explain what you do and the value of ZKPs in applications? How have you<br>\ntailored your explanations based on the values of your audience?<br>\nIf you do not work in the ZK space: what descriptions have helped you better understand the concept and value of Zero Knowledge?</p>\n<p>Target audience: everyone, especially people who want to attend zk week and connect with contributors in the space but feel like they need an accessible entry point.</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682240400000,
+  "end": 1682244000000,
+  "speakers": [
+    { "id": "Rachel | PSE", "name": "Rachel | PSE" },
+    { "id": "Althea | PSE", "name": "Althea | PSE" }
+  ]
+}

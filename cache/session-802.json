@@ -1,1 +1,18 @@
-{"id":"802","name":"Zuzalu Town Hall","description":"<p>Town hall!&nbsp;</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683642600000,"end":1683646200000,"speakers":[{"id":"Vitalik","name":"Vitalik"},{"id":"Janine","name":"Janine"},{"id":"Milos","name":"Milos"},{"id":"Ilana","name":"Ilana"},{"id":"Nicole","name":"Nicole"},{"id":"Marine","name":"Marine"},{"id":"Laurence ","name":"Laurence "}]}
+{
+  "id": "802",
+  "name": "Zuzalu Town Hall",
+  "description": "<p>Town hall!&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683642600000,
+  "end": 1683646200000,
+  "speakers": [
+    { "id": "Vitalik", "name": "Vitalik" },
+    { "id": "Janine", "name": "Janine" },
+    { "id": "Milos", "name": "Milos" },
+    { "id": "Ilana", "name": "Ilana" },
+    { "id": "Nicole", "name": "Nicole" },
+    { "id": "Marine", "name": "Marine" },
+    { "id": "Laurence ", "name": "Laurence " }
+  ]
+}

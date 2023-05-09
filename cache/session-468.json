@@ -1,1 +1,10 @@
-{"id":"468","name":"Breakfast","description":"<p>Breakfast for New Cities and Network States</p>","track":"New Cities & Network States","stage":{"id":"Kiki’s Restaurant inside","name":"Kiki’s Restaurant inside"},"start":1682834400000,"end":1682838000000,"speakers":[{"id":"Mark Lutter, Niklas Anzinger","name":"Mark Lutter, Niklas Anzinger"}]}
+{
+  "id": "468",
+  "name": "Breakfast",
+  "description": "<p>Breakfast for New Cities and Network States</p>",
+  "track": "New Cities & Network States",
+  "stage": { "id": "Kiki’s Restaurant inside", "name": "Kiki’s Restaurant inside" },
+  "start": 1682834400000,
+  "end": 1682838000000,
+  "speakers": [{ "id": "Mark Lutter, Niklas Anzinger", "name": "Mark Lutter, Niklas Anzinger" }]
+}

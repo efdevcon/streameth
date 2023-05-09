@@ -1,1 +1,13 @@
-{"id":"473","name":"Krazy Kiki’s Kitchen Takeover Party","description":"<p>Are you ready to roll up your sleeves, put on your apron, and join us for a fun-filled evening of cooking, laughter, and delicious food with the whoooole Zuzalu community?</p>\n<p>This Tuesday, we will be hosting a community cooking event where a bunch of people from our community will come together to cook for the rest of the community. Whether you're a seasoned chef or a beginner cook, this is the perfect opportunity to showcase your culinary skills, learn from others, and have obvious fun!!!</p>\n<p>We will provide all the necessary ingredients and equipment, all you need to bring is your enthusiasm and willingness to have fun. Our kitchen takeover cooking experience will be filled with challenges, surprises, and lots of laughter, so come prepared for a wild ride.</p>\n<p>And if you don’t want to cook, showing up for dinner is also perfect. Get ready to join us for a night of craziness in the kitchen. We can't wait to see you there!</p>","track":"Open Sessions","stage":{"id":"Other","name":"Other"},"start":1682442000000,"end":1682449200000,"speakers":[{"id":"Janine","name":"Janine"},{"id":"ilana","name":"ilana"}]}
+{
+  "id": "473",
+  "name": "Krazy Kiki’s Kitchen Takeover Party",
+  "description": "<p>Are you ready to roll up your sleeves, put on your apron, and join us for a fun-filled evening of cooking, laughter, and delicious food with the whoooole Zuzalu community?</p>\n<p>This Tuesday, we will be hosting a community cooking event where a bunch of people from our community will come together to cook for the rest of the community. Whether you're a seasoned chef or a beginner cook, this is the perfect opportunity to showcase your culinary skills, learn from others, and have obvious fun!!!</p>\n<p>We will provide all the necessary ingredients and equipment, all you need to bring is your enthusiasm and willingness to have fun. Our kitchen takeover cooking experience will be filled with challenges, surprises, and lots of laughter, so come prepared for a wild ride.</p>\n<p>And if you don’t want to cook, showing up for dinner is also perfect. Get ready to join us for a night of craziness in the kitchen. We can't wait to see you there!</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Other", "name": "Other" },
+  "start": 1682442000000,
+  "end": 1682449200000,
+  "speakers": [
+    { "id": "Janine", "name": "Janine" },
+    { "id": "ilana", "name": "ilana" }
+  ]
+}

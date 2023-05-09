@@ -1,1 +1,16 @@
-{"id":"331","name":"Debate: How to Fund Ethereum Contributors","description":"<p>Background: this forum thread https://gov.optimism.io/t/feedback-on-eip4844-contributors-collection/5566/10</p>","track":"Public Goods","stage":{"id":"Dome","name":"Dome"},"start":1681466400000,"end":1681469700000,"speakers":[{"id":"David Hoffman","name":"David Hoffman"},{"id":"Karl","name":"Karl"},{"id":"Liam","name":"Liam"},{"id":"Tim Beiko","name":"Tim Beiko"},{"id":"Cheeky Gorilla","name":"Cheeky Gorilla"}]}
+{
+  "id": "331",
+  "name": "Debate: How to Fund Ethereum Contributors",
+  "description": "<p>Background: this forum thread https://gov.optimism.io/t/feedback-on-eip4844-contributors-collection/5566/10</p>",
+  "track": "Public Goods",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681466400000,
+  "end": 1681469700000,
+  "speakers": [
+    { "id": "David Hoffman", "name": "David Hoffman" },
+    { "id": "Karl", "name": "Karl" },
+    { "id": "Liam", "name": "Liam" },
+    { "id": "Tim Beiko", "name": "Tim Beiko" },
+    { "id": "Cheeky Gorilla", "name": "Cheeky Gorilla" }
+  ]
+}

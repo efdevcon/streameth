@@ -7,5 +7,6 @@
   "start": 1680334200000,
   "end": 1680336000000,
   "speakers": [{ "id": "John Cumbers, CEO & Founder, SynBioBeta", "name": "John Cumbers, CEO & Founder, SynBioBeta" }],
-  "video": "https://lp-playback.com/hls/9125xrzahxfeswbk/index.m3u8"
+  "video": "https://lp-playback.com/hls/9125xrzahxfeswbk/index.m3u8",
+  "gpt_description": "The video is about synthetic biology and its potential applications. The speaker gives an introduction to biology for those new to the field and discusses the power of biology in creating things like beer, spirulina, and romanescu broccoli. The main focus is on synthetic biology, which aims to make biology easier to engineer. The speaker explains the process of engineering biology and its potential economic impact, with the industry predominantly based in the USA. The video also covers various tools and platforms used in synthetic biology, such as DNA synthesis, organism engineering, and application space. Finally, the speaker mentions various companies that are using synthetic biology to create sustainable products like mushroom-based packaging, nightlights, and jet fuel."
 }

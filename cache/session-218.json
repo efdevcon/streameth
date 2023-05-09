@@ -1,1 +1,10 @@
-{"id":"218","name":"No Host Dinner (Boat will dock in Tivat with many great dining options) - 7.30pm - 9.00pm","description":"No Host Dinner (Boat will dock in Tivat with many great dining options) - 7.30pm - 9.00pm","track":"ZK Week","stage":{"id":"Other","name":"Other"},"start":1680370200000,"end":1680375600000,"speakers":[{"id":"Synthetic Biology Summit","name":"Synthetic Biology Summit"}]}
+{
+  "id": "218",
+  "name": "No Host Dinner (Boat will dock in Tivat with many great dining options) - 7.30pm - 9.00pm",
+  "description": "No Host Dinner (Boat will dock in Tivat with many great dining options) - 7.30pm - 9.00pm",
+  "track": "ZK Week",
+  "stage": { "id": "Other", "name": "Other" },
+  "start": 1680370200000,
+  "end": 1680375600000,
+  "speakers": [{ "id": "Synthetic Biology Summit", "name": "Synthetic Biology Summit" }]
+}

@@ -1,1 +1,13 @@
-{"id":"381","name":"Nova Dinner","description":"<p>Open-dinner for folks interested in Nova, casual discussion 🙂<br>\n<br>\nDinner tab covered by Zuzalu/0xPARC<br>\nLimited seating -- first come, first serve</p>","track":"ZK Week","stage":{"id":"Kiki’s Restaurant inside","name":"Kiki’s Restaurant inside"},"start":1681840800000,"end":1681846200000,"speakers":[{"id":"Nalin","name":"Nalin"},{"id":"Justin Drake","name":"Justin Drake"}]}
+{
+  "id": "381",
+  "name": "Nova Dinner",
+  "description": "<p>Open-dinner for folks interested in Nova, casual discussion 🙂<br>\n<br>\nDinner tab covered by Zuzalu/0xPARC<br>\nLimited seating -- first come, first serve</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Kiki’s Restaurant inside", "name": "Kiki’s Restaurant inside" },
+  "start": 1681840800000,
+  "end": 1681846200000,
+  "speakers": [
+    { "id": "Nalin", "name": "Nalin" },
+    { "id": "Justin Drake", "name": "Justin Drake" }
+  ]
+}

@@ -1,1 +1,10 @@
-{"id":"807","name":"The End Of Medicine Screening With The Director 🎬","description":"<p>The End of Medicine aims to highlight the emergence of existential health threats such as zoonotic disease, chronic disease, and perhaps even more worryingly, antimicrobial resistance and what we can do to address it.&nbsp;</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683790200000,"end":1683793800000,"speakers":[{"id":"End of Medicine Summit","name":"End of Medicine Summit"}]}
+{
+  "id": "807",
+  "name": "The End Of Medicine Screening With The Director 🎬",
+  "description": "<p>The End of Medicine aims to highlight the emergence of existential health threats such as zoonotic disease, chronic disease, and perhaps even more worryingly, antimicrobial resistance and what we can do to address it.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683790200000,
+  "end": 1683793800000,
+  "speakers": [{ "id": "End of Medicine Summit", "name": "End of Medicine Summit" }]
+}

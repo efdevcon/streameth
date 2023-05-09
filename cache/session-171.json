@@ -7,5 +7,6 @@
   "start": 1681916400000,
   "end": 1681920000000,
   "speakers": [{ "id": "Ariel Gabizon", "name": "Ariel Gabizon" }],
-  "video": "https://lp-playback.com/hls/f3dcw5v0phzv01mi/index.m3u8"
+  "video": "https://lp-playback.com/hls/f3dcw5v0phzv01mi/index.m3u8",
+  "gpt_description": "In this video, the speaker provides an overview of the last decade of pairing-based snarks, focusing on the third chapter of this approach. They discuss the KZG polynomial commitment scheme and how it can be used to prove that a polynomial is equal to the vanishing polynomial of a subset of T in only O(S) operations. The speaker introduces the concept of fractional decomposition and explains how it can be used to compute the commitment to ZT minus S, which is a sparse combination of commitments that can be pre-computed."
 }

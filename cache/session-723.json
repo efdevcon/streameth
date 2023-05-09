@@ -1,1 +1,10 @@
-{"id":"723","name":"Virtue Ethics & AI with Rob Knight","description":"<p>This event is part of the AI x Crypto Summit @ Zuzalu! Please see <a href=\"http://ai.zuzalu.ai/\" title=\"ai.zuzalu.ai\"><u>ai.zuzalu.ai</u></a> for full details.</p>","track":"AI x Crypto","stage":{"id":"Ballroom","name":"Ballroom","stream":[{"id":"fe9970f6-1dee-40e1-8e9f-5bc99fed7dec"}]},"start":1683360900000,"end":1683364500000,"speakers":[{"id":"Robert Knight","name":"Robert Knight"}]}
+{
+  "id": "723",
+  "name": "Virtue Ethics & AI with Rob Knight",
+  "description": "<p>This event is part of the AI x Crypto Summit @ Zuzalu! Please see <a href=\"http://ai.zuzalu.ai/\" title=\"ai.zuzalu.ai\"><u>ai.zuzalu.ai</u></a> for full details.</p>",
+  "track": "AI x Crypto",
+  "stage": { "id": "Ballroom", "name": "Ballroom", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
+  "start": 1683360900000,
+  "end": 1683364500000,
+  "speakers": [{ "id": "Robert Knight", "name": "Robert Knight" }]
+}

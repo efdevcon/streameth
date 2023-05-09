@@ -7,5 +7,6 @@
   "start": 1681831800000,
   "end": 1681837200000,
   "speakers": [{ "id": "Yi", "name": "Yi" }],
-  "video": "https://lp-playback.com/hls/030brdypg0lr8hlk/index.m3u8"
+  "video": "https://lp-playback.com/hls/030brdypg0lr8hlk/index.m3u8",
+  "gpt_description": "The video discusses how to write ZK circuits in Halo 2, a Rust library for creating ZK circuits. The library is flexible and modern, but can be difficult to use without the right knowledge. The video offers a solution with Halo 2 Lib, a library that simplifies the process of writing ZK circuits. The video walks through the Halo 2 scaffold repo, which provides a template for writing ZK circuits using Halo 2 Lib. The video also covers the benefits of using Halo 2, including the ability to use Rust features and a rich developer ecosystem."
 }

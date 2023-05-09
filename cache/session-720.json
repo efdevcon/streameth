@@ -1,1 +1,10 @@
-{"id":"720","name":"Visitor's Dinner","description":"<p>Fellow visitors! Our gracious hosts are having a resident's dinner tonight and it's important they get time to connect. Let's take the opportunity to meet, connect, learn about each other and see how we can help support what we are each doing.&nbsp;</p>\n<p>Join us at The Spot at 7:00 for a few hours and let's add to the awesome vibe we've been lucky to be part of.&nbsp;</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683133200000,"end":1683136800000,"speakers":[{"id":"Elliott Bayev","name":"Elliott Bayev"}]}
+{
+  "id": "720",
+  "name": "Visitor's Dinner",
+  "description": "<p>Fellow visitors! Our gracious hosts are having a resident's dinner tonight and it's important they get time to connect. Let's take the opportunity to meet, connect, learn about each other and see how we can help support what we are each doing.&nbsp;</p>\n<p>Join us at The Spot at 7:00 for a few hours and let's add to the awesome vibe we've been lucky to be part of.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683133200000,
+  "end": 1683136800000,
+  "speakers": [{ "id": "Elliott Bayev", "name": "Elliott Bayev" }]
+}

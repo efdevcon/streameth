@@ -1,1 +1,10 @@
-{"id":"598","name":"Open sourcing healthcare is saving lives while creating a new health ecosystem","description":"<p>Join this lively discussion with Dave Chase, cofounder of <a href=\"https://healthrosetta.org/\"><strong>Health Rosetta</strong></a>, which aims to accelerate the adoption of simple, practical, non-partisan fixes to our healthcare system. Even if healthcare isn't your issue, it's undermining your causes. Despite the challenges, a movement is succeeding in changing the most influential sector in the US. A new community/ecosystem has rewritten national rules and laws as well as the secret \"laws\" that govern this enterprise. This new movement can save lives and even entire communities when it operates as a coordin-nation.</p>","track":"Open Sessions","stage":{"id":"Kiki’s Restaurant inside","name":"Kiki’s Restaurant inside"},"start":1683041400000,"end":1683045000000,"speakers":[{"id":"Janine Leger","name":"Janine Leger"}]}
+{
+  "id": "598",
+  "name": "Open sourcing healthcare is saving lives while creating a new health ecosystem",
+  "description": "<p>Join this lively discussion with Dave Chase, cofounder of <a href=\"https://healthrosetta.org/\"><strong>Health Rosetta</strong></a>, which aims to accelerate the adoption of simple, practical, non-partisan fixes to our healthcare system. Even if healthcare isn't your issue, it's undermining your causes. Despite the challenges, a movement is succeeding in changing the most influential sector in the US. A new community/ecosystem has rewritten national rules and laws as well as the secret \"laws\" that govern this enterprise. This new movement can save lives and even entire communities when it operates as a coordin-nation.</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Kiki’s Restaurant inside", "name": "Kiki’s Restaurant inside" },
+  "start": 1683041400000,
+  "end": 1683045000000,
+  "speakers": [{ "id": "Janine Leger", "name": "Janine Leger" }]
+}

@@ -1,1 +1,10 @@
-{"id":"814","name":"End of Medicine Summit Closing: Vegan Propaganda 🎙️","description":"<p>Join the closing session of the End of Medicine Summit about vegan propaganda. (Detailed description will be added later.)</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683824400000,"end":1683828000000,"speakers":[{"id":"End of Medicine Summit","name":"End of Medicine Summit"}]}
+{
+  "id": "814",
+  "name": "End of Medicine Summit Closing: Vegan Propaganda 🎙️",
+  "description": "<p>Join the closing session of the End of Medicine Summit about vegan propaganda. (Detailed description will be added later.)</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683824400000,
+  "end": 1683828000000,
+  "speakers": [{ "id": "End of Medicine Summit", "name": "End of Medicine Summit" }]
+}

@@ -7,5 +7,6 @@
   "start": 1681749000000,
   "end": 1681754400000,
   "speakers": [{ "id": "Ivan Chub", "name": "Ivan Chub" }],
-  "video": "https://lp-playback.com/hls/b2434d0mi7stlseu/index.m3u8"
+  "video": "https://lp-playback.com/hls/b2434d0mi7stlseu/index.m3u8",
+  "gpt_description": "The video is a workshop on how to integrate with the Zuzeloo Passport, which allows for anonymous authentication. The speaker shows how to build applications on top of it and demonstrates a minimal viable example using the Zuzeloo Confessions website. The video is code-heavy, but the speaker provides repositories and packages to help with integration. The workshop is interactive, and the speaker encourages questions. The video covers the basics of how to use the Passport and how to construct zero-knowledge proofs."
 }

@@ -1,1 +1,10 @@
-{"id":"455","name":"Music Listening Party - Amapiano & other emerging music of the world","description":"<p>I (Gary) would love to play some Amapiano for you all on a speaker -- which is a South African origin electronic music genre that I can't get enough of. And I'm very open to other people with their own suggestions of what emerging world music we should listen to. <br>\n<br>\nChill environment, sitting on floor, dancing is optional.&nbsp;</p>","track":"Open Sessions","stage":{"id":"Other","name":"Other"},"start":1682015400000,"end":1682022600000,"speakers":[{"id":"Gary Sheng","name":"Gary Sheng"}]}
+{
+  "id": "455",
+  "name": "Music Listening Party - Amapiano & other emerging music of the world",
+  "description": "<p>I (Gary) would love to play some Amapiano for you all on a speaker -- which is a South African origin electronic music genre that I can't get enough of. And I'm very open to other people with their own suggestions of what emerging world music we should listen to. <br>\n<br>\nChill environment, sitting on floor, dancing is optional.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Other", "name": "Other" },
+  "start": 1682015400000,
+  "end": 1682022600000,
+  "speakers": [{ "id": "Gary Sheng", "name": "Gary Sheng" }]
+}

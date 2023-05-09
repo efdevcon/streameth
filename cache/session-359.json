@@ -1,1 +1,14 @@
-{"id":"359","name":"Embodiment Weekend - Sharing Circle + Expression Movement into music jam session / open mic","description":"<p>Sharing Circle for embodiment week, with embodied movement&nbsp;</p>","track":"Other","stage":{"id":"Other","name":"Other"},"start":1682096400000,"end":1682107200000,"speakers":[{"id":"ilana brown","name":"ilana brown"},{"id":"","name":""},{"id":"","name":""}]}
+{
+  "id": "359",
+  "name": "Embodiment Weekend - Sharing Circle + Expression Movement into music jam session / open mic",
+  "description": "<p>Sharing Circle for embodiment week, with embodied movement&nbsp;</p>",
+  "track": "Other",
+  "stage": { "id": "Other", "name": "Other" },
+  "start": 1682096400000,
+  "end": 1682107200000,
+  "speakers": [
+    { "id": "ilana brown", "name": "ilana brown" },
+    { "id": "", "name": "" },
+    { "id": "", "name": "" }
+  ]
+}

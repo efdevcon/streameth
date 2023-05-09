@@ -7,5 +7,6 @@
   "start": 1681921800000,
   "end": 1681927200000,
   "speakers": [{ "id": "gubsheep", "name": "gubsheep" }],
-  "video": "https://lp-playback.com/hls/61bfm7wb9c9bv1j0/index.m3u8"
+  "video": "https://lp-playback.com/hls/61bfm7wb9c9bv1j0/index.m3u8",
+  "gpt_description": "This video is the second workshop about the Zuzulu passport, which allows users to log in to Zuzulu.city and prove they are a member without revealing their identity. The workshop demonstrates a new feature that allows users to prove they own a particular Ethereum address. The video shows a demo of how to use this feature and how third-party integration websites can request proof of ownership. The video also includes a discussion of the code and how the passport verifies the proof."
 }

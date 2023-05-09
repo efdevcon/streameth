@@ -1,1 +1,10 @@
-{"id":"221","name":"Breakfast - From 8.00am to 9.00am","description":"Breakfast - From 8.00am to 9.00am","track":"ZK Week","stage":{"id":"Other","name":"Other"},"start":1680332400000,"end":1680333300000,"speakers":[{"id":"Synthetic Biology Summit","name":"Synthetic Biology Summit"}]}
+{
+  "id": "221",
+  "name": "Breakfast - From 8.00am to 9.00am",
+  "description": "Breakfast - From 8.00am to 9.00am",
+  "track": "ZK Week",
+  "stage": { "id": "Other", "name": "Other" },
+  "start": 1680332400000,
+  "end": 1680333300000,
+  "speakers": [{ "id": "Synthetic Biology Summit", "name": "Synthetic Biology Summit" }]
+}

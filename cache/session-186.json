@@ -1,1 +1,10 @@
-{"id":"186","name":"ZK Hackathon Demos","description":"Builders will present what they've worked on over the past two days! All are welcome to attend the presentations.","track":"ZK Week","stage":{"id":"Dome","name":"Dome"},"start":1682269200000,"end":1682276400000,"speakers":[{"id":"Zuzalu","name":"Zuzalu"}]}
+{
+  "id": "186",
+  "name": "ZK Hackathon Demos",
+  "description": "Builders will present what they've worked on over the past two days! All are welcome to attend the presentations.",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682269200000,
+  "end": 1682276400000,
+  "speakers": [{ "id": "Zuzalu", "name": "Zuzalu" }]
+}

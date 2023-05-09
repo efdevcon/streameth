@@ -1,19 +1,12 @@
 {
   "id": "228",
   "name": "Solving Inefficiencies in Biomanufacturing with Network States",
-  "description": "Solving Inefficiencies in Biomanufacturing with Network States - Kristen Allbright, Prokarium //\nA Living Experiment with Prospera – Niklas Anzinger, Infinita VC //\nDecentralized science - Martin Etzrost (AKASHA) & Sönke Bartling (Blockchain For Science) //\nGamification of Science - Ashton Trotmant-Grant //\nDistributed Emerging Technology – Dorothy Zhang, iGEM.",
+  "description": "Solving Inefficiencies in Biomanufacturing with Network States - Kristen Allbright, Prokarium //\nA Living Experiment with Prospera \u2013 Niklas Anzinger, Infinita VC //\nDecentralized science - Martin Etzrost (AKASHA) & S\u00f6nke Bartling (Blockchain For Science) //\nGamification of Science - Ashton Trotmant-Grant //\nDistributed Emerging Technology \u2013 Dorothy Zhang, iGEM.",
   "track": "ZK Week",
-  "stage": {
-    "id": "Other",
-    "name": "Other"
-  },
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
   "start": 1680427800000,
   "end": 1680431400000,
-  "speakers": [
-    {
-      "id": "Kristen Allbright, Prokarium",
-      "name": "Kristen Allbright, Prokarium"
-    }
-  ],
-  "video": "https://lp-playback.com/hls/c108nkq5ofnw1lta/index.m3u8"
+  "speakers": [{ "id": "Kristen Allbright, Prokarium", "name": "Kristen Allbright, Prokarium" }],
+  "video": "https://lp-playback.com/hls/c108nkq5ofnw1lta/index.m3u8",
+  "gpt_description": "The video features Kristen Albright, CEO of Procari, a synthetic biology company in London, discussing how bacteria can be used to produce better proteins and how regulation by the FDA is important in the bio-manufacturing industry. Albright also talks about the history of the FDA and its role in regulating food and drugs. She suggests that pre-competitive labs and collaborations can help move the industry forward and commercialize the output. Albright also mentions some companies, including Ginkgo and Wild, that are working in the field of synthetic biology."
 }

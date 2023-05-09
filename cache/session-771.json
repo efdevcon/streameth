@@ -1,1 +1,10 @@
-{"id":"771","name":"Overthrowing the Network State with Coordi-Nations","description":"<p>TECHNICAL</p>\n<p>9:30 - 11:00 &nbsp;Reporting on the technical specifications necessary to ensure the proper operations of a Coordi-Nation: Technical requirements for sovereign communities</p>\n<p>11:00 - 12:30 Fishbowl: What does blockchain technology bring that is new?</p>\n<p>14:00 - 17:00 Roundtables:</p>\n<ol>\n  <li>State of the Art and technological gaps to be filled</li>\n  <li>Blockchain as a means to support new sovereignties: challenges and opportunities</li>\n</ol>","track":"Coordi-nations and Digital Tribes","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1684395000000,"end":1684398600000,"speakers":[{"id":"Primavera De Filippi","name":"Primavera De Filippi"}]}
+{
+  "id": "771",
+  "name": "Overthrowing the Network State with Coordi-Nations",
+  "description": "<p>TECHNICAL</p>\n<p>9:30 - 11:00 &nbsp;Reporting on the technical specifications necessary to ensure the proper operations of a Coordi-Nation: Technical requirements for sovereign communities</p>\n<p>11:00 - 12:30 Fishbowl: What does blockchain technology bring that is new?</p>\n<p>14:00 - 17:00 Roundtables:</p>\n<ol>\n  <li>State of the Art and technological gaps to be filled</li>\n  <li>Blockchain as a means to support new sovereignties: challenges and opportunities</li>\n</ol>",
+  "track": "Coordi-nations and Digital Tribes",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684395000000,
+  "end": 1684398600000,
+  "speakers": [{ "id": "Primavera De Filippi", "name": "Primavera De Filippi" }]
+}

@@ -7,5 +7,6 @@
   "start": 1680350400000,
   "end": 1680352200000,
   "speakers": [{ "id": "Jake Glanville, CEO and Founder, Centivax", "name": "Jake Glanville, CEO and Founder, Centivax" }],
-  "video": "https://lp-playback.com/hls/fc5b5wojyv4dqhax/index.m3u8"
+  "video": "https://lp-playback.com/hls/fc5b5wojyv4dqhax/index.m3u8",
+  "gpt_description": "The video is about the importance of universal vaccines in the context of history and the future. The speaker shares his personal story of growing up in a Mayan village in Guatemala and witnessing the positive impact of simple medicines on the health and prosperity of the community. He emphasizes the threat of infectious diseases as our greatest enemy and the success of vaccines in eradicating diseases like smallpox. However, he also highlights the challenges of developing universal vaccines due to the rapid mutation of pathogens and the difficulty of targeting the immune system. The speaker, a computational immune engineer, shares his insights on vaccine design and the importance of understanding the diversity dynamics of the immune system. He concludes by discussing the potential of new technologies and approaches to develop effective universal vaccines."
 }
