@@ -94,11 +94,9 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
       <RainbowKitProvider chains={chains}>
         <Script src="/theme.js" />
         <LivepeerConfig client={livepeerClient}>
-          <Layout pages={pageProps.pages}>
             <SEO />
             <Component {...(pageProps as any)} />
-          </Layout>
-          <Analytics />
+            <Analytics />
         </LivepeerConfig>
       </RainbowKitProvider>
     </WagmiConfig>

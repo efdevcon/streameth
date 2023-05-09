@@ -1,4 +1,4 @@
-import { Stage } from 'types'
+import { Stage, page } from 'types'
 import { ConfigController } from 'services/config'
 
 export async function GetStages(): Promise<Stage[]> {
@@ -15,6 +15,16 @@ export async function GetStages(): Promise<Stage[]> {
     throw new Error('No stages found, please check configuration object')
   }
   return stages
+}
+
+export async function GenerateNavigation(): Promise<page[]> {
+  const stages = await GetStages()
+  return stages.map((stage) => {
+    return {
+      name: stage.name,
+      href: `/stage/${stage.id}`,
+    }
+  })
 }
 
 export async function GetStageById(id: string): Promise<Stage | undefined> {
