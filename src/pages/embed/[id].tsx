@@ -3,7 +3,7 @@ import { Stage } from 'types'
 import { ParsedUrlQuery } from 'querystring'
 import { SEO } from 'components/seo'
 import { GetStages, GetStageById } from 'services/stage'
-import { EventController } from 'services/event'
+import { ConfigController } from 'services/config'
 import EmbedLayout from 'layouts/embed'
 import { Player } from 'components/Player'
 interface Props {

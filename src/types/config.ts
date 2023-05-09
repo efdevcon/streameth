@@ -1,28 +1,20 @@
-import { Session, Stage } from 'types'
-
 export interface Config {
+  name: string
+  description: string
+  start: string
+  end: string
+  website: string
+  poster: string
+  data: Data
+  plugins: any[]
+}
+
+export interface DataConfig {
   [key: string]: string | boolean | number | Array<Config>
 }
 
-export type StreamTypes = 'livepeer'
-export interface Stream {
-  id: string
-  version: number
-  type: StreamTypes
-  stages: Stage[]
-  config: Config
-}
-
 export type DataConfigTypes = 'fs' | 'pretalx' | 'gsheet'
-export interface DataConfig {
+export interface Data {
   type: DataConfigTypes
-  config: Config
+  config: DataConfig
 }
-
-  // export type ArchiveTypes = 'gsheet'
-  // export interface Archive {
-  //   version: number
-  //   type: ArchiveTypes
-  //   config: Config
-  //   sessions: Session[]
-  // }
