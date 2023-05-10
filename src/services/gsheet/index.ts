@@ -7,6 +7,15 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import PQueue from 'p-queue'
 
+const SPEAKER_SHEET = 'Speakers'
+const SPEAKER_DATA_RANGE = 'A3:I'
+
+const STAGE_SHEET = 'Stages'
+const STAGE_DATA_RANGE = 'A3:D'
+
+const SESSION_SHEET = 'Sessions'
+const SESSION_DATA_RANGE = 'A3:M'
+
 const API_QUEUE = new PQueue({ concurrency: 1, interval: 1500 })
 
 async function createLocalJsonCache(data: any, filename: string) {
@@ -16,18 +25,17 @@ async function createLocalJsonCache(data: any, filename: string) {
 }
 
 async function getLocalJsonCache(filename: string) {
-  const cachePath = path.join(process.cwd(), 'cache');
-  const cacheFile = path.join(cachePath, `${filename}.json`);
+  const cachePath = path.join(process.cwd(), 'cache')
+  const cacheFile = path.join(cachePath, `${filename}.json`)
 
   try {
-    const cacheData = await fs.readFile(cacheFile, 'utf8');
-    return JSON.parse(cacheData);
+    const cacheData = await fs.readFile(cacheFile, 'utf8')
+    return JSON.parse(cacheData)
   } catch (err) {
-    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
-    throw err;
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null
+    throw err
   }
 }
-
 
 async function connectToGoogleSheets(config: DataConfig) {
   if (!config['sheetId']) throw new Error('No valid sheetId set for gsheet module')
@@ -57,20 +65,20 @@ async function getSheetName(config: DataConfig) {
   return sheetName
 }
 
-async function getDataForRange(config: DataConfig, range: string): Promise<any> {
+async function getDataForRange(config: DataConfig, sheetName: string, range: string): Promise<any> {
   const localCache = await getLocalJsonCache(range)
   if (localCache) return localCache
 
   const sheets = await connectToGoogleSheets(config)
-  const sheetName = await getSheetName(config)
+  // const sheetName = await getSheetName(config)
   const sheetId = config['sheetId'] as string
 
-  const response = await API_QUEUE.add(() =>
+  const response = (await API_QUEUE.add(() =>
     sheets.spreadsheets.values.get({
       spreadsheetId: sheetId,
       range: `${sheetName}!${range}`,
     })
-  ) as any
+  )) as any
 
   const rows = response.data.values
   if (!rows) return []
@@ -79,9 +87,8 @@ async function getDataForRange(config: DataConfig, range: string): Promise<any> 
   return rows
 }
 
-const STAGE_DATA_RANGE = 'A4:D'
 export async function GetStages(config: DataConfig): Promise<Stage[]> {
-  const data = await getDataForRange(config, STAGE_DATA_RANGE)
+  const data = await getDataForRange(config, STAGE_SHEET, STAGE_DATA_RANGE)
   const a = data.map((row: any) => {
     const [id, name, streamId, image] = row
     if (!id) return null
@@ -98,13 +105,12 @@ export async function GetStages(config: DataConfig): Promise<Stage[]> {
   return a.filter((i: any) => i)
 }
 
-const SPEAKER_DATA_RANGE = 'F4:I'
 export async function getSpeakers(config: DataConfig): Promise<Speaker[]> {
-  const data = await getDataForRange(config, SPEAKER_DATA_RANGE)
+  const data = await getDataForRange(config, SPEAKER_SHEET, SPEAKER_DATA_RANGE)
   return data.map((row: any) => {
     const [id, name, Description, AvatarUrl] = row
     return {
-      id: GetSlug(id),
+      id: name,
       name,
       description: Description,
       avatar: AvatarUrl ?? null,
@@ -112,27 +118,45 @@ export async function getSpeakers(config: DataConfig): Promise<Speaker[]> {
   })
 }
 
-const SESSION_DATA_RANGE = 'K4:W'
 export async function getSessions(config: DataConfig): Promise<Session[]> {
-  const data = await getDataForRange(config, SESSION_DATA_RANGE)
+  const data = await getDataForRange(config, SESSION_SHEET, SESSION_DATA_RANGE)
   const speakerData = await getSpeakers(config)
   const stageData = await GetStages(config)
+
   return data.map((row: any) => {
-    const [id, Name, Description, stageId, Day, Start, End, Speaker1Id, Speaker2Id, Speaker3Id, Speaker4Id, Speaker5Id, video] = row
-    const speakersRaw = [Speaker1Id, Speaker2Id, Speaker3Id, Speaker4Id].map((id: string) => {
-      if (!id) return null
-      const speaker = speakerData.find((i) => i.id === GetSlug(id))
-      if (!speaker) throw new Error(`No speaker found for id ${id}`)
+    const [id, Name, Description, stageId, Day, Start, End, Speaker1, Speaker2, Speaker3, Speaker4, Speaker5, video] = row
+    const speakersRaw = [Speaker1, Speaker2, Speaker3, Speaker4, Speaker5].map((id: string) => {
+      let speaker
+
+      try {
+        if (!id) return null
+
+        speaker = speakerData.find((i) => {
+          return i.id === id
+        })
+        if (!speaker) throw new Error(`No speaker found for id ${id}`)
+      } catch (error) {
+        console.log(error)
+        return null
+      }
+
       return speaker
     })
 
     const speakers = speakersRaw.filter((i) => i !== null)
 
-    const stage = stageData.find((i) => i.id === GetSlug(stageId))
-    if (!stage) throw new Error(`No stage found for id ${stageId}`)
+    let stage
+    try {
+      stage = stageData.find((i) => i.id === GetSlug(stageId))
+      if (!stage) throw new Error(`No stage found for id ${stageId}`)
+    } catch (error) {
+      console.error(error)
+      stage = null
+    }
 
     const start = datetimeToUnixTimestamp(`${Day} ${Start}`)
     const end = datetimeToUnixTimestamp(`${Day} ${End}`)
+
     return {
       id: GetSlug(id),
       name: Name,
