@@ -1,1 +1,13 @@
-{"id":"791","name":"DANCE PARTY WITH DJ PABLO 🕺🏻🎶💃🍄🪩","description":"<p>You look at your phone. It's 10pm. You reflect in awe that you have finally figured out how we align AI.</p>\n<p>Now that you've checked that off your TODO list, it's time to celebrate.</p>\n<p>But where do you celebrate?</p>\n<p>Well, today is your lucky day.</p>\n<p>We are excited to share that DJ Pablo hailing from Zuzalu is RETURNING for another show after a sold out show last night!</p>\n<p>Wear your dance shoes.</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683318600000,"end":1683322200000,"speakers":[{"id":"Pablo Penguin","name":"Pablo Penguin"},{"id":"Gary Sheng","name":"Gary Sheng"}]}
+{
+  "id": "791",
+  "name": "DANCE PARTY WITH DJ PABLO 🕺🏻🎶💃🍄🪩",
+  "description": "<p>You look at your phone. It's 10pm. You reflect in awe that you have finally figured out how we align AI.</p>\n<p>Now that you've checked that off your TODO list, it's time to celebrate.</p>\n<p>But where do you celebrate?</p>\n<p>Well, today is your lucky day.</p>\n<p>We are excited to share that DJ Pablo hailing from Zuzalu is RETURNING for another show after a sold out show last night!</p>\n<p>Wear your dance shoes.</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683318600000,
+  "end": 1683322200000,
+  "speakers": [
+    { "id": "Pablo Penguin", "name": "Pablo Penguin" },
+    { "id": "Gary Sheng", "name": "Gary Sheng" }
+  ]
+}

@@ -1,1 +1,13 @@
-{"id":"352","name":"Flirtinis & Mingleberries","description":"<p>Join fellow Zuzaluans for an evening of socializing and an opportunity to meet other singles &amp; availables or just to have an intimate conversation. Drink the flirtinis, eat the mingleberries and get down tonight! BYOB. We kindly suggest that you do not attend if you are not interested in discovering a new partner(s).<br>\n</p>\n<p>Brought to you by Zuzalu Match.</p>","track":"Public Goods","stage":{"id":"Other","name":"Other"},"start":1681497900000,"end":1681512300000,"speakers":[{"id":"Aella","name":"Aella"},{"id":"Eva","name":"Eva"}]}
+{
+  "id": "352",
+  "name": "Flirtinis & Mingleberries",
+  "description": "<p>Join fellow Zuzaluans for an evening of socializing and an opportunity to meet other singles &amp; availables or just to have an intimate conversation. Drink the flirtinis, eat the mingleberries and get down tonight! BYOB. We kindly suggest that you do not attend if you are not interested in discovering a new partner(s).<br>\n</p>\n<p>Brought to you by Zuzalu Match.</p>",
+  "track": "Public Goods",
+  "stage": { "id": "Other", "name": "Other" },
+  "start": 1681497900000,
+  "end": 1681512300000,
+  "speakers": [
+    { "id": "Aella", "name": "Aella" },
+    { "id": "Eva", "name": "Eva" }
+  ]
+}

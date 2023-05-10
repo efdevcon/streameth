@@ -7,5 +7,6 @@
   "start": 1680282000000,
   "end": 1680285600000,
   "speakers": [{ "id": "Bryan Johnson", "name": "Bryan Johnson" }],
-  "video": "https://lp-playback.com/hls/2ff99qlm7vhk9nvh/index.m3u8"
+  "video": "https://lp-playback.com/hls/2ff99qlm7vhk9nvh/index.m3u8",
+  "gpt_description": "In this video, Brian Johnson discusses his blueprint effort, which aims to use an algorithm to take better care of him than he can himself. He explains how he hired a team of 30 doctors to create a systematic protocol to achieve optimal health by measuring all his organs, generating hundreds of data markers, and repeating the protocol. Johnson also discusses the three principles of the blueprint effort: goal alignment, autonomous self, and zero principle. He believes that technology can be used to improve human well-being and that the relationship we have with technology should be reversed, with technology in service of human well-being. Johnson also talks about the rejuvenation Olympics, where people compete to improve their health, and how he is excited to see data that the blueprint works in other people's lives."
 }

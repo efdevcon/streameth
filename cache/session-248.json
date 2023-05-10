@@ -1,1 +1,10 @@
-{"id":"248","name":"Witness Encryption Survey","description":"<p>A survey of what witness encryption is, how it can be used for blockchain, and where current research progress in.</p>","track":"ZK Week","stage":{"id":"Dome","name":"Dome"},"start":1680523200000,"end":1680527700000,"speakers":[{"id":"Lev Stambler","name":"Lev Stambler"}]}
+{
+  "id": "248",
+  "name": "Witness Encryption Survey",
+  "description": "<p>A survey of what witness encryption is, how it can be used for blockchain, and where current research progress in.</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1680523200000,
+  "end": 1680527700000,
+  "speakers": [{ "id": "Lev Stambler", "name": "Lev Stambler" }]
+}

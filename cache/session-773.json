@@ -1,1 +1,15 @@
-{"id":"773","name":"Pro Bono Legal Clinic Office Hours","description":"<p>Please see Pro Bono Legal Clinic TG Channle for full description.&nbsp;</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683189000000,"end":1683192600000,"speakers":[{"id":"Haotian Yi","name":"Haotian Yi"},{"id":"Bernhard Schrenk","name":"Bernhard Schrenk"},{"id":"Teresa Carballo","name":"Teresa Carballo"},{"id":"Glenda Sino-Cruz","name":"Glenda Sino-Cruz"}]}
+{
+  "id": "773",
+  "name": "Pro Bono Legal Clinic Office Hours",
+  "description": "<p>Please see Pro Bono Legal Clinic TG Channle for full description.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683189000000,
+  "end": 1683192600000,
+  "speakers": [
+    { "id": "Haotian Yi", "name": "Haotian Yi" },
+    { "id": "Bernhard Schrenk", "name": "Bernhard Schrenk" },
+    { "id": "Teresa Carballo", "name": "Teresa Carballo" },
+    { "id": "Glenda Sino-Cruz", "name": "Glenda Sino-Cruz" }
+  ]
+}

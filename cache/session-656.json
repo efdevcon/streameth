@@ -1,1 +1,10 @@
-{"id":"656","name":"The union of Crypto and Longevity","description":"<p>Panel with Vitalik Buterin, Tyler Golato, Laurence Ion, Max Unfried&nbsp;</p>\n<p><br></p>","track":"Longevity Industry Talks","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683971100000,"end":1683974700000,"speakers":[{"id":"Max Unfried","name":"Max Unfried"}]}
+{
+  "id": "656",
+  "name": "The union of Crypto and Longevity",
+  "description": "<p>Panel with Vitalik Buterin, Tyler Golato, Laurence Ion, Max Unfried&nbsp;</p>\n<p><br></p>",
+  "track": "Longevity Industry Talks",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683971100000,
+  "end": 1683974700000,
+  "speakers": [{ "id": "Max Unfried", "name": "Max Unfried" }]
+}

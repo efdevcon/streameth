@@ -7,5 +7,6 @@
   "start": 1682006400000,
   "end": 1682008200000,
   "speakers": [{ "id": "Alexandre Belling | Linea", "name": "Alexandre Belling | Linea" }],
-  "video": "https://lp-playback.com/hls/80e0istbqqdskhno/index.m3u8"
+  "video": "https://lp-playback.com/hls/80e0istbqqdskhno/index.m3u8",
+  "gpt_description": "The description for the video is missing or incomplete. It only contains the word \"you\" repeated multiple times. Please provide more information to summarize."
 }

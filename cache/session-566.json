@@ -1,1 +1,10 @@
-{"id":"566","name":"Knowledge Management Bootcamp","description":"<p>Anyone interested in upping their knowledge/project/task management game?</p>\n<p>I'll be giving an intro into the key processes I set up for myself and give space for others to share their processes too.&nbsp;</p>\n<p>Mainly the following workflows I have:&nbsp;</p>\n<p>1. Relationship and Customer management</p>\n<p>2. Daily/Weekly planning cycles</p>\n<p>3. Online Reading &amp; Capturing flows <br>\n<br>\nPersonally I am mostly using RoamResearch.com and Memex.Garden, but know a bunch of other tools that may fit your workflows better. <br>\n<br>\n<br>\n</p>","track":"Coordi-nations and Digital Tribes","stage":{"id":"Ballroom","name":"Ballroom"},"start":1683043200000,"end":1683046800000,"speakers":[{"id":"Oliver Sauter","name":"Oliver Sauter"}]}
+{
+  "id": "566",
+  "name": "Knowledge Management Bootcamp",
+  "description": "<p>Anyone interested in upping their knowledge/project/task management game?</p>\n<p>I'll be giving an intro into the key processes I set up for myself and give space for others to share their processes too.&nbsp;</p>\n<p>Mainly the following workflows I have:&nbsp;</p>\n<p>1. Relationship and Customer management</p>\n<p>2. Daily/Weekly planning cycles</p>\n<p>3. Online Reading &amp; Capturing flows <br>\n<br>\nPersonally I am mostly using RoamResearch.com and Memex.Garden, but know a bunch of other tools that may fit your workflows better. <br>\n<br>\n<br>\n</p>",
+  "track": "Coordi-nations and Digital Tribes",
+  "stage": { "id": "Ballroom", "name": "Ballroom" },
+  "start": 1683043200000,
+  "end": 1683046800000,
+  "speakers": [{ "id": "Oliver Sauter", "name": "Oliver Sauter" }]
+}

@@ -1,1 +1,13 @@
-{"id":"662","name":"Reproductive longevity - Opportunities and Importance","description":"<p>Panel with Laura Minquini, Lynae Brayboy, Julija Jurić&nbsp;</p>","track":"Longevity Industry Talks","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683988200000,"end":1683991800000,"speakers":[{"id":"Max Unfried","name":"Max Unfried"},{"id":"Laura Minquini","name":"Laura Minquini"}]}
+{
+  "id": "662",
+  "name": "Reproductive longevity - Opportunities and Importance",
+  "description": "<p>Panel with Laura Minquini, Lynae Brayboy, Julija Jurić&nbsp;</p>",
+  "track": "Longevity Industry Talks",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683988200000,
+  "end": 1683991800000,
+  "speakers": [
+    { "id": "Max Unfried", "name": "Max Unfried" },
+    { "id": "Laura Minquini", "name": "Laura Minquini" }
+  ]
+}

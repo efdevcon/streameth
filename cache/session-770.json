@@ -1,1 +1,10 @@
-{"id":"770","name":"Overthrowing the Network State with Coordi-Nations","description":"<p>PRACTICE</p>\n<p>9:30 - 11:00 Reporting on practical steps for setting up a Coordi-Nation: Practical Cookbook for creating a Coordi-Nation</p>\n<p>11:00 - 12:30 &nbsp;Fishbowl: Ground up approach to multi-layer organizations: how do we stitch things together rather than pare down uniformity backed by serious capital ? (Sara H.)</p>\n<p>14:00 - 17:00 Roundtables</p>\n<ol>\n  <li>Comparing the Network State with Coordi-Nations; Mutualism versus Tribalism.</li>\n  <li>Are these already proto-Coordi-Nations and how do we help them become full Coordi-Nations ?</li>\n</ol>","track":"Coordi-nations and Digital Tribes","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1684308600000,"end":1684312200000,"speakers":[{"id":"Primavera De Filippi","name":"Primavera De Filippi"}]}
+{
+  "id": "770",
+  "name": "Overthrowing the Network State with Coordi-Nations",
+  "description": "<p>PRACTICE</p>\n<p>9:30 - 11:00 Reporting on practical steps for setting up a Coordi-Nation: Practical Cookbook for creating a Coordi-Nation</p>\n<p>11:00 - 12:30 &nbsp;Fishbowl: Ground up approach to multi-layer organizations: how do we stitch things together rather than pare down uniformity backed by serious capital ? (Sara H.)</p>\n<p>14:00 - 17:00 Roundtables</p>\n<ol>\n  <li>Comparing the Network State with Coordi-Nations; Mutualism versus Tribalism.</li>\n  <li>Are these already proto-Coordi-Nations and how do we help them become full Coordi-Nations ?</li>\n</ol>",
+  "track": "Coordi-nations and Digital Tribes",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684308600000,
+  "end": 1684312200000,
+  "speakers": [{ "id": "Primavera De Filippi", "name": "Primavera De Filippi" }]
+}

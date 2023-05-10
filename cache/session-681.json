@@ -1,1 +1,10 @@
-{"id":"681","name":"Tabata","description":"<p>HIIT class</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683300600000,"end":1683304200000,"speakers":[{"id":"Victoria Padure","name":"Victoria Padure"}]}
+{
+  "id": "681",
+  "name": "Tabata",
+  "description": "<p>HIIT class</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683300600000,
+  "end": 1683304200000,
+  "speakers": [{ "id": "Victoria Padure", "name": "Victoria Padure" }]
+}

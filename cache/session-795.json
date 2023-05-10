@@ -1,1 +1,14 @@
-{"id":"795","name":"Collaborative Art: Making a Visual Poll with Our Bodies","description":"<p>We'll create an arrow of life on the pier with numbers from 65 to 120 to 1000 to ♾️ and ask you to stand next to your answer to a simple yet complicated question HOW LONG DO YOU WANT TO LIVE?&nbsp;<br>\n</p>\n<p>We'd also like you to mark your relation to the longevity field:&nbsp;</p>\n<p>✖️cross your hands on top of your head if you're \"not a longevity person\"</p>\n<p>🔘do nothing with your hands if you are a \"longevity person\" (work or volunteer in the field).</p>\n<p><br></p>\n<p>We'll take a picture from above (luckily we have camera people with a drone at Zuzalu!!) and create this visual poll!&nbsp;</p>\n<p><br></p>\n<p>Hopefully we'll be able to do it not once but several times, at least one more time at the end of the Longevity week too!</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683466200000,"end":1683469800000,"speakers":[{"id":"Anastasia Egorova","name":"Anastasia Egorova"},{"id":"Natasha Karungi","name":"Natasha Karungi"},{"id":"Aleksandr Sviridov","name":"Aleksandr Sviridov"}]}
+{
+  "id": "795",
+  "name": "Collaborative Art: Making a Visual Poll with Our Bodies",
+  "description": "<p>We'll create an arrow of life on the pier with numbers from 65 to 120 to 1000 to ♾️ and ask you to stand next to your answer to a simple yet complicated question HOW LONG DO YOU WANT TO LIVE?&nbsp;<br>\n</p>\n<p>We'd also like you to mark your relation to the longevity field:&nbsp;</p>\n<p>✖️cross your hands on top of your head if you're \"not a longevity person\"</p>\n<p>🔘do nothing with your hands if you are a \"longevity person\" (work or volunteer in the field).</p>\n<p><br></p>\n<p>We'll take a picture from above (luckily we have camera people with a drone at Zuzalu!!) and create this visual poll!&nbsp;</p>\n<p><br></p>\n<p>Hopefully we'll be able to do it not once but several times, at least one more time at the end of the Longevity week too!</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683466200000,
+  "end": 1683469800000,
+  "speakers": [
+    { "id": "Anastasia Egorova", "name": "Anastasia Egorova" },
+    { "id": "Natasha Karungi", "name": "Natasha Karungi" },
+    { "id": "Aleksandr Sviridov", "name": "Aleksandr Sviridov" }
+  ]
+}

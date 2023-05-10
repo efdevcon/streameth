@@ -1,9 +1,9 @@
 {
   "id": "496",
   "name": "Future Zuzalu Locations",
-  "description": "<p>Hello, please come join to share locations you've been thinking of for future Zuzalu locations. Ideally you can come to this session prepared with ideas of location and some research about it. NOTE THIS WILL BE IN THE AMPHITHEATER.</p>\n<p>Criteria we are taking into account include:</p>\n<ul>\n  <li>Locations either isolated or in a town but likely not a big city</li>\n  <li>Housing for 200-500 people&nbsp;</li>\n  <li>Visa friendly for as many countries as possible</li>\n  <li>Flight cost is not prohibitive&nbsp;</li>\n  <li>Location has space that can be used for events + a good central hanging area (preferably fully built out vs building out while at the location)</li>\n  <li>Inexpensive food / grocery options&nbsp;</li>\n</ul>",
+  "description": "<p>Hello, please come join to share locations you've been thinking of for future Zuzalu locations. Ideally you can come to this session prepared.</p>\n<p>Criteria we are taking into account include:</p>\n<ul>\n  <li>Locations either isolated or in a town but likely not a big city</li>\n  <li>Housing for 200-500 people&nbsp;</li>\n  <li>Visa friendly for as many countries as possible</li>\n  <li>Flight cost is not prohibitive&nbsp;</li>\n  <li>Location has space that can be used for events + a good central hanging area (preferably fully built out vs building out while at the location)</li>\n  <li>Inexpensive food / grocery options&nbsp;</li>\n</ul>",
   "track": "New Cities & Network States",
-  "stage": { "id": "Amphitheater", "name": "Amphitheater" },
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
   "start": 1682337600000,
   "end": 1682341200000,
   "speakers": [{ "id": "Janine Leger", "name": "Janine Leger" }]

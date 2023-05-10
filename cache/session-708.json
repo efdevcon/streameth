@@ -1,1 +1,16 @@
-{"id":"708","name":"Longevity Network State Meetup","description":"<p>You are invited to a Meetup to discuss actionable next steps around launching a Longevity Network State.<br>\n</p>\n<p>Come and join us to discuss the following topics!</p>\n<ul>\n  <li>Geographical Location Priorities -&gt; visa, weather, medical freedom, cost of living, language...</li>\n  <li>Community Development -&gt; which communities can we tap into, activate, merge with?&nbsp;</li>\n  <li>Fundraising -&gt; Real Estate, Venture</li>\n  <li>... and more!</li>\n</ul>\n<p>Healthy finger foods &amp; beverages will be provided &gt; additional finger-food contributions are most welcome :).&nbsp;</p>\n<p><strong>Location Access</strong></p>\n<p><br></p>\n<figure>&nbsp;</figure>\n<p><br></p>","track":"New Cities & Network States","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683208800000,"end":1683212400000,"speakers":[{"id":"Karen Bach","name":"Karen Bach"},{"id":"Maximilian Breckbill","name":"Maximilian Breckbill"},{"id":"Laurence Ion","name":"Laurence Ion"},{"id":"Adam Gries","name":"Adam Gries"},{"id":"Anastasia Egorova","name":"Anastasia Egorova"}]}
+{
+  "id": "708",
+  "name": "Longevity Network State Meetup",
+  "description": "<p>You are invited to a Meetup to discuss actionable next steps around launching a Longevity Network State.<br>\n</p>\n<p>Come and join us to discuss the following topics!</p>\n<ul>\n  <li>Geographical Location Priorities -&gt; visa, weather, medical freedom, cost of living, language...</li>\n  <li>Community Development -&gt; which communities can we tap into, activate, merge with?&nbsp;</li>\n  <li>Fundraising -&gt; Real Estate, Venture</li>\n  <li>... and more!</li>\n</ul>\n<p>Healthy finger foods &amp; beverages will be provided &gt; additional finger-food contributions are most welcome :).&nbsp;</p>\n<p><strong>Location Access</strong></p>\n<p><br></p>\n<figure>&nbsp;</figure>\n<p><br></p>",
+  "track": "New Cities & Network States",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683208800000,
+  "end": 1683212400000,
+  "speakers": [
+    { "id": "Karen Bach", "name": "Karen Bach" },
+    { "id": "Maximilian Breckbill", "name": "Maximilian Breckbill" },
+    { "id": "Laurence Ion", "name": "Laurence Ion" },
+    { "id": "Adam Gries", "name": "Adam Gries" },
+    { "id": "Anastasia Egorova", "name": "Anastasia Egorova" }
+  ]
+}

@@ -1,1 +1,10 @@
-{"id":"816","name":"The Road to Longevity: Raising Awareness","description":"<p>If we wish to reach longevity escape velocity, it is essential for us to raise public awareness and inspire millions to join the quest. We can learn a lot from past dreams of humanity for longer life, from paleolithic times to modern society. We will discuss current sociological studies about contemporary sentiments towards life extension. Finally, we will equip ourselves with effective arguments and strategies for raising awareness and community building.&nbsp;</p>\n<p>Martin Lipovšek, MPhil, is a board member of the International Longevity Alliance, the president of the Slovenian Society for Vital Life Extension, and a PhD candidate in philosophy, with a research focus on transhuman longevity. He has delivered multiple public lectures, spoken at international conferences, and given a TEDx talk on the topic of life extension. &nbsp;</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683826200000,"end":1683829800000,"speakers":[{"id":"Martin Lipovšek","name":"Martin Lipovšek"}]}
+{
+  "id": "816",
+  "name": "The Road to Longevity: Raising Awareness",
+  "description": "<p>If we wish to reach longevity escape velocity, it is essential for us to raise public awareness and inspire millions to join the quest. We can learn a lot from past dreams of humanity for longer life, from paleolithic times to modern society. We will discuss current sociological studies about contemporary sentiments towards life extension. Finally, we will equip ourselves with effective arguments and strategies for raising awareness and community building.&nbsp;</p>\n<p>Martin Lipovšek, MPhil, is a board member of the International Longevity Alliance, the president of the Slovenian Society for Vital Life Extension, and a PhD candidate in philosophy, with a research focus on transhuman longevity. He has delivered multiple public lectures, spoken at international conferences, and given a TEDx talk on the topic of life extension. &nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683826200000,
+  "end": 1683829800000,
+  "speakers": [{ "id": "Martin Lipovšek", "name": "Martin Lipovšek" }]
+}

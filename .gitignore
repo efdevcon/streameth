@@ -17,6 +17,7 @@ node_modules/
 /build
 
 # misc
+.cache/sessions.json
 .DS_Store
 *.pem
 

@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { TITLE } from 'utils/constants'
 import img from 'assets/images/logo.png'
 import { page } from 'types'
+import githubLogo from 'assets/images/github-mark.png'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 function classNames(...classes: string[]) {
@@ -38,10 +39,16 @@ export default function Navbar({ pages }: { pages: page[] }) {
                 </Link>
               ))}
             </div>
+            <div className="hidden md:flex">
+              <a href="https://github.com/efdevcon/streameth/tree/zuzalu">
+                <Image src={githubLogo} alt="streamETH Repo" width={24} height={24} objectFit='contain'/>
+              </a>
+            </div>
           </div>
           <div className="hidden md:flex">
-     
+
           </div>
+
           <button
             className="md:hidden border-2 border-black p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -69,6 +76,9 @@ export default function Navbar({ pages }: { pages: page[] }) {
                 chainStatus="none"
               /> */}
             </li>
+          <a className='block px-4 py-2 text-gray-500' href="https://github.com/efdevcon/streameth/tree/zuzalu">
+              <Image src={githubLogo} alt="streamETH Repo" width={24} height={24} objectFit='contain'/>
+          </a>
           </ul>
         </div>
       </Container>

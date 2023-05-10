@@ -1,1 +1,10 @@
-{"id":"353","name":"Starship Launch Party","description":"<p>SpaceX targets a launch on <strong>April 17 at 07:00 CDT (12:00 UTC)</strong></p>\n<p><br></p>\n<p>Starship: https://www.spacex.com/vehicles/starship/</p>\n<p>Launch: https://www.spacex.com/launches/index.html</p>\n<p>Live: https://www.youtube.com/watch?v=L5QXreqOrTA</p>","track":"Other","stage":{"id":"Dome","name":"Dome"},"start":1681732800000,"end":1681743000000,"speakers":[{"id":"Luozhu","name":"Luozhu"}]}
+{
+  "id": "353",
+  "name": "Starship Launch Party",
+  "description": "<p>SpaceX targets a launch on <strong>April 17 at 07:00 CDT (12:00 UTC)</strong></p>\n<p><br></p>\n<p>Starship: https://www.spacex.com/vehicles/starship/</p>\n<p>Launch: https://www.spacex.com/launches/index.html</p>\n<p>Live: https://www.youtube.com/watch?v=L5QXreqOrTA</p>",
+  "track": "Other",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681732800000,
+  "end": 1681743000000,
+  "speakers": [{ "id": "Luozhu", "name": "Luozhu" }]
+}

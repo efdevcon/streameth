@@ -7,5 +7,6 @@
   "start": 1680337800000,
   "end": 1680339600000,
   "speakers": [{ "id": "Jason Kelly, CEO & Founder, Ginkgo Bioworks", "name": "Jason Kelly, CEO & Founder, Ginkgo Bioworks" }],
-  "video": "https://lp-playback.com/hls/f1548umyccllyiss/index.m3u8"
+  "video": "https://lp-playback.com/hls/f1548umyccllyiss/index.m3u8",
+  "gpt_description": "The video features Jason Kelly, the founder and CEO of Ginkgo Bioworks, who talks about synthetic biology and its potential for programmability. He explains how biology runs on digital code in the form of DNA and how it can be read and written with DNA synthesis and printing. Kelly also discusses the three technologies that are driving the field forward: laboratory automation, DNA synthesis, and genomics scale biological learning. He emphasizes the importance of automation in dropping costs and increasing output, and how data generated from this can be used to train models and improve biological designs. Additionally, Kelly talks about CRISPR, a tool that allows for the insertion of new code into a genome, and how it is revolutionizing the field."
 }

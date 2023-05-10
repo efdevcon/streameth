@@ -1,1 +1,16 @@
-{"id":"785","name":"Festival of Entrepreneurship at University of Donja Gorica","description":"<p><a href=\"https://docs.google.com/spreadsheets/d/1jBygW0jfcLur0LRxnUk1y5L-a_rXR-UNVziCGcpENkk/edit#gid=1625437327\"><strong>RSVP HERE</strong></a><strong>&nbsp;</strong></p>\n<p>Zuzalu has been invited back to support University of Donja Gorica students participating in the 13th annual Festival of Entrepreneurship (business pitch competition) on the evening of Tuesday, May 9, 2023.</p>\n<p>Quick rundown of events:</p>\n<ul>\n  <li>4pm Buses depart from Chedi lobby</li>\n  <li>5:30pm High School Business Ideas Fair</li>\n  <li>6pm: Official opening of Stock Exchange of Entrepreneurial Ideas &amp; ideas pitching</li>\n  <li>7pm: Bidding - Top businesses from around Montenegro plus one Zuzalu representative participate in an “auction” to signify support for business pitches</li>\n  <li>After auction ends, networking cocktail hour with drinks and live music<br>\n</li>\n</ul>\n<p>To RSVP please fill out this form: <a href=\"https://docs.google.com/spreadsheets/d/1jBygW0jfcLur0LRxnUk1y5L-a_rXR-UNVziCGcpENkk/edit#gid=1625437327\">https://docs.google.com/spreadsheets/d/1jBygW0jfcLur0LRxnUk1y5L-a_rXR-UNVziCGcpENkk/edit#gid=1625437327</a>&nbsp;</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683640800000,"end":1683644400000,"speakers":[{"id":"Tomiwa Ademidun","name":"Tomiwa Ademidun"},{"id":"Djordje Markovic","name":"Djordje Markovic"},{"id":"Gary Sheng","name":"Gary Sheng"},{"id":"Veronica Schrenk","name":"Veronica Schrenk"},{"id":"Bojana Saranovic","name":"Bojana Saranovic"}]}
+{
+  "id": "785",
+  "name": "Festival of Entrepreneurship at University of Donja Gorica",
+  "description": "<p><a href=\"https://docs.google.com/spreadsheets/d/1jBygW0jfcLur0LRxnUk1y5L-a_rXR-UNVziCGcpENkk/edit#gid=1625437327\"><strong>RSVP HERE</strong></a><strong>&nbsp;</strong></p>\n<p>Zuzalu has been invited back to support University of Donja Gorica students participating in the 13th annual Festival of Entrepreneurship (business pitch competition) on the evening of Tuesday, May 9, 2023.</p>\n<p>Quick rundown of events:</p>\n<ul>\n  <li>4pm Buses depart from Chedi lobby</li>\n  <li>5:30pm High School Business Ideas Fair</li>\n  <li>6pm: Official opening of Stock Exchange of Entrepreneurial Ideas &amp; ideas pitching</li>\n  <li>7pm: Bidding - Top businesses from around Montenegro plus one Zuzalu representative participate in an “auction” to signify support for business pitches</li>\n  <li>After auction ends, networking cocktail hour with drinks and live music<br>\n</li>\n</ul>\n<p>To RSVP please fill out this form: <a href=\"https://docs.google.com/spreadsheets/d/1jBygW0jfcLur0LRxnUk1y5L-a_rXR-UNVziCGcpENkk/edit#gid=1625437327\">https://docs.google.com/spreadsheets/d/1jBygW0jfcLur0LRxnUk1y5L-a_rXR-UNVziCGcpENkk/edit#gid=1625437327</a>&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683640800000,
+  "end": 1683644400000,
+  "speakers": [
+    { "id": "Tomiwa Ademidun", "name": "Tomiwa Ademidun" },
+    { "id": "Djordje Markovic", "name": "Djordje Markovic" },
+    { "id": "Gary Sheng", "name": "Gary Sheng" },
+    { "id": "Veronica Schrenk", "name": "Veronica Schrenk" },
+    { "id": "Bojana Saranovic", "name": "Bojana Saranovic" }
+  ]
+}

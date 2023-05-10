@@ -7,5 +7,6 @@
   "start": 1680341400000,
   "end": 1680343200000,
   "speakers": [{ "id": "Benji Leibowitz, Molecule", "name": "Benji Leibowitz, Molecule" }],
-  "video": "https://lp-playback.com/hls/2f65fef64iowjduc/index.m3u8"
+  "video": "https://lp-playback.com/hls/2f65fef64iowjduc/index.m3u8",
+  "gpt_description": "The speaker, Benji, discusses his experience working with Tempest Labs, a company focused on clinical genomics and oncology. He explains the problems with the traditional model of collecting and holding data, including lack of data liquidity and profit-driven decision making. He also discusses the potential of blockchain and DSI to solve these issues and incentivize patients to continuously provide data. Benji argues that biology holds the key to long term abundance and sustainability, and that the field of synthetic biology also struggles with similar problems of data sharing and access. Ultimately, he believes that combining AI and biology can lead to sustainable abundance for all."
 }

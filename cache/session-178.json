@@ -7,5 +7,6 @@
   "start": 1681837200000,
   "end": 1681839000000,
   "speakers": [{ "id": "Paul Brody", "name": "Paul Brody" }],
-  "video": "https://lp-playback.com/hls/b61ee4sc6q80l9m2/index.m3u8"
+  "video": "https://lp-playback.com/hls/b61ee4sc6q80l9m2/index.m3u8",
+  "gpt_description": "In this video, Paul Bernand, the global blockchain leader at EY, discusses enterprise privacy in the CK field. He explains that most enterprise deals require a different kind of privacy than what most individual users need and that private blockchains don't work. Bernand introduces Nightfall, a layer to ZK-Optimistic Privacy Rollup that EY has been working on since 2017. He explains that Nightfall is a shield contract that requires an enterprise identity certificate to use and is confidential but not anonymous. Bernand also discusses the cost of transactions and the development process of Nightfall."
 }

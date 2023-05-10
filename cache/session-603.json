@@ -1,1 +1,10 @@
-{"id":"603","name":"Building a City for Vitality, an Interview with Dryden Brown","description":"<p>Learn about the city Praxis is building in the Mediterranean</p>\n<p><br></p>","track":"New Cities & Network States","stage":{"id":"Dome","name":"Dome"},"start":1682927100000,"end":1682930700000,"speakers":[{"id":"Mark Lutter","name":"Mark Lutter"}]}
+{
+  "id": "603",
+  "name": "Building a City for Vitality, an Interview with Dryden Brown",
+  "description": "<p>Learn about the city Praxis is building in the Mediterranean</p>\n<p><br></p>",
+  "track": "New Cities & Network States",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682927100000,
+  "end": 1682930700000,
+  "speakers": [{ "id": "Mark Lutter", "name": "Mark Lutter" }]
+}

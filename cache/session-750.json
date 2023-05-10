@@ -1,1 +1,10 @@
-{"id":"750","name":"Chill hangout / coworking","description":"<p>Come chill, hang, cowork on beanbags</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683563400000,"end":1683567000000,"speakers":[{"id":"Laurence Ion","name":"Laurence Ion"}]}
+{
+  "id": "750",
+  "name": "Chill hangout / coworking",
+  "description": "<p>Come chill, hang, cowork on beanbags</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683563400000,
+  "end": 1683567000000,
+  "speakers": [{ "id": "Laurence Ion", "name": "Laurence Ion" }]
+}

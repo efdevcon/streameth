@@ -7,5 +7,6 @@
   "start": 1680422400000,
   "end": 1680424200000,
   "speakers": [{ "id": "Ginger Dosier, CEO & Founder, BioMason", "name": "Ginger Dosier, CEO & Founder, BioMason" }],
-  "video": "https://lp-playback.com/hls/6511ifcdl84bae5i/index.m3u8"
+  "video": "https://lp-playback.com/hls/6511ifcdl84bae5i/index.m3u8",
+  "gpt_description": "In this video, the speaker discusses the problem with traditional Portland cement, which is responsible for 8% of global CO2 emissions. They propose a solution using biosimic technology, which involves growing cement using microorganisms and carbon instead of mining and burning limestone. The process is simple and can be integrated into existing infrastructure. They have a plant opening in Denmark and plan to expand into the ready mix market. The technology can be used for various applications, including precast and infrastructure site work."
 }

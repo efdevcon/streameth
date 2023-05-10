@@ -1,1 +1,10 @@
-{"id":"419","name":"DeSci London | Zuzalu Boiler Room 💃🪩🕺","description":"<p>😀</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome"},"start":1682791200000,"end":1682802000000,"speakers":[{"id":"Alfred","name":"Alfred"}]}
+{
+  "id": "419",
+  "name": "DeSci London | Zuzalu Boiler Room 💃🪩🕺",
+  "description": "<p>😀</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682791200000,
+  "end": 1682802000000,
+  "speakers": [{ "id": "Alfred", "name": "Alfred" }]
+}

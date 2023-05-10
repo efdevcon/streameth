@@ -1,1 +1,13 @@
-{"id":"804","name":"Breakfast: AI and Decentralized Arts","description":"<p>Chance for those working on projects in AI art and decentralized arts to get together in one place while we are all here.</p>","track":"AI x Crypto","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683354600000,"end":1683358200000,"speakers":[{"id":"Simon @ Botto","name":"Simon @ Botto"},{"id":"Eva @ Shibuya.xyz","name":"Eva @ Shibuya.xyz"}]}
+{
+  "id": "804",
+  "name": "Breakfast: AI and Decentralized Arts",
+  "description": "<p>Chance for those working on projects in AI art and decentralized arts to get together in one place while we are all here.</p>",
+  "track": "AI x Crypto",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683354600000,
+  "end": 1683358200000,
+  "speakers": [
+    { "id": "Simon @ Botto", "name": "Simon @ Botto" },
+    { "id": "Eva @ Shibuya.xyz", "name": "Eva @ Shibuya.xyz" }
+  ]
+}

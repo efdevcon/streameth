@@ -1,1 +1,10 @@
-{"id":"267","name":"Public Goods Week Kickoff Session","description":"<p>Join us as we kick off the Public Goods Week. We will give you an overview of the week and discuss the different ways you can support the advancement of public goods. Everyone is welcome!</p>","track":"Public Goods","stage":{"id":"Dome","name":"Dome"},"start":1681286400000,"end":1681288200000,"speakers":[{"id":"Gloria Kimbwala","name":"Gloria Kimbwala"}]}
+{
+  "id": "267",
+  "name": "Public Goods Week Kickoff Session",
+  "description": "<p>Join us as we kick off the Public Goods Week. We will give you an overview of the week and discuss the different ways you can support the advancement of public goods. Everyone is welcome!</p>",
+  "track": "Public Goods",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681286400000,
+  "end": 1681288200000,
+  "speakers": [{ "id": "Gloria Kimbwala", "name": "Gloria Kimbwala" }]
+}

@@ -1,1 +1,10 @@
-{"id":"255","name":"ZK Drop in Coworking at the Chedi","description":"<p>TBD</p>","track":"ZK Week","stage":{"id":"Ballroom","name":"Ballroom"},"start":1682060400000,"end":1682089200000,"speakers":[{"id":"Zuzalu","name":"Zuzalu"}]}
+{
+  "id": "255",
+  "name": "ZK Drop in Coworking at the Chedi",
+  "description": "<p>TBD</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Ballroom", "name": "Ballroom" },
+  "start": 1682060400000,
+  "end": 1682089200000,
+  "speakers": [{ "id": "Zuzalu", "name": "Zuzalu" }]
+}

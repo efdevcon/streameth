@@ -1,1 +1,10 @@
-{"id":"430","name":"ZK Hackathon Breakout Space","description":"<p>Dome is reserved from 2:00-5:00pm on Saturday and Sunday of the ZK Hackathon Weekend for teams or groups that want to have impromput workshops, breakout sessions, large group meetings etc. <br>\n<br>\nFirst come, first serve. <br>\n<br>\nA/V services <u>will not</u> be provided. If you move furniture <u><strong>please return it where you found it</strong></u> when you leave.</p>","track":"ZK Week","stage":{"id":"Dome","name":"Dome"},"start":1682164800000,"end":1682175600000,"speakers":[{"id":"Remy Hall","name":"Remy Hall"}]}
+{
+  "id": "430",
+  "name": "ZK Hackathon Breakout Space",
+  "description": "<p>Dome is reserved from 2:00-5:00pm on Saturday and Sunday of the ZK Hackathon Weekend for teams or groups that want to have impromput workshops, breakout sessions, large group meetings etc. <br>\n<br>\nFirst come, first serve. <br>\n<br>\nA/V services <u>will not</u> be provided. If you move furniture <u><strong>please return it where you found it</strong></u> when you leave.</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682164800000,
+  "end": 1682175600000,
+  "speakers": [{ "id": "Remy Hall", "name": "Remy Hall" }]
+}

@@ -7,5 +7,6 @@
   "start": 1680349500000,
   "end": 1680350400000,
   "speakers": [{ "id": "Albert Anis, Founder, ValleyDAO", "name": "Albert Anis, Founder, ValleyDAO" }],
-  "video": "https://lp-playback.com/hls/20a61xkj89ayqxak/index.m3u8"
+  "video": "https://lp-playback.com/hls/20a61xkj89ayqxak/index.m3u8",
+  "gpt_description": "The speaker, a synthetic biologist and core member at Validau, discusses the need for systems-level solutions to address synthetic biology challenges, such as providing resources for a growing population. He compares innovation networks to physical cities and explains how they become more efficient as they grow. He suggests that we need to start thinking more in terms of networks, rather than companies, and applies these principles to Validau's community of researchers, entrepreneurs, and builders in synthetic biology. The community collectively works towards finding the best research projects, de-risking them, and voting on which ones to fund. The resulting intellectual property is technically owned by no one but controlled by everyone in the community, enabling a more fair and diverse application of the technology. The speaker emphasizes the importance of inclusivity and shared governance through tokenization, where members are rewarded for their contributions. He encourages everyone to explore the DSI landscape map and get involved in Validau's open community."
 }

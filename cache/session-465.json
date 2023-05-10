@@ -1,1 +1,14 @@
-{"id":"465","name":"Farmers Market","description":"<p>Local farmers from the area come and share their produce with us:) Please bring cash!</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome"},"start":1684152000000,"end":1684162800000,"speakers":[{"id":"Janine Leger","name":"Janine Leger"},{"id":"Marko","name":"Marko"},{"id":"Marijana Lemme","name":"Marijana Lemme"}]}
+{
+  "id": "465",
+  "name": "Farmers Market",
+  "description": "<p>Local farmers from the area come and share their produce with us:) Please bring cash!</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1684152000000,
+  "end": 1684162800000,
+  "speakers": [
+    { "id": "Janine Leger", "name": "Janine Leger" },
+    { "id": "Marko", "name": "Marko" },
+    { "id": "Marijana Lemme", "name": "Marijana Lemme" }
+  ]
+}

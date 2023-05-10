@@ -1,1 +1,10 @@
-{"id":"797","name":"Off-Record Longevity Investor Panel","description":"<p>Off-record longevity investor event with spicy questions.</p>\n<p><br></p>\n<p>Limited to people who don't currently work in longevity and have limited longevity investing experience, so the panelists can more freely speak their minds.</p>\n<p><br></p>\n<p>Guests must be invited; please message Cat (@catthu on TG) for invitation.</p>","track":"Longevity 0-1","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683828000000,"end":1683831600000,"speakers":[{"id":"Cat Thu","name":"Cat Thu"}]}
+{
+  "id": "797",
+  "name": "Off-Record Longevity Investor Panel",
+  "description": "<p>Off-record longevity investor event with spicy questions.</p>\n<p><br></p>\n<p>Limited to people who don't currently work in longevity and have limited longevity investing experience, so the panelists can more freely speak their minds.</p>\n<p><br></p>\n<p>Guests must be invited; please message Cat (@catthu on TG) for invitation.</p>",
+  "track": "Longevity 0-1",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683828000000,
+  "end": 1683831600000,
+  "speakers": [{ "id": "Cat Thu", "name": "Cat Thu" }]
+}
