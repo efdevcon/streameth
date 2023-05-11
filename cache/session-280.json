@@ -7,9 +7,7 @@
   "start": 1681300800000,
   "end": 1681306200000,
   "speakers": [
-    { "id": "Gloria Kimbwala", "name": "Gloria Kimbwala" },
-    { "id": "Scott Moore", "name": "Scott Moore" },
-    { "id": "Tim Beiko", "name": "Tim Beiko" },
-    { "id": "Kevin Owocki", "name": "Kevin Owocki" }
-  ]
+    { "id": "Scott Moore", "name": "Scott Moore" }
+  ],
+  "video": "https://lp-playback.com/hls/53e4mhvk89n99pdy/index.m3u8"
 }

@@ -6,5 +6,6 @@
   "stage": { "id": "Other", "name": "Other" },
   "start": 1681223400000,
   "end": 1681228800000,
-  "speakers": [{ "id": "Vitalik Buterin", "name": "Vitalik Buterin" }]
+  "speakers": [{ "id": "Vitalik Buterin", "name": "Vitalik Buterin" }],
+  "video": ""
 }

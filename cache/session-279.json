@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Jonas", "name": "Jonas" },
     { "id": "Olivia", "name": "Olivia" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/553avlv3hf9f342u/index.m3u8"
 }

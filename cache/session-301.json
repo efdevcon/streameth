@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Cheeky Gorilla", "name": "Cheeky Gorilla" },
     { "id": "Tim Beiko", "name": "Tim Beiko" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/784fl2fj7mr7x61t/index.m3u8"
 }

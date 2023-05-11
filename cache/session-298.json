@@ -7,9 +7,7 @@
   "start": 1681228800000,
   "end": 1681239600000,
   "speakers": [
-    { "id": "Alex Miloski", "name": "Alex Miloski" },
-    { "id": "Laurence Ion", "name": "Laurence Ion" },
-    { "id": "Adam Gries", "name": "Adam Gries" },
-    { "id": "Niklas Anzinger", "name": "Niklas Anzinger" }
-  ]
+    { "id": "Mac", "name": "Mac" }
+  ],
+  "video": "https://lp-playback.com/hls/710frzormsc68o3j/index.m3u8"
 }

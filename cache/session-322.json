@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome" },
   "start": 1681297200000,
   "end": 1681300500000,
-  "speakers": [{ "id": "Kyle Weiss", "name": "Kyle Weiss" }]
+  "speakers": [{ "id": "Kyle Weiss", "name": "Kyle Weiss" }],
+  "video": "https://lp-playback.com/hls/e14bcndt72mfpcih/index.m3u8"
 }
