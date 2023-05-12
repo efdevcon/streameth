@@ -1,14 +1,1 @@
-{
-  "id": "279",
-  "name": "Optimism RPGF round 2 recap + learnings",
-  "description": "<p>Join the Optimism team as they discuss the recent RPGF round and what they learned from it.</p>\n<p><br></p>\n<p>All are welcome.</p>",
-  "track": "Public Goods",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1681290000000,
-  "end": 1681293600000,
-  "speakers": [
-    { "id": "Jonas", "name": "Jonas" },
-    { "id": "Olivia", "name": "Olivia" }
-  ],
-  "video": "https://lp-playback.com/hls/553avlv3hf9f342u/index.m3u8"
-}
+{"id": "279", "name": "Optimism RPGF round 2 recap + learnings", "description": "<p>Join the Optimism team as they discuss the recent RPGF round and what they learned from it.</p>\n<p><br></p>\n<p>All are welcome.</p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681290000000, "end": 1681293600000, "speakers": [{"id": "Jonas", "name": "Jonas"}, {"id": "Olivia", "name": "Olivia"}], "video": "https://lp-playback.com/hls/553avlv3hf9f342u/index.m3u8", "gpt_description": "In this video, Jonas discusses the retroactive public goods funding that the optimism collective recently completed. He provides a framework for how this funding works, including impact scoping, investment in impact, and impact scoring. He also discusses the trade-offs between funding specific outcomes versus specific outputs and the risk involved in each approach. The discussion also touches on how slow-burn projects are evaluated and how the voters aggregate their preferences. The goal of the video is to have a discussion and encourage viewers to chime in with their opinions."}

@@ -1,11 +1,1 @@
-{
-  "id": "322",
-  "name": "Public Goods Funding: the Race to the Bottom",
-  "description": "<p>Gitcoin will walk us through its funding details to date and explore how we might identify sustainable, recurring revenue sources for public goods in the future. You won’t want to miss it.&nbsp;</p>",
-  "track": "Public Goods",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1681297200000,
-  "end": 1681300500000,
-  "speakers": [{ "id": "Kyle Weiss", "name": "Kyle Weiss" }],
-  "video": "https://lp-playback.com/hls/e14bcndt72mfpcih/index.m3u8"
-}
+{"id": "322", "name": "Public Goods Funding: the Race to the Bottom", "description": "<p>Gitcoin will walk us through its funding details to date and explore how we might identify sustainable, recurring revenue sources for public goods in the future. You won\u2019t want to miss it.&nbsp;</p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681297200000, "end": 1681300500000, "speakers": [{"id": "Kyle Weiss", "name": "Kyle Weiss"}], "video": "https://lp-playback.com/hls/e14bcndt72mfpcih/index.m3u8", "gpt_description": "In this video, Kyle from Gikwui talks about the race to the bottom in public goods funding and how they are trying to find sustainable sources of income for it. He explains Gikwui's history and how they shifted their focus to quadratic funding and voting mechanisms. He also discusses their core products and how they enable communities to fund and protect what matters to them. Kyle emphasizes the importance of community-led decision making in public goods funding and how Gikwui has raised over $50 million for it through their community's contributions. Finally, he breaks down the sources of their funding and highlights the significant contributions from their community."}

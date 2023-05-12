@@ -1,14 +1,1 @@
-{
-  "id": "301",
-  "name": "Protocol Guild: Funding Ethereum's Core Protocol Work",
-  "description": "<p>This talk will give an overview of Protocol Guild: a mechansism to route donations from the Ethereum community to core protocol maintainers in an incentive-compatible way. We will first decribe what Protocol Guild is &amp; how it works, then go over the initial PG pilot, future plans for the guild, and finally answer audience questions.&nbsp;</p>",
-  "track": "Public Goods",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1681293600000,
-  "end": 1681296600000,
-  "speakers": [
-    { "id": "Cheeky Gorilla", "name": "Cheeky Gorilla" },
-    { "id": "Tim Beiko", "name": "Tim Beiko" }
-  ],
-  "video": "https://lp-playback.com/hls/784fl2fj7mr7x61t/index.m3u8"
-}
+{"id": "301", "name": "Protocol Guild: Funding Ethereum's Core Protocol Work", "description": "<p>This talk will give an overview of Protocol Guild: a mechansism to route donations from the Ethereum community to core protocol maintainers in an incentive-compatible way. We will first decribe what Protocol Guild is &amp; how it works, then go over the initial PG pilot, future plans for the guild, and finally answer audience questions.&nbsp;</p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681293600000, "end": 1681296600000, "speakers": [{"id": "Cheeky Gorilla", "name": "Cheeky Gorilla"}, {"id": "Tim Beiko", "name": "Tim Beiko"}], "video": "https://lp-playback.com/hls/784fl2fj7mr7x61t/index.m3u8", "gpt_description": "This video discusses a public goods funding mechanism unique to Ethereum's core protocol work called the Protocol Guild. The Guild aims to incentivize talented individuals from all over the world to contribute to Ethereum's vision of being a global network that empowers individuals. The Guild is a list of 128 active core protocol contributors, and donations to this work can be made to a single Ethereum address, with funds distributed based on a retroactive time weighting and a forward-looking vesting module. The Guild aims to reduce contributor churn and facilitate knowledge transfer by creating long-term incentives for contributors to continue contributing."}
