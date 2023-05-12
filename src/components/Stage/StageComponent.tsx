@@ -26,7 +26,7 @@ export function StageComponent() {
 
   useEffect(() => {
     addOrUpdateFilter({ type: 'stage', value: currentStage.id })
-    addOrUpdateFilter({ type: 'day', value: moment().startOf('day').valueOf() })
+    //addOrUpdateFilter({ type: 'day', value: moment().startOf('day').valueOf() })
   }, [currentStage, addOrUpdateFilter])
 
   const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {

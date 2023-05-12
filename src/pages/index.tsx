@@ -1,38 +1,35 @@
 import { GetStaticProps } from 'next'
 import { Stage, Session, page } from 'types'
-import { StageComponent } from 'components/Stage/StageComponent'
+import ScheduleComponent from 'components/Schedule/ScheduleComponent'
 import { SEO } from 'components/seo'
 import { GetStages, GenerateNavigation } from 'services/stage'
-import { GetSessionsForStage } from 'services/sessions'
+import { GetSessions } from 'services/sessions'
 import { PageContextProvider } from 'context/page-context'
 import DefaultLayout from 'layouts/default'
 
 interface Props {
-  stage: Stage
+  stages: Stage[]
   sessions: Session[]
   pages: page[]
 }
 
-export default function StagePage({ stage, sessions, pages }: Props) {
+export default function StagePage({ stages, sessions, pages }: Props) {
   return (
-    <PageContextProvider stage={stage} sessions={sessions}>
+    <PageContextProvider sessions={sessions} stages={stages}>
       <DefaultLayout pages={pages}>
-        {stage && <SEO title={stage.name} />}
-        <StageComponent />
+        <ScheduleComponent />
       </DefaultLayout>
     </PageContextProvider>
   )
 }
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
-  const stages = await GetStages()
-  const stage = stages[0]
-  const sessions = await GetSessionsForStage(stage.id)
+  const sessions = await GetSessions()
   const pages = await GenerateNavigation()
-  if (!stage) return { props: null, notFound: true }
+  const stages = await GetStages()
   return {
     props: {
-      stage,
+      stages,
       sessions,
       pages,
     },
