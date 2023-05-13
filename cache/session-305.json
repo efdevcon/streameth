@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome" },
   "start": 1681462800000,
   "end": 1681466100000,
-  "speakers": [{ "id": "Matt Stephenson", "name": "Matt Stephenson" }]
+  "speakers": [{ "id": "Matt Stephenson", "name": "Matt Stephenson" }],
+  "video": "https://lp-playback.com/hls/9769ltgisw2hxhv7/index.m3u8"
 }

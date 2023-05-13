@@ -7,7 +7,7 @@
   "start": 1681394400000,
   "end": 1681397100000,
   "speakers": [
-    { "id": "Kevin Owocki", "name": "Kevin Owocki" },
-    { "id": "Gloria Kimbwala", "name": "Gloria Kimbwala" }
-  ]
+    { "id": "Kevin Owocki", "name": "Kevin Owocki" }
+  ],
+  "video": "https://lp-playback.com/hls/bebfz3sq12xhav0m/index.m3u8"
 }

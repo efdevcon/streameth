@@ -7,7 +7,7 @@
   "start": 1681459200000,
   "end": 1681462800000,
   "speakers": [
-    { "id": "Holke Brammer", "name": "Holke Brammer" },
     { "id": "David Casey", "name": "David Casey" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/8939v3bc673hlvme/index.m3u8"
 }

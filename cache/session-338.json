@@ -8,8 +8,7 @@
   "end": 1681477200000,
   "speakers": [
     { "id": "Alddo", "name": "Alddo" },
-    { "id": "Gloria", "name": "Gloria" },
-    { "id": "QJ", "name": "QJ" },
-    { "id": "Simeon", "name": "Simeon" }
-  ]
+    { "id": "QJ", "name": "QJ" }
+  ],
+  "video": "https://lp-playback.com/hls/618dhyp75d4orciq/index.m3u8"
 }
