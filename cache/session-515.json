@@ -6,5 +6,6 @@
   "stage": { "id": "Other", "name": "Other" },
   "start": 1682429400000,
   "end": 1682433000000,
-  "speakers": [{ "id": "Ilana Brown", "name": "Ilana Brown" }]
+  "speakers": [{ "id": "Ilana Brown", "name": "Ilana Brown" }],
+  "video": "https://lp-playback.com/hls/660flkqfgjycz26f/index.m3u8"
 }

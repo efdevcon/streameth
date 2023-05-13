@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome" },
   "start": 1682521200000,
   "end": 1682524800000,
-  "speakers": [{ "id": "Vitalik Buterin", "name": "Vitalik Buterin" }]
+  "speakers": [{ "id": "Vitalik Buterin", "name": "Vitalik Buterin" }],
+  "video": "https://lp-playback.com/hls/90d835f6qyei7x4i/index.m3u8"
 }

@@ -6,5 +6,6 @@
   "stage": { "id": "Ballroom", "name": "Ballroom" },
   "start": 1682861400000,
   "end": 1682865000000,
-  "speakers": [{ "id": "Niklas Anzinger", "name": "Niklas Anzinger" }]
+  "speakers": [{ "id": "Ott Vatter", "name": "Ott Vatter" }],
+  "video": "https://lp-playback.com/hls/cf5eq325nsa3so90/index.m3u8"
 }

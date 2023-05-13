@@ -6,5 +6,6 @@
   "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
   "start": 1682938800000,
   "end": 1682942400000,
-  "speakers": [{ "id": "Mark Lutter", "name": "Mark Lutter" }]
+  "speakers": [{ "id": "Mark Lutter", "name": "Mark Lutter" }],
+  "video": "https://lp-playback.com/hls/3704lv5ye3tl92ob/index.m3u8"
 }

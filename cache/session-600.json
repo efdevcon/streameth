@@ -10,5 +10,6 @@
     { "id": "Pablo Penguin", "name": "Pablo Penguin" },
     { "id": "Benjamin QiDao", "name": "Benjamin QiDao" },
     { "id": "David Liebowitz", "name": "David Liebowitz" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/8d44cagmwxjix1di/index.m3u8"
 }

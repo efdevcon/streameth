@@ -6,5 +6,6 @@
   "stage": { "id": "Amphitheater", "name": "Amphitheater" },
   "start": 1682503200000,
   "end": 1682506800000,
-  "speakers": [{ "id": "Vitalik Buterin", "name": "Vitalik Buterin" }]
+  "speakers": [{ "id": "Vitalik Buterin", "name": "Vitalik Buterin" }],
+  "video": "https://lp-playback.com/hls/ff84k08hper90hc3/index.m3u8"
 }
