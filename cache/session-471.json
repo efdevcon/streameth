@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Patrick Lamson Hall", "name": "Patrick Lamson Hall" },
     { "id": "Nuria Forques", "name": "Nuria Forques" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/9fb9xrib8s93a3cu/index.m3u8"
 }

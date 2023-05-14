@@ -7,8 +7,7 @@
   "start": 1681399800000,
   "end": 1681405200000,
   "speakers": [
-    { "id": "Camara", "name": "Camara" },
-    { "id": "Matthew ", "name": "Matthew " },
     { "id": "Michael Smith", "name": "Michael Smith" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/4dc3pp435a50vbgh/index.m3u8"
 }

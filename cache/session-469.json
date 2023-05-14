@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Mark Lutter", "name": "Mark Lutter" },
     { "id": "Vitalik Buterin", "name": "Vitalik Buterin" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/0378cwthf184nwvn/index.m3u8"
 }

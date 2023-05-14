@@ -1,15 +1,1 @@
-{
-  "id": "298",
-  "name": "New Jurisdictions for Longevity and Medical Innovation [Public Workshop] - Day 3 - pitch day",
-  "description": "<p>Notes: https://zuzalu.notion.site/New-Jurisdictions-for-Longevity-and-Medical-Innovation-Public-Workshop-0c51907415af44ceb736df0151dc3b97</p>\n<p><br></p>\n<p>Register here: https://lu.ma/itbzl35z</p>",
-  "track": "New Cities & Network States",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1681228800000,
-  "end": 1681239600000,
-  "speakers": [
-    { "id": "Alex Miloski", "name": "Alex Miloski" },
-    { "id": "Laurence Ion", "name": "Laurence Ion" },
-    { "id": "Adam Gries", "name": "Adam Gries" },
-    { "id": "Niklas Anzinger", "name": "Niklas Anzinger" }
-  ]
-}
+{"id": "298", "name": "New Jurisdictions for Longevity and Medical Innovation [Public Workshop] - Day 3 - pitch day", "description": "<p>Notes: https://zuzalu.notion.site/New-Jurisdictions-for-Longevity-and-Medical-Innovation-Public-Workshop-0c51907415af44ceb736df0151dc3b97</p>\n<p><br></p>\n<p>Register here: https://lu.ma/itbzl35z</p>", "track": "New Cities & Network States", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681228800000, "end": 1681239600000, "speakers": [{"id": "Mac", "name": "Mac"}], "video": "https://lp-playback.com/hls/710frzormsc68o3j/index.m3u8", "gpt_description": "The video discusses why an American gene therapy R&D company chose to operate in Prospera, a new jurisdiction. The company was attracted to the people they met who shared their cultural vision, the legal regime of common law, and the lower costs and reduced bureaucracy. The company offers a low-cost, reversible, and safe gene therapy that expresses any target of interest for up to two years. They have completed a phase one trial with 44 people enrolled and no serious adverse events. The video concludes with a tour of the company's office on the island."}

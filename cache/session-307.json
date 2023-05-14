@@ -7,7 +7,7 @@
   "start": 1681479000000,
   "end": 1681483800000,
   "speakers": [
-    { "id": "Manu Alzuru", "name": "Manu Alzuru" },
-    { "id": "David Casey", "name": "David Casey" }
-  ]
+    { "id": "Manu Alzuru", "name": "Manu Alzuru" }
+  ],
+  "video": "https://lp-playback.com/hls/62b4cnvlox0m1bp5/index.m3u8"
 }

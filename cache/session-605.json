@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome" },
   "start": 1682861400000,
   "end": 1682865000000,
-  "speakers": [{ "id": "Niklas Anzinger", "name": "Niklas Anzinger" }]
+  "speakers": [{ "id": "Niklas Anzinger", "name": "Niklas Anzinger" }],
+  "video": "https://lp-playback.com/hls/7831i28hfifn3718/index.m3u8"
 }

@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome" },
   "start": 1682510400000,
   "end": 1682514000000,
-  "speakers": [{ "id": "Noah Chon Lee", "name": "Noah Chon Lee" }]
+  "speakers": [{ "id": "Noah Chon Lee", "name": "Noah Chon Lee" }],
+  "video": "https://lp-playback.com/hls/b90epvjkdyf4degq/index.m3u8"
 }

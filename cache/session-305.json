@@ -1,10 +1,1 @@
-{
-  "id": "305",
-  "name": "Retro Public Harms and Behavioral Game Theory",
-  "description": "<p>Public Goods Games have been studied in experimental economics for decades. First we will play one live. Then I will discuss the replicated results as well as implications for cryptoeconomic design. We will close by discussion a novel application for credibly suppressing MEV by penalizing “retro public harms.</p>",
-  "track": "Public Goods",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1681462800000,
-  "end": 1681466100000,
-  "speakers": [{ "id": "Matt Stephenson", "name": "Matt Stephenson" }]
-}
+{"id": "305", "name": "Retro Public Harms and Behavioral Game Theory", "description": "<p>Public Goods Games have been studied in experimental economics for decades. First we will play one live. Then I will discuss the replicated results as well as implications for cryptoeconomic design. We will close by discussion a novel application for credibly suppressing MEV by penalizing \u201cretro public harms.</p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681462800000, "end": 1681466100000, "speakers": [{"id": "Matt Stephenson", "name": "Matt Stephenson"}], "video": "https://lp-playback.com/hls/9769ltgisw2hxhv7/index.m3u8", "gpt_description": "The speaker is a PC economist with a background in crypto economics. He talks about behavioral game theory and how it can be useful in the crypto space. He gives examples of how behavioral economics is already being used in the industry and explains the concept of coordination in game theory. He also conducts a thought experiment on a game involving sending ETH to his wallet and discusses the issue of free riders. He shows a graph of the results of the game being played internationally and how the hope of cooperation is often replaced by the feeling of being a sucker."}

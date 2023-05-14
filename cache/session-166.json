@@ -1,11 +1,1 @@
-{
-  "id": "166",
-  "name": "Intro to Nova",
-  "description": "<p>This workshop will introduce Nova, a simple yet powerful recursive SNARK proof system. We'll start by highlighting the amazing properties Nova enjoys for incrementally verifiable computation (IVC). We'll then introduce the main Nova building block called a \"folding scheme\", explain the details of how Nova works for R1CS, and tease some of the generalisations of Nova including SuperNova and HyperNova.</p>",
-  "track": "ZK Week",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1681835400000,
-  "end": 1681840800000,
-  "speakers": [{ "id": "Justin Drake", "name": "Justin Drake" }],
-  "video": "https://lp-playback.com/hls/52b86mbusyx3xkky/index.m3u8"
-}
+{"id": "166", "name": "Intro to Nova", "description": "<p>This workshop will introduce Nova, a simple yet powerful recursive SNARK proof system. We'll start by highlighting the amazing properties Nova enjoys for incrementally verifiable computation (IVC). We'll then introduce the main Nova building block called a \"folding scheme\", explain the details of how Nova works for R1CS, and tease some of the generalisations of Nova including SuperNova and HyperNova.</p>", "track": "ZK Week", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681835400000, "end": 1681840800000, "speakers": [{"id": "Justin Drake", "name": "Justin Drake"}], "video": "https://lp-playback.com/hls/52b86mbusyx3xkky/index.m3u8", "gpt_description": "The video promotes America Furniture and encourages viewers to get involved by visiting their website, which is repeated numerous times throughout the description."}

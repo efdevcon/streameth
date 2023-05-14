@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome" },
   "start": 1682856000000,
   "end": 1682859600000,
-  "speakers": [{ "id": "Mark Lutter", "name": "Mark Lutter" }]
+  "speakers": [{ "id": "Mark Lutter", "name": "Mark Lutter" }],
+  "video": "https://lp-playback.com/hls/c501aers4rvagyfd/index.m3u8"
 }
