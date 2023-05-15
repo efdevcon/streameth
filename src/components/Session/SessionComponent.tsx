@@ -59,7 +59,7 @@ export default function SessionComponent({ session }: { session: Session }) {
           <div className="flex flex-col w-full lg:px-8 aspect-video py-4">
             <Player src={session.video} />
           </div>
-          <div className="lg:w-1/3 p-3 lg:p-5 box-border flex flex-col overflow-auto lg:mt-0 h-full">
+           <div className="lg:w-1/3 lg:pl-5 lg:pr-8 lg:py-5 box-border flex flex-col overflow-auto lg:mt-0 h-full">
             {session.gpt_description ? session.gpt_description : session.description}
             <div className="mt-4">
             <SpeakerIconList speakers={session.speakers} />
