@@ -1,1 +1,10 @@
-{"id":"857","name":"TaggieLab $ grand auction is blind","description":"<p>We're looking for investors, supporters individual talents, community members who are interested in brands, fashion and storywriting and want to take over certain roles in TaggieLab.</p>\n<p>TaggieLab has built an onchain protocol to enable cocreation of decentralized IPs and a social application for discovery.</p>","track":"AI x Crypto","stage":{"id":"Lighthouse","name":"Lighthouse","stream":[{"id":"f1af7d3b-f94a-4bab-af0b-e93041a51ff7"}]},"start":1684166400000,"end":1684170000000,"speakers":[{"id":"leading scientist","name":"leading scientist"}]}
+{
+  "id": "857",
+  "name": "TaggieLab $ grand auction is blind",
+  "description": "<p>We're looking for investors, supporters individual talents, community members who are interested in brands, fashion and storywriting and want to take over certain roles in TaggieLab.</p>\n<p>TaggieLab has built an onchain protocol to enable cocreation of decentralized IPs and a social application for discovery.</p>",
+  "track": "AI x Crypto",
+  "stage": { "id": "Lighthouse", "name": "Lighthouse", "stream": [{ "id": "f1af7d3b-f94a-4bab-af0b-e93041a51ff7" }] },
+  "start": 1684166400000,
+  "end": 1684170000000,
+  "speakers": [{ "id": "leading scientist", "name": "leading scientist" }]
+}

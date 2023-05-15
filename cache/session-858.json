@@ -1,1 +1,14 @@
-{"id":"858","name":"Women, Wine, and Wellness","description":"<p>Welcome to the ultimate girls' night in! Our \"Women, Wine, Wellness\" party is all about celebrating women and prioritizing our health and happiness.<br>\n</p>\n<p>We'll start the evening with some delicious wine and light refreshments to set the mood for a fun and relaxing night. Then, we'll dive into some wellness activities designed to help us unwind and destress. We might do some DIY spa session with face masks and nail polish.<br>\n</p>\n<p>Throughout the night, we'll also have plenty of opportunities to chat and connect with other like-minded women. Whether you're catching up with old friends or making new ones, this is a chance to celebrate the amazing women in our lives and support each other in our personal wellness journeys.<br>\n</p>\n<p>So grab your favorite bottle of wine and get ready for a night of laughter, relaxation, and good company. We can't wait to celebrate with you!<br>\n<br>\n</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683831600000,"end":1683835200000,"speakers":[{"id":"Lori Corpuz","name":"Lori Corpuz"},{"id":"Genevieve Renoir","name":"Genevieve Renoir"},{"id":"Michelle Wu","name":"Michelle Wu"}]}
+{
+  "id": "858",
+  "name": "Women, Wine, and Wellness",
+  "description": "<p>Welcome to the ultimate girls' night in! Our \"Women, Wine, Wellness\" party is all about celebrating women and prioritizing our health and happiness.<br>\n</p>\n<p>We'll start the evening with some delicious wine and light refreshments to set the mood for a fun and relaxing night. Then, we'll dive into some wellness activities designed to help us unwind and destress. We might do some DIY spa session with face masks and nail polish.<br>\n</p>\n<p>Throughout the night, we'll also have plenty of opportunities to chat and connect with other like-minded women. Whether you're catching up with old friends or making new ones, this is a chance to celebrate the amazing women in our lives and support each other in our personal wellness journeys.<br>\n</p>\n<p>So grab your favorite bottle of wine and get ready for a night of laughter, relaxation, and good company. We can't wait to celebrate with you!<br>\n<br>\n</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683831600000,
+  "end": 1683835200000,
+  "speakers": [
+    { "id": "Lori Corpuz", "name": "Lori Corpuz" },
+    { "id": "Genevieve Renoir", "name": "Genevieve Renoir" },
+    { "id": "Michelle Wu", "name": "Michelle Wu" }
+  ]
+}

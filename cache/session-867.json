@@ -1,1 +1,13 @@
-{"id":"867","name":"Alt-Meat Design and Longevity 🐟","description":"<p>This presentation will focus on the flavor and texture design challenges and opportunities for alternative meat and seafood. We will briefly look at how these engineering constraints butt heads with psychological and societal preferences and how these next-gen products may play into the future of food.&nbsp;</p>\n<p><br></p>\n<p>Bob Schultz is the Director of R&amp;D for Aqua Cultured Foods, which has developed a novel new tech that creates an alternative seafood option through the use of fermentation. Bob also has an MSc in Gastronomic Sciences and was a former Product Lead at SIMULATE.</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683812700000,"end":1683816300000,"speakers":[{"id":"End of Medicine Summit","name":"End of Medicine Summit"},{"id":"Bob Schultz","name":"Bob Schultz"}]}
+{
+  "id": "867",
+  "name": "Alt-Meat Design and Longevity 🐟",
+  "description": "<p>This presentation will focus on the flavor and texture design challenges and opportunities for alternative meat and seafood. We will briefly look at how these engineering constraints butt heads with psychological and societal preferences and how these next-gen products may play into the future of food.&nbsp;</p>\n<p><br></p>\n<p>Bob Schultz is the Director of R&amp;D for Aqua Cultured Foods, which has developed a novel new tech that creates an alternative seafood option through the use of fermentation. Bob also has an MSc in Gastronomic Sciences and was a former Product Lead at SIMULATE.</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683812700000,
+  "end": 1683816300000,
+  "speakers": [
+    { "id": "End of Medicine Summit", "name": "End of Medicine Summit" },
+    { "id": "Bob Schultz", "name": "Bob Schultz" }
+  ]
+}

@@ -1,1 +1,10 @@
-{"id":"843","name":"testing","description":"<p>test</p>","track":"Longevity Biotech Conference","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1686353400000,"end":1686357000000,"speakers":[{"id":"Danilo Test","name":"Danilo Test"}]}
+{
+  "id": "843",
+  "name": "testing",
+  "description": "<p>test</p>",
+  "track": "Longevity Biotech Conference",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1686353400000,
+  "end": 1686357000000,
+  "speakers": [{ "id": "Danilo Test", "name": "Danilo Test" }]
+}

@@ -1,1 +1,10 @@
-{"id":"860","name":"SocietyOS: Crowdsourcing Civilization Designs Workshop","description":"<p>New forms of social organizing are possible, but who is capable of designing the kind of civilization we want? No one of us, only all of us, together. Global Unity is developing SocietyOS — a crowd-sourced civilization design platform. Rather than wait until the platform is ready, SocietyOS workshops allow us to share our ideas, visions, and pathways to getting to the kind of society and civilization we want.</p>\n<p>Join us, share your voice, hear from others, and let's design something better together.&nbsp;</p>","track":"New Cities & Network States","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683891000000,"end":1683894600000,"speakers":[{"id":"Elliott Bayev","name":"Elliott Bayev"}]}
+{
+  "id": "860",
+  "name": "SocietyOS: Crowdsourcing Civilization Designs Workshop",
+  "description": "<p>New forms of social organizing are possible, but who is capable of designing the kind of civilization we want? No one of us, only all of us, together. Global Unity is developing SocietyOS — a crowd-sourced civilization design platform. Rather than wait until the platform is ready, SocietyOS workshops allow us to share our ideas, visions, and pathways to getting to the kind of society and civilization we want.</p>\n<p>Join us, share your voice, hear from others, and let's design something better together.&nbsp;</p>",
+  "track": "New Cities & Network States",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683891000000,
+  "end": 1683894600000,
+  "speakers": [{ "id": "Elliott Bayev", "name": "Elliott Bayev" }]
+}

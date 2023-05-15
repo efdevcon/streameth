@@ -1,1 +1,12 @@
-{"id": "288", "name": "Celebrate Coordination Mechanisms with Kevin Owocki", "description": "<p><br></p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681394400000, "end": 1681397100000, "speakers": [{"id": "Kevin Owocki", "name": "Kevin Owocki"}], "video": "https://lp-playback.com/hls/bebfz3sq12xhav0m/index.m3u8", "gpt_description": "In this video, Kevin Waukey talks about coordination protocols and how they are essential in our daily lives. He explains that protocols are rule sets for how different agents interact with each other, and they help us coordinate and build complex consensus-based mechanisms. He demonstrates different protocols, including the handshake protocol and market protocol, and discusses how they change the incentive landscape of the way people coordinate around them. He also talks about information age protocols like UDP and TCP/IP and how they evolved to meet the needs of sending and receiving information across computer networks. Overall, he emphasizes that it's all coordination protocols, and they have always been an essential part of how we interact with each other."}
+{
+  "id": "288",
+  "name": "Celebrate Coordination Mechanisms with Kevin Owocki",
+  "description": "<p><br></p>",
+  "track": "Public Goods",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681394400000,
+  "end": 1681397100000,
+  "speakers": [{ "id": "Kevin Owocki", "name": "Kevin Owocki" }],
+  "video": "https://lp-playback.com/hls/bebfz3sq12xhav0m/index.m3u8",
+  "gpt_description": "In this video, Kevin Waukey talks about coordination protocols and how they are essential in our daily lives. He explains that protocols are rule sets for how different agents interact with each other, and they help us coordinate and build complex consensus-based mechanisms. He demonstrates different protocols, including the handshake protocol and market protocol, and discusses how they change the incentive landscape of the way people coordinate around them. He also talks about information age protocols like UDP and TCP/IP and how they evolved to meet the needs of sending and receiving information across computer networks. Overall, he emphasizes that it's all coordination protocols, and they have always been an essential part of how we interact with each other."
+}

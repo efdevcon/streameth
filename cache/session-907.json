@@ -1,1 +1,13 @@
-{"id":"907","name":"[MNE DAY 🇲🇪✨] \"What do Zuzalu and Montenegro working together look like to you?\" (small group discussions @ Dome)","description":"<p>We will gather in groups to discuss what the future of Zuzalu X Montenegro can look like!<br>\n<br>\n(Time: 20 minutes, from 12:10 to 12:30)</p>\n<p>[Event: Montenegro Day 🇲🇪 (Zuzalu x Montenegro)]</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1684145700000,"end":1684149300000,"speakers":[{"id":"Zoe","name":"Zoe"},{"id":"Tomiwa","name":"Tomiwa"}]}
+{
+  "id": "907",
+  "name": "[MNE DAY 🇲🇪✨] \"What do Zuzalu and Montenegro working together look like to you?\" (small group discussions @ Dome)",
+  "description": "<p>We will gather in groups to discuss what the future of Zuzalu X Montenegro can look like!<br>\n<br>\n(Time: 20 minutes, from 12:10 to 12:30)</p>\n<p>[Event: Montenegro Day 🇲🇪 (Zuzalu x Montenegro)]</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1684145700000,
+  "end": 1684149300000,
+  "speakers": [
+    { "id": "Zoe", "name": "Zoe" },
+    { "id": "Tomiwa", "name": "Tomiwa" }
+  ]
+}

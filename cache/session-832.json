@@ -1,1 +1,13 @@
-{"id":"832","name":"SLAY (Sustainable Fashion Film) Q&A w/The Director","description":"<p>The Director, Rebecca Cappelli, is an award-winning French filmmaker and public speaker. Join to ask her any follow up questions about the film.&nbsp;</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1684431000000,"end":1684434600000,"speakers":[{"id":"Madison","name":"Madison"},{"id":"Julie","name":"Julie"}]}
+{
+  "id": "832",
+  "name": "SLAY (Sustainable Fashion Film) Q&A w/The Director",
+  "description": "<p>The Director, Rebecca Cappelli, is an award-winning French filmmaker and public speaker. Join to ask her any follow up questions about the film.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684431000000,
+  "end": 1684434600000,
+  "speakers": [
+    { "id": "Madison", "name": "Madison" },
+    { "id": "Julie", "name": "Julie" }
+  ]
+}

@@ -1,1 +1,13 @@
-{"id":"894","name":"Long Term View on Longevity: A Chat with Dave Gobel","description":"<p>Informal freeform conversation about anything in longevity, with Dave Gobel, co-founder of the Methuselah Foundation.</p>\n<p><br></p>\n<p>May chat about the last 25 years in longevity, prizes, biomarkers, humans on a chip, full body model, zk, philanthropy, OODA; may also chat about something else entirely. &nbsp;We don't know until we starts talking.</p>","track":"Longevity Biotech Conference","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683997200000,"end":1684000800000,"speakers":[{"id":"Cat","name":"Cat"},{"id":"Dave Gobel","name":"Dave Gobel"}]}
+{
+  "id": "894",
+  "name": "Long Term View on Longevity: A Chat with Dave Gobel",
+  "description": "<p>Informal freeform conversation about anything in longevity, with Dave Gobel, co-founder of the Methuselah Foundation.</p>\n<p><br></p>\n<p>May chat about the last 25 years in longevity, prizes, biomarkers, humans on a chip, full body model, zk, philanthropy, OODA; may also chat about something else entirely. &nbsp;We don't know until we starts talking.</p>",
+  "track": "Longevity Biotech Conference",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683997200000,
+  "end": 1684000800000,
+  "speakers": [
+    { "id": "Cat", "name": "Cat" },
+    { "id": "Dave Gobel", "name": "Dave Gobel" }
+  ]
+}

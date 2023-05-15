@@ -1,1 +1,12 @@
-{"id": "289", "name": "Hypercerts and Impact Certification - Holke Brammer", "description": "<p>&nbsp;</p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681459200000, "end": 1681462800000, "speakers": [{"id": "David Casey", "name": "David Casey"}], "video": "https://lp-playback.com/hls/8939v3bc673hlvme/index.m3u8", "gpt_description": "The video discusses hypersets, a new primitive for impact funding systems. The speaker gives a brief overview of where hypersets came from and what they are, and discusses their potential applications in impact funding. They explain that hypersets represent work that is expected to have a positive impact and can be split based on the scope of impact. The speaker also mentions the importance of best practices and standards for the data fields of hypersets, particularly scope of impact. The video aims to spark a discussion around hypersets and their potential uses."}
+{
+  "id": "289",
+  "name": "Hypercerts and Impact Certification - Holke Brammer",
+  "description": "<p>&nbsp;</p>",
+  "track": "Public Goods",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681459200000,
+  "end": 1681462800000,
+  "speakers": [{ "id": "David Casey", "name": "David Casey" }],
+  "video": "https://lp-playback.com/hls/8939v3bc673hlvme/index.m3u8",
+  "gpt_description": "The video discusses hypersets, a new primitive for impact funding systems. The speaker gives a brief overview of where hypersets came from and what they are, and discusses their potential applications in impact funding. They explain that hypersets represent work that is expected to have a positive impact and can be split based on the scope of impact. The speaker also mentions the importance of best practices and standards for the data fields of hypersets, particularly scope of impact. The video aims to spark a discussion around hypersets and their potential uses."
+}

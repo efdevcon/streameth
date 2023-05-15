@@ -1,1 +1,13 @@
-{"id":"908","name":"[MNE DAY 🇲🇪✨] Keynote: Future Possibilities for our Children and Grand Children (Zuzalu x Montenegro)","description":"<p>🌟 Keynote speech on the future possibilities that initiatives like Zuzalu can bring to the next generations in Montenegro!<br>\n→ By Tomiwa (20 min)</p>\n<p><br></p>\n<p>[Event: Montenegro Day 🇲🇪 (Zuzalu x Montenegro)]</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1684146600000,"end":1684150200000,"speakers":[{"id":"Tomiwa","name":"Tomiwa"},{"id":"Zoe","name":"Zoe"}]}
+{
+  "id": "908",
+  "name": "[MNE DAY 🇲🇪✨] Keynote: Future Possibilities for our Children and Grand Children (Zuzalu x Montenegro)",
+  "description": "<p>🌟 Keynote speech on the future possibilities that initiatives like Zuzalu can bring to the next generations in Montenegro!<br>\n→ By Tomiwa (20 min)</p>\n<p><br></p>\n<p>[Event: Montenegro Day 🇲🇪 (Zuzalu x Montenegro)]</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1684146600000,
+  "end": 1684150200000,
+  "speakers": [
+    { "id": "Tomiwa", "name": "Tomiwa" },
+    { "id": "Zoe", "name": "Zoe" }
+  ]
+}

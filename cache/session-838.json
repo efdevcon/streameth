@@ -1,1 +1,10 @@
-{"id":"838","name":"Pilates ","description":"<p><br></p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683727200000,"end":1683730800000,"speakers":[{"id":"Victoria Forest ","name":"Victoria Forest "}]}
+{
+  "id": "838",
+  "name": "Pilates ",
+  "description": "<p><br></p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683727200000,
+  "end": 1683730800000,
+  "speakers": [{ "id": "Victoria Forest ", "name": "Victoria Forest " }]
+}

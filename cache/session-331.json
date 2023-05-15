@@ -1,1 +1,18 @@
-{"id": "331", "name": "Debate: How to Fund Ethereum Contributors", "description": "<p>Background: this forum thread https://gov.optimism.io/t/feedback-on-eip4844-contributors-collection/5566/10</p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681466400000, "end": 1681469700000, "speakers": [{"id": "David Hoffman", "name": "David Hoffman"}, {"id": "Karl", "name": "Karl"}, {"id": "Liam", "name": "Liam"}, {"id": "Tim Beiko", "name": "Tim Beiko"}, {"id": "Cheeky Gorilla", "name": "Cheeky Gorilla"}], "video": "https://lp-playback.com/hls/33628qxkx0e1zvyc/index.m3u8", "gpt_description": "The video discusses the tension between two strategies for funding public goods: the protocol guild strategy, which is top-down and democratic, and the optimism retracted public goods strategy, which is market forces determined. The conversation focuses on the issue of attribution, where there is a debate about who deserves credit for the work done on a project. The video aims to come to an objective truth and find a balance between these two strategies."}
+{
+  "id": "331",
+  "name": "Debate: How to Fund Ethereum Contributors",
+  "description": "<p>Background: this forum thread https://gov.optimism.io/t/feedback-on-eip4844-contributors-collection/5566/10</p>",
+  "track": "Public Goods",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681466400000,
+  "end": 1681469700000,
+  "speakers": [
+    { "id": "David Hoffman", "name": "David Hoffman" },
+    { "id": "Karl", "name": "Karl" },
+    { "id": "Liam", "name": "Liam" },
+    { "id": "Tim Beiko", "name": "Tim Beiko" },
+    { "id": "Cheeky Gorilla", "name": "Cheeky Gorilla" }
+  ],
+  "video": "https://lp-playback.com/hls/33628qxkx0e1zvyc/index.m3u8",
+  "gpt_description": "The video discusses the tension between two strategies for funding public goods: the protocol guild strategy, which is top-down and democratic, and the optimism retracted public goods strategy, which is market forces determined. The conversation focuses on the issue of attribution, where there is a debate about who deserves credit for the work done on a project. The video aims to come to an objective truth and find a balance between these two strategies."
+}

@@ -1,1 +1,13 @@
-{"id":"826","name":"Muse Dinner","description":"<p>Muse dinner returns! This program pairs you with a stranger and gives you a conversation menu of topics to choose from. The idea is originally developed by the cultural historian Theodore Zeldin, and aims to provide a transformative bonding experience.</p>\n<p><br></p>\n<p><em>Vibe check:</em></p>\n<p>Tonight you don't need to share your resume or impress anyone. It is common knowledge that you are great and your matched partner will know that already.&nbsp;</p>\n<p>What's interesting tonight is your half-baked parts; the stuff you're still figuring out. And if at any point you find yourself slipping into preplanned speeches remember, instead, to try to look for the words and thoughts that you are still forming.</p>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1683824400000,"end":1683828000000,"speakers":[{"id":"Io Q.","name":"Io Q."},{"id":"Yisi Liu","name":"Yisi Liu"}]}
+{
+  "id": "826",
+  "name": "Muse Dinner",
+  "description": "<p>Muse dinner returns! This program pairs you with a stranger and gives you a conversation menu of topics to choose from. The idea is originally developed by the cultural historian Theodore Zeldin, and aims to provide a transformative bonding experience.</p>\n<p><br></p>\n<p><em>Vibe check:</em></p>\n<p>Tonight you don't need to share your resume or impress anyone. It is common knowledge that you are great and your matched partner will know that already.&nbsp;</p>\n<p>What's interesting tonight is your half-baked parts; the stuff you're still figuring out. And if at any point you find yourself slipping into preplanned speeches remember, instead, to try to look for the words and thoughts that you are still forming.</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683824400000,
+  "end": 1683828000000,
+  "speakers": [
+    { "id": "Io Q.", "name": "Io Q." },
+    { "id": "Yisi Liu", "name": "Yisi Liu" }
+  ]
+}

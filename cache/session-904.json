@@ -1,1 +1,14 @@
-{"id":"904","name":"[MONTENEGRO DAY 🇲🇪✨] Event start & intros - Zuzalu x Montenegro (@ Dome)","description":"<ul>\n  <li>➡ Welcome → Introductions, Icebreakers (10 minutes) - Tomiwa</li>\n  <li>➡ Music Performance (10 minutes) - Damir</li>\n  <li>➡ What is Zuzalu? What is Montenegro? (10 minutes) - Vjera\n    <ul>\n      <li>➡➡ &nbsp;Zuzalu recap (video)</li>\n      <li>➡➡ &nbsp;Moraca river project demo</li>\n    </ul>\n  </li>\n</ul>","track":"Open Sessions","stage":{"id":"0","name":"Unknown","stream":[{"id":""}]},"start":1684137600000,"end":1684141200000,"speakers":[{"id":"Zoe","name":"Zoe"},{"id":"Tomiwa","name":"Tomiwa"},{"id":"Vjera","name":"Vjera"}]}
+{
+  "id": "904",
+  "name": "[MONTENEGRO DAY 🇲🇪✨] Event start & intros - Zuzalu x Montenegro (@ Dome)",
+  "description": "<ul>\n  <li>➡ Welcome → Introductions, Icebreakers (10 minutes) - Tomiwa</li>\n  <li>➡ Music Performance (10 minutes) - Damir</li>\n  <li>➡ What is Zuzalu? What is Montenegro? (10 minutes) - Vjera\n    <ul>\n      <li>➡➡ &nbsp;Zuzalu recap (video)</li>\n      <li>➡➡ &nbsp;Moraca river project demo</li>\n    </ul>\n  </li>\n</ul>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1684137600000,
+  "end": 1684141200000,
+  "speakers": [
+    { "id": "Zoe", "name": "Zoe" },
+    { "id": "Tomiwa", "name": "Tomiwa" },
+    { "id": "Vjera", "name": "Vjera" }
+  ]
+}

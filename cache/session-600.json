@@ -1,1 +1,16 @@
-{"id": "600", "name": "Zuper Stable Meetup", "description": "<p>Aye aye, matey! If ye be lookin' for a Zuper Stable Meetup at Zuzalu, I can help ya out.&nbsp;</p>\n<p>Gather yer crew and come on down to Zuzalu for an unforgettable meetup experience. Arrr, I can practically hear the sound of laughter and good times already!&nbsp;</p>", "track": "Open Sessions", "stage": {"id": "Dome", "name": "Dome"}, "start": 1682528400000, "end": 1682532000000, "speakers": [{"id": "Pablo Penguin", "name": "Pablo Penguin"}, {"id": "Benjamin QiDao", "name": "Benjamin QiDao"}, {"id": "David Liebowitz", "name": "David Liebowitz"}], "video": "https://lp-playback.com/hls/8d44cagmwxjix1di/index.m3u8", "gpt_description": "This video explores the question of who is considered R&B, delving into the history and evolution of the genre and discussing various artists who have contributed to its development."}
+{
+  "id": "600",
+  "name": "Zuper Stable Meetup",
+  "description": "<p>Aye aye, matey! If ye be lookin' for a Zuper Stable Meetup at Zuzalu, I can help ya out.&nbsp;</p>\n<p>Gather yer crew and come on down to Zuzalu for an unforgettable meetup experience. Arrr, I can practically hear the sound of laughter and good times already!&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1682528400000,
+  "end": 1682532000000,
+  "speakers": [
+    { "id": "Pablo Penguin", "name": "Pablo Penguin" },
+    { "id": "Benjamin QiDao", "name": "Benjamin QiDao" },
+    { "id": "David Liebowitz", "name": "David Liebowitz" }
+  ],
+  "video": "https://lp-playback.com/hls/8d44cagmwxjix1di/index.m3u8",
+  "gpt_description": "This video explores the question of who is considered R&B, delving into the history and evolution of the genre and discussing various artists who have contributed to its development."
+}

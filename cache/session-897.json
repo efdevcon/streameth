@@ -1,1 +1,14 @@
-{"id":"897","name":"Tai Chi, Meditation & Tea House ☯️🧘‍♀️🫖🍵","description":"<p>A chillaxed flow for Sunday night :&nbsp;</p>\n<p>1/ ☯️ Tai Chi @Ding Hui 定慧 @Amber 卓玛 &amp; @Tang Han</p>\n<p>2/ 🧘‍♀️ Ideal Parent Figure Meditation @robknight&nbsp;</p>\n<p>3/ ✨ Science of Meditation Sharing @johnsonmx&nbsp;</p>\n<p>4/ 🫖 Tea @degerturan&nbsp;</p>\n<p>1-3 each for 30 min;</p>\n<p>Rest of night would be just tea, chatting, and chill, leave some room for spaciousness towards the end&nbsp;</p>\n<p>2️⃣</p>\n<p>We need a lot cushions and pillows and decided do it in a crowd sourcing way, so the more the better!&nbsp;</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1684087200000,"end":1684090800000,"speakers":[{"id":"Rob Knight","name":"Rob Knight"},{"id":"Mike Johnson","name":"Mike Johnson"},{"id":"Deger","name":"Deger"}]}
+{
+  "id": "897",
+  "name": "Tai Chi, Meditation & Tea House ☯️🧘‍♀️🫖🍵",
+  "description": "<p>A chillaxed flow for Sunday night :&nbsp;</p>\n<p>1/ ☯️ Tai Chi @Ding Hui 定慧 @Amber 卓玛 &amp; @Tang Han</p>\n<p>2/ 🧘‍♀️ Ideal Parent Figure Meditation @robknight&nbsp;</p>\n<p>3/ ✨ Science of Meditation Sharing @johnsonmx&nbsp;</p>\n<p>4/ 🫖 Tea @degerturan&nbsp;</p>\n<p>1-3 each for 30 min;</p>\n<p>Rest of night would be just tea, chatting, and chill, leave some room for spaciousness towards the end&nbsp;</p>\n<p>2️⃣</p>\n<p>We need a lot cushions and pillows and decided do it in a crowd sourcing way, so the more the better!&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684087200000,
+  "end": 1684090800000,
+  "speakers": [
+    { "id": "Rob Knight", "name": "Rob Knight" },
+    { "id": "Mike Johnson", "name": "Mike Johnson" },
+    { "id": "Deger", "name": "Deger" }
+  ]
+}

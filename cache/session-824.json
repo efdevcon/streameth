@@ -1,1 +1,13 @@
-{"id":"824","name":"Gitcoin Projects Pizza party ","description":"<p>Come share about your project, if you're interested in donating and haven't set up your passport we'll help you do it here!&nbsp;</p>\n<p>Come for some pizza while you learn more about public goods.&nbsp;</p>","track":"Coordi-nations and Digital Tribes","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1683563400000,"end":1683567000000,"speakers":[{"id":"LauNaMu","name":"LauNaMu"},{"id":"Colton","name":"Colton"}]}
+{
+  "id": "824",
+  "name": "Gitcoin Projects Pizza party ",
+  "description": "<p>Come share about your project, if you're interested in donating and haven't set up your passport we'll help you do it here!&nbsp;</p>\n<p>Come for some pizza while you learn more about public goods.&nbsp;</p>",
+  "track": "Coordi-nations and Digital Tribes",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683563400000,
+  "end": 1683567000000,
+  "speakers": [
+    { "id": "LauNaMu", "name": "LauNaMu" },
+    { "id": "Colton", "name": "Colton" }
+  ]
+}

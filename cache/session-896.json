@@ -1,1 +1,15 @@
-{"id":"896","name":"East Meets West Karaoke","description":"<p>Karaoke with Eastern and Western songs.&nbsp;</p>","track":"Open Sessions","stage":{"id":"Dome","name":"Dome","stream":[{"id":"dd91a031-33e3-4567-aa35-d8df14a030f4"}]},"start":1684008900000,"end":1684012500000,"speakers":[{"id":"Nathan Cheng","name":"Nathan Cheng"},{"id":"Emil Kendziorra","name":"Emil Kendziorra"},{"id":"Anastasiya Giarletta","name":"Anastasiya Giarletta"},{"id":"郑思浩","name":"郑思浩"}]}
+{
+  "id": "896",
+  "name": "East Meets West Karaoke",
+  "description": "<p>Karaoke with Eastern and Western songs.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684008900000,
+  "end": 1684012500000,
+  "speakers": [
+    { "id": "Nathan Cheng", "name": "Nathan Cheng" },
+    { "id": "Emil Kendziorra", "name": "Emil Kendziorra" },
+    { "id": "Anastasiya Giarletta", "name": "Anastasiya Giarletta" },
+    { "id": "郑思浩", "name": "郑思浩" }
+  ]
+}
