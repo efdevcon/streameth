@@ -1,11 +1,1 @@
-{
-  "id": "608",
-  "name": "From Estonia to Prospera",
-  "description": "<p>Ott Vatter - Productized eGovernance</p>",
-  "track": "New Cities & Network States",
-  "stage": { "id": "Ballroom", "name": "Ballroom" },
-  "start": 1682861400000,
-  "end": 1682865000000,
-  "speakers": [{ "id": "Ott Vatter", "name": "Ott Vatter" }],
-  "video": "https://lp-playback.com/hls/cf5eq325nsa3so90/index.m3u8"
-}
+{"id": "608", "name": "From Estonia to Prospera", "description": "<p>Ott Vatter - Productized eGovernance</p>", "track": "New Cities & Network States", "stage": {"id": "Ballroom", "name": "Ballroom"}, "start": 1682861400000, "end": 1682865000000, "speakers": [{"id": "Ott Vatter", "name": "Ott Vatter"}], "video": "https://lp-playback.com/hls/cf5eq325nsa3so90/index.m3u8", "gpt_description": "In this video, Oit discusses the E-Residency program in Estonia, which allows anyone in the world to establish a company in the European Union through a digital identity program. He also talks about E-Astonia, a digital nation with over 2,000 services available online, and their focus on e-governance technology and platforms. Oit explains how the Estonian government uses distributed ledger technology to protect citizens' data, and the benefits of their X-road system for accessing information. He also clarifies that while some of their information is protected through blockchain, Estonia is not a country run on blockchain."}

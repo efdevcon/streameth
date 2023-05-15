@@ -1,14 +1,1 @@
-{
-  "id": "338",
-  "name": "Public Good Funding- WTF?",
-  "description": "<p>What to Fund in the public goods space? Come talk about Legitimacy, Coordination of information and other problems &nbsp;&amp; Solutions.</p>",
-  "track": "Public Goods",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1681473600000,
-  "end": 1681477200000,
-  "speakers": [
-    { "id": "Alddo", "name": "Alddo" },
-    { "id": "QJ", "name": "QJ" }
-  ],
-  "video": "https://lp-playback.com/hls/618dhyp75d4orciq/index.m3u8"
-}
+{"id": "338", "name": "Public Good Funding- WTF?", "description": "<p>What to Fund in the public goods space? Come talk about Legitimacy, Coordination of information and other problems &nbsp;&amp; Solutions.</p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681473600000, "end": 1681477200000, "speakers": [{"id": "Alddo", "name": "Alddo"}, {"id": "QJ", "name": "QJ"}], "video": "https://lp-playback.com/hls/618dhyp75d4orciq/index.m3u8", "gpt_description": "In this video, the speaker discusses the importance of funding public goods and the different mechanisms that exist for funding them. They also introduce the Ethereum Community Fund (ECF) and its role in funding public goods projects. The speaker then goes on to detail the different components of the ECF's platform, including the pensive overall concept, the elder one for evaluating accountable public goods projects, the room for requirement for community coordination, and the rest of the lectures don't for community sentiment and governance. The second speaker discusses the challenges of coordinating different projects and communities in the Web3 ecosystem and introduces the ECF's approach to addressing these challenges. They focus on the importance of creating a community-owned knowledge base and collective history books to ensure trustworthy information and avoid mistakes."}

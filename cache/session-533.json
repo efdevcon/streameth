@@ -1,11 +1,1 @@
-{
-  "id": "533",
-  "name": "Legal Innovation for new cities",
-  "description": "<p>2:00 - 2:20pm - Tom W. Bell (virtual) - Open Source Legal Systems for New Jurisdictions</p>\n<p>2:20 - 2:40 pm - Joe McKinney - Catawba &amp; Tribal Governance to Disrupt Delaware</p>\n<p>2:40 - 3:00 pm - Andreas Baumgartner - Private Cities, Governments and Legal Frameworks, A Love-Hate Relationship</p>",
-  "track": "New Cities & Network States",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1682856000000,
-  "end": 1682859600000,
-  "speakers": [{ "id": "Mark Lutter", "name": "Mark Lutter" }],
-  "video": "https://lp-playback.com/hls/c501aers4rvagyfd/index.m3u8"
-}
+{"id": "533", "name": "Legal Innovation for new cities", "description": "<p>2:00 - 2:20pm - Tom W. Bell (virtual) - Open Source Legal Systems for New Jurisdictions</p>\n<p>2:20 - 2:40 pm - Joe McKinney - Catawba &amp; Tribal Governance to Disrupt Delaware</p>\n<p>2:40 - 3:00 pm - Andreas Baumgartner - Private Cities, Governments and Legal Frameworks, A Love-Hate Relationship</p>", "track": "New Cities & Network States", "stage": {"id": "Dome", "name": "Dome"}, "start": 1682856000000, "end": 1682859600000, "speakers": [{"id": "Mark Lutter", "name": "Mark Lutter"}], "video": "https://lp-playback.com/hls/c501aers4rvagyfd/index.m3u8", "gpt_description": "In this video, Tom W Bell, a professor at Chapman University Fowler School of Law, discusses Ulex, a legal system he developed for decentralized projects. Ulex collects common law-based and other rules from private flag-free sources and curates them into a collection of rules for civil needs. Ulex comprises procedural rules, substantive rules, and meta-rules, and is a kernel in some legal systems, including Prospera and the Kataba Digital Economic Zone. Bell shares his screen to show examples of Ulex and other legal systems using it, including the common law zones, and discusses the differences between common law and civil law systems."}

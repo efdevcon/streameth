@@ -1,15 +1,1 @@
-{
-  "id": "335",
-  "name": "Buidl time ",
-  "description": "<p>Bring your team and hack away! <br>\n</p>\n<p>Contribute to further Zuzalu and build the tools, that will help us scale and fork. There will be snacks!&nbsp;</p>",
-  "track": "Public Goods",
-  "stage": { "id": "Dome", "name": "Dome" },
-  "start": 1681497000000,
-  "end": 1681504200000,
-  "speakers": [
-    { "id": "LauNaMu", "name": "LauNaMu" },
-    { "id": "13yearoldVC", "name": "13yearoldVC" },
-    { "id": "Janine", "name": "Janine" }
-  ],
-  "video": "https://lp-playback.com/hls/56a3ntkwycd3g2je/index.m3u8"
-}
+{"id": "335", "name": "Buidl time ", "description": "<p>Bring your team and hack away! <br>\n</p>\n<p>Contribute to further Zuzalu and build the tools, that will help us scale and fork. There will be snacks!&nbsp;</p>", "track": "Public Goods", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681497000000, "end": 1681504200000, "speakers": [{"id": "LauNaMu", "name": "LauNaMu"}, {"id": "13yearoldVC", "name": "13yearoldVC"}, {"id": "Janine", "name": "Janine"}], "video": "https://lp-playback.com/hls/56a3ntkwycd3g2je/index.m3u8", "gpt_description": "This is a summary of a public goods hackathon kickoff video. The schedule for the hackathon is discussed, including the 30-second idea pitch, a film screening, and meals provided. The rules and criteria for the hackathon are also explained, including the submission requirements and the cash prizes available. Participants are encouraged to join the Telegram group to communicate and find teammates. Several ideas are pitched, including a DAO for social movements, deranged ways to incentivize public goods funding, and a mini RetroPGF round specific to Zuzalo contributions."}
