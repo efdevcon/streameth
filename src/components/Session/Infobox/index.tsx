@@ -10,7 +10,7 @@ interface Props {
 
 const SessionInfoBox: React.FC<Props> = ({ session, onShareClick, onEmbedClick }) => {
   return (
-    <div className="bg-white px-3 border border-transparent py-2 space-y-2">
+    <div className="bg-white border border-transparent py-2 space-y-2">
       <div className="flex justify-between items-center">
         <div className="flex flex-col">
           <p className="text-xl font-medium">{`${session?.name}`}</p>
