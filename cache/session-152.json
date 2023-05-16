@@ -1,1 +1,12 @@
-{"id": "152", "name": "Intro: Folding Scheme Math Building Blocks", "description": "<p>Nova\u2019s [KST21] folding scheme is a lightweight protocol for recursive proof composition. This session lays the mathematical groundwork for understanding the components of a folding scheme, and introduces the contexts in which it is useful. We will cover primitives such as vector commitment schemes, random linear combinations, the Fiat-Shamir transform, as well as incrementally verifiable computation and zk-SNARKs on a high level.&nbsp;</p>", "track": "ZK Week", "stage": {"id": "Dome", "name": "Dome"}, "start": 1681743600000, "end": 1681749000000, "speakers": [{"id": "Ying Tong", "name": "Ying Tong"}], "video": "https://lp-playback.com/hls/41002meugqmcq8ms/index.m3u8", "gpt_description": "This description is not a summary of a video. It is simply a repetition of the word \"You\"."}
+{
+  "id": "152",
+  "name": "Intro: Folding Scheme Math Building Blocks",
+  "description": "<p>Nova\u2019s [KST21] folding scheme is a lightweight protocol for recursive proof composition. This session lays the mathematical groundwork for understanding the components of a folding scheme, and introduces the contexts in which it is useful. We will cover primitives such as vector commitment schemes, random linear combinations, the Fiat-Shamir transform, as well as incrementally verifiable computation and zk-SNARKs on a high level.&nbsp;</p>",
+  "track": "ZK Week",
+  "stage": { "id": "Dome", "name": "Dome" },
+  "start": 1681743600000,
+  "end": 1681749000000,
+  "speakers": [{ "id": "Ying Tong", "name": "Ying Tong" }],
+  "video": "https://lp-playback.com/hls/41002meugqmcq8ms/index.m3u8",
+  "gpt_description": "This description is not a summary of a video. It is simply a repetition of the word \"You\"."
+}

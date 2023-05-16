@@ -1,0 +1,15 @@
+{
+  "id": "889",
+  "name": "Free Longevity Indian Lunch 🌶️ (Funded By Retro PGF: DAOspiracy) ",
+  "description": "<p>Come eat curry, naan, and samosas with us! Let's hang, eat and talk longevity.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683887400000,
+  "end": 1683891000000,
+  "speakers": [
+    { "id": "Michael Geer", "name": "Michael Geer" },
+    { "id": "Soham Sankaran", "name": "Soham Sankaran" },
+    { "id": "Dr. Alice Brough", "name": "Dr. Alice Brough" },
+    { "id": "Madison Adams", "name": "Madison Adams" }
+  ]
+}

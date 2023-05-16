@@ -1,0 +1,13 @@
+{
+  "id": "850",
+  "name": "HOLD",
+  "description": "<p>Potentially a fireside chat&nbsp;</p>",
+  "track": "Longevity Biotech Conference",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683887400000,
+  "end": 1683891000000,
+  "speakers": [
+    { "id": "Cat", "name": "Cat" },
+    { "id": "Dave Gobel", "name": "Dave Gobel" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "884",
+  "name": "Building and Investing in LongBio",
+  "description": "<p>Speaker: Sebastian Brunemeier</p>",
+  "track": "Longevity Biotech Conference",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684057500000,
+  "end": 1684061100000,
+  "speakers": [{ "id": "Sebastian Brunemeier", "name": "Sebastian Brunemeier" }]
+}

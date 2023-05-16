@@ -1,0 +1,13 @@
+{
+  "id": "917",
+  "name": "DANCE PARTY WITH DJ PABLO 🔊🕺🎵💃🪩",
+  "description": "<p>In Zuzalu's pop-up city, a jewel by the shore,</p>\n<p>A two-month escapade, with DJ Pablo at its core.</p>\n<p>Montenegro's home for dreamers, creators, and more,</p>\n<p>Where the Zuzalu Ministry of Vibes sets the dance floor.</p>\n<p><br></p>\n<p>With just one and a half weeks, the clock starts to chime,</p>\n<p>But Pablo's beats keep rolling, defying the sands of time.</p>\n<p>Brought to you by the Ministry, where energy's untamed,</p>\n<p>In Zuzalu, we dance and innovate, our spirits unchained.</p>\n<p><br></p>\n<p>For in the rhythm of the night, the innovators thrive,</p>\n<p>As the pulse of the music keeps their dreams alive.</p>\n<p>Let the dance floor be the canvas, for ideas to unfurl,</p>\n<p>In Zuzalu's loving embrace, a Montenegrin pearl.</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684267200000,
+  "end": 1684270800000,
+  "speakers": [
+    { "id": "Gary Sheng", "name": "Gary Sheng" },
+    { "id": "Pablo the Penguin", "name": "Pablo the Penguin" }
+  ]
+}

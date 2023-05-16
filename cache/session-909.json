@@ -1,0 +1,19 @@
+{
+  "id": "909",
+  "name": "[MONTENEGRO DAY 🇲🇪✨] Workshops [Healthcare, Visa/Residency, Blockchain, Education - at Ballroom, Boardroom, Dome, Glassroom]",
+  "description": "<p>→ 👩‍⚕️ Healthcare (Sergio Ruiz + Laurence Ion + Prof. Brian Kennedy) @ Ballroom (\"coworking\")<br>\n→ 🔐 Blockchain (David Hoffman) @ Dome<br>\n→ 🏡 Visa/Residency (Marina + Alex) @ Boardroom (in front of coworking)<br>\n→ 📚 Education (Veronica + Zoya) @ Glassroom (ask at lobby)</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
+  "start": 1684152900000,
+  "end": 1684156500000,
+  "speakers": [
+    { "id": "Tomiwa", "name": "Tomiwa" },
+    { "id": "Zoe", "name": "Zoe" },
+    { "id": "Veronica", "name": "Veronica" },
+    { "id": "Sergio Ruiz", "name": "Sergio Ruiz" },
+    { "id": "Marina", "name": "Marina" },
+    { "id": "David Hoffman", "name": "David Hoffman" },
+    { "id": "Alex", "name": "Alex" },
+    { "id": "Prof. Brian Kennedy", "name": "Prof. Brian Kennedy" }
+  ]
+}

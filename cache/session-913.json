@@ -1,0 +1,10 @@
+{
+  "id": "913",
+  "name": "Kernel Junto: Scale-ability",
+  "description": "<p>Kernel is a community of people dedicated to learning together.</p>\n<p><br></p>\n<p>\"Junto\" means \"together\" in Spanish. It is a conversation for mutual improvement around specific and relevant topics.</p>\n<p><br></p>\n<p>We think more clearly when we are together, especially when we gather with people who practice honesty and humility. We see ourselves most clearly reflected in the eyes of those who are value and cultivate the ability truly to listen to one another.<br>\n<br>\nI will host a series of these over the final days of Zuzalu. <br>\n<br>\nThe first junto will be on Debt. We will split into small groups of at most 4 people to discuss what debt is and how we can understand it in our time.</p>\n<p>Please read the summary here before coming: <a href=\"https://www.kernel.community/en/learn/module-2/debt\" title=\"https://www.kernel.community/en/learn/module-2/debt\">https://www.kernel.community/en/learn/module-7/scale-ability</a><br>\n<br>\n<br>\n</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
+  "start": 1684400400000,
+  "end": 1684404000000,
+  "speakers": [{ "id": "Andy Tudhope", "name": "Andy Tudhope" }]
+}

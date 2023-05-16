@@ -1,0 +1,14 @@
+{
+  "id": "915",
+  "name": "Zuzalu Town Hall ",
+  "description": "<p>Join us for our second last Zuzalu town hall&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684249200000,
+  "end": 1684252800000,
+  "speakers": [
+    { "id": "Janine Leger ", "name": "Janine Leger " },
+    { "id": "Nicole Sun", "name": "Nicole Sun" },
+    { "id": "Ilana Brown", "name": "Ilana Brown" }
+  ]
+}

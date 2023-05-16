@@ -1,0 +1,10 @@
+{
+  "id": "863",
+  "name": "Hardcore Meditation",
+  "description": "<p>For all levels.</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683785700000,
+  "end": 1683789300000,
+  "speakers": [{ "id": "Hannes", "name": "Hannes" }]
+}

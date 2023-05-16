@@ -1,0 +1,10 @@
+{
+  "id": "916",
+  "name": "Future Zuzalu Locations & Concepts ",
+  "description": "<p>Proceeding the Tuesday town hall, we'd like to host a workshop style convresation about the future locations for Zuzalu 2.0 and concepts for what it will look like.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684252800000,
+  "end": 1684256400000,
+  "speakers": [{ "id": "Janine Leger", "name": "Janine Leger" }]
+}

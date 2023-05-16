@@ -1,0 +1,16 @@
+{
+  "id": "906",
+  "name": "[MNE DAY 🇲🇪✨] Panel + Q&A w/ Vitalik (Zuzalu x Montenegro) (@ Dome)",
+  "description": "<p>🎤 Panelists: Vitalik Buterin, Milojko Spajic &amp; Dritan Abazovic</p>\n<p>🎙️ Moderator: Tomiwa<br>\n<br>\nPanel on Zuzalu X Montenegro.</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1684142100000,
+  "end": 1684145700000,
+  "speakers": [
+    { "id": "Zoe", "name": "Zoe" },
+    { "id": "Tomiwa", "name": "Tomiwa" },
+    { "id": "Vitalik Buterin", "name": "Vitalik Buterin" },
+    { "id": "Milojko Spajic", "name": "Milojko Spajic" },
+    { "id": "Dritan Abazovic", "name": "Dritan Abazovic" }
+  ]
+}

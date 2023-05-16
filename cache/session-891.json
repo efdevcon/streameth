@@ -1,0 +1,10 @@
+{
+  "id": "891",
+  "name": "Private",
+  "description": "<p>Tbd</p>",
+  "track": "Coordi-nations and Digital Tribes",
+  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
+  "start": 1683968400000,
+  "end": 1683972000000,
+  "speakers": [{ "id": "LauNaMu ", "name": "LauNaMu " }]
+}

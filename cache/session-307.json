@@ -6,8 +6,7 @@
   "stage": { "id": "Dome", "name": "Dome" },
   "start": 1681479000000,
   "end": 1681483800000,
-  "speakers": [
-    { "id": "Manu Alzuru", "name": "Manu Alzuru" }
-  ],
-  "video": "https://lp-playback.com/hls/62b4cnvlox0m1bp5/index.m3u8"
+  "speakers": [{ "id": "Manu Alzuru", "name": "Manu Alzuru" }],
+  "video": "https://lp-playback.com/hls/62b4cnvlox0m1bp5/index.m3u8",
+  "gpt_description": "The video is a discussion about whether or not Ethereum is a public good. The participants debate the definition of public goods and whether Ethereum is non-excludable and non-rivalrous. They also discuss the issues of financial exclusion and censorship on the Ethereum network. The group ultimately concludes that the traditional definition of public goods may not apply to modern technology and that the concept needs to be redefined."
 }

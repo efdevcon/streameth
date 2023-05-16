@@ -1,0 +1,13 @@
+{
+  "id": "861",
+  "name": "IMMORTALIST - Movie Night",
+  "description": "<p>As part of the Longevity Biotech Conference we have a Movie Evening Program.</p>\n<p>IMMORTALIST&nbsp;</p>\n<p>We would like to invite you to a special screening of the first-ever feature film about transhumanism, the longevity community, and cryonics based on a true story. The movie features the legendary Franco Nero as Paolo, a man dying of terminal cancer. His grandson Max (played by Jeff DuJardin), the founder of an anti-aging company, is determined to save his beloved 'Papa' using cryonics – the technique of deep-freezing the bodies of people who have just died in the hope that they can be revived in the future. However, Max's mother (played by Sherilyn Fenn), a single, alcoholic, and wandering Catholic, believes that Max's plan is immoral and barbaric and insists on a traditional funeral. This sets the stage for a battle over Paolo's immortality</p>\n<p><br></p>\n<p>Cast&nbsp;</p>\n<p>The legend of the anti-aging movement&nbsp;&nbsp;Aubrey de Grey played himself there, as well as world-famous actors such as Sherilyn Fenn (Twin Peaks of David Lynch,&nbsp;&nbsp;nominee for a Golden Globe Award and an Emmy Award), Franco Nero (Django), comedian/actor Paul Rodriguez and Aries Spears.&nbsp;&nbsp;&nbsp;</p>\n<p><br></p>\n<p>Wins and nominations &nbsp;https://www.imdb.com/title/tt11388604/awards/?ref_=tt_awd</p>\n<p>The teaser&nbsp;https://vimeo.com/523042372&nbsp;</p>\n<p><br></p>\n<p>Producer &nbsp;Vladislav Alex Kozlov &nbsp;vladkozlov76@yahoo.com&nbsp;</p>\n<p><br></p>\n<p>Zuzalu contact - Max (Telegram -TimeInc)</p>",
+  "track": "Longevity Biotech Conference",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684000800000,
+  "end": 1684004400000,
+  "speakers": [
+    { "id": "Maxim Kholin", "name": "Maxim Kholin" },
+    { "id": "Max Unfried", "name": "Max Unfried" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "849",
+  "name": "Zuzalu Regenerative Sound Bath 🎶🧘🏽‍♀️🌱",
+  "description": "<p><em><strong>Lay down. Meditate or nap. And enter a biosonic harmonic journey...</strong></em><br>\n<br>\nLed by an expert, we're excited to host a regenerative sound bath that will help you reconnect with your self and activate your theta state.</p>\n<p>Learn more about the expert: https://www.talia-ra.com/en/article/gong-bath<br>\n<br>\n- - <br>\n<br>\nThere are yoga mats in the Dome but we might not have enough for everyone. So if you have a mat in your apartment please bring your own! Also, feel free to bring a pillow if that will help you get comfortable. We will be lying down during the Gong bath.&nbsp;</p>",
+  "track": "Open Sessions",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1683916200000,
+  "end": 1683919800000,
+  "speakers": [
+    { "id": "David Tran", "name": "David Tran" },
+    { "id": "Natalia Dylawerska", "name": "Natalia Dylawerska" }
+  ]
+}

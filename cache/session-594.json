@@ -7,5 +7,6 @@
   "start": 1682503200000,
   "end": 1682506800000,
   "speakers": [{ "id": "Vitalik Buterin", "name": "Vitalik Buterin" }],
-  "video": "https://lp-playback.com/hls/ff84k08hper90hc3/index.m3u8"
+  "video": "https://lp-playback.com/hls/ff84k08hper90hc3/index.m3u8",
+  "gpt_description": "The video discusses the current state of COVID-19 and the work being done by Plopbacks, a company working on COVID vaccines. The speaker emphasizes the danger of the virus and the need to continue to take it seriously, despite it falling out of the media spotlight. The discussion covers the dangers of the virus and the potential for future pandemics. The video also explores non-pharmaceutical interventions, such as being outdoors and improving indoor air quality, as well as the importance of vaccines."
 }

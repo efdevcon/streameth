@@ -1,1 +1,13 @@
-{"id":"822","name":"Education in Africa - Afropolitan / Mastercard Foundation ","description":"<p>Watching the Afropolitan Live session on education in Africa with Matthew Grollnek from Mastercard Foundation with a discussion afterwards. &nbsp;</p>","track":"New Cities & Network States","stage":{"id":"Board Room","name":"Board Room","stream":[{"id":"fe9970f6-1dee-40e1-8e9f-5bc99fed7dec"}]},"start":1683734400000,"end":1683738000000,"speakers":[{"id":"Jessica","name":"Jessica"},{"id":"Matthew","name":"Matthew"}]}
+{
+  "id": "822",
+  "name": "Education in Africa - Afropolitan / Mastercard Foundation ",
+  "description": "<p>Watching the Afropolitan Live session on education in Africa with Matthew Grollnek from Mastercard Foundation with a discussion afterwards. &nbsp;</p>",
+  "track": "New Cities & Network States",
+  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
+  "start": 1683734400000,
+  "end": 1683738000000,
+  "speakers": [
+    { "id": "Jessica", "name": "Jessica" },
+    { "id": "Matthew", "name": "Matthew" }
+  ]
+}

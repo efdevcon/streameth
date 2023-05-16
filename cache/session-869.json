@@ -1,0 +1,10 @@
+{
+  "id": "869",
+  "name": "Aging clocks, entropy, and the limits of age-reversal",
+  "description": "<p>Speaker: Peter Fedichev</p>",
+  "track": "Longevity Biotech Conference",
+  "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
+  "start": 1684074600000,
+  "end": 1684078200000,
+  "speakers": [{ "id": "Peter Fedichev", "name": "Peter Fedichev" }]
+}
