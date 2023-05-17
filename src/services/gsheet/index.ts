@@ -154,7 +154,7 @@ export async function getSessions(config: DataConfig): Promise<Session[]> {
       stage = null
     }
 
-    const start = moment(`${Day} ${Start}`).valueOf()
+    const start = datetimeToUnixTimestamp(`${Day} ${Start}`)
     const end = datetimeToUnixTimestamp(`${Day} ${End}`)
 
     return {

@@ -2,19 +2,38 @@ import React, { useEffect } from 'react'
 import SessionSnack from 'components/Session/Snack'
 import { useSessions } from 'hooks/useSessions'
 import { useStages } from 'hooks/useStages'
-import { PageContainer } from 'components/Container'
+import { SessionContainer } from 'components/Container'
 import ScheduleStrip from './ScheduleStrip'
+import { Session } from 'types'
+import moment from 'moment'
+import { currentTimeInUTC } from 'utils/dateTime'
+const extractAllSessionTimes = (sessions: Session[]) => {
+  const times = sessions.map((session) => session.start)
+  const uniqueTimes = [...new Set(times)]
+  const orderedTimes = uniqueTimes.sort((a, b) => {
+    const aDate = new Date(a)
+    const bDate = new Date(b)
+    return aDate.getTime() - bDate.getTime()
+  })
+  return orderedTimes
+}
+
+
 
 export default function ScheduleComponent() {
-  const { sessions, addOrUpdateFilter, filters, possibleFilters, removeFilter } = useSessions()
+  const { sessions, currentSession } = useSessions()
   const [isLoading, setIsLoading] = React.useState(true)
-  const stages = useStages()
+  const scrollIntoViewRef = React.useRef<HTMLDivElement>(null)
+  
   useEffect(() => {
+    console.log(currentSession)
     setIsLoading(false)
+    if (scrollIntoViewRef.current) {
+      scrollIntoViewRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
   }, [])
-  console.log(stages)
   return (
-    <PageContainer>
+    <SessionContainer>
       <div className="flex flex-col h-full relative">
         {sessions.length === 0 && !isLoading && (
           <div className="px-8 m-auto flex h-full w-full">
@@ -22,12 +41,13 @@ export default function ScheduleComponent() {
           </div>
         )}
 
-        <div className="flex flex-col">
-          {stages.map((stage) => (
-            <ScheduleStrip key={stage.name} stage={stage} />
-          ))}
-        </div>
+        {extractAllSessionTimes(sessions).map((time) => (
+          <div className="my-2" key={time} ref={currentSession?.start === time ? scrollIntoViewRef : null}>
+            <p className="text-lg text-center p-4">{moment(time).format('MMMM Do, h:mm a')}</p>
+            <ScheduleStrip key={time} time={time} />
+          </div>
+        ))}
       </div>
-    </PageContainer>
+    </SessionContainer>
   )
 }

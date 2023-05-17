@@ -22,7 +22,7 @@ const formatDateTime = (start: number, end: number) => {
 
 export default function SessionSnack({ session, learnMore, isLive = false, hasRecording = false }: Props) {
   const component = (
-    <div className={`border p-4 min-w-[350px] bg-white space-y-3 hover:shadow-lg ${learnMore ? 'cursor-pointer' : ''}`}>
+    <div className={`border p-4 h-full bg-white space-y-3 hover:shadow-lg ${learnMore ? 'cursor-pointer' : ''}`}>
       <div className="flex flex-col justify-between items-start">
         <div className="flex items-center mb-1 w-full">
           <span className="font-thin">{session.stage.name}</span>
