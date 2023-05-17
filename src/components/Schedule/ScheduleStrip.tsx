@@ -4,7 +4,6 @@ import SessionSnack from 'components/Session/Snack'
 import { Stage } from 'types'
 
 const ScheduleStrip = ({ stage, time }: { stage?: Stage; time?: number }) => {
-  const [isLoading, setIsLoading] = useState(true)
   const { sessions, addOrUpdateFilter } = useSessions()
 
   useEffect(() => {
@@ -19,9 +18,12 @@ const ScheduleStrip = ({ stage, time }: { stage?: Stage; time?: number }) => {
         type: 'stage',
         value: stage,
       })
-
-    setIsLoading(false)
   }, [addOrUpdateFilter, time, stage])
+
+  // useEffect(() => {
+  //   console.log(sessions)
+  // }, [sessions])
+  
 
   return (
     <div className="flex flex-row overflow-scroll space-x-4">

@@ -7,13 +7,13 @@
 }
 
 .container__stage {
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 10rem);
   position: relative;
-  @media screen and (max-height: 768px) {
-    min-height: calc(100vh);
+  // @media screen and (max-height: 768px) {
+  //   min-height: calc(100vh);
 
-  }
-  @media screen and (min-width: 1240px) {
-    height: calc(100vh - 81px);
-  }
+  // }
+  // @media screen and (min-width: 1240px) {
+  //   height: calc(100vh - 10rem);
+  // }
 }

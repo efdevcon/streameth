@@ -14,5 +14,9 @@ export function SessionContainer({ children }: Props) {
 }
 
 export function PageContainer({ children }: Props) {
-  return <div className={styles.container__stage}>{children}</div>
+  return <div className="relative h-[calc(100vh-10rem)] px-4 lg:px-8 overflow-scroll">{children}</div>
+}
+
+export function StageContainer({ children }: Props) {
+  return <div className="relative h-[calc(100vh-10rem)] overflow-scroll">{children}</div>
 }

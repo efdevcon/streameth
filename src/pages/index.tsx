@@ -17,6 +17,7 @@ export default function StagePage({ stages, sessions, pages }: Props) {
   return (
     <PageContextProvider sessions={sessions} stages={stages}>
       <DefaultLayout pages={pages}>
+        <SEO title="schedule" />
         <ScheduleComponent />
       </DefaultLayout>
     </PageContextProvider>

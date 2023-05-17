@@ -18,7 +18,7 @@ export default function Schedule(props: Props) {
   return (
     <PageContextProvider sessions={sessions}>
       <DefaultLayout pages={pages}>
-        <SEO title="Schedule" />
+        <SEO title="archive" />
         <ArchiveComponent />
       </DefaultLayout>
     </PageContextProvider>

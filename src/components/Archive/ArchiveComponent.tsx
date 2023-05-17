@@ -16,20 +16,19 @@ export default function SessionComponent() {
   }, [])
 
   return (
-    <PageContainer>
-      <div className="flex flex-col h-full relative">
-        <FilterNavigation removeFilter={removeFilter} possibleFilters={possibleFilters} onItemSelect={addOrUpdateFilter} selectedItems={filters} />
-        {sessions.length === 0 && !isLoading && (
-          <div className="px-8 m-auto flex h-full w-full">
-            <p className="m-auto">No sessions have been uploaded yet</p>
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 px-4 lg:px-8 overflow-scroll">
+    <div className="flex flex-col h-full relative">
+      <FilterNavigation removeFilter={removeFilter} possibleFilters={possibleFilters} onItemSelect={addOrUpdateFilter} selectedItems={filters} />
+      {sessions.length === 0 && !isLoading && (
+        <div className="m-auto flex h-full w-full">
+          <p className="m-auto">No sessions have been uploaded yet</p>
+        </div>
+      )}
+      <PageContainer>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4  overflow-scroll">
           {isLoading && <div>Loading...</div>}
           {!isLoading && sessions.map((session) => <SessionSnack key={session.id} session={session} learnMore />)}
         </div>
-      </div>
-    </PageContainer>
+      </PageContainer>
+    </div>
   )
 }
