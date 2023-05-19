@@ -56,15 +56,15 @@ export function StageComponent() {
             <p className="font-thin text-white">WATCHING:</p>
             <p className="font-medium text-white">{`${activeSession?.name}`}</p>
           </div>
-          <div className="hidden md:flex flex-col">
+          {/* <div className="hidden md:flex flex-col">
             <p className="font-thin text-white">NEXT:</p>
             <p className="font-medium text-white">{`${sessions[1]?.name}`}</p>
-          </div>
+          </div> */}
         </div>
       </SubNavigation>
       <StageContainer>
         <div className="flex flex-col lg:flex-row h-full relative overflow-scroll">
-          <div className="flex flex-col w-full lg:px-8 lg:py-2">
+          <div className="flex flex-col w-full lg:px-4 lg:py-2">
             <Player streamId={currentStage.stream} playerName={currentStage.name} />
             <div className="hidden md:block">
               <SessionInfoBox
