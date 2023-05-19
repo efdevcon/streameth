@@ -19,7 +19,7 @@ export default function Navbar({ pages }: { pages: page[] }) {
   const extendedPages: page[] = [...pages, { name: 'Archive', href: '/archive' }]
 
   return (
-    <nav className="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2 h-[5rem]">
+    <nav className="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2 h-[5rem] z-50">
       <Container>
         <div className="flex justify-between py-2">
           <div className="flex items-center">
@@ -49,7 +49,7 @@ export default function Navbar({ pages }: { pages: page[] }) {
             Menu
           </button>
         </div>
-        <div className={classNames('md:hidden', isMenuOpen ? 'block' : 'hidden')}>
+        <div className={classNames('md:hidden relative bg-white z-50', isMenuOpen ? 'block' : 'hidden')}>
           <ul className="border-t border-gray-200 py-3">
             {pages.map((item) => (
               <li key={item.name} className="py-2">
