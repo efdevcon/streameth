@@ -40,7 +40,7 @@ export async function GetStages(): Promise<Stage[]> {
     return {
       id: rawStageData.id,
       name: rawStageData.name,
-      stream: rawStageData.stream[0],
+      stream: rawStageData.stream,
       image: rawStageData.image,
     }
   })
