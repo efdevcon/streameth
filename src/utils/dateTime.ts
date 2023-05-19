@@ -23,5 +23,5 @@ export const getDate = (value: number): string => {
 }
 
 export const datetimeToUnixTimestamp = (datetime: string): number => {
-  return moment(datetime).unix()
+  return moment(datetime).valueOf()
 }

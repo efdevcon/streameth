@@ -6,7 +6,7 @@ interface Props {
   session: Session
 }
 
-export default function EventCard(props: Props) {
+export default function SessionCard(props: Props) {
   const { name, start, end, stage, speakers, id, video } = props.session
 
   return (

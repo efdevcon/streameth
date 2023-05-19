@@ -19,7 +19,7 @@ export default function Navbar({ pages }: { pages: page[] }) {
   const extendedPages: page[] = [...pages, { name: 'Archive', href: '/archive' }]
 
   return (
-    <nav className="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2">
+    <nav className="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2 h-[5rem]">
       <Container>
         <div className="flex justify-between py-2">
           <div className="flex items-center">

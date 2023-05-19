@@ -73,7 +73,7 @@ export function useSessions(initFilters: Filter[] = []) {
           case 'speaker':
             return session.speakers.some((speaker) => speaker.name === filter.value)
           case 'time':
-            return session.start >= filter.value
+            return session.start == filter.value
           case 'recording':
             return filter.value === 'yes' ? !!session.video : !session.video
           case 'track':
@@ -108,6 +108,7 @@ export function useSessions(initFilters: Filter[] = []) {
       return currentTime.isBetween(start, end)
     })
   }, [sessions])
+
 
   return {
     sessions,

@@ -3,7 +3,7 @@ import { GetSessions } from 'services/sessions'
 import { Session, page } from 'types'
 import DefaultLayout from 'layouts/default'
 import { GenerateNavigation } from 'services/stage'
-import ScheduleComponent from 'components/Schedule/ScheduleComponent'
+import ArchiveComponent from 'components/Archive/ArchiveComponent'
 import { SEO } from 'components/seo'
 import { PageContextProvider } from 'context/page-context'
 
@@ -18,8 +18,8 @@ export default function Schedule(props: Props) {
   return (
     <PageContextProvider sessions={sessions}>
       <DefaultLayout pages={pages}>
-        <SEO title="Schedule" />
-        <ScheduleComponent />
+        <SEO title="archive" />
+        <ArchiveComponent />
       </DefaultLayout>
     </PageContextProvider>
   )
