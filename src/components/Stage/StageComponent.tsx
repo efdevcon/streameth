@@ -65,7 +65,7 @@ export function StageComponent() {
       <StageContainer>
         <div className="flex flex-col lg:flex-row h-full relative overflow-scroll">
           <div className="flex flex-col w-full lg:px-4 lg:py-2">
-            <Player streamId={currentStage.stream} playerName={currentStage.name} />
+            <Player streamId={currentStage.stream[0]} playerName={currentStage.name} />
             <div className="hidden md:block">
               <SessionInfoBox
                 session={activeSession}

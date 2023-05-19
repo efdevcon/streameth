@@ -51,7 +51,7 @@ export interface StreamId {
 export interface Stage {
   id: string
   name: string
-  stream: StreamId
+  stream: StreamId[]
   image?: string
 }
 

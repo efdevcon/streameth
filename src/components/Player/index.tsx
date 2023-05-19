@@ -20,10 +20,12 @@ const OfflinePlayer = () => {
 }
 
 export const Player = ({ streamId, playerName }: { streamId: StreamId; playerName: string }) => {
+  console.log('streamId', streamId)
   const { data: stream } = useStream({
     streamId: streamId.id,
     refetchInterval: (s) => (s?.isActive ? false : 5000),
   })
+  console.log('stream', streamId.id)
 
   const mediaElementRef = useCallback(
     (ref: HTMLMediaElement) => {
