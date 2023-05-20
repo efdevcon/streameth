@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Container from 'components/Container'
 import { useRouter } from 'next/router'
-import { TITLE } from 'utils/constants'
 import img from 'assets/images/logo.png'
 import { page } from 'types'
 
@@ -12,6 +11,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar({ pages }: { pages: page[] }) {
+  const siteTitle = process.env.NEXT_PUBLIC_NAME || ''
   const router = useRouter()
   const path = router.asPath
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,7 +25,7 @@ export default function Navbar({ pages }: { pages: page[] }) {
           <div className="flex items-center">
             <Link href="/">
               <a className="relative w-28 h-12 lg:w-40 lg:h-12">
-                <Image src={img} alt={TITLE} layout="fill" objectFit="contain" />
+                <Image src={img} alt='Logo' layout="fill" objectFit="contain" />
               </a>
             </Link>
           </div>
