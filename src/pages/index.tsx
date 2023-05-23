@@ -6,6 +6,7 @@ import { GetSessionsForStage } from 'services/sessions'
 import { PageContextProvider } from 'context/page-context'
 import DefaultLayout from 'layouts/default'
 import { StageComponent } from 'components/Stage/StageComponent'
+import ScheduleComponent from 'components/Schedule/ScheduleComponent'
 
 interface Props {
   stage: Stage
@@ -18,7 +19,7 @@ export default function StagePage({ stage, sessions, pages }: Props) {
     <PageContextProvider sessions={sessions} stage={stage}>
       <DefaultLayout pages={pages}>
         <SEO title="schedule" />
-        <StageComponent />
+        <ScheduleComponent />
       </DefaultLayout>
     </PageContextProvider>
   )
