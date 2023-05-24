@@ -1,6 +1,7 @@
 import { Session, Speaker } from 'types'
 import { ShareIcon } from '@heroicons/react/24/outline'
-import moment from 'moment'
+import { localizedMoment } from 'utils/dateTime'
+
 interface Props {
   session: Session
   onShareClick: () => void
@@ -14,7 +15,7 @@ const SessionInfoBox: React.FC<Props> = ({ session, onShareClick, onEmbedClick }
       <div className="flex justify-between items-center">
         <div className="flex flex-col">
           <p className="text-xl font-medium">{`${session?.name}`}</p>
-          <p className="text-xl font-thin">{`${moment(session?.start).format('HH:mm')} - ${moment(session?.end).format('HH:mm')}`}</p>
+          <p className="text-xl font-thin">{`${localizedMoment(session?.start).format('HH:mm')} - ${localizedMoment(session?.end).format('HH:mm')}`}</p>
         </div>
         <span className="p-1 cursor-pointer text-black border-black border-2  ml-auto" onClick={onEmbedClick}>
           embed

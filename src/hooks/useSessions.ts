@@ -1,9 +1,8 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
-import { Session, Filter, PossibleFilter, SessionStatus } from 'types'
-import { startOfDay, currentTimeInUTC } from 'utils/dateTime'
+import { useState, useMemo, useCallback } from 'react'
+import { Filter, PossibleFilter, SessionStatus } from 'types'
+import { startOfDay, currentTimeInUTC, localizedMoment } from 'utils/dateTime'
 import { useContext } from 'react'
 import { PageContext } from 'context/page-context'
-import moment from 'moment'
 
 export function useSessions(initFilters: Filter[] = []) {
   const context = useContext(PageContext)
@@ -58,7 +57,7 @@ export function useSessions(initFilters: Filter[] = []) {
   const sessions = useMemo(() => {
     let filteredSessions = [...allSessions].map((session) => ({
       ...session,
-      status: getSessionStatus(moment(session.start).toDate(), moment(session.end).toDate()),
+      status: getSessionStatus(localizedMoment(session.start).toDate(), localizedMoment(session.end).toDate()),
     }))
     return filteredSessions.filter((session) => {
       if (filters.length === 0) {
@@ -103,8 +102,8 @@ export function useSessions(initFilters: Filter[] = []) {
   const currentSession = useMemo(() => {
     const currentTime = currentTimeInUTC()
     return sessions.find((session) => {
-      const start = moment(session.start).utc()
-      const end = moment(session.end).utc()
+      const start = localizedMoment(session.start)
+      const end = localizedMoment(session.end)
       return currentTime.isBetween(start, end)
     })
   }, [sessions])
