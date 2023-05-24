@@ -10,8 +10,8 @@ export const startOfDay = (d: moment.Moment | number): number => {
   return d.startOf('day').valueOf()
 }
 
-export const currentTimeInUTC = () => {
-  return moment().tz(EVENT_TIMEZONE) // TODO: Fix properly based on user
+export const currentTimeInUTC = (keepLocalTime = true) => {
+  return moment().tz(EVENT_TIMEZONE, keepLocalTime) // TODO: Fix properly based on user
 }
 
 export const localizedMoment = (value?: number): Moment => {
@@ -25,3 +25,7 @@ export const getDate = (value: number): string => {
 export const datetimeToUnixTimestamp = (datetime: string): number => {
   return moment(datetime).valueOf()
 }
+
+console.log('Current timezone: ', moment.tz.guess())
+console.log('currentTimeInUTC: ', currentTimeInUTC())
+console.log('currentTimeInUTC: ', currentTimeInUTC(false))
