@@ -15,7 +15,7 @@ export const currentTimeInUTC = () => {
 }
 
 export const localizedMoment = (value: number): Moment => {
-  return moment(value).tz(EVENT_TIMEZONE, true) // TODO: Fix properly based on user
+  return moment(value) // TODO: Fix properly based on user
 }
 
 export const getDate = (value: number): string => {
