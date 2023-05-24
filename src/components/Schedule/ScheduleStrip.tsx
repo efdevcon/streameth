@@ -29,7 +29,7 @@ const ScheduleStrip = ({ stage, time }: { stage?: Stage; time?: number }) => {
     <div className="flex flex-row overflow-scroll space-x-4">
       {sessions.map((session) => (
         <div className="flex-1 min-w-[350px]" key={session.id}>
-          <SessionSnack session={session} learnMore />
+          <SessionSnack session={session} goToStage />
         </div>
       ))}
     </div>

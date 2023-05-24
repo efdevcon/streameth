@@ -14,13 +14,14 @@ interface Props {
   learnMore?: boolean
   isLive?: boolean
   hasRecording?: boolean
+  goToStage?: boolean
 }
 
 const formatDateTime = (start: number, end: number) => {
   return `${localizedMoment(start).format('MMMM D / H:mm')}-${localizedMoment(end).format('H:mm')}`
 }
 
-export default function SessionSnack({ session, learnMore, isLive = false, hasRecording = false }: Props) {
+export default function SessionSnack({ session, learnMore, isLive = false, hasRecording = false, goToStage = false }: Props) {
   const component = (
     <div className={`border p-4 h-full bg-white space-y-3 hover:shadow-lg ${learnMore ? 'cursor-pointer' : ''}`}>
       <div className="flex flex-col justify-between items-start">
@@ -43,6 +44,6 @@ export default function SessionSnack({ session, learnMore, isLive = false, hasRe
   )
 
   if (learnMore) return <Link href={'/session/' + session.id}>{component}</Link>
-
+  if (goToStage) return <Link href={'/stage/' + session.stage.id}>{component}</Link>
   return component
 }
