@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { useSessions } from 'hooks/useSessions'
-import Container, { PageContainer, SessionContainer } from 'components/Container'
+import { PageContainer } from 'components/Container'
 import SubNavigation from 'components/Navbar/SubNavigation'
 import ScheduleStrip from './ScheduleStrip'
 import { Session } from 'types'
-import moment from 'moment'
+import { localizedMoment } from 'utils/dateTime'
+
 const extractAllSessionTimes = (sessions: Session[]) => {
   const times = sessions.map((session) => session.start)
   const uniqueTimes = [...new Set(times)]
@@ -46,7 +47,7 @@ export default function ScheduleComponent() {
           )}
           {extractAllSessionTimes(sessions).map((time) => (
             <div className="my-2" key={time} ref={currentSession?.start === time ? scrollIntoViewRef : null}>
-              <p className="text-lg text-center p-4">{moment(time).format('MMMM Do, h:mm a')}</p>
+              <p className="text-lg text-center p-4">{localizedMoment(time).format('MMMM Do, h:mm a')}</p>
               <ScheduleStrip key={time} time={time} />
             </div>
           ))}
