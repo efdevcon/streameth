@@ -19,7 +19,7 @@ export const localizedMoment = (value: number): Moment => {
 }
 
 export const getDate = (value: number): string => {
-  return localizedMoment(value).format('ddd, MMM D')
+  return moment(value).format('ddd, MMM D')
 }
 
 export const datetimeToUnixTimestamp = (datetime: string): number => {
