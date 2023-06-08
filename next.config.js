@@ -2,6 +2,24 @@
 const nextConfig = {
   reactStrictMode: true,
   staticPageGenerationTimeout: 180,
+  async redirects() {
+    if (process.env.NEXT_PUBLIC_ARCHIVE_MODE === 'true') {
+      return [
+      {
+        source: '/stage/:slug',
+        destination: '/archive',
+        permanent: true,
+      }, 
+      {
+        source: '/',
+        destination: '/archive',
+        permanent: true,
+      }
+    ];
+  }
+  return []
+
+  },
   webpack(config) {
     const rules = config.module.rules.find((r) => !!r.oneOf)
 
@@ -9,6 +27,8 @@ const nextConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
+
+    
 
     // Interate over the found rules
     rules.oneOf.forEach((loaders) => {

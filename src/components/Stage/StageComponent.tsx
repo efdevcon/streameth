@@ -15,18 +15,13 @@ import ChatBar from 'components/Chat'
 import SubNavigation from 'components/Navbar/SubNavigation'
 export function StageComponent() {
   const currentStage = useStage()
-  const { sessions, addOrUpdateFilter, currentSession } = useSessions()
+  const { sessions, currentSession } = useSessions([{ type: 'stage', value: currentStage.id }])
   const [modalOpen, setModalOpen] = useState(false)
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
   const [tab, setTab] = useState<number>(0)
 
   const activeSession = currentSession ?? sessions[0]
-
-  useEffect(() => {
-    addOrUpdateFilter({ type: 'stage', value: currentStage.id })
-    //addOrUpdateFilter({ type: 'day', value: moment().startOf('day').valueOf() })
-  }, [currentStage, addOrUpdateFilter])
 
   const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {
     setModalContentType(type)

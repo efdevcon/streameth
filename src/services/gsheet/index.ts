@@ -14,7 +14,7 @@ const STAGE_SHEET = 'Stages'
 const STAGE_DATA_RANGE = 'A3:D'
 
 const SESSION_SHEET = 'Sessions'
-const SESSION_DATA_RANGE = 'A3:M'
+const SESSION_DATA_RANGE = 'A3:N'
 
 const API_QUEUE = new PQueue({ concurrency: 1, interval: 1500 })
 
@@ -124,7 +124,7 @@ export async function getSessions(config: DataConfig): Promise<Session[]> {
   const stageData = await GetStages(config)
 
   return data.map((row: any) => {
-    const [id, Name, Description, stageId, Day, Start, End, Speaker1, Speaker2, Speaker3, Speaker4, Speaker5, video] = row
+    const [id, Name, Description, stageId, Day, Start, End, Speaker1, Speaker2, Speaker3, Speaker4, Speaker5, Speaker6, video] = row
     const speakersRaw = [Speaker1, Speaker2, Speaker3, Speaker4, Speaker5].map((id: string) => {
       let speaker
 
@@ -156,7 +156,6 @@ export async function getSessions(config: DataConfig): Promise<Session[]> {
 
     const start = datetimeToUnixTimestamp(`${Day} ${Start}`)
     const end = datetimeToUnixTimestamp(`${Day} ${End}`)
-
     return {
       id: GetSlug(id),
       name: Name,
