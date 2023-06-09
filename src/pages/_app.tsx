@@ -16,7 +16,6 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi'
 import { mainnet } from 'wagmi/chains'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
-
 type Props = {
   pages: page[]
   event: any
@@ -32,25 +31,6 @@ type LayoutProps = {
   children: React.ReactNode
 }
 
-const pages = [
-  {
-    name: 'Lighthouse',
-    href: '/stage/Lighthouse',
-  },
-  {
-    name: 'Dome',
-    href: '/stage/Dome',
-  },
-  {
-    name: 'Ballroom',
-    href: '/stage/Ballroom',
-  },
-  {
-    name: 'Archive',
-    href: '/archive',
-  },
-]
-
 const { chains, provider } = configureChains([mainnet], [infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY ?? '' }), publicProvider()])
 const { connectors } = getDefaultWallets({
   appName: 'StreamETH',
@@ -61,10 +41,7 @@ const wagmiClient = createClient({
   connectors,
   provider,
 })
-
 export default function App({ Component, pageProps }: AppLayoutProps) {
-  const Layout = Component.layout || ((props: LayoutProps) => <DefaultLayout pages={pages}>{props.children}</DefaultLayout>)
-
   useEffect(() => {
     const plugin = pageProps.event?.plugins.find((i: any) => i['name'] === 'matomo')
     if (plugin) {
@@ -94,9 +71,9 @@ export default function App({ Component, pageProps }: AppLayoutProps) {
       <RainbowKitProvider chains={chains}>
         <Script src="/theme.js" />
         <LivepeerConfig client={livepeerClient}>
-            <SEO />
-            <Component {...(pageProps as any)} />
-            <Analytics />
+          <SEO />
+          <Component {...(pageProps as any)} />
+          <Analytics />
         </LivepeerConfig>
       </RainbowKitProvider>
     </WagmiConfig>

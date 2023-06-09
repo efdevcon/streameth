@@ -4,7 +4,7 @@ import { Stage } from 'types'
 
 export function useStage(): Stage {
   const context = useContext(PageContext)
-
+  
   if (context === undefined) {
     throw new Error('useStage must be used within an EventContextProvider')
   }

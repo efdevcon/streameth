@@ -5,27 +5,30 @@ import Container from 'components/Container'
 import { useRouter } from 'next/router'
 import img from 'assets/images/logo.png'
 import { page } from 'types'
-
+import { ARCHIVE_MODE } from 'utils/constants'
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar({ pages }: { pages: page[] }) {
-  const siteTitle = process.env.NEXT_PUBLIC_NAME || ''
   const router = useRouter()
   const path = router.asPath
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const extendedPages: page[] = [...pages, { name: 'Archive', href: '/archive' }]
+  const extendedPages: page[] = !ARCHIVE_MODE ? [...pages, { name: 'Archive', href: '/archive' }] : [{ name: 'Archive', href: '/archive' }]
+  // const extendedPages: page[] = [
+  //   { name: 'Gulf Stage', href: '/stage/stagegulfstage' },
+  //   { name: 'Volcano Stage', href: '/stage/stagevolcanostage' },
+  //   { name: 'Archive', href: '/archive' },
+  // ]
 
   return (
     <nav className="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2 h-[5rem] z-50">
       <Container>
         <div className="flex justify-between py-2">
           <div className="flex items-center">
-            <Link href="/">
+            <Link href={ARCHIVE_MODE ? '/archive' : '/'}>
               <a className="relative w-28 h-12 lg:w-40 lg:h-12">
-                <Image src={img} alt='Logo' layout="fill" objectFit="contain" />
+                <Image src={img} alt="Logo" layout="fill" objectFit="contain" />
               </a>
             </Link>
           </div>
@@ -51,7 +54,7 @@ export default function Navbar({ pages }: { pages: page[] }) {
         </div>
         <div className={classNames('md:hidden relative bg-white z-50', isMenuOpen ? 'block' : 'hidden')}>
           <ul className="border-t border-gray-200 py-3">
-            {pages.map((item) => (
+            {extendedPages.map((item) => (
               <li key={item.name} className="py-2">
                 <Link href={item.href}>
                   <a className={classNames('block px-4 py-2 text-gray-500', item.href === path ? 'bg-gray-200' : '')}>{item.name}</a>

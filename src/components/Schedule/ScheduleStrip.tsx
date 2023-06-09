@@ -3,27 +3,8 @@ import { useSessions } from 'hooks/useSessions'
 import SessionSnack from 'components/Session/Snack'
 import { Stage } from 'types'
 
-const ScheduleStrip = ({ stage, time }: { stage?: Stage; time?: number }) => {
-  const { sessions, addOrUpdateFilter } = useSessions()
-
-  useEffect(() => {
-    time &&
-      addOrUpdateFilter({
-        type: 'time',
-        value: time,
-      })
-
-    stage &&
-      addOrUpdateFilter({
-        type: 'stage',
-        value: stage,
-      })
-  }, [addOrUpdateFilter, time, stage])
-
-  // useEffect(() => {
-  //   console.log(sessions)
-  // }, [sessions])
-  
+const ScheduleStrip = ({ time }: { stage?: Stage; time?: number }) => {
+  const { sessions } = useSessions([{ type: 'time', value: time }])
 
   return (
     <div className="flex flex-row overflow-scroll space-x-4">
