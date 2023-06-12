@@ -1,6 +1,11 @@
 {
   "id": "891",
-  "name": "How Plant Based Meals, Movements, & Mindsets Can Cure Disease 🥗",
+  "name": "Hoow Plant Based Meals, Movements, & Mindsets Can Cure Disease 🥗",
+  "desciption": "",
+  "track": "Open Sessions",
+  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
+  "start": 1683887400000,
+  "end": 1683891000000,
   "speakers": [{ "id": "End of Medicine Summit", "name": "End of Medicine Summit" }],
   "video": "https://lp-playback.com/hls/5f4dcblrfhhqs4kb/index.m3u8"
 }
