@@ -31,55 +31,13 @@ export default function Navbar({ pages }: { pages: page[] }) {
           </div>
           <div className="flex-1 flex items-center space-x-2 justify-end">
             <div className="hidden md:flex">
-              {pages.map((item) => (
-                <Link key={item.name} href={item.href}>
-                  <a className={'px-2 py-1  text-gray-500'} aria-current={item.href === path ? 'page' : undefined}>
-                    {item.name}
-                  </a>
-                </Link>
-              ))}
-            </div>
-            <div className="hidden md:flex">
               <a href="https://github.com/efdevcon/streameth/tree/zuzalu">
                 <Image src={githubLogo} alt="streamETH Repo" width={24} height={24} objectFit='contain'/>
               </a>
             </div>
           </div>
           <div className="hidden md:flex">
-
           </div>
-
-          <button
-            className="md:hidden border-2 border-black p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Menu"
-            aria-expanded={isMenuOpen}>
-            Menu
-          </button>
-        </div>
-        <div className={classNames('md:hidden', isMenuOpen ? 'block' : 'hidden')}>
-          <ul className="border-t border-gray-200 py-3">
-            {pages.map((item) => (
-              <li key={item.name} className="py-2">
-                <Link href={item.href}>
-                  <a className={classNames('block px-4 py-2 text-gray-500', item.href === path ? 'bg-gray-200' : '')}>{item.name}</a>
-                </Link>
-              </li>
-            ))}
-            <li>
-              {/* <div className="border-2 border-black p-2 my-2">Sign in with Ethereum</div> */}
-              {/* <ConnectButton
-                accountStatus={{
-                  smallScreen: 'full',
-                  largeScreen: 'full',
-                }}
-                chainStatus="none"
-              /> */}
-            </li>
-          <a className='block px-4 py-2 text-gray-500' href="https://github.com/efdevcon/streameth/tree/zuzalu">
-              <Image src={githubLogo} alt="streamETH Repo" width={24} height={24} objectFit='contain'/>
-          </a>
-          </ul>
         </div>
       </Container>
     </nav>
