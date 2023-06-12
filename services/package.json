@@ -2,5 +2,19 @@
   "name": "streameth-cli",
   "version": "1.0.0",
   "main": "index.tsx",
-  "license": "MIT"
+  "license": "MIT",
+  "module": "CommonJS",
+  "scripts": {
+    "cli": "ts-node cli.ts"
+  },
+  "dependencies": {
+    "class-validator": "^0.14.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.9.1",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.0",
+    "@types/yargs": "^17.0.24"
+  }
 }
