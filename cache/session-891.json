@@ -1,10 +1,6 @@
 {
   "id": "891",
-  "name": "Private",
-  "description": "<p>Tbd</p>",
-  "track": "Coordi-nations and Digital Tribes",
-  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
-  "start": 1683968400000,
-  "end": 1683972000000,
-  "speakers": [{ "id": "LauNaMu ", "name": "LauNaMu " }]
+  "name": "How Plant Based Meals, Movements, & Mindsets Can Cure Disease 🥗",
+  "speakers": [{ "id": "End of Medicine Summit", "name": "End of Medicine Summit" }],
+  "video": "https://lp-playback.com/hls/5f4dcblrfhhqs4kb/index.m3u8"
 }

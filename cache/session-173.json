@@ -6,5 +6,6 @@
   "stage": { "id": "Ballroom", "name": "Ballroom" },
   "start": 1682089200000,
   "end": 1682091000000,
-  "speakers": [{ "id": "Filip Pajic | Scroll", "name": "Filip Pajic | Scroll" }]
+  "speakers": [{ "id": "Filip Pajic | Scroll", "name": "Filip Pajic | Scroll" }],
+  "video": "https://lp-playback.com/hls/3be7i1ebwih72dds/index.m3u8"
 }

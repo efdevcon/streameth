@@ -1,7 +1,7 @@
 {
   "id": "906",
-  "name": "[MNE DAY 🇲🇪✨] Panel + Q&A w/ Vitalik (Zuzalu x Montenegro) (@ Dome)",
-  "description": "<p>🎤 Panelists: Vitalik Buterin, Milojko Spajic &amp; Dritan Abazovic</p>\n<p>🎙️ Moderator: Tomiwa<br>\n<br>\nPanel on Zuzalu X Montenegro.</p>",
+  "name": "[MNE DAY \ud83c\uddf2\ud83c\uddea\u2728] Panel + Q&A w/ Vitalik (Zuzalu x Montenegro) (@ Dome)",
+  "description": "\ud83c\udfa4 Panelists: Vitalik Buterin, Milojko Spajic &amp; Dritan Abazovic\n\ud83c\udf99\ufe0f Moderator: Tomiwa\n\nPanel one Zuzalu X Montenegro.",
   "track": "Open Sessions",
   "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
   "start": 1684142100000,
@@ -12,5 +12,7 @@
     { "id": "Vitalik Buterin", "name": "Vitalik Buterin" },
     { "id": "Milojko Spajic", "name": "Milojko Spajic" },
     { "id": "Dritan Abazovic", "name": "Dritan Abazovic" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/abbdp9vkzttwo2dq/index.m3u8",
+  "gpt_description": "The video features a discussion about the origins of Zuzulu, an experiment aimed at bringing together diverse tech and nomad communities in Montenegro. The speaker explains how the idea came about and how it was pitched to the Montenegro government. The discussion also includes the perspectives of Mickey and Dretton, who express their support for the project and its potential to increase visibility for Montenegro. The video touches on various topics, including blockchain, regulation, and governance."
 }

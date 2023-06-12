@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Laurence Ion", "name": "Laurence Ion" },
     { "id": "Tom Howard", "name": "Tom Howard" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/3a7fnc3h45rwr7b8/index.m3u8"
 }

@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Max Unfried", "name": "Max Unfried" },
     { "id": "Benjamin Anderson", "name": "Benjamin Anderson" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/1af5444tx3kjv80m/index.m3u8"
 }

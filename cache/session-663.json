@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
   "start": 1683984600000,
   "end": 1683988200000,
-  "speakers": [{ "id": "Max Unfried", "name": "Max Unfried" }]
+  "speakers": [{ "id": "Dr. Emil Kendziorra", "name": "Dr. Emil Kendziorra" }],
+  "video": "https://lp-playback.com/hls/1928um22pozj23d7/index.m3u8"
 }

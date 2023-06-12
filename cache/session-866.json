@@ -12,5 +12,6 @@
     { "id": "Brian Kennedy", "name": "Brian Kennedy" },
     { "id": "Peter Fedichev", "name": "Peter Fedichev" },
     { "id": "Björn Schumacher", "name": "Björn Schumacher" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/aad9vjfy3qbjh338/index.m3u8"
 }

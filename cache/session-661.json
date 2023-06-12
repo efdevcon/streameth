@@ -7,7 +7,7 @@
   "start": 1683986400000,
   "end": 1683990000000,
   "speakers": [
-    { "id": "Max Unfried", "name": "Max Unfried" },
-    { "id": "Laura Minquini", "name": "Laura Minquini" }
-  ]
+    { "id": "Lynae Brayboy", "name": "Lynae Brayboy" }
+  ],
+  "video": "https://lp-playback.com/hls/3f9999uacuedbkkg/index.m3u8"
 }

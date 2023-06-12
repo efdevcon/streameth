@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Max Unfried", "name": "Max Unfried" },
     { "id": "Laura Minquini", "name": "Laura Minquini" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/109e0no6zhao7nsk/index.m3u8"
 }

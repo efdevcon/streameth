@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Nalin Bhardwaj", "name": "Nalin Bhardwaj" },
     { "id": "Carlos Perez", "name": "Carlos Perez" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/1ffdwxan6adl1eoo/index.m3u8"
 }

@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome" },
   "start": 1683626400000,
   "end": 1683630000000,
-  "speakers": [{ "id": "Cat Thu", "name": "Cat Thu" }]
+  "speakers": [{ "id": "Cat Thu", "name": "Cat Thu" }],
+  "video": "https://lp-playback.com/hls/997dcty5147ss7hf/index.m3u8"
 }
