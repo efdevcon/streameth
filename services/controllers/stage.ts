@@ -11,7 +11,7 @@ export default class StageController extends FileController {
     return stage;
   }
 
-  public async saveStage(stage: IStage, event: IEvent): Promise<void> {
+  public async saveStage(stage: Omit<IStage, "id">, event: IEvent): Promise<void> {
     const stg = await Stage.fromJson(stage);
     const path = `${PATH}/${event.organization}/${event.name}/stages/${stg.id}.json`;
     await this.write(path, stg.toJson());

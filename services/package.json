@@ -5,10 +5,13 @@
   "license": "MIT",
   "module": "CommonJS",
   "scripts": {
-    "cli": "ts-node cli.ts"
+    "cli": "ts-node cli.ts",
+    "local-test": "ts-node test.ts"
   },
   "dependencies": {
     "class-validator": "^0.14.0",
+    "googleapis": "^118.0.0",
+    "p-queue": "^7.3.4",
     "reflect-metadata": "^0.1.13",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",

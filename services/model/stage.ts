@@ -1,5 +1,5 @@
 import { IsNotEmpty, validate } from "class-validator";
-import { RemoveFromUnion } from "../utlis";
+import { IEvent } from "./event";
 export interface IStreamSettings {
   url?: string;
   streamId?: string;
@@ -12,11 +12,10 @@ export interface IPlugin {
 export interface IStage {
   id: string;
   name: string;
-  eventId: string;
+  eventId: IEvent["id"];
   streamSettings: IStreamSettings;
   plugins?: IPlugin[];
 }
-
 
 export default class Stage implements IStage {
   @IsNotEmpty()
@@ -26,7 +25,7 @@ export default class Stage implements IStage {
   name: string;
 
   @IsNotEmpty()
-  eventId: string;
+  eventId: IEvent["id"];
 
   @IsNotEmpty()
   streamSettings: IStreamSettings;
@@ -35,11 +34,11 @@ export default class Stage implements IStage {
 
   constructor(
     name: string,
-    event: string,
+    event: IEvent["id"],
     streamSettings: IStreamSettings,
     plugins?: IPlugin[]
   ) {
-    this.id = `${name}-${event}`;
+    this.id = `stage_${name.trim().replace(/\s/g, "_")}`;
     this.name = name;
     this.eventId = event;
     this.streamSettings = streamSettings;
@@ -57,7 +56,7 @@ export default class Stage implements IStage {
     return JSON.stringify(this);
   }
 
-  static async fromJson(jsonData: string | RemoveFromUnion<IStage, "id">) {
+  static async fromJson(jsonData: string | Omit<IStage, "id">) {
     const { name, event, streamSettings, plugins } =
       typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
     const stage = new Stage(name, event, streamSettings, plugins);

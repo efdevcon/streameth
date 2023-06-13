@@ -1,7 +1,6 @@
 import FileController from "./fs";
 import Speaker, { ISpeaker } from "../model/speaker";
 import { IEvent } from "../model/event";
-
 const PATH = "data";
 
 export default class SpeakerController extends FileController {
@@ -12,7 +11,10 @@ export default class SpeakerController extends FileController {
     return speaker;
   }
 
-  public async saveSpeaker(speaker: ISpeaker, event: IEvent): Promise<void> {
+  public async saveSpeaker(
+    speaker: Omit<ISpeaker, "id">,
+    event: IEvent
+  ): Promise<void> {
     const spk = await Speaker.fromJson(speaker);
     const path = `${PATH}/${event.organization}/${event.name}/speakers/${spk.name}.json`;
     await this.write(path, spk.toJson());

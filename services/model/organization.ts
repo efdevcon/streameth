@@ -1,6 +1,7 @@
 import { IsNotEmpty, IsUrl, validate } from "class-validator";
 
 export interface IOrganization {
+  organizationId: string;
   name: string;
   description: string;
   url: string;
@@ -8,7 +9,10 @@ export interface IOrganization {
   location: string;
 }
 
-export default class Organization implements IOrganization {
+export default class Organization {
+  @IsNotEmpty()
+  organizationId: string;
+
   @IsNotEmpty()
   name: string;
 
@@ -31,8 +35,11 @@ export default class Organization implements IOrganization {
     description: string,
     url: string,
     logo: string,
-    location: string
+    location: string,
+    id?: string
   ) {
+    this.organizationId =
+      id ?? `organization_${name.trim().replace(/\s/g, "_")}`;
     this.name = name;
     this.description = description;
     this.url = url;
@@ -47,15 +54,19 @@ export default class Organization implements IOrganization {
     }
   }
 
-  toJson(): string {
+  async toJson(): Promise<string> {
     return JSON.stringify(this);
   }
 
-  static async fromJson(jsonData: string | IOrganization) {
-    const { name, description, url, logo, location } =
-      typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
-    const org = new Organization(name, description, url, logo, location);
-    await org.validateThis();
-    return org;
+  static async fromJson(jsonData: string): Promise<Organization> {
+    const data = JSON.parse(jsonData) as IOrganization;
+    return new Organization(
+      data.name,
+      data.description,
+      data.url,
+      data.logo,
+      data.location,
+      data.organizationId
+    );
   }
 }

@@ -2,7 +2,7 @@ import FileController from "./fs";
 import OrganizationController from "./organization";
 import Event, { IEvent } from "../model/event";
 
-export class EventController extends FileController {
+export default class EventController extends FileController {
   public async getEvent(orgName: string, eventName: string): Promise<IEvent> {
     const path = `./data/${orgName}/events/${eventName}.json`;
     const data = await this.read(path);
@@ -11,9 +11,8 @@ export class EventController extends FileController {
     return event;
   }
 
-  public async saveEvent(event: IEvent): Promise<void> {
+  public async saveEvent(event: Omit<IEvent, "id">): Promise<void> {
     const { organization } = event;
-    // Check if the organization exists
     const organizationController = new OrganizationController();
     const existingOrganization = await organizationController.getOrganization(
       organization
@@ -27,11 +26,27 @@ export class EventController extends FileController {
     const path = `./data/${evt.organization}/events/${evt.name}/config.json`;
     await this.write(path, evt.toJson());
   }
+
+  public async importEventData(Event: IEvent): Promise<void> {
+    const { dataImporter } = Event;
+
+    for (const importer of dataImporter) {
+      try {
+        const DataModule = await import(
+          `services/importers/${importer.type}/index`
+        );
+        // Not typesafe
+        const data = new DataModule(Event);
+        return await data.generateSessions();
+      } catch (e) {
+        console.error(e);
+        throw new Error("Unable to get session data...");
+      }
+    }
+  }
 }
 
-
 export class EventsController extends FileController {
-
   public async getEvents(orgName: string): Promise<IEvent[]> {
     const path = `./data/${orgName}/events`;
     const files = await this.readDir(path);

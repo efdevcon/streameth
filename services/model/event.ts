@@ -1,21 +1,35 @@
-import {
-  IsNotEmpty,
-  IsDateString,
-  IsDate,
-  validate,
-} from "class-validator";
+import { IsNotEmpty, IsDate, validate } from "class-validator";
+
+interface GSheetConfig {
+  sheetId: string;
+  apiKey: string;
+}
+
+interface PretalxConfig {
+  url: string;
+  apiToken: string;
+}
+
+export type IDataImporter =
+  | { type: "gsheet"; config: GSheetConfig }
+  | { type: "pretalx"; config: PretalxConfig };
 
 export interface IEvent {
+  id: string;
   name: string;
   description: string;
   start: Date;
   end: Date;
   location: string;
   organization: string;
+  dataImporter?: IDataImporter[];
 }
 
 export default class Event implements IEvent {
   @IsNotEmpty()
+  id: string;
+
+  @IsNotEmpty()
   name: string;
 
   @IsNotEmpty()
@@ -32,6 +46,8 @@ export default class Event implements IEvent {
 
   @IsNotEmpty()
   organization: string;
+
+  dataImporter: IDataImporter[];
 
   constructor(
     name: string,
@@ -39,14 +55,17 @@ export default class Event implements IEvent {
     start: Date,
     end: Date,
     location: string,
-    organization: string
+    organization: string,
+    dataImporter?: IDataImporter[]
   ) {
+    this.id = `${name}-${organization}`;
     this.name = name;
     this.description = description;
     this.start = start;
     this.end = end;
     this.location = location;
     this.organization = organization;
+    this.dataImporter = dataImporter;
   }
 
   async validateThis() {
@@ -60,9 +79,18 @@ export default class Event implements IEvent {
     return JSON.stringify(this);
   }
 
-  public static async fromJson(json: string | IEvent): Promise<Event> {
-    const { name, description, start, end, location, organization } =
-      typeof json === "string" ? JSON.parse(json) : json;
+  public static async fromJson(
+    json: string | Omit<IEvent, "id">
+  ): Promise<Event> {
+    const {
+      name,
+      description,
+      start,
+      end,
+      location,
+      organization,
+      dataImporter,
+    } = typeof json === "string" ? JSON.parse(json) : json;
 
     const evt = new Event(
       name,
@@ -70,7 +98,8 @@ export default class Event implements IEvent {
       new Date(start),
       new Date(end),
       location,
-      organization
+      organization,
+      dataImporter
     );
     await evt.validateThis();
 

@@ -1,14 +1,14 @@
 import { IsNotEmpty, IsUrl, validate } from "class-validator";
-import { RemoveFromUnion } from "../utlis";
-
+import { IStage } from "./stage";
+import { ISpeaker } from "./speaker";
 export interface ISession {
   id: string;
   name: string;
   description: string;
   start: Date;
   end: Date;
-  stage: string;
-  speakers: string[];
+  stageId: IStage["id"];
+  speakers: ISpeaker[];
   videoUrl?: string;
 }
 
@@ -29,10 +29,10 @@ export default class Session implements ISession {
   end: Date;
 
   @IsNotEmpty()
-  stage: string;
+  stageId: IStage["id"];
 
   @IsNotEmpty()
-  speakers: string[];
+  speakers: ISpeaker[];
 
   @IsUrl()
   videoUrl?: string;
@@ -42,16 +42,16 @@ export default class Session implements ISession {
     description: string,
     start: Date,
     end: Date,
-    stage: string,
-    speakers: string[],
+    stageId: IStage["id"],
+    speakers: ISpeaker[],
     videoUrl?: string
   ) {
-    this.id = `${name}-${stage}`
+    this.id = `session_${name.trim().replace(/\s/g, "_")}`;
     this.name = name;
     this.description = description;
     this.start = start;
     this.end = end;
-    this.stage = stage;
+    this.stageId = stageId;
     this.speakers = speakers;
     this.videoUrl = videoUrl;
   }
@@ -67,7 +67,7 @@ export default class Session implements ISession {
     return JSON.stringify(this);
   }
 
-  static async fromJson(jsonData: string | RemoveFromUnion<ISession, "id">) {
+  static async fromJson(jsonData: string | Omit<ISession, "id">) {
     const { name, description, start, end, stage, speakers, videoUrl } =
       typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
     const session = new Session(
