@@ -1,25 +1,29 @@
 import OrganizationController from "./controllers/organization";
-import Organization from "./model/organization";
+import { EventController } from "./controllers/event";
+import Organization, {IOrganization} from "./model/organization";
+import Event, {IEvent} from "./model/event";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
-const controller = new OrganizationController();
+const organizationController = new OrganizationController();
+const eventController = new EventController();
 
-interface CreateArgs {
+interface CreateOrgArgs extends IOrganization {}
+
+interface CreateEventArgs extends IEvent {}
+
+interface GetOrgArgs {
   name: string;
-  description: string;
-  url: string;
-  logo: string;
-  location: string;
 }
 
-interface GetArgs {
+interface GetEventArgs {
   name: string;
+  organization: string;
 }
 
 yargs(hideBin(process.argv))
-  .command<CreateArgs>(
-    "create [name] [description] [url] [logo] [location]",
+  .command<CreateOrgArgs>(
+    "create-org <name> <description> <url> <logo> <location>",
     "create a new organization",
     (yargs) => {
       yargs
@@ -28,7 +32,7 @@ yargs(hideBin(process.argv))
           describe: "Organization description",
           type: "string",
         })
-        .positional("url", { describe: "Organization url", type: "string" })
+        .positional("url", { describe: "Organization URL", type: "string" })
         .positional("logo", { describe: "Organization logo", type: "string" })
         .positional("location", {
           describe: "Organization location",
@@ -36,19 +40,54 @@ yargs(hideBin(process.argv))
         });
     },
     async (argv) => {
-      const org = new Organization(
-        argv.name,
-        argv.description,
-        argv.url,
-        argv.logo,
-        argv.location
+      const { name, description, url, logo, location } = argv;
+
+      const organization = new Organization(
+        name,
+        description,
+        url,
+        logo,
+        location
       );
-      await controller.saveOrganization(org);
+      await organizationController.saveOrganization(organization);
       console.log("Organization created successfully");
     }
   )
-  .command<GetArgs>(
-    "get [name]",
+  .command<CreateEventArgs>(
+    "create-event <name> <description> <start> <end> <location> <organization>",
+    "create a new event",
+    (yargs) => {
+      yargs
+        .positional("name", { describe: "Event name", type: "string" })
+        .positional("description", {
+          describe: "Event description",
+          type: "string",
+        })
+        .positional("start", { describe: "Event start date", type: "string" })
+        .positional("end", { describe: "Event end date", type: "string" })
+        .positional("location", { describe: "Event location", type: "string" })
+        .positional("organization", {
+          describe: "Organization name",
+          type: "string",
+        });
+    },
+    async (argv) => {
+      const { name, description, start, end, location, organization } = argv;
+
+      const event = new Event(
+        name,
+        description,
+        new Date(start),
+        new Date(end),
+        location,
+        organization
+      );
+      await eventController.saveEvent(event);
+      console.log("Event created successfully");
+    }
+  )
+  .command<GetOrgArgs>(
+    "get-org <name>",
     "get an organization",
     (yargs) => {
       yargs.positional("name", {
@@ -57,8 +96,25 @@ yargs(hideBin(process.argv))
       });
     },
     async (argv) => {
-      const org = await controller.getOrganization(argv.name);
+      const org = await organizationController.getOrganization(argv.name);
       console.log(org);
+    }
+  )
+  .command<GetEventArgs>(
+    "get-event <name>",
+    "get an event",
+    (yargs) => {
+      yargs.positional("name", {
+        describe: "Event name",
+        type: "string",
+      }).positional("organization", {
+        describe: "Organization name",
+        type: "string",
+      });
+    },
+    async (argv) => {
+      const event = await eventController.getEvent(argv.name, argv.organization);
+      console.log(event);
     }
   )
   .help().argv;

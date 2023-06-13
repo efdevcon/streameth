@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsUrl, IsUUID, validate } from "class-validator";
+import { IsNotEmpty, IsUrl, validate } from "class-validator";
 
 export interface IOrganization {
   name: string;
@@ -52,7 +52,7 @@ export default class Organization implements IOrganization {
   }
 
   static async fromJson(jsonData: string | IOrganization) {
-    const { id, name, description, url, logo, location } =
+    const { name, description, url, logo, location } =
       typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
     const org = new Organization(name, description, url, logo, location);
     await org.validateThis();
