@@ -72,7 +72,6 @@ export default class Event implements IEvent {
       location,
       organization
     );
-    console.log(evt.end)
     await evt.validateThis();
 
     return evt;
