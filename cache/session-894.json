@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Cat", "name": "Cat" },
     { "id": "Dave Gobel", "name": "Dave Gobel" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/84e8r4mxjmpgtco3/index.m3u8"
 }

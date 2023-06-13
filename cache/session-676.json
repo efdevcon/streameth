@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Max Unfried", "name": "Max Unfried" },
     { "id": "Laurence Ion", "name": "Laurence Ion" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/bb41wr3tic5f04ey/index.m3u8"
 }

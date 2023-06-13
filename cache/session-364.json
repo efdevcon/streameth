@@ -6,8 +6,6 @@
   "stage": { "id": "Ballroom", "name": "Ballroom" },
   "start": 1682092800000,
   "end": 1682094600000,
-  "speakers": [
-    { "id": "Vivian Plasencia| PSE - EF", "name": "Vivian Plasencia| PSE - EF" },
-    { "id": "LauNaMu | PSE", "name": "LauNaMu | PSE" }
-  ]
+  "speakers": [{ "id": "Vivian Plasencia| PSE - EF", "name": "Vivian Plasencia| PSE - EF" }],
+  "video": "https://lp-playback.com/hls/3ab2ual32f49pz2a/index.m3u8"
 }

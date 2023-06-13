@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
   "start": 1684070100000,
   "end": 1684073700000,
-  "speakers": [{ "id": "Prof. Björn Schumacher", "name": "Prof. Björn Schumacher" }]
+  "speakers": [{ "id": "Prof. Björn Schumacher", "name": "Prof. Björn Schumacher" }],
+  "video": "https://lp-playback.com/hls/044bp2dvz5b1xhqr/index.m3u8"
 }

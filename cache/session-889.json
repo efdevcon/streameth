@@ -1,15 +1,14 @@
 {
   "id": "889",
-  "name": "Free Longevity Indian Lunch 🌶️ (Funded By Retro PGF: DAOspiracy) ",
-  "description": "<p>Come eat curry, naan, and samosas with us! Let's hang, eat and talk longevity.&nbsp;</p>",
+  "name": "Open-source Vaccines to Prevent Pandemics and Mitigate The End of Medicine",
+  "description": "In a world facing rising pandemic risk and the unceasing advance of mutli-drug resistant bacteria that our current stock of antibiotics cannot combat, in no small part due to the execcess of the global animal agriculture system, we must massively increase our investment in disease prevention. Vaccines designed to be broadly-protective against entire families of high-risk pathogens so as to preempt and mitigate the emergence of new disease risks are just now becoming possible with the help of novel computational antigen design strategies and fast-iteration nucleic acid platforms. Soham Sankaran from PopVax (https://popvax.com), an Indian mRNA vaccine company based in Hyderabad currently in the process of taking its pan-betacoronavirus vaccine candidate into US clinical trials this year, will talk about their approach to designing and manufacturing these broadly-protective vaccines, as well as their commitment to open-sourcing their designs and processes in order to ensure comprehensive low-cost global access to these medicines without delay, in particular in lower-income countries which are generally the last to be able to benefit from new medical advances.",
   "track": "Open Sessions",
   "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
   "start": 1683887400000,
   "end": 1683891000000,
   "speakers": [
-    { "id": "Michael Geer", "name": "Michael Geer" },
-    { "id": "Soham Sankaran", "name": "Soham Sankaran" },
-    { "id": "Dr. Alice Brough", "name": "Dr. Alice Brough" },
-    { "id": "Madison Adams", "name": "Madison Adams" }
-  ]
+    { "id": "Vitalik", "name": "Vitalik" },
+    { "id": "Soham Sankaran", "name": "Soham Sankaran" }
+  ],
+  "video": "https://lp-playback.com/hls/70d9e5sraw36pqcu/index.m3u8"
 }

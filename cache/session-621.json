@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "Cat Thu", "name": "Cat Thu" },
     { "id": "Ksenia Winslow", "name": "Ksenia Winslow" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/56e0d7fwikgs9fbs/index.m3u8"
 }

@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
   "start": 1683971100000,
   "end": 1683974700000,
-  "speakers": [{ "id": "Max Unfried", "name": "Max Unfried" }]
+  "speakers": [{ "id": "Max Unfried", "name": "Max Unfried" }],
+  "video": "https://lp-playback.com/hls/e5878jsuct3kad8q/index.m3u8"
 }
