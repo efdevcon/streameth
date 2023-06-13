@@ -1,4 +1,5 @@
 import { IsNotEmpty, IsUrl, IsOptional, validate } from "class-validator";
+import { RemoveFromUnion } from "../utlis";
 
 export interface ISpeaker {
   id: string;
@@ -70,7 +71,7 @@ export default class Speaker implements ISpeaker {
     return JSON.stringify(this);
   }
 
-  static async fromJson(jsonData: string | ISpeaker) {
+  static async fromJson(jsonData: string | RemoveFromUnion<ISpeaker, "id">) {
     const { name, bio, event, twitter, github, website, photo } =
       typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
     const speaker = new Speaker(

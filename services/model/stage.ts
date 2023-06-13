@@ -1,5 +1,5 @@
 import { IsNotEmpty, validate } from "class-validator";
-
+import { RemoveFromUnion } from "../utlis";
 export interface IStreamSettings {
   url?: string;
   streamId?: string;
@@ -17,7 +17,6 @@ export interface IStage {
   plugins?: IPlugin[];
 }
 
-type RemoveFromUnion<T, R> = T extends R ? never : T;
 
 export default class Stage implements IStage {
   @IsNotEmpty()
