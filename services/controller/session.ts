@@ -5,7 +5,10 @@ const PATH = "data";
 
 export default class SessionController extends FileController {
   public async getSession(id: string, event: Event): Promise<Session> {
-    const path = `${this.sessionPath(event.organizationId, event.id, id)}.json`;
+    const path = `${this.sessionPath(
+      event.organizationId,
+      event.id
+    )}/${id}.json`;
     const data = await this.read(path);
     const session = await Session.fromJson(data);
     return session;
@@ -18,26 +21,27 @@ export default class SessionController extends FileController {
     const ses = new Session({
       ...session,
     });
-    const path = `${this.sessionPath(
-      event.organizationId,
-      event.id,
+    const path = `${this.sessionPath(event.organizationId, event.id)}/${
       ses.id
-    )}.json`;
+    }.json`;
     await this.write(path, ses.toJson());
     return ses;
   }
-}
 
-export class SessionsController extends FileController {
-  public async getSessions(event: Event): Promise<ISession[]> {
-    const path = `${PATH}/${event.organizationId}/${event.name}/sessions`;
+  public async getSessionForStage(
+    stageId: string,
+    event: Event
+  ): Promise<Session> {
+    const path = `${this.sessionPath(event.organizationId, event.id)}`;
     const files = await this.readDir(path);
-    const sessions: ISession[] = [];
+    const sessions: Session[] = [];
     for (const file of files) {
       const data = await this.read(`${path}/${file}`);
       const session = await Session.fromJson(data);
-      sessions.push(session);
+      if (session.stageId === stageId) {
+        sessions.push(session);
+      }
     }
-    return sessions;
+    return sessions[0];
   }
 }

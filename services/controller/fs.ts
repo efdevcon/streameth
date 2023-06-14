@@ -46,9 +46,8 @@ export default class FsController {
   public sessionPath(
     organizationId: string,
     eventId: string,
-    sessionId: string
   ): string {
-    return `${PATH}/${organizationId}/events/${eventId}/sessions/${sessionId}`;
+    return `${PATH}/${organizationId}/events/${eventId}/sessions`;
   }
 
   public speakerPath(
