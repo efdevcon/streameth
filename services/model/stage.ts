@@ -1,5 +1,6 @@
 import { IsNotEmpty, validate } from "class-validator";
 import { IEvent } from "./event";
+import { generateId } from "../utils";
 export interface IStreamSettings {
   url?: string;
   streamId?: string;
@@ -38,11 +39,12 @@ export default class Stage implements IStage {
     streamSettings,
     plugins,
   }: Omit<IStage, "id"> & { id?: string }) {
-    this.id = `stage_${name.trim().replace(/\s/g, "_")}`;
+    this.id = generateId(name);
     this.name = name;
     this.eventId = eventId;
     this.streamSettings = streamSettings;
     this.plugins = plugins;
+    this.validateThis();  
   }
 
   async validateThis() {

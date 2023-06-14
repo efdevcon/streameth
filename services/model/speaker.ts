@@ -1,5 +1,6 @@
 import { IsNotEmpty, IsUrl, IsOptional, validate } from "class-validator";
 import { IEvent } from "./event";
+import { generateId } from "../utils";
 export interface ISpeaker {
   id: string;
   name: string;
@@ -49,7 +50,7 @@ export default class Speaker implements ISpeaker {
     website,
     photo,
   }: Omit<ISpeaker, "id"> & { id?: string }) {
-    this.id = `speaker_${name.trim().replace(/\s/g, "_")}`;
+    this.id = generateId(name);
     this.name = name;
     this.bio = bio;
     this.eventId = eventId;
@@ -57,6 +58,7 @@ export default class Speaker implements ISpeaker {
     this.github = github;
     this.website = website;
     this.photo = photo;
+    this.validateThis();
   }
 
   async validateThis() {

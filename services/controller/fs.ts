@@ -1,9 +1,8 @@
 import fs from "fs";
 import { promisify } from "util";
-import * as util from "util";
 import * as path from "path";
 
-const PATH = "data";
+const PATH = "services/data";
 export default class FsController {
   public async read(path: string): Promise<string> {
     const readFile = promisify(fs.readFile);
@@ -33,12 +32,15 @@ export default class FsController {
     return readdir(path);
   }
 
+  public organizationPath(): string {
+    return `${PATH}`;
+  }
+
   public stagePath(
     organizationId: string,
     eventId: string,
-    stageId: string
   ): string {
-    return `${PATH}/${organizationId}/events/${eventId}/stages/${stageId}`;
+    return `${PATH}/${organizationId}/events/${eventId}/stages`;
   }
 
   public sessionPath(
@@ -57,7 +59,7 @@ export default class FsController {
     return `${PATH}/${organizationId}/events/${eventId}/speakers/${speakerId}`;
   }
 
-  public eventPath(organizationId: string, eventId: string): string {
-    return `${PATH}/${organizationId}/events/${eventId}`;
+  public eventPath(organizationId: string) {
+    return `${PATH}/${organizationId}/events`;
   }
 }

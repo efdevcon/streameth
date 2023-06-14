@@ -1,7 +1,7 @@
-import { IsNotEmpty, IsUrl, validate } from "class-validator";
+import { IsNotEmpty, validate } from "class-validator";
 import { IStage } from "./stage";
 import { ISpeaker } from "./speaker";
-
+import { generateId } from "../utils";
 export interface ISession {
   id: string;
   name: string;
@@ -20,7 +20,7 @@ export default class Session implements ISession {
   @IsNotEmpty()
   name: string;
 
-  @IsNotEmpty()
+  // @IsNotEmpty()
   description: string;
 
   @IsNotEmpty()
@@ -35,7 +35,7 @@ export default class Session implements ISession {
   @IsNotEmpty()
   speakers: ISpeaker[];
 
-  @IsUrl()
+
   videoUrl?: string;
 
   constructor({
@@ -47,7 +47,7 @@ export default class Session implements ISession {
     speakers,
     videoUrl,
   }: Omit<ISession, "id"> & { id?: string }) {
-    this.id = `session_${name.trim().replace(/\s/g, "_")}`;
+    this.id = generateId(name);
     this.name = name;
     this.description = description;
     this.start = start;
@@ -55,6 +55,7 @@ export default class Session implements ISession {
     this.stageId = stageId;
     this.speakers = speakers;
     this.videoUrl = videoUrl;
+    this.validateThis();
   }
 
   async validateThis() {

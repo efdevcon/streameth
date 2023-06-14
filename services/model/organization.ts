@@ -1,5 +1,5 @@
 import { IsNotEmpty, IsUrl, validate } from "class-validator";
-
+import { generateId } from "../utils";
 export interface IOrganization {
   id: string;
   name: string;
@@ -37,12 +37,13 @@ export default class Organization {
     logo,
     location,
   }: Omit<IOrganization, "id"> & { id?: string }) {
-    this.id = `organization_${name.trim().replace(/\s/g, "_")}`;
+    this.id = generateId(name);
     this.name = name;
     this.description = description;
     this.url = url;
     this.logo = logo;
     this.location = location;
+    this.validateThis();
   }
 
   async validateThis() {

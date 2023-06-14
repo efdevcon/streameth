@@ -1,7 +1,7 @@
 import BaseImporter from "../baseImporter";
 import { google } from "googleapis";
 import Event, { IDataImporter } from "../../model/event";
-
+import { generateId } from "../../utils";
 // Constants
 const SPEAKER_SHEET = "Speakers";
 const SPEAKER_DATA_RANGE = "A3:I";
@@ -72,8 +72,11 @@ export default class Importer extends BaseImporter {
         eventId: this.event.id,
       };
 
-      // Added await here
-      await this.speakerController.saveSpeaker(speaker, this.event);
+      try {
+        await this.speakerController.saveSpeaker(speaker, this.event);
+      } catch (e) {
+        console.error(e);
+      }
     }
   }
 
@@ -120,9 +123,7 @@ export default class Importer extends BaseImporter {
 
       const speakerIdsRaw = [Speaker1, Speaker2, Speaker3, Speaker4, Speaker5];
       const speakerIds = speakerIdsRaw.map((speakerId) => {
-        return speakerId
-          ? `speaker_${speakerId.trim().replace(/\s/g, "_")}`
-          : "";
+        return speakerId ? generateId(speakerId) : "";
       });
 
       const speakerPromises = speakerIds
@@ -133,7 +134,10 @@ export default class Importer extends BaseImporter {
 
       const [speakers, stage] = await Promise.all([
         Promise.all(speakerPromises),
-        this.stageController.getStage(stageId, this.event),
+        this.stageController.getStage(
+          stageId === "stagesstage_Gulf_Stage" ? "gulf_stage" : "volcano_stage",
+          this.event
+        ),
       ]);
 
       const session = {
@@ -147,7 +151,11 @@ export default class Importer extends BaseImporter {
       };
 
       // Added await here
-      await this.sessionController.createSession(session, this.event);
+      try {
+        await this.sessionController.createSession(session, this.event);
+      } catch (e) {
+        console.error(e);
+      }
     }
   }
 }

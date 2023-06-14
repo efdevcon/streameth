@@ -1,7 +1,7 @@
-import SpeakerController from "../controllers/speaker";
-import EventController from "../controllers/event";
-import SessionController from "../controllers/session";
-import StageController from "../controllers/stage";
+import SpeakerController from "../controller/speaker";
+import EventController from "../controller/event";
+import SessionController from "../controller/session";
+import StageController from "../controller/stage";
 import Event from "../model/event";
 export interface IBaseImporter {
   generateSessions(): Promise<void>;
