@@ -1,11 +1,11 @@
 import FileController from "./fs";
 import Speaker, { ISpeaker } from "../model/speaker";
-import { IEvent } from "../model/event";
+import Event from "../model/event";
 const PATH = "data";
 
 export default class SpeakerController extends FileController {
-  public async getSpeaker(name: string, event: IEvent): Promise<ISpeaker> {
-    const path = `${PATH}/${event.organization}/${event.name}/speakers/${name}.json`;
+  public async getSpeaker(id: string, event: Event): Promise<ISpeaker> {
+    const path = `${this.speakerPath(event.organizationId, event.id, id)}.json`;
     const data = await this.read(path);
     const speaker = await Speaker.fromJson(data);
     return speaker;
@@ -13,10 +13,17 @@ export default class SpeakerController extends FileController {
 
   public async saveSpeaker(
     speaker: Omit<ISpeaker, "id">,
-    event: IEvent
-  ): Promise<void> {
-    const spk = await Speaker.fromJson(speaker);
-    const path = `${PATH}/${event.organization}/${event.name}/speakers/${spk.name}.json`;
+    event: Event
+  ): Promise<Speaker> {
+    const spk = new Speaker({
+      ...speaker,
+    });
+    const path = `${this.speakerPath(
+      event.organizationId,
+      event.id,
+      spk.id
+    )}.json`;
     await this.write(path, spk.toJson());
+    return spk;
   }
 }

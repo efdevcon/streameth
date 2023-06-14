@@ -40,19 +40,19 @@ export default class Speaker implements ISpeaker {
   @IsOptional()
   photo?: string;
 
-  constructor(
-    name: string,
-    bio: string,
-    event: string,
-    twitter?: string,
-    github?: string,
-    website?: string,
-    photo?: string
-  ) {
+  constructor({
+    name,
+    bio,
+    eventId,
+    twitter,
+    github,
+    website,
+    photo,
+  }: Omit<ISpeaker, "id"> & { id?: string }) {
     this.id = `speaker_${name.trim().replace(/\s/g, "_")}`;
     this.name = name;
     this.bio = bio;
-    this.eventId = event;
+    this.eventId = eventId;
     this.twitter = twitter;
     this.github = github;
     this.website = website;
@@ -71,17 +71,8 @@ export default class Speaker implements ISpeaker {
   }
 
   static async fromJson(jsonData: string | Omit<ISpeaker, "id">) {
-    const { name, bio, event, twitter, github, website, photo } =
-      typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
-    const speaker = new Speaker(
-      name,
-      bio,
-      event,
-      twitter,
-      github,
-      website,
-      photo
-    );
+    const data = typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
+    const speaker = new Speaker({ ...data });
     await speaker.validateThis();
     return speaker;
   }

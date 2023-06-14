@@ -15,13 +15,7 @@ export default class OrganizationController extends FileController {
   public async createOrganization(
     data: Omit<IOrganization, "id">
   ): Promise<Organization> {
-    const org = new Organization(
-      data.name,
-      data.description,
-      data.url,
-      data.logo,
-      data.location
-    );
+    const org = new Organization({ ...data });
 
     const path = `${PATH}/${org.id}/config.json`;
     await this.write(path, await org.toJson());

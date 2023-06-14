@@ -30,15 +30,14 @@ export default class Organization {
   @IsNotEmpty()
   location: string;
 
-  constructor(
-    name: string,
-    description: string,
-    url: string,
-    logo: string,
-    location: string,
-    id?: string
-  ) {
-    this.id = id ?? `organization_${name.trim().replace(/\s/g, "_")}`;
+  constructor({
+    name,
+    description,
+    url,
+    logo,
+    location,
+  }: Omit<IOrganization, "id"> & { id?: string }) {
+    this.id = `organization_${name.trim().replace(/\s/g, "_")}`;
     this.name = name;
     this.description = description;
     this.url = url;
@@ -59,13 +58,6 @@ export default class Organization {
 
   static async fromJson(jsonData: string): Promise<Organization> {
     const data = JSON.parse(jsonData) as IOrganization;
-    return new Organization(
-      data.name,
-      data.description,
-      data.url,
-      data.logo,
-      data.location,
-      data.id
-    );
+    return new Organization({ ...data });
   }
 }

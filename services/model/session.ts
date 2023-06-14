@@ -1,6 +1,7 @@
 import { IsNotEmpty, IsUrl, validate } from "class-validator";
 import { IStage } from "./stage";
 import { ISpeaker } from "./speaker";
+
 export interface ISession {
   id: string;
   name: string;
@@ -37,15 +38,15 @@ export default class Session implements ISession {
   @IsUrl()
   videoUrl?: string;
 
-  constructor(
-    name: string,
-    description: string,
-    start: Date,
-    end: Date,
-    stageId: IStage["id"],
-    speakers: ISpeaker[],
-    videoUrl?: string
-  ) {
+  constructor({
+    name,
+    description,
+    start,
+    end,
+    stageId,
+    speakers,
+    videoUrl,
+  }: Omit<ISession, "id"> & { id?: string }) {
     this.id = `session_${name.trim().replace(/\s/g, "_")}`;
     this.name = name;
     this.description = description;
@@ -67,18 +68,11 @@ export default class Session implements ISession {
     return JSON.stringify(this);
   }
 
-  static async fromJson(jsonData: string | Omit<ISession, "id">) {
-    const { name, description, start, end, stage, speakers, videoUrl } =
-      typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
-    const session = new Session(
-      name,
-      description,
-      new Date(start),
-      new Date(end),
-      stage,
-      speakers,
-      videoUrl
-    );
+  static async fromJson(jsonData: string | Promise<Session>) {
+    const data = typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
+    const session = new Session({
+      ...data,
+    });
     await session.validateThis();
     return session;
   }

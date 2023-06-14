@@ -1,12 +1,8 @@
-import { ISession } from "../model/session";
-import { IEvent } from "../model/event";
-import { IStage } from "../model/stage";
-import { ISpeaker } from "../model/speaker";
 import SpeakerController from "../controllers/speaker";
 import EventController from "../controllers/event";
 import SessionController from "../controllers/session";
 import StageController from "../controllers/stage";
-
+import Event from "../model/event";
 export interface IBaseImporter {
   generateSessions(): Promise<void>;
   generateStages(): Promise<void>;
@@ -18,13 +14,14 @@ export default class BaseImporter implements IBaseImporter {
   eventController: EventController;
   sessionController: SessionController;
   stageController: StageController;
-  event: IEvent;
+  event: Event;
 
-  constructor(event: IEvent) {
+  constructor(event: Event) {
     this.speakerController = new SpeakerController();
     this.eventController = new EventController();
     this.sessionController = new SessionController();
     this.stageController = new StageController();
+    console.log("event", event.toJson());
     this.event = event;
   }
 

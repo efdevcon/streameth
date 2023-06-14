@@ -36,8 +36,6 @@ const run = async () => {
   const eventController = new EventController();
   const EventInstance = await eventController.createEvent(Event);
   await eventController.importEventData(EventInstance);
-
-
 };
 
 run();

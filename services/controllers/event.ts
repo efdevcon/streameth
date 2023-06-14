@@ -1,13 +1,12 @@
 import FileController from "./fs";
 import OrganizationController from "./organization";
 import Event, { IEvent } from "../model/event";
-import GsheetImporter from "../importers/gsheet/index";
 export default class EventController extends FileController {
   public async getEvent(
     organizationId: IEvent["organizationId"],
     eventId: IEvent["id"]
   ): Promise<Event> {
-    const path = `./data/${organizationId}/events/${eventId}.json`;
+    const path = `${this.eventPath(organizationId, eventId)}.json`;
     const data = await this.read(path);
     return await Event.fromJson(data);
   }
@@ -22,31 +21,24 @@ export default class EventController extends FileController {
       throw new Error(`Organization '${organizationId}' does not exist.`);
     }
 
-    const evt = new Event(
-      event.name,
-      event.description,
-      event.start,
-      event.end,
-      event.location,
-      event.organizationId,
-      event.dataImporter ?? []
-    );
+    const evt = new Event({ ...event });
 
-    const path = `./data/${existingOrganization.id}/events/${evt.id}/config.json`;
+    const path = `${this.eventPath(organizationId, evt.id)}/config.json`;
     await this.write(path, evt.toJson());
     return evt;
   }
 
-  public async importEventData(Event: IEvent): Promise<void> {
-    const { dataImporter } = Event;
-
+  public async importEventData(event: Event): Promise<void> {
+    const { dataImporter } = event;
+    console.log(typeof event);
     for (const importer of dataImporter) {
       try {
-        const DataModule = await import(
+        const importedModule = await import(
           `../importers/${importer.type}/index`
         );
+        const Importer = importedModule.default;
         // Not typesafe
-        const data = new DataModule(Event);
+        const data = new Importer({ importer, event });
         return await data.generateSessions();
       } catch (e) {
         console.error(e);

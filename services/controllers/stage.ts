@@ -1,19 +1,29 @@
 import FileController from "./fs";
 import Stage, { IStage } from "../model/stage";
-import { IEvent } from "../model/event";
+import Event from "../model/event";
 const PATH = "data";
 
 export default class StageController extends FileController {
-  public async getStage(id: string, event: IEvent): Promise<IStage> {
-    const path = `${PATH}/${event.organization}/${event.name}/stages/${id}.json`;
+  public async getStage(id: string, event: Event): Promise<Stage> {
+    const path = `${this.stagePath(event.organizationId, event.id, id)}.json`;
     const data = await this.read(path);
     const stage = await Stage.fromJson(data);
     return stage;
   }
 
-  public async saveStage(stage: Omit<IStage, "id">, event: IEvent): Promise<void> {
-    const stg = await Stage.fromJson(stage);
-    const path = `${PATH}/${event.organization}/${event.name}/stages/${stg.id}.json`;
+  public async createStage(
+    stage: Omit<IStage, "id">,
+    event: Event
+  ): Promise<Stage> {
+    const stg = new Stage({
+      ...stage,
+    });
+    const path = `${this.stagePath(
+      event.organizationId,
+      event.id,
+      stg.id
+    )}.json`;
     await this.write(path, stg.toJson());
+    return stg;
   }
 }

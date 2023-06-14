@@ -32,15 +32,15 @@ export default class Stage implements IStage {
 
   plugins?: IPlugin[];
 
-  constructor(
-    name: string,
-    event: IEvent["id"],
-    streamSettings: IStreamSettings,
-    plugins?: IPlugin[]
-  ) {
+  constructor({
+    name,
+    eventId,
+    streamSettings,
+    plugins,
+  }: Omit<IStage, "id"> & { id?: string }) {
     this.id = `stage_${name.trim().replace(/\s/g, "_")}`;
     this.name = name;
-    this.eventId = event;
+    this.eventId = eventId;
     this.streamSettings = streamSettings;
     this.plugins = plugins;
   }
@@ -57,9 +57,8 @@ export default class Stage implements IStage {
   }
 
   static async fromJson(jsonData: string | Omit<IStage, "id">) {
-    const { name, event, streamSettings, plugins } =
-      typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
-    const stage = new Stage(name, event, streamSettings, plugins);
+    const data = typeof jsonData === "string" ? JSON.parse(jsonData) : jsonData;
+    const stage = new Stage({ ...data });
     await stage.validateThis();
     return stage;
   }

@@ -49,16 +49,16 @@ export default class Event implements IEvent {
 
   dataImporter: IDataImporter[];
 
-  constructor(
-    name: string,
-    description: string,
-    start: Date,
-    end: Date,
-    location: string,
-    organizationId: Organization["id"],
-    dataImporter?: IDataImporter[],
-    id?: string
-  ) {
+  constructor({
+    name,
+    description,
+    start,
+    end,
+    location,
+    organizationId,
+    dataImporter,
+    id,
+  }: Omit<IEvent, "id"> & { id?: string }) {
     this.id = id ?? `${name}-${organizationId}`;
     this.name = name;
     this.description = description;
@@ -81,27 +81,9 @@ export default class Event implements IEvent {
   }
 
   public static async fromJson(json: string): Promise<Event> {
-    const {
-      name,
-      description,
-      start,
-      end,
-      location,
-      organization,
-      dataImporter,
-    } = typeof json === "string" ? JSON.parse(json) : json;
-
-    const evt = new Event(
-      name,
-      description,
-      new Date(start),
-      new Date(end),
-      location,
-      organization,
-      dataImporter
-    );
+    const data = typeof json === "string" ? JSON.parse(json) : json;
+    const evt = new Event({ ...data });
     await evt.validateThis();
-
     return evt;
   }
 }

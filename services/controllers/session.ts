@@ -1,29 +1,36 @@
 import FileController from "./fs";
 import Session, { ISession } from "../model/session";
-import { IEvent } from "../model/event";
+import Event from "../model/event";
 const PATH = "data";
 
 export default class SessionController extends FileController {
-  public async getSession(id: string, event: IEvent): Promise<ISession> {
-    const path = `${PATH}/${event.organization}/${event.name}/sessions/${id}.json`;
+  public async getSession(id: string, event: Event): Promise<Session> {
+    const path = `${this.sessionPath(event.organizationId, event.id, id)}.json`;
     const data = await this.read(path);
     const session = await Session.fromJson(data);
     return session;
   }
 
-  public async saveSession(
+  public async createSession(
     session: Omit<ISession, "id">,
-    event: IEvent
-  ): Promise<void> {
-    const ses = await Session.fromJson(session);
-    const path = `${PATH}/${event.organization}/${event.name}/sessions/${ses.id}.json`;
+    event: Event
+  ): Promise<Session> {
+    const ses = new Session({
+      ...session,
+    });
+    const path = `${this.sessionPath(
+      event.organizationId,
+      event.id,
+      ses.id
+    )}.json`;
     await this.write(path, ses.toJson());
+    return ses;
   }
 }
 
 export class SessionsController extends FileController {
-  public async getSessions(event: IEvent): Promise<ISession[]> {
-    const path = `${PATH}/${event.organization}/${event.name}/sessions`;
+  public async getSessions(event: Event): Promise<ISession[]> {
+    const path = `${PATH}/${event.organizationId}/${event.name}/sessions`;
     const files = await this.readDir(path);
     const sessions: ISession[] = [];
     for (const file of files) {
