@@ -1,5 +1,5 @@
 import { IsNotEmpty, IsDate, validate } from "class-validator";
-
+import Organization, { IOrganization } from "./organization";
 interface GSheetConfig {
   sheetId: string;
   apiKey: string;
@@ -21,7 +21,7 @@ export interface IEvent {
   start: Date;
   end: Date;
   location: string;
-  organization: string;
+  organizationId: IOrganization["id"];
   dataImporter?: IDataImporter[];
 }
 
@@ -45,7 +45,7 @@ export default class Event implements IEvent {
   location: string;
 
   @IsNotEmpty()
-  organization: string;
+  organizationId: string;
 
   dataImporter: IDataImporter[];
 
@@ -55,16 +55,17 @@ export default class Event implements IEvent {
     start: Date,
     end: Date,
     location: string,
-    organization: string,
-    dataImporter?: IDataImporter[]
+    organizationId: Organization["id"],
+    dataImporter?: IDataImporter[],
+    id?: string
   ) {
-    this.id = `${name}-${organization}`;
+    this.id = id ?? `${name}-${organizationId}`;
     this.name = name;
     this.description = description;
     this.start = start;
     this.end = end;
     this.location = location;
-    this.organization = organization;
+    this.organizationId = organizationId;
     this.dataImporter = dataImporter;
   }
 
@@ -79,9 +80,7 @@ export default class Event implements IEvent {
     return JSON.stringify(this);
   }
 
-  public static async fromJson(
-    json: string | Omit<IEvent, "id">
-  ): Promise<Event> {
+  public static async fromJson(json: string): Promise<Event> {
     const {
       name,
       description,

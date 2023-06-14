@@ -4,23 +4,27 @@ import Organization, { IOrganization } from "../model/organization";
 const PATH = "data";
 
 export default class OrganizationController extends FileController {
-  public async getOrganization(name: string): Promise<Organization> {
-    const path = `${PATH}/${name}/config.json`;
+  public async getOrganization(
+    organizationId: IOrganization["id"]
+  ): Promise<Organization> {
+    const path = `${PATH}/${organizationId}/config.json`;
     const data = await this.read(path);
     return await Organization.fromJson(data);
   }
 
-  public async saveOrganization(data): Promise<void> {
+  public async createOrganization(
+    data: Omit<IOrganization, "id">
+  ): Promise<Organization> {
     const org = new Organization(
       data.name,
       data.description,
       data.url,
       data.logo,
-      data.location,
-      data.organizationId ?? null
+      data.location
     );
 
-    const path = `${PATH}/a/config.json`;
+    const path = `${PATH}/${org.id}/config.json`;
     await this.write(path, await org.toJson());
+    return org;
   }
 }

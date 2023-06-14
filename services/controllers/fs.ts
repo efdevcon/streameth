@@ -10,8 +10,6 @@ export default class FsController {
   }
 
   public async write(filePath: string, data: string): Promise<void> {
-    console.log(filePath);
-
     const writeFile = promisify(fs.writeFile);
     const directory = path.dirname(filePath);
     const mkdir = promisify(fs.mkdir);

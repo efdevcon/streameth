@@ -1,7 +1,7 @@
 import { IsNotEmpty, IsUrl, validate } from "class-validator";
 
 export interface IOrganization {
-  organizationId: string;
+  id: string;
   name: string;
   description: string;
   url: string;
@@ -11,7 +11,7 @@ export interface IOrganization {
 
 export default class Organization {
   @IsNotEmpty()
-  organizationId: string;
+  id: string;
 
   @IsNotEmpty()
   name: string;
@@ -38,8 +38,7 @@ export default class Organization {
     location: string,
     id?: string
   ) {
-    this.organizationId =
-      id ?? `organization_${name.trim().replace(/\s/g, "_")}`;
+    this.id = id ?? `organization_${name.trim().replace(/\s/g, "_")}`;
     this.name = name;
     this.description = description;
     this.url = url;
@@ -66,7 +65,7 @@ export default class Organization {
       data.url,
       data.logo,
       data.location,
-      data.organizationId
+      data.id
     );
   }
 }

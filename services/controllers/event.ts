@@ -1,30 +1,40 @@
 import FileController from "./fs";
 import OrganizationController from "./organization";
 import Event, { IEvent } from "../model/event";
-
+import GsheetImporter from "../importers/gsheet/index";
 export default class EventController extends FileController {
-  public async getEvent(orgName: string, eventName: string): Promise<IEvent> {
-    const path = `./data/${orgName}/events/${eventName}.json`;
+  public async getEvent(
+    organizationId: IEvent["organizationId"],
+    eventId: IEvent["id"]
+  ): Promise<Event> {
+    const path = `./data/${organizationId}/events/${eventId}.json`;
     const data = await this.read(path);
-    const event = await Event.fromJson(data);
-    event.validateThis();
-    return event;
+    return await Event.fromJson(data);
   }
 
-  public async saveEvent(event: Omit<IEvent, "id">): Promise<void> {
-    const { organization } = event;
+  public async createEvent(event: Omit<IEvent, "id">): Promise<Event> {
+    const { organizationId } = event;
     const organizationController = new OrganizationController();
     const existingOrganization = await organizationController.getOrganization(
-      organization
+      organizationId
     );
     if (!existingOrganization) {
-      throw new Error(`Organization '${organization}' does not exist.`);
+      throw new Error(`Organization '${organizationId}' does not exist.`);
     }
 
-    const evt = await Event.fromJson(event);
-    evt.validateThis();
-    const path = `./data/${evt.organization}/events/${evt.name}/config.json`;
+    const evt = new Event(
+      event.name,
+      event.description,
+      event.start,
+      event.end,
+      event.location,
+      event.organizationId,
+      event.dataImporter ?? []
+    );
+
+    const path = `./data/${existingOrganization.id}/events/${evt.id}/config.json`;
     await this.write(path, evt.toJson());
+    return evt;
   }
 
   public async importEventData(Event: IEvent): Promise<void> {
@@ -33,7 +43,7 @@ export default class EventController extends FileController {
     for (const importer of dataImporter) {
       try {
         const DataModule = await import(
-          `services/importers/${importer.type}/index`
+          `../importers/${importer.type}/index`
         );
         // Not typesafe
         const data = new DataModule(Event);
