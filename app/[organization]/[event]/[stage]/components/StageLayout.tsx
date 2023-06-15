@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 // import { useStage } from 'hooks/useStage'
 // import { useSessions } from 'hooks/useSessions'
 // import { Player } from 'components/Player'
@@ -19,10 +19,10 @@ import Stage from "@/services/model/stage";
 export default function StageLayout({ stage }: { stage: Stage }) {
   //const currentStage = useStage()
   //const { sessions, addOrUpdateFilter, currentSession } = useSessions()
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalContentType, setModalContentType] = useState<string | null>(null);
+  // const [modalOpen, setModalOpen] = useState(false);
+  // const [modalContentType, setModalContentType] = useState<string | null>(null);
   // const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
-  const [tab, setTab] = useState<number>(0);
+  // const [tab, setTab] = useState<number>(0);
 
   //const activeSession = currentSession ?? sessions[0]
 

@@ -70,7 +70,6 @@ export default class Importer extends BaseImporter {
         bio: description,
         photo: avatar,
         eventId: this.event.id,
-        organizationId: this.event.organizationId,
       };
 
       try {
@@ -89,7 +88,6 @@ export default class Importer extends BaseImporter {
       const stage = {
         name,
         eventId: this.event.id,
-        organizationId: this.event.organizationId,
         streamSettings: {
           streamId,
         },
@@ -131,19 +129,14 @@ export default class Importer extends BaseImporter {
       const speakerPromises = speakerIds
         .filter((speakerId) => !!speakerId)
         .map((speakerId) =>
-          this.speakerController.getSpeaker(
-            speakerId,
-            this.event.id,
-            this.event.organizationId
-          )
+          this.speakerController.getSpeaker(speakerId, this.event.id)
         );
 
       const [speakers, stage] = await Promise.all([
         Promise.all(speakerPromises),
         this.stageController.getStage(
           stageId === "stagesstage_Gulf_Stage" ? "gulf_stage" : "volcano_stage",
-          this.event.id,
-          this.event.organizationId
+          this.event.id
         ),
       ]);
 

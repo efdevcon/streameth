@@ -63,8 +63,8 @@ export default class Organization {
     return new Organization({ ...data });
   }
 
-  static async getOrganizationPath(id?: string, config?: boolean): Promise<string> {
-    if(!id) return BASE_PATH;
-    return path.join(BASE_PATH, id, config && "config.json");
+  static async getOrganizationPath(id?: string): Promise<string> {
+    if (!id) return path.join(BASE_PATH, "organizations");
+    return path.join(BASE_PATH, "organizations", `${id}.json`);
   }
 }

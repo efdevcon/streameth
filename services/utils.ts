@@ -5,4 +5,4 @@ export const generateId = (key: string) => {
   return key.trim().replace(/\s/g, "_").toLowerCase();
 };
 
-export const BASE_PATH = "data";
+export const BASE_PATH = "services/data";

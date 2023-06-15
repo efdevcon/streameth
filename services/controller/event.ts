@@ -12,7 +12,7 @@ export default class EventController {
     eventId: IEvent["id"],
     organizationId: IEvent["organizationId"]
   ): Promise<Event> {
-    const eventQuery = await Event.getEventPath(eventId, organizationId, true);
+    const eventQuery = await Event.getEventPath(eventId, organizationId);
     const data = await this.controller.get(eventQuery);
     return new Event({ ...data });
   }
@@ -22,7 +22,6 @@ export default class EventController {
     const eventQuery = await Event.getEventPath(
       org.id,
       org.organizationId,
-      true
     );
     await this.controller.create(eventQuery, org);
     return org;
@@ -34,8 +33,9 @@ export default class EventController {
     const events: Event[] = [];
     const eventQuery = await Event.getEventPath(organizationId);
     const data = await this.controller.getAll(eventQuery);
-    for (const org of data) {
-      events.push(new Event({ ...org }));
+    console.log("data", data);
+    for (const evt of data) {
+      events.push(new Event({ ...evt }));
     }
     return events;
   }

@@ -11,7 +11,7 @@ export default class OrganizationController {
   public async getOrganization(
     organizationId: IOrganization["id"]
   ): Promise<Organization> {
-    const organizationQuery = await Organization.getOrganizationPath(organizationId, true);
+    const organizationQuery = await Organization.getOrganizationPath(organizationId);
     const data = await this.controller.get(organizationQuery);
     return new Organization({ ...data });
   }
@@ -20,7 +20,7 @@ export default class OrganizationController {
     organization: Omit<IOrganization, "id">
   ): Promise<Organization> {
     const org = new Organization({ ...organization });
-    const organizationQuery = await Organization.getOrganizationPath(org.id, true);
+    const organizationQuery = await Organization.getOrganizationPath(org.id);
     await this.controller.create(organizationQuery, org);
     return org;
   }
@@ -30,6 +30,7 @@ export default class OrganizationController {
     const organizations: Organization[] = [];
     const organizationQuery = await Organization.getOrganizationPath();
     const data = await this.controller.getAll(organizationQuery);
+    console.log(data);
     for (const org of data) {
       organizations.push(new Organization({ ...org }));
     }

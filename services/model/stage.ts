@@ -16,7 +16,6 @@ export interface IStage {
   id: string;
   name: string;
   eventId: IEvent["id"];
-  organizationId: IOrganization["id"];
   streamSettings: IStreamSettings;
   plugins?: IPlugin[];
 }
@@ -32,9 +31,6 @@ export default class Stage implements IStage {
   eventId: IEvent["id"];
 
   @IsNotEmpty()
-  organizationId: IEvent["organizationId"];
-
-  @IsNotEmpty()
   streamSettings: IStreamSettings;
 
   plugins?: IPlugin[];
@@ -42,14 +38,12 @@ export default class Stage implements IStage {
   constructor({
     name,
     eventId,
-    organizationId,
     streamSettings,
     plugins,
   }: Omit<IStage, "id"> & { id?: string }) {
     this.id = generateId(name);
     this.name = name;
     this.eventId = eventId;
-    this.organizationId = organizationId;
     this.streamSettings = streamSettings;
     this.plugins = plugins;
     this.validateThis();
@@ -74,20 +68,12 @@ export default class Stage implements IStage {
   }
 
   static async getStagePath(
-    organizationId: IStage["organizationId"],
     eventId: IStage["eventId"],
-    sessionId?: IStage["id"]
+    stageId?: IStage["id"]
   ): Promise<string> {
-    if (sessionId) {
-      return path.join(
-        BASE_PATH,
-        organizationId,
-        "events",
-        eventId,
-        "stages",
-        sessionId
-      );
+    if (stageId) {
+      return path.join(BASE_PATH, "stages", eventId, `${stageId}.json`);
     }
-    return path.join(BASE_PATH, organizationId, "events", eventId, "stges");
+    return path.join(BASE_PATH, "stages", eventId);
   }
 }

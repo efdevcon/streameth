@@ -15,7 +15,6 @@ export interface ISession {
   speakers: ISpeaker[];
   videoUrl?: string;
   eventId: IEvent["id"];
-  organizationId: IOrganization["id"];
 }
 
 export default class Session implements ISession {
@@ -45,9 +44,6 @@ export default class Session implements ISession {
   @IsNotEmpty()
   eventId: IEvent["id"];
 
-  @IsNotEmpty()
-  organizationId: IOrganization["id"];
-
   constructor({
     name,
     description,
@@ -57,7 +53,6 @@ export default class Session implements ISession {
     speakers,
     videoUrl,
     eventId,
-    organizationId,
   }: Omit<ISession, "id"> & { id?: string }) {
     this.id = generateId(name);
     this.name = name;
@@ -68,7 +63,6 @@ export default class Session implements ISession {
     this.speakers = speakers;
     this.videoUrl = videoUrl;
     this.eventId = eventId;
-    this.organizationId = organizationId;
     this.validateThis();
   }
 
@@ -93,20 +87,12 @@ export default class Session implements ISession {
   }
 
   static async getSessionPath(
-    organizationId: ISession["organizationId"],
     eventId: ISession["eventId"],
     sessionId?: ISession["id"]
   ): Promise<string> {
     if (sessionId) {
-      return path.join(
-        BASE_PATH,
-        organizationId,
-        "events",
-        eventId,
-        "sessions",
-        sessionId
-      );
+      return path.join(BASE_PATH, "sessions", eventId, `${sessionId}.json`);
     }
-    return path.join(BASE_PATH, organizationId, "events", eventId, "sessions");
+    return path.join(BASE_PATH, "sessions", eventId);
   }
 }

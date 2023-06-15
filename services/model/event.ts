@@ -37,10 +37,10 @@ export default class Event implements IEvent {
   @IsNotEmpty()
   description: string;
 
-  @IsDate()
+  // @IsDate()
   start: Date;
 
-  @IsDate()
+  // @IsDate()
   end: Date;
 
   @IsNotEmpty()
@@ -52,6 +52,7 @@ export default class Event implements IEvent {
   dataImporter: IDataImporter[] | undefined;
 
   constructor({
+    id,
     name,
     description,
     start,
@@ -59,7 +60,6 @@ export default class Event implements IEvent {
     location,
     organizationId,
     dataImporter,
-    id,
   }: Omit<IEvent, "id"> & { id?: string }) {
     this.id = id ?? generateId(name);
     this.name = name;
@@ -89,10 +89,13 @@ export default class Event implements IEvent {
     return evt;
   }
 
-  public static async getEventPath(organizationId: string, eventId?: string, config?: boolean): Promise<string> {
+  public static async getEventPath(
+    organizationId: string,
+    eventId?: string
+  ): Promise<string> {
     if (eventId) {
-      return path.join(BASE_PATH, organizationId, "events", eventId, config && "config.json");
+      return path.join(BASE_PATH, "events", organizationId, `${eventId}.json`);
     }
-    return path.join(BASE_PATH, organizationId, "events");
+    return path.join(BASE_PATH, "events", organizationId);
   }
 }

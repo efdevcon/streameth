@@ -8,7 +8,6 @@ export interface ISpeaker {
   name: string;
   bio: string;
   eventId: IEvent["id"];
-  organizationId: IOrganization["id"];
   twitter?: string;
   github?: string;
   website?: string;
@@ -27,9 +26,6 @@ export default class Speaker implements ISpeaker {
 
   @IsNotEmpty()
   eventId: IEvent["id"];
-
-  @IsNotEmpty()
-  organizationId: IOrganization["id"];
 
   @IsUrl()
   @IsOptional()
@@ -51,7 +47,6 @@ export default class Speaker implements ISpeaker {
     name,
     bio,
     eventId,
-    organizationId,
     twitter,
     github,
     website,
@@ -61,7 +56,6 @@ export default class Speaker implements ISpeaker {
     this.name = name;
     this.bio = bio;
     this.eventId = eventId;
-    this.organizationId = organizationId;
     this.twitter = twitter;
     this.github = github;
     this.website = website;
@@ -88,20 +82,12 @@ export default class Speaker implements ISpeaker {
   }
 
   static async getSpeakerPath(
-    organizationId: ISpeaker["organizationId"],
     eventId: ISpeaker["eventId"],
-    sessionId?: ISpeaker["id"]
+    speakerId?: ISpeaker["id"]
   ): Promise<string> {
-    if (sessionId) {
-      return path.join(
-        BASE_PATH,
-        organizationId,
-        "events",
-        eventId,
-        "speakers",
-        sessionId
-      );
+    if (speakerId) {
+      return path.join(BASE_PATH, "speakers", eventId, `${speakerId}.json`);
     }
-    return path.join(BASE_PATH, organizationId, "events", eventId, "speakers");
+    return path.join(BASE_PATH, "speakers", eventId);
   }
 }
