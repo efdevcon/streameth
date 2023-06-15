@@ -1,5 +1,6 @@
 import { IsNotEmpty, IsUrl, validate } from "class-validator";
-import { generateId } from "../utils";
+import { generateId, BASE_PATH } from "../utils";
+import path from "path";
 export interface IOrganization {
   id: string;
   name: string;
@@ -60,5 +61,10 @@ export default class Organization {
   static async fromJson(jsonData: string): Promise<Organization> {
     const data = JSON.parse(jsonData) as IOrganization;
     return new Organization({ ...data });
+  }
+
+  static async getOrganizationPath(id?: string, config?: boolean): Promise<string> {
+    if(!id) return BASE_PATH;
+    return path.join(BASE_PATH, id, config && "config.json");
   }
 }

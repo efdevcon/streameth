@@ -1,6 +1,7 @@
 import { IsNotEmpty, IsDate, validate } from "class-validator";
 import { IOrganization } from "./organization";
-import { generateId } from "../utils";
+import { generateId, BASE_PATH } from "../utils";
+import path from "path";
 interface GSheetConfig {
   sheetId: string;
   apiKey: string;
@@ -86,5 +87,12 @@ export default class Event implements IEvent {
     const data = typeof json === "string" ? JSON.parse(json) : json;
     const evt = new Event({ ...data });
     return evt;
+  }
+
+  public static async getEventPath(organizationId: string, eventId?: string, config?: boolean): Promise<string> {
+    if (eventId) {
+      return path.join(BASE_PATH, organizationId, "events", eventId, config && "config.json");
+    }
+    return path.join(BASE_PATH, organizationId, "events");
   }
 }

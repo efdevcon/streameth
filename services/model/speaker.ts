@@ -1,11 +1,14 @@
 import { IsNotEmpty, IsUrl, IsOptional, validate } from "class-validator";
 import { IEvent } from "./event";
-import { generateId } from "../utils";
+import { generateId, BASE_PATH } from "../utils";
+import path from "path";
+import { IOrganization } from "./organization";
 export interface ISpeaker {
   id: string;
   name: string;
   bio: string;
   eventId: IEvent["id"];
+  organizationId: IOrganization["id"];
   twitter?: string;
   github?: string;
   website?: string;
@@ -24,6 +27,9 @@ export default class Speaker implements ISpeaker {
 
   @IsNotEmpty()
   eventId: IEvent["id"];
+
+  @IsNotEmpty()
+  organizationId: IOrganization["id"];
 
   @IsUrl()
   @IsOptional()
@@ -45,6 +51,7 @@ export default class Speaker implements ISpeaker {
     name,
     bio,
     eventId,
+    organizationId,
     twitter,
     github,
     website,
@@ -54,6 +61,7 @@ export default class Speaker implements ISpeaker {
     this.name = name;
     this.bio = bio;
     this.eventId = eventId;
+    this.organizationId = organizationId;
     this.twitter = twitter;
     this.github = github;
     this.website = website;
@@ -77,5 +85,23 @@ export default class Speaker implements ISpeaker {
     const speaker = new Speaker({ ...data });
     await speaker.validateThis();
     return speaker;
+  }
+
+  static async getSpeakerPath(
+    organizationId: ISpeaker["organizationId"],
+    eventId: ISpeaker["eventId"],
+    sessionId?: ISpeaker["id"]
+  ): Promise<string> {
+    if (sessionId) {
+      return path.join(
+        BASE_PATH,
+        organizationId,
+        "events",
+        eventId,
+        "speakers",
+        sessionId
+      );
+    }
+    return path.join(BASE_PATH, organizationId, "events", eventId, "speakers");
   }
 }

@@ -1,34 +1,37 @@
-import FileController from "./fs";
+import BaseController from "./baseController";
 import Organization, { IOrganization } from "../model/organization";
 
-export default class OrganizationController extends FileController {
+export default class OrganizationController {
+  private controller: BaseController<IOrganization>;
+
+  constructor() {
+    this.controller = new BaseController<IOrganization>("fs");
+  }
+
   public async getOrganization(
     organizationId: IOrganization["id"]
   ): Promise<Organization> {
-    const path = `${this.organizationPath()}/${organizationId}/config.json`;
-    const data = await this.read(path);
-    return await Organization.fromJson(data);
+    const organizationQuery = await Organization.getOrganizationPath(organizationId, true);
+    const data = await this.controller.get(organizationQuery);
+    return new Organization({ ...data });
   }
 
   public async createOrganization(
-    data: Omit<IOrganization, "id">
+    organization: Omit<IOrganization, "id">
   ): Promise<Organization> {
-    const org = new Organization({ ...data });
-
-    const path = `${this.organizationPath()}/${org.id}/config.json`;
-    await this.write(path, await org.toJson());
+    const org = new Organization({ ...organization });
+    const organizationQuery = await Organization.getOrganizationPath(org.id, true);
+    await this.controller.create(organizationQuery, org);
     return org;
   }
 
+
   public async getAllOrganizations(): Promise<Organization[]> {
-    const files = await this.readDir(this.organizationPath());
     const organizations: Organization[] = [];
-    for (const file of files) {
-      const data = await this.read(
-        `${this.organizationPath()}/${file}/config.json`
-      );
-      const organization = await Organization.fromJson(data);
-      organizations.push(organization);
+    const organizationQuery = await Organization.getOrganizationPath();
+    const data = await this.controller.getAll(organizationQuery);
+    for (const org of data) {
+      organizations.push(new Organization({ ...org }));
     }
     return organizations;
   }

@@ -1,47 +1,48 @@
-import FileController from "./fs";
+import BaseController from "./baseController";
 import Session, { ISession } from "../model/session";
-import Event from "../model/event";
-const PATH = "data";
 
-export default class SessionController extends FileController {
-  public async getSession(id: string, event: Event): Promise<Session> {
-    const path = `${this.sessionPath(
-      event.organizationId,
-      event.id
-    )}/${id}.json`;
-    const data = await this.read(path);
-    const session = await Session.fromJson(data);
-    return session;
+export default class SessionController {
+  private controller: BaseController<ISession>;
+
+  constructor() {
+    this.controller = new BaseController<ISession>("fs");
   }
 
-  public async createSession(
-    session: Omit<ISession, "id">,
-    event: Event
+  public async getSession(
+    sessionId: ISession["id"],
+    eventId: ISession["id"],
+    organizationId: ISession["organizationId"]
   ): Promise<Session> {
-    const ses = new Session({
-      ...session,
-    });
-    const path = `${this.sessionPath(event.organizationId, event.id)}/${
+    const sessionQuery = await Session.getSessionPath(
+      organizationId,
+      eventId,
+      sessionId
+    );
+    const data = await this.controller.get(sessionQuery);
+    return new Session({ ...data });
+  }
+
+  public async createSession(session: Omit<ISession, "id">): Promise<Session> {
+    const ses = new Session({ ...session });
+    const sessionQuery = await Session.getSessionPath(
+      ses.organizationId,
+      ses.eventId,
       ses.id
-    }.json`;
-    await this.write(path, ses.toJson());
+    );
+    await this.controller.create(sessionQuery, ses);
     return ses;
   }
 
-  public async getSessionForStage(
-    stageId: string,
-    event: Event
-  ): Promise<Session> {
-    const path = `${this.sessionPath(event.organizationId, event.id)}`;
-    const files = await this.readDir(path);
+  public async getAllSessionsForEvent(
+    eventId: ISession["eventId"],
+    organizationId: ISession["organizationId"]
+  ): Promise<Session[]> {
     const sessions: Session[] = [];
-    for (const file of files) {
-      const data = await this.read(`${path}/${file}`);
-      const session = await Session.fromJson(data);
-      if (session.stageId === stageId) {
-        sessions.push(session);
-      }
+    const sessionQuery = await Session.getSessionPath(organizationId, eventId);
+    const data = await this.controller.getAll(sessionQuery);
+    for (const ses of data) {
+      sessions.push(new Session({ ...ses }));
     }
-    return sessions[0];
+    return sessions;
   }
 }

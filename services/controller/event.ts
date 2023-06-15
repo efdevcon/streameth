@@ -1,32 +1,54 @@
-import FileController from "./fs";
-import OrganizationController from "./organization";
+import BaseController from "./baseController";
 import Event, { IEvent } from "../model/event";
+import OrganizationController from "./organization";
+export default class EventController {
+  private controller: BaseController<IEvent>;
 
-export default class EventController extends FileController {
+  constructor() {
+    this.controller = new BaseController<IEvent>("fs");
+  }
+
   public async getEvent(
-    organizationId: IEvent["organizationId"],
-    eventId: IEvent["id"]
+    eventId: IEvent["id"],
+    organizationId: IEvent["organizationId"]
   ): Promise<Event> {
-    const path = `${this.eventPath(organizationId)}/${eventId}/config.json`;
-    const data = await this.read(path);
-    return await Event.fromJson(data);
+    const eventQuery = await Event.getEventPath(eventId, organizationId, true);
+    const data = await this.controller.get(eventQuery);
+    return new Event({ ...data });
   }
 
   public async createEvent(event: Omit<IEvent, "id">): Promise<Event> {
-    const { organizationId } = event;
-    const organizationController = new OrganizationController();
-    const existingOrganization = await organizationController.getOrganization(
-      organizationId
+    const org = new Event({ ...event });
+    const eventQuery = await Event.getEventPath(
+      org.id,
+      org.organizationId,
+      true
     );
-    if (!existingOrganization) {
-      throw new Error(`Organization '${organizationId}' does not exist.`);
+    await this.controller.create(eventQuery, org);
+    return org;
+  }
+
+  public async getAllEventsForOrganization(
+    organizationId: IEvent["organizationId"]
+  ): Promise<Event[]> {
+    const events: Event[] = [];
+    const eventQuery = await Event.getEventPath(organizationId);
+    const data = await this.controller.getAll(eventQuery);
+    for (const org of data) {
+      events.push(new Event({ ...org }));
     }
+    return events;
+  }
 
-    const evt = new Event({ ...event });
-
-    const path = `${this.eventPath(organizationId)}/${evt.id}/config.json`;
-    await this.write(path, evt.toJson());
-    return evt;
+  public async getAllEvents(): Promise<Event[]> {
+    const orgController = new OrganizationController();
+    const organizations = await orgController.getAllOrganizations();
+    const events: Event[] = [];
+    for (const organization of organizations) {
+      const data = await this.getAllEventsForOrganization(organization.id);
+      events.push(...data);
+    }
+    return events;
   }
 
   public async importEventData(event: Event): Promise<void> {
@@ -46,22 +68,5 @@ export default class EventController extends FileController {
         throw new Error("Unable to get session data...");
       }
     }
-  }
-
-  public async getAllEvents(): Promise<Event[]> {
-    const orgController = new OrganizationController();
-    const organizations = await orgController.getAllOrganizations();
-    const events: Event[] = [];
-    for (const organization of organizations) {
-      const files = await this.readDir(this.eventPath(organization.id));
-      for (const file of files) {
-        const data = await this.read(
-          `${this.eventPath(organization.id)}/${file}/config.json`
-        );
-        const event = await Event.fromJson(data);
-        events.push(event);
-      }
-    }
-    return events;
   }
 }

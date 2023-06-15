@@ -1,6 +1,8 @@
 import { IsNotEmpty, validate } from "class-validator";
 import { IEvent } from "./event";
-import { generateId } from "../utils";
+import { generateId, BASE_PATH } from "../utils";
+import { IOrganization } from "./organization";
+import path from "path";
 export interface IStreamSettings {
   url?: string;
   streamId?: string;
@@ -14,6 +16,7 @@ export interface IStage {
   id: string;
   name: string;
   eventId: IEvent["id"];
+  organizationId: IOrganization["id"];
   streamSettings: IStreamSettings;
   plugins?: IPlugin[];
 }
@@ -29,6 +32,9 @@ export default class Stage implements IStage {
   eventId: IEvent["id"];
 
   @IsNotEmpty()
+  organizationId: IEvent["organizationId"];
+
+  @IsNotEmpty()
   streamSettings: IStreamSettings;
 
   plugins?: IPlugin[];
@@ -36,15 +42,17 @@ export default class Stage implements IStage {
   constructor({
     name,
     eventId,
+    organizationId,
     streamSettings,
     plugins,
   }: Omit<IStage, "id"> & { id?: string }) {
     this.id = generateId(name);
     this.name = name;
     this.eventId = eventId;
+    this.organizationId = organizationId;
     this.streamSettings = streamSettings;
     this.plugins = plugins;
-    this.validateThis();  
+    this.validateThis();
   }
 
   async validateThis() {
@@ -63,5 +71,23 @@ export default class Stage implements IStage {
     const stage = new Stage({ ...data });
     await stage.validateThis();
     return stage;
+  }
+
+  static async getStagePath(
+    organizationId: IStage["organizationId"],
+    eventId: IStage["eventId"],
+    sessionId?: IStage["id"]
+  ): Promise<string> {
+    if (sessionId) {
+      return path.join(
+        BASE_PATH,
+        organizationId,
+        "events",
+        eventId,
+        "stages",
+        sessionId
+      );
+    }
+    return path.join(BASE_PATH, organizationId, "events", eventId, "stges");
   }
 }

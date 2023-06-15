@@ -1,29 +1,48 @@
-import FileController from "./fs";
-import Speaker, { ISpeaker } from "../model/speaker";
-import Event from "../model/event";
-const PATH = "data";
+import BaseController from "./baseController";
+import Speaker, { ISpeaker} from "../model/speaker";
 
-export default class SpeakerController extends FileController {
-  public async getSpeaker(id: string, event: Event): Promise<ISpeaker> {
-    const path = `${this.speakerPath(event.organizationId, event.id, id)}.json`;
-    const data = await this.read(path);
-    const speaker = await Speaker.fromJson(data);
-    return speaker;
+export default class SpeakerController {
+  private controller: BaseController<ISpeaker>;
+
+  constructor() {
+    this.controller = new BaseController<ISpeaker>("fs");
   }
 
-  public async saveSpeaker(
-    speaker: Omit<ISpeaker, "id">,
-    event: Event
+  public async getSpeaker(
+    speakerId: ISpeaker["id"],
+    eventId: ISpeaker["eventId"],
+    organizationId: ISpeaker["organizationId"]
   ): Promise<Speaker> {
-    const spk = new Speaker({
-      ...speaker,
-    });
-    const path = `${this.speakerPath(
-      event.organizationId,
-      event.id,
-      spk.id
-    )}.json`;
-    await this.write(path, spk.toJson());
-    return spk;
+    const speakerQuery = await Speaker.getSpeakerPath(
+      organizationId,
+      eventId,
+      speakerId
+    );
+    const data = await this.controller.get(speakerQuery);
+    return new Speaker({ ...data });
+  }
+
+  public async createSpeaker(speaker: Omit<ISpeaker, "id">): Promise<Speaker> {
+    const ses = new Speaker({ ...speaker });
+    const speakerQuery = await Speaker.getSpeakerPath(
+      ses.organizationId,
+      ses.eventId,
+      ses.id
+    );
+    await this.controller.create(speakerQuery, ses);
+    return ses;
+  }
+
+  public async getAllSpeakersForEvent(
+    eventId: ISpeaker["eventId"],
+    organizationId: ISpeaker["organizationId"]
+  ): Promise<Speaker[]> {
+    const speakers: Speaker[] = [];
+    const speakerQuery = await Speaker.getSpeakerPath(organizationId, eventId);
+    const data = await this.controller.getAll(speakerQuery);
+    for (const ses of data) {
+      speakers.push(new Speaker({ ...ses }));
+    }
+    return speakers;
   }
 }

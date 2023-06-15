@@ -70,10 +70,11 @@ export default class Importer extends BaseImporter {
         bio: description,
         photo: avatar,
         eventId: this.event.id,
+        organizationId: this.event.organizationId,
       };
 
       try {
-        await this.speakerController.saveSpeaker(speaker, this.event);
+        await this.speakerController.createSpeaker(speaker);
       } catch (e) {
         console.error(e);
       }
@@ -88,12 +89,13 @@ export default class Importer extends BaseImporter {
       const stage = {
         name,
         eventId: this.event.id,
+        organizationId: this.event.organizationId,
         streamSettings: {
           streamId,
         },
       };
       try {
-        await this.stageController.createStage(stage, this.event);
+        await this.stageController.createStage(stage);
       } catch (e) {
         //console.error(e, stage);
       }
@@ -129,14 +131,19 @@ export default class Importer extends BaseImporter {
       const speakerPromises = speakerIds
         .filter((speakerId) => !!speakerId)
         .map((speakerId) =>
-          this.speakerController.getSpeaker(speakerId, this.event)
+          this.speakerController.getSpeaker(
+            speakerId,
+            this.event.id,
+            this.event.organizationId
+          )
         );
 
       const [speakers, stage] = await Promise.all([
         Promise.all(speakerPromises),
         this.stageController.getStage(
           stageId === "stagesstage_Gulf_Stage" ? "gulf_stage" : "volcano_stage",
-          this.event
+          this.event.id,
+          this.event.organizationId
         ),
       ]);
 
@@ -144,6 +151,8 @@ export default class Importer extends BaseImporter {
         name: Name,
         description: Description,
         stageId: stage.id,
+        eventId: this.event.id,
+        organizationId: this.event.organizationId,
         speakers: speakers,
         start: new Date(`${Day} ${Start}`),
         end: new Date(`${Day} ${End}`),
@@ -152,7 +161,7 @@ export default class Importer extends BaseImporter {
 
       // Added await here
       try {
-        await this.sessionController.createSession(session, this.event);
+        await this.sessionController.createSession(session);
       } catch (e) {
         console.error(e);
       }

@@ -1,7 +1,10 @@
 import { IsNotEmpty, validate } from "class-validator";
 import { IStage } from "./stage";
 import { ISpeaker } from "./speaker";
-import { generateId } from "../utils";
+import { generateId, BASE_PATH } from "../utils";
+import { IEvent } from "./event";
+import { IOrganization } from "./organization";
+import path from "path";
 export interface ISession {
   id: string;
   name: string;
@@ -11,6 +14,8 @@ export interface ISession {
   stageId: IStage["id"];
   speakers: ISpeaker[];
   videoUrl?: string;
+  eventId: IEvent["id"];
+  organizationId: IOrganization["id"];
 }
 
 export default class Session implements ISession {
@@ -35,8 +40,13 @@ export default class Session implements ISession {
   @IsNotEmpty()
   speakers: ISpeaker[];
 
-
   videoUrl?: string;
+
+  @IsNotEmpty()
+  eventId: IEvent["id"];
+
+  @IsNotEmpty()
+  organizationId: IOrganization["id"];
 
   constructor({
     name,
@@ -46,6 +56,8 @@ export default class Session implements ISession {
     stageId,
     speakers,
     videoUrl,
+    eventId,
+    organizationId,
   }: Omit<ISession, "id"> & { id?: string }) {
     this.id = generateId(name);
     this.name = name;
@@ -55,6 +67,8 @@ export default class Session implements ISession {
     this.stageId = stageId;
     this.speakers = speakers;
     this.videoUrl = videoUrl;
+    this.eventId = eventId;
+    this.organizationId = organizationId;
     this.validateThis();
   }
 
@@ -76,5 +90,23 @@ export default class Session implements ISession {
     });
     await session.validateThis();
     return session;
+  }
+
+  static async getSessionPath(
+    organizationId: ISession["organizationId"],
+    eventId: ISession["eventId"],
+    sessionId?: ISession["id"]
+  ): Promise<string> {
+    if (sessionId) {
+      return path.join(
+        BASE_PATH,
+        organizationId,
+        "events",
+        eventId,
+        "sessions",
+        sessionId
+      );
+    }
+    return path.join(BASE_PATH, organizationId, "events", eventId, "sessions");
   }
 }

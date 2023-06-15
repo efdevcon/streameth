@@ -1,49 +1,48 @@
-import FileController from "./fs";
-import Stage, { IStage } from "../model/stage";
-import Event from "../model/event";
-import EventController from "./event";
-export default class StageController extends FileController {
-  public async getStage(id: string, event: Event): Promise<Stage> {
-    const path = `${this.stagePath(event.organizationId, event.id)}/${id}.json`;
-    const data = await this.read(path);
-    const stage = await Stage.fromJson(data);
-    return stage;
+import BaseController from "./baseController";
+import Stage, { IStage} from "../model/stage";
+
+export default class StageController {
+  private controller: BaseController<IStage>;
+
+  constructor() {
+    this.controller = new BaseController<IStage>("fs");
   }
 
-  public async getStagesForEvent(event: Event): Promise<Stage[]> {
-    const path = `${this.stagePath(event.organizationId, event.id)}`;
-    const files = await this.readDir(path);
-    const stages: Stage[] = [];
-    for (const file of files) {
-      const data = await this.read(`${path}/${file}`);
-      const stage = await Stage.fromJson(data);
-      stages.push(stage);
-    }
-    return stages;
-  }
-
-  public async getAllStages(): Promise<Stage[]> {
-    const eventController = new EventController();
-    const allEvents = await eventController.getAllEvents();
-    const stages: Stage[] = [];
-    for (const event of allEvents) {
-      const eventStages = await this.getStagesForEvent(event);
-      stages.push(...eventStages);
-    }
-    return stages;
-  }
-
-  public async createStage(
-    stage: Omit<IStage, "id">,
-    event: Event
+  public async getStage(
+    stageId: IStage["id"],
+    eventId: IStage["eventId"],
+    organizationId: IStage["organizationId"]
   ): Promise<Stage> {
-    const stg = new Stage({
-      ...stage,
-    });
-    const path = `${this.stagePath(event.organizationId, event.id)}/${
-      stg.id
-    }.json`;
-    await this.write(path, stg.toJson());
-    return stg;
+    const stageQuery = await Stage.getStagePath(
+      organizationId,
+      eventId,
+      stageId
+    );
+    const data = await this.controller.get(stageQuery);
+    return new Stage({ ...data });
+  }
+
+  public async createStage(stage: Omit<IStage, "id">): Promise<Stage> {
+    const ses = new Stage({ ...stage });
+    const stageQuery = await Stage.getStagePath(
+      ses.organizationId,
+      ses.eventId,
+      ses.id
+    );
+    await this.controller.create(stageQuery, ses);
+    return ses;
+  }
+
+  public async getAllStagesForEvent(
+    eventId: IStage["eventId"],
+    organizationId: IStage["organizationId"]
+  ): Promise<Stage[]> {
+    const stages: Stage[] = [];
+    const stageQuery = await Stage.getStagePath(organizationId, eventId);
+    const data = await this.controller.getAll(stageQuery);
+    for (const ses of data) {
+      stages.push(new Stage({ ...ses }));
+    }
+    return stages;
   }
 }
