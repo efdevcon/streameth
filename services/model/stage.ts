@@ -4,8 +4,7 @@ import { generateId, BASE_PATH } from "../utils";
 import { IOrganization } from "./organization";
 import path from "path";
 export interface IStreamSettings {
-  url?: string;
-  streamId?: string;
+  streamId: string;
 }
 
 export interface IPlugin {

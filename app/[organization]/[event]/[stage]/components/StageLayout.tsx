@@ -17,8 +17,9 @@
 import Stage from "@/services/model/stage";
 import SessionController from "@/services/controller/session";
 
-import SessionList from "./SessionList";
-
+import SessionList from "@/components/sessions/SessionList";
+import Player from "./Player";
+import StageTabs from "./StageTabs";
 export default async function StageLayout({ stage }: { stage: Stage }) {
   const sessionController = new SessionController();
   const currentSession = await sessionController.getCurrentSessionForStage(
@@ -29,36 +30,7 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
     stage.id,
     stage.eventId
   );
-  //const currentStage = useStage()
-  //const { sessions, addOrUpdateFilter, currentSession } = useSessions()
-  // const [modalOpen, setModalOpen] = useState(false);
-  // const [modalContentType, setModalContentType] = useState<string | null>(null);
-  // const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
-  // const [tab, setTab] = useState<number>(0);
 
-  //const activeSession = currentSession ?? sessions[0]
-
-  // useEffect(() => {
-  //   addOrUpdateFilter({ type: 'stage', value: currentStage.id })
-  //   //addOrUpdateFilter({ type: 'day', value: moment().startOf('day').valueOf() })
-  // }, [currentStage, addOrUpdateFilter])
-
-  // const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {
-  //   setModalContentType(type)
-  //   setSpeaker(speaker)
-  //   setModalOpen(true)
-  // }
-
-  // const modalContent = () => {
-  //   if (modalContentType === 'share') {
-  //     return <ShareBox title={activeSession.name} />
-  //   } else if (modalContentType === 'speaker') {
-  //     return <SpeakerModalBox speaker={speaker} />
-  //   } else if (modalContentType === 'embed') {
-  //     return <Embed stageId={currentStage.id} />
-  //   }
-  //   return null
-  // }
 
   return (
     <div>
@@ -79,8 +51,11 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
       </div>
       <div>
         <div className="flex flex-col lg:flex-row h-full relative overflow-scroll">
-          <div className="flex flex-col w-full lg:px-8 lg:py-2">
-            {/* <Player streamId={stage.streamSettings} playerName={stage.name} />  */}
+          <div className="flex flex-col w-full lg:px-8 lg:py-2 lg:flex-row">
+            <Player
+              streamId={stage.streamSettings.streamId}
+              playerName={stage.name}
+            />
             <div className="hidden md:block">
               {/* <SessionInfoBox
                 session={activeSession}
@@ -90,23 +65,28 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
               />
             </div> */}
             </div>
-            {/* <div className="h-1/2 lg:w-1/3 p-3 flex-grow  lg:pl-0 lg:pb-2 lg:pt-2 lg:pr-4 box-border flex flex-col overflow-auto lg:mt-0 lg:h-full">
-            <div className="flex flex-row">
-              <Tab index={0} currentIndex={tab} setIndex={() => setTab(0)}>
-                Chat
-              </Tab>
-              <Tab index={1} currentIndex={tab} setIndex={() => setTab(1)}>
-                Schedule
-              </Tab>
+            <div className="h-1/2 lg:w-1/3 p-3 flex-grow  lg:pl-0 lg:pb-2 lg:pt-2 lg:pr-4 box-border flex flex-col overflow-auto lg:mt-0 lg:h-full">
+              <StageTabs
+                tabs={[
+                  {
+                    id: "chat",
+                    header: "Chat",
+                    content: <div>Chat</div>,
+                  },
+                  {
+                    id: "sessions",
+                    header: "Sessions",
+                    content: (
+                      <SessionList
+                        sessions={sessions}
+                        currentSession={currentSession}
+                        isLive={false}
+                      />
+                    ),
+                  },
+                ]}
+              />
             </div>
-            <div className="flex flex-col w-full overflow-y-auto h-full">
-              {/* {tab === 0 && <ChatBar conversationId={currentStage.id} />}
-              {tab === 1 && <SessionList sessions={sessions} currentSession={activeSession} isLive={false} />} */}
-            <SessionList
-              sessions={sessions}
-              currentSession={currentSession}
-              isLive={false}
-            />
           </div>
         </div>
       </div>
