@@ -1,9 +1,8 @@
 import { IsNotEmpty, validate } from "class-validator";
 import { IStage } from "./stage";
-import { ISpeaker } from "./speaker";
+import Speaker from "./speaker";
 import { generateId, BASE_PATH } from "../utils";
 import { IEvent } from "./event";
-import { IOrganization } from "./organization";
 import path from "path";
 export interface ISession {
   id: string;
@@ -12,7 +11,7 @@ export interface ISession {
   start: Date;
   end: Date;
   stageId: IStage["id"];
-  speakers: ISpeaker[];
+  speakers: Speaker[];
   videoUrl?: string;
   eventId: IEvent["id"];
 }
@@ -30,14 +29,14 @@ export default class Session implements ISession {
   @IsNotEmpty()
   start: Date;
 
-  @IsNotEmpty()
+  //@IsNotEmpty()
   end: Date;
 
   @IsNotEmpty()
   stageId: IStage["id"];
 
   @IsNotEmpty()
-  speakers: ISpeaker[];
+  speakers: Speaker[];
 
   videoUrl?: string;
 

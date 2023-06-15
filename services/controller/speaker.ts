@@ -20,7 +20,6 @@ export default class SpeakerController {
   public async createSpeaker(speaker: Omit<ISpeaker, "id">): Promise<Speaker> {
     const ses = new Speaker({ ...speaker });
     const speakerQuery = await Speaker.getSpeakerPath(ses.eventId, ses.id);
-    console.log(speakerQuery);
     await this.controller.create(speakerQuery, ses);
     return ses;
   }

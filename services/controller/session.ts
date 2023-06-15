@@ -35,4 +35,31 @@ export default class SessionController {
     }
     return sessions;
   }
+
+  public async getSessionsForStage(
+    stageId: ISession["stageId"],
+    eventId: ISession["eventId"]
+  ): Promise<Session[]> {
+    const sessions = await this.getAllSessionsForEvent(eventId);
+    return sessions.filter((ses) => ses.stageId === stageId);
+  }
+
+  public async getCurrentSessionForStage(
+    stageId: ISession["stageId"],
+    eventId: ISession["eventId"]
+  ): Promise<Session> {
+    const sessions = await this.getAllSessionsForEvent(eventId);
+
+    const stageSessions = sessions.filter((ses) => ses.stageId === stageId);
+
+    if (!stageSessions) throw new Error("No sessions found for stage");
+    for (const session of stageSessions) {
+      const now = new Date();
+      if (session.start <= now && session.end >= now) {
+        return session;
+      }
+    }
+    // return the last session
+    return stageSessions[stageSessions.length - 1];
+  }
 }

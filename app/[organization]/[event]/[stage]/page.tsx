@@ -27,7 +27,7 @@ export default async function Post({ params }: Params) {
   const stageController = new StageController();
   try {
     const stage = await stageController.getStage(params.stage, params.event);
-    return <StageLayout stage={stage} />;
+    return  <StageLayout stage={stage} />;
   } catch (e) {
     return notFound();
   }

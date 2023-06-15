@@ -21,7 +21,6 @@ export default class BaseImporter implements IBaseImporter {
     this.eventController = new EventController();
     this.sessionController = new SessionController();
     this.stageController = new StageController();
-    console.log("event", event.toJson());
     this.event = event;
   }
 

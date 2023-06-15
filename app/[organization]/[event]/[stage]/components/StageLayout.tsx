@@ -15,8 +15,20 @@
 // import SubNavigation from 'components/Navbar/SubNavigation'
 
 import Stage from "@/services/model/stage";
+import SessionController from "@/services/controller/session";
 
-export default function StageLayout({ stage }: { stage: Stage }) {
+import SessionList from "./SessionList";
+
+export default async function StageLayout({ stage }: { stage: Stage }) {
+  const sessionController = new SessionController();
+  const currentSession = await sessionController.getCurrentSessionForStage(
+    stage.id,
+    stage.eventId
+  );
+  const sessions = await sessionController.getSessionsForStage(
+    stage.id,
+    stage.eventId
+  );
   //const currentStage = useStage()
   //const { sessions, addOrUpdateFilter, currentSession } = useSessions()
   // const [modalOpen, setModalOpen] = useState(false);
@@ -57,7 +69,7 @@ export default function StageLayout({ stage }: { stage: Stage }) {
         <div className="py-2 flex justify-between items-center dark:text-gray-400">
           <div className="flex flex-col">
             <p className="font-thin text-white">WATCHING:</p>
-            <p className="font-medium text-white">{`${activeSession?.name}`}</p>
+            <p className="font-medium text-white">{`${currentSession?.name}`}</p>
           </div>
           {/* <div className="hidden md:flex flex-col">
             <p className="font-thin text-white">NEXT:</p>
@@ -68,7 +80,7 @@ export default function StageLayout({ stage }: { stage: Stage }) {
       <div>
         <div className="flex flex-col lg:flex-row h-full relative overflow-scroll">
           <div className="flex flex-col w-full lg:px-8 lg:py-2">
-            {/* <Player streamId={currentStage.stream[0]} playerName={currentStage.name} /> */}
+            {/* <Player streamId={stage.streamSettings} playerName={stage.name} />  */}
             <div className="hidden md:block">
               {/* <SessionInfoBox
                 session={activeSession}
@@ -90,6 +102,11 @@ export default function StageLayout({ stage }: { stage: Stage }) {
             <div className="flex flex-col w-full overflow-y-auto h-full">
               {/* {tab === 0 && <ChatBar conversationId={currentStage.id} />}
               {tab === 1 && <SessionList sessions={sessions} currentSession={activeSession} isLive={false} />} */}
+            <SessionList
+              sessions={sessions}
+              currentSession={currentSession}
+              isLive={false}
+            />
           </div>
         </div>
       </div>

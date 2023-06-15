@@ -30,7 +30,6 @@ export default class OrganizationController {
     const organizations: Organization[] = [];
     const organizationQuery = await Organization.getOrganizationPath();
     const data = await this.controller.getAll(organizationQuery);
-    console.log(data);
     for (const org of data) {
       organizations.push(new Organization({ ...org }));
     }

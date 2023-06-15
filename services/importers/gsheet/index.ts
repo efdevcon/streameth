@@ -82,7 +82,6 @@ export default class Importer extends BaseImporter {
 
   public override async generateStages(): Promise<void> {
     const data = await this.getDataForRange(STAGE_SHEET, STAGE_DATA_RANGE);
-    console.log("Got stages data", data);
     for (const row of data) {
       const [id, name, streamId, image] = row;
       const stage = {

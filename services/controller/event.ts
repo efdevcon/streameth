@@ -33,7 +33,6 @@ export default class EventController {
     const events: Event[] = [];
     const eventQuery = await Event.getEventPath(organizationId);
     const data = await this.controller.getAll(eventQuery);
-    console.log("data", data);
     for (const evt of data) {
       events.push(new Event({ ...evt }));
     }
