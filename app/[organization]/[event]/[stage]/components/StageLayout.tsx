@@ -34,24 +34,17 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
 
   return (
     <div>
-      {/* <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-        {modalContent()}
-      </Modal> */}
       <div>
-        <div className="py-2 flex justify-between items-center dark:text-gray-400">
+        <div className="flex justify-between items-center dark:text-gray-400">
           <div className="flex flex-col">
             <p className="font-thin text-white">WATCHING:</p>
             <p className="font-medium text-white">{`${currentSession?.name}`}</p>
           </div>
-          {/* <div className="hidden md:flex flex-col">
-            <p className="font-thin text-white">NEXT:</p>
-            <p className="font-medium text-white">{`${sessions[1]?.name}`}</p>
-          </div> */}
         </div>
       </div>
       <div>
-        <div className="flex flex-col lg:flex-row h-full relative overflow-scroll">
-          <div className="flex flex-col w-full lg:px-8 lg:py-2 lg:flex-row">
+        <div className="flex flex-col lg:flex-row h-full">
+          <div className="flex flex-col w-full lg:flex-row">
             <Player
               streamId={stage.streamSettings.streamId}
               playerName={stage.name}
@@ -65,7 +58,7 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
               />
             </div> */}
             </div>
-            <div className="h-1/2 lg:w-1/3 p-3 flex-grow  lg:pl-0 lg:pb-2 lg:pt-2 lg:pr-4 box-border flex flex-col overflow-auto lg:mt-0 lg:h-full">
+            <div className="h-1/2 lg:w-1/3 flex-grow  box-border flex flex-col overflow-auto lg:h-full">
               <StageTabs
                 tabs={[
                   {
