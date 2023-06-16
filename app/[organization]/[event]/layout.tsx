@@ -1,4 +1,4 @@
-import Navbar from "@/components/Layout/Navbar1";
+import Navbar from "@/components/Layout/Navbar";
 import EventController from "@/services/controller/event";
 import StageController from "@/services/controller/stage";
 

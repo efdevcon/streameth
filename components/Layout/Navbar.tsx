@@ -3,11 +3,11 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import Container from "./Container";
+import WalletSignIn from "@/components/misc/WalletSignIn";
 import img from "@/public/logo.png";
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+function classNameNames(...classNamees: string[]) {
+  return classNamees.filter(Boolean).join(" ");
 }
 
 export default function Navbar({
@@ -27,71 +27,65 @@ export default function Navbar({
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-200 py-2 h-[5rem] z-50">
-      <Container>
-        <div className="flex justify-between py-2">
-          <div className="flex items-center">
-            <Link href="/" className="relative w-28 h-12 lg:w-40 lg:h-12">
-              <Image src={img} alt="Logo" />
-            </Link>
+    <header className="shadow-sm bg-black opacity-80">
+      <div className="mx-auto max-w-screen-xl p-4">
+        <div className="flex items-center justify-between gap-4 lg:gap-10">
+          <div className="flex lg:w-0 lg:flex-1">
+            <a href="#">
+              <span className="sr-only">Logo</span>
+              <Image src={img} alt="Logo" width={150} />
+            </a>
           </div>
-          <div className="flex-1 flex items-center space-x-2 justify-end">
-            <div className="hidden md:flex">
-              {extendedPages.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={"px-2 py-1  text-gray-700 font-medium hover:bg-gray-2"}
-                  aria-current={pathname === item.href ? "page" : undefined}
-                >
-                  {item.name}
-                </Link>
-              ))}
+
+          <nav
+            aria-label="Global"
+            className="hidden gap-8 text-md font-medium md:flex"
+          >
+            {extendedPages.map((item) => (
+              <Link
+                key={item.name}
+                className="text-white hover:text-gray-300"
+                href={item.href}
+                aria-current={pathname === item.href ? "page" : undefined}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
+            <div className="relative bg-white hover:shadow-md shadow-slate-500 px-5 py-2 text-sm font-medium text-black">
+              <span className="absolute bg-gray-300 hover:bg-white text-sm font-medium text-black h-full w-[90%] -z-20" />
+
+              <WalletSignIn />
             </div>
           </div>
-          <div className="hidden md:flex"></div>
-          <button
-            className="md:hidden border-2 border-black p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Menu"
-            aria-expanded={isMenuOpen}
-          >
-            Menu
-          </button>
+
+          <div className="lg:hidden">
+            <button
+              className="rounded-lg bg-gray-100 p-2 text-gray-600"
+              type="button"
+            >
+              <span className="sr-only">Open menu</span>
+              <svg
+                aria-hidden="true"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div
-          className={classNames(
-            "md:hidden relative bg-white z-50",
-            isMenuOpen ? "block" : "hidden"
-          )}
-        >
-          <ul className="border-t border-gray-200 py-3">
-            {pages.map((item) => (
-              <li key={item.name} className="py-2">
-                <Link
-                  href={item.href}
-                  className={classNames(
-                    "block px-4 py-2 text-gray-500",
-                    pathname === item.href ? "bg-gray-200" : ""
-                  )}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-            <li>
-              {/* <div className="border-2 border-black p-2 my-2">Sign in with Ethereum</div> */}
-              {/* <ConnectButton
-                accountStatus={{
-                  smallScreen: 'full',
-                  largeScreen: 'full',
-                }}
-                chainStatus="none"
-              /> */}
-            </li>
-          </ul>
-        </div>
-      </Container>
-    </nav>
+      </div>
+    </header>
   );
 }
