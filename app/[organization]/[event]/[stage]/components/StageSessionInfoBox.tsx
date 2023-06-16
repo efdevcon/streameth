@@ -1,8 +1,13 @@
+"use client"
+import { useContext } from "react";
 import Session from "@/services/model/session";
 import { ShareIcon } from "@heroicons/react/24/outline";
 import SpeakerIcon from "@/components/speakers/SpeakerIcon";
+import EmbedSessionModal from "@/components/sessions/EmbedSession";
+import { ModalContext } from "@/components/context/ModalContext";
 
 const StageSessionInfoBox = ({ session }: { session: Session }) => {
+  const modal = useContext(ModalContext);
   return (
     <div className="flex flex-col">
       <div className="flex flex-col">
@@ -18,7 +23,12 @@ const StageSessionInfoBox = ({ session }: { session: Session }) => {
         </div>
       </div>
       <div className="flex flex-row ml-auto mt-4">
-        <span className="p-1 cursor-pointer text-black border-black border-2  ml-auto h-10">
+        <span
+          className="p-1 cursor-pointer text-black border-black border-2  ml-auto h-10"
+          onClick={() => {
+            modal.openModal(<EmbedSessionModal stageId={session.stageId} />);
+          }}
+        >
           embed
         </span>
         <ShareIcon className="h-8 w-8 cursor-pointer ml-3" />
