@@ -1,25 +1,10 @@
-// import { useEffect, useState } from "react";
-// import { useStage } from 'hooks/useStage'
-// import { useSessions } from 'hooks/useSessions'
-// import { Player } from 'components/Player'
-// import { StageContainer } from 'components/Container'
-// import SpeakerModalBox from 'components/Speaker/ModalBox'
-// import SessionList from 'components/Session/List'
-// import Modal from '../Modal'
-// import { ShareBox } from '../Share/Box'
-// import { Speaker } from 'types'
-// import Embed from 'components/Embed'
-// import SessionInfoBox from 'components/Session/Infobox'
-// import Tab from './Tab'
-// // import ChatBar from 'components/Chat'
-// import SubNavigation from 'components/Navbar/SubNavigation'
-
 import Stage from "@/services/model/stage";
 import SessionController from "@/services/controller/session";
 
 import SessionList from "@/components/sessions/SessionList";
 import Player from "./Player";
 import StageTabs from "./StageTabs";
+import StageSessionInfoBox from "./StageSessionInfoBox";
 export default async function StageLayout({ stage }: { stage: Stage }) {
   const sessionController = new SessionController();
   const currentSession = await sessionController.getCurrentSessionForStage(
@@ -31,57 +16,40 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
     stage.eventId
   );
 
-
   return (
-    <div>
-      <div>
-        <div className="flex justify-between items-center dark:text-gray-400">
-          <div className="flex flex-col">
-            <p className="font-thin text-white">WATCHING:</p>
-            <p className="font-medium text-white">{`${currentSession?.name}`}</p>
-          </div>
-        </div>
+    <div className="flex flex-col w-full max-h-full lg:flex-row">
+      <div className="w-full h-full flex flex-col justify-center items-center bg-[#D9D9D9]">
+        <Player
+          streamId={stage.streamSettings.streamId}
+          playerName={stage.name}
+        />
       </div>
-      <div>
-        <div className="flex flex-col lg:flex-row h-full">
-          <div className="flex flex-col w-full lg:flex-row">
-            <Player
-              streamId={stage.streamSettings.streamId}
-              playerName={stage.name}
-            />
-            <div className="hidden md:block">
-              {/* <SessionInfoBox
-                session={activeSession}
-                onShareClick={() => openModal('share')}
-                onSpeakerClick={(speaker) => openModal('speaker', speaker)}
-                onEmbedClick={() => openModal('embed')}
-              />
-            </div> */}
-            </div>
-            <div className="h-1/2 lg:w-1/3 flex-grow  box-border flex flex-col overflow-auto lg:h-full">
-              <StageTabs
-                tabs={[
-                  {
-                    id: "chat",
-                    header: "Chat",
-                    content: <div>Chat</div>,
-                  },
-                  {
-                    id: "sessions",
-                    header: "Sessions",
-                    content: (
-                      <SessionList
-                        sessions={sessions}
-                        currentSession={currentSession}
-                        isLive={false}
-                      />
-                    ),
-                  },
-                ]}
-              />
-            </div>
-          </div>
-        </div>
+      <div className="flex flex-col lg:w-1/3 box-border lg:h-full px-2">
+        <StageTabs
+          tabs={[
+            {
+              id: "info",
+              header: "Info",
+              content: <StageSessionInfoBox session={currentSession} />
+            },
+            {
+              id: "chat",
+              header: "Chat",
+              content: <div>Chat</div>,
+            },
+            {
+              id: "sessions",
+              header: "Sessions",
+              content: (
+                <SessionList
+                  sessions={sessions}
+                  currentSession={currentSession}
+                  isLive={false}
+                />
+              ),
+            },
+          ]}
+        />
       </div>
     </div>
   );

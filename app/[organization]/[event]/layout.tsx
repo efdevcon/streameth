@@ -1,8 +1,6 @@
-import Navbar from "@/components/Layout/Navbar";
+import Navbar from "@/components/Layout/Navbar1";
 import EventController from "@/services/controller/event";
 import StageController from "@/services/controller/stage";
-
-
 
 export async function generateStaticParams() {
   const eventController = new EventController();
@@ -38,9 +36,9 @@ const Layout = async ({
   });
 
   return (
-    <div>
-      {/* <Navbar pages={pages} /> */}
-      <main>{children}</main>
+    <div className="min-h-screen flex flex-col h-screen w-screen">
+      <Navbar pages={pages} />
+      <main className="flex-1 flex overflow-y-hidden w-full">{children}</main>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const scroll = Scroll.scroller;
 
 function NoSessionComponent() {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
+    <div className="flex flex-col items-center justify-center">
       <p className="text-gray-600 dark:text-gray-300">
         No upcoming sessions! Check the archive:
       </p>
