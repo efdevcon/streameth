@@ -29,34 +29,31 @@ export default function SessionSnack({
   goToStage = false,
 }: Props) {
   const component = (
-    <div
-      className={`border p-4 h-full bg-white space-y-3 hover:shadow-lg ${
-        learnMore ? "cursor-pointer" : ""
-      }`}
-    >
-      <div className="flex flex-col justify-between items-start">
-        <div className="flex items-center mb-1 w-full">
-          {/* <span className="font-thin">{session.stage.name}</span>
-          {session.status == "LIVE" && <StatusDot />} */}
+    <a href="" className="group relative block h-64">
+      <span className="absolute inset-0 border-2 border-dashed border-black"></span>
+
+      <div className="relative flex flex-col h-full transform border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+        <div className="p-4 h-full flex flex-col selection:!pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:px-6 lg:px-8">
+          <span className="text-sm">{session.start}</span>
+          <div className="mt-auto">
+            {session.speakers.length > 0 && (
+              <SpeakerIconList speakers={session.speakers} />
+            )}
+
+            <h2 className="mt-4 text-xl font-medium sm:text-2xl">
+              {session.name}
+            </h2>
+          </div>
         </div>
-        <p className="text-xl font-bold">{session.name}</p>
-        {isLive ? (
-          <LiveIndicator />
-        ) : hasRecording ? (
-          <PlayCircleIcon className="h-6 w-6 text-gray-600" />
-        ) : null}
-      </div>
-      <div>
-        <div className="flex items-center space-x-2 mb-2">
-          <span className="text text-gray-400 text-md font-thin">
-            {/* {formatDateTime(session.start, session.end)} */}
-          </span>
+        <div className="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+          <h3 className="mt-4 text-xl font-medium sm:text-2xl">
+            {session.name}
+          </h3>
+
+          <p className="mt-4 text-sm sm:text-base">{session.description}</p>
         </div>
       </div>
-      <div>
-        <SpeakerIconList speakers={session.speakers} />
-      </div>
-    </div>
+    </a>
   );
 
   if (learnMore)

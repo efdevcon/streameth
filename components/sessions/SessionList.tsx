@@ -44,7 +44,7 @@ export default function SessionList({
   }, [currentSession]);
 
   return (
-    <ul id="sessionList" className="relative space-y-2 mt-1">
+    <ul id="sessionList" className="relative space-y-2 mt-1 overflow-y-scroll">
       {sessions.map((i) => {
         return (
           <Element key={i.id} name={i.id}>

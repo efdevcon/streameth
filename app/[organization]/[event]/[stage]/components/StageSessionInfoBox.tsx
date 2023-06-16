@@ -4,11 +4,11 @@ import SpeakerIcon from "@/components/speakers/SpeakerIcon";
 
 const StageSessionInfoBox = ({ session }: { session: Session }) => {
   return (
-    <div className="flex flex-col p-2">
+    <div className="flex flex-col">
       <div className="flex flex-col">
         <span className="font-thin my-2 ">WATCHING:</span>
         <h3 className="text-xl font-medium sm:text-2xl">{session.name}</h3>
-        <div className="px-2 hidden md:block">
+        <div className="px-2">
           <p className="mt-4">
             {session.speakers.map((speaker) => {
               return <SpeakerIcon key={speaker.id} speaker={speaker} />;

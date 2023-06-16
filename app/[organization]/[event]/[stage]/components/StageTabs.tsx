@@ -6,7 +6,7 @@ export default function StageTabs({
 }: {
   tabs: {
     id: string;
-    header: string;
+    header: JSX.Element;
     content: JSX.Element;
   }[];
 }) {
@@ -21,21 +21,21 @@ export default function StageTabs({
     <>
       <div className="flex flex-row">
         {tabs.map((tab) => (
-          <div
-            className={`${
-              selectedId === tab.id
-                ? "bg-black text-white"
-                : "bg-white text-black"
-            } p-1 w-full border-2 border-black opacity-80 `}
-            key={tab.id}
-            onClick={() => setSelectedId(tab.id)}
-          >
-            {tab.header}
+          <div key={tab.id} onClick={() => setSelectedId(tab.id)} className="m-2">
+            <div
+              className={`${
+                selectedId === tab.id
+                  ? "bg-black text-white"
+                  : "bg-white text-black"
+              } p-1 w-full border-2 border-black opacity-80 `}
+            >
+              {tab.header}
+            </div>
           </div>
         ))}
       </div>
       <div
-        className="flex flex-col w-full overflow-y-auto h-full"
+        className="flex flex-col w-full h-full overflow-y-scroll p-2 bg-white"
         key={selectedId}
       >
         {selectedTab.content}

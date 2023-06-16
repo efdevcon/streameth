@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const OfflinePlayer = () => {
   return (
-    <div className="w-full  relative">
+    <div className="w-full h-full relative">
       <div className=" inset-0 bg-[#D9D9D9] flex items-center justify-center flex-col aspect-video">
         <span className="text-2xl font-bold text-black">Offline</span>
         <span className="text-black dark:text-gray-300 text-xs hidden md:block mt-2">

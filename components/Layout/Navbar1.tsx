@@ -27,7 +27,7 @@ export default function Navbar({
   ];
 
   return (
-    <header className="shadow-sm">
+    <header className="shadow-sm bg-black opacity-80">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
           <div className="flex lg:w-0 lg:flex-1">
@@ -44,7 +44,7 @@ export default function Navbar({
             {extendedPages.map((item) => (
               <Link
                 key={item.name}
-                className="text-gray-500 hover:text-gray-900"
+                className="text-white hover:text-gray-300"
                 href={item.href}
                 aria-current={pathname === item.href ? "page" : undefined}
               >

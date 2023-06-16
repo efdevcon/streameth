@@ -1,6 +1,6 @@
 import Stage from "@/services/model/stage";
 import SessionController from "@/services/controller/session";
-
+import { InformationCircleIcon, ChatBubbleBottomCenterIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import SessionList from "@/components/sessions/SessionList";
 import Player from "./Player";
 import StageTabs from "./StageTabs";
@@ -17,29 +17,29 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
   );
 
   return (
-    <div className="flex flex-col w-full max-h-full lg:flex-row">
-      <div className="w-full h-full flex flex-col justify-center items-center bg-[#D9D9D9]">
+    <div className="flex flex-col w-full max-h-full lg:flex-row relative">
+      <div className="w-full md:h-full flex flex-col justify-center items-center bg-[#D9D9D9]">
         <Player
           streamId={stage.streamSettings.streamId}
           playerName={stage.name}
         />
       </div>
-      <div className="flex flex-col lg:w-1/3 box-border lg:h-full px-2">
+      <div className="flex flex-col flex-grow box-border h-full overflow-y-scroll relative md:relative lg:relative  lg:w-2/5 xl:1/3 md:right-0">
         <StageTabs
           tabs={[
             {
               id: "info",
-              header: "Info",
+              header: <InformationCircleIcon className="h-8 w-8" />,
               content: <StageSessionInfoBox session={currentSession} />
             },
             {
               id: "chat",
-              header: "Chat",
+              header: <ChatBubbleBottomCenterIcon className="h-8 w-8" />,
               content: <div>Chat</div>,
             },
             {
-              id: "sessions",
-              header: "Sessions",
+              id: "Schedule",
+              header: <CalendarIcon className="h-8 w-8" />,
               content: (
                 <SessionList
                   sessions={sessions}
