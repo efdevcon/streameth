@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
   "start": 1683190800000,
   "end": 1683194400000,
-  "speakers": [{ "id": "Anton Kulaga", "name": "Anton Kulaga" }]
+  "speakers": [{ "id": "Anton Kulaga", "name": "Anton Kulaga" }],
+  "video": "https://lp-playback.com/hls/8a99mwho0kp0s5ot/index.m3u8"
 }

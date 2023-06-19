@@ -6,5 +6,6 @@
   "stage": { "id": "Ballroom", "name": "Ballroom", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
   "start": 1683360900000,
   "end": 1683364500000,
-  "speakers": [{ "id": "Robert Knight", "name": "Robert Knight" }]
+  "speakers": [{ "id": "Robert Knight", "name": "Robert Knight" }],
+  "video": "https://lp-playback.com/hls/8c2cdmtqy3m3267c/index.m3u8"
 }

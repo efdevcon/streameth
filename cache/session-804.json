@@ -1,13 +1,15 @@
 {
   "id": "804",
-  "name": "Breakfast: AI and Decentralized Arts",
-  "description": "<p>Chance for those working on projects in AI art and decentralized arts to get together in one place while we are all here.</p>",
+  "name": "Think beyond the ‘Twitter box’; Reimagine social networks in the age of AI and Network States & coordi-nations",
+  "description": "As we navigate the digital age, social media sites like X Corp. (formerly Twitter) have become integral to our online social interactions, shaping how we connect, communicate, and share information. Online communities depend on Web2 social media yet these services operate within certain limitations, pose constraints to users, and can even become a  threat to the communities that thrive on them. The recent wave of erratic decisions by Twitter’s new CEO highlights the platform’s vulnerability to individual whims and the potential for far-reaching consequences to its users. At the same time, AI is transforming and reshaping the way we interact and connect online posing new challenges for our human-social interactions. These actions have reignited questions and concerns about social media’s future, governance, and impact on public discourse. We invite the researchers, creators and developers of new protocols and platforms to come together and discuss how we may overcome the inertia and cold start problems of new paradigms to grow the user base of a new, decentralized social web. This series of discussions explores the current state and the exciting future of decentralized social media. Are there alternative models and visions for online social interaction that can break free from the traditional framework of platforms like Twitter? ",
   "track": "AI x Crypto",
   "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
-  "start": 1683354600000,
+  "start": 1683208000000,
   "end": 1683358200000,
   "speakers": [
-    { "id": "Simon @ Botto", "name": "Simon @ Botto" },
-    { "id": "Eva @ Shibuya.xyz", "name": "Eva @ Shibuya.xyz" }
-  ]
+    { "id": "Afra", "name": "Afra" },
+    { "id": "Martin Etzrodt", "name": "Martin Etzrodt" },
+    { "id": "Vitalik Buterin", "name": "Vitalik Buterin"}
+  ],
+  "video": "https://lp-playback.com/hls/c218r820cj6lyrac/index.m3u8"
 }

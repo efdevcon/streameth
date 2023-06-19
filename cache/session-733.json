@@ -9,5 +9,6 @@
   "speakers": [
     { "id": "AI x Crypto Summit", "name": "AI x Crypto Summit" },
     { "id": "NiMA Asghari", "name": "NiMA Asghari" }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/3c6c62lv2iab8x5j/index.m3u8"
 }

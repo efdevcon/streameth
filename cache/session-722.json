@@ -6,5 +6,6 @@
   "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
   "start": 1683360900000,
   "end": 1683364500000,
-  "speakers": [{ "id": "AI x Crypto Summit", "name": "AI x Crypto Summit" }]
+  "speakers": [{ "id": "AI x Crypto Summit", "name": "AI x Crypto Summit" }],
+  "video": "https://lp-playback.com/hls/b6b9ml1r1pwgslf2/index.m3u8"
 }
