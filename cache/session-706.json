@@ -6,5 +6,6 @@
   "stage": { "id": "Ballroom", "name": "Ballroom", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
   "start": 1683289800000,
   "end": 1683293400000,
-  "speakers": [{ "id": "barry whitehat", "name": "barry whitehat" }]
+  "speakers": [{ "id": "barry whitehat", "name": "barry whitehat" }],
+  "video": "https://lp-playback.com/hls/d46d7j4quda2lx35/index.m3u8"
 }
