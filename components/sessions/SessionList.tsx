@@ -21,7 +21,7 @@ function NoSessionComponent() {
         No upcoming sessions! Check the archive:
       </p>
       <Link href="/archive">
-        <a className="text-blue-500 hover:text-blue-600">Archive Page</a>
+        <p className="text-blue-500 hover:text-blue-600">Archive Page</p>
       </Link>
     </div>
   );

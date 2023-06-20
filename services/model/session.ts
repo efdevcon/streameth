@@ -14,6 +14,7 @@ export interface ISession {
   speakers: Speaker[];
   videoUrl?: string;
   eventId: IEvent["id"];
+  track?: string[];
 }
 
 export default class Session implements ISession {
@@ -43,6 +44,8 @@ export default class Session implements ISession {
   @IsNotEmpty()
   eventId: IEvent["id"];
 
+  track?: string[];
+
   constructor({
     name,
     description,
@@ -52,6 +55,7 @@ export default class Session implements ISession {
     speakers,
     videoUrl,
     eventId,
+    track,
   }: Omit<ISession, "id"> & { id?: string }) {
     this.id = generateId(name);
     this.name = name;
@@ -62,6 +66,7 @@ export default class Session implements ISession {
     this.speakers = speakers;
     this.videoUrl = videoUrl;
     this.eventId = eventId;
+    this.track = track;
     this.validateThis();
   }
 
@@ -74,6 +79,20 @@ export default class Session implements ISession {
 
   toJson(): string {
     return JSON.stringify(this);
+  }
+
+  getSessionDate(): {start: string, end: string} {
+    return {
+      start: new Date(this.start).toDateString(),
+      end: new Date(this.end).toISOString()
+    }
+  }
+
+  getSessionTime(): {start: string, end: string} {
+    return {
+      start: this.start.toLocaleTimeString(),
+      end: this.end.toLocaleTimeString()
+    }
   }
 
   static async fromJson(jsonData: string | Promise<Session>) {
@@ -94,4 +113,6 @@ export default class Session implements ISession {
     }
     return path.join(BASE_PATH, "sessions", eventId);
   }
+
+
 }

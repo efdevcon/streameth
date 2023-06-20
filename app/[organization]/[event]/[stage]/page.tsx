@@ -1,7 +1,6 @@
 // `app` directory
 import StageLayout from "@/app/[organization]/[event]/[stage]/components/StageLayout";
 import StageController from "@/services/controller/stage";
-import EventController from "@/services/controller/event";
 import { notFound } from "next/navigation";
 interface Params {
   params: {

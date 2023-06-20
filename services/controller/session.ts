@@ -1,6 +1,9 @@
 import BaseController from "./baseController";
 import Session, { ISession } from "../model/session";
-
+import Speaker from "../model/speaker";
+import Stage from "../model/stage";
+import SpeakerController from "./speaker";
+import StageController from "./stage";
 export default class SessionController {
   private controller: BaseController<ISession>;
 
@@ -10,7 +13,7 @@ export default class SessionController {
 
   public async getSession(
     sessionId: ISession["id"],
-    eventId: ISession["id"]
+    eventId: ISession["eventId"]
   ): Promise<Session> {
     const sessionQuery = await Session.getSessionPath(eventId, sessionId);
     const data = await this.controller.get(sessionQuery);
@@ -36,18 +39,21 @@ export default class SessionController {
     return sessions;
   }
 
+  // dont get past sessions
   public async getSessionsForStage(
     stageId: ISession["stageId"],
     eventId: ISession["eventId"]
   ): Promise<Session[]> {
     const sessions = await this.getAllSessionsForEvent(eventId);
-    return sessions.filter((ses) => ses.stageId === stageId);
+    const stageSessions = sessions.filter((ses) => ses.stageId === stageId);
+    const now = new Date();
+    return stageSessions.filter((ses) => ses.end >= now);
   }
 
   public async getCurrentSessionForStage(
     stageId: ISession["stageId"],
     eventId: ISession["eventId"]
-  ): Promise<Session> {
+  ): Promise<Session | undefined> {
     const sessions = await this.getAllSessionsForEvent(eventId);
 
     const stageSessions = sessions.filter((ses) => ses.stageId === stageId);
@@ -59,7 +65,28 @@ export default class SessionController {
         return session;
       }
     }
-    // return the last session
-    return stageSessions[stageSessions.length - 1];
+    return undefined;
+  }
+
+  public async getSessionSpeakers(
+    sessionId: ISession["id"],
+    eventId: ISession["eventId"]
+  ): Promise<Speaker[]> {
+    const speakerController = new SpeakerController();
+    const session = await this.getSession(sessionId, eventId);
+    const speakers = session.speakers.map((speaker) =>
+      speakerController.getSpeaker(speaker.id, eventId)
+    );
+
+    return Promise.all(speakers);
+  }
+
+  public async getSessionStage(
+    sessionId: ISession["id"],
+    eventId: ISession["eventId"]
+  ): Promise<Stage> {
+    const stageController = new StageController();
+    const session = await this.getSession(sessionId, eventId);
+    return await stageController.getStage(session.stageId, eventId);
   }
 }

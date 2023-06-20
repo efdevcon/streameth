@@ -1,6 +1,10 @@
 import Stage from "@/services/model/stage";
 import SessionController from "@/services/controller/session";
-import { InformationCircleIcon, ChatBubbleBottomCenterIcon, CalendarIcon } from "@heroicons/react/24/outline";
+import {
+  InformationCircleIcon,
+  ChatBubbleBottomCenterIcon,
+  CalendarIcon,
+} from "@heroicons/react/24/outline";
 import SessionList from "@/components/sessions/SessionList";
 import Chat from "@/plugins/Chat";
 import Player from "./Player";
@@ -31,7 +35,7 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
             {
               id: "info",
               header: <InformationCircleIcon className="h-8 w-8" />,
-              content: <StageSessionInfoBox session={currentSession} />
+              content: <StageSessionInfoBox session={currentSession} />,
             },
             {
               id: "chat",

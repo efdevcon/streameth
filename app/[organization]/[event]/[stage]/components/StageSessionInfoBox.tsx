@@ -6,8 +6,16 @@ import SpeakerIcon from "@/components/speakers/SpeakerIcon";
 import EmbedSessionModal from "@/components/sessions/EmbedSession";
 import { ModalContext } from "@/components/context/ModalContext";
 
-const StageSessionInfoBox = ({ session }: { session: Session }) => {
+const StageSessionInfoBox = ({ session }: { session: Session | undefined }) => {
   const modal = useContext(ModalContext);
+
+  if(!session) {
+    return (
+      <div className="w-full h-full flex justify-center items-center">
+        <p>There are no sessions scheduled for this stage.</p>
+      </div>
+    )
+  }
   return (
     <div className="flex flex-col">
       <div className="flex flex-col">
