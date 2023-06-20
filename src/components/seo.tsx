@@ -15,7 +15,7 @@ export function SEO(props: Props) {
   const router = useRouter()
   const title = props.title ? `${props.title} · ${siteTitle}` : siteTitle
   const description = props.description || siteDesc
-  const image = props.imageUrl || `${SITE_URL}images/default.png`
+  const image = props.imageUrl || `${SITE_URL}images/hyperlink.png`
   const url = router.route === '/' ? SITE_URL : SITE_URL.replace(/\/$/, '') + router.asPath.split('?')[0]
 
   return (
