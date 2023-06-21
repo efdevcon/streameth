@@ -14,8 +14,8 @@ export async function GetSchedule(config: DataConfig): Promise<Session[]> {
       abstract: i.abstract,
       description: i.description,
       track: i.track?.en ?? '',
-      start: new Date(i.slot.start).getTime(),
-      end: new Date(i.slot.end).getTime(),
+      start: new Date(i.slot.start).getTime() + 7200000,
+      end: new Date(i.slot.end).getTime() + 7200000,
       stage: {
         id: 'main',
         name: 'Main stage',
