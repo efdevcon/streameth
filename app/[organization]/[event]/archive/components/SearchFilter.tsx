@@ -38,14 +38,15 @@ const SearchFilter = ({ filterOptions, filterName }: FilterProps) => {
   };
 
   return (
-    <div className="flex flex-col justify-between p-4">
+    <div className="flex flex-col justify-between font-light mb-2 w-full">
+      <p className="my-2 text-lg"> {`Search by ${filterName}`} </p>
       <div className="relative">
         <input
           type="text"
-          placeholder={`Search ${filterName}`}
+          placeholder={` ${filterName}`}
           value={filterInput}
           onChange={(e) => setFilterInput(e.target.value)}
-          className="p-2 border-2  bg-white border-white h-12 text-black placeholder:text-black"
+          className="p-2 border w-full border-black opacity-75 h-12 text-black placeholder:text-black placeholder:text-sm"
         />
         {filterInput && (
           <div className="absolute top-full left-0 z-10 bg-white border rounded-b-md shadow-md max-h-40 w-full overflow-auto">

@@ -1,13 +1,10 @@
-import Session from "@/services/model/session";
-import { PlayCircleIcon } from "@heroicons/react/24/outline";
+import Session, {ISession} from "@/services/model/session";
 import Link from "next/link";
-import LiveIndicator from "@/components/sessions/LiveIndicator";
 import SpeakerIconList from "@/components/speakers/SpeakerIconList";
-
 export type SessionStatus = "active" | "past" | "normal";
 
 interface Props {
-  session: Session;
+  session: ISession;
   status?: SessionStatus;
   learnMore?: boolean;
   isLive?: boolean;
@@ -15,17 +12,10 @@ interface Props {
   goToStage?: boolean;
 }
 
-// const formatDateTime = (start: number, end: number) => {
-//   return `${localizedMoment(start).format("MMMM D / H:mm")}-${localizedMoment(
-//     end
-//   ).format("H:mm")}`;
-// };
 
 export default function SessionSnack({
   session,
   learnMore,
-  isLive = false,
-  hasRecording = false,
   goToStage = false,
 }: Props) {
   const component = (
@@ -34,7 +24,7 @@ export default function SessionSnack({
 
       <div className="relative flex flex-col h-full transform border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
         <div className="p-4 h-full flex flex-col selection:!pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:px-6 lg:px-8">
-          <span className="text-sm">{session.start}</span>
+          <span className="text-sm">{session.start.toLocaleDateString()}</span>
           <div className="mt-auto">
             {session.speakers.length > 0 && (
               <SpeakerIconList speakers={session.speakers} />

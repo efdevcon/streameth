@@ -4,6 +4,7 @@ import StageController from "@/services/controller/stage";
 
 import SearchFilter from "./SearchFilter";
 import SelectFilter from "./SelectFilter";
+import NavigationBarWrapper from "./NavigationBarWrapper";
 
 export default async function FilterBar({ eventId }: { eventId: string }) {
   const speakerController = new SpeakerController();
@@ -28,7 +29,7 @@ export default async function FilterBar({ eventId }: { eventId: string }) {
 
   const sessionDateFilters = () => {
     const uniqueDates = Array.from(
-      new Set(sessions.map((session) => session.getSessionDate().start))
+      new Set(sessions.map((session) => session.start.toLocaleDateString()))
     );
 
     uniqueDates.sort((a, b) => {
@@ -61,8 +62,19 @@ export default async function FilterBar({ eventId }: { eventId: string }) {
   });
 
   return (
-    <>
-      <div className="md:flex flex-row flex-wrap w-full relative bg-black opacity-75 p-4 items-center justify-center hidden">
+    <NavigationBarWrapper>
+      <div className="md:flex flex-col w-full relative p-4 ">
+        <SearchFilter
+          index={2}
+          filterOptions={sessionFilters}
+          filterName="session name"
+        />
+        <SearchFilter
+          index={1}
+          filterOptions={speakerFilters}
+          filterName="speaker"
+        />
+        <p className="text-lg my-2 font-light">More filters</p>
         <SelectFilter
           index={0}
           filterOptions={stageFilters}
@@ -73,49 +85,12 @@ export default async function FilterBar({ eventId }: { eventId: string }) {
           filterOptions={sessionDateFilters()}
           filterName="Date"
         />
-        <SearchFilter
-          index={1}
-          filterOptions={speakerFilters}
-          filterName="Speaker"
-        />
-        <SearchFilter
-          index={2}
-          filterOptions={sessionFilters}
-          filterName="Session name"
-        />
         <SelectFilter
           index={3}
           filterOptions={trackFilter}
           filterName="Track"
         />
       </div>
-      <div className="md:hidden flex flex-row flex-wrap w-full relative bg-black opacity-75 p-4 items-center justify-center">
-        <SelectFilter
-          index={0}
-          filterOptions={stageFilters}
-          filterName="Stage"
-        />
-        <SelectFilter
-          index={1}
-          filterOptions={sessionDateFilters()}
-          filterName="Date"
-        />
-        <SearchFilter
-          index={1}
-          filterOptions={speakerFilters}
-          filterName="Speaker"
-        />
-        <SearchFilter
-          index={2}
-          filterOptions={sessionFilters}
-          filterName="Session name"
-        />
-        <SelectFilter
-          index={3}
-          filterOptions={trackFilter}
-          filterName="Track"
-        />
-      </div>
-    </>
+    </NavigationBarWrapper>
   );
 }

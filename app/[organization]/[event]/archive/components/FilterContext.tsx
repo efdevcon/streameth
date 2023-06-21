@@ -5,7 +5,7 @@ import React, {
   useEffect,
   SetStateAction,
 } from "react";
-import Session from "@/services/model/session";
+import {ISession} from "@/services/model/session";
 
 export interface FilterOption {
   name: string;
@@ -14,8 +14,8 @@ export interface FilterOption {
 }
 
 const FilterContext = createContext<{
-  sessions: Session[];
-  filteredSessions: Session[];
+  sessions: ISession[];
+  filteredSessions: ISession[];
   filterOptions: FilterOption[];
   setFilterOptions: React.Dispatch<SetStateAction<FilterOption[]>>;
 }>({
@@ -31,13 +31,13 @@ const FilterContextProvider = ({
   sessions,
 }: {
   children: React.ReactNode;
-  sessions: Session[];
+  sessions: ISession[];
 }) => {
   const [filterOptions, setFilterOptions] = useState<FilterOption[]>([]);
-  const [filteredSessions, setFilteredSessions] = useState<Session[]>(sessions);
+  const [filteredSessions, setFilteredSessions] = useState<ISession[]>(sessions);
 
   const filterSessions = () => {
-    let returnSessions: Session[] = sessions;
+    let returnSessions: ISession[] = sessions;
 
     if (filterOptions.length > 0) {
       for (const filterOption of filterOptions) {
@@ -51,11 +51,10 @@ const FilterContextProvider = ({
             );
           }
           if (filterOption.type === "name") {
-            return session.id === filterOption.value;
+            return session.name === filterOption.value;
           }
           if (filterOption.type === "date") {
-            console.log(session)
-            return new Date(session.start).toDateString() === filterOption.value;
+            return session.start.toLocaleDateString() === filterOption.value;
           }
           if (filterOption.type === "track") {
             if (session.track !== undefined) {

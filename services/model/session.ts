@@ -60,8 +60,8 @@ export default class Session implements ISession {
     this.id = generateId(name);
     this.name = name;
     this.description = description;
-    this.start = start;
-    this.end = end;
+    this.start = new Date(start);
+    this.end = new Date(end);
     this.stageId = stageId;
     this.speakers = speakers;
     this.videoUrl = videoUrl;
@@ -77,22 +77,16 @@ export default class Session implements ISession {
     }
   }
 
-  toJson(): string {
-    return JSON.stringify(this);
+  toJson(): ISession {
+    return { ...this };
   }
 
-  getSessionDate(): {start: string, end: string} {
-    return {
-      start: new Date(this.start).toDateString(),
-      end: new Date(this.end).toISOString()
-    }
+  static getSessionDate(date: Date): string {
+    return new Date(date).toISOString();
   }
 
-  getSessionTime(): {start: string, end: string} {
-    return {
-      start: this.start.toLocaleTimeString(),
-      end: this.end.toLocaleTimeString()
-    }
+  static getSessionTime(date: Date): string {
+    return date.toLocaleTimeString();
   }
 
   static async fromJson(jsonData: string | Promise<Session>) {
@@ -113,6 +107,4 @@ export default class Session implements ISession {
     }
     return path.join(BASE_PATH, "sessions", eventId);
   }
-
-
 }

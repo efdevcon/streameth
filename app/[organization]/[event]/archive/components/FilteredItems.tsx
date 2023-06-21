@@ -8,9 +8,9 @@ const FilteredItems = () => {
   const { filteredSessions } = useContext(FilterContext);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-y-scroll">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {filteredSessions.map((session) => {
-        return <SessionSnack session={session} isLive={false} />;
+        return <SessionSnack key={session.id} session={session} isLive={false} />;
       })}
     </div>
   );
