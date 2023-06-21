@@ -55,32 +55,43 @@ export function useSessions(initFilters: Filter[] = []) {
   }
 
   const sessions = useMemo(() => {
-    let filteredSessions = [...allSessions].map((session) => ({
-      ...session,
-      status: getSessionStatus(localizedMoment(session.start).toDate(), localizedMoment(session.end).toDate()),
-    }))
-    return filteredSessions.filter((session) => {
-      if (filters.length === 0) {
-        return true
-      }
-      return filters.every((filter) => {
-        switch (filter.type) {
-          case 'day':
-            return startOfDay(session.start) - filter.value === 0
-          case 'stage':
-            return session.stage.id === filter.value
-          case 'speaker':
-            return session.speakers.some((speaker) => speaker.name === filter.value)
-          case 'time':
-            return session.start == filter.value
-          case 'recording':
-            return filter.value === 'yes' ? !!session.video : !session.video
-          case 'track':
-            return session.track === filter.value
-          default:
-            return false
+    let filteredSessions = [...allSessions]
+      .map((session) => ({
+        ...session,
+        status: getSessionStatus(localizedMoment(session.start).toDate(), localizedMoment(session.end).toDate()),
+      }))
+      .filter((session) => {
+        if (filters.length === 0) {
+          return true
         }
+        return filters.every((filter) => {
+          switch (filter.type) {
+            case 'day':
+              return startOfDay(session.start) - filter.value === 0
+            case 'stage':
+              return session.stage.id === filter.value
+            case 'speaker':
+              return session.speakers.some((speaker) => speaker.name === filter.value)
+            case 'time':
+              return session.start == filter.value
+            case 'recording':
+              return filter.value === 'yes' ? !!session.video : !session.video
+            case 'track':
+              return session.track === filter.value
+            default:
+              return false
+          }
+        })
       })
+
+    return filteredSessions.sort((a, b) => {
+      if (a.start < b.start) {
+        return -1
+      } else if (a.start > b.start) {
+        return 1
+      } else {
+        return 0
+      }
     })
   }, [allSessions, filters])
 
@@ -107,7 +118,6 @@ export function useSessions(initFilters: Filter[] = []) {
       return currentTime.isBetween(start, end)
     })
   }, [sessions])
-
 
   return {
     sessions,
