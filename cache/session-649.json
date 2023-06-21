@@ -1,10 +1,19 @@
 {
   "id": "649",
-  "name": "Brainstorming: optimal DAO Legal Wrappers & regulation",
-  "description": "<p>We want to brainstorm about how to best create DAO regulation and legal wrappers in any jurisdiction. <br>\nWe might also get into designing crypto laws. This will we very much participants driven.<br>\nNiklas is running this together with Florian Langmann. We want to take the findings and iterate on them in the legal engineering event we run may10th-12th at Prospera.</p>",
-  "track": "New Cities & Network States",
-  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
-  "start": 1683028800000,
-  "end": 1683032400000,
-  "speakers": [{ "id": "Niklas Anzinger", "name": "Niklas Anzinger" }]
+  "name": "What ZK can do for us: Privately Authenticating Real People (without third parties) and Auditing ML",
+  "description": "cryptoxai.wtf",
+  "track": "AI x Crypto",
+  "stage": {
+    "id": "Lighthouse",
+    "name": "Lighthouse",
+    "stream": [
+      {
+        "id": ""
+      }
+    ]
+  },
+  "start": 1683444600000,
+  "end": 1683448200000,
+  "speakers": [{ "id": "Daniel Kang", "name": "Daniel Kang" }],
+  "video": "https://lp-playback.com/hls/2393wt2vpnp3mjtw/index.m3u8"
 }

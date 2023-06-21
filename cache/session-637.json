@@ -1,13 +1,21 @@
 {
   "id": "637",
-  "name": "Supporting Zuzalu Projects Dinner",
-  "description": "<p>Many projects are being launched at Zuzalu!&nbsp;</p>\n<p>For anyone who wants to support these projects, we will discuss how to collaborate, help people set up their Gitcoin passports (takes five minutes), and then donations to these projects will be matched by Gitcoin quadratically.&nbsp;</p>\n<p>If a group of 10 people each donates 10 dollars to a project that can raise thousands of dollars of matched funds for that project.&nbsp;</p>",
-  "track": "Open Sessions",
-  "stage": { "id": "0", "name": "Unknown", "stream": [{ "id": "" }] },
-  "start": 1683045000000,
-  "end": 1683048600000,
+  "name": "CryptoXai.wtf - Vitalik",
+  "description": "<p>cryptoxai.wtf</p>",
+  "track": "AI x Crypto",
+  "stage": {
+    "id": "Lighthouse",
+    "name": "Lighthouse",
+    "stream": [
+      {
+        "id": ""
+      }
+    ]
+  },
+  "start": 1683444600000,
+  "end": 1683448200000,
   "speakers": [
-    { "id": "Colton Orr", "name": "Colton Orr" },
-    { "id": "Noah Chon Lee", "name": "Noah Chon Lee" }
-  ]
+    { "id": "Vitalik Buterin", "name": "Vitalik Buterin" }
+  ],
+  "video": "https://lp-playback.com/hls/3b8ayqywwdqznzlf/index.m3u8"
 }

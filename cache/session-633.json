@@ -1,6 +1,6 @@
 {
   "id": "633",
-  "name": "CryptoXai.wtf",
+  "name": "CryptoXai.wtf - Daniel Kang",
   "description": "<p>cryptoxai.wtf</p>",
   "track": "AI x Crypto",
   "stage": {
@@ -16,8 +16,9 @@
   "end": 1683448200000,
   "speakers": [
     {
-      "id": "Danning Sui",
-      "name": "Danning Sui"
+      "id": "Daniel Kang",
+      "name": "Daniel Kang"
     }
-  ]
+  ],
+  "video": "https://lp-playback.com/hls/0735b090w67ohvr3/index.m3u8"
 }

@@ -1,7 +1,7 @@
 {
   "id": "683",
-  "name": "Intro & panel on X-risks with Jaan Tallinn Tallinn & Vitalik Buterin",
-  "description": "<p>Intro &amp; panel on X-risks with Jaan Tallinn Tallinn &amp; Vitalik Buterin</p>",
+  "name": "Intro & panel on X-risks with Jaan Tallinn & Vitalik Buterin",
+  "description": "<p>Intro &amp; panel on X-risks with Jaan Tallinn; Vitalik Buterin</p>",
   "track": "AI x Crypto",
   "stage": { "id": "Dome", "name": "Dome", "stream": [{ "id": "dd91a031-33e3-4567-aa35-d8df14a030f4" }] },
   "start": 1683274500000,

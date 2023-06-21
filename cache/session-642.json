@@ -1,10 +1,19 @@
 {
   "id": "642",
-  "name": "Building the Network State",
-  "description": "<p>What exactly is a network state and how do you build one?</p>\n<p><a href=\"https://twitter.com/_TomHoward\">Tom</a> sh ares learnings from various network state efforts on how to start, build, and grow a network state.</p>\n<p>11am - Part 1: What is a Network State and How to Build One</p>\n<p>11:30am - Part 2: MetaJurisdictions: Network States for Businesses</p>\n<p>Register here: https://lu.ma/btns-montenegro</p>",
-  "track": "New Cities & Network States",
-  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
-  "start": 1683018000000,
-  "end": 1683021600000,
-  "speakers": [{ "id": "Tom Howard", "name": "Tom Howard" }]
+  "name": "Reform AI Alignment",
+  "description": "cryptoxai.wtf",
+  "track": "AI x Crypto",
+  "stage": {
+    "id": "Lighthouse",
+    "name": "Lighthouse",
+    "stream": [
+      {
+        "id": ""
+      }
+    ]
+  },
+  "start": 1683444600000,
+  "end": 1683448200000,
+  "speakers": [{ "id": "Scott Aaronson", "name": "Scott Aaronson" }],
+  "video": "https://lp-playback.com/hls/34b6z9efadyd6274/index.m3u8"
 }
