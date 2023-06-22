@@ -15,7 +15,8 @@ export class ConfigController {
       data: {
         type: ConfigController.validateDataConfigType(getEnvVar('NEXT_PUBLIC_DATA_CONFIG_TYPE')),
         config: {
-          apiBaseUri: getEnvVar('NEXT_PUBLIC_DATA_CONFIG_apiBaseUri'),
+          sheetId: getEnvVar('NEXT_PUBLIC_DATA_CONFIG_SHEETID'),
+          apiToken: getEnvVar('GOOGLE_API_KEY'),
         },
       },
       plugins: [],
