@@ -44,7 +44,7 @@ export default function ScheduleComponent() {
   useEffect(() => {
     if (tabsRef[currentIndex].current) {
       // @ts-ignore
-      tabsRef[currentIndex].current.scrollIntoView({ behavior: 'smooth' }) 
+      tabsRef[currentIndex].current.scrollIntoView({ behavior: 'smooth' })
     }
   }, [currentIndex])
 
@@ -70,18 +70,16 @@ export default function ScheduleComponent() {
               <p className="m-auto">No sessions have been uploaded yet</p>
             </div>
           )}
-
           {allDates.map((date, index) => {
-            return (
-              <div key={date} ref={tabsRef[index]} >
-                {extractAllSessionTimes(
-                  sessions.filter((session) => {
-                    const sessionDate = new Date(session.start)
-                    const sessionDateString = sessionDate.toISOString().split('T')[0]
+            const sessionsForDate = sessions.filter((session) => {
+              const sessionDate = new Date(session.start)
+              const sessionDateString = sessionDate.toISOString().split('T')[0]
+              return sessionDateString === date
+            })
 
-                    return sessionDateString === date
-                  })
-                ).map((time) => (
+            return (
+              <div key={date} ref={tabsRef[index]} style={{ display: index === currentIndex ? 'block' : 'none' }}>
+                {extractAllSessionTimes(sessionsForDate).map((time) => (
                   <div className="my-2 flex flex-col md:flex-row" key={time} ref={currentSession?.start === time ? scrollIntoViewRef : null}>
                     <p className="text-lg text-center p-2 bg-black text-white w-full md:max-w-[6rem] opacity-80">
                       {localizedMoment(time).format('h:mm a')}
