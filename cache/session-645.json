@@ -1,10 +1,19 @@
 {
   "id": "645",
-  "name": "Charter Cities Office Hours",
-  "description": "<p>bring a project or project idea in the charter city / competitive governance space that you're working on / considering, and jam with Patri Friedman of Pronomos Capital to explore &amp; develop it.</p>",
-  "track": "New Cities & Network States",
-  "stage": { "id": "Board Room", "name": "Board Room", "stream": [{ "id": "fe9970f6-1dee-40e1-8e9f-5bc99fed7dec" }] },
-  "start": 1683021600000,
-  "end": 1683025200000,
-  "speakers": [{ "id": "Patri Friedman", "name": "Patri Friedman" }]
+  "name": "It’s Too Late… MEV has Already Achieved AGI",
+  "description": "cryptoxai.wtf",
+  "track": "AI x Crypto",
+  "stage": {
+    "id": "Lighthouse",
+    "name": "Lighthouse",
+    "stream": [
+      {
+        "id": ""
+      }
+    ]
+  },
+  "start": 1683444600000,
+  "end": 1683448200000,
+  "speakers": [{ "id": "Phil Daian", "name": "Phil Daian" }],
+  "video": "https://lp-playback.com/hls/d507akyh73c5cktw/index.m3u8"
 }
