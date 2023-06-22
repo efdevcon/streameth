@@ -66,9 +66,6 @@ async function getSheetName(config: DataConfig) {
 }
 
 async function getDataForRange(config: DataConfig, sheetName: string, range: string): Promise<any> {
-  const localCache = await getLocalJsonCache(range)
-  if (localCache) return localCache
-
   const sheets = await connectToGoogleSheets(config)
   // const sheetName = await getSheetName(config)
   const sheetId = config['sheetId'] as string
@@ -125,6 +122,8 @@ export async function getSessions(config: DataConfig): Promise<Session[]> {
 
   return data.map((row: any) => {
     const [id, Name, Description, stageId, Day, Start, End, Speaker1, Speaker2, Speaker3, Speaker4, Speaker5, Speaker6, video] = row
+    if (GetSlug(id) === '') return null
+    console.log(GetSlug(id))
     const speakersRaw = [Speaker1, Speaker2, Speaker3, Speaker4, Speaker5].map((id: string) => {
       let speaker
 
@@ -151,7 +150,7 @@ export async function getSessions(config: DataConfig): Promise<Session[]> {
       if (!stage) throw new Error(`No stage found for id ${stageId}`)
     } catch (error) {
       console.error(error)
-      stage = null
+      return null
     }
 
     const start = datetimeToUnixTimestamp(`${Day} ${Start}`)
@@ -170,5 +169,7 @@ export async function getSessions(config: DataConfig): Promise<Session[]> {
 }
 
 export async function GetSchedule(config: DataConfig): Promise<Session[]> {
-  return await getSessions(config)
+  const a = await getSessions(config)
+  console.log(a)
+  return a.filter((i) => i !== null)
 }
