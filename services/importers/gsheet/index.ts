@@ -119,6 +119,7 @@ export default class Importer extends BaseImporter {
         Speaker5,
         video,
       ] = row;
+      console.log(row);
 
       const speakerIdsRaw = [Speaker1, Speaker2, Speaker3, Speaker4, Speaker5];
       const speakerIds = speakerIdsRaw.map((speakerId) => {
@@ -151,7 +152,6 @@ export default class Importer extends BaseImporter {
         videoUrl: video,
       };
 
-      // Added await here
       try {
         await this.sessionController.createSession(session);
       } catch (e) {

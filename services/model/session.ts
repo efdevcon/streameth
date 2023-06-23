@@ -13,6 +13,7 @@ export interface ISession {
   stageId: IStage["id"];
   speakers: Speaker[];
   videoUrl?: string;
+  playbackId?: string;
   eventId: IEvent["id"];
   track?: string[];
 }
@@ -41,6 +42,8 @@ export default class Session implements ISession {
 
   videoUrl?: string;
 
+  playbackId?: string;
+
   @IsNotEmpty()
   eventId: IEvent["id"];
 
@@ -54,6 +57,7 @@ export default class Session implements ISession {
     stageId,
     speakers,
     videoUrl,
+    playbackId,
     eventId,
     track,
   }: Omit<ISession, "id"> & { id?: string }) {
@@ -65,6 +69,7 @@ export default class Session implements ISession {
     this.stageId = stageId;
     this.speakers = speakers;
     this.videoUrl = videoUrl;
+    this.playbackId = this.getPlaybackId();
     this.eventId = eventId;
     this.track = track;
     this.validateThis();
@@ -79,6 +84,16 @@ export default class Session implements ISession {
 
   toJson(): ISession {
     return { ...this };
+  }
+
+  getPlaybackId(): string {
+    if (this.playbackId) {
+      return this.playbackId;
+    } else if (this.videoUrl) {
+      // https://lp-playback.com/hls/73e7hmd7ch7k8bnw/index.m3u8
+      return this.videoUrl.split("/").pop();
+    }
+    return "";
   }
 
   static getSessionDate(date: Date): string {

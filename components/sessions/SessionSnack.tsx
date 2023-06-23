@@ -15,11 +15,11 @@ interface Props {
 
 export default function SessionSnack({
   session,
-  learnMore,
+  learnMore = false,
   goToStage = false,
 }: Props) {
   const component = (
-    <a href="" className="group relative block h-64">
+    <div className="group relative block h-64">
       <span className="absolute inset-0 border-2 border-dashed border-black"></span>
 
       <div className="relative flex flex-col h-full transform border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
@@ -43,11 +43,11 @@ export default function SessionSnack({
           <p className="mt-4 text-sm sm:text-base">{session.description}</p>
         </div>
       </div>
-    </a>
+    </div>
   );
 
   if (learnMore)
-    return <Link href={"/session/" + session.id}>{component}</Link>;
+    return <Link href={"session/" + session.id}>{component}</Link>;
   if (goToStage)
     return <Link href={"/stage/" + session.stageId}>{component}</Link>;
   return component;

@@ -1,6 +1,5 @@
 // `app` directory
-import StageLayout from "@/app/[organization]/[event]/[stage]/components/StageLayout";
-import StageController from "@/services/controller/stage";
+import StageLayout from "@/app/[organization]/[event]/stage/[stage]/components/StageLayout";
 import OrganizationController from "@/services/controller/organization";
 import Stage from "@/services/model/stage";
 interface Params {

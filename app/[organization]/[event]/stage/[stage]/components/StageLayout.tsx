@@ -7,19 +7,38 @@ import {
 } from "@heroicons/react/24/outline";
 import SessionList from "@/components/sessions/SessionList";
 import Chat from "@/plugins/Chat";
-import Player from "./Player";
-import StageTabs from "./StageTabs";
-import StageSessionInfoBox from "./StageSessionInfoBox";
+import Player from "@/components/misc/Player";
+import StageTabs from "@/components/Layout/PluginBar";
+import StageSessionInfoBox from "@/components/sessions/SessionInfoBox";
+
 export default async function StageLayout({ stage }: { stage: Stage }) {
   const sessionController = new SessionController();
-  const currentSession = await sessionController.getCurrentSessionForStage(
-    stage.id,
-    stage.eventId
-  );
-  const sessions = await sessionController.getSessionsForStage(
-    stage.id,
-    stage.eventId
-  );
+  const getCurrentSessionForStage = async () => {
+    const sessions = await sessionController.getAllSessionsForEvent(
+      stage.eventId
+    );
+    const stageSessions = sessions.filter((ses) => ses.stageId === stage.id);
+    for (const session of stageSessions) {
+      const now = new Date();
+      if (session.start <= now && session.end >= now) {
+        return session;
+      }
+    }
+    return undefined;
+  };
+
+  const currentSession = await getCurrentSessionForStage();
+
+  const getSessionsForStage = async () => {
+    const sessions = await sessionController.getAllSessionsForEvent(
+      stage.eventId
+    );
+    const stageSessions = sessions.filter((ses) => ses.stageId === stage.id);
+    const now = new Date();
+    return stageSessions.filter((ses) => ses.end >= now);
+  };
+
+  const sessions = await getSessionsForStage();
 
   return (
     <div className="flex flex-col w-full max-h-full lg:flex-row relative">

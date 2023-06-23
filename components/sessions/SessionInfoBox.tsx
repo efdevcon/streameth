@@ -1,12 +1,12 @@
 "use client"
 import { useContext } from "react";
-import Session from "@/services/model/session";
+import {ISession} from "@/services/model/session";
 import { ShareIcon } from "@heroicons/react/24/outline";
 import SpeakerIcon from "@/components/speakers/SpeakerIcon";
 import EmbedSessionModal from "@/components/sessions/EmbedSession";
 import { ModalContext } from "@/components/context/ModalContext";
 
-const StageSessionInfoBox = ({ session }: { session: Session | undefined }) => {
+const SessionInfoBox = ({ session }: { session: ISession | undefined }) => {
   const modal = useContext(ModalContext);
 
   if(!session) {
@@ -45,4 +45,4 @@ const StageSessionInfoBox = ({ session }: { session: Session | undefined }) => 
   );
 };
 
-export default StageSessionInfoBox;
+export default SessionInfoBox;

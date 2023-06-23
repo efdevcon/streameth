@@ -6,10 +6,6 @@ import Image from "next/image";
 import WalletSignIn from "@/components/misc/WalletSignIn";
 import img from "@/public/logo.png";
 
-function classNameNames(...classNamees: string[]) {
-  return classNamees.filter(Boolean).join(" ");
-}
-
 export default function Navbar({
   pages,
 }: {
@@ -19,7 +15,6 @@ export default function Navbar({
   }[];
 }) {
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const extendedPages: { name: string; href: string }[] = [
     ...pages,

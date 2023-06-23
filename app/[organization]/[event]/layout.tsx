@@ -30,7 +30,7 @@ const Layout = async ({
   const stages = await stageController.getAllStagesForEvent(params.event);
   const pages = stages.map((stage) => {
     return {
-      href: `/${params.organization}/${stage.eventId}/${stage.id}`,
+      href: `/${params.organization}/${stage.eventId}/stage/${stage.id}`,
       name: stage.name,
     };
   });

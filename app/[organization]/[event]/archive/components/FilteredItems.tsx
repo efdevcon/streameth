@@ -10,7 +10,7 @@ const FilteredItems = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {filteredSessions.map((session) => {
-        return <SessionSnack key={session.id} session={session} isLive={false} />;
+        return <SessionSnack key={session.id} session={session} learnMore />;
       })}
     </div>
   );
