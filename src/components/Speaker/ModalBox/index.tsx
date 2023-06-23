@@ -13,7 +13,8 @@ export default function SpeakerModalBox({ speaker }: Props) {
 
   return (
     <div className={styles.box}>
-      {/* <SpeakerIcon speaker={speaker} size="md" /> */}
+      <SpeakerIcon speaker={speaker} size="md" /> 
+
       <div className={styles.name}>{speaker.name}</div>
       <div className={styles.description}>{speaker.description}</div>
     </div>

@@ -1,5 +1,6 @@
 import { Session, Stage } from 'types'
 import { DataConfig } from 'types/config'
+import videos from './videos.json'
 
 export async function GetSchedule(config: DataConfig): Promise<Session[]> {
   if (!config['apiBaseUri']) throw new Error('No valid apiBaseUri set for Pretalx module')
@@ -12,7 +13,7 @@ export async function GetSchedule(config: DataConfig): Promise<Session[]> {
       id: i.code,
       name: i.title,
       abstract: i.abstract,
-      description: i.description,
+      description: i.abstract,
       track: i.track?.en ?? '',
       start: new Date(i.slot.start).getTime() + 7200000,
       end: new Date(i.slot.end).getTime() + 7200000,
@@ -33,6 +34,8 @@ export async function GetSchedule(config: DataConfig): Promise<Session[]> {
           avatarUrl: x.avatar,
         }
       }),
+      // @ts-ignore
+      video: videos[i.code as string] ?? '',
     }
   })
 }
