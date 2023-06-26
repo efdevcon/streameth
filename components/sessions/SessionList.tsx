@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Session from "@/services/model/session";
 import Scroll, { Element } from "react-scroll";
 import Link from "next/link";
-
+import ScheduleCard from "../schedule/ScheduleCard";
 import SessionSnack from "@/components/sessions/SessionSnack";
 
 interface Props {
@@ -47,7 +47,7 @@ export default function SessionList({
         return (
           <Element key={i.id} name={i.id}>
             <li id={i.id} className="mb-3 text-lg">
-              <SessionSnack session={i} />
+              <ScheduleCard session={i} />
             </li>
           </Element>
         );

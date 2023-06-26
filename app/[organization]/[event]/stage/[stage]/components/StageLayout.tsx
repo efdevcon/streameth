@@ -62,14 +62,14 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
         <PluginBar
           tabs={[
             {
-              id: "chat",
-              header: <ChatBubbleBottomCenterIcon />,
-              content: <Chat conversationId={stage.id} />,
-            },
-            {
               id: "schedule",
               header: <CalendarIcon />,
               content: <SessionList sessions={sessions} />,
+            },
+            {
+              id: "chat",
+              header: <ChatBubbleBottomCenterIcon />,
+              content: <Chat conversationId={stage.id} />,
             },
           ]}
         />
