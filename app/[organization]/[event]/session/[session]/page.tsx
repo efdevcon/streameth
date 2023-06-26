@@ -33,7 +33,6 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: Params) {
   const sController = new SessionController();
-  console.log(params);
     const session = await sController.getSession(
       params.session,
       params.event

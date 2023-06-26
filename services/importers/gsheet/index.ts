@@ -8,7 +8,7 @@ const SPEAKER_DATA_RANGE = "A3:I";
 const STAGE_SHEET = "Stages";
 const STAGE_DATA_RANGE = "A3:D";
 const SESSION_SHEET = "Sessions";
-const SESSION_DATA_RANGE = "A3:M";
+const SESSION_DATA_RANGE = "A3:N";
 
 // Setting up a queue for the Google Sheets API
 // const API_QUEUE = new PQueue({ concurrency: 1, interval: 1500 });
@@ -117,9 +117,9 @@ export default class Importer extends BaseImporter {
         Speaker3,
         Speaker4,
         Speaker5,
+        Speaker6,
         video,
       ] = row;
-      console.log(row);
 
       const speakerIdsRaw = [Speaker1, Speaker2, Speaker3, Speaker4, Speaker5];
       const speakerIds = speakerIdsRaw.map((speakerId) => {

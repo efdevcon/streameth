@@ -22,7 +22,7 @@ export default function Navbar({
   ];
 
   return (
-    <header className="shadow-sm bg-black opacity-80">
+    <header className="shadow-sm bg-primary border-b-2 border-primary">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex items-center justify-between gap-4 lg:gap-10">
           <div className="flex lg:w-0 lg:flex-1">
@@ -51,7 +51,6 @@ export default function Navbar({
           <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
             <div className="relative bg-white hover:shadow-md shadow-slate-500 px-5 py-2 text-sm font-medium text-black">
               <span className="absolute bg-gray-300 hover:bg-white text-sm font-medium text-black h-full w-[90%] -z-20" />
-
               <WalletSignIn />
             </div>
           </div>

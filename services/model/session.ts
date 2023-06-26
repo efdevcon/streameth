@@ -91,7 +91,7 @@ export default class Session implements ISession {
       return this.playbackId;
     } else if (this.videoUrl) {
       // https://lp-playback.com/hls/73e7hmd7ch7k8bnw/index.m3u8
-      return this.videoUrl.split("/").pop();
+      return this.videoUrl.split("/")?.[4];
     }
     return "";
   }

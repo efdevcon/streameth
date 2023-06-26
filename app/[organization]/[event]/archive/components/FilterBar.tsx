@@ -64,6 +64,7 @@ export default async function FilterBar({ eventId }: { eventId: string }) {
   return (
     <NavigationBarWrapper>
       <div className="md:flex flex-col w-full relative p-4 ">
+        <p className="text-lg my-2 font-light text-secondary">Search</p>
         <SearchFilter
           index={2}
           filterOptions={sessionFilters}
@@ -74,7 +75,7 @@ export default async function FilterBar({ eventId }: { eventId: string }) {
           filterOptions={speakerFilters}
           filterName="speaker"
         />
-        <p className="text-lg my-2 font-light">More filters</p>
+        <p className="text-lg my-2 font-light text-secondary">More filters</p>
         <SelectFilter
           index={0}
           filterOptions={stageFilters}

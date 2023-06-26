@@ -39,24 +39,23 @@ const SearchFilter = ({ filterOptions, filterName }: FilterProps) => {
 
   return (
     <div className="flex flex-col justify-between font-light mb-2 w-full">
-      <p className="my-2 text-lg"> {`Search by ${filterName}`} </p>
       <div className="relative">
         <input
           type="text"
           placeholder={` ${filterName}`}
           value={filterInput}
           onChange={(e) => setFilterInput(e.target.value)}
-          className="p-2 border w-full border-black opacity-75 h-12 text-black placeholder:text-black placeholder:text-sm"
+          className="p-2 h-12 border w-full rounded bg-primary border-secondary text-secondary placeholder:text-secondary placeholder:text-sm"
         />
         {filterInput && (
-          <div className="absolute top-full left-0 z-10 bg-white border rounded-b-md shadow-md max-h-40 w-full overflow-auto">
+          <div className="absolute top-fullborder rounded-b-md shadow-md left-0 z-10 bg-primary  max-h-40 w-full overflow-auto">
             {filteredOptions().length === 0 ? (
               <div className=" py-1">{`No ${filterName} found`}</div>
             ) : (
               filteredOptions().map((option, index) => (
                 <div
                   key={index}
-                  className="cursor-pointer py-1 g-white dark:hover:bg-gray-800"
+                  className="cursor-pointer py-1"
                   onClick={() => handleOptionSelect(option)}
                 >
                   {option.name}

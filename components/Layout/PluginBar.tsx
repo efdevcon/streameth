@@ -35,7 +35,7 @@ export default function StageTabs({
         ))}
       </div>
       <div
-        className="flex flex-col w-full h-full overflow-y-scroll p-2 bg-white"
+        className="flex flex-col w-full h-full overflow-y-scroll p-2"
         key={selectedId}
       >
         {selectedTab.content}

@@ -27,9 +27,12 @@ const SelectFilter = ({ filterOptions, filterName }: FilterProps) => {
               filterOptions.find((option) => option.value === e.target.value)!
             )
           }
-          className="p-2 border w-full bg-white border-black opacity-75 h-12 text-black placeholder:text-black font-light text-sm"
+          className="p-2 h-12 border w-full rounded bg-primary border-secondary text-secondary placeholder:text-secondary placeholder:text-sm"
         >
-          <option value="" className="text-sm placeholder:font-thin ">{`Select ${filterName}`}</option>
+          <option
+            value=""
+            className=""
+          >{`Select ${filterName}`}</option>
           {filterOptions.map((option, index) => (
             <option
               key={index}
