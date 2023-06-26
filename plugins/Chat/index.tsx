@@ -12,21 +12,16 @@ const ChatBar = ({ conversationId }: { conversationId: string }) => {
   return (
     <>
       {isDisconnected ? (
-        <div className="relative h-full w-full flex justify-center items-center">
-          {/* <iframe
-            className=" bg-white h-[calc(100%-3.6rem)]"
+        <div className="relative flex flex-col h-96 w-full ">
+          <iframe
+            className=" rounded w-full p-4 h-80"
             src={`https://stingray-app-u9f8x.ondigitalocean.app/${conversationId}?isCastr=${true}`}
-          /> */}
-          <p style={{ opacity: 1 }}>Connect your account to chat</p>
-
-          {/* <div
-            className=" bg-black w-full h-full border-box p-2 flex flex-col justify-center items-center"
-            style={{ opacity: 0.5, position: "absolute", top: 0 }}
-          ></div> */}
+          />
         </div>
       ) : (
         <iframe
-          className="h-full"
+          className=" rounded w-full p-4 h-80"
+          style={{ height: "20rem" }}
           src={`https://stingray-app-u9f8x.ondigitalocean.app/${conversationId}?isCastr=${false}&address=${userAddress}`}
         />
       )}

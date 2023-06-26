@@ -8,9 +8,9 @@ import {
 import SessionList from "@/components/sessions/SessionList";
 import Chat from "@/plugins/Chat";
 import Player from "@/components/misc/Player";
-import StageTabs from "@/components/Layout/PluginBar";
+import PluginBar from "@/components/Layout/PluginBar";
 import StageSessionInfoBox from "@/components/sessions/SessionInfoBox";
-
+import SessionInfoBox from "@/components/sessions/SessionInfoBox";
 export default async function StageLayout({ stage }: { stage: Stage }) {
   const sessionController = new SessionController();
   const getCurrentSessionForStage = async () => {
@@ -24,10 +24,9 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
         return session;
       }
     }
-    return undefined;
+    // return last session if no current session
+    return stageSessions[stageSessions.length - 1];
   };
-
-  const currentSession = await getCurrentSessionForStage();
 
   const getSessionsForStage = async () => {
     const sessions = await sessionController.getAllSessionsForEvent(
@@ -39,37 +38,38 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
   };
 
   const sessions = await getSessionsForStage();
+  const currentSession = await getCurrentSessionForStage();
+
+  if (!currentSession) {
+    return (
+      <div>
+        <p>There are no sessions scheduled for this stage.</p>
+      </div>
+    );
+  }
 
   return (
-    <div className="flex flex-col w-full max-h-full lg:flex-row relative">
-      <Player
-        streamId={stage.streamSettings.streamId}
-        playerName={stage.name}
-      />
-      <StageSessionInfoBox session={currentSession} />
-      <div className="flex flex-col flex-grow box-border h-full overflow-y-scroll">
-        <StageTabs
+    <div className="flex flex-col w-full max-h-full h-full lg:flex-row relative overflow-y-scroll">
+      <div className="flex flex-col flex-grow h-full w-2/3 overflow-y-scroll box-border p-4 pr-2">
+        <div className="flex flex-col h-3/4 w-full ">
+          <Player playbackId={"eqwdq"} playerName={currentSession.name} />
+        </div>
+        <div className="h-1/4 mt-2">
+          <SessionInfoBox session={currentSession.toJson()} />
+        </div>
+      </div>
+      <div className="flex flex-col flex-grow box-border w-1/3 p-4 pl-2 h-full overflow-y-scroll">
+        <PluginBar
           tabs={[
             {
-              id: "info",
-              header: <InformationCircleIcon className="h-8 w-8" />,
-              content: <StageSessionInfoBox session={currentSession} />,
-            },
-            {
               id: "chat",
-              header: <ChatBubbleBottomCenterIcon className="h-8 w-8" />,
-              content: <Chat conversationId={stage.name} />,
+              header: <ChatBubbleBottomCenterIcon />,
+              content: <Chat conversationId={stage.id} />,
             },
             {
-              id: "Schedule",
-              header: <CalendarIcon className="h-8 w-8" />,
-              content: (
-                <SessionList
-                  sessions={sessions}
-                  currentSession={currentSession}
-                  isLive={false}
-                />
-              ),
+              id: "schedule",
+              header: <CalendarIcon />,
+              content: <SessionList sessions={sessions} />,
             },
           ]}
         />

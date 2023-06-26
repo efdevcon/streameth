@@ -9,7 +9,6 @@ import SessionSnack from "@/components/sessions/SessionSnack";
 interface Props {
   sessions: Session[];
   currentSession?: Session;
-  isLive: boolean;
 }
 
 const scroll = Scroll.scroller;
@@ -30,7 +29,6 @@ function NoSessionComponent() {
 export default function SessionList({
   sessions,
   currentSession,
-  isLive,
 }: Props) {
   useEffect(() => {
     if (currentSession) {
@@ -49,7 +47,7 @@ export default function SessionList({
         return (
           <Element key={i.id} name={i.id}>
             <li id={i.id} className="mb-3 text-lg">
-              <SessionSnack session={i} isLive={isLive} />
+              <SessionSnack session={i} />
             </li>
           </Element>
         );
