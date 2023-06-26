@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Metadata } from "next";
 import GeneralContext from "@/components/context/GeneralContext";
 import { ModalContextProvider } from "@/components/context/ModalContext";
+import Navbar from "@/components/Layout/NavbarTop";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,9 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
         <GeneralContext>
-          <ModalContextProvider>{children}</ModalContextProvider>
+          <ModalContextProvider>
+            <div className="bg-base flex flex-col h-screen w-screen overflow-hidden">
+              <Navbar />
+              {children}
+            </div>
+          </ModalContextProvider>
         </GeneralContext>
       </body>
     </html>

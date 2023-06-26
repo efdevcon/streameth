@@ -47,7 +47,7 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
         playerName={stage.name}
       />
       <StageSessionInfoBox session={currentSession} />
-      <div className="flex flex-col flex-grow box-border h-full overflow-y-scroll relative md:relative lg:relative  lg:w-2/5 xl:1/3 md:right-0">
+      <div className="flex flex-col flex-grow box-border h-full overflow-y-scroll">
         <StageTabs
           tabs={[
             {

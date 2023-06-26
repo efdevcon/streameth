@@ -54,22 +54,20 @@ export const Player = ({
   );
 
   return (
-    <div className="aspect-video rounded-lg">
-      <LivepeerPlayer
-        mediaElementRef={mediaElementRef}
-        objectFit="contain"
-        playbackId={playbackId}
-        showTitle={false}
-        showPipButton={false}
-        muted={false}
-        autoPlay
-        priority
-        lowLatency
-        viewerId={address}
-        poster={<OfflinePlayer />}
-        showLoadingSpinner={false}
-      />
-    </div>
+    <LivepeerPlayer
+      mediaElementRef={mediaElementRef}
+      objectFit="contain"
+      playbackId={playbackId}
+      showTitle={false}
+      showPipButton={false}
+      muted={false}
+      autoPlay
+      priority
+      lowLatency
+      viewerId={address}
+      poster={<OfflinePlayer />}
+      showLoadingSpinner={false}
+    />
   );
 };
 

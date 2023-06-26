@@ -18,12 +18,16 @@ export default async function SessionComponent({
   session: Session;
 }) {
   return (
-    <div className="flex flex-col w-full max-h-full lg:flex-row relative">
-      <div className="flex flex-col flex-grow box-border h-full overflow-y-scrollx">
-        <Player playbackId={session.playbackId} playerName={session.name} />
-        <SessionInfoBox session={session.toJson()} />
+    <div className="flex flex-col w-full max-h-full h-full lg:flex-row relative overflow-y-scroll">
+      <div className="flex flex-col flex-grow h-full w-3/4 overflow-y-scroll box-border p-4 pr-2">
+        <div className="flex flex-col h-3/4 w-full ">
+          <Player playbackId={session.playbackId} playerName={session.name} />
+        </div>
+        <div className="h-1/4 mt-2">
+          <SessionInfoBox session={session.toJson()} />
+        </div>
       </div>
-      <div className="flex flex-col flex-grow box-border h-full overflow-y-scroll relative md:relative lg:relative  lg:w-2/5 xl:1/3 md:right-0">
+      <div className="flex flex-col flex-grow box-border p-4 pl-2 h-full overflow-y-scroll">
         <SpeakerComponent session={session} />,
       </div>
     </div>

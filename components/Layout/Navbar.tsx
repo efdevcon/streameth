@@ -22,7 +22,7 @@ export default function Navbar({
   ];
 
   return (
-    <header className="shadow-sm bg-primary border-r border-secondary">
+    <header className="shadow-sm bg-primary border-r border-secondary absolute top-0 left-0 h-screen w-20">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex flex-col items-center justify-between gap-4 lg:gap-10">
           <a href="#">
@@ -45,15 +45,7 @@ export default function Navbar({
               </Link>
             ))}
           </nav>
-
-          <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
-            <div className="relative bg-white hover:shadow-md shadow-slate-500 px-5 py-2 text-sm font-medium text-black">
-              <span className="absolute bg-gray-300 hover:bg-white text-sm font-medium text-black h-full w-[90%] -z-20" />
-              <WalletSignIn />
-            </div>
-          </div>
-
-          <div className="lg:hidden">
+         <div className="lg:hidden">
             <button
               className="rounded-lg bg-gray-100 p-2 text-gray-600"
               type="button"
