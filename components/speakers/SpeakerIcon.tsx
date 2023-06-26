@@ -23,19 +23,13 @@ export default function SpeakerIcon({
   // TODO: Fix types avatar and avatarUrl
   const avatar = speaker.photo ?? CreateBlockie(speaker.name);
   return (
-    <div
-      className={`flex flex-row items-center text-sm ${
-        size === "sm" ? " h-8" : "w-12 h-12"
-      }`}
-    >
+    <div className={`flex flex-row items-center text-sm m-2 h-12`}>
       <div
         onClick={() => onSpeakerClick?.(speaker)}
-        className={`flex items-center justify-center bg-cover bg-no-repeat bg-center h-full w-8  ${
-          onSpeakerClick ? "cursor-pointer" : ""
-        }`}
+        className={`flex items-center justify-center bg-cover bg-no-repeat bg-center h-full w-12 rounded mr-2`}
         style={{ backgroundImage: `url('${avatar}')` }}
       />
-      <span className="border-t border-r border-b border-black opacity-80 h-full p-1 hover:text-white hover:border-black hover:bg-black ">{speaker.name}</span>
+      <span className="text-main-text font-md">{speaker.name}</span>
     </div>
   );
 }

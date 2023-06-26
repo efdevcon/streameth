@@ -22,19 +22,17 @@ export default function Navbar({
   ];
 
   return (
-    <header className="shadow-sm bg-primary border-b-2 border-primary">
+    <header className="shadow-sm bg-primary border-r border-secondary">
       <div className="mx-auto max-w-screen-xl p-4">
-        <div className="flex items-center justify-between gap-4 lg:gap-10">
-          <div className="flex lg:w-0 lg:flex-1">
-            <a href="#">
-              <span className="sr-only">Logo</span>
-              <Image src={img} alt="Logo" width={150} />
-            </a>
-          </div>
+        <div className="flex flex-col items-center justify-between gap-4 lg:gap-10">
+          <a href="#">
+            <span className="sr-only">Logo</span>
+            <Image src={img} alt="Logo" width={50} />
+          </a>
 
           <nav
             aria-label="Global"
-            className="hidden gap-8 text-md font-medium md:flex"
+            className="hidden gap-8 text-md font-medium md:flex flex-col"
           >
             {extendedPages.map((item) => (
               <Link

@@ -42,12 +42,11 @@ export default async function StageLayout({ stage }: { stage: Stage }) {
 
   return (
     <div className="flex flex-col w-full max-h-full lg:flex-row relative">
-      <div className="w-full md:h-full flex flex-col justify-center items-center bg-[#D9D9D9]">
-        <Player
-          streamId={stage.streamSettings.streamId}
-          playerName={stage.name}
-        />
-      </div>
+      <Player
+        streamId={stage.streamSettings.streamId}
+        playerName={stage.name}
+      />
+      <StageSessionInfoBox session={currentSession} />
       <div className="flex flex-col flex-grow box-border h-full overflow-y-scroll relative md:relative lg:relative  lg:w-2/5 xl:1/3 md:right-0">
         <StageTabs
           tabs={[

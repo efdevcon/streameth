@@ -36,9 +36,9 @@ const Layout = async ({
   });
 
   return (
-    <div className="min-h-screen flex flex-col h-screen w-screen">
+    <div className="min-h-screen flex flex-row h-screen w-screen">
       <Navbar pages={pages} />
-      <main className="flex-1 flex overflow-y-hidden md:overflow-y-scroll lg:overflow-hidden w-full bg-base opacity">{children}</main>
+      <main className="flex-1 flex overflow-y-hidden md:overflow-y-scroll lg:overflow-hidden w-full bg-base opacity p-4">{children}</main>
     </div>
   );
 };
