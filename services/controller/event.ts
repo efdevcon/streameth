@@ -19,10 +19,7 @@ export default class EventController {
 
   public async createEvent(event: Omit<IEvent, "id">): Promise<Event> {
     const org = new Event({ ...event });
-    const eventQuery = await Event.getEventPath(
-      org.id,
-      org.organizationId,
-    );
+    const eventQuery = await Event.getEventPath(org.id, org.organizationId);
     await this.controller.create(eventQuery, org);
     return org;
   }
@@ -54,18 +51,13 @@ export default class EventController {
     const { dataImporter } = event;
     if (!dataImporter) return;
     for (const importer of dataImporter) {
-      try {
-        const importedModule = await import(
-          `../importers/${importer.type}/index`
-        );
-        const Importer = importedModule.default;
-        // Not typesafe
-        const data = new Importer({ importer, event });
-        return await data.generateSessions();
-      } catch (e) {
-        console.error(e);
-        throw new Error("Unable to get session data...");
-      }
+      const importedModule = await import(
+        `../importers/${importer.type}/index`
+      );
+      const Importer = importedModule.default;
+      // Not typesafe
+      const data = new Importer({ importer, event });
+      return await data.generateSessions();
     }
   }
 }
