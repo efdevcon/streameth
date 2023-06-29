@@ -1,7 +1,10 @@
-import SessionController from "@/services/controller/session";
-import NavigationBar from "./components/FilterBar";
+import FilterBar from "./components/FilterBar";
 import FilteredItems from "./components/FilteredItems";
 import { FilterContextProvider } from "./components/FilterContext";
+import SpeakerController from "@/services/controller/speaker";
+import SessionController from "@/services/controller/session";
+import StageController from "@/services/controller/stage";
+
 interface Params {
   params: {
     event: string;
@@ -16,14 +19,28 @@ export default async function ArchivePage({ params }: Params) {
     return session.toJson();
   });
 
+  const speakerController = new SpeakerController();
+  const speakers = (
+    await speakerController.getAllSpeakersForEvent(params.event)
+  ).map((speaker) => {
+    return speaker.toJson();
+  });
+
+  const stageController = new StageController();
+  const stages = (await stageController.getAllStagesForEvent(params.event)).map(
+    (stage) => {
+      return stage.toJson();
+    }
+  );
+
   return (
     <div className="flex flex-col-reverse lg:flex-row w-full overflow-y-hidden">
-      <FilterContextProvider sessions={sessions}>
+      <FilterContextProvider items={sessions}>
         <div className="w-full   p-4 overflow-y-scroll">
-        <FilteredItems />
+          <FilteredItems />
         </div>
         <div className="w-full lg:w-1/3 lg:max-w-[25rem]">
-        <NavigationBar eventId={params.event} />
+          <FilterBar sessions={sessions} speakers={speakers} stages={stages} />
         </div>
       </FilterContextProvider>
     </div>

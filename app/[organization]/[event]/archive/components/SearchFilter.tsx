@@ -1,16 +1,19 @@
 "use client";
 import { useState, useContext } from "react";
 import { FilterContext, FilterOption } from "./FilterContext";
-
-interface FilterProps {
-  filterOptions: FilterOption[];
+import Session from "@/services/model/session";
+interface FilterProps<T> {
+  filterOptions: FilterOption<T>[];
   filterName: string;
 }
 
-const SearchFilter = ({ filterOptions, filterName }: FilterProps) => {
+const SearchFilter = <T extends object>({
+  filterOptions,
+  filterName,
+}: FilterProps<T>) => {
   const { setFilterOptions, filterOptions: currentFilterOptions } =
     useContext(FilterContext);
-  const [selectedItems, setSelectedItems] = useState<FilterOption[]>([]);
+  const [selectedItems, setSelectedItems] = useState<FilterOption<T>[]>([]);
   const [filterInput, setFilterInput] = useState<string>("");
 
   const filteredOptions = () => {
@@ -18,22 +21,20 @@ const SearchFilter = ({ filterOptions, filterName }: FilterProps) => {
       return filterOptions;
     }
     return filterOptions.filter((option) =>
-      option.value.toLowerCase().includes(filterInput.toLowerCase())
+      option.name.toLowerCase().includes(filterInput.toLowerCase())
     );
   };
 
-  const handleOptionSelect = (option: FilterOption) => {
+  const handleOptionSelect = (option: FilterOption<T>) => {
     setSelectedItems([...selectedItems, option]);
     setFilterInput("");
     setFilterOptions([...currentFilterOptions, option]);
   };
 
-  const handleOptionRemove = (option: FilterOption) => {
-    setSelectedItems(
-      selectedItems.filter((item) => item.value !== option.value)
-    );
+  const handleOptionRemove = (option: FilterOption<T>) => {
+    setSelectedItems(selectedItems.filter((item) => item.name !== option.name));
     setFilterOptions(
-      currentFilterOptions.filter((item) => item.value !== option.value)
+      currentFilterOptions.filter((item) => item.name !== option.name)
     );
   };
 
@@ -68,7 +69,7 @@ const SearchFilter = ({ filterOptions, filterName }: FilterProps) => {
       <div className="flex flex-row flex-wrap">
         {selectedItems.map((option, index) => (
           <div
-            key={`${option}-${index}`}
+            key={`${option.name}-${index}`}
             className="cursor-pointer p-1 m-1 border-2 border-black text-sm font-light text-white bg-black opacity-80"
             onClick={() => handleOptionRemove(option)}
           >

@@ -70,8 +70,8 @@ export default class Speaker implements ISpeaker {
     }
   }
 
-  toJson(): string {
-    return JSON.stringify(this);
+  toJson(): ISpeaker {
+    return { ...this };
   }
 
   static async fromJson(jsonData: string | Omit<ISpeaker, "id">) {

@@ -1,91 +1,61 @@
 "use client";
-import React, {
-  useState,
-  createContext,
-  useEffect,
-  SetStateAction,
-} from "react";
-import {ISession} from "@/services/model/session";
+import React, { useState, createContext, useEffect } from "react";
 
-export interface FilterOption {
+export interface FilterOption<T> {
   name: string;
-  value: string;
-  type: "stage" | "speaker" | "name" | "date" | "track";
+  // async function
+  filterFunc: (item: T) => Promise<boolean>;
 }
 
 const FilterContext = createContext<{
-  sessions: ISession[];
-  filteredSessions: ISession[];
-  filterOptions: FilterOption[];
-  setFilterOptions: React.Dispatch<SetStateAction<FilterOption[]>>;
+  items: any[];
+  filteredItems: any[];
+  filterOptions: FilterOption<any>[];
+  setFilterOptions: React.Dispatch<React.SetStateAction<FilterOption<any>[]>>;
 }>({
-  sessions: [],
-  filteredSessions: [],
+  items: [],
+  filteredItems: [],
   filterOptions: [],
   setFilterOptions: () => {},
 });
 
-
-const FilterContextProvider = ({
+const FilterContextProvider = <T extends object>({
   children,
-  sessions,
+  items,
 }: {
   children: React.ReactNode;
-  sessions: ISession[];
+  items: T[];
 }) => {
-  const [filterOptions, setFilterOptions] = useState<FilterOption[]>([]);
-  const [filteredSessions, setFilteredSessions] = useState<ISession[]>(sessions);
+  const [filterOptions, setFilterOptions] = useState<FilterOption<T>[]>([]);
+  const [filteredItems, setFilteredItems] = useState<T[]>(items);
 
-  const filterSessions = () => {
-    let returnSessions: ISession[] = sessions;
+  const filterItems = async () => {
+    let returnItems: T[] = [...items];
 
     if (filterOptions.length > 0) {
       for (const filterOption of filterOptions) {
-        returnSessions = returnSessions.filter((session) => {
-          if (filterOption.type === "stage") {
-            return session.stageId === filterOption.value;
-          }
-          if (filterOption.type === "speaker") {
-            return session.speakers.some(
-              (speaker) => speaker.id === filterOption.value
-            );
-          }
-          if (filterOption.type === "name") {
-            return session.name === filterOption.value;
-          }
-          if (filterOption.type === "date") {
-            return session.start.toLocaleDateString() === filterOption.value;
-          }
-          if (filterOption.type === "track") {
-            if (session.track !== undefined) {
-              return session.track.some(
-                (track) => track === filterOption.value
-              );
-            }
-          }
-
-          return false;
-        });
+        const filterResults = await Promise.all(
+          returnItems.map(async (item) => await filterOption.filterFunc(item))
+        );
+        returnItems = returnItems.filter((_, index) => filterResults[index]);
       }
     }
-    returnSessions = Array.from(new Set(returnSessions));
-    setFilteredSessions(returnSessions);
+    return returnItems;
   };
 
   useEffect(() => {
-    console.log("filterOptions", filterOptions);
-    filterSessions();
+    filterItems().then((items) => setFilteredItems(items));
   }, [filterOptions]);
 
   useEffect(() => {
-    console.log("sessions", sessions);
-  }, [sessions]);
+    console.log(filteredItems);
+  }, [filteredItems]);
 
   return (
     <FilterContext.Provider
       value={{
-        sessions,
-        filteredSessions,
+        items,
+        filteredItems,
         filterOptions,
         setFilterOptions,
       }}

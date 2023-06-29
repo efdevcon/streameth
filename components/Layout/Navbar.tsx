@@ -1,9 +1,7 @@
 "use client";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import WalletSignIn from "@/components/misc/WalletSignIn";
 import img from "@/public/logo.png";
 
 export default function Navbar({
@@ -18,17 +16,17 @@ export default function Navbar({
 
   const extendedPages: { name: string; href: string }[] = [
     ...pages,
-    { name: "Archive", href: "archive" },
+    { name: "Archive", href: "/archive" },
   ];
 
   return (
     <header className="shadow-sm bg-primary border-r border-secondary absolute top-0 left-0 h-screen w-20">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex flex-col items-center justify-between gap-4 lg:gap-10">
-          <a href="#">
+          <Link href="/">
             <span className="sr-only">Logo</span>
             <Image src={img} alt="Logo" width={50} />
-          </a>
+          </Link>
 
           <nav
             aria-label="Global"

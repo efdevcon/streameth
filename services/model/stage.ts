@@ -55,8 +55,8 @@ export default class Stage implements IStage {
     }
   }
 
-  toJson(): string {
-    return JSON.stringify(this);
+  toJson(): IStage {
+    return { ...this };
   }
 
   static async fromJson(jsonData: string | Omit<IStage, "id">) {

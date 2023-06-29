@@ -5,7 +5,7 @@ import img from "@/public/logo.png";
 
 export default function Navbar() {
   return (
-    <header className=" shadow-sm bg-primary border-b border-secondary w-full lg:w-[calc(100%-5rem)] ml-auto">
+    <header className=" shadow-sm bg-primary border-b border-secondary w-full ml-auto">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex flex-row items-center justify-between gap-4 lg:gap-10">
           <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">

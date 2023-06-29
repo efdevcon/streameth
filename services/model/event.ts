@@ -25,6 +25,7 @@ export interface IEvent {
   location: string;
   organizationId: IOrganization["id"];
   dataImporter?: IDataImporter[];
+  eventCover?: string;
 }
 
 export default class Event implements IEvent {
@@ -51,6 +52,8 @@ export default class Event implements IEvent {
 
   dataImporter: IDataImporter[] | undefined;
 
+  eventCover?: string;
+
   constructor({
     id,
     name,
@@ -60,15 +63,17 @@ export default class Event implements IEvent {
     location,
     organizationId,
     dataImporter,
+    eventCover,
   }: Omit<IEvent, "id"> & { id?: string }) {
     this.id = id ?? generateId(name);
     this.name = name;
     this.description = description;
-    this.start = start;
-    this.end = end;
+    this.start = new Date(start);
+    this.end = new Date(end);
     this.location = location;
     this.organizationId = organizationId;
     this.dataImporter = dataImporter;
+    this.eventCover = eventCover;
     this.validateThis();
   }
 

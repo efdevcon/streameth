@@ -2,15 +2,15 @@
 import React, { useContext } from "react";
 import { FilterContext, FilterOption } from "./FilterContext";
 
-interface FilterProps {
-  filterOptions: FilterOption[];
+interface FilterProps<T> {
+  filterOptions: FilterOption<T>[];
   filterName: string;
 }
 
-const SelectFilter = ({ filterOptions, filterName }: FilterProps) => {
+const SelectFilter = <T extends object>({ filterOptions, filterName }: FilterProps<T>) => {
   const { setFilterOptions } = useContext(FilterContext);
 
-  const handleOptionSelect = (filterOption: FilterOption) => {
+  const handleOptionSelect = (filterOption: FilterOption<T>) => {
     if (filterOption === undefined) {
       setFilterOptions([]);
       return;
@@ -24,7 +24,7 @@ const SelectFilter = ({ filterOptions, filterName }: FilterProps) => {
         <select
           onChange={(e) =>
             handleOptionSelect(
-              filterOptions.find((option) => option.value === e.target.value)!
+              filterOptions.find((option) => option.name === e.target.value)!
             )
           }
           className="p-2 h-12 border w-full rounded bg-primary border-secondary text-secondary placeholder:text-secondary placeholder:text-sm"
@@ -37,7 +37,7 @@ const SelectFilter = ({ filterOptions, filterName }: FilterProps) => {
             <option
               key={index}
               className="cursor-pointer py-1"
-              value={option.value}
+              value={option.name}
             >
               {option.name}
             </option>

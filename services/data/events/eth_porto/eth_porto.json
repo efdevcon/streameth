@@ -1,1 +1,19 @@
-{"id":"eth_porto","name":"Eth porto","description":"Bringing the first ETH event to the beautiful city of Porto","start":"2023-03-15T00:00:00.000Z","end":"2023-03-15T00:00:00.000Z","location":"Porto","organizationId":"eth_porto","dataImporter":[{"type":"gsheet","config":{"sheetId":"1oe2C9BFunInC0-rLVOHuQQ3Uu5osOHUlAJxLooLd69c","apiKey":"AIzaSyBfg-L5lDCUx7L-s6ubJe3z6mYeXIkIFU4"}}]}
+{
+  "id": "eth_porto",
+  "name": "Eth porto",
+  "description": "Bringing the first ETH event to the beautiful city of Porto",
+  "start": "2023-03-15T00:00:00.000Z",
+  "end": "2023-03-15T00:00:00.000Z",
+  "location": "Porto",
+  "organizationId": "eth_porto",
+  "eventCover": "https://ethporto.org/assets/cover.jpg",
+  "dataImporter": [
+    {
+      "type": "gsheet",
+      "config": {
+        "sheetId": "1oe2C9BFunInC0-rLVOHuQQ3Uu5osOHUlAJxLooLd69c",
+        "apiKey": "AIzaSyBfg-L5lDCUx7L-s6ubJe3z6mYeXIkIFU4"
+      }
+    }
+  ]
+}

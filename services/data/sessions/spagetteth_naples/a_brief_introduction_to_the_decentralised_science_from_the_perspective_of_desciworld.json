@@ -1,1 +1,20 @@
-{"id":"a_brief_introduction_to_the_decentralised_science_from_the_perspective_of_desciworld","name":"A brief introduction to the Decentralised Science from the perspective of DeSciWorld;","description":"This session will be held in English. There will be no translation to Italian.","start":"2023-05-26T09:00:00.000Z","end":"2023-05-26T09:25:00.000Z","stageId":"volcano_stage","speakers":[{"id":"joshua_bate","name":"Joshua Bate","bio":"DeSci World","eventId":"spagetteth_naples","photo":"https://naples.spaghett-eth.com/images/speakers/JoshuaBate.jpeg"}],"videoUrl":"https://lp-playback.com/hls/0682u734erss00k9/index.m3u8","playbackId":"0682u734erss00k9","eventId":"spagetteth_naples"}
+{
+  "id": "a_brief_introduction_to_the_decentralised_science_from_the_perspective_of_desciworld",
+  "name": "A brief introduction to the Decentralised Science from the perspective of DeSciWorld;",
+  "description": "This session will be held in English. There will be no translation to Italian.",
+  "start": "2023-05-26T09:00:00.000Z",
+  "end": "2023-05-26T09:25:00.000Z",
+  "stageId": "volcano_stage",
+  "speakers": [
+    {
+      "id": "joshua_bate",
+      "name": "Joshua Bate",
+      "bio": "DeSci World",
+      "eventId": "spagetteth_naples",
+      "photo": "https://naples.spaghett-eth.com/images/speakers/JoshuaBate.jpeg"
+    }
+  ],
+  "videoUrl": "https://lp-playback.com/hls/0682u734erss00k9/index.m3u8",
+  "playbackId": "0682u734erss00k9",
+  "eventId": "spagetteth_naples"
+}

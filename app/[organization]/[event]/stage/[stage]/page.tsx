@@ -1,5 +1,5 @@
 // `app` directory
-import StageLayout from "@/app/[organization]/[event]/stage/[stage]/components/StageLayout";
+import StageLayout from "./components/StageLayout";
 import StageController from "@/services/controller/stage";
 import { notFound } from "next/navigation";
 interface Params {
@@ -22,7 +22,7 @@ export async function generateStaticParams() {
   return stages;
 }
 
-export default async function Post({ params }: Params) {
+export default async function Stage({ params }: Params) {
   const stageController = new StageController();
   try {
     const stage = await stageController.getStage(params.stage, params.event);
