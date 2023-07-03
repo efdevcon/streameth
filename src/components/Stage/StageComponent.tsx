@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import moment from 'moment'
 import { useStage } from 'hooks/useStage'
 import { useSessions } from 'hooks/useSessions'
 import { Player } from 'components/Player'
@@ -15,7 +16,13 @@ import ChatBar from 'components/Chat'
 import SubNavigation from 'components/Navbar/SubNavigation'
 export function StageComponent() {
   const currentStage = useStage()
-  const { sessions, currentSession } = useSessions([{ type: 'stage', value: currentStage.id }])
+  const { sessions, currentSession } = useSessions([
+    { type: 'stage', value: currentStage.id },
+    {
+      type: 'day',
+      value: moment(new Date()).startOf('day').valueOf(),
+    },
+  ])
   const [modalOpen, setModalOpen] = useState(false)
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)

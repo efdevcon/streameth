@@ -9,12 +9,11 @@ import Container from 'components/Container'
 import { Session } from 'types'
 import { Player } from 'components/Player/vod'
 import SpeakerIconList from 'components/Speaker/IconList'
-
+import Embed from 'components/Embed'
 export default function SessionComponent({ session }: { session: Session }) {
   const [modalOpen, setModalOpen] = useState(false)
   const [modalContentType, setModalContentType] = useState<string | null>(null)
   const [speaker, setSpeaker] = useState<Speaker | undefined>(undefined)
-
   const openModal = (type: 'share' | 'speaker' | 'embed', speaker?: Speaker) => {
     setModalContentType(type)
     setSpeaker(speaker)
@@ -26,8 +25,6 @@ export default function SessionComponent({ session }: { session: Session }) {
       return <ShareBox title={session.name} />
     } else if (modalContentType === 'speaker') {
       return <SpeakerModalBox speaker={speaker} />
-    } else if (modalContentType === 'embed') {
-      // return <Embed stageId={currentStage.id} />
     }
     return null
   }
@@ -45,11 +42,6 @@ export default function SessionComponent({ session }: { session: Session }) {
                 <p className="font-medium text-white">{`${session?.name}`}</p>
               </div>
               <div className="flex flex-col lg:flex-row space-y-2">
-                <span
-                  className="p-1 cursor-pointer text-white border-white border-2  ml-auto text-sm lg:text-base"
-                  onClick={() => openModal('embed')}>
-                  embed
-                </span>
                 <ShareIcon className="h-8 w-8 cursor-pointer text-white ml-3 dark:text-gray-300" onClick={() => openModal('share')} />
               </div>
             </div>
@@ -60,9 +52,9 @@ export default function SessionComponent({ session }: { session: Session }) {
             <Player src={session.video} />
           </div>
           <div className="lg:w-1/3 p-3 lg:p-5 box-border flex flex-col overflow-auto lg:mt-0 h-full">
-            {session.gpt_description ? session.gpt_description : session.description}
+            {session.description}
             <div className="mt-4">
-            <SpeakerIconList speakers={session.speakers} />
+            <SpeakerIconList speakers={session.speakers} onSpeakerClick={(speaker) => openModal('speaker', speaker)} />
             </div>
           </div>
         </div>
