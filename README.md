@@ -23,21 +23,23 @@ yarn dev
 ```
 
 # Configuration
+
 The configuration file can be found at config/streameth.json
 
 The configuration file is used to store event details, data sources, and installed plugins. To use it, follow these steps:
 
-  1. Replace the placeholder values for name, description, start, end, website, and poster with the appropriate values for your event.
-    
-  2. The data object defines which data integration to use. Currently, streameth supports the following integrations:
-  
-  - [CMS](src/services/cms/README.md)
-  - [Google Sheets](src/services/gsheet/README.md)
-  - [Pretalx](src/services/pretalx/readme.md)
-  
-  3. If any plugins are installed for the event, add their names to the plugins array. ( Not supported yet)
+1. Replace the placeholder values for name, description, start, end, website, and poster with the appropriate values for your event.
+
+2. The data object defines which data integration to use. Currently, streameth supports the following integrations:
+
+- [CMS](src/services/cms/README.md)
+- [Google Sheets](src/services/gsheet/README.md)
+- [Pretalx](src/services/pretalx/readme.md)
+
+3. If any plugins are installed for the event, add their names to the plugins array. ( Not supported yet)
 
 Example:
+
 ```
 {
   "name": "ETHBerlin",
@@ -56,7 +58,6 @@ Example:
 }
 ```
 
-
 ## Livestream setup
 
 To get your own livestreams working, follow these steps:
@@ -69,7 +70,7 @@ To get your own livestreams working, follow these steps:
 ### 2. Create streams
 
 1. You can create streams directly from the Livepeer dashboard. After each stream creation, you will get a livepeer stream ID. Copy it.
-2. Add the stream ID to the `streams` field for a stage object. Accessing the stage object will vary depending on which data integration you are using. 
+2. Add the stream ID to the `streams` field for a stage object. Accessing the stage object will vary depending on which data integration you are using.
 
 ### 3. (Optional) Get Mux Data API key
 
@@ -77,3 +78,7 @@ The video players are configured with Mux data for analytics.
 
 1. Sign up for a Mux Data at [https://www.mux.com/](https://www.mux.com/) to get your API keys
 2. You will need an access token and a secret key. Add these as `MUX_ACCESS_TOKEN` and `MUX_SECRET_KEY`, respectively, to your environment.
+
+## API
+
+You can see all sessions in JSON format by typing `http://localhost:3000/api/sessions`
