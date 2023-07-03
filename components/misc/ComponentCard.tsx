@@ -40,7 +40,7 @@ const ComponentCard = ({
           />
         </div>
       )}
-      {open && <div className="p-4 flex flex-col h-full rounded bg-primary">{children}</div>}
+      {open && <div className="p-4 flex flex-col h-full rounded glass-style">{children}</div>}
     </div>
   );
 };

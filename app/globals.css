@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.glass-style {
+/* From https://css.glass */
+background: #3f4281;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+border: 1px solid rgba(32, 31, 39, 0.02);
+}
+
+.glass-style:hover {
+  box-shadow: #3f4281 0px 1px 1px, #3f4281 0px 2px 2px, #3f4281 0px 4px 4px, #3f4281 0px 8px 8px, #3f4281 0px 16px 16px;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

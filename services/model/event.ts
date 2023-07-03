@@ -84,8 +84,8 @@ export default class Event implements IEvent {
     }
   }
 
-  public toJson(): string {
-    return JSON.stringify(this);
+  public toJson(): IEvent {
+    return { ...this };
   }
 
   public static async fromJson(json: string): Promise<Event> {

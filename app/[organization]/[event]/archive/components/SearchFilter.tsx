@@ -46,7 +46,7 @@ const SearchFilter = <T extends object>({
           placeholder={` ${filterName}`}
           value={filterInput}
           onChange={(e) => setFilterInput(e.target.value)}
-          className="p-2 h-12 border w-full rounded bg-primary border-secondary text-secondary placeholder:text-secondary placeholder:text-sm"
+          className="p-2 h-12 border w-full rounded bg-primary text-main-text placeholder:text-main-text placeholder:text-sm"
         />
         {filterInput && (
           <div className="absolute top-fullborder rounded-b-md shadow-md left-0 z-10 bg-primary  max-h-40 w-full overflow-auto">

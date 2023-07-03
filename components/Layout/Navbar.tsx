@@ -20,7 +20,7 @@ export default function Navbar({
   ];
 
   return (
-    <header className="shadow-sm bg-primary border-r border-secondary absolute top-0 left-0 h-screen w-20">
+    <header className="shadow-sm bg-base border-r border-primary absolute top-0 left-0 h-screen w-20">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex flex-col items-center justify-between gap-4 lg:gap-10">
           <Link href="/">

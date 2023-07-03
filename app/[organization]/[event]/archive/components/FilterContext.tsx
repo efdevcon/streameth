@@ -3,7 +3,8 @@ import React, { useState, createContext, useEffect } from "react";
 
 export interface FilterOption<T> {
   name: string;
-  // async function
+  value: string;
+  type: string;
   filterFunc: (item: T) => Promise<boolean>;
 }
 

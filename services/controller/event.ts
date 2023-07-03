@@ -4,7 +4,7 @@ import OrganizationController from "./organization";
 export default class EventController {
   private controller: BaseController<IEvent>;
 
-  constructor() {
+    constructor() {
     this.controller = new BaseController<IEvent>("fs");
   }
 
