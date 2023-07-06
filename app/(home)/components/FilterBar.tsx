@@ -5,8 +5,7 @@ import SearchFilter from "@/app/[organization]/[event]/archive/components/Search
 import { FilterContext } from "@/app/[organization]/[event]/archive/components/FilterContext";
 
 const FilterBar = ({ events }: { events: IEvent[] }) => {
-  const { setFilterOptions, filterOptions, filteredItems } =
-    useContext(FilterContext);
+  const { setFilterOptions } = useContext(FilterContext);
   const [isShowCurrent, setIsShowCurrent] = useState(true);
 
   const eventFilter = events.map((event) => {
@@ -45,26 +44,26 @@ const FilterBar = ({ events }: { events: IEvent[] }) => {
     <div className="w-full flex justify-center items-center my-2">
       <div className=" w-full flex flex-col sm:flex-row items-center">
         <div className="flex flex-row w-full justify-center md:justify-start">
-        <h1
-          className={` text-xl md:text-2xl  font-bold  ${
-            isShowCurrent
-              ? "text-secondary-text cursor-pointer"
-              : "text-main-text"
-          } border-r-2 border-accent pr-4`}
-          onClick={() => setIsShowCurrent(false)}
-        >
-          Upcoming events
-        </h1>
-        <h1
-          className={`text-xl md:text-2xl text-main-text font-bold ml-4 ${
-            !isShowCurrent
-              ? "text-secondary-text cursor-pointer"
-              : "text-main-text"
-          }`}
-          onClick={() => setIsShowCurrent(true)}
-        >
-          Past events
-        </h1>
+          <h1
+            className={` text-xl md:text-2xl  font-bold  ${
+              isShowCurrent
+                ? "text-secondary-text cursor-pointer"
+                : "text-main-text"
+            } border-r-2 border-accent pr-4`}
+            onClick={() => setIsShowCurrent(false)}
+          >
+            Upcoming events
+          </h1>
+          <h1
+            className={`text-xl md:text-2xl text-main-text font-bold ml-4 ${
+              !isShowCurrent
+                ? "text-secondary-text cursor-pointer"
+                : "text-main-text"
+            }`}
+            onClick={() => setIsShowCurrent(true)}
+          >
+            Past events
+          </h1>
         </div>
         <div className="w-full max-w-[20rem] m-auto lg:ml-auto my-4">
           <SearchFilter filterOptions={eventFilter} filterName="Event" />

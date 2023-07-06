@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ComponentCard from "../misc/ComponentCard";
+
 export default function PluginBar({
   tabs,
 }: {
@@ -18,7 +18,7 @@ export default function PluginBar({
   }
 
   return (
-    <ComponentCard>
+    <>
       <div className="flex flex-row w-full bg-secondary rounded">
         {tabs.map((tab) => (
           <div
@@ -38,12 +38,9 @@ export default function PluginBar({
           </div>
         ))}
       </div>
-      <div
-        className="flex flex-col w-full h-full mt-4"
-        key={selectedId}
-      >
+      <div className="flex flex-col w-full h-full mt-4" key={selectedId}>
         {selectedTab.content}
       </div>
-    </ComponentCard>
+    </>
   );
 }

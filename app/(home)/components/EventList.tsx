@@ -9,7 +9,7 @@ const EventList = () => {
   const { filteredItems } = useContext(FilterContext);
 
   return (
-    <div className="h-full lg:mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3 md:space-y-0 md:space-x-3 overflow-y-scroll">
+    <div className="h-full p-4 lg:mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3 md:space-y-0 md:space-x-3 overflow-y-scroll">
       {filteredItems.map((event: IEvent) => {
         return <EventCard key={event.id} event={event} />;
       })}

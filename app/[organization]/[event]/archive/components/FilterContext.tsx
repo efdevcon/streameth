@@ -48,9 +48,7 @@ const FilterContextProvider = <T extends object>({
     filterItems().then((items) => setFilteredItems(items));
   }, [filterOptions]);
 
-  useEffect(() => {
-    console.log(filteredItems);
-  }, [filteredItems]);
+
 
   return (
     <FilterContext.Provider

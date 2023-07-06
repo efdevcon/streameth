@@ -135,7 +135,7 @@ export default class Importer extends BaseImporter {
       const [speakers, stage] = await Promise.all([
         Promise.all(speakerPromises),
         this.stageController.getStage(
-          stageId === "stagesstage_Gulf_Stage" ? "gulf_stage" : "volcano_stage",
+          stageId === "stage_Gulf_Stage" ? "gulf_stage" : "volcano_stage",
           this.event.id
         ),
       ]);

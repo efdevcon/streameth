@@ -2,11 +2,10 @@
   "id": "spagetteth_naples",
   "name": "Spagetteth Naples",
   "description": "The Italian Ethereum movement to buidl an open sauce future together.",
-  "start": "2023-04-24T00:00:00.000Z",
-  "end": "2023-04-26T00:00:00.000Z",
+  "start": "2023-05-24T00:00:00.000Z",
+  "end": "2023-05-26T00:00:00.000Z",
   "location": "Naples, Italy",
   "organizationId": "spagetteth",
-  "eventCover": "https://www.spaghett-eth.com/assets/logoNav.6b3e7427.png",
   "dataImporter": [
     {
       "type": "gsheet",

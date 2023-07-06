@@ -8,7 +8,7 @@ import Link from "next/link";
 const EventCard = ({ event }: { event: IEvent }) => {
   return (
     <Link href={`${event.organizationId}/${event.id}`}>
-      <div className="flex flex-col xs:h-80 w-full p-2 cursor-pointer border-2 rounded border-primary">
+      <div className="flex flex-col xs:h-80 w-full p-2 cursor-pointer rounded shadow-3xl">
         <div className="max-w-96 aspect-video relative p-2">
           {event.eventCover ? (
             <Image

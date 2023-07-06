@@ -12,16 +12,16 @@ export default class EventController {
     eventId: IEvent["id"],
     organizationId: IEvent["organizationId"]
   ): Promise<Event> {
-    const eventQuery = await Event.getEventPath(eventId, organizationId);
+    const eventQuery = await Event.getEventPath(organizationId, eventId);
     const data = await this.controller.get(eventQuery);
     return new Event({ ...data });
   }
 
   public async createEvent(event: Omit<IEvent, "id">): Promise<Event> {
-    const org = new Event({ ...event });
-    const eventQuery = await Event.getEventPath(org.id, org.organizationId);
-    await this.controller.create(eventQuery, org);
-    return org;
+    const evt = new Event({ ...event });
+    const eventQuery = await Event.getEventPath(evt.organizationId, evt.id);
+    await this.controller.create(eventQuery, evt);
+    return evt;
   }
 
   public async getAllEventsForOrganization(
