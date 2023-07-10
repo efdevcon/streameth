@@ -20,7 +20,6 @@ const Modal = ({
             onClick={onClose}
           ></div>
         </div>
-
         <span
           className="hidden sm:inline-block sm:align-middle sm:h-screen"
           aria-hidden="true"
@@ -28,8 +27,7 @@ const Modal = ({
         >
           &#8203;
         </span>
-
-        <div className="inline-block align-bottom bg-white  text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full p-4">
+        <div className="inline-block align-bottom bg-white rounded  text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full p-4">
           {children}
         </div>
       </div>

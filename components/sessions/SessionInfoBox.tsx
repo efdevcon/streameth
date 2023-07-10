@@ -2,10 +2,10 @@
 import { useContext } from "react";
 import { ISession } from "@/services/model/session";
 import { ShareIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
-import SpeakerIcon from "@/components/speakers/SpeakerIcon";
 import EmbedSessionModal from "@/components/sessions/EmbedSession";
 import { ModalContext } from "@/components/context/ModalContext";
 import ComponetCard from "../misc/ComponentCard";
+
 const SessionInfoBox = ({ session }: { session: ISession | undefined }) => {
   const modal = useContext(ModalContext);
 

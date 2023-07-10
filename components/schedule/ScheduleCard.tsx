@@ -1,5 +1,8 @@
 import { ISession } from "@/services/model/session";
 import SpeakerIcon from "@/components/speakers/SpeakerIcon";
+import { ModalContext } from "../context/ModalContext";
+import { useContext } from "react";
+import ScheduleCardModal from "@/components/schedule/ScheduleCardModal";
 const ScheduleCard = ({
   session,
   showTime = false,
@@ -7,8 +10,14 @@ const ScheduleCard = ({
   session: ISession;
   showTime?: boolean;
 }) => {
+  const { openModal } = useContext(ModalContext);
   return (
-    <div className="flex flex-row w-full h-full bg-primary shadow rounded p-2">
+    <div
+      className="flex flex-row w-full h-full bg-primary shadow rounded p-2 cursor-pointer"
+      onClick={() => {
+        openModal(<ScheduleCardModal session={session} />);
+      }}
+    >
       {showTime && (
         <div className="flex flex-col justify-center items-center w-32 bg-tertiary rounded-tl rounded-bl   p-4 ">
           <p className="text-main-text text-2xl font-bold mb-2">
