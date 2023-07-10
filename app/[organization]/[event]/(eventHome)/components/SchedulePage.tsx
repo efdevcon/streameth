@@ -1,51 +1,26 @@
 "use client";
-import { useContext, useMemo, useState, useLayoutEffect } from "react";
-import { FilterContext } from "../../archive/components/FilterContext";
+import {
+  useContext,
+  useMemo,
+  useState,
+  useLayoutEffect,
+  useEffect,
+} from "react";
 import { IStage } from "@/services/model/stage";
-import { ISession } from "@/services/model/session";
-import { addBlankSessions, CELL_HEIGHT } from "../utils";
+import { CELL_HEIGHT } from "../utils";
 import ScheduleGrid from "./ScheduleGrid";
 import SessionsOnGrid from "./SessionsOnGrid";
-
-const SchedulePage = ({ stages }: { stages: IStage[] }) => {
-  const { filteredItems: sessions } = useContext(FilterContext);
-  const [selectedStage, setSelectedStage] = useState(stages[0].id);
+import { IEvent } from "@/services/model/event";
+import DateFilter from "./Filter";
+const SchedulePage = ({
+  stages,
+  event,
+}: {
+  stages: IStage[];
+  event: IEvent;
+}) => {
   const [isMobile, setIsMobile] = useState(false);
-
-  const earliestTime = useMemo(
-    () => Math.min(...sessions.map((session) => session.start.getTime())),
-    [sessions]
-  );
-  const totalSlots = useMemo(
-    () =>
-      Math.ceil(
-        (Math.max(
-          ...sessions.map((session) => session.end.getTime()),
-          earliestTime
-        ) -
-          earliestTime) /
-          (1000 * 60 * 15)
-      ),
-    [sessions, earliestTime]
-  );
-
-  const sessionsPerStage = useMemo(
-    () =>
-      stages.map((stage) => ({
-        stage,
-        sessions: addBlankSessions(
-          sessions
-            .filter((session: ISession) => session.stageId === stage.id)
-            .sort(
-              (a: ISession, b: ISession) =>
-                a.start.getTime() - b.start.getTime()
-            ),
-          earliestTime
-        ),
-      })),
-    [stages, sessions, earliestTime]
-  );
-
+  const [selectedStage, setSelectedStage] = useState(stages[0].id);
   useLayoutEffect(() => {
     function updateSize() {
       setIsMobile(window.innerWidth <= 768);
@@ -55,65 +30,51 @@ const SchedulePage = ({ stages }: { stages: IStage[] }) => {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
-  if (!sessions) {
-    return <div>Loading...</div>;
-  }
-
   return (
-    <div className="flex flex-col w-full h-full overflow-y-hidden">
-      {isMobile ? (
-        <select
-          className="text-2xl cursor-pointer font-bold"
-          value={selectedStage}
-          onChange={(e) => setSelectedStage(e.target.value)}
-        >
-          {stages.map((stage) => (
-            <option key={stage.id} value={stage.id}>
-              {stage.name}
-            </option>
-          ))}
-        </select>
-      ) : (
-        <div className="w-[calc(100%-6rem)] flex flex-row ml-auto text-center p-4">
-          {sessionsPerStage.map(({ stage }) => (
-            <div
-              key={stage.id}
-              className="flex flex-col relative w-full text-xl font-semibold"
+    <>
+      <div className="flex flex-row md:flex-col">
+        <DateFilter event={event} />
+        {isMobile ? (
+          <div className="flex flex-row w-full justify-center items-center p-2 ">
+            <select
+              className="text-xl cursor-pointer font-bold box-border"
+              value={selectedStage}
+              onChange={(e) => setSelectedStage(e.target.value)}
             >
-              {stage.name}
-            </div>
-          ))}
-        </div>
-      )}
+              {stages.map((stage) => (
+                <option key={stage.name} value={stage.id}>
+                  {stage.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        ) : (
+          <div className="w-[calc(100%-6rem)] flex flex-row ml-auto">
+            {stages.map((stage) => (
+              <div className="w-full p-4 text-center text-xl" key={stage.id}>
+                {stage.name}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
       <div
         className={`flex flex-row w-full h-full relative overflow-y-scroll mb-[${
           CELL_HEIGHT + "rem"
         }]`}
       >
-        <ScheduleGrid earliestTime={earliestTime} totalSlots={totalSlots} />
+        <ScheduleGrid />
         <div className="w-[calc(100%-6rem)] flex flex-row h-full ml-auto">
           {isMobile ? (
-            <SessionsOnGrid
-              sessions={
-                sessionsPerStage.find(({ stage }) => stage.id === selectedStage)
-                  ?.sessions
-              }
-              earliestTime={earliestTime}
-              totalSlots={totalSlots}
-            />
+            <SessionsOnGrid stageId={selectedStage} />
           ) : (
-            sessionsPerStage.map(({ stage, sessions }) => (
-              <SessionsOnGrid
-                key={stage.id}
-                sessions={sessions}
-                earliestTime={earliestTime}
-                totalSlots={totalSlots}
-              />
+            stages.map((stage) => (
+              <SessionsOnGrid key={stage.id} stageId={stage.id} />
             ))
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

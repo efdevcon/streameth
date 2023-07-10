@@ -3,7 +3,6 @@ import SessionController from "@/services/controller/session";
 import SchedulePage from "./components/SchedulePage";
 import StageController from "@/services/controller/stage";
 import { FilterContextProvider } from "../archive/components/FilterContext";
-import Filter from "./components/Filter";
 
 export async function generateStaticParams() {
   const eventController = new EventController();
@@ -39,9 +38,11 @@ const EventPage = async ({
   const stages = await stageController.getAllStagesForEvent(event.id);
   return (
     <FilterContextProvider items={sessions.map((session) => session.toJson())}>
-      <div className="w-full h-full">
-        <Filter event={event.toJson()} />
-        <SchedulePage stages={stages.map((stage) => stage.toJson())} />
+      <div className="w-full h-full relative">
+        <SchedulePage
+          stages={stages.map((stage) => stage.toJson())}
+          event={event.toJson()}
+        />
       </div>
     </FilterContextProvider>
   );

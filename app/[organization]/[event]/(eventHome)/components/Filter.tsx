@@ -43,10 +43,10 @@ const Filter = ({ event }: { event: IEvent }) => {
   }, [selectedIndex]);
 
   return (
-    <div className="flex flex-row p-4 space-x-3 justify-center">
+    <div className="flex flex-row w-full space-x-3 justify-center p-2 md:p-4 box-border">
       {isMobile ? (
         <select
-          className="text-2xl cursor-pointer font-bold"
+          className="text-xl cursor-pointer font-bold"
           value={selectedIndex}
           onChange={(e) => setSelectedIndex(Number(e.target.value))}
         >

@@ -1,5 +1,18 @@
 import { ISession } from "@/services/model/session";
 
+export const getEarliestTime = (sessions: ISession[]) =>
+  Math.min(...sessions.map((session) => session.start.getTime()));
+
+export const getTotalSlots = (sessions: ISession[], earliestTime: number) =>
+  Math.ceil(
+    (Math.max(
+      ...sessions.map((session) => session.end.getTime()),
+      earliestTime
+    ) -
+      earliestTime) /
+      (1000 * 60 * 15)
+  );
+
 export const addBlankSessions = (
   sessions: ISession[],
   earliestTime: number

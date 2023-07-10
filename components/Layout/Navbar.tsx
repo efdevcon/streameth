@@ -1,10 +1,10 @@
 "use client";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/logo.png";
-import { HomeIcon } from "@heroicons/react/24/outline";
-import Home from "@/app/(home)/page";
+
 export default function Navbar({
   pages,
 }: {
@@ -15,11 +15,12 @@ export default function Navbar({
   }[];
 }) {
   const pathname = usePathname();
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <header className="shadow-sm bg-base border-r border-primary absolute top-0 left-0 h-screen w-20">
+    <header className="md:shadow-sm md:bg-base md:border-r border-primary md:absolute md:top-0 md:left-0 w-full md:w-20 md:h-screen">
       <div className="mx-auto max-w-screen-xl p-4">
-        <div className="flex flex-col items-center justify-between gap-4 lg:gap-10">
+        <div className="flex flex-row md:flex-col md:items-center justify-between gap-4 md:gap-10">
           <Link href="/">
             <span className="sr-only">Logo</span>
             <Image src={img} alt="Logo" width={50} />
@@ -27,7 +28,7 @@ export default function Navbar({
 
           <nav
             aria-label="Global"
-            className="hidden gap-8 text-md font-medium md:flex flex-col"
+            className={`gap-8 text-md font-medium ${isNavOpen ? 'flex' : 'hidden'} md:flex flex-col`}
           >
             {pages.map((item) => (
               <Link
@@ -40,10 +41,12 @@ export default function Navbar({
               </Link>
             ))}
           </nav>
-          <div className="lg:hidden">
+
+          <div className="md:hidden">
             <button
               className="rounded-lg bg-gray-100 p-2 text-gray-600"
               type="button"
+              onClick={() => setIsNavOpen(!isNavOpen)}
             >
               <span className="sr-only">Open menu</span>
               <svg

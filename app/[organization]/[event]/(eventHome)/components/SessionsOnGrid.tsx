@@ -1,26 +1,40 @@
-import { CELL_HEIGHT, getSlotRange } from "../utils";
+import { useMemo, useContext } from "react";
+import {
+  CELL_HEIGHT,
+  getSlotRange,
+  addBlankSessions,
+  getEarliestTime,
+  getTotalSlots,
+} from "../utils";
 import { ISession } from "@/services/model/session";
 import ScheduleCard from "@/components/schedule/ScheduleCard";
+import { FilterContext } from "../../archive/components/FilterContext";
 
-const SessionsOnSchedule = ({
-  sessions,
-  earliestTime,
-  totalSlots,
-}: {
-  sessions: ISession[] | undefined;
-  earliestTime: number;
-  totalSlots: number;
-}) => {
+const SessionsOnSchedule = ({ stageId }: { stageId: string }) => {
+  const { filteredItems: sessions } = useContext(FilterContext);
+
+  const earliestTime = useMemo(() => getEarliestTime(sessions), [sessions]);
+
+  const sessionsWithBlank = useMemo(
+    () =>
+      addBlankSessions(
+        sessions
+          .filter((session: ISession) => session.stageId === stageId)
+          .sort(
+            (a: ISession, b: ISession) => a.start.getTime() - b.start.getTime()
+          ),
+        earliestTime
+      ),
+    [stageId, sessions, earliestTime]
+  );
+
   if (!sessions) {
     return <div>No scheduled sessions</div>;
   }
 
   return (
-    <div
-      className="flex flex-col relative w-full"
-      style={{ height: totalSlots * CELL_HEIGHT + "rem" }}
-    >
-      {sessions.map((session) => {
+    <div className="flex flex-col relative w-full mr-2">
+      {sessionsWithBlank.map((session) => {
         const range = getSlotRange(session, earliestTime);
         return (
           <div
