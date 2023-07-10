@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
 import WalletSignIn from "@/components/misc/WalletSignIn";
-import img from "@/public/logo.png";
 
 export default function Navbar() {
   return (
@@ -9,15 +7,15 @@ export default function Navbar() {
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex flex-row items-center justify-between gap-4 lg:gap-10">
           <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
-            <div className="relative bg-white hover:shadow-md shadow-slate-500 px-5 py-2 text-sm font-medium text-black">
-              <span className="absolute bg-gray-300 hover:bg-white text-sm font-medium text-black h-full w-[90%] -z-20" />
+            <div className="relative border rounded border-accent bg-white hover:shadow-md shadow-slate-500 px-5 py-2 text-sm font-medium text-accent">
+              <span className="absolute  bg-gray-300 hover:bg-white text-sm font-medium text-black h-full w-[90%] -z-20" />
               <WalletSignIn />
             </div>
           </div>
 
           <div className="lg:hidden">
             <button
-              className="rounded-lg bg-gray-100 p-2 text-gray-600"
+              className="rounded-lg border-accent border-2 bg-gray-100 p-2 text-gray-600"
               type="button"
             >
               <span className="sr-only">Open menu</span>

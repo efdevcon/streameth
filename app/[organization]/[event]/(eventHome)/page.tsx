@@ -4,8 +4,6 @@ import SchedulePage from "./components/SchedulePage";
 import StageController from "@/services/controller/stage";
 import { FilterContextProvider } from "../archive/components/FilterContext";
 import Filter from "./components/Filter";
-import Image from "next/image";
-
 
 export async function generateStaticParams() {
   const eventController = new EventController();
@@ -42,20 +40,6 @@ const EventPage = async ({
   return (
     <FilterContextProvider items={sessions.map((session) => session.toJson())}>
       <div className="w-full h-full">
-        {/* <div className=" w-full relative flex flex-row justify-center items-center bg-primary bg-opacity-80">
-          <Image
-            src={event.eventCover ?? ""}
-            fill
-            alt="cover"
-            className="bg-opacity-80"
-          />
-          <div className=" z-50 bg-base p-4 glass-style overflow-hidden text-center">
-            <h1 className="text-2xl font-bold text-main-text">{event.name}</h1>
-            <p className="text-secondary-text text-lg p-4">
-              {event.description}
-            </p>
-          </div>
-        </div> */}
         <Filter event={event.toJson()} />
         <SchedulePage stages={stages.map((stage) => stage.toJson())} />
       </div>

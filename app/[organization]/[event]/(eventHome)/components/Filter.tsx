@@ -1,5 +1,5 @@
 "use client";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useLayoutEffect } from "react";
 import { IEvent } from "@/services/model/event";
 import Session from "@/services/model/session";
 import {
@@ -10,22 +10,33 @@ import {
 const Filter = ({ event }: { event: IEvent }) => {
   const { setFilterOptions } = useContext(FilterContext);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const days = event.end.getDate() - event.start.getDate() + 1;
   const dates: FilterOption<Session>[] = [];
   for (let i = 0; i < days; i++) {
     const date = new Date(
       event.start.getTime() + i * 24 * 60 * 60 * 1000
-    ).toLocaleDateString()
+    ).toLocaleDateString();
     dates.push({
       name: "date",
       value: date,
       type: "date",
       filterFunc: async (item: Session) => {
-        console.log(item.start.toLocaleDateString(), date)
+        console.log(item.start.toLocaleDateString(), date);
         return item.start.toLocaleDateString() === date;
       },
     });
   }
+
+  // Check for mobile device
+  useLayoutEffect(() => {
+    function updateSize() {
+      setIsMobile(window.innerWidth <= 768);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   useEffect(() => {
     setFilterOptions([dates[selectedIndex]]);
@@ -33,11 +44,23 @@ const Filter = ({ event }: { event: IEvent }) => {
 
   return (
     <div className="flex flex-row p-4 space-x-3 justify-center">
-      {dates.map((date, index) => {
-        return (
+      {isMobile ? (
+        <select
+          className="text-2xl cursor-pointer font-bold"
+          value={selectedIndex}
+          onChange={(e) => setSelectedIndex(Number(e.target.value))}
+        >
+          {dates.map((date, index) => (
+            <option key={date.value} value={index}>
+              {date.value}
+            </option>
+          ))}
+        </select>
+      ) : (
+        dates.map((date, index) => (
           <h1
             key={date.value}
-            className={`text-2xl font-bold ${
+            className={`text-2xl cursor-pointer font-bold ${
               selectedIndex === index ? "text-main-text" : "text-secondary-text"
             }`}
             onClick={() => {
@@ -46,8 +69,8 @@ const Filter = ({ event }: { event: IEvent }) => {
           >
             {date.value}
           </h1>
-        );
-      })}
+        ))
+      )}
     </div>
   );
 };

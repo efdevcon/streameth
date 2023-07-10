@@ -9,7 +9,6 @@ import SessionList from "@/components/sessions/SessionList";
 import Chat from "@/plugins/Chat";
 import Player from "@/components/misc/Player";
 import PluginBar from "@/components/Layout/PluginBar";
-import StageSessionInfoBox from "@/components/sessions/SessionInfoBox";
 import SessionInfoBox from "@/components/sessions/SessionInfoBox";
 export default async function StageLayout({ stage }: { stage: Stage }) {
   const sessionController = new SessionController();

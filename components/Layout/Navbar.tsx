@@ -3,21 +3,18 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import img from "@/public/logo.png";
-
+import { HomeIcon } from "@heroicons/react/24/outline";
+import Home from "@/app/(home)/page";
 export default function Navbar({
   pages,
 }: {
   pages: {
     name: string;
     href: string;
+    icon: JSX.Element;
   }[];
 }) {
   const pathname = usePathname();
-
-  const extendedPages: { name: string; href: string }[] = [
-    ...pages,
-    { name: "Archive", href: "/archive" },
-  ];
 
   return (
     <header className="shadow-sm bg-base border-r border-primary absolute top-0 left-0 h-screen w-20">
@@ -32,18 +29,18 @@ export default function Navbar({
             aria-label="Global"
             className="hidden gap-8 text-md font-medium md:flex flex-col"
           >
-            {extendedPages.map((item) => (
+            {pages.map((item) => (
               <Link
                 key={item.name}
-                className="text-white hover:text-gray-300"
+                className="text-main-text hover:text-gray-300"
                 href={item.href}
                 aria-current={pathname === item.href ? "page" : undefined}
               >
-                {item.name}
+                {item.icon}
               </Link>
             ))}
           </nav>
-         <div className="lg:hidden">
+          <div className="lg:hidden">
             <button
               className="rounded-lg bg-gray-100 p-2 text-gray-600"
               type="button"
