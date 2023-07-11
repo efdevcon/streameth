@@ -1,12 +1,15 @@
-import fs from "fs";
 import ffmpeg from "fluent-ffmpeg";
 import axios from "axios";
 import path from "path";
 
-export async function extractFirstFrame(hlsUrl: string, outputImagePath: string) {
+export async function extractFirstFrame(hlsUrl: string, filePath: string) {
   try {
+    console.log(hlsUrl)
+    // replace index.m3u8 with 720p0/index.m3u8
+    hlsUrl = hlsUrl.replace("index.m3u8", "720p0/index.m3u8");
     const response = await axios.get(hlsUrl);
     const body = response.data;
+    console.log(body);
     const lines = body.split("\n");
     const tsUrl = lines.find((line: string) => line.endsWith(".ts"));
 
@@ -26,7 +29,7 @@ export async function extractFirstFrame(hlsUrl: string, outputImagePath: string)
       .screenshots({
         count: 1,
         folder: ".",
-        filename: outputImagePath,
+        filename: filePath,
         size: "1920x1080",
       });
   } catch (err) {

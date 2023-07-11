@@ -1,10 +1,9 @@
 import { IsNotEmpty, validate } from "class-validator";
 import { IStage } from "./stage";
 import Speaker from "./speaker";
-import { generateId, BASE_PATH } from "../utils";
+import { generateId, BASE_PATH, PUBLIC_PATH } from "../utils";
 import { IEvent } from "./event";
 import path from "path";
-import { extractFirstFrame } from "../utils/video";
 
 export interface ISession {
   id: string;
@@ -122,5 +121,11 @@ export default class Session implements ISession {
       return path.join(BASE_PATH, "sessions", eventId, `${sessionId}.json`);
     }
     return path.join(BASE_PATH, "sessions", eventId);
+  }
+
+  static async getSessionImagePath(
+    sessionId: ISession["id"]
+  ): Promise<string> {
+    return path.join(PUBLIC_PATH, "sessions", `${sessionId}.png`);
   }
 }

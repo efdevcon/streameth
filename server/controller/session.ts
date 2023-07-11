@@ -1,6 +1,7 @@
 import BaseController from "./baseController";
 import { extractFirstFrame } from "../utils/video";
 import Session, { ISession } from "../model/session";
+import LivepeerService from "../services/livepeer";
 export default class SessionController {
   private controller: BaseController<ISession>;
 
@@ -12,7 +13,6 @@ export default class SessionController {
     sessionId: ISession["id"],
     eventId: ISession["eventId"]
   ): Promise<Session> {
-    console.log("getSession", sessionId, eventId);
     const sessionQuery = await Session.getSessionPath(eventId, sessionId);
     const data = await this.controller.get(sessionQuery);
     return new Session({ ...data });
@@ -40,11 +40,15 @@ export default class SessionController {
   public async generateVideoFrame(
     sessionId: ISession["id"],
     eventId: ISession["eventId"]
-  ): Promise<string> {
+  ): Promise<void> {
     const session = await this.getSession(sessionId, eventId);
-    const framePath = session.
-    await extractFirstFrame(session.getHlsUrl(), framePath);
-    return framePath;
-  }
+    const path = await Session.getSessionImagePath(sessionId);
+    if (!session.videoUrl) {
+      const livepeer = new LivepeerService();
+      const videoUrl = await livepeer.getSessionData(session.playbackId);
+      session.videoUrl = videoUrl;
+    }
 
+    await extractFirstFrame(session.videoUrl, path);
+  }
 }
