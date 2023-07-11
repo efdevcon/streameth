@@ -2,9 +2,9 @@
 import SearchFilter from "./SearchFilter";
 import SelectFilter from "./SelectFilter";
 import NavigationBarWrapper from "./NavigationBarWrapper";
-import { ISession } from "@/services/model/session";
-import { ISpeaker } from "@/services/model/speaker";
-import { IStage } from "@/services/model/stage";
+import { ISession } from "@/server/model/session";
+import { ISpeaker } from "@/server/model/speaker";
+import { IStage } from "@/server/model/stage";
 
 export default async function FilterBar({
   sessions,
@@ -54,7 +54,7 @@ export default async function FilterBar({
       type: "date",
       filterFunc: async (item: ISession) => {
         return item.start.toLocaleDateString() === date;
-      }
+      },
     }));
   };
 

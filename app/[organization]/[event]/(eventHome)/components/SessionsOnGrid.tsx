@@ -6,7 +6,7 @@ import {
   getEarliestTime,
   getTotalSlots,
 } from "../utils";
-import { ISession } from "@/services/model/session";
+import { ISession } from "@/server/model/session";
 import ScheduleCard from "@/components/schedule/ScheduleCard";
 import { FilterContext } from "../../archive/components/FilterContext";
 

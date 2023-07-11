@@ -1,4 +1,4 @@
-import EventController from "@/services/controller/event";
+import EventController from "@/server/controller/event";
 import EventList from "@/app/(home)/components/EventList";
 import FilterBar from "./components/FilterBar";
 import { FilterContextProvider } from "@/app/[organization]/[event]/archive/components/FilterContext";

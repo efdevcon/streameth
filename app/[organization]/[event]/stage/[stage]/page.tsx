@@ -1,6 +1,6 @@
 // `app` directory
 import StageLayout from "./components/StageLayout";
-import StageController from "@/services/controller/stage";
+import StageController from "@/server/controller/stage";
 import { notFound } from "next/navigation";
 interface Params {
   params: {

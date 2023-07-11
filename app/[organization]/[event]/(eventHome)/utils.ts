@@ -1,4 +1,4 @@
-import { ISession } from "@/services/model/session";
+import { ISession } from "@/server/model/session";
 
 export const getEarliestTime = (sessions: ISession[]) =>
   Math.min(...sessions.map((session) => session.start.getTime()));

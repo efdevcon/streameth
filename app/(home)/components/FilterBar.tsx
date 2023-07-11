@@ -1,6 +1,6 @@
 "use client";
 import { useContext, useEffect, useState } from "react";
-import { IEvent } from "@/services/model/event";
+import { IEvent } from "@/server/model/event";
 import SearchFilter from "@/app/[organization]/[event]/archive/components/SearchFilter";
 import { FilterContext } from "@/app/[organization]/[event]/archive/components/FilterContext";
 

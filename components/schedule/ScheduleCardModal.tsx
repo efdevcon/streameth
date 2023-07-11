@@ -1,4 +1,4 @@
-import { ISession } from "@/services/model/session";
+import { ISession } from "@/server/model/session";
 import SpeakerIconList from "../speakers/SpeakerIconList";
 
 const ScheduleCardModal = ({ session }: { session: ISession }) => {

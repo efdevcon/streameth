@@ -1,7 +1,7 @@
 "use client";
 import { useContext, useEffect, useState, useLayoutEffect } from "react";
-import { IEvent } from "@/services/model/event";
-import Session from "@/services/model/session";
+import { IEvent } from "@/server/model/event";
+import Session from "@/server/model/session";
 import {
   FilterContext,
   FilterOption,

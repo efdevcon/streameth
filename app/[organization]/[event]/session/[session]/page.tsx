@@ -1,6 +1,6 @@
-import SessionController from "@/services/controller/session";
-import EventController from "@/services/controller/event";
-import Session from "@/services/model/session";
+import SessionController from "@/server/controller/session";
+import EventController from "@/server/controller/event";
+import Session from "@/server/model/session";
 import SessionComponent from "./components/SessionComponent";
 import { notFound } from "next/navigation";
 interface Params {
@@ -33,10 +33,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: Params) {
   const sController = new SessionController();
-    const session = await sController.getSession(
-      params.session,
-      params.event
-    );
+  const session = await sController.getSession(params.session, params.event);
 
-    return <SessionComponent session={session} />;
+  return <SessionComponent session={session} />;
 }

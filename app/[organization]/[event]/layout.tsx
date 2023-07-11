@@ -1,7 +1,11 @@
 import Navbar from "@/components/Layout/Navbar";
-import EventController from "@/services/controller/event";
-import StageController from "@/services/controller/stage";
-import { HomeIcon, ArchiveBoxArrowDownIcon, ViewColumnsIcon } from "@heroicons/react/24/outline";
+import EventController from "@/server/controller/event";
+import StageController from "@/server/controller/stage";
+import {
+  HomeIcon,
+  ArchiveBoxArrowDownIcon,
+  ViewColumnsIcon,
+} from "@heroicons/react/24/outline";
 export async function generateStaticParams() {
   const eventController = new EventController();
   const allEvents = await eventController.getAllEvents();
@@ -43,7 +47,7 @@ const Layout = async ({
       return {
         href: `/${params.organization}/${stage.eventId}/stage/${stage.id}`,
         name: stage.name,
-        icon: <ViewColumnsIcon /> ,
+        icon: <ViewColumnsIcon />,
       };
     }),
   ];

@@ -1,7 +1,7 @@
-import EventController from "@/services/controller/event";
-import SessionController from "@/services/controller/session";
+import EventController from "@/server/controller/event";
+import SessionController from "@/server/controller/session";
 import SchedulePage from "./components/SchedulePage";
-import StageController from "@/services/controller/stage";
+import StageController from "@/server/controller/stage";
 import { FilterContextProvider } from "../archive/components/FilterContext";
 
 export async function generateStaticParams() {

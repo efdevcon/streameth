@@ -1,5 +1,5 @@
-import Stage from "@/services/model/stage";
-import SessionController from "@/services/controller/session";
+import Stage from "@/server/model/stage";
+import SessionController from "@/server/controller/session";
 import {
   InformationCircleIcon,
   ChatBubbleBottomCenterIcon,

@@ -1,4 +1,4 @@
-import { ISession } from "@/services/model/session";
+import { ISession } from "@/server/model/session";
 import Link from "next/link";
 import SpeakerIconList from "@/components/speakers/SpeakerIconList";
 export type SessionStatus = "active" | "past" | "normal";

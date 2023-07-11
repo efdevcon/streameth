@@ -1,4 +1,4 @@
-import Session from "@/services/model/session";
+import Session from "@/server/model/session";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import Player from "@/components/misc/Player";
 import StageTabs from "@/components/Layout/PluginBar";

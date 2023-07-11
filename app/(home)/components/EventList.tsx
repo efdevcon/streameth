@@ -1,11 +1,10 @@
-"use client"
-import { useContext } from "react"
+"use client";
+import { useContext } from "react";
 import { FilterContext } from "@/app/[organization]/[event]/archive/components/FilterContext";
 import EventCard from "./EventCard";
-import { IEvent } from "@/services/model/event";
+import { IEvent } from "@/server/model/event";
 
 const EventList = () => {
-
   const { filteredItems } = useContext(FilterContext);
 
   return (
@@ -15,6 +14,6 @@ const EventList = () => {
       })}
     </div>
   );
-}
+};
 
 export default EventList;

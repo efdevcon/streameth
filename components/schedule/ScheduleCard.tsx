@@ -1,4 +1,4 @@
-import { ISession } from "@/services/model/session";
+import { ISession } from "@/server/model/session";
 import SpeakerIcon from "@/components/speakers/SpeakerIcon";
 import { ModalContext } from "../context/ModalContext";
 import { useContext } from "react";

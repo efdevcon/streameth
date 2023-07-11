@@ -6,11 +6,11 @@ import {
   useLayoutEffect,
   useEffect,
 } from "react";
-import { IStage } from "@/services/model/stage";
+import { IStage } from "@/server/model/stage";
 import { CELL_HEIGHT } from "../utils";
 import ScheduleGrid from "./ScheduleGrid";
 import SessionsOnGrid from "./SessionsOnGrid";
-import { IEvent } from "@/services/model/event";
+import { IEvent } from "@/server/model/event";
 import DateFilter from "./Filter";
 const SchedulePage = ({
   stages,

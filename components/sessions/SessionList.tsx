@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import Session from "@/services/model/session";
+import Session from "@/server/model/session";
 import Scroll, { Element } from "react-scroll";
 import Link from "next/link";
 import ScheduleCard from "../schedule/ScheduleCard";
@@ -26,10 +26,7 @@ function NoSessionComponent() {
   );
 }
 
-export default function SessionList({
-  sessions,
-  currentSession,
-}: Props) {
+export default function SessionList({ sessions, currentSession }: Props) {
   useEffect(() => {
     if (currentSession) {
       scroll.scrollTo(currentSession.id, {

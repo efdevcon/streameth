@@ -1,5 +1,5 @@
 "use client";
-import Speaker from "@/services/model/speaker";
+import Speaker from "@/server/model/speaker";
 import makeBlockie from "ethereum-blockies-base64";
 
 function CreateBlockie(username: string) {

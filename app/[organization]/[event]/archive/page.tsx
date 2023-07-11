@@ -1,9 +1,9 @@
 import FilterBar from "./components/FilterBar";
 import FilteredItems from "./components/FilteredItems";
 import { FilterContextProvider } from "./components/FilterContext";
-import SpeakerController from "@/services/controller/speaker";
-import SessionController from "@/services/controller/session";
-import StageController from "@/services/controller/stage";
+import SpeakerController from "@/server/controller/speaker";
+import SessionController from "@/server/controller/session";
+import StageController from "@/server/controller/stage";
 
 interface Params {
   params: {

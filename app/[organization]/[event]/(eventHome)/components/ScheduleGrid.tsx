@@ -1,7 +1,7 @@
 import { CELL_HEIGHT, getEarliestTime, getTotalSlots } from "../utils";
 import { FilterContext } from "../../archive/components/FilterContext";
 import { useContext, useMemo } from "react";
-import { IEvent } from "@/services/model/event";
+import { IEvent } from "@/server/model/event";
 export default function ScheduleGrid() {
   const { filteredItems: sessions } = useContext(FilterContext);
   const earliestTime = useMemo(() => getEarliestTime(sessions), [sessions]);

@@ -1,9 +1,8 @@
 "use client";
-import {IEvent} from "@/services/model/event";
+import { IEvent } from "@/server/model/event";
 import Image from "next/image";
 import Logo from "@/public/logo.png";
 import Link from "next/link";
-
 
 const EventCard = ({ event }: { event: IEvent }) => {
   return (
