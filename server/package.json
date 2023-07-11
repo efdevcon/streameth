@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "class-validator": "^0.14.0",
+    "fluent-ffmpeg": "^2.1.2",
     "googleapis": "^118.0.0",
     "p-queue": "^7.3.4",
     "reflect-metadata": "^0.1.13",

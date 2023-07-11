@@ -1,4 +1,5 @@
 import BaseController from "./baseController";
+import { extractFirstFrame } from "../utils/video";
 import Session, { ISession } from "../model/session";
 export default class SessionController {
   private controller: BaseController<ISession>;
@@ -35,4 +36,15 @@ export default class SessionController {
     }
     return sessions;
   }
+
+  public async generateVideoFrame(
+    sessionId: ISession["id"],
+    eventId: ISession["eventId"]
+  ): Promise<string> {
+    const session = await this.getSession(sessionId, eventId);
+    const framePath = session.
+    await extractFirstFrame(session.getHlsUrl(), framePath);
+    return framePath;
+  }
+
 }

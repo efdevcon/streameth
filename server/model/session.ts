@@ -4,6 +4,8 @@ import Speaker from "./speaker";
 import { generateId, BASE_PATH } from "../utils";
 import { IEvent } from "./event";
 import path from "path";
+import { extractFirstFrame } from "../utils/video";
+
 export interface ISession {
   id: string;
   name: string;
@@ -57,7 +59,6 @@ export default class Session implements ISession {
     stageId,
     speakers,
     videoUrl,
-    playbackId,
     eventId,
     track,
   }: Omit<ISession, "id"> & { id?: string }) {

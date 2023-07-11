@@ -4,7 +4,7 @@ import WalletSignIn from "@/components/misc/WalletSignIn";
 export default function Navbar() {
   return (
     <header className="bg-base border-b border-primary w-full ml-auto">
-      <div className="mx-auto max-w-screen-xl p-4">
+      <div className="mx-auto  p-4">
         <div className="flex flex-row items-center justify-between gap-4 lg:gap-10">
           <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
             <div className="relative border rounded border-accent bg-white hover:shadow-md shadow-slate-500 px-5 py-2 text-sm font-medium text-accent">
