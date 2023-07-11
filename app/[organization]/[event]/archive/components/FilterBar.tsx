@@ -82,14 +82,14 @@ export default async function FilterBar({
 
   return (
     <NavigationBarWrapper>
-      <div className="md:flex flex-col w-full relative p-4 ">
-        <p className="text-lg my-2 font-light text-secondary">Search</p>
+      <div className="md:flex flex-col w-full relative py-4 ">
+      <p className="text-lg font-light mb-2 text-accent uppercase ">Search</p>
         <SearchFilter
           filterOptions={sessionFilters}
           filterName="session name"
         />
         <SearchFilter filterOptions={speakerFilters} filterName="speaker" />
-        <p className="text-lg my-2 font-light text-secondary">More filters</p>
+        <p className="text-lg mt-4 mb-2 font-light text-accent uppercase ">More filters</p>
         <SelectFilter filterOptions={stageFilters} filterName="Stage" />
         <SelectFilter filterOptions={sessionDateFilters()} filterName="Date" />
         {/* <SelectFilter filterOptions={trackFilter} filterName="Track" /> */}

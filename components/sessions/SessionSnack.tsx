@@ -18,12 +18,20 @@ export default async function SessionSnack({
   goToStage = false,
 }: Props) {
   const component = (
-    <div className="flex flex-col p-4 border-b-2 border-b-accent">
-      <Image
-        src={extractFirstFrame(session.videoUrl, ".")}
-        width={300}
-        height={200}
-      />
+    <div className="flex flex-col p-4 border-b-2 border-b-accent relative aspect-video">
+      {/* <Image
+        placeholder="blur"
+        blurDataURL={"/sessions/" + session.id + ".png"}
+        quality={80}
+        alt="session image"
+        src={"/sessions/" + session.id + ".png"}
+        fill
+        style={
+          {
+            objectFit: "cover",
+          }
+        }
+      /> */}
     </div>
   );
 

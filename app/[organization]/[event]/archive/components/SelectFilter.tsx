@@ -19,7 +19,7 @@ const SelectFilter = <T extends object>({ filterOptions, filterName }: FilterPro
   };
 
   return (
-    <div className="flex flex-col justify-between mb-4">
+    <div className="flex flex-col justify-between mb-2 font-light">
       <div className="relative">
         <select
           onChange={(e) =>
@@ -27,11 +27,11 @@ const SelectFilter = <T extends object>({ filterOptions, filterName }: FilterPro
               filterOptions.find((option) => option.name === e.target.value)!
             )
           }
-          className="p-2 h-12 border w-full rounded bg-primary border-secondary text-secondary placeholder:text-secondary placeholder:text-sm"
+          className="p-2 h-12 border w-full rounded text-sm  bg-primary placeholder:text-sm"
         >
           <option
             value=""
-            className=""
+            className="text-sm placeholder:text-sm"
           >{`Select ${filterName}`}</option>
           {filterOptions.map((option, index) => (
             <option

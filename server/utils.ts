@@ -7,5 +7,5 @@ export const generateId = (key: string) => {
     .toLowerCase();
 };
 
-export const BASE_PATH = "./data";
+export const BASE_PATH = "server/data";
 export const PUBLIC_PATH = "../public";

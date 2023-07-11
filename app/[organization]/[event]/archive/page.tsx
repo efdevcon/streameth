@@ -34,9 +34,9 @@ export default async function ArchivePage({ params }: Params) {
   );
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row w-full overflow-y-hidden">
+    <div className="flex flex-col-reverse justify-end lg:flex-row w-full overflow-y-hidden">
       <FilterContextProvider items={sessions}>
-        <div className="w-full   p-4 overflow-y-scroll">
+        <div className="w-full p-4 overflow-y-scroll">
           <FilteredItems />
         </div>
         <div className="w-full lg:w-1/3 lg:max-w-[25rem]">

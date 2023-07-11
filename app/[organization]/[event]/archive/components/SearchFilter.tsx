@@ -1,5 +1,5 @@
 "use client";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { FilterContext, FilterOption } from "./FilterContext";
 import Session from "@/server/model/session";
 interface FilterProps<T> {
@@ -24,6 +24,16 @@ const SearchFilter = <T extends object>({
       option.name.toLowerCase().includes(filterInput.toLowerCase())
     );
   };
+
+  useEffect(() => {
+    // current filter options to selected items
+    currentFilterOptions.filter((option) => {
+      console.log(option);
+      if (!selectedItems.includes(option) && option.type == filterOptions[0].type) {
+        setSelectedItems([...selectedItems, option]);
+      }
+    });
+  }, []);
 
   const handleOptionSelect = (option: FilterOption<T>) => {
     setSelectedItems([...selectedItems, option]);
@@ -70,7 +80,7 @@ const SearchFilter = <T extends object>({
         {selectedItems.map((option, index) => (
           <div
             key={`${option.name}-${index}`}
-            className="cursor-pointer p-1 m-1 border-2 border-black text-sm font-light text-white bg-black opacity-80"
+            className="cursor-pointer p-1 m-1 border-2 border-accent text-sm font-light text-white bg-accent opacity-80"
             onClick={() => handleOptionRemove(option)}
           >
             {option.name}
