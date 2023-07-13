@@ -1,24 +1,26 @@
 import Navbar from "@/components/Layout/Navbar";
 import EventController from "@/server/controller/event";
 import StageController from "@/server/controller/stage";
+import Stage from "@/server/model/stage";
 import {
   HomeIcon,
   ArchiveBoxArrowDownIcon,
   ViewColumnsIcon,
 } from "@heroicons/react/24/outline";
-export async function generateStaticParams() {
-  const eventController = new EventController();
-  const allEvents = await eventController.getAllEvents();
-  const paths = allEvents.map((event) => {
-    return {
-      params: {
-        organization: event.organizationId,
-        event: event.id,
-      },
-    };
-  });
-  return paths;
-}
+import { notFound } from "next/navigation";
+// export async function generateStaticParams() {
+//   const eventController = new EventController();
+//   const allEvents = await eventController.getAllEvents();
+//   const paths = allEvents.map((event) => {
+//     return {
+//       params: {
+//         organization: event.organizationId,
+//         event: event.id,
+//       },
+//     };
+//   });
+//   return paths;
+// }
 
 const Layout = async ({
   children,
@@ -31,7 +33,13 @@ const Layout = async ({
   };
 }) => {
   const stageController = new StageController();
-  const stages = await stageController.getAllStagesForEvent(params.event);
+  let stages: Stage[] = [];
+  try {
+    stages = await stageController.getAllStagesForEvent(params.event);
+  } catch (e) {
+    return notFound();
+  }
+
   const pages = [
     {
       href: `/${params.organization}/${params.event}`,

@@ -66,7 +66,7 @@ export default class Stage implements IStage {
     return stage;
   }
 
-  static async getStagePath(
+  static async  getStagePath(
     eventId: IStage["eventId"],
     stageId?: IStage["id"]
   ): Promise<string> {

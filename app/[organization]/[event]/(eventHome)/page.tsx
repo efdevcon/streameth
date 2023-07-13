@@ -3,6 +3,7 @@ import SessionController from "@/server/controller/session";
 import SchedulePage from "./components/SchedulePage";
 import StageController from "@/server/controller/stage";
 import { FilterContextProvider } from "../archive/components/FilterContext";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   const eventController = new EventController();
@@ -21,31 +22,39 @@ export async function generateStaticParams() {
 const EventPage = async ({
   params,
 }: {
-  children: React.ReactNode;
   params: {
     organization: string;
     event: string;
   };
 }) => {
   const eventController = new EventController();
-  const event = await eventController.getEvent(
-    params.event,
-    params.organization
-  );
   const sessionController = new SessionController();
-  const sessions = await sessionController.getAllSessionsForEvent(event.id);
   const stageController = new StageController();
-  const stages = await stageController.getAllStagesForEvent(event.id);
-  return (
-    <FilterContextProvider items={sessions.map((session) => session.toJson())}>
-      <div className="w-full h-full relative">
-        <SchedulePage
-          stages={stages.map((stage) => stage.toJson())}
-          event={event.toJson()}
-        />
-      </div>
-    </FilterContextProvider>
-  );
+
+  try {
+    const event = await eventController.getEvent(
+      params.event,
+      params.organization
+    );
+    const stages = await stageController.getAllStagesForEvent(event.id);
+    const sessions = await sessionController.getAllSessionsForEvent(event.id);
+
+    return (
+      <FilterContextProvider
+        items={sessions.map((session) => session.toJson())}
+      >
+        <div className="w-full h-full relative">
+          <SchedulePage
+            stages={stages.map((stage) => stage.toJson())}
+            event={event.toJson()}
+          />
+        </div>
+      </FilterContextProvider>
+    );
+  } catch (e) {
+    console.log(e);
+    return notFound();
+  }
 };
 
 export default EventPage;

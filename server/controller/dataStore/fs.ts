@@ -14,14 +14,15 @@ export default class FsController {
   ) => Promise<void>;
   private mkdirAsync: (
     path: string,
-    options: { recursive: boolean }
-  ) => Promise<string>;
+    options?: fs.MakeDirectoryOptions
+  ) => Promise<void>;
   private accessAsync: (path: string, mode: number) => Promise<void>;
   private readdirAsync: (path: string) => Promise<string[]>;
 
   constructor() {
     this.readFileAsync = promisify(fs.readFile);
     this.writeFileAsync = promisify(fs.writeFile);
+    // @ts-ignore
     this.mkdirAsync = promisify(fs.mkdir);
     this.accessAsync = promisify(fs.access);
     this.readdirAsync = promisify(fs.readdir);
