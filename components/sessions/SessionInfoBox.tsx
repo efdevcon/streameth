@@ -5,10 +5,14 @@ import { ShareIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
 import EmbedSessionModal from "@/components/sessions/EmbedSession";
 import { ModalContext } from "@/components/context/ModalContext";
 import ComponetCard from "../misc/ComponentCard";
+import { useAsset, useAssetMetrics } from "@livepeer/react";
 
 const SessionInfoBox = ({ session }: { session: ISession | undefined }) => {
   const modal = useContext(ModalContext);
-
+  // const { data, isLoading } = useAsset(session?.playbackId || "");
+  // const { data: metrics } = useAssetMetrics({
+  //   // data.id ?? "",
+  // });
   if (!session) {
     return (
       <div className="w-full h-full flex justify-center items-center">
@@ -18,13 +22,13 @@ const SessionInfoBox = ({ session }: { session: ISession | undefined }) => {
   }
   return (
     <ComponetCard title={session.name}>
-      <div className="flex flex-row w-full ">
-        <p className="mt-4 text-main-text">{session.description}</p>
-        <div className="flex flex-col w-1/4 ml-auto gap-2">
-          <p className="text-lg  text-secondary-text text-right">
+      <div className="flex flex-col md:flex-row w-full h-full ">
+        <p className="text-main-text md:text-lg">{session.description}</p>
+        <div className="flex w-full md:flex-col md:w-1/4 md:ml-auto gap-2">
+          <p className="p-1 w-full md:text-lg text-secondary-text text-left mt-auto md:text-right">
             {session.start.toDateString()}
           </p>
-          <div className="flex flex-row w-full">
+          <div className="flex flex-row md:w-full pt-4 mt-auto">
             <CodeBracketIcon
               className="p-1 cursor-pointer ml-auto h-8 w-8 text-accent font-medium"
               onClick={() => {

@@ -8,7 +8,7 @@ import SpeakerIconList from "@/components/speakers/SpeakerIconList";
 const SpeakerComponent = ({ session }: { session: Session }) => {
   return (
     <ComponetCard title="Speakers">
-      <SpeakerIconList speakers={session.speakers} />;
+      <SpeakerIconList speakers={session.speakers}  />
     </ComponetCard>
   );
 };
@@ -19,16 +19,19 @@ export default async function SessionComponent({
 }) {
   return (
     <div className="flex flex-col w-full max-h-full h-full lg:flex-row relative overflow-y-scroll">
-      <div className="flex flex-col flex-grow h-full w-3/4 overflow-y-scroll box-border p-4 pr-2">
+      <div className="flex flex-col w-full h-full lg:flex-grow lg:h-full lg:w-3/4 lg:overflow-y-scroll p-4 pb-2 lg:pr-2 box-border">
         <div className="flex flex-col h-3/4 w-full ">
           <Player playbackId={session.playbackId} playerName={session.name} />
         </div>
-        <div className="h-1/4 mt-2">
+        <div className="lg:h-1/4 mt-2">
           <SessionInfoBox session={session.toJson()} />
         </div>
       </div>
-      <div className="flex flex-col flex-grow box-border p-4 pl-2 h-full overflow-y-scroll">
-        <SpeakerComponent session={session} />,
+      <div className="flex flex-col w-full lg:w-1/4 p-4 pt-2 lg:pt-4 lg:p-2 lg:overflow-y-scroll">
+        <SpeakerComponent session={session} />
+        <div className="rounded border-2 cursor-pointer border-accent font-bold uppercase text-center p-4 mt-4 shadow hover:bg-accent  bg-accent text-white hover:animate-pulse">
+          Collect this talk
+        </div>
       </div>
     </div>
   );

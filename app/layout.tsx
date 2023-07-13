@@ -1,10 +1,12 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import { Metadata } from "next";
 import GeneralContext from "@/components/context/GeneralContext";
 import { ModalContextProvider } from "@/components/context/ModalContext";
 import Navbar from "@/components/Layout/NavbarTop";
-const inter = Inter({ subsets: ["latin"] });
+const quicksand = Quicksand({
+  subsets: ["latin", "latin-ext"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${quicksand.className}`}>
         <GeneralContext>
           <ModalContextProvider>
-            <div className="bg-base flex flex-col h-screen w-screen overflow-hidden">
+            <div className="bg-background flex flex-col h-screen w-screen overflow-hidden">
               <Navbar />
               {children}
             </div>

@@ -14,13 +14,12 @@ module.exports = {
       },
       colors: {
           "base": "#ffffff",
+          "background": "#f5f5f5",
           "primary": "#f5f6fa",
-          "secondary": "#7983ff",
           "accent": "#7983ff",
           "main-text": "#2b2b2b",
           "secondary-text": "#b1b0b4",
-          "accent-text": "#3d5afe",
-          "button": "#383838",
+          "accent-text": "#3d5afe"
         },
         boxShadow: {
           '3xl': 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',

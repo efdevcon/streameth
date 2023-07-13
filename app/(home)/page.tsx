@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <FilterContextProvider items={allEvents}>
-      <main className="flex flex-col h-screen w-screen max-w-screen-xl overflow-y-auto m-auto">
+      <main className="flex flex-col h-screen w-screen overflow-y-auto m-auto">
         <FilterBar events={allEvents} />
         <EventList />
       </main>

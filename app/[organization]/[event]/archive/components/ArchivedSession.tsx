@@ -16,7 +16,7 @@ const ArchivedSession = ({
   const [image, setImage] = useState("/sessions/" + session.id + ".png");
 
   const component = (
-    <div className="flex flex-col rounded h-full md:p-2 box-border">
+    <div className="flex flex-col rounded h-full p-4 shadow box-border bg-base">
       <div className="aspect-video relative">
         <Image
           className="rounded"

@@ -11,7 +11,7 @@ const NavigationBarWrapper = ({ children }: { children: React.ReactNode }) => {
       <div className="lg:hidden px-4">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center px-3 py-2 border rounded w-full bg-accent text-white text-center"
+          className="flex items-center m-auto text-accent rounded w-full text-lg font-bold text-center"
         >
           Filter
         </button>

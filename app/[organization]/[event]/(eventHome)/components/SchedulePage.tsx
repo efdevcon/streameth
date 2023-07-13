@@ -32,7 +32,7 @@ const SchedulePage = ({
 
   return (
     <>
-      <div className="flex flex-row md:flex-col">
+      <div className="flex flex-row md:flex-col bg-base">
         <DateFilter event={event} />
         {isMobile ? (
           <div className="flex flex-row w-full justify-center items-center p-2 ">
@@ -51,7 +51,7 @@ const SchedulePage = ({
         ) : (
           <div className="w-[calc(100%-6rem)] flex flex-row ml-auto">
             {stages.map((stage) => (
-              <div className="w-full p-4 text-center text-xl" key={stage.id}>
+              <div className="w-full p-4 text-center text-xl font-bold text-accent uppercase" key={stage.id}>
                 {stage.name}
               </div>
             ))}

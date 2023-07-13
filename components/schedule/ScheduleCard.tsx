@@ -13,7 +13,7 @@ const ScheduleCard = ({
   const { openModal } = useContext(ModalContext);
   return (
     <div
-      className="flex flex-row w-full h-full bg-primary shadow rounded p-2 cursor-pointer"
+      className="flex flex-row w-full h-full bg-base shadow rounded p-2 cursor-pointer"
       onClick={() => {
         openModal(<ScheduleCardModal session={session} />);
       }}

@@ -1,6 +1,7 @@
 "use client";
 import Speaker from "@/server/model/speaker";
 import makeBlockie from "ethereum-blockies-base64";
+import { SocialIcon } from "react-social-icons";
 
 function CreateBlockie(username: string) {
   if (!username) {
@@ -14,6 +15,7 @@ interface Props {
   size?: "sm" | "md";
   onSpeakerClick?: (speaker: Speaker) => void;
   onlyImage?: boolean;
+  twitter?: boolean;
 }
 
 export default function SpeakerIcon({
@@ -21,6 +23,7 @@ export default function SpeakerIcon({
   onSpeakerClick,
   size = "sm",
   onlyImage = false,
+  twitter = false,
 }: Props) {
   // TODO: Fix types avatar and avatarUrl
   const avatar = speaker.photo ?? CreateBlockie(speaker.name);
@@ -38,7 +41,16 @@ export default function SpeakerIcon({
         style={{ backgroundImage: `url('${avatar}')` }}
       />
       {!onlyImage && (
-        <span className="text-main-text font-md">{speaker.name}</span>
+        <span className="text-main-text text-lg">{speaker.name}</span>
+      )}
+      {twitter && (
+        <SocialIcon
+          url={`https://twitter.com/${speaker.twitter}`}
+          target="_blank"
+          bgColor="#fff"
+          fgColor="#1DA1F2"
+          className={`ml-2 ${size == "md" ? "h-8 w-8" : "w-8"}`}
+        />
       )}
     </div>
   );

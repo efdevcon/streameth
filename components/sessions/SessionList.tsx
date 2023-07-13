@@ -4,7 +4,6 @@ import Session from "@/server/model/session";
 import Scroll, { Element } from "react-scroll";
 import Link from "next/link";
 import ScheduleCard from "../schedule/ScheduleCard";
-import SessionSnack from "@/components/sessions/SessionSnack";
 
 interface Props {
   sessions: Session[];
