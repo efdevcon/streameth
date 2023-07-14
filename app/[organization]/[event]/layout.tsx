@@ -31,27 +31,29 @@ const Layout = async ({
     {
       href: `/${params.organization}/${params.event}`,
       name: "Home",
-      icon: <HomeIcon className="bg-primary h-8 w-8" />,
+      icon: <HomeIcon />,
     },
     {
       href: `/${params.organization}/${params.event}/archive`,
       name: "Archive",
       icon: <ArchiveBoxArrowDownIcon />,
     },
-    ...stages.map((stage) => {
-      return {
-        href: `/${params.organization}/${stage.eventId}/stage/${stage.id}`,
-        name: stage.name,
-        icon: <ViewColumnsIcon />,
-      };
-    }),
   ];
 
-  // lg:w-[calc(100%-5rem)]
+  //
   return (
-    <div className="flex flex-col md:flex-row flex-grow overflow-hidden">
-      <Navbar pages={pages} />
-      <main className="flex h-full w-full   ml-auto bg-[#f5f5f5] overflow-hidden">
+    <div className="flex flex-col md:flex-row flex-grow overflow-hidden  ">
+      <Navbar
+        pages={pages}
+        stages={stages.map((stage) => {
+          return {
+            href: `/${params.organization}/${stage.eventId}/stage/${stage.id}`,
+            name: stage.name,
+            icon: <ViewColumnsIcon />,
+          };
+        })}
+      />
+      <main className="flex lg:h-full w-full lg:w-[calc(100%-5rem)] h-[calc(100%-5rem)]   ml-auto bg-[#f5f5f5] overflow-hidden">
         {children}
       </main>
     </div>

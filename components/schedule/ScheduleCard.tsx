@@ -13,7 +13,7 @@ const ScheduleCard = ({
   const { openModal } = useContext(ModalContext);
   return (
     <div
-      className="flex flex-row w-full h-full bg-base shadow rounded p-2 cursor-pointer"
+      className="flex space-y-3 flex-col w-full h-full bg-base shadow rounded p-2 cursor-pointer"
       onClick={() => {
         openModal(<ScheduleCardModal session={session} />);
       }}
@@ -31,11 +31,11 @@ const ScheduleCard = ({
           </p>
         </div>
       )}
-      <div className=" border-l border-accent flex flex-col p-4 bg-tertiary rounded-tr rounded-br w-full">
-        <p className="text-main-text text-sm font-medium uppercase mb-2">
+      <div className=" border-l border-accent flex flex-col p-4 py-2 rounded-tr rounded-br w-full h-full">
+        <p className="flex h-2/4 overflow-hidden text-ellipsis text-main-text text-sm font-medium uppercase">
           {session.name}
         </p>
-        <div className="flex flex-row space-x-2 mb-2">
+        <div className="flex h-2/4 items-center flex-row space-x-2">
           {session.speakers.map((speaker) => (
             <SpeakerIcon key={speaker.id} speaker={speaker} onlyImage />
           ))}
