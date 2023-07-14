@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const OfflinePlayer = () => {
   return (
-    <div className="flex items-center justify-center flex-col w-full h-full">
+    <div className="bg-black flex items-center justify-center flex-col w-full h-full">
       <span className="text-2xl font-bold text-black">Offline</span>
       <span className="text-black dark:text-gray-300 text-xs hidden md:block mt-2">
         Powered by
@@ -54,20 +54,25 @@ export const Player = ({
   );
 
   return (
-    <LivepeerPlayer
-      mediaElementRef={mediaElementRef}
-      objectFit="contain"
-      playbackId={playbackId}
-      showTitle={false}
-      showPipButton={false}
-      muted={false}
-      autoPlay
-      priority
-      lowLatency
-      viewerId={address}
-      poster={<OfflinePlayer />}
-      showLoadingSpinner={false}
-    />
+    <div className="bg-black h-full w-full flex items-center justify-center  ">
+      <div className="fixed lg:relative">
+      <LivepeerPlayer
+        mediaElementRef={mediaElementRef}
+        objectFit="contain"
+        playbackId={playbackId}
+        showTitle={false}
+        showPipButton={false}
+        muted={false}
+        autoPlay
+        priority
+        lowLatency
+        viewerId={address}
+        poster={<OfflinePlayer />}
+        showLoadingSpinner={false}
+      />
+      </div>
+      <div className="lg:hidden lg:h-3/4 w-full lg:p-4 lg:pb-2 aspect-video"></div>
+    </div>
   );
 };
 

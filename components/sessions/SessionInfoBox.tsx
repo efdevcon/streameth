@@ -21,6 +21,7 @@ const SessionInfoBox = ({ session }: { session: ISession | undefined }) => {
     );
   }
   return (
+    <div className="flex flex-col w-full h-full ">
     <ComponetCard title={session.name}>
       <div className="flex flex-col md:flex-row w-full h-full ">
         <p className="text-main-text md:text-lg">{session.description}</p>
@@ -42,6 +43,7 @@ const SessionInfoBox = ({ session }: { session: ISession | undefined }) => {
         </div>
       </div>
     </ComponetCard>
+    </div>
   );
 };
 

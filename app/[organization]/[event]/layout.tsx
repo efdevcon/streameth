@@ -8,19 +8,6 @@ import {
   ViewColumnsIcon,
 } from "@heroicons/react/24/outline";
 import { notFound } from "next/navigation";
-// export async function generateStaticParams() {
-//   const eventController = new EventController();
-//   const allEvents = await eventController.getAllEvents();
-//   const paths = allEvents.map((event) => {
-//     return {
-//       params: {
-//         organization: event.organizationId,
-//         event: event.id,
-//       },
-//     };
-//   });
-//   return paths;
-// }
 
 const Layout = async ({
   children,
@@ -59,10 +46,12 @@ const Layout = async ({
       };
     }),
   ];
+
+  // lg:w-[calc(100%-5rem)]
   return (
     <div className="flex flex-col md:flex-row flex-grow overflow-hidden">
       <Navbar pages={pages} />
-      <main className="flex h-full w-full  md:w-[calc(100%-5rem)] ml-auto bg-[#f5f5f5] overflow-hidden">
+      <main className="flex h-full w-full   ml-auto bg-[#f5f5f5] overflow-hidden">
         {children}
       </main>
     </div>

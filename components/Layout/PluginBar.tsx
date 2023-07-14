@@ -18,8 +18,8 @@ export default function PluginBar({
   }
 
   return (
-    <>
-      <div className="flex flex-row w-full bg-secondary rounded">
+    <div className="flex flex-col rounded shadow h-full bg-base">
+      <div className="flex flex-row w-full bg-secondary p-4">
         {tabs.map((tab) => (
           <div
             key={tab.id}
@@ -29,8 +29,8 @@ export default function PluginBar({
             <div
               className={`${
                 selectedId === tab.id
-                  ? "bg-accent text-main-text"
-                  : " text-secondary-text hover:bg-accent hover:text-main-text"
+                  ? "bg-accent text-white  font-bold"
+                  : "  hover:bg-accent hover:text-white cursor-pointer text-main-text font-bold"
               } p-2 uppercase w-full rounded text-center text-sm `}
             >
               {tab.id}
@@ -38,9 +38,9 @@ export default function PluginBar({
           </div>
         ))}
       </div>
-      <div className="flex flex-col w-full h-full mt-4" key={selectedId}>
+      <div className="flex flex-col w-full flex-grow" key={selectedId}>
         {selectedTab.content}
       </div>
-    </>
+    </div>
   );
 }

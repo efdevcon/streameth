@@ -18,7 +18,7 @@ export default function Navbar({
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <header className="md:shadow-sm md:bg-base md:border-r border-primary md:absolute md:top-0 md:left-0 w-full md:w-20 md:h-screen">
+    <header className="hidden md:shadow-sm md:bg-base md:border-r border-primary md:absolute md:top-0 md:left-0 w-full md:w-20 md:h-screen">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex flex-row md:flex-col md:items-center justify-between gap-4 md:gap-10">
           <Link href="/">
